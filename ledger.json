@@ -1,0 +1,683 @@
+{
+  "version": 1,
+  "completed": [
+    {
+      "market": "Immigration law practice",
+      "angle": "core-practitioner-workflow",
+      "date": "2026-08-03",
+      "report": "(pre-ledger run, not archived)",
+      "top_opportunity": "unknown",
+      "score": 0
+    }
+  ],
+  "claimed": [],
+  "backlog": [
+    {
+      "market": "Fire protection / fire sprinkler design and coordination subcontractors",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Fire protection / fire sprinkler design and coordination subcontractors",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Fire protection / fire sprinkler design and coordination subcontractors",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Fire protection / fire sprinkler design and coordination subcontractors",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Mechanical (HVAC) design engineering at small MEP consulting firms",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Mechanical (HVAC) design engineering at small MEP consulting firms",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Mechanical (HVAC) design engineering at small MEP consulting firms",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Mechanical (HVAC) design engineering at small MEP consulting firms",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Structural engineering firms, 5-30 staff",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Structural engineering firms, 5-30 staff",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Structural engineering firms, 5-30 staff",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Structural engineering firms, 5-30 staff",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Civil / land development engineering and entitlement consulting",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Civil / land development engineering and entitlement consulting",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Civil / land development engineering and entitlement consulting",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Civil / land development engineering and entitlement consulting",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Small architectural studios - project administration and specification writing",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Small architectural studios - project administration and specification writing",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Small architectural studios - project administration and specification writing",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Small architectural studios - project administration and specification writing",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "General contractor preconstruction and estimating",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "General contractor preconstruction and estimating",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "General contractor preconstruction and estimating",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "General contractor preconstruction and estimating",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Electrical or plumbing trade subcontractor field operations",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Electrical or plumbing trade subcontractor field operations",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Electrical or plumbing trade subcontractor field operations",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Electrical or plumbing trade subcontractor field operations",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Construction submittal, RFI, and closeout coordination (project engineer role)",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Construction submittal, RFI, and closeout coordination (project engineer role)",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Construction submittal, RFI, and closeout coordination (project engineer role)",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Construction submittal, RFI, and closeout coordination (project engineer role)",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Land surveying firms",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Land surveying firms",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Land surveying firms",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Land surveying firms",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Geotechnical and environmental consulting / materials testing labs",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Geotechnical and environmental consulting / materials testing labs",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Geotechnical and environmental consulting / materials testing labs",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Geotechnical and environmental consulting / materials testing labs",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Small-firm litigation support and paralegal work",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Small-firm litigation support and paralegal work",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Small-firm litigation support and paralegal work",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Small-firm litigation support and paralegal work",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Estate planning and probate practice",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Estate planning and probate practice",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Estate planning and probate practice",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Estate planning and probate practice",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Immigration law practice",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Immigration law practice",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Immigration law practice",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Title, escrow, and real estate closing",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Title, escrow, and real estate closing",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Title, escrow, and real estate closing",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Title, escrow, and real estate closing",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Bookkeeping and outsourced accounting firms",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Bookkeeping and outsourced accounting firms",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Bookkeeping and outsourced accounting firms",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Bookkeeping and outsourced accounting firms",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Small CPA tax preparation practices",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Small CPA tax preparation practices",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Small CPA tax preparation practices",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Small CPA tax preparation practices",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Independent insurance agencies - commercial lines",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Independent insurance agencies - commercial lines",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Independent insurance agencies - commercial lines",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Independent insurance agencies - commercial lines",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Independent property and casualty claims adjusting",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Independent property and casualty claims adjusting",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Independent property and casualty claims adjusting",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Independent property and casualty claims adjusting",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Commercial property management",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Commercial property management",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Commercial property management",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Commercial property management",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Medical billing and revenue cycle for small practices",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Medical billing and revenue cycle for small practices",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Medical billing and revenue cycle for small practices",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Medical billing and revenue cycle for small practices",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Dental and specialty clinic practice administration",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Dental and specialty clinic practice administration",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Dental and specialty clinic practice administration",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Dental and specialty clinic practice administration",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "HR and benefits administration in companies under 200 employees",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "HR and benefits administration in companies under 200 employees",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "HR and benefits administration in companies under 200 employees",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "HR and benefits administration in companies under 200 employees",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Staffing and recruiting agency operations",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Staffing and recruiting agency operations",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Staffing and recruiting agency operations",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Staffing and recruiting agency operations",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Machine shop / job shop quoting and production control",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Machine shop / job shop quoting and production control",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Machine shop / job shop quoting and production control",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Machine shop / job shop quoting and production control",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Freight brokerage and dispatch operations",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Freight brokerage and dispatch operations",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Freight brokerage and dispatch operations",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Freight brokerage and dispatch operations",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Marketing and creative agency account and production management",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Marketing and creative agency account and production management",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Marketing and creative agency account and production management",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Marketing and creative agency account and production management",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Nonprofit grant management and compliance",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Nonprofit grant management and compliance",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Nonprofit grant management and compliance",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Nonprofit grant management and compliance",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Training organizations and continuing-education providers",
+      "angle": "core-practitioner-workflow",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Training organizations and continuing-education providers",
+      "angle": "narrow-subspecialty",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Training organizations and continuing-education providers",
+      "angle": "back-office",
+      "source": "seed",
+      "note": ""
+    },
+    {
+      "market": "Training organizations and continuing-education providers",
+      "angle": "handoffs-and-qa",
+      "source": "seed",
+      "note": ""
+    }
+  ],
+  "patterns": []
+}
