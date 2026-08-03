@@ -32,16 +32,17 @@
       "report": "reports/2026-08-03-land-surveying-firms-core-practitioner-workflow.md",
       "top_opportunity": "ALTA Table A Scope Configurator \u2014 client-facing 21-item scope selector producing a signed scope exhibit (2026 standard)",
       "score": 45
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Machine shop / job shop quoting and production control",
       "angle": "handoffs-and-qa",
-      "claimed_at": "2026-08-03T22:30:57Z",
-      "claim_id": "868d73ee"
+      "date": "2026-08-03",
+      "report": "reports/2026-08-03-machine-shop-job-shop-handoffs-and-qa.md",
+      "top_opportunity": "Cert Package Assembler and Completeness Gate - assembles the shipped document package and blocks release on missing/inconsistent certs",
+      "score": 45
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -888,6 +889,150 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "Strong open-source math base (SALSA, DynAdjust, JAG3D) with no workflow layer; STAR*NET at $2,855 is the only real incumbent."
+    },
+    {
+      "market": "Metal finishing, plating, heat treat and NDT job shops (special-process suppliers)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The counterparty receiving flow-down chaos from non-expert customers; Nadcap-accredited and defined by the documents they must produce."
+    },
+    {
+      "market": "Metal finishing, plating, heat treat and NDT job shops (special-process suppliers)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "The counterparty receiving flow-down chaos from non-expert customers; Nadcap-accredited and defined by the documents they must produce."
+    },
+    {
+      "market": "Metal finishing, plating, heat treat and NDT job shops (special-process suppliers)",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "The counterparty receiving flow-down chaos from non-expert customers; Nadcap-accredited and defined by the documents they must produce."
+    },
+    {
+      "market": "Metal finishing, plating, heat treat and NDT job shops (special-process suppliers)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The counterparty receiving flow-down chaos from non-expert customers; Nadcap-accredited and defined by the documents they must produce."
+    },
+    {
+      "market": "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "FDA QMSR incorporated ISO 13485:2016 into 21 CFR Part 820 effective 2 February 2026 - a fresh dated regulatory transition across every device contract manufacturer."
+    },
+    {
+      "market": "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "FDA QMSR incorporated ISO 13485:2016 into 21 CFR Part 820 effective 2 February 2026 - a fresh dated regulatory transition across every device contract manufacturer."
+    },
+    {
+      "market": "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "FDA QMSR incorporated ISO 13485:2016 into 21 CFR Part 820 effective 2 February 2026 - a fresh dated regulatory transition across every device contract manufacturer."
+    },
+    {
+      "market": "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "FDA QMSR incorporated ISO 13485:2016 into 21 CFR Part 820 effective 2 February 2026 - a fresh dated regulatory transition across every device contract manufacturer."
+    },
+    {
+      "market": "Small defense suppliers navigating CMMC Level 2 compliance",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Roughly 1,042 organizations certified against an estimated 76,598 needing certification; assessments $35k-$75k with reported eight-month waits."
+    },
+    {
+      "market": "Small defense suppliers navigating CMMC Level 2 compliance",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Roughly 1,042 organizations certified against an estimated 76,598 needing certification; assessments $35k-$75k with reported eight-month waits."
+    },
+    {
+      "market": "Small defense suppliers navigating CMMC Level 2 compliance",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Roughly 1,042 organizations certified against an estimated 76,598 needing certification; assessments $35k-$75k with reported eight-month waits."
+    },
+    {
+      "market": "Small defense suppliers navigating CMMC Level 2 compliance",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Roughly 1,042 organizations certified against an estimated 76,598 needing certification; assessments $35k-$75k with reported eight-month waits."
+    },
+    {
+      "market": "Calibration and metrology service providers / in-house gage management",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Gage calibration recall, certificates and ISO 17025; named by practitioners as part of the lone quality manager's bundle and currently spreadsheet-run."
+    },
+    {
+      "market": "Calibration and metrology service providers / in-house gage management",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Gage calibration recall, certificates and ISO 17025; named by practitioners as part of the lone quality manager's bundle and currently spreadsheet-run."
+    },
+    {
+      "market": "Calibration and metrology service providers / in-house gage management",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Gage calibration recall, certificates and ISO 17025; named by practitioners as part of the lone quality manager's bundle and currently spreadsheet-run."
+    },
+    {
+      "market": "Calibration and metrology service providers / in-house gage management",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Gage calibration recall, certificates and ISO 17025; named by practitioners as part of the lone quality manager's bundle and currently spreadsheet-run."
+    },
+    {
+      "market": "Supplier quality engineering at OEMs and primes (receiving side of supplier deliverables)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "They author the flow-downs and reject the deliverables; building the receiving side of a package-gate or pre-submission validator doubles the addressable market."
+    },
+    {
+      "market": "Supplier quality engineering at OEMs and primes (receiving side of supplier deliverables)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "They author the flow-downs and reject the deliverables; building the receiving side of a package-gate or pre-submission validator doubles the addressable market."
+    },
+    {
+      "market": "Supplier quality engineering at OEMs and primes (receiving side of supplier deliverables)",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "They author the flow-downs and reject the deliverables; building the receiving side of a package-gate or pre-submission validator doubles the addressable market."
+    },
+    {
+      "market": "Supplier quality engineering at OEMs and primes (receiving side of supplier deliverables)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "They author the flow-downs and reject the deliverables; building the receiving side of a package-gate or pre-submission validator doubles the addressable market."
+    },
+    {
+      "market": "Industrial distributors and metal service centers issuing material test reports",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Cert generation at the source of the traceability chain; the upstream half of the lot-linkage pattern."
+    },
+    {
+      "market": "Industrial distributors and metal service centers issuing material test reports",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Cert generation at the source of the traceability chain; the upstream half of the lot-linkage pattern."
+    },
+    {
+      "market": "Industrial distributors and metal service centers issuing material test reports",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Cert generation at the source of the traceability chain; the upstream half of the lot-linkage pattern."
+    },
+    {
+      "market": "Industrial distributors and metal service centers issuing material test reports",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Cert generation at the source of the traceability chain; the upstream half of the lot-linkage pattern."
     }
   ],
   "patterns": [
@@ -1085,6 +1230,95 @@
         "Title, escrow, and real estate closing",
         "Electrical or plumbing trade subcontractor field operations",
         "General contractor preconstruction and estimating"
+      ]
+    },
+    {
+      "pattern": "Counterparty requirement extraction from unstructured contract documents: obligations that change what the work must produce are buried in prose nobody reads until breach; extract, classify, cite the source, and emit a one-page working sheet with an explicit unclassified bucket.",
+      "seen_in": [
+        "Machine shop / job shop quoting and production control / handoffs-and-qa (20-50 page PO quality clause flow-downs)"
+      ],
+      "transfers_to": [
+        "General contractor preconstruction and estimating",
+        "Construction submittal, RFI, and closeout coordination (project engineer role)",
+        "Fire protection / fire sprinkler design and coordination subcontractors",
+        "Nonprofit grant management and compliance",
+        "Freight brokerage and dispatch operations"
+      ]
+    },
+    {
+      "pattern": "Deliverable package assembly with a pre-release completeness and consistency gate: a delivery must carry a document set whose composition varies by counterparty; verify presence, cross-field agreement and date logic before release rather than after rejection.",
+      "seen_in": [
+        "Machine shop / job shop quoting and production control / handoffs-and-qa (the cert package shipped with parts)"
+      ],
+      "transfers_to": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)",
+        "Title, escrow, and real estate closing",
+        "Medical billing and revenue cycle for small practices",
+        "Immigration law practice",
+        "Small CPA tax preparation practices"
+      ]
+    },
+    {
+      "pattern": "Pre-submission validation against a published rejection-cause list: a receiving authority rejects for a known enumerable set of reasons; check before sending instead of learning months later. SECOND independent appearance in this catalog.",
+      "seen_in": [
+        "Machine shop / job shop quoting and production control / handoffs-and-qa (AS9102 FAIR rejection causes)",
+        "Land surveying firms / core-practitioner-workflow (county recorded-map checklists)"
+      ],
+      "transfers_to": [
+        "Immigration law practice",
+        "Medical billing and revenue cycle for small practices",
+        "Civil / land development engineering and entitlement consulting",
+        "Nonprofit grant management and compliance",
+        "Structural engineering firms, 5-30 staff"
+      ]
+    },
+    {
+      "pattern": "Revision diff with downstream impact classification: a controlled document is reissued; determine whether the change is substantive and which downstream artifacts must be redone.",
+      "seen_in": [
+        "Machine shop / job shop quoting and production control / handoffs-and-qa (drawing revisions triggering full vs partial FAI)"
+      ],
+      "transfers_to": [
+        "Small architectural studios - project administration and specification writing",
+        "Mechanical (HVAC) design engineering at small MEP consulting firms",
+        "Structural engineering firms, 5-30 staff",
+        "Fire protection / fire sprinkler design and coordination subcontractors",
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
+      ]
+    },
+    {
+      "pattern": "Chain-of-custody ledger linking an input batch to a delivered unit, queryable in both directions (what is in this shipment / which shipments contain this lot).",
+      "seen_in": [
+        "Machine shop / job shop quoting and production control / handoffs-and-qa (heat-lot traceability)"
+      ],
+      "transfers_to": [
+        "Geotechnical and environmental consulting / materials testing labs",
+        "Dental and specialty clinic practice administration",
+        "Freight brokerage and dispatch operations"
+      ]
+    },
+    {
+      "pattern": "Counterparty-specific response clock calculator triggered by an event: an incident starts multiple contractual clocks that differ per counterparty and mix business and calendar days. Contractual cousin of the statutory-deadline pattern.",
+      "seen_in": [
+        "Machine shop / job shop quoting and production control / handoffs-and-qa (escape notification and SCAR clocks)"
+      ],
+      "transfers_to": [
+        "Independent property and casualty claims adjusting",
+        "Independent insurance agencies - commercial lines",
+        "Immigration law practice",
+        "Estate planning and probate practice",
+        "Electrical or plumbing trade subcontractor field operations"
+      ]
+    },
+    {
+      "pattern": "Instrument-output-to-counterparty-form mapper: measurement or system output arrives in the producing tool's native layout, the counterparty requires a specific form, the mapping is done by retyping, and vendors gate the automation behind an upgrade tier.",
+      "seen_in": [
+        "Machine shop / job shop quoting and production control / handoffs-and-qa (CMM output to AS9102 Form 3)"
+      ],
+      "transfers_to": [
+        "Geotechnical and environmental consulting / materials testing labs",
+        "Bookkeeping and outsourced accounting firms",
+        "Medical billing and revenue cycle for small practices",
+        "Land surveying firms"
       ]
     }
   ]

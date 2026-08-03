@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Machine Shops & Job Shops — Handoffs and QA | Market Research, 3 Aug 2026</title>
+<style>
+:root{
+  --ink:#1a1a19; --ink-soft:#4a4a46; --ink-faint:#75736c;
+  --rule:#ddd9d0; --rule-soft:#ebe7de;
+  --bg:#fbfaf7; --panel:#f4f1ea; --accent:#7a5c2e; --accent-soft:#f0ebe0;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  font-size:18px; line-height:1.68;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:900px; margin:0 auto; padding:64px 32px 120px}
+h1,h2,h3,h4{
+  font-family:"Iowan Old Style",Palatino,Georgia,serif;
+  line-height:1.25; color:var(--ink); font-weight:600;
+}
+h1{
+  font-size:2.35rem; margin:0 0 .35em; letter-spacing:-.015em;
+  padding-bottom:.4em; border-bottom:3px solid var(--ink);
+}
+h2{
+  font-size:1.6rem; margin:3.2em 0 .7em; letter-spacing:-.01em;
+  padding-bottom:.3em; border-bottom:1px solid var(--rule);
+}
+h3{font-size:1.24rem; margin:2.4em 0 .5em; color:var(--accent)}
+h4{font-size:1.06rem; margin:1.8em 0 .4em; color:var(--ink-soft)}
+p{margin:0 0 1.15em}
+a{color:#5a4520; text-decoration:none; border-bottom:1px solid #cdbfa4}
+a:hover{color:#000; border-bottom-color:#8a7550; background:#f5efe2}
+strong{font-weight:600; color:#000}
+em{font-style:italic}
+hr{border:0; border-top:1px solid var(--rule); margin:3em 0}
+ul,ol{margin:0 0 1.15em; padding-left:1.5em}
+li{margin:.3em 0}
+li>ul,li>ol{margin:.3em 0}
+blockquote{
+  margin:1.4em 0; padding:.2em 0 .2em 1.4em;
+  border-left:3px solid var(--accent-soft); color:var(--ink-soft); font-style:italic;
+}
+code{
+  font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  font-size:.86em; background:var(--panel); padding:.12em .38em;
+  border-radius:3px; border:1px solid var(--rule-soft);
+}
+table{
+  border-collapse:collapse; width:100%; margin:1.8em 0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:.83rem; line-height:1.45;
+}
+th,td{
+  padding:.62em .7em; text-align:left; vertical-align:top;
+  border-bottom:1px solid var(--rule-soft);
+}
+thead th{
+  background:var(--panel); color:var(--ink);
+  font-weight:600; font-size:.76rem; letter-spacing:.04em; text-transform:uppercase;
+  border-bottom:2px solid var(--rule);
+}
+tbody tr:nth-child(even){background:#f8f6f1}
+tbody tr:hover{background:var(--accent-soft)}
+td[align="center"],th[align="center"]{text-align:center}
+tbody td:last-child strong{color:#000}
+/* header meta table (2-col, no header row content) */
+h1 + table, h2 + table{font-size:.9rem}
+.footnote{color:var(--ink-faint); font-size:.9rem; font-style:italic}
+@media (max-width:680px){
+  body{font-size:17px}
+  .wrap{padding:36px 18px 80px}
+  h1{font-size:1.85rem}
+  h2{font-size:1.35rem}
+  table{font-size:.74rem; display:block; overflow-x:auto}
+}
+@media print{
+  body{background:#fff; font-size:11pt}
+  .wrap{padding:0; max-width:none}
+  a{color:#000; border:0}
+  h2{page-break-after:avoid}
+  table{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Machine Shops / Job Shops — Handoffs and QA</h1>
+<p><strong>Market research cycle · 3 August 2026</strong></p>
+<hr />
+<h2>0. Cycle header</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Market claimed</strong></td>
+<td>Machine shop / job shop quoting and production control</td>
+</tr>
+<tr>
+<td><strong>Angle claimed</strong></td>
+<td>handoffs-and-qa</td>
+</tr>
+<tr>
+<td><strong>Claim ID</strong></td>
+<td><code>868d73ee</code></td>
+</tr>
+<tr>
+<td><strong>Date</strong></td>
+<td>2026-08-03</td>
+</tr>
+<tr>
+<td><strong>Claim attempts</strong></td>
+<td>1 (no push conflict)</td>
+</tr>
+<tr>
+<td><strong>Backlog at time of claim</strong></td>
+<td>141 assignments remaining</td>
+</tr>
+</tbody>
+</table>
+<h3>Why this assignment over the others available</h3>
+<p>The ledger held 4 completed entries and 142 open assignments at clone time, with <strong>zero active claims</strong>. The completed set covered immigration law, fire protection, insurance agencies (back-office), and land surveying.</p>
+<p>Applying the brief's ordering:</p>
+<ol>
+<li><strong>Zero-coverage market.</strong> Four markets had coverage; machine shops had none. This eliminated the covered four but left ~24 candidates.</li>
+<li><strong>Angle diversity — this was the deciding factor.</strong> Of four completed reports, <strong>three</strong> were <code>core-practitioner-workflow</code> and one was <code>back-office</code>. Both <code>narrow-subspecialty</code> and <code>handoffs-and-qa</code> had <strong>zero</strong> coverage across the entire catalog. Claiming a <code>handoffs-and-qa</code> assignment corrects the catalog's biggest structural blind spot, and it does so at the point where the brief's opportunity criteria bite hardest — handoffs are where documents cross organizational boundaries, which is exactly where narrow document-processing tools earn their keep.</li>
+<li><strong>Expected evidence density, adjusted for a known environmental constraint.</strong> A prior cycle in this repository established that <strong>reddit.com is unreachable from this environment</strong>. That fact should shape market selection, not just be reported afterward. Machine shops are one of the few markets whose practitioner discourse lives almost entirely <em>outside</em> reddit: <strong>Practical Machinist</strong> and the <strong>Elsmar Cove</strong> quality forum are both long-running, open, and populated by named practitioners posting under real professional identities. Elsmar in particular is the largest quality-management practitioner forum in existence and is precisely on-angle. I selected a market whose evidence I could actually reach.</li>
+</ol>
+<p>A secondary consideration, mirroring the ALTA timing in the prior land-surveying cycle: this market is sitting inside <strong>three simultaneous regulatory transitions</strong> — AS9102 Rev C with no mandated transition date, FDA's QMSR effective 2 February 2026, and the CMMC phase-in — each of which creates dated, checkable requirements that narrow software can encode.</p>
+<h3>Scope discipline: what "handoffs-and-qa" means here</h3>
+<p>This report deliberately excludes machining, toolpaths, work scheduling, and shop-floor production control. It covers only the boundary between the shop and the outside world: <strong>inbound</strong> customer RFQ packages, drawings, revisions and purchase-order quality clauses; <strong>outbound</strong> first article inspection reports, certificate packages and shipped documentation; and <strong>lateral</strong> coordination with outside processing vendors, plus the nonconformance and corrective-action traffic that runs in both directions.</p>
+<h3>Evidence limitations, stated up front</h3>
+<ul>
+<li><strong>reddit.com blocked</strong> (confirmed again this cycle; not retried at length).</li>
+<li><strong>practicalmachinist.com returns HTTP 403 to automated fetching.</strong> Its threads were reachable only through a text proxy. Quotations attributed to Practical Machinist below came through that route and carry slightly lower transcription confidence than the Elsmar material, which was parsed from raw HTML.</li>
+<li><strong>No neutral benchmark exists</strong> for characteristics-per-print or hours-per-FAIR. Every quantitative claim in that area is either a practitioner's own estimate or vendor marketing. Both are labelled as such throughout.</li>
+<li>Job-posting evidence is thin this cycle — the available job-search tooling returned few results per query.</li>
+</ul>
+<hr />
+<h2>1. Market examined</h2>
+<p><strong>Industry.</strong> Machine shops, NAICS 332710. US Census data reports <strong>17,530 establishments and 209,280 employees</strong> — an average of roughly <strong>12 employees per establishment</strong>. (<a href="https://naicslist.com/naics/332710">NAICSList / Census</a>) The SBA small-business threshold for the industry is 500 employees, which tells you the entire industry is small by federal definition and overwhelmingly small in practice.</p>
+<p><strong>Target organization size.</strong> <strong>5 to 75 employees.</strong> Below five, the owner does everything and buys nothing. Above roughly 75, a dedicated quality department exists with budget authority and the shop is a candidate for High QA or Net-Inspect at list price. The 5–75 band is where a single quality manager — frequently the only one — owns first articles, cert packages, gage calibration, customer audits, corrective action, and the ERP's quality module simultaneously.</p>
+<p>The scope of that one role is documented directly. A shop owner with <strong>four shop-floor employees and about a dozen jobs a month</strong>, hiring his first quality lead, described the job as <em>"the authority on GD&amp;T, CMM programming, reporting and documentation, inspection scheduling and basically run every step of the way"</em> and was prepared to pay <em>"up to 6 figures."</em> A respondent added the rest of the bundle: <em>"The paperwork, FIA's, keeping up with metrology equipment certs, etc all fits under that window."</em> (<a href="https://www.practicalmachinist.com/forum/threads/hiring-someone-to-run-a-quality-department.415601/">Practical Machinist</a>)</p>
+<p><strong>Roles at the handoff boundary.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>What they do at the boundary</th>
+<th>Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Owner / GM</strong></td>
+<td>Accepts the contract, including its quality obligations — often without reading them</td>
+<td>Email, PDF, quoting software</td>
+</tr>
+<tr>
+<td><strong>Quality manager</strong></td>
+<td>FAIRs, cert packages, CofC signature, corrective action responses, customer audits, approved-vendor records</td>
+<td>Excel, fillable PDF, scanner, ERP</td>
+</tr>
+<tr>
+<td><strong>Inspector / CMM programmer</strong></td>
+<td>Measures, records results, feeds the FAIR</td>
+<td>CMM software, calipers, paper, Excel</td>
+</tr>
+<tr>
+<td><strong>Estimator</strong></td>
+<td>Quotes the job — typically without pricing the quality requirements</td>
+<td>Quoting software, spreadsheets</td>
+</tr>
+<tr>
+<td><strong>Buyer / purchasing</strong></td>
+<td>Issues outside-processing POs carrying flowed-down specs</td>
+<td>ERP, email</td>
+</tr>
+<tr>
+<td><strong>Shipping clerk</strong></td>
+<td>Assembles and ships the paperwork packet</td>
+<td>Printer, filing cabinet, ERP</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Customer mix.</strong> Aerospace and defense (AS9100 / AS9102 / ITAR / DFARS / CMMC), automotive (IATF 16949 / PPAP), medical (ISO 13485 / FDA QMSR), and general industrial. Many shops serve several of these at once, which is the origin of a large share of the pain in Section 3 — the same physical part must be documented in three different dialects.</p>
+<hr />
+<h2>2. How the work is performed</h2>
+<h3>2.1 Inbound: RFQ and contract review</h3>
+<p>An RFQ arrives as email with attached PDFs — usually 2D drawings, frequently scanned, frequently old. The estimator quotes from the print. Quality requirements ride along in the purchase order and in referenced clause documents, and this is where the first structural failure occurs, described plainly by a supplier-side quality practitioner:</p>
+<blockquote>
+<p><em>"Some P.O.s call it all out in the P.O. itself, and others also reference additional documents. </em><em>Often nobody has read all these requirements, and there may be surprises.</em><em>… We make computer gear, and I routinely receive aircraft engine repair specs as parts of P.O.s, as well as nuclear reactor and other N/A language."</em> — normzone, <a href="https://elsmar.com/elsmarqualityforum/threads/purchase-order-quality-clauses.71375/">Elsmar</a></p>
+</blockquote>
+<p>The volume problem is real in both directions. From the same thread: <em>"If we included every non applicable thing that was thrown out for flowdown our PO could easily reach </em><em>20 - 50 pages on every single job. Even for something as simple as zinc phosphate.</em><em>"</em> (Eredhel). And clauses attach to the <em>customer-plus-product</em> combination, not to the vendor — <em>"a PO for steel for that customer may not get a specialty metals PO code, but a PO for a different customer for the same steel from the same vendor may get such a code"</em> (Mike S.).</p>
+<p>The recognized remedy is a formal contract review before acceptance. Wes Bucey's framing on Elsmar is that a cross-functional team must examine <em>"the niggledy piggledy points… </em><em>BEFORE</em><em> accepting the contract."</em> (<a href="https://elsmar.com/elsmarqualityforum/threads/ppap-including-fai-parts-customer-is-requiring-5000-measurements.45712/">Elsmar</a>) What actually happens is described in the same thread by TShepherd: <em>"Many of the people that do the quote process </em><em>don't take quality into consideration</em><em> and then you get into a corner because you need a gage or an exceptional layout… in order to ship parts and get paid."</em></p>
+<h3>2.2 Production and the first article</h3>
+<p>For a new part, AS9102 First Article Inspection is the gate. <strong>AS9102 Rev C is current, published June 2023</strong> (<a href="https://www.sae.org/standards/as9102c-aerospace-series-first-article-inspection-requirements/">SAE</a>, <a href="https://store.accuristech.com/standards/sae-as9102c?product_id=2568218">Accuris</a>) — and critically, <strong>there is no industry-mandated transition date</strong>; adoption is customer-by-customer, so shops maintain Rev B and Rev C form sets simultaneously (<a href="https://auva.com/2024/04/23/as9102-revision-c-noteworthy-changes-and-implications/">AUVA</a>).</p>
+<p>The three forms: <strong>Form 1</strong> part number accountability (Rev C renamed "FAIR Number" to "FAIR Identifier", made field 14 "Reason for Full/Partial FAI" mandatory for <em>all</em> FAIs, and changed field 17 from "Part Serial Number" to "Part Type"); <strong>Form 2</strong> product accountability — every material and special process backed by a specific certificate; <strong>Form 3</strong> characteristic accountability — one row per ballooned characteristic with requirement, result, and specific measurement method. Rev C removed the signature fields from Forms 2 and 3, so signing Form 1 locks all three into one record, and Form 1 is signed <strong>last</strong>. (<a href="https://www.net-inspect.com/blog/as9102-rev-b-vs-rev-c/">Net-Inspect Rev B vs C</a>, <a href="https://app.qualityengineer.ai/blog/as9102-fai-form-1-2-3">QualityEngineer.ai</a>)</p>
+<p>The work itself, described step by step by a quality manager at a shop pursuing AS9100:</p>
+<blockquote>
+<p><em>"1. Bubbling the characteristics on the drawing (could be anywhere from </em><em>5 to 500</em><em> depending on the part being made. 2. Transferring all the characteristic and requirement data from the drawings to our AS9102 based FAI forms (</em><em>this is a manual typed process on a fillable pdf form</em><em>). 3. Inspector fills out the results sections… </em><em>It can take 4-5 hours to get one part processed!</em><em> Is that a normal amount of time for an FAI?"</em>
+— CanadianQA, <a href="https://elsmar.com/elsmarqualityforum/threads/as9100-clause-8-5-1-3-first-article-inspection-costs.73620/">Elsmar</a></p>
+</blockquote>
+<p>And the business consequence, from the same post: <em>"My General Manager had a bit of a freak out today about </em><em>'how we're supposed to make money when we have to FAI every new part'.</em><em>"</em></p>
+<p>A rule of thumb offered in reply gives a costing basis: <em>"each feature takes approximately </em><em>2 minutes</em><em> - based on complexity - so do the math"</em> (dsanabria). Characteristic counts corroborate: one practitioner built a custom workbook because <em>"when there are </em><em>200-300 measurements</em><em>, it makes it a heck of a lot easier for the inspector to know where problems are"</em>; another posts a template with <em>"</em><em>500 rows</em><em>, tis a small one."</em> (<a href="https://elsmar.com/elsmarqualityforum/threads/as9102-fai-first-article-inspection-form-example.20933/">Elsmar</a>)</p>
+<h3>2.3 Measurement and result capture</h3>
+<p>Results come off CMMs, calipers, micrometers and gages. Getting them into the customer-facing form is largely retyping. Quality Magazine's own how-to instructs readers to <em>"</em><em>Avoid retyping printed CMM data into a FAIR.</em><em> It's time consuming and error-prone"</em> (<a href="https://www.qualitymag.com/articles/95613-how-to-create-an-as9102-first-article-inspection-report">qualitymag.com</a>) — advice that only exists because retyping is the default. Ideagen states the baseline directly: <em>"Filling out Form 3 by hand means </em><em>retyping every balloon number, characteristic and measurement</em><em> into a spreadsheet."</em> (<a href="https://www.inspectionxpert.com/blog/how-to-fill-out-an-as9102-first-article-inspection-report-with-excel">InspectionXpert</a>)</p>
+<p><strong>CMM data import is a paid upgrade in both major products</strong> — InspectionXpert gates it behind Advanced ($235/mo vs Standard $125/mo, <a href="https://www.softwaresuggest.com/inspectionxpert">SoftwareSuggest</a>) and SOLIDWORKS gates it behind Inspection Professional, with only Standard publicly priced at <strong>$599/yr</strong> (<a href="https://designandprocess.com/product/solidworks-inspection-standard/">Design &amp; Process</a>).</p>
+<h3>2.4 Outside processing</h3>
+<p>Heat treat, plating, anodize, NDT and coatings go out. Nadcap covers <strong>24 critical-process accreditation programs</strong> with 60+ subscribing OEM members (<a href="https://www.p-r-i.org/nadcap">PRI</a>), and customer flow-downs make approved-processor status a hard gate: General Dynamics Mission Systems requires the supplier to ensure it is approved for the process <em>"</em><em>PRIOR TO shipment of any product</em><em>"</em> whether performed in-house or outsourced (<a href="https://gdmissionsystems.com/-/media/general-dynamics/suppliers/terms-and-conditions/gdms-specialprocesses.ashx">GDMS</a>).</p>
+<p>Third-party estimates put Nadcap accreditation at $2,500–$3,000 application per process, $10,000+ minimum on-site audit, $3,000–$5,000 annual maintenance, and 12–18 months total (<a href="https://aqmauditing.com/cost-timeframe-for-gaining-nadcap-certification/">AQM Auditing</a>) — which is why a 5–75 person shop sends the work out and inherits the paperwork burden instead.</p>
+<p>That burden is described as structurally backwards by the people carrying it:</p>
+<blockquote>
+<p><em>"Boeing has recently updated D1-4426 Addendum… This has required all processes to have PSD's called out for all high level specifications on purchase orders. </em><em>We too (aerospace machine shop) are having many problems with this</em><em> and flowing the PSD's down to the processors. There is no flow down from our customer, only Boeing. </em><em>It is forcing us non plating/heat treat experts to tell our processors what they need to do. It is completely backwards from how it should be.</em><em>"</em> — erinpristel, <a href="https://elsmar.com/elsmarqualityforum/threads/nadcap-processor-po-purchase-order-requirements.60813/">Elsmar</a></p>
+</blockquote>
+<p>Scale, from the same thread: <em>"For Boeing you need to know the aircraft type and which division the part is going to so that you can make sure you are using the applicable departures from the base spec… </em><em>Some specs can have 20 or more departures</em><em>"</em> — and, critically, <em>"This is an ongoing issue that </em><em>has resulted in escapes</em><em> so is getting some visibility"</em> (andygr).</p>
+<h3>2.5 The cert package and shipment</h3>
+<p>Parts ship with paperwork. There is <strong>no industry-standard name for it</strong>, which is itself diagnostic. A newly promoted assistant quality manager asked what to call it and got four different answers — "cert package," "the paperwork," "shipping docs," "doc package," "Tool Inspection Package" — with Mike S. noting <em>"</em><em>there is no standardized term I know of</em><em>. Sometimes it is just one page… </em><em>Sometimes it can be dozens of pages</em><em>."</em> (<a href="https://elsmar.com/elsmarqualityforum/threads/documentation-accompanying-an-aerospace-part.84250/">Elsmar</a>) The contents, per a practitioner in the same thread: <em>"Certificate of Conformance / AS 9102 Inspection Documentation / All Material(s) and Outside Process Certifications. </em><em>Always read the Purchase Order for any other Quality Requirements. Also see if there is a Source Inspection Requirements.</em><em>"</em></p>
+<p>Required CofC content is dictated by each customer. Lockheed Martin Aero's Appendix QX specifies seller facility name and address, date, PO/contract number, part number, traceability data, quantity, variance/deviation numbers, special handling notes, and an authorized signature (electronic accepted) (<a href="https://www.lockheedmartin.com/content/dam/lockheed-martin/aero/documents/scm/Quality-Requirements/Quality-Appendices/AppQX_rev10.pdf">LM Aero App QX</a>). A smaller shop's own supplier flow-down requires raw-material certs <em>from the original product manufacturer</em> with manufacture date, production lot, batch and <strong>heat lot</strong>, and for coatings the <strong>average coating thickness documented</strong> (<a href="https://globalmachineworks.com/wp-content/uploads/2025/09/Supplier-Quality-Requirements-Rev-9_17_2025.pdf">Global Machine Works</a>).</p>
+<p>How the final control actually works:</p>
+<blockquote>
+<p><em>"when a product is ready to be shipped, the shipping manager/clerk comes to me, the Quality Manager, to sign off on the CofC… </em><em>I don't actually confirm anything</em><em> w/ respects to the product being shipped… </em><em>I basically 'blindly' sign the CofC.</em><em> Second, </em><em>it wastes so much time for shipping to run up &amp; down the hall looking for someone to sign the CofC before they can actually ship product out the door.</em><em>"</em> — SLSHappy, quality manager at a ~50-employee FAA-regulated manufacturer, <a href="https://elsmar.com/elsmarqualityforum/threads/certificate-of-conformance-compliance-cofc-share-your-best-business-practices.15686/">Elsmar</a></p>
+</blockquote>
+<p>Veteran aerospace auditor Sidney Vianna, in the same thread: <em>"</em><em>In my experience, many people signing on a CoC have no idea of what they are signing for.</em><em>"</em></p>
+<h3>2.6 Nonconformance and corrective action</h3>
+<p>Clocks are contractual and short. Lockheed Martin Aero: potential quality escape notification within <strong>3 business days</strong>, supplementary information within 5; <strong>flight-safety or counterfeit concern within 24 hours</strong>; approved corrective action on a SCAR within <strong>30 calendar days</strong>. Global Machine Works requires escape notice within <strong>one business day</strong> of a nonconformance being determined <em>or suspected</em> on delivered product.</p>
+<p>The supplier-side experience: <em>"I have been on the receiving end of a Scar with </em><em>triplex 8D required within two weeks for individual isolated defects</em><em>, and that is not a fun place to be. </em><em>We actually charge those customers more now</em><em> due to the extra work."</em> (<a href="https://elsmar.com/elsmarqualityforum/threads/suppliers-not-responding-to-supplier-corrective-action-requests-scar.69081/">Elsmar</a>) And from a quality manager at a supplier: <em>"at least </em><em>half of our top customer's RCCA requests turn out to be not our fault</em><em>, but they are the customer and I owe them the professional courtesy of a response."</em></p>
+<h3>2.7 Software actually in use</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Products</th>
+<th>Pricing where published</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ballooning / FAI</td>
+<td>Ideagen Quality Control (ex-InspectionXpert), High QA, DISCUS, SOLIDWORKS Inspection, Net-Inspect, 1factory, QA-CAD, Balloonist.io, GroundControl</td>
+<td>Ideagen <strong>$125–$235/mo</strong>; SW Inspection Standard <strong>$599/yr</strong>; 1factory <strong>$75/user/mo, 5 min</strong>; QA-CAD <strong>$1,195 perpetual</strong>; Balloonist <strong>$30/user/mo</strong>; Net-Inspect from <strong>$500/mo</strong>. High QA, DISCUS, Verisurf, ETQ: <strong>quote only</strong></td>
+</tr>
+<tr>
+<td>Job shop ERP</td>
+<td>E2 Shop, JobBOSS², ProShop, Global Shop, Fulcrum, MIE Trak, Realtrac, Steelhead</td>
+<td>E2 <strong>$45–$100/user/mo</strong>, implementation $5k–$60k; Global Shop <strong>$65–$200/user/mo</strong>, implementation $20k–$250k; Fulcrum <strong>$6k–$18k/yr unlimited users</strong></td>
+</tr>
+<tr>
+<td>Quoting</td>
+<td>Paperless Parts, MIE Trak, Machine Research</td>
+<td>No published pricing; no free trial at Paperless Parts</td>
+</tr>
+<tr>
+<td>CMM / SPC</td>
+<td>PC-DMIS, Calypso, Prolink QC-CALC, Verisurf</td>
+<td>QC-CALC Real-Time <strong>$1,950</strong></td>
+</tr>
+<tr>
+<td>Cert management</td>
+<td>—</td>
+<td><strong>No category leader exists</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Sources: <a href="https://www.erpresearch.com/pricing/e2-shop-system">ERP Research E2</a>, <a href="https://www.erpresearch.com/pricing/global-shop-solutions">ERP Research Global Shop</a>, <a href="https://softwareconnect.com/reviews/fulcrum-pro/">Software Connect Fulcrum</a>, <a href="https://www.1factory.com/pricing.html">1factory pricing</a>, <a href="https://www.guthcad.com/order_qacad.htm">QA-CAD</a>, <a href="https://balloonist.io/">Balloonist</a>, <a href="https://www.capterra.com/p/88288/Quality-Improvement-Software/">Capterra Net-Inspect</a>, <a href="https://www.msi-viking.com/Prolink-QC-CALC-Real-Time-Data-Collection-Softw">MSI Viking QC-CALC</a></p>
+<p>Two structural facts about this landscape matter more than any individual price:</p>
+<p><strong>No ERP in this market advertises drawing ballooning or AS9102 form generation as a native capability.</strong> The ballooning vendors exist because that gap is universal. Conversely, MIE Trak reviewers report <em>"The quality module is limited"</em> and <em>"Limited document control capabilities compared to enterprise alternatives"</em> (<a href="https://www.capterra.com/p/161558/MIE-Trak-Pro/">Capterra</a>).</p>
+<p><strong>A search for "certificate of conformance software" returns almost entirely free Word and PDF templates, not products.</strong> There is no category leader for the single most frequent outbound document in this market.</p>
+<hr />
+<h2>3. Most important problems — ranked</h2>
+<h3>Problem 1 — The cert package is assembled by hand, gates shipment, and the final control is a signature nobody stands behind</h3>
+<p><strong>Who.</strong> Quality manager and shipping clerk. <strong>When.</strong> Every shipment. <strong>Frequency.</strong> Daily.</p>
+<p><strong>How handled now.</strong> Someone collects the CofC, the FAIR if applicable, material certs, and every outside-process cert; staples or PDFs them together; walks it down the hall for a signature. Storage underneath is folders and scans: one shop describes <em>"we scan every one of them and store them under the customer name then the parts number then the order number and date. This saved us 4 filing cabinets of paperwork"</em> (<a href="https://elsmar.com/elsmarqualityforum/threads/qms-and-iso-9001-for-a-single-person-machine-shop.68746/">Elsmar</a>).</p>
+<p><strong>Why inadequate.</strong> Three independent failures compound. (1) <strong>The composition varies by customer and nobody has it written down</strong> — hence the "what do you even call this" thread and four different answers. (2) <strong>The verification step is theatrical</strong>: the quality manager signing the CofC states plainly that he <em>"doesn't actually confirm anything"</em> and signs <em>"blindly."</em> (3) <strong>It blocks revenue</strong> — shipping cannot release product while hunting for a signature.</p>
+<p><strong>Cost.</strong> Direct: shipping delay per shipment, plus the quality manager's interruption. Indirect and much larger: <strong>missing or incomplete material certificates on Form 2 are cited as the single most frequent cause of FAIR rejection</strong> (<a href="https://www.unitek-kiwa.com/blog/as9102-first-article-inspection-guide/">Unitek Kiwa</a>, <a href="https://app.qualityengineer.ai/blog/as9102-fai-form-1-2-3">QualityEngineer.ai</a>). A rejection means the parts are delivered but not accepted, which means not paid.</p>
+<p><strong>Evidence strength: high.</strong> Multiple named practitioners, a veteran auditor's corroboration, two customer supplier-quality manuals specifying required content, and a documented absence of any software category serving it.</p>
+<hr />
+<h3>Problem 2 — Purchase-order quality clauses are not read until they are breached</h3>
+<p><strong>Who.</strong> Owner/estimator at quote, quality manager at execution. <strong>When.</strong> Contract acceptance. <strong>Frequency.</strong> Every new customer and every new PO from an existing one.</p>
+<p><strong>How handled now.</strong> Nothing systematic. The quotes go out priced on machining. The clauses are discovered later.</p>
+<p><strong>Why inadequate.</strong> The failure mode is documented at both ends. At quote: <em>"Many of the people that do the quote process don't take quality into consideration and then you get into a corner because you need a gage or an exceptional layout… in order to ship parts and get paid."</em> At execution, the worst documented case: a machine-shop quality manager discovered post-award that his customer wanted <strong>50 nest positions × 5 repetitions × 20 dimensions = 5,000 measurements</strong>, all hand-written onto customer-supplied forms — with <strong>no PPAP charge agreed</strong>, because <em>"They started this project before I took this job."</em> (<a href="https://elsmar.com/elsmarqualityforum/threads/ppap-including-fai-parts-customer-is-requiring-5000-measurements.45712/">Elsmar</a>)</p>
+<p><strong>Cost.</strong> Unbounded on the downside, because it is discovered after the price is fixed. At 2 minutes per characteristic, 5,000 measurements is ~167 hours of unpriced inspection labor on one job.</p>
+<p><strong>Evidence strength: high.</strong> Named practitioners at three different shops describing the same failure, plus a documented catastrophic instance.</p>
+<hr />
+<h3>Problem 3 — Ballooning and FAIR production consume hours per part, and most of the output is never read</h3>
+<p><strong>Who.</strong> Quality manager and inspector. <strong>When.</strong> Every new part number, and again on many revision changes.</p>
+<p><strong>How handled now.</strong> Balloon the print (5 to 500 characteristics), retype every characteristic into a fillable PDF or Excel, fill in results by hand. Practitioner-reported: <strong>4–5 hours per part</strong>, with a <strong>~2 minutes per feature</strong> rule of thumb. The tools that exist are either expensive, disliked, or both — Capterra reviewers on Ideagen: <em>"The cost is not budget friendly and it is very costly for us to renew each year"</em>; <em>"OCR can be glitchy"</em>; <em>"an old-fashioned interface and limited user-friendliness"</em> making it <em>"a tedious tool to use regularly"</em> (<a href="https://www.capterra.com/p/210181/Ideagen-Quality-Control/">Capterra</a>). High QA's per-seat model draws <em>"I wish the pricing was per organization, and not per user"</em> (<a href="https://www.capterra.com/p/248001/High-QA-Inspection-Manager/">Capterra</a>).</p>
+<p>Auto-ballooning has a hard accuracy ceiling: a vendor comparison puts it at <strong>85–90% on clean drawings</strong>, with <strong>1–3 hours of manual correction on complex drawings</strong>, and residual failures concentrated in datum references, ISO 2768 blanket tolerances, fit-class expansion and cross-sheet duplicates (<a href="https://mavlon.co/post/auto-ballooning-software-aerospace-fai-compared">Mavlon</a>). And the input is usually bad: a practitioner notes <em>"the majority of the prints we receive here are older and are usually in PDF format"</em> requiring you to <em>"double check the OCR on some older scanned prints"</em> (<a href="https://www.practicalmachinist.com/forum/threads/first-article-inspection-software-or-documentation.382354/">Practical Machinist</a>).</p>
+<p><strong>The part that reframes the whole problem:</strong></p>
+<blockquote>
+<p><em>"I have done probably </em><em>1000 FAI's since 2005</em><em>. I would estimate that </em><em>95% of those received no response from the customer</em><em>. Out of about 50-75 customers involved, </em><em>I can count on one hand the number who actually seem to review these.</em><em> Interestingly, </em><em>Boeing is one who never responds</em><em>."</em> — Jimw1954, <a href="https://elsmar.com/elsmarqualityforum/threads/am-i-allowed-to-ship-parts-without-fai-approval-from-the-customer.67821/">Elsmar</a></p>
+</blockquote>
+<p>Corroborated in the same thread: <em>"I have probably done about </em><em>150 FAIR's over the last 3 years</em><em> and I think I have got about </em><em>6 returned signed</em><em>… Sometimes </em><em>3-4 months go by</em><em> and I will receive an e-mail asking me to change/fix/update a FAIR that I did (typo typically)."</em> (Michael_M)</p>
+<p><strong>Why this matters for opportunity selection.</strong> The FAIR is a mandatory artifact that is mostly unread but occasionally rejected months later — often for a typo. That profile argues <strong>against</strong> building another ballooning tool (the space has 10+ entrants) and <strong>for</strong> building something that makes the artifact correct on the first submission at near-zero marginal effort.</p>
+<p><strong>Cost.</strong> 4–5 hours per new part number, at a role paid toward six figures in some shops.</p>
+<p><strong>Evidence strength: high on effort and tooling; medium on the 95%-no-response figure</strong> — it is one experienced practitioner's estimate, corroborated in magnitude by a second, but it is not measured data.</p>
+<hr />
+<h3>Problem 4 — Drawing revisions arrive mid-job, and most of them are not technical</h3>
+<p><strong>Who.</strong> Programmer, quality manager, production manager. <strong>When.</strong> Unpredictably. <strong>Frequency.</strong> Constant.</p>
+<p><strong>Evidence, both directions.</strong> Money lost to a stale revision: <em>"the end customer </em><em>changed the drawing with an updated revision AFTER they sent the parts out to get made. They never told our customer and they never told us. They just rejected the parts when they came in.</em><em>"</em> Exposure quantified by the poster: <em>"1750 in material about 3 days of waterjet time and about a week of spindle time."</em> (<a href="https://www.practicalmachinist.com/forum/threads/custom-sent-wrong-drawing-who-should-pay.369452/">Practical Machinist</a>)</p>
+<p>Revision landing mid-operation: <em>"I am currently in the middle of a part that is on Revision E and </em><em>they sent a new Revision F while I was running the first operation</em><em>"</em> — with the poster noting his workaround leaves <em>"the possibility to accidentally select features from outdated revisions."</em> A second: <em>"I deal with rev changes all the time midstream and it is super annoying… Last time a big change happened I was </em><em>halfway through programming about 150 toolpaths</em><em>." (<a href="https://www.practicalmachinist.com/forum/threads/how-do-you-deal-with-revision-changes.395938/">Practical Machinist</a>) Controls in use are physical: </em>"I stamp the print 'Void' and attach the new print with a form"<em>; </em>"the old print is shredded."*</p>
+<p>And the redundant-paperwork half, from a fastener supplier holding <em>"</em><em>Well over 2000</em><em>"</em> first articles:</p>
+<blockquote>
+<p><em>"another drawing change for Airbus where they changed the drawing ownership (name on top of print) from Aerospatiale to EADS… </em><em>There was absolutely no technical changes</em><em>… </em><em>We get revision changes like this all the time and it's rather frustrating.</em><em>"</em> — TRBOKEV, <a href="https://elsmar.com/elsmarqualityforum/threads/as9102-fair-customer-drawing-revision-change.59211/">Elsmar</a></p>
+</blockquote>
+<p>With a fellow practitioner adding: <em>"More paper does not make the FAI better for these type of changes and IMO is mainly done for </em><em>those who value format over function</em><em>."</em></p>
+<p><strong>Why inadequate.</strong> The shop cannot cheaply answer the two questions that matter: <em>did anything I machine to actually change?</em> and <em>does this trigger a full or partial FAI?</em> AS9102's triggers are documented — a change in manufacturing source, process, inspection method, location, tooling or materials <em>"that can potentially affect fit, form or function"</em>; a two-year production lapse normally requires a <strong>full</strong> FAI (<a href="https://endevco.com/contentstore/mktgcontent/endevco/uploads/2019/02/AS9102-frequently-asked-questions1.pdf">IAQG AS9102 FAQ</a>) — but applying them requires knowing what changed.</p>
+<p><strong>Cost.</strong> One documented instance: material plus ~8 machine-days. Plus recurring FAIR rework for changes with no technical content.</p>
+<p><strong>Evidence strength: high.</strong></p>
+<hr />
+<h3>Problem 5 — Outside-processing flow-down is performed by people who are not the process experts, and it produces escapes</h3>
+<p><strong>Who.</strong> Buyer and quality manager. <strong>When.</strong> Every outside-processing PO. <strong>Frequency.</strong> Most aerospace jobs.</p>
+<p><strong>How handled now.</strong> Homegrown discipline. One shop's control: <em>"We give the special process house an operation sheet with all requirements, and </em><em>reference 'Op50 RevC 9/12/11' on the PO, so the purchasing dept doesn't miss something.</em><em>"</em> Required cert content is enumerated by hand — one practitioner lists aircraft model, P/N, model revision, spec revision, serial number, date performed per operation, accept/reject per operation, main cert date, <em>"and in extreme cases i have seen called out primer batch and sol gel batch # as well as certs from the distributor (not the processing house)."</em> (<a href="https://elsmar.com/elsmarqualityforum/threads/nadcap-processor-po-purchase-order-requirements.60813/">Elsmar</a>)</p>
+<p><strong>Why inadequate.</strong> Twenty-plus departures per specification, applied by non-specialists, with an explicitly acknowledged consequence — <em>"has resulted in escapes."</em> Meanwhile approved-vendor records rot: a new quality engineer found <em>"</em><em>several vendors the company had been using for years that were never approved or had any records at all</em><em>,"</em> including a <em>"critical sole source vendor"</em> who would not respond, while buyers <em>"will not help me"</em> and his supervisor insisted he approve them <em>"by any means necessary."</em> (<a href="https://elsmar.com/elsmarqualityforum/threads/approved-vendor-list-non-responsive-vendors-requiring-approval.92003/">Elsmar</a>) A colleague's workaround for confirming a vendor still existed: <em>"We looked them up on </em><em>Google Maps and called the business located in the building next door</em><em>."</em></p>
+<p>Parts also get damaged out there and nobody counts it. A startup lost 19 of 200 anodized parts (9.5%); the veteran response was <em>"You will be lucky to get them to pay for the material… </em><em>This is why the shop that made the parts left you to deal with the plating shop. Happens all the time</em><em>"</em> and <em>"You always need make extras… finisher mess a few up etc."</em> (<a href="https://www.practicalmachinist.com/forum/threads/what-should-happen-when-a-metal-finishing-shop-ruins-parts.253525/">Practical Machinist</a>) <em>(Inference: shops absorb this as a scrap allowance rather than as vendor performance data.)</em></p>
+<p><strong>Evidence strength: high on flow-down and approved-vendor decay; medium on the scrap-absorption inference.</strong></p>
+<hr />
+<h3>Problem 6 — Material traceability breaks between the certificate and the finished part</h3>
+<p><strong>Who.</strong> Receiving, production, shipping. <strong>When.</strong> Continuously. <strong>Frequency.</strong> Every material lot.</p>
+<p><strong>How handled now.</strong> A quality consultant documenting real shops found: a <strong>Dropbox folder organized by supplier and date</strong>; a <strong>filing cabinet organized by PO number</strong>; and certs <strong>zip-tied to the bar stock</strong> — <em>"unzip the tie, pull the bars, and zip it back."</em> Their diagnosis is precise: <em>"</em><em>the gap is the link between each certificate and the specific finished part it became</em><em>,"</em> broken at three points — receiving→storage lot commingling, storage→production with heat lot undocumented, and production→shipment where multi-lot jobs cannot be recalled (<a href="https://kaizenisoconsulting.com/articles/material-traceability-beyond-certification-shuffle">Kaizen ISO Consulting</a>).</p>
+<p>A shop describing its own method on Elsmar: <em>"we would print out a copy of the goods receipt paperwork and </em><em>attach it to the top billet with sellotape</em><em>. If they sit a while the paper can become ripped or loose and </em><em>we can lose traceability</em><em>."</em> (<a href="https://elsmar.com/elsmarqualityforum/threads/raw-material-traceability-in-a-machine-shop-aluminium-billets.91539/">Elsmar</a>)</p>
+<p><strong>Why inadequate.</strong> The regulatory demands are specific and the sellotape does not meet them. DFARS <strong>252.225-7008</strong> requires specialty metal <em>"melted or produced in the United States or its outlying areas"</em>; <strong>252.225-7009</strong> extends to articles containing specialty metals with a qualifying-country allowance and a <strong>2%-by-weight de minimis</strong> (<a href="https://www.acquisition.gov/dfars/252.225-7008-restriction-acquisition-specialty-metals.">acquisition.gov</a>, <a href="https://www.law.cornell.edu/cfr/text/48/252.225-7009">Cornell LII</a>). Customers require <em>"lot traceability to the melt"</em> (<a href="https://www.sensata.com/sites/default/files/a/kavlico-supplier-quality-requirements-manual-ap0425.pdf">Sensata/Kavlico</a>). Counterfeit-materiel controls per <strong>AS6174</strong> — the non-electronic standard that actually applies to bar stock and hardware — must be flowed to sub-tiers. And LM Aero requires record retention of <strong>3 years, or 7 for special-process work</strong>.</p>
+<p><strong>Cost.</strong> Latent until a recall or an audit finding, at which point it is existential.</p>
+<p><strong>Evidence strength: high</strong> — practitioner accounts, a consultant's field observations, and primary regulatory text.</p>
+<hr />
+<h3>Problem 7 — Every customer wants the same information in a different format</h3>
+<p><strong>Who.</strong> Quality manager. <strong>When.</strong> Every FAIR and every inspection report. <strong>Frequency.</strong> Constant.</p>
+<p><strong>Evidence.</strong> On the FAI form itself: a shop had a FAIR <strong>rejected</strong> over Form 2 Field 8 (Special Process Supplier Code) — a code the <em>customer</em> assigns and had never provided — requiring <em>"much deliberation"</em> before acceptance. Another practitioner in the same thread: <em>"</em><em>Many of my customers have unique requirements when it comes to how they want these things filled out, which is a bit frustrating as it seems to go against the whole idea.</em><em>"</em> (<a href="https://elsmar.com/elsmarqualityforum/threads/as9102-rev-c-form-2-supplier-code.89114/">Elsmar</a>) And: <em>"Although Boeing and most subs I deal with insist this is a uniform process, </em><em>I have not found that to be true. Each company has their own requirements.</em><em>"</em></p>
+<p>On inspection reports, the transcription tax is described exactly:</p>
+<blockquote>
+<p><em>"Several of our clients have different formats, and each one passes through the shop and/or Inspection Room in </em><em>hard-copy filled out in pen and ink, then someone transcribes the pen and ink to the electronic version</em><em> that was originally e-mailed to us, then that file is sent back to the client. This means </em><em>we have no real managed method of producing Inspection Reports other than grinding pen and ink</em><em>."</em> — ttrager, <a href="https://practicalmachinist.com/forum/threads/how-do-you-handle-inspection-reporting-with-your-clients.369863/">Practical Machinist</a></p>
+</blockquote>
+<p>His own fix, built himself: a <strong>VBA-coded Excel workbook with wireless caliper capture</strong> that <em>"auto-shades measurements that are out of spec"</em> and has <em>"auto-reporting to match customer formats where that can happen"</em> — but for revision-controlled customer spreadsheets he still <em>"collect[s] the data in the tool I'm prototyping, then </em><em>copy those cells out to the Customer report</em><em>."</em> (<a href="https://www.practicalmachinist.com/forum/threads/how-do-you-handle-inspection-reporting-with-your-clients.369863/page-2">page 2</a>)</p>
+<p>There is also a structural aggravator: <strong>AS9102 mandates no digital data-interchange format.</strong> (<a href="https://www.discussoftware.com/news/as9102-rev-c-what-you-need-to-know/">DISCUS</a>) The standard specifies forms, not a schema. Everything is PDF and Excel by default.</p>
+<p><strong>Evidence strength: high.</strong></p>
+<hr />
+<h3>Problem 8 — Corrective-action responses are burdensome, often misdirected, and usually badly written</h3>
+<p><strong>Who.</strong> Quality manager. <strong>When.</strong> On customer complaint. <strong>Frequency.</strong> Episodic but clock-driven.</p>
+<p><strong>Evidence.</strong> Turnaround pressure: <em>"triplex 8D required within two weeks for individual isolated defects."</em> Misdirection: <em>"at least half of our top customer's RCCA requests turn out to be not our fault."</em> Quality: a receiving-side quality lead reports <em>"</em><em>rejecting most of the CA responses. All are poorly written with insufficient data</em><em>"</em> and is explicitly looking for training in <em>how to write</em> one, not for software (<a href="https://elsmar.com/elsmarqualityforum/threads/formal-written-response-to-a-corrective-action.72834/">Elsmar</a>).</p>
+<p>The customer's view is worth recording because it defines the target: <em>"the information that goes into the 8D is </em><em>all in this pile of emails you sent me</em><em> (making more work for me). Why didn't you just consolidate this all together and fill out the 8D?… And it is ALWAYS true."</em></p>
+<p><strong>Evidence strength: high, but note the caution it implies</strong> — the receiving-side practitioner wanted <em>training</em>, not a tool. A template generator that does not improve reasoning quality will produce faster bad responses.</p>
+<hr />
+<h3>Problem 9 — Compliance overlay constrains what software is even permissible</h3>
+<p>Not a pain point to solve, but the architectural constraint every opportunity below must respect.</p>
+<p><strong>ITAR.</strong> 22 CFR <strong>120.54</strong> (effective 25 March 2020) is the operative carve-out: unclassified technical data is not an export if end-to-end encrypted at FIPS 140-2 or comparable ≥128-bit strength, kept encrypted until decrypted by the authorized recipient with <strong>no means of decryption provided to any third party including the cloud provider</strong>, and not stored in a §126.1 proscribed country or Russia (<a href="https://www.dinsmore.com/publications/new-itar-end-to-end-encryption-rule-will-promote-efficient-defense-technical-data-storage-and-transmission-but-some-risks-remain/">Dinsmore analysis</a>).</p>
+<p><strong>CMMC.</strong> The 48 CFR acquisition rule became effective <strong>10 November 2025</strong>, putting CMMC clauses into DoD contracts. Phase 1 (to 31 Oct 2026) allows Level 1/Level 2 <strong>self-assessment</strong>; Phase 2 was scheduled to make Level 2 C3PAO certification the default for CUI contracts. As of early 2026 the reported state was <strong>98 authorized C3PAOs and ~1,042 certified organizations against an estimated ~76,598 needing certification</strong>, with assessments at <strong>$35,000–$75,000</strong> and waits reported <em>"eight months out."</em> <strong>One source carries an editor's note that the Phase 2 transition is "currently on hold," which could not be independently confirmed from a primary DoD source — treat the Phase 2 date as uncertain.</strong> (<a href="https://www.preveil.com/blog/cmmc-final-rule-published/">PreVeil</a>, <a href="https://secureframe.com/blog/cmmc-phase-2-preparation">Secureframe</a>, <a href="https://www.pkfod.com/insights/no-certification-no-contract-cmmc-rule-48-cfr-7021-takes-effect-november-10-2025/">PKF O'Connor Davies</a>)</p>
+<p><strong>The consequence for this catalog is favorable and specific.</strong> A DoD print is simultaneously ITAR technical data and CUI, and the obligations are cumulative. Small shops respond by keeping prints on paper travelers and local shared folders — <em>"printed travelers/drawings with CUI migrate across work centers, get annotated, and are hard to track/recall"</em> (<a href="https://www.allencio.com/the-challenges-faced-by-machine-shops-with-cmmc/">Allen CIO</a>) — which is exactly the practice that breaks traceability. <strong>A local-first, offline, no-telemetry open-source tool is not a compromise in this market. It is the compliant architecture, and it is a selling point.</strong> One commercial entrant already markets on precisely this, claiming <em>"Drawings are processed entirely in your browser and are never uploaded"</em> (<a href="https://balloonist.io/">Balloonist</a>).</p>
+<hr />
+<h3>Problem 10 — There is no open-source foundation to build on</h3>
+<p>Worth recording because it shapes build estimates. The search for open-source tooling in this space came back essentially empty:</p>
+<ul>
+<li><strong>engineering-drawing-extractor</strong> — OpenCV + Tesseract, extracts <em>title block fields only</em>. <strong>85 stars, 4 commits, no releases.</strong> (<a href="https://github.com/Bakkopi/engineering-drawing-extractor">GitHub</a>)</li>
+<li><strong>FreeCAD STEP AP242 PMI export</strong> — an <strong>open issue, not implemented</strong>, blocked because <em>"the OCCT commercial PMI Visualization Component"</em> is required for graphical PMI while the open-source path needs manual tessellated polyline generation (<a href="https://github.com/freecad/freecad/issues/29797">FreeCAD #29797</a>)</li>
+<li><strong>STEPcode</strong> provides AP242 schema tooling but <strong>no PMI semantics layer</strong> (<a href="https://stepcode.github.io/docs/home/">STEPcode</a>)</li>
+<li><strong>werk24-python</strong> is a thin client to a paid SaaS backend</li>
+</ul>
+<p><strong>No open-source AS9102 form generator, PDF balloon-placement engine, or GD&amp;T feature-control-frame parser surfaced in any search.</strong> The only free artifacts are vendor lead-magnet Excel templates. <em>(Caveat: GitHub's search API was blocked in this environment, so coverage relied on web search plus direct repo fetches. Absence of evidence is weaker here than elsewhere in this report.)</em></p>
+<p><strong>Implication:</strong> concepts that require reading geometry or GD&amp;T from a drawing are materially more expensive than concepts that read <em>forms, tables and text</em>. The ranking in Section 5 reflects this.</p>
+<hr />
+<h2>4. Application opportunities</h2>
+<h3>Opportunity A — Cert Package Assembler and Completeness Gate</h3>
+<p><strong>Working title:</strong> <code>PackShip</code>
+<strong>Intended user:</strong> Quality manager and shipping clerk.
+<strong>Problem solved:</strong> Problem 1, with a direct assist to Problems 5 and 6.</p>
+<p><strong>Current workflow:</strong> Collect documents by memory, staple, walk down the hall for a blind signature, ship.</p>
+<p><strong>Proposed workflow:</strong> Each customer has a <strong>requirements profile</strong> — a plain-text file listing what their packages must contain and what each document must show. At shipment, the tool takes the job's documents (material certs, outside-process certs, FAIR, inspection report) and runs a <strong>completeness and consistency gate</strong>: is every required document present; does the part number, revision, PO number and quantity agree across all of them; is the material cert traceable to the heat lot on the job; do any certificate dates fall <strong>after</strong> the FAI signature date; are all outside processes on Form 2 backed by a returned cert. It then produces a single paginated PDF with a generated cover CofC carrying the customer's required fields, and a signature page that states <strong>what was actually checked</strong>.</p>
+<p><strong>Inputs:</strong> Job record (part, rev, PO, qty, heat lot); the document set; the customer profile.
+<strong>Outputs:</strong> Assembled package PDF; a pass/fail gate report; a CofC populated to the customer's required content; an archive manifest.</p>
+<p><strong>Essential features:</strong> customer profiles as human-readable, diffable text; cross-document field matching; <strong>date-logic checking</strong> (certificates dated after the FAI signature is a documented FAIR rejection cause); explicit listing of unverifiable items; never modifies source documents.
+<strong>Excluded from v1:</strong> Document storage/DMS, ERP integration, e-signature, generating any certificate the shop does not already have.</p>
+<p><strong>AI:</strong> <strong>Optional and confined to field extraction</strong> from heterogeneous supplier certificates — mill certs and plating certs have no common layout, and regex alone will not generalize. The <em>gate logic itself must be deterministic</em>; an LLM deciding a package is complete is worthless as a control. Extraction results must be shown for confirmation before the gate runs.</p>
+<p><strong>Would a spreadsheet suffice?</strong> No. The value is reading and cross-checking the PDFs themselves and refusing to release when they disagree. A spreadsheet checklist is what shops have; it is why the signature is blind.</p>
+<p><strong>Complexity:</strong> Medium. <strong>Learning difficulty:</strong> ~1 hour, mostly writing the first customer profile.
+<strong>Value:</strong> Turns a theatrical control into a real one, unblocks shipping, and attacks the <strong>most frequently cited FAIR rejection cause</strong> before the package leaves the building.
+<strong>Risks:</strong> A false "pass" is worse than no tool — hence the requirement that the signature page enumerate what was and was not verified. Data sensitivity is high (ITAR/CUI), so it must run entirely locally.
+<strong>Existing products:</strong> <strong>None.</strong> ERP quality modules store documents; ballooning tools build FAIRs; nothing assembles and gates the shipped package. The search for "certificate of conformance software" returns templates, not products.
+<strong>Why attractive:</strong> Highest-frequency handoff in the market, zero incumbents, a documented and quotable admission that the current control does not work, and a failure mode that costs money directly.
+<strong>Paid customization:</strong> Per-customer profiles (an obvious, repeatable engagement — LM Aero, Boeing, GD each have published requirements), ERP export hooks, firm CofC templates.</p>
+<hr />
+<h3>Opportunity B — FAIR Pre-Submission Validator</h3>
+<p><strong>Working title:</strong> <code>FAIRCheck</code>
+<strong>Intended user:</strong> Quality manager, before submitting a FAIR.
+<strong>Problem solved:</strong> Problem 3's rejection tail and Problem 7's per-customer variance — <strong>without competing in the crowded ballooning market</strong>.</p>
+<p><strong>Current workflow:</strong> Fill out the forms, send, and find out three to four months later that a typo needs fixing.</p>
+<p><strong>Proposed workflow:</strong> Load a completed AS9102 form set (Excel or fillable PDF, Rev B or Rev C). The tool runs the documented rejection causes as deterministic checks: every balloon number on the print appears exactly once in Form 3 and vice versa; every special process and material on Form 2 references a specific certificate rather than a procedure number; <strong>no certificate is dated after the Form 1 signature</strong>; Form 1 field 14 (reason for full/partial) is populated — <strong>mandatory for all FAIs under Rev C</strong>, not just partials; field 17 Part Type is populated; all COTS and standard catalog items appear on Form 1; measurement methods are specific ("CMM program FAI-12345 rev 2") rather than generic ("CMM"); the documented-nonconformance flag is consistent with the results; surface-finish and note-derived characteristics are accounted for rather than left narrative. Plus a <strong>customer overlay</strong>: this customer requires a ballooned print attached; this customer requires Rev B forms; this customer assigns Special Process Supplier Codes you must request.</p>
+<p><strong>Inputs:</strong> Completed form set; optionally the ballooned print; customer profile.
+<strong>Outputs:</strong> A findings list with severity and the specific rule; a clean/blocked verdict; a submission checklist.</p>
+<p><strong>Essential features:</strong> Rev B <strong>and</strong> Rev C rule sets, selectable — there is no mandated transition date, so both are live indefinitely; rules cite their source; balloon-to-row reconciliation; date-logic checking; customer overlays as text files.
+<strong>Excluded from v1:</strong> Ballooning, OCR of prints, generating forms, submitting to customer portals.</p>
+<p><strong>AI:</strong> <strong>Inappropriate for the checking</strong> — every rule above is a field, set-membership or date comparison. AI is <strong>optional</strong> as an authoring aid to convert a customer's written FAI requirements into a draft overlay for human review.</p>
+<p><strong>Would a spreadsheet suffice?</strong> Partly — practitioners have already built exactly this halfway, including a workbook that red-highlights out-of-tolerance values across 200–300 measurements. What a spreadsheet cannot do is reconcile balloons against a print, check dates across attached certificates, or carry per-customer overlays.</p>
+<p><strong>Complexity:</strong> Small-to-medium — it reads structured forms, not geometry, which per Problem 10 is the cheap side of this market. <strong>Learning difficulty:</strong> ~30 minutes.
+<strong>Value:</strong> Converts a months-long rejection loop into a pre-send check. Given that a large majority of FAIRs are never reviewed but the ones that are come back over typos, the expected value is concentrated exactly where this tool operates.
+<strong>Risks:</strong> Rule sets must be versioned against the form revision. Must never claim a FAIR is "approved" — only that listed checks passed.
+<strong>Existing products:</strong> The ballooning vendors generate FAIRs; <strong>none validate a finished one against rejection causes</strong>, and Net-Inspect users complain the portal creates <em>"double work"</em> rather than checking their existing Excel FAIR.
+<strong>Why attractive:</strong> Sharply scoped, deterministic, complements rather than competes with the 10+ ballooning entrants, and slots into whatever the shop already uses.
+<strong>Paid customization:</strong> Customer overlays; shop-specific rules; batch validation for high-FAIR-volume shops (one practitioner holds <em>"well over 2000"</em>).</p>
+<hr />
+<h3>Opportunity C — Purchase-Order Quality Clause Extractor</h3>
+<p><strong>Working title:</strong> <code>ClauseSheet</code>
+<strong>Intended user:</strong> Estimator at quote; quality manager at job release.
+<strong>Problem solved:</strong> Problem 2.</p>
+<p><strong>Current workflow:</strong> Nobody reads the clauses. Surprises surface during execution.</p>
+<p><strong>Proposed workflow:</strong> Drop in the PO and any referenced quality-clause documents. The tool extracts and classifies the obligations that change what the shop must <em>do</em>, and emits a one-page <strong>job requirements sheet</strong> for the traveler: FAI required (full or partial, which form revision, ballooned print required)? PPAP level? Source inspection or customer witness? Which certifications must ship? DFARS specialty-metal melt-source restriction? Counterfeit-materiel flow-down? Approved-processor constraint on special processes? Retention period? Escape-notification clock? Packaging and labeling? Anything it cannot classify goes in an explicit <strong>"unclassified — human review"</strong> section rather than being dropped.</p>
+<p><strong>Inputs:</strong> PO PDF, clause documents, optionally a customer profile from prior jobs.
+<strong>Outputs:</strong> One-page requirements sheet; a structured record feeding Opportunities A, B and D; a diff against this customer's last PO, flagging new or changed clauses.</p>
+<p><strong>Essential features:</strong> the diff-against-last-PO (cheap and high value — it turns a 50-page document into "three things changed"); explicit unclassified bucket; every extracted item linked back to its source page and clause number; local operation.
+<strong>Excluded from v1:</strong> Legal interpretation, contract negotiation, pricing.</p>
+<p><strong>AI:</strong> <strong>Necessary, and this is the strongest legitimate AI case in the report.</strong> Clause documents are unstructured prose in hundreds of house styles, referencing thousands of specs. Rules and regex will not generalize. But AI's role is <em>retrieval and classification with citation</em> — surfacing the clause and where it came from — never deciding whether the shop complies. The "unclassified" bucket is the safety mechanism that keeps hallucination from becoming silent omission.</p>
+<p><strong>Would a spreadsheet suffice?</strong> No.</p>
+<p><strong>Complexity:</strong> Medium. <strong>Learning difficulty:</strong> ~30 minutes.
+<strong>Value:</strong> The documented worst case is 5,000 unpriced measurements on a single job. Even catching that class of surprise once justifies the tool.
+<strong>Risks:</strong> <strong>A missed clause is the exact failure the tool claims to prevent</strong>, so it must be positioned as "read this in five minutes instead of not at all," never as assurance of completeness. ITAR/CUI content means it must run locally or on shop-controlled infrastructure — which rules out most commodity LLM APIs and pushes toward local models. That is a genuine engineering constraint, not a footnote.
+<strong>Existing products:</strong> Paperless Parts' "Wingman" extracts specs, threads and materials at quote time and detects CUI/ITAR markings (<a href="https://www.paperlessparts.com/press/paperless-parts-launches-wingman-the-companys-new-ai-powered-automation-tool-to-make-quoting-from-prints-faster-and-less-error-prone/">announcement</a>) — but it reads <strong>prints</strong>, for <strong>pricing</strong>, inside a closed commercial quoting platform. Nothing reads the <strong>PO and clause documents</strong> to produce a shop-floor requirements sheet.
+<strong>Paid customization:</strong> Customer clause libraries; local model deployment; integration with quoting or ERP.</p>
+<hr />
+<h3>Opportunity D — CMM Output to Form 3 Mapper</h3>
+<p><strong>Working title:</strong> <code>Form3Feed</code>
+<strong>Intended user:</strong> Inspector and quality manager.
+<strong>Problem solved:</strong> The retyping half of Problem 3 and the format half of Problem 7.</p>
+<p><strong>Current workflow:</strong> Read numbers off a CMM printout or screen, type them into Form 3 or a customer spreadsheet. Or pay for a tool tier that does it.</p>
+<p><strong>Proposed workflow:</strong> Map once, reuse forever. The user associates CMM output columns (PC-DMIS, Calypso, QC-CALC exports) with balloon numbers for a given part; thereafter, a new results file auto-populates Form 3 actuals, flags out-of-tolerance values, and exports to Form 3, a customer-specific spreadsheet layout, or CSV. Mappings are saved per part number and versioned with the drawing revision.</p>
+<p><strong>Inputs:</strong> CMM/gage output file; a balloon-to-characteristic mapping; target output template.
+<strong>Outputs:</strong> Populated Form 3; populated customer template; out-of-tolerance exception list.</p>
+<p><strong>Essential features:</strong> read the common export formats; persistent per-part mappings tied to drawing revision; out-of-tolerance highlighting; multiple output templates; <strong>no re-keying anywhere in the path</strong>.
+<strong>Excluded from v1:</strong> Measuring anything, CMM programming, SPC/capability analysis, ballooning.</p>
+<p><strong>AI:</strong> <strong>Inappropriate.</strong> This is column mapping and arithmetic.</p>
+<p><strong>Would a spreadsheet suffice?</strong> A practitioner has already built the VBA version of this, with wireless caliper capture and auto-shading of out-of-spec values — and still ends up copying cells into customer reports. That homemade tool is the proof of demand and the specification simultaneously.</p>
+<p><strong>Complexity:</strong> Small-to-medium; format coverage is the work. <strong>Learning difficulty:</strong> ~1 hour for the first mapping, minutes thereafter.
+<strong>Value:</strong> Directly targets the step both Quality Magazine and Ideagen name as the error-prone bottleneck. <strong>The commercial signal is unusually clean: CMM import is the exact capability both major vendors gate behind their upper tier</strong> — Ideagen Standard→Advanced ($125→$235/mo) and SOLIDWORKS Inspection Standard→Professional. A free tool doing only that, and working alongside whatever else the shop owns, is well-targeted.
+<strong>Risks:</strong> Silent mis-mapping produces a plausible, wrong report. Mitigation: show the mapping and the source value next to every populated field on first run, and re-verify when the drawing revision changes.
+<strong>Existing products:</strong> Bundled inside the paid tiers above; QC-CALC does data collection and SPC but requires <strong>one license per CMM</strong> and draws complaints about incompatible data files after parameter changes (<a href="https://nexus.hexagon.com/community/public/pc-dmis/f/pc-dmis-for-cmms/105378/qc-calc">Hexagon community</a>).
+<strong>Why attractive:</strong> Narrowest scope in the report, clearest ROI, no geometry parsing required, and it strengthens rather than threatens the tools shops already bought.
+<strong>Paid customization:</strong> Additional CMM/gage formats; customer report templates; per-shop mapping libraries.</p>
+<hr />
+<h3>Opportunity E — Outside-Processing Packet Builder and Cert Chaser</h3>
+<p><strong>Working title:</strong> <code>OutsideOps</code>
+<strong>Intended user:</strong> Buyer and quality manager.
+<strong>Problem solved:</strong> Problem 5.</p>
+<p><strong>Current workflow:</strong> An operation sheet, a PO with a hand-typed revision reference, and memory.</p>
+<p><strong>Proposed workflow:</strong> For a given special process and end customer, the tool builds the <strong>outbound packet</strong> — the specification with its applicable revision and departures, the required cert content list, the approved-processor check, and a PO reference block with an explicit revision stamp — then <strong>tracks the parts out and back</strong>: due date, quantity sent, quantity returned, and quantity damaged. On return it checks the processor's certificate against the required content list (processes performed, dates per operation, accept/reject per operation, coating thickness, lot/batch numbers, sub-tier certs) and flags what is missing before the parts move to shipping.</p>
+<p><strong>Inputs:</strong> Job, process, end customer, processor; the customer's approved-processor list; a required-cert-content profile.
+<strong>Outputs:</strong> Outbound packet PDF; an open-at-vendor tracker; a returned-cert findings list; a cumulative vendor damage/loss record.</p>
+<p><strong>Essential features:</strong> specification-plus-departures as maintainable text; explicit revision stamping on every outbound reference; approved-processor gate with an expiry date on the approval record; cert content check; <strong>vendor loss tracking</strong> — the one thing nobody currently does, which converts "always make extras" from folklore into a number.
+<strong>Excluded from v1:</strong> Being a purchasing system, EDI, or a supplier portal.</p>
+<p><strong>AI:</strong> <strong>Optional</strong>, for extracting fields from returned certificates (same rationale and same confirm-first constraint as Opportunity A). Inappropriate for the flow-down content, which must be exact.</p>
+<p><strong>Would a spreadsheet suffice?</strong> Partly for tracking; not for packet generation or cert checking. Shops already run the spreadsheet version and still produce escapes.</p>
+<p><strong>Complexity:</strong> Medium. <strong>Learning difficulty:</strong> ~1 hour.
+<strong>Value:</strong> Attacks a failure class a practitioner states <em>"has resulted in escapes,"</em> and puts an expiry date on approved-vendor records that a new quality engineer found had rotted for years.
+<strong>Risks:</strong> The specification/departure content is the shop's own responsibility and the tool must not appear to certify it. Keeping departure libraries current is a real maintenance burden — likely the leading paid-customization line.
+<strong>Existing products:</strong> None found. ERPs issue POs; none carry process specifications with departures or check returned certificates.
+<strong>Paid customization:</strong> Customer-specific spec and departure libraries (Boeing D1-4426 alone is a substantial engagement); processor onboarding profiles.</p>
+<hr />
+<h3>Opportunity F — Drawing Revision Diff and FAI Re-Accomplishment Advisor</h3>
+<p><strong>Working title:</strong> <code>RevGate</code>
+<strong>Intended user:</strong> Programmer, quality manager, production manager.
+<strong>Problem solved:</strong> Problem 4.</p>
+<p><strong>Current workflow:</strong> Stamp the old print "Void," shred it, and hope nothing was in process.</p>
+<p><strong>Proposed workflow:</strong> Register every print in work with its revision. When a new revision arrives, the tool produces a <strong>visual overlay diff</strong> of the two PDFs plus a <strong>text/title-block diff</strong>, and classifies the change: title-block or ownership only; note or specification change; dimensional or tolerance change; added or removed feature. It then answers the two operative questions: <strong>which ballooned characteristics changed</strong> (so the FAIR can be a <em>partial</em> rather than a full re-accomplishment), and <strong>is anything currently in WIP against the superseded revision</strong>.</p>
+<p><strong>Inputs:</strong> Old and new PDF; optionally the balloon-to-characteristic map from Opportunity D; open job list.
+<strong>Outputs:</strong> Overlay diff PDF; a changed-characteristics list; a WIP exposure alert; a suggested full/partial FAI determination <strong>with the AS9102 trigger cited</strong> and a required human confirmation.</p>
+<p><strong>Essential features:</strong> raster and vector overlay diff robust to rescaling and re-plotting; title-block field extraction; changed-characteristic mapping; explicit "cosmetic change — no technical content detected" classification; never auto-decides the FAI scope.
+<strong>Excluded from v1:</strong> CAD model comparison, 3D, automatic FAIR regeneration.</p>
+<p><strong>AI:</strong> <strong>Optional and narrow</strong> — classifying whether a note change is technical or editorial is a genuine judgment task where AI helps. The <strong>diff itself must be deterministic image and text comparison</strong>; an AI that "thinks" nothing changed is a liability.</p>
+<p><strong>Would a spreadsheet suffice?</strong> No.</p>
+<p><strong>Complexity:</strong> <strong>Medium, and the hardest build in this report.</strong> Real-world prints are scanned, rotated, rescaled and re-plotted between revisions; naive pixel diffs produce noise. This is the concept most likely to be under-estimated.
+<strong>Learning difficulty:</strong> ~30 minutes.
+<strong>Value:</strong> One documented instance cost material plus roughly eight machine-days. Separately, it addresses the <em>"absolutely no technical changes"</em> complaint from a shop holding 2,000+ first articles — the cosmetic-change classification alone could eliminate a recurring paperwork cycle.
+<strong>Risks:</strong> A missed change is catastrophic and the tool would carry the blame. It must present the diff for human review rather than issuing a verdict. Scanned-print alignment may prove harder than the value justifies — <strong>validate on real revision pairs before committing.</strong>
+<strong>Existing products:</strong> Bluebeam Revu does document comparison well ($260–$590/user/yr) but knows nothing about balloons, characteristics, or AS9102 triggers. That gap — general diff vs. FAI-aware diff — is the whole opportunity, and also the reason a shop already owning Bluebeam may see this as marginal.
+<strong>Paid customization:</strong> Title-block templates per customer; ERP WIP integration.</p>
+<hr />
+<h3>Opportunity G — Heat-Lot Traceability Ledger</h3>
+<p><strong>Working title:</strong> <code>LotLink</code>
+<strong>Intended user:</strong> Receiving, production, shipping.
+<strong>Problem solved:</strong> Problem 6.</p>
+<p><strong>Current workflow:</strong> Sellotape.</p>
+<p><strong>Proposed workflow:</strong> At receiving, register the material: supplier, PO, mill cert file, heat/melt lot, form and size, DFARS melt-source status, quantity. The tool prints a durable <strong>lot tag with a barcode or QR code</strong>. At job issue, scan the tag against the work order — the link is now recorded rather than remembered. At shipment, the tool answers both directions: <em>which heat lots are in this shipment</em> (for the CofC and Form 2) and <em>which shipments contain heat lot X</em> (for a recall or an audit).</p>
+<p><strong>Inputs:</strong> Receiving data and mill cert PDFs; scans at issue and shipment.
+<strong>Outputs:</strong> Lot tags; a per-shipment lot statement for the CofC; a reverse recall query; a retention-compliant archive.</p>
+<p><strong>Essential features:</strong> the two-way query — this is the entire product; barcode/QR generation printable on ordinary label stock; DFARS melt-source flagging; partial-lot and multi-lot job handling (the documented third breakpoint); export of the lot statement into Opportunity A's package.
+<strong>Excluded from v1:</strong> Inventory management, purchasing, MRP, bin locations. <strong>The moment this becomes inventory software it has lost.</strong></p>
+<p><strong>AI:</strong> <strong>Optional</strong> for reading heat numbers and chemistry off mill certs at receiving (varied layouts). Inappropriate anywhere else.</p>
+<p><strong>Would a spreadsheet suffice?</strong> A spreadsheet can hold the data. It cannot print tags, cannot be scanned at the saw, and — critically — is not maintained, which is why certs end up zip-tied to bar stock.</p>
+<p><strong>Complexity:</strong> Small-to-medium. <strong>Learning difficulty:</strong> ~30 minutes.
+<strong>Value:</strong> Closes the gap a consultant identified as <em>"the link between each certificate and the specific finished part it became."</em> Satisfies DFARS melt-source documentation and AS6174 counterfeit-materiel flow-down. Turns a recall from a filing-cabinet archaeology project into a query.
+<strong>Risks:</strong> Adoption depends entirely on the scan taking under five seconds at the saw. If it is slower than sellotape it will not be used — this is a shop-floor ergonomics problem more than a software problem, and it should be prototyped with a real barcode scanner before any code is polished.
+<strong>Existing products:</strong> ERPs track material lots but reviewers report weak serialization; the practitioner accounts show shops not using those modules. Steelhead's "Spec Management" add-on is the only product found that even names certification digitization.
+<strong>Paid customization:</strong> Label formats and printer support; ERP receiving integration; customer-specific lot statement wording.</p>
+<hr />
+<h3>Opportunity H — Escape and Corrective-Action Clock Tracker</h3>
+<p><strong>Working title:</strong> <code>EscapeClock</code>
+<strong>Intended user:</strong> Quality manager.
+<strong>Problem solved:</strong> The deadline half of Problem 8.</p>
+<p><strong>Current workflow:</strong> Email, memory, and hoping the 24-hour one was not a flight-safety item.</p>
+<p><strong>Proposed workflow:</strong> On discovering a nonconformance or suspected escape, select the affected customer and the category. The tool computes every applicable contractual deadline from a per-customer profile — Lockheed Martin Aero: 24 hours for flight-safety or counterfeit concerns, 3 business days for potential escape notification, 5 business days for supplementary information, 30 calendar days for SCAR corrective action; Global Machine Works: 1 business day for escape notice on delivered product — and generates the initial notification with the required content fields populated. It then tracks open items against their clocks.</p>
+<p><strong>Inputs:</strong> Event date/time, customer, category, affected parts and shipments (from Opportunity G).
+<strong>Outputs:</strong> A deadline sheet; a drafted notification; an open-items dashboard; a closure record.</p>
+<p><strong>Essential features:</strong> per-customer profiles with the clause cited; <strong>business-day versus calendar-day arithmetic done correctly</strong> (LM Aero mixes both); affected-shipment lookup; nothing requiring a server.
+<strong>Excluded from v1:</strong> Root cause analysis, 8D authoring, CAPA management. This tool answers <em>who must be told, by when, and what must the notice contain.</em></p>
+<p><strong>AI:</strong> <strong>Inappropriate.</strong> Date arithmetic against cited contract clauses.</p>
+<p><strong>Would a spreadsheet suffice?</strong> For the arithmetic, arguably. Not for the per-customer clause library or the affected-shipment lookup.</p>
+<p><strong>Complexity:</strong> Small. <strong>Learning difficulty:</strong> Minutes.
+<strong>Value:</strong> Risk elimination on obligations with 24-hour clocks and contractual force.
+<strong>Risks:</strong> Must never be presented as legal advice; every computed date cites its clause.
+<strong>Existing products:</strong> None found; generic task managers do not know the clauses.</p>
+<p><strong>A deliberate exclusion worth stating.</strong> I considered an <strong>8D/corrective-action response generator</strong> and rejected it. The evidence points the wrong way: the receiving-side quality lead rejecting most responses said they were <em>"poorly written with insufficient data"</em> and went looking for <strong>training</strong>, not a tool. A generator that does not improve reasoning quality produces faster bad responses and would make the reviewer's problem worse. This is a case where the pain is real and the obvious software answer is wrong.</p>
+<hr />
+<h3>Opportunity I — Quote-Time Quality Cost Estimator</h3>
+<p><strong>Working title:</strong> <code>QualityLine</code>
+<strong>Intended user:</strong> Estimator and owner.
+<strong>Problem solved:</strong> The pricing half of Problem 2 — and the bridge between this market's name (quoting) and this report's angle (QA).</p>
+<p><strong>Current workflow:</strong> Quote the machining. Discover the quality burden later. Absorb it.</p>
+<p><strong>Proposed workflow:</strong> Consuming the requirements sheet from Opportunity C (or manual entry), the tool estimates the quality cost of the job as a line item: characteristic count × minutes per characteristic (the practitioner rule of thumb is ~2 min/feature, calibrated over time against the shop's own actuals), plus FAI preparation, plus gages or fixtures that must be bought or made, plus source-inspection wait time, plus PPAP elements if automotive, plus cert-package assembly. Output is a defensible quality cost line for the quote and an internal note of what drives it.</p>
+<p><strong>Inputs:</strong> Characteristic count (from a balloon map if available, else estimated); requirements sheet; shop rate and historical actuals.
+<strong>Outputs:</strong> A quality cost line with its assumptions itemized; a quote note; a variance report comparing estimate to actual once the job closes.</p>
+<p><strong>Essential features:</strong> the <strong>variance loop</strong> — this is what makes it more than a calculator, because it calibrates the shop's own minutes-per-characteristic instead of inheriting a forum rule of thumb; assumptions visible on the output so the number can be defended to a customer.
+<strong>Excluded from v1:</strong> Machining time estimation, material cost, full quoting. It produces one line.</p>
+<p><strong>AI:</strong> <strong>Inappropriate.</strong> Arithmetic over a requirements list.</p>
+<p><strong>Would a spreadsheet suffice?</strong> This is the concept where a spreadsheet comes closest to sufficing, and the honest answer is that a good one nearly does. The differentiators are the variance loop and consuming the requirements sheet automatically.</p>
+<p><strong>Complexity:</strong> Small. <strong>Learning difficulty:</strong> Minutes.
+<strong>Value:</strong> Directly addresses <em>"you get into a corner because you need a gage or an exceptional layout… in order to ship parts and get paid."</em>
+<strong>Risks:</strong> Garbage in — if the characteristic count is guessed, the estimate is guessed. Most valuable when paired with Opportunity C or an existing balloon map.
+<strong>Existing products:</strong> Quoting platforms price machining; Paperless Parts can <em>"add an inspection step to all relevant parts"</em> as a cost rule, but that is a flag, not an estimate.
+<strong>Paid customization:</strong> Shop rate structures; integration with existing quoting software.</p>
+<hr />
+<h2>5. Opportunity ranking</h2>
+<p>Scored 1–5 on ten criteria. Maximum 50.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Concept</th>
+<th style="text-align: center;">Severity</th>
+<th style="text-align: center;">Frequency</th>
+<th style="text-align: center;">ROI clarity</th>
+<th style="text-align: center;">Ease of learning</th>
+<th style="text-align: center;">Ease of implementation</th>
+<th style="text-align: center;">Stays narrow</th>
+<th style="text-align: center;">Differentiation</th>
+<th style="text-align: center;">Customization potential</th>
+<th style="text-align: center;">Test data available</th>
+<th style="text-align: center;">Evidence confidence</th>
+<th style="text-align: center;"><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>Cert Package Assembler and Completeness Gate</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>45</strong></td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>FAIR Pre-Submission Validator</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>44</strong></td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>CMM Output to Form 3 Mapper</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>43</strong></td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Purchase-Order Quality Clause Extractor</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>43</strong></td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>Outside-Processing Packet Builder &amp; Cert Chaser</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>41</strong></td>
+</tr>
+<tr>
+<td><strong>H</strong></td>
+<td>Escape and Corrective-Action Clock Tracker</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>41</strong></td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>Quote-Time Quality Cost Estimator</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>40</strong></td>
+</tr>
+<tr>
+<td><strong>G</strong></td>
+<td>Heat-Lot Traceability Ledger</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>39</strong></td>
+</tr>
+<tr>
+<td><strong>F</strong></td>
+<td>Drawing Revision Diff &amp; FAI Advisor</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>39</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>The top three explained</h3>
+<p><strong>1. A — Cert Package Assembler and Completeness Gate (45).</strong> It wins on the rarest combination in this report: the highest-frequency handoff in the market, a total absence of incumbents, and a practitioner admission that the existing control is fake. Every shipment carries this package. The quality manager who signs the certificate of conformance says he <em>"doesn't actually confirm anything"</em> and signs <em>"blindly"</em> — and a veteran aerospace auditor confirms <em>"many people signing on a CoC have no idea of what they are signing for."</em> Meanwhile the shipping clerk is running down the hall to find him, holding the shipment. And the single most-cited cause of FAIR rejection is exactly what this tool checks: missing or incomplete material certificates.</p>
+<p>The clinching evidence is negative: a search for "certificate of conformance software" returns free Word templates. For the most frequent outbound document in a 17,530-establishment industry, no product category exists. That is either an enormous oversight or a signal that shops will not pay for it — and the first validation question in Section 6 is designed to tell those apart.</p>
+<p>Its weakness is honest: reading heterogeneous supplier certificates is genuinely hard, and if extraction is unreliable the gate is unreliable. Mitigation is confirm-before-gate and an explicit list of what could not be verified.</p>
+<p><strong>2. B — FAIR Pre-Submission Validator (44).</strong> The best-scoped concept in the report, and the one I would build first if the goal were a shipped artifact rather than a market beachhead. It reads structured forms rather than geometry — which per Problem 10 is the difference between a few weeks and a few months of work — and every one of its rules comes from a published rejection-cause list. It also sidesteps the report's most crowded market: there are ten-plus ballooning entrants and nothing that checks a finished FAIR before submission.</p>
+<p>The evidence profile is unusual and favorable. Most FAIRs are never reviewed — one practitioner reports 95% no response across 1,000 submissions — but the ones that come back arrive three to four months later over a typo. A tool that costs nothing per use and eliminates the typo class is well-matched to that distribution.</p>
+<p>It ranks second only because its per-use value is lower than A's. It prevents a delayed correction; A unblocks a held shipment.</p>
+<p><strong>3. D — CMM Output to Form 3 Mapper (43).</strong> The narrowest concept here and the one with the cleanest commercial signal. <strong>CMM data import is precisely the capability that both major vendors gate behind their upper pricing tier</strong> — Ideagen Standard→Advanced, SOLIDWORKS Inspection Standard→Professional. When two independent vendors independently choose the same feature as their upsell, they have told you what customers will pay for. A free tool doing only that, interoperating with whatever the shop already owns, is a strong opening move.</p>
+<p>It also has a built-in specification: a practitioner has already constructed the VBA version, wireless calipers and all, and still ends up copying cells into customer report templates. That workaround is both the proof of demand and the requirements document.</p>
+<p><strong>C (43) ties D on total but ranks below it</strong> because its narrowness score is lower and its ITAR/CUI constraint forces local model deployment — a real engineering cost. It has the highest ceiling of anything in the report and the clearest customization revenue, and it is the one I would pursue immediately after a beachhead exists.</p>
+<h3>What should be investigated next</h3>
+<p><strong>B first, then A.</strong> B is the cheapest credible build, produces a shareable artifact, and is the natural pretext for practitioner conversations — which is exactly what A's validation needs, since A's central question ("would you pay for this, or is its absence telling us something?") cannot be answered from a desk. Use B to earn the conversations that de-risk A.</p>
+<p><strong>F should be validated before it is built, not after.</strong> It has the highest severity score in the report and the lowest implementation score. Scanned, rotated, re-plotted prints may defeat the diff entirely. Test the alignment problem on twenty real revision pairs first; if it works, F is a strong product, and if it does not, the effort belongs in E.</p>
+<p><strong>Do not build a general ballooning tool.</strong> Ten-plus entrants, an 85–90% accuracy ceiling that nobody has beaten, and the hardest technical problem in the market. Every opportunity above was chosen to sit adjacent to that fight rather than in it.</p>
+<hr />
+<h2>6. Validation plan</h2>
+<h3>Questions to ask practitioners</h3>
+<p><strong>On the cert package (A) — the decisive line of questioning:</strong>
+1. Walk me through the last shipment. What documents went with it, and who assembled them?
+2. Who signs your certificates of conformance, and what do they actually check before signing?
+3. Has a shipment ever been held waiting for a signature or a missing cert? How often?
+4. Have you had a FAIR or a shipment rejected for a missing or wrong certificate? What happened?
+5. <strong>Is there a reason you have not bought software for this?</strong> <em>(This is the single most important question in the plan. No product category exists for the most frequent document in the market. Either nobody built it, or shops will not buy it. Ask directly.)</em></p>
+<p><strong>On FAIRs (B):</strong>
+6. How many new part numbers a year, and how long does a FAIR take you?
+7. When a FAIR comes back rejected, what is it usually for? How long after submission?
+8. What fraction of your FAIRs get any response at all?
+9. Do you keep both Rev B and Rev C form sets? Which customers want which?</p>
+<p><strong>On CMM data (D):</strong>
+10. How do measured values get from the CMM into the customer's report? Show me.
+11. Do you pay for the tier of your inspection software that imports CMM data? If not, why not?</p>
+<p><strong>On clauses (C):</strong>
+12. Show me the last purchase order with quality clauses. Who read it, and when?
+13. Has a quality requirement ever surfaced after you quoted? What did it cost?</p>
+<p><strong>Cross-cutting:</strong>
+14. <strong>What spreadsheet, macro, or database have you built yourself for any of this?</strong> <em>(Highest-yield question in the plan — every homemade tool is a proven unmet need with demonstrated willingness to invest effort.)</em>
+15. What would you never allow software to do in your quality system?
+16. Are you subject to ITAR or CMMC? Would that stop you using a cloud tool?</p>
+<h3>Who to interview</h3>
+<ul>
+<li><strong>Quality managers at 10–50 person AS9100 shops</strong> — the primary buyer for A, B, E and H. Recruit on Elsmar and Practical Machinist, where these people already post under professional identities.</li>
+<li><strong>A shop owner at 5–15 employees without a dedicated quality manager</strong> — tests whether these tools are relief or overhead at the small end.</li>
+<li><strong>A supplier quality engineer at a prime or Tier 1</strong> — the highest-leverage interview available. They author the flow-downs, reject the FAIRs, and can state the actual rejection reasons and rates, which no supplier-side source can. One is already on record describing what makes a response acceptable.</li>
+<li><strong>A Nadcap-accredited plating or heat treat shop</strong> — the counterparty for E; they see the flow-down chaos from the receiving end.</li>
+<li><strong>An AS9100 registrar auditor or consultant</strong> — can state what they find in audits, which is a proxy for what is actually broken.</li>
+<li><strong>A shop serving both aerospace and automotive</strong> — tests the dual-dialect hypothesis behind C.</li>
+</ul>
+<h3>Search terms for further research</h3>
+<p><code>site:elsmar.com "cert package"</code> · <code>elsmar "certificate of conformance" software</code> · <code>practicalmachinist FAI software</code> · <code>"first article" rejected "material cert"</code> · <code>AS9102 rejection reasons customer</code> · <code>"quality clause" flowdown machine shop PO</code> · <code>heat lot traceability machine shop barcode</code> · <code>Nadcap processor purchase order departures</code> · <code>"supplier quality manual" filetype:pdf machining certificate of conformance</code> <em>(prime supplier manuals are the richest and most under-used source in this market — LM Aero, GDMS, Sensata and Global Machine Works all publish theirs)</em> · <code>AS9145 APQP PPAP aerospace</code> · <code>CMMC machine shop CUI traveler</code></p>
+<h3>Sample files and data needed</h3>
+<ul>
+<li><strong>A real cert package</strong> from a completed aerospace job, redacted — CofC, material cert, two outside-process certs, FAIR. This single artifact is the specification for Opportunity A.</li>
+<li><strong>Five to ten completed AS9102 form sets</strong>, ideally including at least two that were rejected, with the rejection reason. Vendor-published free Rev C Excel templates make a usable starting corpus.</li>
+<li><strong>CMM output files</strong> from PC-DMIS, Calypso and QC-CALC for the same part, to scope D's format coverage.</li>
+<li><strong>Three to five purchase orders with quality clause documents</strong> from different primes.</li>
+<li><strong>Twenty real drawing revision pairs</strong>, including at least five cosmetic-only changes — the make-or-break dataset for F.</li>
+<li><strong>A prime's supplier quality manual</strong> — several are public and were used in this report.</li>
+</ul>
+<h3>Prototypes that would validate</h3>
+<ul>
+<li><strong>B:</strong> A script that reads a completed AS9102 Excel form set and runs six checks — balloon/row reconciliation, cert-date-versus-signature, Form 1 field 14 populated, Part Type populated, generic measurement methods, unreferenced special processes. Run it against ten real FAIRs. <strong>If it finds problems in half of them, the concept is confirmed.</strong></li>
+<li><strong>A:</strong> A checker that takes four PDFs plus a job record and verifies part number, revision, PO and quantity agreement plus date logic. Two days. Show it to five quality managers and watch whether they ask for a copy.</li>
+<li><strong>D:</strong> A single-format mapper — QC-CALC CSV to Form 3 — for one real part. If the mapping survives a revision change without silent breakage, the design is sound.</li>
+<li><strong>F:</strong> No code. Take twenty revision pairs and test whether an off-the-shelf image-alignment library can register them reliably. <strong>This is a two-hour feasibility test that decides whether F is a product or a trap.</strong></li>
+</ul>
+<h3>Assumptions most likely to make these fail</h3>
+<ol>
+<li><strong>A: that the absence of a product category reflects an oversight rather than an unwillingness to pay.</strong> The single biggest risk in the report, and question 5 is designed to settle it.</li>
+<li><strong>A and E: that supplier certificate extraction is reliable enough</strong> across mill certs, plating certs and heat treat certs to make a gate trustworthy.</li>
+<li><strong>C: that a shop will run a local language model.</strong> Cloud is likely off the table for ITAR/CUI content, and local inference is real infrastructure for a 20-person shop.</li>
+<li><strong>F: that scanned, rescaled, re-plotted prints can be registered reliably.</strong> Probably the single most likely technical failure.</li>
+<li><strong>G: that a scan at the saw is faster than sellotape.</strong> A shop-floor ergonomics question that no amount of good software design can answer from a desk.</li>
+<li><strong>B and D: that shops will adopt a tool that does not replace what they own.</strong> Complementary positioning is a strength commercially and a friction point operationally — it is one more thing to open.</li>
+<li><strong>Across all: distribution.</strong> These buyers find software through Practical Machinist, Elsmar, IMTS, and their ERP vendor — not GitHub. As in the prior land-surveying cycle, distribution may be a harder problem than engineering, and it recurs across markets often enough now to deserve treatment as a catalog-level question rather than a per-market footnote.</li>
+</ol>
+<hr />
+<h2>7. Cross-industry patterns</h2>
+<p><strong>Pattern 1 — Counterparty requirement extraction from unstructured contract documents.</strong> Obligations that change what the work must produce are buried in prose nobody reads until breach; extract, classify, cite the source, and emit a one-page working sheet with an explicit "unclassified" bucket. Evidenced here by 20–50 page PO quality clause flow-downs. <em>Transfers to:</em> <strong>General contractor preconstruction and estimating</strong> (Division 01 and bid-document obligations), <strong>Construction submittal, RFI, and closeout coordination</strong>, <strong>Fire protection / fire sprinkler design subcontractors</strong> (specification sections and AHJ submittal requirements), <strong>Nonprofit grant management and compliance</strong> (grant conditions and allowable-cost rules), <strong>Freight brokerage and dispatch operations</strong> (carrier and shipper contract terms, accessorial schedules).</p>
+<p><strong>Pattern 2 — Deliverable package assembly with a pre-release completeness and consistency gate.</strong> A delivery must carry a document set whose composition varies by counterparty; verify presence, cross-field agreement and date logic before release rather than after rejection. Evidenced here by the cert package. <em>Transfers to:</em> <strong>Construction submittal, RFI, and closeout coordination</strong> (closeout packages — O&amp;M manuals, warranties, as-builts), <strong>Title, escrow, and real estate closing</strong>, <strong>Medical billing and revenue cycle for small practices</strong> (claim plus attachments), <strong>Immigration law practice</strong> (petition packets), <strong>Small CPA tax preparation practices</strong> (return plus supporting schedules).</p>
+<p><strong>Pattern 3 — Pre-submission validation against a published rejection-cause list.</strong> A receiving authority rejects for a known, enumerable set of reasons; check before sending instead of learning months later. Evidenced here by AS9102 FAIR rejection causes. <em>Transfers to:</em> <strong>Immigration law practice</strong> (RFE triggers), <strong>Medical billing and revenue cycle</strong> (denial codes), <strong>Civil / land development engineering and entitlement consulting</strong> (plan-check comments), <strong>Nonprofit grant management and compliance</strong> (report rejection), <strong>Structural engineering firms</strong> (permit review comments). <em>Note: this pattern also appeared in the land surveying cycle as the recorded-map pre-submittal checker — its second independent appearance, which raises confidence that it is a genuine cross-market shape rather than a one-off.</em></p>
+<p><strong>Pattern 4 — Revision diff with downstream impact classification.</strong> A controlled document is reissued; determine whether the change is substantive and which downstream artifacts must be redone. Evidenced here by drawing revisions triggering full versus partial FAI. <em>Transfers to:</em> <strong>Small architectural studios</strong> (drawing and specification revisions), <strong>Mechanical (HVAC) design engineering at small MEP consulting firms</strong>, <strong>Structural engineering firms</strong>, <strong>Fire protection / fire sprinkler design subcontractors</strong>, <strong>Construction submittal, RFI, and closeout coordination</strong>.</p>
+<p><strong>Pattern 5 — Chain-of-custody ledger linking an input batch to a delivered unit, queryable in both directions.</strong> Evidenced here by heat-lot traceability. <em>Transfers to:</em> <strong>Geotechnical and environmental consulting / materials testing labs</strong> (sample chain of custody — a near-exact analogue with its own regulatory teeth), <strong>Dental and specialty clinic practice administration</strong> (implant and device lot tracking), <strong>Freight brokerage and dispatch operations</strong> (shipment custody), <strong>Medical billing</strong> only weakly — noted and set aside.</p>
+<p><strong>Pattern 6 — Counterparty-specific response clock calculator triggered by an event.</strong> An incident starts multiple contractual clocks that differ per counterparty and mix business and calendar days. Evidenced here by escape and SCAR clocks. <em>Transfers to:</em> <strong>Independent property and casualty claims adjusting</strong>, <strong>Independent insurance agencies - commercial lines</strong>, <strong>Immigration law practice</strong>, <strong>Estate planning and probate practice</strong>, <strong>Electrical or plumbing trade subcontractor field operations</strong> (preliminary notice and lien deadlines). <em>Note: this is a close cousin of the statutory-deadline pattern recorded in the land surveying cycle; the distinction is that clocks here are contractual and per-customer rather than statutory and per-jurisdiction, which changes who maintains the rule library.</em></p>
+<p><strong>Pattern 7 — Instrument-output-to-counterparty-form mapper.</strong> Measurement or system output arrives in the producing tool's native layout; the counterparty requires a specific form; the mapping is currently performed by retyping, and vendors gate the automation behind an upgrade tier. Evidenced here by CMM output to AS9102 Form 3. <em>Transfers to:</em> <strong>Geotechnical and environmental consulting / materials testing labs</strong> (lab instrument output to client report — the closest analogue found in this catalog), <strong>Bookkeeping and outsourced accounting firms</strong> (bank and POS exports to ledger format), <strong>Medical billing and revenue cycle</strong> (EHR output to claim format), <strong>Land surveying firms</strong> (already covered; the total-station-to-plat parallel is direct).</p>
+<h3>New backlog markets discovered</h3>
+<table>
+<thead>
+<tr>
+<th>Market</th>
+<th>Why it looks promising</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Metal finishing, plating, heat treat and NDT job shops (special-process suppliers)</td>
+<td>The counterparty in Pattern 1 and Opportunity E; Nadcap-accredited, cert-generating, and receiving flow-down chaos from non-expert customers. A market defined by producing documents.</td>
+</tr>
+<tr>
+<td>Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)</td>
+<td>FDA's QMSR incorporated ISO 13485:2016 into 21 CFR Part 820 effective 2 February 2026 — a fresh, dated regulatory transition affecting every device contract manufacturer.</td>
+</tr>
+<tr>
+<td>Small defense suppliers navigating CMMC Level 2</td>
+<td>~1,042 organizations certified against an estimated ~76,598 needing certification, assessments at $35k–$75k with eight-month waits. Enormous compliance gap at exactly this catalog's target size.</td>
+</tr>
+<tr>
+<td>Calibration and metrology service providers / in-house gage management</td>
+<td>Gage calibration recall, certificates, ISO 17025; named by a practitioner as part of the quality manager's bundle; document-driven and currently spreadsheet-run.</td>
+</tr>
+<tr>
+<td>Supplier quality engineering at OEMs and primes (the receiving side)</td>
+<td>They author the flow-downs and reject the deliverables. Building for the receiving side of any Pattern 2 or 3 tool doubles the addressable market and validates the supplier-side rules.</td>
+</tr>
+<tr>
+<td>Industrial distributors and service centers issuing material test reports</td>
+<td>Cert generation at the source of the traceability chain; the upstream half of Pattern 5.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. Sources and confidence</h2>
+<h3>Verified findings (primary sources or multiply corroborated)</h3>
+<p><strong>Standards and regulation:</strong>
+- AS9102 Rev C, published June 2023, no mandated transition date — <a href="https://www.sae.org/standards/as9102c-aerospace-series-first-article-inspection-requirements/">SAE</a>, <a href="https://store.accuristech.com/standards/sae-as9102c?product_id=2568218">Accuris</a>, <a href="https://www.net-inspect.com/blog/as9102-rev-b-vs-rev-c/">Net-Inspect Rev B vs C</a>, <a href="https://auva.com/2024/04/23/as9102-revision-c-noteworthy-changes-and-implications/">AUVA</a>, independently corroborated by <a href="https://www.highqa.com/high-qa-blog-as9102-rev-c/">High QA</a> and <a href="https://www.discussoftware.com/as9102-standard/">DISCUS</a>
+- FAI re-accomplishment triggers — <a href="https://endevco.com/contentstore/mktgcontent/endevco/uploads/2019/02/AS9102-frequently-asked-questions1.pdf">IAQG AS9102 FAQ</a>
+- FAIR rejection causes — <a href="https://www.unitek-kiwa.com/blog/as9102-first-article-inspection-guide/">Unitek Kiwa</a>, <a href="https://app.qualityengineer.ai/blog/as9102-fai-form-1-2-3">QualityEngineer.ai</a>
+- AS9102 mandates no digital interchange format — <a href="https://www.discussoftware.com/news/as9102-rev-c-what-you-need-to-know/">DISCUS</a>
+- DFARS specialty metals — <a href="https://www.acquisition.gov/dfars/252.225-7008-restriction-acquisition-specialty-metals.">252.225-7008</a>, <a href="https://www.law.cornell.edu/cfr/text/48/252.225-7009">252.225-7009 (Cornell LII)</a>
+- Customer supplier-quality requirements (CofC content, retention, escape clocks, approved processors) — <a href="https://www.lockheedmartin.com/content/dam/lockheed-martin/aero/documents/scm/Quality-Requirements/Quality-Appendices/AppQX_rev10.pdf">Lockheed Martin Aero Appendix QX</a>, <a href="https://gdmissionsystems.com/-/media/general-dynamics/suppliers/terms-and-conditions/gdms-specialprocesses.ashx">General Dynamics Mission Systems</a>, <a href="https://www.sensata.com/sites/default/files/a/kavlico-supplier-quality-requirements-manual-ap0425.pdf">Sensata/Kavlico</a>, <a href="https://globalmachineworks.com/wp-content/uploads/2025/09/Supplier-Quality-Requirements-Rev-9_17_2025.pdf">Global Machine Works</a>
+- Nadcap scope — <a href="https://www.p-r-i.org/nadcap">PRI</a>
+- ITAR 22 CFR 120.54 encryption carve-out — <a href="https://www.dinsmore.com/publications/new-itar-end-to-end-encryption-rule-will-promote-efficient-defense-technical-data-storage-and-transmission-but-some-risks-remain/">Dinsmore</a>
+- CMMC 48 CFR rule effective 10 Nov 2025 and phase structure — <a href="https://www.preveil.com/blog/cmmc-final-rule-published/">PreVeil</a>, <a href="https://www.pkfod.com/insights/no-certification-no-contract-cmmc-rule-48-cfr-7021-takes-effect-november-10-2025/">PKF O'Connor Davies</a>
+- IATF 16949 Rules 6th Edition eligibility — <a href="https://www.iatfglobaloversight.org/wp/wp-content/uploads/2024/12/Rules-6th-QA-Document_English-December-2024.pdf">IATF Global Oversight</a>
+- FDA QMSR effective 2 February 2026 — <a href="https://www.fda.gov/medical-devices/postmarket-requirements-devices/quality-management-system-regulation-qmsr">FDA</a>
+- Market size — <a href="https://naicslist.com/naics/332710">NAICS 332710: 17,530 establishments, 209,280 employees</a></p>
+<p><strong>Practitioner evidence (named posters, professional forums):</strong>
+- FAIR effort, characteristic counts, GM reaction — <a href="https://elsmar.com/elsmarqualityforum/threads/as9100-clause-8-5-1-3-first-article-inspection-costs.73620/">Elsmar FAI costs</a>, <a href="https://elsmar.com/elsmarqualityforum/threads/as9102-fai-first-article-inspection-form-example.20933/">Elsmar FAI form example</a>
+- FAIRs unread / unreturned — <a href="https://elsmar.com/elsmarqualityforum/threads/am-i-allowed-to-ship-parts-without-fai-approval-from-the-customer.67821/">Elsmar ship without FAI approval</a>
+- Cert package naming, contents, blind CofC signing — <a href="https://elsmar.com/elsmarqualityforum/threads/documentation-accompanying-an-aerospace-part.84250/">Elsmar documentation accompanying an aerospace part</a>, <a href="https://elsmar.com/elsmarqualityforum/threads/certificate-of-conformance-compliance-cofc-share-your-best-business-practices.15686/">Elsmar CofC best practices</a>
+- PO quality clause flow-down — <a href="https://elsmar.com/elsmarqualityforum/threads/purchase-order-quality-clauses.71375/">Elsmar PO quality clauses</a>
+- The 5,000-measurement PPAP and the contract-review gap — <a href="https://elsmar.com/elsmarqualityforum/threads/ppap-including-fai-parts-customer-is-requiring-5000-measurements.45712/">Elsmar</a>
+- Outside-processing flow-down and escapes — <a href="https://elsmar.com/elsmarqualityforum/threads/nadcap-processor-po-purchase-order-requirements.60813/">Elsmar Nadcap processor PO requirements</a>
+- Approved-vendor record decay — <a href="https://elsmar.com/elsmarqualityforum/threads/approved-vendor-list-non-responsive-vendors-requiring-approval.92003/">Elsmar AVL non-responsive vendors</a>
+- Per-customer FAI format variance and Form 2 field 8 rejection — <a href="https://elsmar.com/elsmarqualityforum/threads/as9102-rev-c-form-2-supplier-code.89114/">Elsmar AS9102 Rev C Form 2 supplier code</a>
+- Non-technical revision churn on 2,000+ FAIs — <a href="https://elsmar.com/elsmarqualityforum/threads/as9102-fair-customer-drawing-revision-change.59211/">Elsmar FAIR customer drawing revision change</a>
+- SCAR/8D burden and response quality — <a href="https://elsmar.com/elsmarqualityforum/threads/suppliers-not-responding-to-supplier-corrective-action-requests-scar.69081/">Elsmar SCAR</a>, <a href="https://elsmar.com/elsmarqualityforum/threads/formal-written-response-to-a-corrective-action.72834/">Elsmar formal written CA response</a>
+- Material traceability practice — <a href="https://elsmar.com/elsmarqualityforum/threads/raw-material-traceability-in-a-machine-shop-aluminium-billets.91539/">Elsmar raw material traceability</a>, <a href="https://elsmar.com/elsmarqualityforum/threads/qms-and-iso-9001-for-a-single-person-machine-shop.68746/">Elsmar single-person shop QMS</a>, <a href="https://kaizenisoconsulting.com/articles/material-traceability-beyond-certification-shuffle">Kaizen ISO Consulting field observations</a>
+- Ballooning tool substitutes and pricing complaint — <a href="https://elsmar.com/elsmarqualityforum/threads/software-suggestions-for-ballooning-drawings.52925/">Elsmar ballooning software</a>
+- Revision changes mid-job, wrong-rev cost, inspection report transcription, quality department scope, vendor-damaged parts, ERP fit — Practical Machinist threads <a href="https://www.practicalmachinist.com/forum/threads/custom-sent-wrong-drawing-who-should-pay.369452/">369452</a>, <a href="https://www.practicalmachinist.com/forum/threads/how-do-you-deal-with-revision-changes.395938/">395938</a>, <a href="https://practicalmachinist.com/forum/threads/how-do-you-handle-inspection-reporting-with-your-clients.369863/">369863</a>, <a href="https://www.practicalmachinist.com/forum/threads/hiring-someone-to-run-a-quality-department.415601/">415601</a>, <a href="https://www.practicalmachinist.com/forum/threads/what-should-happen-when-a-metal-finishing-shop-ruins-parts.253525/">253525</a>, <a href="https://www.practicalmachinist.com/forum/threads/first-article-inspection-software-or-documentation.382354/">382354</a>, <a href="https://www.practicalmachinist.com/forum/threads/erp-jobboss-2-vs-proshop-vs-something-actually-good.411796/">411796</a></p>
+<p><strong>Software landscape and pricing:</strong> <a href="https://www.inspectionxpert.com/">Ideagen/InspectionXpert</a> and <a href="https://www.capterra.com/p/210181/Ideagen-Quality-Control/">Capterra reviews</a> · <a href="https://www.softwaresuggest.com/inspectionxpert">SoftwareSuggest pricing</a> · <a href="https://www.capterra.com/p/248001/High-QA-Inspection-Manager/">High QA Capterra</a> · <a href="https://www.discussoftware.com/trybuy/licensing-options/">DISCUS licensing</a> · <a href="https://designandprocess.com/product/solidworks-inspection-standard/">SOLIDWORKS Inspection</a> · <a href="https://www.1factory.com/pricing.html">1factory pricing</a> · <a href="https://www.guthcad.com/order_qacad.htm">QA-CAD</a> · <a href="https://balloonist.io/">Balloonist</a> · <a href="https://www.capterra.com/p/88288/Quality-Improvement-Software/">Net-Inspect via Capterra</a> and <a href="https://cdn.northropgrumman.com/-/media/Supplier-Documents/Announcements/2025_NetInspectRequiredFAIRSubmissionsApprovals.pdf">Northrop Grumman supplier notice</a> · <a href="https://www.erpresearch.com/pricing/e2-shop-system">E2 Shop pricing</a> · <a href="https://www.erpresearch.com/pricing/global-shop-solutions">Global Shop pricing</a> · <a href="https://softwareconnect.com/reviews/fulcrum-pro/">Fulcrum pricing</a> · <a href="https://www.capterra.com/p/161558/MIE-Trak-Pro/">MIE Trak Capterra</a> · <a href="https://www.capterra.com/p/155436/ProShop/reviews/">ProShop Capterra</a> · <a href="https://www.g2.com/products/paperless-parts/reviews">Paperless Parts G2</a> and <a href="https://www.paperlessparts.com/press/paperless-parts-launches-wingman-the-companys-new-ai-powered-automation-tool-to-make-quoting-from-prints-faster-and-less-error-prone/">Wingman announcement</a> · <a href="https://www.msi-viking.com/Prolink-QC-CALC-Real-Time-Data-Collection-Softw">QC-CALC pricing</a> and <a href="https://nexus.hexagon.com/community/public/pc-dmis/f/pc-dmis-for-cmms/105378/qc-calc">Hexagon community thread</a> · <a href="https://werk24.io/pricing?lang=en">Werk24 pricing</a> · <a href="https://www.qualitymag.com/articles/95613-how-to-create-an-as9102-first-article-inspection-report">Retyping as the baseline — Quality Magazine</a> and <a href="https://www.inspectionxpert.com/blog/how-to-fill-out-an-as9102-first-article-inspection-report-with-excel">Ideagen</a> · <a href="https://github.com/freecad/freecad/issues/29797">Open-source gaps: FreeCAD #29797</a>, <a href="https://github.com/Bakkopi/engineering-drawing-extractor">engineering-drawing-extractor</a>, <a href="https://stepcode.github.io/docs/home/">STEPcode</a> · <a href="https://www.allencio.com/the-challenges-faced-by-machine-shops-with-cmmc/">CMMC constraint on shop practice</a></p>
+<h3>Strong inferences (reasoned from verified evidence, not directly stated)</h3>
+<ol>
+<li><strong>The absence of a "cert package" product category is a genuine market gap rather than a search failure.</strong> Supported by the naming-confusion thread, the template-only search results, and the absence of the capability from every ERP checked — but absence of evidence is weaker than evidence of absence, and validation question 5 exists to test it.</li>
+<li><strong>Concepts that read forms and text are materially cheaper to build than concepts that read geometry.</strong> Follows from the open-source survey: no GD&amp;T parser, no balloon-placement engine, FreeCAD PMI export unimplemented and blocked on a commercial component. Caveat: GitHub's search API was blocked, so this survey is less complete than the rest of the report.</li>
+<li><strong>A local-first, offline architecture is a selling point rather than a limitation in this market.</strong> Follows from ITAR §120.54's no-third-party-decryption requirement plus CMMC's cost and queue, and is corroborated by a commercial entrant already marketing on browser-only processing.</li>
+<li><strong>Shops absorb outside-processing losses as a scrap allowance rather than tracking them as vendor performance.</strong> Inferred from "always make extras" and "happens all the time"; no practitioner stated the absence of tracking.</li>
+<li><strong>The FAIR's low read-rate concentrates value in first-time correctness rather than in production speed.</strong> Follows from the 95%-no-response estimate combined with three-to-four-month typo-driven rejections — but it rests on one practitioner's estimate.</li>
+<li><strong>Distribution, not engineering, may be the binding constraint on this catalog.</strong> This is the second consecutive cycle in which the target buyers were found to discover software through trade forums, conferences and dealers rather than through open-source channels. Two markets is a pattern worth naming; it is not yet proof.</li>
+</ol>
+<h3>Tentative hypotheses requiring practitioner validation</h3>
+<ol>
+<li><strong>That shops will pay for cert package assembly.</strong> The central unknown behind the top-ranked concept.</li>
+<li><strong>That supplier certificate extraction can be made reliable enough to gate a shipment.</strong> Untested; mill, plating and heat treat certs have no common layout.</li>
+<li><strong>That the 4–5 hour FAIR and ~2 minutes per characteristic figures generalize.</strong> Two practitioners, one shop each, no measured data — and no neutral benchmark exists publicly, which the standards research confirmed explicitly.</li>
+<li><strong>That drawing revision pairs can be reliably registered and diffed.</strong> The decisive technical unknown for Opportunity F.</li>
+<li><strong>That a 20-person shop would run a local language model</strong> for Opportunity C.</li>
+<li><strong>That the reported CMMC Phase 2 "hold" is real.</strong> One source carries an editor's note to that effect; it could not be confirmed from a primary DoD source. Any concept whose value depends on CMMC timing should verify this first.</li>
+</ol>
+<h3>Known evidence gaps</h3>
+<ul>
+<li><strong>reddit.com unreachable</strong> (confirmed again this cycle). r/machinists and r/CNC were not mined. Given that Elsmar and Practical Machinist proved rich, the loss is smaller here than in the land-surveying cycle — but it is real.</li>
+<li><strong>practicalmachinist.com blocks automated fetching (HTTP 403).</strong> All PM material came via a text proxy; transcription confidence is slightly lower than for Elsmar material.</li>
+<li><strong>GitHub search API blocked</strong>, weakening the open-source survey in Section 3, Problem 10.</li>
+<li><strong>No neutral benchmark for FAIR effort or characteristic counts exists in public sources.</strong> Confirmed explicitly by the standards research, not merely unfound.</li>
+<li><strong>No published FAIR rejection <em>rate</em>.</strong> Rejection <em>causes</em> are documented; frequency is not. A supplier quality engineer at a prime could supply this in one conversation.</li>
+<li><strong>Job-posting evidence is thin</strong> this cycle owing to tooling limits; the role definitions in Section 1 lean on forum accounts more than on postings.</li>
+<li><strong>Oxebridge</strong>, expected to be a candid source on AS9100/AS9102, produced no FAI-specific material.</li>
+</ul>
+<hr />
+<p><em>Prepared by the market research cycle, claim <code>868d73ee</code>, 3 August 2026.</em></p>
+</div>
+</body>
+</html>
