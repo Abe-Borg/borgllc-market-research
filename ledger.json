@@ -8,15 +8,17 @@
       "report": "(pre-ledger run, not archived)",
       "top_opportunity": "unknown",
       "score": 0
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
       "angle": "core-practitioner-workflow",
-      "claimed_at": "2026-08-03T21:53:52Z",
-      "claim_id": "616d7f82"
-    },
+      "date": "2026-08-03",
+      "report": "reports/2026-08-03-fire-protection-sprinkler-design-core-practitioner-workflow.md",
+      "top_opportunity": "SubmittalBinder - sprinkler & device cut-sheet submittal package builder",
+      "score": 46
+    }
+  ],
+  "claimed": [
     {
       "market": "Land surveying firms",
       "angle": "core-practitioner-workflow",
@@ -678,7 +680,103 @@
       "angle": "handoffs-and-qa",
       "source": "seed",
       "note": ""
+    },
+    {
+      "market": "Fire alarm system design and programming subcontractors",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Adjacent trade with the same AHJ submittal gate but distinct calc burden (battery/standby, voltage drop, device addressing); surfaced repeatedly alongside sprinkler design in job postings and estimating discussions."
+    },
+    {
+      "market": "Special hazard / clean agent suppression design (data centers, MRI, switchgear)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Concentration and enclosure-integrity calculations are spreadsheet-bound and high-stakes; growing fast with AI data center buildout."
+    },
+    {
+      "market": "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Large recurring-service market with heavy deficiency-reporting and scheduling paperwork; different economics from installation work."
+    },
+    {
+      "market": "Building permit expediting and code consulting firms",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Sits directly on the AHJ submittal bottleneck identified in this cycle; would test the checklist-as-data pattern from the gatekeeper-facing side."
+    },
+    {
+      "market": "Pipe and duct fabrication shops serving mechanical and fire protection trades",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The receiving end of the stock-list handoff problem found here; re-keying and revision-diff pain reported from the contractor side needs the shop-side view."
     }
   ],
-  "patterns": []
+  "patterns": [
+    {
+      "pattern": "Checklist-as-data pre-flight validation before an external gatekeeper publishes its rubric",
+      "seen_in": [
+        "Fire protection / fire sprinkler design and coordination subcontractors"
+      ],
+      "transfers_to": [
+        "Civil / land development engineering and entitlement consulting",
+        "Small architectural studios - project administration and specification writing",
+        "Immigration law practice",
+        "Title, escrow, and real estate closing",
+        "Nonprofit grant management and compliance",
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
+      ]
+    },
+    {
+      "pattern": "Reconciling a deliverable against its separate supporting calculation",
+      "seen_in": [
+        "Fire protection / fire sprinkler design and coordination subcontractors"
+      ],
+      "transfers_to": [
+        "Structural engineering firms, 5-30 staff",
+        "Mechanical (HVAC) design engineering at small MEP consulting firms",
+        "Geotechnical and environmental consulting / materials testing labs",
+        "Small CPA tax preparation practices"
+      ]
+    },
+    {
+      "pattern": "Assembling a bookmarked evidence/exhibit binder from a structured index of items",
+      "seen_in": [
+        "Fire protection / fire sprinkler design and coordination subcontractors"
+      ],
+      "transfers_to": [
+        "Small-firm litigation support and paralegal work",
+        "Estate planning and probate practice",
+        "Independent property and casualty claims adjusting",
+        "Medical billing and revenue cycle for small practices",
+        "Independent insurance agencies - commercial lines"
+      ]
+    },
+    {
+      "pattern": "Currency and expiry tracking for perishable reference data with a validity window",
+      "seen_in": [
+        "Fire protection / fire sprinkler design and coordination subcontractors"
+      ],
+      "transfers_to": [
+        "Independent insurance agencies - commercial lines",
+        "HR and benefits administration in companies under 200 employees",
+        "Training organizations and continuing-education providers",
+        "Commercial property management",
+        "Geotechnical and environmental consulting / materials testing labs"
+      ]
+    },
+    {
+      "pattern": "Jurisdictional variance matrix for a national standard adopted in different vintages",
+      "seen_in": [
+        "Fire protection / fire sprinkler design and coordination subcontractors"
+      ],
+      "transfers_to": [
+        "Structural engineering firms, 5-30 staff",
+        "Mechanical (HVAC) design engineering at small MEP consulting firms",
+        "Civil / land development engineering and entitlement consulting",
+        "Small CPA tax preparation practices",
+        "Small architectural studios - project administration and specification writing"
+      ]
+    }
+  ]
 }
