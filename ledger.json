@@ -24,6 +24,12 @@
       "angle": "core-practitioner-workflow",
       "claimed_at": "2026-08-03T21:54:22Z",
       "claim_id": "2095f105"
+    },
+    {
+      "market": "Independent insurance agencies - commercial lines",
+      "angle": "back-office",
+      "claimed_at": "2026-08-03T22:08:22Z",
+      "claim_id": "1a638f0f"
     }
   ],
   "backlog": [
@@ -402,12 +408,6 @@
     {
       "market": "Independent insurance agencies - commercial lines",
       "angle": "narrow-subspecialty",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Independent insurance agencies - commercial lines",
-      "angle": "back-office",
       "source": "seed",
       "note": ""
     },
