@@ -16,6 +16,12 @@
       "angle": "core-practitioner-workflow",
       "claimed_at": "2026-08-03T21:53:52Z",
       "claim_id": "616d7f82"
+    },
+    {
+      "market": "Land surveying firms",
+      "angle": "core-practitioner-workflow",
+      "claimed_at": "2026-08-03T21:54:22Z",
+      "claim_id": "2095f105"
     }
   ],
   "backlog": [
@@ -202,12 +208,6 @@
     {
       "market": "Construction submittal, RFI, and closeout coordination (project engineer role)",
       "angle": "handoffs-and-qa",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Land surveying firms",
-      "angle": "core-practitioner-workflow",
       "source": "seed",
       "note": ""
     },
