@@ -10,14 +10,15 @@
       "score": 0
     }
   ],
-  "claimed": [],
-  "backlog": [
+  "claimed": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
       "angle": "core-practitioner-workflow",
-      "source": "seed",
-      "note": ""
-    },
+      "claimed_at": "2026-08-03T21:53:52Z",
+      "claim_id": "616d7f82"
+    }
+  ],
+  "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
       "angle": "narrow-subspecialty",
