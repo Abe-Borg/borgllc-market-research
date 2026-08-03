@@ -16,6 +16,14 @@
       "report": "reports/2026-08-03-fire-protection-sprinkler-design-core-practitioner-workflow.md",
       "top_opportunity": "SubmittalBinder - sprinkler & device cut-sheet submittal package builder",
       "score": 46
+    },
+    {
+      "market": "Independent insurance agencies - commercial lines",
+      "angle": "back-office",
+      "date": "2026-08-03",
+      "report": "reports/2026-08-03-independent-insurance-agencies-commercial-lines-back-office.md",
+      "top_opportunity": "ContractCheck - contract insurance requirement to policy gap matcher",
+      "score": 44
     }
   ],
   "claimed": [
@@ -24,12 +32,6 @@
       "angle": "core-practitioner-workflow",
       "claimed_at": "2026-08-03T21:54:22Z",
       "claim_id": "2095f105"
-    },
-    {
-      "market": "Independent insurance agencies - commercial lines",
-      "angle": "back-office",
-      "claimed_at": "2026-08-03T22:08:22Z",
-      "claim_id": "1a638f0f"
     }
   ],
   "backlog": [
@@ -710,6 +712,36 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "The receiving end of the stock-list handoff problem found here; re-keying and revision-diff pain reported from the contractor side needs the shop-side view."
+    },
+    {
+      "market": "Managing general agents (MGAs), wholesale brokers, and program administrators",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Sits between retail agencies and carriers with its own bordereaux, binding-authority, and delegated-underwriting paperwork; surfaced repeatedly as the counterparty in surplus lines placement."
+    },
+    {
+      "market": "Certificate-of-insurance compliance from the holder side (GCs, property managers, municipalities)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The mirror image of the agency-side COI problem found this cycle; an established software category (myCOI, Evident, Jones) proves demand but is priced for enterprises."
+    },
+    {
+      "market": "Employee benefits brokerage and benefits administration",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Structurally distinct from P&C commercial lines - carrier enrollment feeds, ACA reporting, and plan-year renewal cycles - and untouched by the current roster."
+    },
+    {
+      "market": "Third-party claims administration (TPA) and self-insured program operations",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Public entity pools and self-insured employers run claim intake, reserving, and reporting workflows that no roster market covers."
+    },
+    {
+      "market": "Premium audit and payroll classification consulting",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Emerged from the workers comp audit problem; a small specialist trade advising insureds on classification disputes, with quantifiable dollar stakes per engagement."
     }
   ],
   "patterns": [
@@ -728,15 +760,18 @@
       ]
     },
     {
-      "pattern": "Reconciling a deliverable against its separate supporting calculation",
+      "pattern": "Reconciling an artifact you received against the instructions that were supposed to produce it (drawing vs calculation; issued policy vs binder; received part vs purchase order)",
       "seen_in": [
-        "Fire protection / fire sprinkler design and coordination subcontractors"
+        "Fire protection / fire sprinkler design and coordination subcontractors",
+        "Independent insurance agencies - commercial lines"
       ],
       "transfers_to": [
         "Structural engineering firms, 5-30 staff",
         "Mechanical (HVAC) design engineering at small MEP consulting firms",
         "Geotechnical and environmental consulting / materials testing labs",
-        "Small CPA tax preparation practices"
+        "Small CPA tax preparation practices",
+        "Machine shop / job shop quoting and production control",
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
       ]
     },
     {
@@ -755,7 +790,8 @@
     {
       "pattern": "Currency and expiry tracking for perishable reference data with a validity window",
       "seen_in": [
-        "Fire protection / fire sprinkler design and coordination subcontractors"
+        "Fire protection / fire sprinkler design and coordination subcontractors",
+        "Independent insurance agencies - commercial lines"
       ],
       "transfers_to": [
         "Independent insurance agencies - commercial lines",
@@ -763,7 +799,8 @@
         "Training organizations and continuing-education providers",
         "Commercial property management",
         "Geotechnical and environmental consulting / materials testing labs"
-      ]
+      ],
+      "note": "Prediction CONFIRMED in cycle 1a638f0f, but found incomplete: the target market contained four parallel expiry structures (certificate validity, surplus lines deadlines, producer license/CE, loss run currency), not the one predicted. Treat a pattern transfer as a prompt to enumerate all instances, not as a finished finding."
     },
     {
       "pattern": "Jurisdictional variance matrix for a national standard adopted in different vintages",
@@ -776,6 +813,46 @@
         "Civil / land development engineering and entitlement consulting",
         "Small CPA tax preparation practices",
         "Small architectural studios - project administration and specification writing"
+      ]
+    },
+    {
+      "pattern": "Requirement-document to compliance-gap matcher: extract obligations stated in a counterparty's prose, compare against actual position, output a gap list (extraction is a language problem; comparison must stay deterministic)",
+      "seen_in": [
+        "Independent insurance agencies - commercial lines"
+      ],
+      "transfers_to": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)",
+        "Small architectural studios - project administration and specification writing",
+        "Nonprofit grant management and compliance",
+        "Staffing and recruiting agency operations",
+        "Commercial property management",
+        "General contractor preconstruction and estimating"
+      ]
+    },
+    {
+      "pattern": "Multi-payer statement normalization with expectation reconciliation, where the failure mode is silent underpayment rather than an error message",
+      "seen_in": [
+        "Independent insurance agencies - commercial lines"
+      ],
+      "transfers_to": [
+        "Medical billing and revenue cycle for small practices",
+        "Bookkeeping and outsourced accounting firms",
+        "Freight brokerage and dispatch operations",
+        "Marketing and creative agency account and production management",
+        "Staffing and recruiting agency operations"
+      ]
+    },
+    {
+      "pattern": "Jurisdictional tax/fee filing calendar with per-transaction multi-state allocation and documentation-of-diligence requirements",
+      "seen_in": [
+        "Independent insurance agencies - commercial lines"
+      ],
+      "transfers_to": [
+        "Bookkeeping and outsourced accounting firms",
+        "Freight brokerage and dispatch operations",
+        "HR and benefits administration in companies under 200 employees",
+        "Training organizations and continuing-education providers",
+        "Small CPA tax preparation practices"
       ]
     }
   ]
