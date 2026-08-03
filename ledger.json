@@ -24,16 +24,17 @@
       "report": "reports/2026-08-03-independent-insurance-agencies-commercial-lines-back-office.md",
       "top_opportunity": "ContractCheck - contract insurance requirement to policy gap matcher",
       "score": 44
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Land surveying firms",
       "angle": "core-practitioner-workflow",
-      "claimed_at": "2026-08-03T21:54:22Z",
-      "claim_id": "2095f105"
+      "date": "2026-08-03",
+      "report": "reports/2026-08-03-land-surveying-firms-core-practitioner-workflow.md",
+      "top_opportunity": "ALTA Table A Scope Configurator \u2014 client-facing 21-item scope selector producing a signed scope exhibit (2026 standard)",
+      "score": 45
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -742,6 +743,150 @@
       "angle": "narrow-subspecialty",
       "source": "discovered",
       "note": "Emerged from the workers comp audit problem; a small specialist trade advising insureds on classification disputes, with quantifiable dollar stakes per engagement."
+    },
+    {
+      "market": "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Narrow regulated deliverable; one study found 68.4% of 5,082 elevation certificates contained at least one error, and FEMA retired its dedicated surveyor training course."
+    },
+    {
+      "market": "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Narrow regulated deliverable; one study found 68.4% of 5,082 elevation certificates contained at least one error, and FEMA retired its dedicated surveyor training course."
+    },
+    {
+      "market": "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Narrow regulated deliverable; one study found 68.4% of 5,082 elevation certificates contained at least one error, and FEMA retired its dedicated surveyor training course."
+    },
+    {
+      "market": "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Narrow regulated deliverable; one study found 68.4% of 5,082 elevation certificates contained at least one error, and FEMA retired its dedicated surveyor training course."
+    },
+    {
+      "market": "Title abstracting and independent title search contractors",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Surveyors already outsource chain-of-title work above 1-2 billable hours; document-extraction-heavy with no visible practitioner tooling."
+    },
+    {
+      "market": "Title abstracting and independent title search contractors",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Surveyors already outsource chain-of-title work above 1-2 billable hours; document-extraction-heavy with no visible practitioner tooling."
+    },
+    {
+      "market": "Title abstracting and independent title search contractors",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Surveyors already outsource chain-of-title work above 1-2 billable hours; document-extraction-heavy with no visible practitioner tooling."
+    },
+    {
+      "market": "Title abstracting and independent title search contractors",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Surveyors already outsource chain-of-title work above 1-2 billable hours; document-extraction-heavy with no visible practitioner tooling."
+    },
+    {
+      "market": "County surveyor and municipal plan-check offices (public sector reviewers)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "They author the published submittal checklists that private firms fail; the authoritative validation source for any pre-submittal checking tool."
+    },
+    {
+      "market": "County surveyor and municipal plan-check offices (public sector reviewers)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "They author the published submittal checklists that private firms fail; the authoritative validation source for any pre-submittal checking tool."
+    },
+    {
+      "market": "County surveyor and municipal plan-check offices (public sector reviewers)",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "They author the published submittal checklists that private firms fail; the authoritative validation source for any pre-submittal checking tool."
+    },
+    {
+      "market": "County surveyor and municipal plan-check offices (public sector reviewers)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "They author the published submittal checklists that private firms fail; the authoritative validation source for any pre-submittal checking tool."
+    },
+    {
+      "market": "UAS / drone mapping and reality-capture service providers",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "GCP management, multi-day processing runs, and deliverable QC; fragmented point-cloud tooling with free and $5k+/yr tiers and no workflow layer."
+    },
+    {
+      "market": "UAS / drone mapping and reality-capture service providers",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "GCP management, multi-day processing runs, and deliverable QC; fragmented point-cloud tooling with free and $5k+/yr tiers and no workflow layer."
+    },
+    {
+      "market": "UAS / drone mapping and reality-capture service providers",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "GCP management, multi-day processing runs, and deliverable QC; fragmented point-cloud tooling with free and $5k+/yr tiers and no workflow layer."
+    },
+    {
+      "market": "UAS / drone mapping and reality-capture service providers",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "GCP management, multi-day processing runs, and deliverable QC; fragmented point-cloud tooling with free and $5k+/yr tiers and no workflow layer."
+    },
+    {
+      "market": "Right-of-way and easement acquisition consulting",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Legal descriptions, parcel exhibits, and per-parcel document tracking; adjacent to surveying but a distinct buyer with distinct deadlines."
+    },
+    {
+      "market": "Right-of-way and easement acquisition consulting",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Legal descriptions, parcel exhibits, and per-parcel document tracking; adjacent to surveying but a distinct buyer with distinct deadlines."
+    },
+    {
+      "market": "Right-of-way and easement acquisition consulting",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Legal descriptions, parcel exhibits, and per-parcel document tracking; adjacent to surveying but a distinct buyer with distinct deadlines."
+    },
+    {
+      "market": "Right-of-way and easement acquisition consulting",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Legal descriptions, parcel exhibits, and per-parcel document tracking; adjacent to surveying but a distinct buyer with distinct deadlines."
+    },
+    {
+      "market": "Geodetic control and least-squares network adjustment specialists",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Strong open-source math base (SALSA, DynAdjust, JAG3D) with no workflow layer; STAR*NET at $2,855 is the only real incumbent."
+    },
+    {
+      "market": "Geodetic control and least-squares network adjustment specialists",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Strong open-source math base (SALSA, DynAdjust, JAG3D) with no workflow layer; STAR*NET at $2,855 is the only real incumbent."
+    },
+    {
+      "market": "Geodetic control and least-squares network adjustment specialists",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Strong open-source math base (SALSA, DynAdjust, JAG3D) with no workflow layer; STAR*NET at $2,855 is the only real incumbent."
+    },
+    {
+      "market": "Geodetic control and least-squares network adjustment specialists",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Strong open-source math base (SALSA, DynAdjust, JAG3D) with no workflow layer; STAR*NET at $2,855 is the only real incumbent."
     }
   ],
   "patterns": [
@@ -853,6 +998,92 @@
         "HR and benefits administration in companies under 200 employees",
         "Training organizations and continuing-education providers",
         "Small CPA tax preparation practices"
+      ]
+    },
+    {
+      "pattern": "Standards-version diff and template migration assistant: a governing standard renumbers or revises, and every firm's templates, note libraries and checklists silently reference the superseded version.",
+      "seen_in": [
+        "Land surveying firms / core-practitioner-workflow (2021->2026 ALTA Table A renumbering)"
+      ],
+      "transfers_to": [
+        "Fire protection / fire sprinkler design and coordination subcontractors",
+        "Mechanical (HVAC) design engineering at small MEP consulting firms",
+        "Structural engineering firms, 5-30 staff",
+        "Small architectural studios - project administration and specification writing"
+      ]
+    },
+    {
+      "pattern": "Jurisdiction rule packs: turn published AHJ submittal checklists into an automated pre-submittal check with statute citations and deadline arithmetic.",
+      "seen_in": [
+        "Land surveying firms / core-practitioner-workflow (county Record of Survey checklists)"
+      ],
+      "transfers_to": [
+        "Civil / land development engineering and entitlement consulting",
+        "Small architectural studios - project administration and specification writing",
+        "Fire protection / fire sprinkler design and coordination subcontractors",
+        "General contractor preconstruction and estimating",
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
+      ]
+    },
+    {
+      "pattern": "Exception/exhibit disposition matrix with enforced completeness: an externally supplied item list where each entry must receive an explicit categorized disposition and nothing may be left blank.",
+      "seen_in": [
+        "Land surveying firms / core-practitioner-workflow (ALTA 2026 section 6.C.ii Schedule B-II)"
+      ],
+      "transfers_to": [
+        "Title, escrow, and real estate closing",
+        "Independent insurance agencies - commercial lines",
+        "Construction submittal, RFI, and closeout coordination (project engineer role)",
+        "Nonprofit grant management and compliance"
+      ]
+    },
+    {
+      "pattern": "Scope configurator producing a signed scope exhibit: an optional-services menu where the buyer cannot see which items carry prerequisites or cost multipliers; output is a dated exhibit attached to the contract.",
+      "seen_in": [
+        "Land surveying firms / core-practitioner-workflow (ALTA Table A, 21 items)"
+      ],
+      "transfers_to": [
+        "Structural engineering firms, 5-30 staff",
+        "Geotechnical and environmental consulting / materials testing labs",
+        "Small CPA tax preparation practices",
+        "Marketing and creative agency account and production management"
+      ]
+    },
+    {
+      "pattern": "Rules-based QC validator for a high-error regulated form: a government form with a measurable error rate, signed by a professional, checkable by deterministic internal-consistency rules rather than AI.",
+      "seen_in": [
+        "Land surveying firms / core-practitioner-workflow (FEMA Elevation Certificate, 68.4% error rate)"
+      ],
+      "transfers_to": [
+        "Immigration law practice",
+        "Medical billing and revenue cycle for small practices",
+        "Estate planning and probate practice",
+        "Nonprofit grant management and compliance"
+      ]
+    },
+    {
+      "pattern": "Versioned firm-logic library with a linter: the firm's production logic lives in un-versioned config files maintained by one person, and drift causes silent wrong output.",
+      "seen_in": [
+        "Land surveying firms / core-practitioner-workflow (field-to-finish code tables)"
+      ],
+      "transfers_to": [
+        "Fire protection / fire sprinkler design and coordination subcontractors",
+        "Mechanical (HVAC) design engineering at small MEP consulting firms",
+        "Machine shop / job shop quoting and production control",
+        "Small architectural studios - project administration and specification writing"
+      ]
+    },
+    {
+      "pattern": "Statutory deadline clock triggered by a domain event: a field or filing event starts a legally binding clock with jurisdiction-specific arithmetic, and missing it is negligence per se.",
+      "seen_in": [
+        "Land surveying firms / core-practitioner-workflow (CA BPC 8762/8767/8773.2, RCW 58.09)"
+      ],
+      "transfers_to": [
+        "Immigration law practice",
+        "Estate planning and probate practice",
+        "Title, escrow, and real estate closing",
+        "Electrical or plumbing trade subcontractor field operations",
+        "General contractor preconstruction and estimating"
       ]
     }
   ]
