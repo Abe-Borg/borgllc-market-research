@@ -40,16 +40,17 @@
       "report": "reports/2026-08-03-machine-shop-job-shop-handoffs-and-qa.md",
       "top_opportunity": "Cert Package Assembler and Completeness Gate - assembles the shipped document package and blocks release on missing/inconsistent certs",
       "score": 45
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Mechanical (HVAC) design engineering at small MEP consulting firms",
       "angle": "narrow-subspecialty",
-      "claimed_at": "2026-08-04T21:10:32.281642+00:00",
-      "claim_id": "1c509b0e"
+      "date": "2026-08-04",
+      "report": "reports/2026-08-04-mechanical-hvac-design-small-mep-firms-narrow-subspecialty.md",
+      "top_opportunity": "AlterationTrigger - HVAC alteration code-trigger and requirement determinator (scope of work to cited code requirements + acceptance-test matrix)",
+      "score": 45
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1034,6 +1035,90 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "Cert generation at the source of the traceability chain; the upstream half of the lot-linkage pattern."
+    },
+    {
+      "market": "Building automation and controls contractors (BAS integrators) for existing-building retrofits",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "ASHRAE Guideline 36 became mandatory for VAV and economizers under the 2025 California Energy Code (effective 1 Jan 2026); DOE field study found BAS programming routinely drifts from designed sequences after occupancy - points lists, graphics and sequence implementation are hand-built."
+    },
+    {
+      "market": "Building automation and controls contractors (BAS integrators) for existing-building retrofits",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "ASHRAE Guideline 36 became mandatory for VAV and economizers under the 2025 California Energy Code (effective 1 Jan 2026); DOE field study found BAS programming routinely drifts from designed sequences after occupancy - points lists, graphics and sequence implementation are hand-built."
+    },
+    {
+      "market": "Building automation and controls contractors (BAS integrators) for existing-building retrofits",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "ASHRAE Guideline 36 became mandatory for VAV and economizers under the 2025 California Energy Code (effective 1 Jan 2026); DOE field study found BAS programming routinely drifts from designed sequences after occupancy - points lists, graphics and sequence implementation are hand-built."
+    },
+    {
+      "market": "Building automation and controls contractors (BAS integrators) for existing-building retrofits",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "ASHRAE Guideline 36 became mandatory for VAV and economizers under the 2025 California Energy Code (effective 1 Jan 2026); DOE field study found BAS programming routinely drifts from designed sequences after occupancy - points lists, graphics and sequence implementation are hand-built."
+    },
+    {
+      "market": "Title 24 acceptance test technicians (ATT) and acceptance testing providers",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "23 mechanical acceptance-test forms in the 2025 code, all ATT-required, and no certificate of occupancy without them - a narrow trade sitting on an absolute regulatory gate."
+    },
+    {
+      "market": "Title 24 acceptance test technicians (ATT) and acceptance testing providers",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "23 mechanical acceptance-test forms in the 2025 code, all ATT-required, and no certificate of occupancy without them - a narrow trade sitting on an absolute regulatory gate."
+    },
+    {
+      "market": "Test, adjust and balance (TAB) contractors",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Report production and design-vs-measured reconciliation against NEBB/AABC/UFGS tolerance frameworks; the reviewer's side of this exchange is entirely unserved."
+    },
+    {
+      "market": "Test, adjust and balance (TAB) contractors",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Report production and design-vs-measured reconciliation against NEBB/AABC/UFGS tolerance frameworks; the reviewer's side of this exchange is entirely unserved."
+    },
+    {
+      "market": "Energy code compliance consultants and Title 24 documentation shops",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "An outsourced-forms trade that exists purely because the compliance paperwork is too intricate for the designer; paper and dynamic PDF forms were discontinued, pushing everyone into the Virtual Compliance Assistant."
+    },
+    {
+      "market": "Energy code compliance consultants and Title 24 documentation shops",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "An outsourced-forms trade that exists purely because the compliance paperwork is too intricate for the designer; paper and dynamic PDF forms were discontinued, pushing everyone into the Virtual Compliance Assistant."
+    },
+    {
+      "market": "Commissioning (Cx) providers for small and midsize buildings",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Functional test scripts, issue logs and closeout packages done in Excel; DOE field study found required commissioning 'often not fully followed'."
+    },
+    {
+      "market": "Commissioning (Cx) providers for small and midsize buildings",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Functional test scripts, issue logs and closeout packages done in Excel; DOE field study found required commissioning 'often not fully followed'."
+    },
+    {
+      "market": "Utility energy-efficiency program implementers and trade-ally rebate documentation",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Prescriptive and custom incentive applications require savings calculations and evidence packages assembled per program; heavy documentation burden but note the risk of fragile program-data dependencies."
+    },
+    {
+      "market": "Owner-side facilities engineering: end-of-life equipment replacement planning",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The 2025 code's heat-pump replacement mandate for end-of-life rooftop equipment on stores, schools and offices turns capital planning into a code-driven exercise for building owners."
     }
   ],
   "patterns": [
@@ -1249,14 +1334,19 @@
     {
       "pattern": "Deliverable package assembly with a pre-release completeness and consistency gate: a delivery must carry a document set whose composition varies by counterparty; verify presence, cross-field agreement and date logic before release rather than after rejection.",
       "seen_in": [
-        "Machine shop / job shop quoting and production control / handoffs-and-qa (the cert package shipped with parts)"
+        "Machine shop / job shop quoting and production control / handoffs-and-qa (the cert package shipped with parts)",
+        "Mechanical (HVAC) design engineering at small MEP consulting firms"
       ],
       "transfers_to": [
         "Construction submittal, RFI, and closeout coordination (project engineer role)",
-        "Title, escrow, and real estate closing",
-        "Medical billing and revenue cycle for small practices",
+        "County surveyor and municipal plan-check offices (public sector reviewers)",
+        "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting",
         "Immigration law practice",
-        "Small CPA tax preparation practices"
+        "Medical billing and revenue cycle for small practices",
+        "Nonprofit grant management and compliance",
+        "Small CPA tax preparation practices",
+        "Small defense suppliers navigating CMMC Level 2 compliance",
+        "Title, escrow, and real estate closing"
       ]
     },
     {
@@ -1320,6 +1410,69 @@
         "Bookkeeping and outsourced accounting firms",
         "Medical billing and revenue cycle for small practices",
         "Land surveying firms"
+      ]
+    },
+    {
+      "pattern": "Scope-of-work to applicable-requirement determinator with citation trail (versioned rule packs)",
+      "seen_in": [
+        "Mechanical (HVAC) design engineering at small MEP consulting firms"
+      ],
+      "transfers_to": [
+        "Building permit expediting and code consulting firms",
+        "Structural engineering firms, 5-30 staff",
+        "Small architectural studios - project administration and specification writing",
+        "Electrical or plumbing trade subcontractor field operations",
+        "Fire alarm system design and programming subcontractors"
+      ]
+    },
+    {
+      "pattern": "Cross-document field reconciliation before a regulatory gate (schedule vs compliance report vs spec)",
+      "seen_in": [
+        "Mechanical (HVAC) design engineering at small MEP consulting firms",
+        "Independent insurance agencies - commercial lines"
+      ],
+      "transfers_to": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)",
+        "Supplier quality engineering at OEMs and primes (receiving side of supplier deliverables)",
+        "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+        "Certificate-of-insurance compliance from the holder side (GCs, property managers, municipalities)"
+      ]
+    },
+    {
+      "pattern": "Structured field capture with on-site completeness enforcement, producing the professional's own deliverable rather than an asset register",
+      "seen_in": [
+        "Mechanical (HVAC) design engineering at small MEP consulting firms"
+      ],
+      "transfers_to": [
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
+        "Geotechnical and environmental consulting / materials testing labs",
+        "Calibration and metrology service providers / in-house gage management",
+        "Commercial property management",
+        "UAS / drone mapping and reality-capture service providers"
+      ]
+    },
+    {
+      "pattern": "Measured-versus-specified deviation report with configurable tolerance bands",
+      "seen_in": [
+        "Mechanical (HVAC) design engineering at small MEP consulting firms"
+      ],
+      "transfers_to": [
+        "Machine shop / job shop quoting and production control",
+        "Calibration and metrology service providers / in-house gage management",
+        "Geotechnical and environmental consulting / materials testing labs",
+        "Independent property and casualty claims adjusting"
+      ]
+    },
+    {
+      "pattern": "Technical review effort logged as a billable additional service (business-model pattern, not technical)",
+      "seen_in": [
+        "Mechanical (HVAC) design engineering at small MEP consulting firms"
+      ],
+      "transfers_to": [
+        "Small-firm litigation support and paralegal work",
+        "Independent insurance agencies - commercial lines",
+        "Marketing and creative agency account and production management",
+        "Bookkeeping and outsourced accounting firms"
       ]
     }
   ]
