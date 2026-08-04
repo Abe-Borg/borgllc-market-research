@@ -42,7 +42,14 @@
       "score": 45
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Mechanical (HVAC) design engineering at small MEP consulting firms",
+      "angle": "narrow-subspecialty",
+      "claimed_at": "2026-08-04T21:10:32.281642+00:00",
+      "claim_id": "1c509b0e"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -65,12 +72,6 @@
     {
       "market": "Mechanical (HVAC) design engineering at small MEP consulting firms",
       "angle": "core-practitioner-workflow",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Mechanical (HVAC) design engineering at small MEP consulting firms",
-      "angle": "narrow-subspecialty",
       "source": "seed",
       "note": ""
     },
