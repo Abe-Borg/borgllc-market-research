@@ -48,16 +48,17 @@
       "report": "reports/2026-08-04-mechanical-hvac-design-small-mep-firms-narrow-subspecialty.md",
       "top_opportunity": "AlterationTrigger - HVAC alteration code-trigger and requirement determinator (scope of work to cited code requirements + acceptance-test matrix)",
       "score": 45
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Freight brokerage and dispatch operations",
       "angle": "handoffs-and-qa",
-      "claimed_at": "2026-08-05T21:11:03Z",
-      "claim_id": "ee0215c9"
+      "date": "2026-08-05",
+      "report": "reports/2026-08-05-freight-brokerage-dispatch-handoffs-and-qa.md",
+      "top_opportunity": "PacketGate - outbound billing-packet completeness and consistency gate (checks the invoice packet against a customer-specific requirement profile and the signed rate confirmation before it leaves the building)",
+      "score": 46
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1120,6 +1121,54 @@
       "angle": "core-practitioner-workflow",
       "source": "discovered",
       "note": "The 2025 code's heat-pump replacement mandate for end-of-life rooftop equipment on stores, schools and offices turns capital planning into a code-driven exercise for building owners."
+    },
+    {
+      "market": "Third-party truck dispatch services (5-50 owner-operator trucks)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Same document flow as a brokerage with none of the software budget; reputationally motivated to prove legitimacy; easiest segment to reach for interviews."
+    },
+    {
+      "market": "Third-party truck dispatch services (5-50 owner-operator trucks)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Rate con relay, POD collection and factoring submission on behalf of carriers - the cropped-screenshot rate con problem lives here."
+    },
+    {
+      "market": "Freight factoring companies and their client onboarding/verification desks",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "They see document defect rates across thousands of brokers and carriers; highest-information counterparty in the freight document chain."
+    },
+    {
+      "market": "Cargo claims and OS&D handling at brokerages and small carriers",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "49 CFR 370.3 sets explicit minimum claim content and the regulation names exactly which documents do NOT constitute a valid claim - unusually crisp rules for a tool."
+    },
+    {
+      "market": "Freight bill audit and payment for small shippers",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The shipper-side mirror of broker AP audit; enterprise freight-audit vendors ignore companies below a few million in annual freight spend."
+    },
+    {
+      "market": "Small motor carriers (5-50 trucks) back office and settlement",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Driver settlements, detention recovery, factoring submission and IFTA - the carrier-side counterpart to this report's broker-side findings."
+    },
+    {
+      "market": "Intermodal drayage operators and port trucking",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Port gate timestamps, container release, per-diem and demurrage disputes are a document-heavy niche with distinct evidence requirements."
+    },
+    {
+      "market": "Warehouse and 3PL fulfillment receiving/shipping document control",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The receiving side of the BOL signature problem - facilities that will not sign, sign in the wrong box, or hand paperwork through a fence."
     }
   ],
   "patterns": [
@@ -1474,6 +1523,96 @@
         "Independent insurance agencies - commercial lines",
         "Marketing and creative agency account and production management",
         "Bookkeeping and outsourced accounting firms"
+      ]
+    },
+    {
+      "pattern": "Outbound deliverable completeness gate - check a package against a recipient-specific requirement profile before it leaves the building and block on exceptions",
+      "seen_in": [
+        "Freight brokerage and dispatch operations",
+        "Fire protection / fire sprinkler design and coordination subcontractors",
+        "Machine shop / job shop quoting and production control"
+      ],
+      "transfers_to": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)",
+        "Medical billing and revenue cycle for small practices",
+        "Nonprofit grant management and compliance",
+        "Title, escrow, and real estate closing",
+        "Geotechnical and environmental consulting / materials testing labs"
+      ]
+    },
+    {
+      "pattern": "Evidence-packet builder for a contested claim - when the underlying data exists but no accepted artifact does, build the artifact: standardized layout, numbered exhibits, arithmetic shown, governing contract clause quoted on its face",
+      "seen_in": [
+        "Freight brokerage and dispatch operations"
+      ],
+      "transfers_to": [
+        "Independent property and casualty claims adjusting",
+        "Premium audit and payroll classification consulting",
+        "General contractor preconstruction and estimating",
+        "Commercial property management"
+      ]
+    },
+    {
+      "pattern": "Requirement-profile document parser - parse a standard form (ACORD 25, etc.), compare extracted values against a requirement profile, output an itemized gap list",
+      "seen_in": [
+        "Freight brokerage and dispatch operations",
+        "Independent insurance agencies - commercial lines"
+      ],
+      "transfers_to": [
+        "Certificate-of-insurance compliance from the holder side (GCs, property managers, municipalities)",
+        "Commercial property management",
+        "Employee benefits brokerage and benefits administration",
+        "Small defense suppliers navigating CMMC Level 2 compliance"
+      ]
+    },
+    {
+      "pattern": "Free-public-data watchlist with field-level change diffing - the value is not the data, it is noticing the change",
+      "seen_in": [
+        "Freight brokerage and dispatch operations"
+      ],
+      "transfers_to": [
+        "Title abstracting and independent title search contractors",
+        "Building permit expediting and code consulting firms",
+        "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting",
+        "County surveyor and municipal plan-check offices (public sector reviewers)",
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25"
+      ]
+    },
+    {
+      "pattern": "Clause library with enforced specificity and versioned supersession - generate a contract-bearing document that refuses to leave dispute-generating terms blank, then version revisions so v2 visibly supersedes v1 and requires re-signature",
+      "seen_in": [
+        "Freight brokerage and dispatch operations"
+      ],
+      "transfers_to": [
+        "Small architectural studios - project administration and specification writing",
+        "Structural engineering firms, 5-30 staff",
+        "Marketing and creative agency account and production management",
+        "Staffing and recruiting agency operations"
+      ]
+    },
+    {
+      "pattern": "Shared-inbox document triage and deterministic filing - classify, extract a matching key, quality-check, file with a consistent name, queue failures for human review",
+      "seen_in": [
+        "Freight brokerage and dispatch operations"
+      ],
+      "transfers_to": [
+        "Small-firm litigation support and paralegal work",
+        "Bookkeeping and outsourced accounting firms",
+        "Medical billing and revenue cycle for small practices",
+        "Independent property and casualty claims adjusting",
+        "Estate planning and probate practice"
+      ]
+    },
+    {
+      "pattern": "Statutory record compiler with a retention clock - map a regulation's enumerated record elements to fields you already have, flag incompleteness, hold to the statutory retention period",
+      "seen_in": [
+        "Freight brokerage and dispatch operations"
+      ],
+      "transfers_to": [
+        "Nonprofit grant management and compliance",
+        "HR and benefits administration in companies under 200 employees",
+        "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+        "Calibration and metrology service providers / in-house gage management"
       ]
     }
   ]
