@@ -50,7 +50,14 @@
       "score": 45
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Freight brokerage and dispatch operations",
+      "angle": "handoffs-and-qa",
+      "claimed_at": "2026-08-05T21:11:03Z",
+      "claim_id": "ee0215c9"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -607,12 +614,6 @@
     {
       "market": "Freight brokerage and dispatch operations",
       "angle": "back-office",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Freight brokerage and dispatch operations",
-      "angle": "handoffs-and-qa",
       "source": "seed",
       "note": ""
     },
