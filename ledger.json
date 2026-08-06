@@ -56,16 +56,17 @@
       "report": "reports/2026-08-05-freight-brokerage-dispatch-handoffs-and-qa.md",
       "top_opportunity": "PacketGate - outbound billing-packet completeness and consistency gate (checks the invoice packet against a customer-specific requirement profile and the signed rate confirmation before it leaves the building)",
       "score": 46
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Nonprofit grant management and compliance",
       "angle": "core-practitioner-workflow",
-      "claimed_at": "2026-08-06T13:49:35Z",
-      "claim_id": "3e860bb7"
+      "date": "2026-08-06",
+      "report": "reports/2026-08-06-nonprofit-grant-management-and-compliance-core-practitioner-workflow.md",
+      "top_opportunity": "Grants.gov Package Preflight - local validator for federal application packages against published Grants.gov filename, character-set, file-type and attachment rules",
+      "score": 46
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1170,6 +1171,48 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "The receiving side of the BOL signature problem - facilities that will not sign, sign in the wrong box, or hand paperwork through a fence."
+    },
+    {
+      "market": "Community action agencies and Head Start grantees",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Maximum-compliance end of the nonprofit spectrum: CSBG/Head Start layer non-federal share, PARs, and program-specific performance standards on top of Uniform Guidance; every edge case surfaces here first."
+    },
+    {
+      "market": "Federally qualified health centers - HRSA Section 330 grant compliance",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Section 330 grantees run sliding-fee, UDS reporting, and 330-specific scope-of-project rules alongside standard federal grant compliance; a dense, well-documented niche with real budgets."
+    },
+    {
+      "market": "Fiscal sponsorship organizations administering awards for sponsored projects",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "They hold dozens of restricted awards for third parties and must allocate shared costs and produce per-project reporting - the multi-tenant version of every problem in this report."
+    },
+    {
+      "market": "Outsourced nonprofit CFO and accounting firms",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Highest-information counterparty in the nonprofit market: they see thirty organizations' books, know which failures repeat, and are the natural reseller channel for allocation and effort tooling."
+    },
+    {
+      "market": "Workforce development boards and WIOA subrecipients",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Participant-level eligibility documentation and federally defined performance measures create a document-verification burden distinct from general grant compliance."
+    },
+    {
+      "market": "Multi-state charitable solicitation registration compliance",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Roughly 40 states with separate registration, renewal, and financial-statement rules; incumbent (Harbor Compliance) is enterprise-priced and the deadlines are pure calendar arithmetic."
+    },
+    {
+      "market": "Small private and family foundations under 5 staff - grantmaker side",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The funder end of every handoff in this report: application intake, due diligence, payout requirement tracking, and grantee reporting - Fluxx and Foundant are priced far above this tier."
     }
   ],
   "patterns": [
@@ -1614,6 +1657,89 @@
         "HR and benefits administration in companies under 200 employees",
         "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
         "Calibration and metrology service providers / in-house gage management"
+      ]
+    },
+    {
+      "pattern": "Published-rule preflight validator: a gatekeeper publishes exact mechanical acceptance rules, submitters violate them and learn only at rejection; a local pre-submission validator is cheap and provably correct",
+      "seen_in": [
+        "Nonprofit grant management and compliance"
+      ],
+      "transfers_to": [
+        "Building permit expediting and code consulting firms",
+        "County surveyor and municipal plan-check offices (public sector reviewers)",
+        "Title 24 acceptance test technicians (ATT) and acceptance testing providers",
+        "Small defense suppliers navigating CMMC Level 2 compliance",
+        "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)"
+      ]
+    },
+    {
+      "pattern": "Regulation-enumerated field set as generated instrument: when a rule literally lists a document's required data elements, inherit from the parent record, refuse to emit an incomplete instrument, and version the field list by effective date",
+      "seen_in": [
+        "Nonprofit grant management and compliance"
+      ],
+      "transfers_to": [
+        "Small defense suppliers navigating CMMC Level 2 compliance",
+        "Supplier quality engineering at OEMs and primes (receiving side of supplier deliverables)",
+        "Right-of-way and easement acquisition consulting",
+        "Managing general agents (MGAs), wholesale brokers, and program administrators"
+      ]
+    },
+    {
+      "pattern": "Allocation with provenance: a shared cost is split across obligations and the audited artifact is the documented basis, not the arithmetic; the tool's product is the defensible worksheet",
+      "seen_in": [
+        "Nonprofit grant management and compliance"
+      ],
+      "transfers_to": [
+        "Machine shop / job shop quoting and production control",
+        "Freight brokerage and dispatch operations",
+        "Mechanical (HVAC) design engineering at small MEP consulting firms",
+        "Third-party claims administration (TPA) and self-insured program operations"
+      ]
+    },
+    {
+      "pattern": "Cross-obligation double-count sentinel: the same hour, dollar, part or claim must not count against two obligations, and the check is structurally impossible inside any per-obligation record",
+      "seen_in": [
+        "Nonprofit grant management and compliance"
+      ],
+      "transfers_to": [
+        "Cargo claims and OS&D handling at brokerages and small carriers",
+        "Premium audit and payroll classification consulting",
+        "Freight bill audit and payment for small shippers",
+        "Small motor carriers (5-50 trucks) back office and settlement"
+      ]
+    },
+    {
+      "pattern": "Expiry watchdog with back-solved action dates: credentials expire on rolling per-entity dates with mandatory processing lead times; the useful output is the start-work-now date plus a named backup owner",
+      "seen_in": [
+        "Nonprofit grant management and compliance"
+      ],
+      "transfers_to": [
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
+        "Calibration and metrology service providers / in-house gage management",
+        "Staffing and recruiting agency operations",
+        "Electrical or plumbing trade subcontractor field operations"
+      ]
+    },
+    {
+      "pattern": "Answer library with bound metrics: repeated narrative responses where prose is reusable but embedded numbers go stale; bind figures to a maintained metrics table with staleness dates and enforce per-field length limits",
+      "seen_in": [
+        "Nonprofit grant management and compliance"
+      ],
+      "transfers_to": [
+        "General contractor preconstruction and estimating",
+        "Staffing and recruiting agency operations",
+        "Independent insurance agencies - commercial lines"
+      ]
+    },
+    {
+      "pattern": "Regulatory-transition inventory tool: when a rule set changes on a known date, every affected organization must re-inventory existing commitments against the new rules; a one-shot inventory-in / delta-report-out tool has a sharp demand window",
+      "seen_in": [
+        "Nonprofit grant management and compliance"
+      ],
+      "transfers_to": [
+        "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+        "Building automation and controls contractors (BAS integrators) for existing-building retrofits",
+        "Owner-side facilities engineering: end-of-life equipment replacement planning"
       ]
     }
   ]
