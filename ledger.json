@@ -88,16 +88,17 @@
       "report": "reports/2026-08-06-medical-billing-rcm-small-practices-core-practitioner-workflow.md",
       "top_opportunity": "Remit Lens - local X12 835 remittance analytics for 1-10 provider practices: parses a folder of ERA files, joins CARC/RARC to plain language, and produces denial rate by payer/CPT/provider/reason with dollars at risk, replacing the profession's own published best practice of a hand-tallied spreadsheet",
       "score": 45
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Title, escrow, and real estate closing",
       "angle": "handoffs-and-qa",
-      "claimed_at": "2026-08-06T20:48:33.352485+00:00",
-      "claim_id": "32033d32"
+      "date": "2026-08-06",
+      "report": "reports/2026-08-06-title-escrow-real-estate-closing-handoffs-and-qa.md",
+      "top_opportunity": "RecordReady - local pre-recording document defect scanner that checks deeds, mortgages and curative instruments against a county-specific rule profile (notary block completeness, return address, prior-recording reference, transfer-tax vs consideration, name consistency) before submission instead of after rejection",
+      "score": 45
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1418,6 +1419,72 @@
       "angle": "narrow-subspecialty",
       "source": "discovered",
       "note": "Annual recapture of chronic conditions is a documentation-completeness problem with direct revenue impact and growing audit exposure (RADV)."
+    },
+    {
+      "market": "Mobile notary and loan signing service operators",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Highest-volume observers of executed-package defects; 1-5 person businesses scheduling, tracking and QCing signings with email and spreadsheets."
+    },
+    {
+      "market": "Mortgage servicer payoff and lien release departments",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "The counterparty on the other side of P3 and P5; 7-business-day payoff statutes and 30-90 day satisfaction deadlines make it a deadline-ledger market."
+    },
+    {
+      "market": "County recorder offices - document intake, indexing and rejection handling",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Receiving side of the recording handoff; small county offices publish rejection reasons and would be primary validators for a submitter-side checker."
+    },
+    {
+      "market": "Independent escrow companies (California DFPI-licensed, non-title)",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Separately regulated from title agencies with their own trust accounting exam regime; 3-20 staff and almost no purpose-built software."
+    },
+    {
+      "market": "1031 exchange qualified intermediaries",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "45-day identification and 180-day exchange clocks with catastrophic consequences for missing them; tiny firms holding large sums."
+    },
+    {
+      "market": "Unclaimed property and escheat compliance service providers",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "50 different state regimes, dormancy clocks and due-diligence letter requirements; serves title, brokerage, insurance and payroll clients."
+    },
+    {
+      "market": "Real estate closing law firms in attorney-opinion and attorney-closing states",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Georgia, South Carolina, North Carolina and New England closings run through 2-20 person law firms carrying both legal and settlement-agent duties."
+    },
+    {
+      "market": "HOA and condominium management companies - estoppel and demand response desk",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The responding side of the estoppel bottleneck; statutory response deadlines and fee caps make their intake queue a scheduling problem."
+    },
+    {
+      "market": "Mortgage post-closing QC and trailing document vendors",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Receives the settlement agent's package and audits it; the defect taxonomy is published and the work is document comparison at volume."
+    },
+    {
+      "market": "Remote online notarization (RON) platform operators and RON-commissioned notaries",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "State-by-state RON statutes, journal and AV recording retention rules, and credential analysis requirements create a compliance-evidence market."
+    },
+    {
+      "market": "Commercial title and escrow for multi-property portfolio closings",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "One transaction spanning dozens of properties, states and recording jurisdictions; per-property requirement tracking currently lives in spreadsheets."
     }
   ],
   "patterns": [
@@ -2183,6 +2250,81 @@
         "Property tax consulting and assessment appeal firms",
         "Cargo claims and OS&D handling at brokerages and small carriers",
         "Premium audit and payroll classification consulting"
+      ]
+    },
+    {
+      "pattern": "Counterparty requirement profile compiler - extract per-counterparty obligations from unstructured instruction documents into a dated, trackable checklist, with a diff against the previous version received from that same counterparty",
+      "seen_in": [
+        "Title, escrow, and real estate closing"
+      ],
+      "transfers_to": [
+        "General contractor preconstruction and estimating",
+        "Machine shop / job shop quoting and production control",
+        "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+        "Nonprofit grant management and compliance",
+        "Small defense suppliers navigating CMMC Level 2 compliance"
+      ]
+    },
+    {
+      "pattern": "Pre-submission format validator against a receiving authority's published mechanical acceptance rules, run locally before handoff rather than discovering rejection afterward",
+      "seen_in": [
+        "Title, escrow, and real estate closing",
+        "Nonprofit grant management and compliance"
+      ],
+      "transfers_to": [
+        "Building permit expediting and code consulting firms",
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Title 24 acceptance test technicians (ATT) and acceptance testing providers",
+        "County surveyor and municipal plan-check offices (public sector reviewers)"
+      ]
+    },
+    {
+      "pattern": "Jurisdiction-keyed statutory deadline ledger - a maintained per-state deadline table driving a rolling re-check worklist and generating deadline-citing escalation correspondence",
+      "seen_in": [
+        "Title, escrow, and real estate closing"
+      ],
+      "transfers_to": [
+        "Electrical or plumbing trade subcontractor field operations",
+        "Independent property and casualty claims adjusting",
+        "Multi-state charitable solicitation registration compliance",
+        "Medical billing and revenue cycle for small practices",
+        "Real estate brokerage trust and escrow account compliance administration"
+      ]
+    },
+    {
+      "pattern": "Register-to-remittance reconciler - reconcile instruments issued on a principal's behalf against amounts reported and remitted to that principal, with aging on the unremitted liability",
+      "seen_in": [
+        "Title, escrow, and real estate closing"
+      ],
+      "transfers_to": [
+        "Managing general agents (MGAs), wholesale brokers, and program administrators",
+        "Independent pharmacy third-party reconciliation and PBM claw-backs",
+        "Freight factoring companies and their client onboarding/verification desks",
+        "Fiscal sponsorship organizations administering awards for sponsored projects"
+      ]
+    },
+    {
+      "pattern": "Two-party document reconciler - reconcile the same transaction as represented in two documents owned by two different parties in two different formats, flagging line-level differences and recomputing the derived math independently",
+      "seen_in": [
+        "Title, escrow, and real estate closing"
+      ],
+      "transfers_to": [
+        "Freight bill audit and payment for small shippers",
+        "Tenant-side lease audit and occupancy cost consulting",
+        "Medical billing and revenue cycle for small practices",
+        "Supplier quality engineering at OEMs and primes (receiving side of supplier deliverables)"
+      ]
+    },
+    {
+      "pattern": "Signed-artifact completeness auditor - detect missing signatures, initials, dates and notarization defects in an executed document package before it is handed to the next party",
+      "seen_in": [
+        "Title, escrow, and real estate closing"
+      ],
+      "transfers_to": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)",
+        "HR and benefits administration in companies under 200 employees",
+        "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+        "Small-firm litigation support and paralegal work"
       ]
     }
   ]
