@@ -64,16 +64,17 @@
       "report": "reports/2026-08-06-nonprofit-grant-management-and-compliance-core-practitioner-workflow.md",
       "top_opportunity": "Grants.gov Package Preflight - local validator for federal application packages against published Grants.gov filename, character-set, file-type and attachment rules",
       "score": 46
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Commercial property management",
       "angle": "back-office",
-      "claimed_at": "2026-08-06T15:49:01Z",
-      "claim_id": "3dee0a20"
+      "date": "2026-08-06",
+      "report": "reports/2026-08-06-commercial-property-management-back-office.md",
+      "top_opportunity": "EscalationRun - batch rent-step and CPI escalation calculator with look-back audit that flags escalations which should already have been billed and were not, plus documented index vintage and generated tenant notices (tied top score with RecoverySetup Auditor; recommended first build)",
+      "score": 44
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1214,6 +1215,78 @@
       "angle": "core-practitioner-workflow",
       "source": "discovered",
       "note": "The funder end of every handoff in this report: application intake, due diligence, payout requirement tracking, and grantee reporting - Fluxx and Foundant are priced far above this tier."
+    },
+    {
+      "market": "Outsourced real-estate accounting and lease administration service providers (CRE back-office BPO)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Margin is directly hours-per-reconciliation; they are the most motivated early buyers of any CRE back-office tool and will discuss unit economics openly."
+    },
+    {
+      "market": "Outsourced real-estate accounting and lease administration service providers (CRE back-office BPO)",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Their own intake, scoping and quality control across many client chart-of-accounts is an unexamined workflow."
+    },
+    {
+      "market": "Retail shopping center management - percentage rent and gross sales reporting",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Sales-reporting obligations go unenforced, breakpoints fail to escalate with base rent, and e-commerce/BOPIS inclusion is unresolved in most leases."
+    },
+    {
+      "market": "Tenant-side lease audit and occupancy cost consulting",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Contingency-fee firms with a well-developed error taxonomy; the mirror image of the landlord-side problems in this report."
+    },
+    {
+      "market": "Commercial real estate acquisition due diligence and rent roll verification",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Buyers must verify a seller's rent roll against actual leases under a short diligence clock; same comparison problem as the RecoverySetup Auditor with a deadline attached."
+    },
+    {
+      "market": "Submetering and utility expense recovery service providers",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Meter read to allocated tenant invoice is a repeated arithmetic pipeline with documented recurring error modes."
+    },
+    {
+      "market": "Property tax consulting and assessment appeal firms",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Jurisdiction-specific appeal deadlines and evidence assembly; deadline arithmetic varies county by county in several states."
+    },
+    {
+      "market": "Property tax consulting and assessment appeal firms",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Multi-jurisdiction filing calendars, authorization forms and fee billing across thousands of parcels."
+    },
+    {
+      "market": "Real estate brokerage trust and escrow account compliance administration",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Three-way reconciliation is legally mandated in several states, commonly done informally, and is a top broker-audit finding."
+    },
+    {
+      "market": "Corporate real estate and tenant-side lease accounting under ASC 842",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Tenant-side companies must maintain a lease register and recompute liabilities on modification; the same lease-profile data model serves both sides of the table."
+    },
+    {
+      "market": "Community association (HOA and condominium) management back office",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Assessment billing, reserve studies, statutory records and owner ledgers with state-specific rules; adjacent to commercial PM but a distinct rule set."
+    },
+    {
+      "market": "Integrated facilities management providers serving corporate real estate",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Work-order to chargeable-billback determination against a client-specific service agreement, at scale."
     }
   ],
   "patterns": [
@@ -1741,6 +1814,83 @@
         "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
         "Building automation and controls contractors (BAS integrators) for existing-building retrofits",
         "Owner-side facilities engineering: end-of-life equipment replacement planning"
+      ]
+    },
+    {
+      "pattern": "Per-counterparty rule set extracted from prose, executed as versioned code, with the source clause cited in the output: each counterparty's contract encodes a distinct calculation, the calculation is executed in an untraceable spreadsheet, and the resulting number must later be defended clause by clause.",
+      "seen_in": [
+        "Commercial property management / back-office (per-tenant CAM recovery terms)"
+      ],
+      "transfers_to": [
+        "Independent insurance agencies - commercial lines",
+        "Freight brokerage and dispatch operations",
+        "Machine shop / job shop quoting and production control",
+        "Marketing and creative agency account and production management",
+        "Third-party claims administration (TPA) and self-insured program operations"
+      ]
+    },
+    {
+      "pattern": "Silent revenue leakage detector: compare what you are billing against what you are entitled to bill and report the delta in dollars. Distinct from an error checker because the failure produces no error message - the counterparty is satisfied, the ledger balances, and the loss compounds.",
+      "seen_in": [
+        "Commercial property management / back-office (missed escalations, wrong pro-rata shares, unbilled percentage rent and billbacks)"
+      ],
+      "transfers_to": [
+        "Medical billing and revenue cycle for small practices",
+        "Freight bill audit and payment for small shippers",
+        "Premium audit and payroll classification consulting",
+        "Bookkeeping and outsourced accounting firms",
+        "Small motor carriers (5-50 trucks) back office and settlement"
+      ]
+    },
+    {
+      "pattern": "Configuration-drift auditor between a source document and the system configured from it: someone reads a document once and types its terms into a system, the document is later amended, and nobody re-verifies. Recompute the configuration from the document and report mismatches with dollar impact.",
+      "seen_in": [
+        "Commercial property management / back-office (lease abstract vs. billing and recovery setup)"
+      ],
+      "transfers_to": [
+        "HR and benefits administration in companies under 200 employees",
+        "Employee benefits brokerage and benefits administration",
+        "Nonprofit grant management and compliance",
+        "Staffing and recruiting agency operations",
+        "Managing general agents (MGAs), wholesale brokers, and program administrators"
+      ]
+    },
+    {
+      "pattern": "Published-index escalation calculator with documented vintage: a contract references an external published index; the deliverable is not the arithmetic but the recorded provenance of which index series, area, base month and publication vintage was used, because the index gets revised and the dispute happens later.",
+      "seen_in": [
+        "Commercial property management / back-office (CPI rent escalations)"
+      ],
+      "transfers_to": [
+        "General contractor preconstruction and estimating",
+        "Freight brokerage and dispatch operations",
+        "Right-of-way and easement acquisition consulting",
+        "Training organizations and continuing-education providers",
+        "Industrial distributors and metal service centers issuing material test reports"
+      ]
+    },
+    {
+      "pattern": "Counterparty reporting-obligation register with a non-reporting chase list: when the counterparty owes you a periodic report, the failure mode is silence. Track who owes what by when and turn the invisible omission into a visible queue with pre-written chase text.",
+      "seen_in": [
+        "Commercial property management / back-office (retail tenant gross sales reporting)"
+      ],
+      "transfers_to": [
+        "Nonprofit grant management and compliance",
+        "Independent insurance agencies - commercial lines",
+        "Fiscal sponsorship organizations administering awards for sponsored projects",
+        "Workforce development boards and WIOA subrecipients",
+        "Supplier quality engineering at OEMs and primes (receiving side of supplier deliverables)"
+      ]
+    },
+    {
+      "pattern": "Scope-controlled disclosure packet: assemble supporting evidence for one counterparty while provably excluding another's. Assembling the binder is easy; proving it contains only what this counterparty is entitled to see is the hard and valuable part.",
+      "seen_in": [
+        "Commercial property management / back-office (CAM audit backup scoped to a tenant's expense pools)"
+      ],
+      "transfers_to": [
+        "Small-firm litigation support and paralegal work",
+        "Independent property and casualty claims adjusting",
+        "Medical billing and revenue cycle for small practices",
+        "Third-party claims administration (TPA) and self-insured program operations"
       ]
     }
   ]
