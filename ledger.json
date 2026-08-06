@@ -58,7 +58,14 @@
       "score": 46
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Nonprofit grant management and compliance",
+      "angle": "core-practitioner-workflow",
+      "claimed_at": "2026-08-06T13:49:35Z",
+      "claim_id": "3e860bb7"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -639,12 +646,6 @@
     {
       "market": "Marketing and creative agency account and production management",
       "angle": "handoffs-and-qa",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Nonprofit grant management and compliance",
-      "angle": "core-practitioner-workflow",
       "source": "seed",
       "note": ""
     },
