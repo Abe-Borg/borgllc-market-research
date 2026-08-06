@@ -72,16 +72,17 @@
       "report": "reports/2026-08-06-commercial-property-management-back-office.md",
       "top_opportunity": "EscalationRun - batch rent-step and CPI escalation calculator with look-back audit that flags escalations which should already have been billed and were not, plus documented index vintage and generated tenant notices (tied top score with RecoverySetup Auditor; recommended first build)",
       "score": 44
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Geotechnical and environmental consulting / materials testing labs",
       "angle": "narrow-subspecialty",
-      "claimed_at": "2026-08-06T16:49:12Z",
-      "claim_id": "88358944"
+      "date": "2026-08-06",
+      "report": "reports/2026-08-06-geotechnical-materials-testing-labs-narrow-subspecialty.md",
+      "top_opportunity": "CureWatch - cure-room (ASTM C511) data-logger auditor that produces the required weekly evaluation record, detects excursions AND logger gaps, and maps each excursion window to the exact specimen population that was in the room at the time",
+      "score": 48
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1288,6 +1289,66 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "Work-order to chargeable-billback determination against a client-specific service agreement, at scale."
+    },
+    {
+      "market": "Ready-mix concrete producer quality control departments",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Mix design submittal packages, ACI 214 statistical strength analysis, and low-break disputes with third-party labs; small QC staffs running Excel; direct counterparty to the CMT market just mapped."
+    },
+    {
+      "market": "Deep foundation testing specialists (CSL, PIT, PDA/dynamic load testing)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Highly specialized reporting with instrument data, small firms, no obvious software; adjacent to geotech and surfaced repeatedly during CMT research."
+    },
+    {
+      "market": "Third-party equipment calibration providers serving construction test labs",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Serves the 2,000+ accredited CMT labs; certificate production, traceability chains, and recall of out-of-tolerance instruments are all document-shaped problems."
+    },
+    {
+      "market": "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Electronic data deliverable format validation before regulator submittal is a pure checklist-as-data problem; distinct regulatory stack from CMT."
+    },
+    {
+      "market": "Geotechnical drilling subcontractors and rig operations",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Rig scheduling, driller day logs, utilization and mobilization billing; the field-ticket-to-invoice pattern applies directly."
+    },
+    {
+      "market": "Building envelope and roofing consultants performing field water testing (ASTM E1105, AAMA 501.2)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Test protocol compliance, mock-up documentation, and punchlist-style deliverables at very small firms."
+    },
+    {
+      "market": "Welding inspection (AWS CWI) and NDT service providers under ASTM E543 / SNT-TC-1A",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Written procedure manuals, annual internal audits, personnel certification with vision-test cycles - a tight, underserved compliance records market."
+    },
+    {
+      "market": "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Consultants who prepare agencies for accreditation; they would be the distribution channel for compliance tooling as much as a market."
+    },
+    {
+      "market": "Radiation safety officer services and portable gauge licensee compliance",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "NRC/Agreement State licensing, leak tests, dosimetry, DOT shipping papers - a self-contained records silo sitting inside thousands of testing firms."
+    },
+    {
+      "market": "Asphalt plant producer quality control technicians",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Daily production testing, control charts, and pay-factor disputes with DOTs; a distinct spec regime from vertical construction CMT."
     }
   ],
   "patterns": [
@@ -1892,6 +1953,87 @@
         "Independent property and casualty claims adjusting",
         "Medical billing and revenue cycle for small practices",
         "Third-party claims administration (TPA) and self-insured program operations"
+      ]
+    },
+    {
+      "pattern": "Exposure-window linkage: when a continuously monitored environment goes out of spec (or the log has a gap), enumerate every unit of work that was inside it during that window",
+      "seen_in": [
+        "Geotechnical and environmental consulting / materials testing labs"
+      ],
+      "transfers_to": [
+        "Metal finishing, plating, heat treat and NDT job shops (special-process suppliers)",
+        "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+        "Federally qualified health centers - HRSA Section 330 grant compliance",
+        "Calibration and metrology service providers / in-house gage management",
+        "Warehouse and 3PL fulfillment receiving/shipping document control"
+      ]
+    },
+    {
+      "pattern": "Interval-and-evidence compliance calendar: schedule recurring obligations by interval AND validate that each stored record contains the specific fields the auditor will demand (content validation, not just due dates)",
+      "seen_in": [
+        "Geotechnical and environmental consulting / materials testing labs"
+      ],
+      "transfers_to": [
+        "Calibration and metrology service providers / in-house gage management",
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
+        "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+        "Small defense suppliers navigating CMMC Level 2 compliance",
+        "Dental and specialty clinic practice administration"
+      ]
+    },
+    {
+      "pattern": "Coverage reconciliation: a required-scope schedule authored by an outside party versus the deliverables actually filed, producing a gap list early enough to still act on it",
+      "seen_in": [
+        "Geotechnical and environmental consulting / materials testing labs"
+      ],
+      "transfers_to": [
+        "Nonprofit grant management and compliance",
+        "Construction submittal, RFI, and closeout coordination (project engineer role)",
+        "Immigration law practice",
+        "Title, escrow, and real estate closing",
+        "Small defense suppliers navigating CMMC Level 2 compliance",
+        "Commissioning (Cx) providers for small and midsize buildings"
+      ]
+    },
+    {
+      "pattern": "Contract rate-schedule reconciliation: recompute what should have been billed from primary field time records against a per-client fee schedule of minimums, tiers, multipliers and exclusions, then present exceptions for human approval",
+      "seen_in": [
+        "Geotechnical and environmental consulting / materials testing labs",
+        "Commercial property management"
+      ],
+      "transfers_to": [
+        "Freight brokerage and dispatch operations",
+        "Staffing and recruiting agency operations",
+        "Machine shop / job shop quoting and production control",
+        "Electrical or plumbing trade subcontractor field operations",
+        "Third-party truck dispatch services (5-50 owner-operator trucks)",
+        "Small-firm litigation support and paralegal work"
+      ]
+    },
+    {
+      "pattern": "Person x task-authorization matrix with expiry and jurisdiction variance: who is legally permitted to perform this specific task, in this specific place, today - queryable both by person (dispatch) and by task (audit)",
+      "seen_in": [
+        "Geotechnical and environmental consulting / materials testing labs"
+      ],
+      "transfers_to": [
+        "HR and benefits administration in companies under 200 employees",
+        "Staffing and recruiting agency operations",
+        "Electrical or plumbing trade subcontractor field operations",
+        "Fire alarm system design and programming subcontractors",
+        "Title 24 acceptance test technicians (ATT) and acceptance testing providers",
+        "Independent property and casualty claims adjusting"
+      ]
+    },
+    {
+      "pattern": "Tolerance-window scheduling for perishable or aging work items: the deadline is a window rather than a date, and missing it destroys the item irrecoverably",
+      "seen_in": [
+        "Geotechnical and environmental consulting / materials testing labs"
+      ],
+      "transfers_to": [
+        "Medical billing and revenue cycle for small practices",
+        "Title abstracting and independent title search contractors",
+        "Estate planning and probate practice",
+        "Multi-state charitable solicitation registration compliance"
       ]
     }
   ]
