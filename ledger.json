@@ -96,16 +96,17 @@
       "report": "reports/2026-08-06-title-escrow-real-estate-closing-handoffs-and-qa.md",
       "top_opportunity": "RecordReady - local pre-recording document defect scanner that checks deeds, mortgages and curative instruments against a county-specific rule profile (notary block completeness, return address, prior-recording reference, transfer-tax vs consideration, name consistency) before submission instead of after rejection",
       "score": 45
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Independent property and casualty claims adjusting",
       "angle": "narrow-subspecialty",
-      "claimed_at": "2026-08-06T21:48:47Z",
-      "claim_id": "1c0329d5"
+      "date": "2026-08-06",
+      "report": "reports/2026-08-06-independent-pc-claims-adjusting-narrow-subspecialty.md",
+      "top_opportunity": "Preflight \u2014 carrier-specific estimate and file QA checklist runner that catches kickback triggers before upload",
+      "score": 43
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1486,6 +1487,66 @@
       "angle": "narrow-subspecialty",
       "source": "discovered",
       "note": "One transaction spanning dozens of properties, states and recording jurisdictions; per-property requirement tracking currently lives in spreadsheets."
+    },
+    {
+      "market": "Public adjusting firms (policyholder-side property claims)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Policyholder-side mirror of the IA role; fee is a % of settlement, so estimate quality and documentation drive revenue directly; ClaimWizard-class tooling is expensive and firm-oriented."
+    },
+    {
+      "market": "Public adjusting firms (policyholder-side property claims)",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "State-by-state PA licensing/contract regulation, contingency-fee accounting, and lien/trust handling are heavily manual."
+    },
+    {
+      "market": "Insurance restoration contractors and supplement writers",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Third-party Xactimate supplement shops live entirely on line-item recovery from carrier estimates; a diff-and-justify workflow is the whole job."
+    },
+    {
+      "market": "IA firm claims operations and file QA desks (vendor-side reviewers)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The receiving side of the adjuster kickback loop; reviewers apply per-carrier guideline sets manually across hundreds of files."
+    },
+    {
+      "market": "Forensic engineering firms performing cause-and-origin investigations for insurers",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Engineer-authored reports with heavy photo/evidence documentation, strict chain-of-custody, and carrier-format deliverables."
+    },
+    {
+      "market": "Fire and explosion origin-and-cause investigators (IAAI-CFI, NFPA 921)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "NFPA 921 methodology imposes a documented hypothesis-testing sequence that maps cleanly onto a structured field tool."
+    },
+    {
+      "market": "Large-loss and commercial property adjusting including business interruption",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "BI claims require period-of-restoration modeling and financial document reconciliation that is done in ad hoc spreadsheets."
+    },
+    {
+      "market": "Insurance appraisal and umpire services under the policy appraisal clause",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Two-appraiser-plus-umpire process with line-item reconciliation between competing estimates; no dedicated tooling found."
+    },
+    {
+      "market": "Roofing contractors handling storm and insurance claims",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Sits directly across the table from the field adjuster; shares the photo, measurement and supplement workflow with opposite incentives."
+    },
+    {
+      "market": "Third-party estimate writing services (Xactimate estimating desks)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Offshore and domestic desks writing estimates from adjuster photo/scope packets; the intake packet quality problem is acute and well defined."
     }
   ],
   "patterns": [
@@ -2326,6 +2387,87 @@
         "HR and benefits administration in companies under 200 employees",
         "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
         "Small-firm litigation support and paralegal work"
+      ]
+    },
+    {
+      "pattern": "Reviewer-rejection preflight: encode the outside gatekeeper's rejection criteria and run them against your own deliverable before submitting, because the submitter bears the rework cost",
+      "seen_in": [
+        "Independent property and casualty claims adjusting"
+      ],
+      "transfers_to": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)",
+        "Building permit expediting and code consulting firms",
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Durable medical equipment (DME) suppliers - documentation and billing compliance",
+        "Mortgage post-closing QC and trailing document vendors",
+        "Fire protection / fire sprinkler design and coordination subcontractors"
+      ]
+    },
+    {
+      "pattern": "Tiered-fee reconciliation: independently recompute what you should have been paid off a schedule the payer controls, and diff it against the remittance, accounting for holdbacks and retroactive adjustments",
+      "seen_in": [
+        "Independent property and casualty claims adjusting"
+      ],
+      "transfers_to": [
+        "Independent pharmacy third-party reconciliation and PBM claw-backs",
+        "Small third-party medical billing companies (RCM service bureaus, 1-25 staff)",
+        "Freight bill audit and payment for small shippers",
+        "Small motor carriers (5-50 trucks) back office and settlement",
+        "Third-party truck dispatch services (5-50 owner-operator trucks)",
+        "Workers' compensation medical billing and state fee schedule compliance"
+      ]
+    },
+    {
+      "pattern": "Dual-clock deadline tracker that emits pasteable compliance narrative: track statutory and contractual clocks together and generate the documentation text the professional pastes into someone else's system of record",
+      "seen_in": [
+        "Independent property and casualty claims adjusting"
+      ],
+      "transfers_to": [
+        "HOA and condominium management companies - estoppel and demand response desk",
+        "County recorder offices - document intake, indexing and rejection handling",
+        "Mortgage servicer payoff and lien release departments",
+        "Title abstracting and independent title search contractors",
+        "Immigration law practice"
+      ]
+    },
+    {
+      "pattern": "Multi-jurisdiction credential and eligibility matrix: answer 'am I legally cleared to do this work, here, today' when credentials cascade off a home jurisdiction and rules differ per state",
+      "seen_in": [
+        "Independent property and casualty claims adjusting"
+      ],
+      "transfers_to": [
+        "Welding inspection (AWS CWI) and NDT service providers under ASTM E543 / SNT-TC-1A",
+        "Title 24 acceptance test technicians (ATT) and acceptance testing providers",
+        "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)",
+        "Radiation safety officer services and portable gauge licensee compliance",
+        "Mobile notary and loan signing service operators",
+        "Remote online notarization (RON) platform operators and RON-commissioned notaries"
+      ]
+    },
+    {
+      "pattern": "Field-evidence completeness auditor keyed to a required-shot list: check the evidence set against the required list while the professional is still on site and can still fix the gap",
+      "seen_in": [
+        "Independent property and casualty claims adjusting"
+      ],
+      "transfers_to": [
+        "Building envelope and roofing consultants performing field water testing (ASTM E1105, AAMA 501.2)",
+        "Ready-mix concrete producer quality control departments",
+        "Asphalt plant producer quality control technicians",
+        "UAS / drone mapping and reality-capture service providers",
+        "Geotechnical drilling subcontractors and rig operations"
+      ]
+    },
+    {
+      "pattern": "Per-engagement profitability ledger for 1099 field professionals: bind expenses and revenue to a discrete deployment or job so the contractor can answer 'did that one make money' before accepting the next",
+      "seen_in": [
+        "Independent property and casualty claims adjusting"
+      ],
+      "transfers_to": [
+        "Intermodal drayage operators and port trucking",
+        "Third-party truck dispatch services (5-50 owner-operator trucks)",
+        "UAS / drone mapping and reality-capture service providers",
+        "Mobile notary and loan signing service operators",
+        "Geotechnical drilling subcontractors and rig operations"
       ]
     }
   ]
