@@ -74,7 +74,14 @@
       "score": 44
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Geotechnical and environmental consulting / materials testing labs",
+      "angle": "narrow-subspecialty",
+      "claimed_at": "2026-08-06T16:49:12Z",
+      "claim_id": "88358944"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -277,12 +284,6 @@
     {
       "market": "Geotechnical and environmental consulting / materials testing labs",
       "angle": "core-practitioner-workflow",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Geotechnical and environmental consulting / materials testing labs",
-      "angle": "narrow-subspecialty",
       "source": "seed",
       "note": ""
     },
