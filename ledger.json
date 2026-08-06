@@ -90,7 +90,14 @@
       "score": 45
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Title, escrow, and real estate closing",
+      "angle": "handoffs-and-qa",
+      "claimed_at": "2026-08-06T20:48:33.352485+00:00",
+      "claim_id": "32033d32"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -389,12 +396,6 @@
     {
       "market": "Title, escrow, and real estate closing",
       "angle": "back-office",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Title, escrow, and real estate closing",
-      "angle": "handoffs-and-qa",
       "source": "seed",
       "note": ""
     },
