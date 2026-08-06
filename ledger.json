@@ -66,7 +66,14 @@
       "score": 46
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Commercial property management",
+      "angle": "back-office",
+      "claimed_at": "2026-08-06T15:49:01Z",
+      "claim_id": "3dee0a20"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -479,12 +486,6 @@
     {
       "market": "Commercial property management",
       "angle": "narrow-subspecialty",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Commercial property management",
-      "angle": "back-office",
       "source": "seed",
       "note": ""
     },
