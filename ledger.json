@@ -82,7 +82,14 @@
       "score": 48
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Medical billing and revenue cycle for small practices",
+      "angle": "core-practitioner-workflow",
+      "claimed_at": "2026-08-06T18:48:46.278852+00:00",
+      "claim_id": "790d3912"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -495,12 +502,6 @@
     {
       "market": "Commercial property management",
       "angle": "handoffs-and-qa",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Medical billing and revenue cycle for small practices",
-      "angle": "core-practitioner-workflow",
       "source": "seed",
       "note": ""
     },
