@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medical Billing &amp; RCM for Small Practices — Core Practitioner Workflow</title>
+<style>
+  :root {
+    --ink: #1c1e21;
+    --muted: #5b6470;
+    --rule: #dfe3e8;
+    --accent: #7a2e2e;
+    --bg: #fbfaf8;
+    --panel: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Charter, "Bitstream Charter", "Iowan Old Style", Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.68;
+  }
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 64px 32px 120px;
+  }
+  h1, h2, h3, h4 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.25;
+    color: var(--ink);
+    font-weight: 650;
+  }
+  h1 {
+    font-size: 2.15rem;
+    margin: 0 0 .6em;
+    letter-spacing: -.015em;
+  }
+  h2 {
+    font-size: 1.42rem;
+    margin: 2.6em 0 .7em;
+    padding-bottom: .34em;
+    border-bottom: 2px solid var(--rule);
+    letter-spacing: -.01em;
+  }
+  h3 {
+    font-size: 1.13rem;
+    margin: 2.1em 0 .5em;
+    color: var(--accent);
+  }
+  h4 {
+    font-size: 1rem;
+    margin: 1.6em 0 .4em;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-size: .82rem;
+  }
+  p { margin: 0 0 1.1em; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(122,46,46,.28); }
+  a:hover { border-bottom-color: var(--accent); }
+  ul, ol { margin: 0 0 1.2em; padding-left: 1.4em; }
+  li { margin-bottom: .45em; }
+  li > ul, li > ol { margin-top: .45em; margin-bottom: .2em; }
+  strong { font-weight: 700; }
+  blockquote {
+    margin: 1.5em 0;
+    padding: .2em 0 .2em 1.4em;
+    border-left: 3px solid var(--accent);
+    color: #3a3d42;
+    font-style: italic;
+  }
+  blockquote p:last-child { margin-bottom: 0; }
+  hr {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 3em 0;
+  }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .86em;
+    background: #f0eeea;
+    padding: .12em .38em;
+    border-radius: 3px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.6em 0 2em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: .84rem;
+    background: var(--panel);
+    line-height: 1.45;
+  }
+  thead th {
+    background: #f2f0ec;
+    text-align: left;
+    font-weight: 650;
+    border-bottom: 2px solid #cfd4da;
+    padding: .62em .7em;
+    vertical-align: bottom;
+  }
+  tbody td {
+    border-bottom: 1px solid var(--rule);
+    padding: .6em .7em;
+    vertical-align: top;
+  }
+  tbody tr:nth-child(odd) td { background: #fcfbfa; }
+  table td:first-child { white-space: nowrap; }
+  /* scoring matrix: numeric columns centred */
+  table td:not(:first-child):not(:nth-child(2)) { text-align: left; }
+  .meta {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: .88rem;
+    color: var(--muted);
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--accent);
+    padding: 1em 1.3em;
+    margin: 0 0 2.6em;
+  }
+  .meta p { margin: .25em 0; }
+  em { color: #2c2f34; }
+  @media (max-width: 720px) {
+    body { font-size: 17px; }
+    .wrap { padding: 36px 18px 80px; }
+    table { font-size: .76rem; }
+    table td:first-child { white-space: normal; }
+  }
+  @media print {
+    body { background: #fff; font-size: 11pt; }
+    .wrap { max-width: none; padding: 0; }
+    a { border-bottom: none; color: #000; }
+    h2 { page-break-after: avoid; }
+    table { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1 id="medical-billing-and-revenue-cycle-for-small-practices-core-practitioner-workflow">Medical Billing and Revenue Cycle for Small Practices — Core Practitioner Workflow</h1>
+<p><strong>Market:</strong> Medical billing and revenue cycle for small practices
+<strong>Angle:</strong> core-practitioner-workflow
+<strong>Claim ID:</strong> <code>790d3912</code>
+<strong>Date:</strong> 2026-08-06</p>
+<hr />
+<h2 id="0-cycle-header">0. Cycle header</h2>
+<h3 id="why-this-assignment">Why this assignment</h3>
+<p>The ledger held 211 backlog items across 91 markets, of which <strong>81 markets had zero completed reports</strong>. The first-priority rule is catalog breadth, and the ten completed reports were heavily concentrated in the built environment and adjacent professional services: fire protection design, land surveying, MEP engineering, geotechnical/materials testing, commercial property management, machine shops, freight brokerage, insurance agency back office, nonprofit grants, immigration law. <strong>Healthcare — the single largest administrative-labor market in the United States — was completely untouched.</strong></p>
+<p>Within healthcare I chose small-practice medical billing over the adjacent candidates (dental practice administration, staffing agencies, title/escrow, small CPA practices) for three reasons:</p>
+<ol>
+<li><strong>The core data is a public, standardized, machine-readable file format.</strong> The X12 835 remittance advice and 837 claim are HIPAA-mandated standards. Practices can obtain their own raw files from clearinghouses. This is the single best precondition for small, local, open-source tooling — it is the healthcare analogue of the "standardized transaction file the incumbent hides" pattern already recorded in the ledger from the freight brokerage cycle.</li>
+<li><strong>There is a documented, hard price floor in the commercial tooling.</strong> Denial analytics and underpayment detection are sold almost exclusively to hospitals and multi-site groups at quote-only prices; the only vendor with published pricing starts at $6,000/year. Practices below roughly $1–2M in collections have Excel or nothing.</li>
+<li><strong>The evidence base is unusually quantified.</strong> CMS, KFF, MGMA, AMA, and CAQH all publish hard numbers on denial rates, appeal rates, per-transaction costs, and rework costs. Few markets in this backlog allow claims to be grounded that precisely.</li>
+</ol>
+<p>I chose <code>core-practitioner-workflow</code> over <code>back-office</code> because for a small billing company — the most motivated buyer in this market — claim submission through cash collection <em>is</em> the billable production work, not overhead. Angle balance across the catalog was the third-priority criterion and market breadth won.</p>
+<h3 id="backlog-status">Backlog status</h3>
+<p><strong>210 assignments remain</strong> in the backlog after this claim was taken (211 → 210), across 91 markets. This report appends 11 newly discovered markets, so the standing backlog will grow rather than shrink.</p>
+<hr />
+<h2 id="1-market-examined">1. Market examined</h2>
+<p><strong>Industry.</strong> United States outpatient/ambulatory healthcare revenue cycle management (RCM) — the process of turning a delivered clinical service into collected cash.</p>
+<p><strong>The two buyer types.</strong></p>
+<ul>
+<li><strong>Small physician practices, 1–10 clinicians.</strong> Per the AMA's 2024 Physician Practice Benchmark Survey, <strong>47.4% of US physicians still practice in groups of 10 or fewer</strong>, and <strong>11.9% are solo</strong> — though both figures are in long decline (61.4% and 18.4% respectively in 2012, the first time the ≤10 figure has fallen below half). <strong>42.2% of physicians remain in physician-owned private practice.</strong> (<a href="https://www.ama-assn.org/system/files/2024-prp-pp-characteristics.pdf">AMA PRP, 2024</a>) This is a shrinking but still very large installed base, and it is the segment with no in-house RCM analytics department.</li>
+<li><strong>Independent third-party billing companies, roughly 1–25 employees.</strong> These are the highest-information, highest-motivation buyers. Their margin is directly hours-per-claim, they see five to thirty practices' books at once, and they are already accustomed to buying their own tools. Practitioner forum evidence for this report comes disproportionately from this population.</li>
+</ul>
+<p><strong>The professional role.</strong> Titles vary — medical biller, AR follow-up specialist, revenue cycle specialist, billing manager, practice administrator. In a 3-provider practice this is frequently <strong>one person</strong>, sometimes part-time, sometimes the office manager wearing a second hat. A representative job posting from an RCM firm that explicitly refuses hospital-only candidates asks for <strong>10+ years of experience at $22–25/hour</strong> and lists as duties: <em>"Aggressively manage insurance accounts receivable to maximize collections"</em>, <em>"Investigate, resolve, and appeal denied, rejected, and underpaid claims"</em>, <em>"Analyze payer trends and identify recurring reimbursement issues"</em>, <em>"Monitor timely filing deadlines"</em> (<a href="https://www.aapc.com/discuss/threads/we-are-hiring-experienced-medical-billers-remote-f-t.236242/">AAPC forum</a>). Another posting reduces the entire job to four nouns: <em>"Appeals," "AR," "Denials," "Payment posting"</em> (<a href="https://www.aapc.com/discuss/threads/part-time-medical-biller.235659/">AAPC forum</a>).</p>
+<p><strong>Type of user for any tool built here.</strong> Windows-first, Excel-fluent, not a programmer, working inside a browser-based PM/EHR all day, with local folder access and — critically — a legal obligation to keep protected health information (PHI) under control. The user will not stand up a server, will not sign an enterprise contract, and will not send patient data to an unknown cloud service without a Business Associate Agreement.</p>
+<hr />
+<h2 id="2-how-the-work-is-performed">2. How the work is performed</h2>
+<p>The workflow below is the composite reconstructed from practitioner forum accounts, job postings, and vendor documentation. Software named is what small practices actually run: Tebra (formerly Kareo), AdvancedMD, eClinicalWorks, athenahealth, DrChrono, CareCloud, Practice Fusion, SimplePractice, TherapyNotes, ChiroTouch, Office Ally Practice Mate, Medisoft, OpenEMR.</p>
+<h3 id="21-front-end-eligibility-and-authorization">2.1 Front end — eligibility and authorization</h3>
+<p>Before the visit, staff verify insurance eligibility and obtain prior authorization where required.</p>
+<ul>
+<li><strong>MGMA Stat (March 10, 2026; 294 respondents): 45% of practice staff phone time goes to eligibility and prior authorization</strong> — the largest single category, ahead of scheduling at 31%. Practice leaders describe <em>"submitting requests, tracking status, handling denials and appeals, and responding to constant status-check calls"</em> and name the friction point as translating vague payer responses like <em>"we need more information."</em> (<a href="https://www.mgma.com/mgma-stat/phones-are-still-a-backlog-costing-medical-practices-time">MGMA</a>)</li>
+<li><strong>CAQH 2024 Index:</strong> prior authorization is only <strong>35% fully electronic</strong>; provider cost per transaction is <strong>$12.88 manual / $8.93 portal / $5.38 electronic</strong>, and it takes <strong>24 minutes by phone, 16 minutes by portal</strong>. Eligibility verification is nominally 96% electronic but still costs providers <strong>$8.57 manual / $4.46 portal / $2.00 electronic</strong>. A practice quoted in the Index: <em>"When it comes to eligibility and benefits, I don't have an automated tool that I can trust, so I don't use it."</em> (<a href="https://www.caqh.org/hubfs/Index/2024%20Index%20Report/CAQH_IndexReport_2024_FINAL.pdf">CAQH Index 2024, PDF</a>)</li>
+<li><strong>AMA physician survey:</strong> physicians and staff spend an average of <strong>12–13 hours per week</strong> on prior authorization; roughly <strong>35–40% of practices have staff dedicated exclusively to it</strong>. (<a href="https://www.ama-assn.org/practice-management/prior-authorization/over-80-prior-auth-appeals-succeed-why-aren-t-there-more">AMA</a>)</li>
+</ul>
+<p>Practitioner accounts describe multi-touch verification with no dedicated tool: <em>"It starts at the time of appointment scheduling and again before the patient comes in"</em>; the tracking artifact is Excel — <em>"create an update Excel sheet with listing providers names, NPI with each assigned insurance payer ID"</em> (<a href="https://www.aapc.com/discuss/threads/insurance-verifications.189422/">AAPC</a>).</p>
+<h3 id="22-charge-capture-and-coding">2.2 Charge capture and coding</h3>
+<p>The clinician documents in the EHR; a superbill or charge ticket is produced; a biller or coder reviews CPT/HCPCS codes, ICD-10 diagnoses, modifiers, and units, then enters charges. In small practices this review is often a <em>"superbill accuracy check"</em> performed by an in-office specialist described as <em>"a bridge between our clinical team and our RCM partner"</em> (<a href="https://www.aapc.com/discuss/threads/medical-billing-charge-entry-specialists-in-office.235924/">AAPC</a>).</p>
+<p>Coders consistently report EHRs are not built for them. Comparing NextGen, Cerner, and Athena, one coder concludes flatly: <em>"EMR's are not designed with coders in mind"</em> — Cerner corrections <em>"very time consuming"</em> and taking ten times longer, Athena's RVU ordering unreliable (<a href="https://www.aapc.com/discuss/threads/what-is-the-best-emr-system-you-have-ever-used.172685/">AAPC</a>).</p>
+<h3 id="23-scrubbing-and-submission">2.3 Scrubbing and submission</h3>
+<p>The PM system or clearinghouse "scrubs" the claim against edit rules, then transmits an <strong>X12 837P</strong> file. Clearinghouses used by this segment: Office Ally, Claim.MD, Availity, Waystar, Optum/Change Healthcare, TriZetto.</p>
+<p>Scrubbing is a genuine differentiator and a genuine complaint. One billing-service owner: <em>"out of ALL the billing systems I've worked on their e-scrubber is by far the most powerful."</em> Another, on the same product: <em>"takes almost 48 hours (2 days!!!) for the claim to exit their internal scrubber and go to the payor"</em> — attributed to double-scrubbing at the PM and then again at the clearinghouse (<a href="https://www.medicalbillinglive.com/members/index.php/topic,7276.0.html">Medical Billing Live</a>).</p>
+<h3 id="24-acknowledgment-and-rejection">2.4 Acknowledgment and rejection</h3>
+<p>The clearinghouse and payer return <strong>999</strong> (functional acknowledgment) and <strong>277CA</strong> (claim acknowledgment) files. Rejections at this stage never became claims and never appear in AR — they are invisible unless someone opens the report. Practitioner accounts of this stage are dominated by opacity: <em>"All my claims are rejected for Insurance Type"</em> with no path to diagnose, and support gated behind training signups (<a href="https://www.aapc.com/discuss/threads/office-ally-training-issues-and-what-it-can-do.233414/">AAPC</a>).</p>
+<h3 id="25-adjudication-and-remittance">2.5 Adjudication and remittance</h3>
+<p>The payer adjudicates and returns an <strong>X12 835</strong> electronic remittance advice (ERA), plus an EFT. The 835 carries, per service line: billed charge, allowed amount, paid amount, and one or more <strong>CARC</strong> (Claim Adjustment Reason Codes) with <strong>CARC group codes</strong> (CO = contractual obligation, PR = patient responsibility, OA = other adjustment, PI = payer initiated) and optional <strong>RARC</strong> (Remittance Advice Remark Codes). Provider-level adjustments — recoupments, offsets, interest, capitation — arrive in the <strong>PLB</strong> segment.</p>
+<p>CAQH puts remittance advice at <strong>$5.67 manual / $5.31 portal / $2.95 electronic</strong> per transaction for providers, and notes providers routinely pull <strong>both</strong> the ERA and the plan portal for supplemental information, <strong>creating a duplicate posting workflow</strong>.</p>
+<h3 id="26-payment-posting">2.6 Payment posting</h3>
+<p>Payments are posted to the ledger, contractual adjustments written off, patient responsibility moved to the patient balance, and secondary claims generated. This is where the small-practice tooling gap first becomes financially dangerous:</p>
+<blockquote>
+<p><em>"Kareo's can be weird at times when it throws something into the denial area that isn't actually a denial, but the two that drive me crazy are NueMd and Health Fusion. </em><em>They will automatically 'write off' any denied charges</em><em>, and to go back and 'undeny' those charges for resubmittal is tedious."</em> — kristin, biller working across multiple client systems (<a href="https://www.medicalbillinglive.com/members/index.php/topic,8305.0.html">Medical Billing Live</a>)</p>
+</blockquote>
+<p>Auto-posting is frequently a <strong>paid add-on</strong>. A practice on Medisoft: <em>"We have never had the auto-post capability... They quoted me $499 to install a module to receive ERA's for auto-post"</em> — after 25 years of manual posting (<a href="https://www.medicalbillinglive.com/members/index.php/topic,8571.0.html">Medical Billing Live</a>).</p>
+<h3 id="27-denial-management-ar-follow-up-and-appeals">2.7 Denial management, AR follow-up, and appeals</h3>
+<p>Unpaid and underpaid claims are worked from an aging report. The tracking artifact is, verifiably, a spreadsheet. An AAPC Knowledge Center article by a CPC describes the recommended method as a <strong>"Denial Tracking Log"</strong> — denial reasons down the rows, the practice's top 10 payers across the columns, tick marks added as denials are worked, maintained <em>"over a two- to three-month period"</em> to see patterns (<a href="https://www.aapc.com/blog/10034-streamline-your-denials-with-one-simple-spreadsheet/">AAPC</a>).</p>
+<p>For AR recovery specifically, a billing-service owner's advice is to skip tooling entirely: <em>"If you're only going to do A/R Recovery I would just work off of reports"</em> — the client's PM aging report, accessed remotely. A second owner: <em>"I would highly recommend using the software of the client... Just try to figure out a way to log into their system"</em> (<a href="https://www.medicalbillinglive.com/members/index.php/topic,7422.0.html">Medical Billing Live</a>).</p>
+<p>Prioritization is by dollar size, not root cause: <em>"I would work the biggest balances first,"</em> noting <em>"it costs about $10 to send out a patient statement"</em> (<a href="https://www.medicalbillinglive.com/members/index.php/topic,8552.0.html">Medical Billing Live</a>).</p>
+<p>Appeal letters are hand-built each time: <em>"I constantly modify our appeal letters based on the patient's policy vs. provider/hospital contracts, state vs. federal laws, CMS policy manuals, LCD, and NCDs"</em> (<a href="https://www.aapc.com/discuss/threads/ins-appeal-letters.201352/">AAPC</a>).</p>
+<h3 id="28-patient-balance-and-close">2.8 Patient balance and close</h3>
+<p>Statements go out; balances age; some go to collections; some are written off. Statement cost is real money at small volume (~$10 per statement cycle per the practitioner quote above; DrChrono publishes $0.90 per mailed statement, TherapyNotes $1.00 per paper claim).</p>
+<h3 id="29-what-the-workflow-produces">2.9 What the workflow produces</h3>
+<p>Documents and files in play: superbill/charge ticket, CMS-1500 (paper) and 837P (electronic), 999/277CA acknowledgments, 835 ERA, paper EOB (still common from smaller payers and for secondaries), AR aging report, payer fee schedules and contracts, credentialing/enrollment files (CAQH ProView attestations, PTAN/group IDs, revalidation notices), appeal letters and supporting clinical documentation, patient statements.</p>
+<hr />
+<h2 id="3-most-important-problems-ranked">3. Most important problems, ranked</h2>
+<h3 id="p1-denials-are-not-measured-only-individually-worked">P1 — Denials are not measured, only individually worked</h3>
+<p><strong>Who:</strong> Every biller and practice administrator in a 1–10 provider practice.
+<strong>When:</strong> Continuously; visible at posting and at AR follow-up.
+<strong>Currently handled by:</strong> Working the aging report claim-by-claim, largest dollar first. Pattern detection, if it happens at all, is a hand-tallied Excel log.
+<strong>Why inadequate:</strong> Working claims individually treats symptoms. The recurring root cause — one payer's new modifier requirement, one provider's expired enrollment, one CPT that a specific plan never covers — is invisible until someone aggregates. The single most-cited <em>recommended practice</em> in the literature is manual tallying, which tells you the tooling doesn't exist.
+<strong>Frequency:</strong> Continuous.
+<strong>Cost:</strong> MGMA's figure, cited repeatedly in the family-medicine literature, is <strong>~$25 to rework a denied claim</strong>, with <strong>more than 50% of denied claims never reworked at all</strong>. A worked example for a single physician with 44 denials/month is <strong>$1,100/month, $13,200/year</strong> in pure rework labor, before counting the never-reworked claims as lost revenue (<a href="https://www.aafp.org/fpm/2015/0300/p7">AAFP FPM</a>). Physicians Practice reports the same $25 figure and <em>"as many as 60% of returned claims are never resubmitted"</em> (<a href="https://www.physicianspractice.com/view/why-getting-claims-right-first-time-cheaper-reworking-them">Physicians Practice</a>).
+<strong>Evidence strength:</strong> High. Multiple independent sources; direct practitioner evidence of the spreadsheet workaround.</p>
+<h3 id="p2-underpayment-is-essentially-undetected-at-small-practices">P2 — Underpayment is essentially undetected at small practices</h3>
+<p><strong>Who:</strong> Practice owners and billing companies.
+<strong>When:</strong> At posting; almost never caught.
+<strong>Currently handled by:</strong> Not handled. Every fee-schedule discussion I found among small-practice billers is about setting <em>charges</em> (<em>"our fees are determined by our Blue Cross allowed multiplied by 130%"</em>; <em>"I use the RVU/Medicare Allowable rate to see what Medicare's allowed amount is, but I know that I need to set our prices significantly higher"</em>), not about verifying <em>payments</em> (<a href="https://www.aapc.com/discuss/threads/determining-how-much-to-set-your-fee-schedule.193884/">AAPC</a>). One thread's stated method is <em>"a hybrid process"</em> of CMS lookup, local rumor, and <em>"good old fashioned Googling"</em> (<a href="https://www.aapc.com/discuss/threads/setting-clinic-fee-schedule.195781/">AAPC</a>).
+<strong>Why inadequate:</strong> A payer paying 3% below the contracted rate on a high-volume code is invisible to claim-by-claim review and material in aggregate. When practitioners do catch it, the process is a one-off manual comparison — one biller compared payments to quoted benefits, called the payer, had the patient call, supplied a correctly-paid comparison claim, <strong>and the payer still refused to adjust</strong> (<a href="https://www.medicalbillinglive.com/members/index.php/topic,12613.0.html">Medical Billing Live</a>). A neurologist could not even obtain her own annual reimbursement data from her payers; the forum administrator's answer: <em>"I do not believe there is any way to look that information up yourself"</em> (<a href="https://www.medicalbillinglive.com/members/index.php/topic,12503.0.html">Medical Billing Live</a>).
+<strong>Frequency:</strong> Every remittance.
+<strong>Cost:</strong> Unquantified at small-practice scale — that is precisely the problem. The entire commercial "payment variance" category exists because the dollars are large at hospital scale; nobody has measured it at 3-provider scale because nobody has the tool.
+<strong>Evidence strength:</strong> High for the <em>absence of tooling and practice</em>; low for the dollar magnitude. Flagged as the single most important thing to validate before building.</p>
+<h3 id="p3-timely-filing-and-appeal-deadlines-are-tracked-by-nothing">P3 — Timely filing and appeal deadlines are tracked by nothing</h3>
+<p><strong>Who:</strong> Billers; the practice eats the loss.
+<strong>When:</strong> Silently, until the denial arrives.
+<strong>Currently handled by:</strong> Memory and diligence. I found <strong>no practitioner describing any deadline-tracking mechanism</strong> — no tickler, no report, no calendar. The concept appears only as a job-posting duty ("Monitor timely filing deadlines").
+<strong>Why inadequate:</strong> The deadline is unrecoverable and the money is unbillable to the patient. On a Medicare late-filing penalty: <em>"If you have been charged with a late filing fee you cannot charge the patient for that amount. You need to adjust it off as a contractual adjustment... By being a participating provider you agree to follow the rules of the insurance carrier"</em> (<a href="https://www.medicalbillinglive.com/members/index.php/topic,422.0.html">Medical Billing Live</a>).</p>
+<p>Three documented failure mechanisms, all deterministic and all preventable by arithmetic:
+1. <strong>Secondary-after-primary lag.</strong> A claim where the primary paid in April, the secondary was billed in May, and the secondary denied for timely filing — because that plan's 95-day limit ran from <em>date of service</em>, not primary adjudication (<a href="https://www.aapc.com/discuss/threads/timely-filing-denial.193083/">AAPC</a>).
+2. <strong>Patient withheld coverage.</strong> Insurance disclosed ten months after service; denied untimely; and having already billed insurance, billing the patient becomes legally questionable (<a href="https://www.aapc.com/discuss/threads/timely-filing-when-patient-did-not-update-insurance.160670/">AAPC</a>).
+3. <strong>Loss of access to denials.</strong> <em>"Working from home... I have limited access to certain items making it difficult to get denials and respond timely"</em> (<a href="https://www.aapc.com/discuss/threads/timely-filing.172505/">AAPC</a>).</p>
+<p>Compounding this: <strong>appealed claims fall out of AR visibility.</strong> On writing off at 90 days while an appeal is pending, one biller notes that once written off <em>"it's much harder to track it and pursue the payment"</em>; another adds <em>"Some payers won't even decide on a 1st appeal/reconsideration until 60 days from date it is received"</em> (<a href="https://www.aapc.com/discuss/threads/a-r-question-about-writting-off-claims-that-are-being-appealed.131380/">AAPC</a>).
+<strong>Frequency:</strong> MGMA's denial-source poll put timely filing at <strong>7% of denials</strong> (<a href="https://www.mgma.com/mgma-stat/mgma-stats/finding-hidden-treasure-by-uncovering-and-fixing-the-sources-of-claim-denials">MGMA</a>).
+<strong>Cost:</strong> 100% loss of the claim value, not recoverable from anyone.
+<strong>Evidence strength:</strong> High for the failure mechanisms; the absence of tooling is a strong negative finding across two forums.</p>
+<h3 id="p4-carcrarc-codes-do-not-map-to-actions">P4 — CARC/RARC codes do not map to actions</h3>
+<p><strong>Who:</strong> Billers, especially the less experienced ones staffing small practices.
+<strong>When:</strong> Every remittance.
+<strong>Currently handled by:</strong> Individual lookup, forum questions, guessing.
+<strong>Why inadequate:</strong> The codes are ambiguous and frequently point away from the real problem. A biller reports <em>"getting CO 45 denial codes that I am not getting paid anything for"</em> — CO-45 is a contractual adjustment, not a denial at all, and the real cause turned out to be a non-covered in-office surgical code (<a href="https://www.medicalbillinglive.com/members/index.php/topic,7438.0.html">Medical Billing Live</a>). Even the liability split confuses experienced staff: PR-45 is billable to the patient, CO-45 is not, and a thread exists solely to establish that (<a href="https://www.aapc.com/discuss/threads/pr-45.233693/">AAPC</a>). Generic codes are useless alone: <em>"The 16 tells you that there's a submission error on the claim. The remark code M51 is giving you more specific information"</em> (<a href="https://www.aapc.com/discuss/threads/835-healthcare-policy-identification.129991/">AAPC</a>).</p>
+<p>Systemically, denial reasons are opaque even in aggregate: KFF found that of ~79 million denial reasons reported for ACA marketplace in-network claims in 2024, <strong>36% were coded "Other" and 25% "administrative"</strong> — over half of denial reasons carry effectively no information (<a href="https://www.kff.org/patient-consumer-protections/claims-denials-and-appeals-in-aca-marketplace-plans-in-2024/">KFF</a>).
+<strong>Frequency:</strong> Continuous.
+<strong>Cost:</strong> Folds into P1 rework cost; also causes misclassification and improper write-offs.
+<strong>Evidence strength:</strong> High.</p>
+<h3 id="p5-recoupments-offsets-and-takebacks-break-the-ledger">P5 — Recoupments, offsets, and takebacks break the ledger</h3>
+<p><strong>Who:</strong> Payment posters.
+<strong>When:</strong> Whenever a payer claws back a prior payment.
+<strong>Currently handled by:</strong> Workarounds. On eClinicalWorks, a question about posting a reversal went 18 months without resolution before someone suggested <em>"leaving recoupments in unallocated accounts rather than on original reversed claim... and explaining that to billing/accounting is my best suggestion"</em> (<a href="https://www.aapc.com/discuss/threads/ecw-posting-reversal-of-payments.179010/">AAPC</a>). On a specific payer's takeback terminology: <em>"Does anyone understand the terminology that Oscar used in the EOB when doing takebacks. I am seeing the terms refund request, offset, overpayment"</em> — with claims appearing taken back multiple times (<a href="https://www.aapc.com/discuss/threads/eob-with-takebacks-oscar.202817/">AAPC</a>).
+<strong>Why inadequate:</strong> The offset arrives in a PLB segment on a <em>later, unrelated</em> remittance. If it is not linked back to the original claim, the practice cannot tell whether a recoupment was valid, whether it was taken twice, or whether the recoupment window had already expired. Nobody can even state the window: <em>"I cannot find a consistent answer to this: what is the window in which commercial payors can recoup an overpayment?"</em> — answers ranged from 180 days to 5 years, state-dependent (<a href="https://www.aapc.com/discuss/threads/insurance-recoupment.203359/">AAPC</a>).
+<strong>Frequency:</strong> Episodic but persistent.
+<strong>Cost:</strong> Direct cash loss on invalid or duplicate recoupments; plus reconciliation labor.
+<strong>Evidence strength:</strong> Medium-high. Clear practitioner pain; magnitude unquantified.</p>
+<h3 id="p6-prior-authorization-burden-with-a-structural-change-now-in-flight">P6 — Prior authorization burden, with a structural change now in flight</h3>
+<p><strong>Who:</strong> Clinical and front-office staff.
+<strong>Currently handled by:</strong> Phone and portal. 45% of practice phone time (MGMA 2026); 24 minutes per phone PA (CAQH).
+<strong>Why the appeal side is the leverage point:</strong> In Medicare Advantage, insurers made <strong>52.8 million PA determinations in 2024</strong>, denying <strong>7.7% fully or partially</strong> (up from 6.4% in 2023). Only <strong>11.5% of denials were appealed</strong> — but <strong>80.7% of appeals were partially or fully overturned</strong> (<a href="https://www.kff.org/medicare/medicare-advantage-insurers-made-nearly-53-million-prior-authorization-determinations-in-2024/">KFF</a>). The AMA reports the same asymmetry and why it persists: <strong>62% of physicians don't appeal because they don't believe it will succeed</strong>, 48% because care can't wait, 48% for lack of staff time (<a href="https://www.ama-assn.org/practice-management/prior-authorization/over-80-prior-auth-appeals-succeed-why-aren-t-there-more">AMA</a>). <strong>Roughly four in five appealable denials are simply abandoned, and four in five of the ones pursued win.</strong>
+<strong>Structural change:</strong> CMS-0057-F is now partially in effect. Since <strong>January 1, 2026</strong>, impacted payers (MA organizations, Medicaid/CHIP FFS and managed care, FFE QHP issuers) must decide expedited PAs in 72 hours and standard in 7 calendar days, <strong>must give a specific reason for denials</strong>, and must publicly report PA metrics annually. On <strong>January 1, 2027</strong>, the Patient Access, Provider Access, Payer-to-Payer, and Prior Authorization FHIR APIs become required (<a href="https://www.cms.gov/newsroom/fact-sheets/cms-interoperability-prior-authorization-final-rule-cms-0057-f">CMS fact sheet</a>). Commercial/ERISA plans are <strong>not</strong> covered.
+<strong>Evidence strength:</strong> Very high on the numbers; medium on whether a small tool can move the needle before 2027.</p>
+<h3 id="p7-enrollment-and-credentialing-lapses-generate-invisible-denials">P7 — Enrollment and credentialing lapses generate invisible denials</h3>
+<p><strong>Who:</strong> Practice owners adding or moving providers.
+<strong>Currently handled by:</strong> Nothing systematic at small scale. I found credentialing-tracking tools described only at 150–300 provider organizations; <strong>no 1–10 provider practice described any tracking system</strong>.
+<strong>Cost:</strong> <strong>MGMA Stat (Aug 2021, 425 responses): 54% of practices said credentialing-related denials increased that year</strong>, with reported approval timelines up to <strong>100 days</strong>, closed panels, and providers loaded under <strong>incorrect taxonomies</strong> (<a href="https://www.mgma.com/mgma-stat/more-than-half-of-practices-report-credentialing-related-denials-on-the-rise-in-2021">MGMA</a>). A practitioner account: after a group restructuring, <em>"it took almost 6 months for the insurances to have our updated TID/group and was a huge financial mess"</em> with claims denied out-of-network (<a href="https://www.aapc.com/discuss/threads/credentialing-company-vs-in-house-credentialing-specialist.193006/">AAPC</a>).
+<strong>Evidence strength:</strong> High for existence; the specific detection mechanism I propose in §4 is inferential.</p>
+<h3 id="p8-single-person-key-risk">P8 — Single-person key risk</h3>
+<p><strong>Who:</strong> Practice owners.
+<strong>When:</strong> When the biller leaves.
+<strong>Evidence:</strong> An AAPC thread titled <em>"Biller quit suddenly and has all insurance carrier logins"</em> — the departed employee exclusively held <strong>all payer portal credentials plus PM system administration</strong>, and the owner's stated concern is the time to re-establish Medicare credentials (<a href="https://www.aapc.com/discuss/threads/biller-quit-suddenly-and-has-all-insurance-carrier-logins.194380/">AAPC</a>). Related: a new biller arriving at a practice with <em>"6 figure in old aging balances"</em> whose first job is auditing whether prior write-offs and patient-responsibility assignments were even legitimate (<a href="https://www.medicalbillinglive.com/members/index.php/topic,8552.0.html">Medical Billing Live</a>).
+<strong>Why it stays unsolved:</strong> It reads as a policy problem, not a software problem, and generic password managers don't model payer-specific enrollment identifiers. <strong>I flag this as a real problem that I do not think justifies a dedicated application</strong> — see §4 exclusions.</p>
+<h3 id="p9-single-vendor-concentration-risk-in-the-transaction-path">P9 — Single-vendor concentration risk in the transaction path</h3>
+<p><strong>Evidence:</strong> After the February 2024 Change Healthcare attack, the AMA surveyed 1,400 practices (1,297 with fewer than 100 physicians, 432 solo): <strong>77% had service disruptions, 80% lost revenue from unpaid claims, 39% could not obtain ERAs, 32% could not submit claims, 55% used personal funds, 31% struggled to make payroll, 48% engaged alternative clearinghouses at higher cost</strong> (<a href="https://www.ama-assn.org/system/files/change-healthcare-survey-results.pdf">AMA survey, PDF</a>).
+<strong>Relevance here:</strong> It establishes that a practice keeping its <strong>own local copy</strong> of its 835/837 history has genuine continuity value independent of analytics — a secondary argument for the ingestion tools proposed below.</p>
+<hr />
+<h2 id="4-application-opportunities">4. Application opportunities</h2>
+<p>All nine concepts below assume the same deployment model: <strong>a local desktop application or script that runs on the practice's own Windows machine, reads files from a local folder, writes results to a local SQLite database, and never transmits PHI anywhere.</strong> This is not incidental — it is what makes free open-source distribution legally viable in this market. A locally-run tool with no data egress is arguably not a Business Associate arrangement at all, whereas any hosted equivalent requires a signed BAA and a HIPAA Security Rule posture that a solo developer giving software away cannot economically maintain.</p>
+<hr />
+<h3 id="o1-remit-lens-835-denial-analytics">O1 — Remit Lens (835 denial analytics)</h3>
+<p><strong>Working title:</strong> Remit Lens
+<strong>Intended user:</strong> Biller, billing-company owner, or practice administrator at a 1–10 provider practice.
+<strong>Problem solved:</strong> P1, P4. Denials are worked one at a time and never aggregated; recurring root causes stay invisible.
+<strong>Current workflow:</strong> Post payments in the PM system → notice a lot of denials → optionally hand-tally a spreadsheet over two to three months → guess at the pattern.
+<strong>Proposed workflow:</strong> Drop a folder of 835 files (downloaded from the clearinghouse via SFTP or portal) onto the app → it parses every service line, joins CARC/RARC to human-readable text, and produces: denial rate by payer, by CPT, by provider, by CARC; dollars denied and dollars at risk; month-over-month trend; a payer scorecard including average days-to-pay computed from claim dates; and a drill-down list of affected claims exportable to CSV for the work queue.
+<strong>Required inputs:</strong> A folder of X12 835 files. Optionally 837 files to compute a true denial <em>rate</em> (denials ÷ submitted) rather than a denial share of remitted lines.
+<strong>Expected outputs:</strong> An interactive local dashboard, a one-page monthly PDF/HTML summary suitable for showing a physician-owner, and CSV work lists.
+<strong>Essential features:</strong> Robust 835 parsing including multiple CAS segments per line, group codes (CO/PR/OA/PI), RARC, and correct handling of reversals/corrections (CLP02 claim status codes). Human-readable CARC/RARC dictionary bundled and updateable. Payer normalization (the same payer arrives under many names and IDs). Zero-configuration first run.
+<strong>Deliberately excluded from v1:</strong> Claim submission. Any write-back to the PM system. Patient-level clinical data. Multi-user access control. Cloud sync.
+<strong>AI:</strong> <strong>Inappropriate.</strong> This is deterministic parsing and aggregation. Adding a model would introduce nondeterminism into numbers a practice will act on financially, plus an unnecessary PHI egress path.
+<strong>Why a spreadsheet won't do:</strong> The input is a nested EDI hierarchy (interchange → functional group → transaction → claim → service line → multiple adjustments per line), not a table. No practitioner is going to reshape that in Excel — which is exactly why the recommended practice is a hand-tallied log rather than a pivot table.
+<strong>Complexity:</strong> Medium. The parser is the hard part; the analytics are straightforward once normalized.
+<strong>Learning difficulty:</strong> Very low. Drop a folder, read a chart.
+<strong>Value:</strong> At MGMA's $25/rework and 44 denials/physician/month, a 3-provider practice is spending roughly <strong>$40,000/year</strong> on rework. Eliminating even one recurring root cause per quarter is measurable. The larger prize is the &gt;50% of denials never reworked at all.
+<strong>Risks and constraints:</strong> 835 files contain PHI (patient name, member ID, dates of service) — hence local-only. Payer-specific 835 quirks are the main technical risk; the existing free <code>edi-835-parser</code> states plainly that <em>"not all EDI 835 elements and segments are currently parsable and not all EDI codes are mapped"</em> (<a href="https://pypi.org/project/edi-835-parser">PyPI</a>). CARC/RARC lists are free to <em>read</em> at <a href="https://x12.org/codes">x12.org/codes</a> but X12 sells subscription feeds; the HL7 FHIR value sets republish the combined set in JSON as a practical free machine-readable route.
+<strong>Existing products:</strong> Waystar, Adonis, Janus, AKASA, Rivet, FinThrive. <strong>Every one is quote-only and enterprise-scoped except Rivet, which starts at $6,000/year</strong> (<a href="https://www.capterra.com/p/205843/Rivet/">Capterra</a>). MD Clarity's own competitive roundup states of ten underpayment vendors: <em>"None of the vendors have published pricing"</em>, with targets listed as hospitals, health systems, and IDNs (<a href="https://www.mdclarity.com/comparison/best-healthcare-underpayment-detection-software">MD Clarity</a>). OpenEMR ships 835 import and a report builder but has <strong>no built-in denial report</strong> — denial rate and clean-claim rate require manual tallying or export (<a href="https://www.capminds.com/blog/the-complete-openemr-billing-rcm-reporting-guide/">CapMinds OpenEMR guide</a>).
+<strong>Why still attractive:</strong> The price floor is the whole opportunity. Nothing in the commercial market serves a practice below ~$1–2M collections, and the input data is free, standardized, and already in the practice's possession.
+<strong>Paid customization potential:</strong> High. Specialty-specific denial taxonomies, payer-specific parsers, branded monthly client reports for billing companies that want to hand a physician-owner a scorecard.</p>
+<hr />
+<h3 id="o2-allowable-check-payment-variance-vs-medicare-and-contract">O2 — Allowable Check (payment variance vs. Medicare and contract)</h3>
+<p><strong>Working title:</strong> Allowable Check
+<strong>Intended user:</strong> Practice owner, billing-company owner, anyone in a contract negotiation.
+<strong>Problem solved:</strong> P2. Underpayment is undetected.
+<strong>Current workflow:</strong> None. Charges are set as a multiple of Medicare; payments are never systematically compared to what was contracted.
+<strong>Proposed workflow:</strong> Load 835s (shares O1's parser) → the tool computes the <strong>Medicare allowable</strong> for each CPT/modifier/place-of-service using the free CMS PFS Relative Value Files (PPRRVU + GPCI + conversion factor) for the practice's locality → user enters each payer's contracted terms as a simple percent-of-Medicare or uploads a fee schedule CSV → tool reports <strong>paid vs. expected</strong> by payer and CPT, flags variances above a threshold, ranks by recoverable dollars, and produces an appeal-ready worklist.
+<strong>Required inputs:</strong> 835 files; practice ZIP/locality; per-payer contract terms (a percentage or a CSV fee schedule). CMS files ship with the tool and update annually.
+<strong>Expected outputs:</strong> Variance report (by payer, by code, by dollars), a "top 20 recoverable claims" list, and a negotiation-support view — "here is what this payer actually pays you as a percent of Medicare, by code, over the last 12 months."
+<strong>Essential features:</strong> Correct PFS math (work/PE/MP RVUs × GPCI × conversion factor, with facility vs. non-facility differentiation and status indicators). Modifier handling for the common payment modifiers (26/TC, 50, 51, 59, 22). A clear "we could not price this code" bucket rather than silent zeros.
+<strong>Deliberately excluded:</strong> Full contract-language modeling (carve-outs, stop-loss, per-diems). Facility/institutional claims. Automated appeal submission.
+<strong>AI:</strong> <strong>Inappropriate for the calculation.</strong> Optionally useful for a stretch feature — extracting a fee schedule out of a PDF contract exhibit — but the arithmetic must be deterministic.
+<strong>Why a spreadsheet won't do:</strong> It partly <em>could</em>, for one payer and twenty codes — and that is the honest answer. What a spreadsheet cannot do is join thousands of remitted lines to a 10,000-row RVU file with locality adjustment and modifier logic, repeated monthly.
+<strong>Complexity:</strong> Medium. The PFS pricing logic has real edge cases.
+<strong>Learning difficulty:</strong> Low to moderate — the user must supply contract terms, which is the adoption friction.
+<strong>Value:</strong> Potentially the highest-dollar item in the catalog, and the least measured. Also the strongest negotiating artifact a small practice could own.
+<strong>Risks and constraints:</strong> <strong>CPT codes are AMA copyright.</strong> The CMS RVU files carry AMA CPT license terms and any distributed tool must be read carefully against them — ship the CMS files as a user-fetched download rather than bundling descriptors, and display codes without long descriptors. Confirm whether the PFS Look-Up Tool requires a CPT license click-through (I could not verify this from the CMS overview page). CY2026 has, for the first time, <strong>two statutory conversion factors — $33.57 for qualifying APM participants and $33.40 for others</strong>, up from $32.35 in 2025 — so the tool must ask which applies.
+<strong>Existing products:</strong> MD Clarity, Waystar Revenue Capture, Experian Contract Manager, FinThrive, Aroris. All quote-only, all hospital/large-group scoped, several gated behind being a customer of the same vendor's clearinghouse. Turquoise Health offers a genuinely free Medicare Pricer (CSV upload) but not payment-variance detection (<a href="https://turquoise.health/plans/providers">Turquoise</a>).
+<strong>Why still attractive:</strong> All inputs are free and public. The commercial category exists precisely because the money is real; nobody has built the version priced for three doctors.
+<strong>Paid customization:</strong> Very high — loading and maintaining a specific practice's real contracts is exactly the kind of billable, recurring service work the catalog's business model contemplates.</p>
+<hr />
+<h3 id="o3-filing-clock-timely-filing-and-appeal-deadline-tickler">O3 — Filing Clock (timely filing and appeal deadline tickler)</h3>
+<p><strong>Working title:</strong> Filing Clock
+<strong>Intended user:</strong> Biller at a small practice or billing company.
+<strong>Problem solved:</strong> P3. Deadlines tracked by nothing.
+<strong>Current workflow:</strong> Memory. The claim ages; the denial arrives; the money is gone and cannot be billed to the patient.
+<strong>Proposed workflow:</strong> Import the PM system's AR aging export (CSV — every system in §2 can produce one) → the tool joins each open claim to a <strong>user-maintained payer rule library</strong> (filing limit in days, what date it runs from — DOS vs. primary EOB date vs. discharge, appeal window, reconsideration window) → produces a work list sorted by <em>days remaining × dollars at risk</em>, with a red/amber view and a weekly digest. A parallel register tracks claims under appeal so they don't vanish from view when written off.
+<strong>Required inputs:</strong> AR aging CSV; the rule library (ships with a starter set of well-documented public limits, user edits it).
+<strong>Expected outputs:</strong> Ranked worklist CSV, a printable "expiring this week" sheet, and an appeal-pending register.
+<strong>Essential features:</strong> The date-basis distinction is the whole point — the documented failure was a 95-day limit running from <strong>date of service</strong> rather than primary adjudication. Explicit modeling of secondary-claim clocks. Rule library as a plain editable file (YAML or CSV) so the practice owns and can share it.
+<strong>Deliberately excluded:</strong> Any attempt to ship an authoritative national payer-limits database. Filing limits are contract-specific and change; shipping them as fact is a liability. Ship a <em>starter</em> file, clearly labeled "verify against your contract."
+<strong>AI:</strong> <strong>Inappropriate.</strong> Date arithmetic.
+<strong>Why a spreadsheet won't do:</strong> It nearly could — and a well-built spreadsheet is the honest competitor here. The tool wins on re-import (the aging report changes weekly), on the multi-basis date logic, and on not silently breaking when someone drags a formula.
+<strong>Complexity:</strong> Small. This is the fastest thing in the catalog to build.
+<strong>Learning difficulty:</strong> Very low.
+<strong>Value:</strong> Timely filing is ~7% of denials (MGMA) and is a <strong>100% loss</strong> — not recoverable from the payer, not billable to the patient, and not even cleanly classifiable as bad debt (a forum thread on whether it can be written off to bad debt ends with "ask your accountant"). For a practice denying 44 claims/physician/month at an average allowed of $120, 7% is roughly <strong>$4,400/year per physician</strong> of pure preventable loss.
+<strong>Risks:</strong> The rule library is only as good as the practice maintains it. Mis-stated limits could create false confidence — the UI must make provenance and last-verified date visible per rule.
+<strong>Existing products:</strong> None found at this price point. Vendor content on timely filing limits is abundant; tooling is absent.
+<strong>Paid customization:</strong> Moderate — loading a specific practice's actual contract limits.</p>
+<hr />
+<h3 id="o4-ack-triage-999-277ca-rejection-reader">O4 — Ack Triage (999 / 277CA rejection reader)</h3>
+<p><strong>Working title:</strong> Ack Triage
+<strong>Intended user:</strong> Biller.
+<strong>Problem solved:</strong> Claims rejected at the clearinghouse or payer front door never become claims, never enter AR, and are invisible unless someone opens a cryptic report.
+<strong>Current workflow:</strong> Log into the clearinghouse portal, read a rejection list written in EDI error language, guess at the fix. Practitioner evidence: <em>"All my claims are rejected for Insurance Type"</em> with no diagnostic path.
+<strong>Proposed workflow:</strong> Drop 999 and 277CA files in → tool renders each rejection as plain English with the offending loop/segment/element identified, groups rejections by cause, and produces a fix-list ranked by count and dollars.
+<strong>Required inputs:</strong> 999 and 277CA files (and the corresponding 837 for context).
+<strong>Expected outputs:</strong> Human-readable rejection worklist; a recurring-cause summary (the "you have submitted 41 claims this month with the same missing referring-provider NPI" view).
+<strong>Essential features:</strong> Mapping of X12 syntax error codes and Claim Status Category/Status codes to plain language; segment/element pointer resolution back into the original 837 so the user sees the actual bad value.
+<strong>Deliberately excluded:</strong> Fixing and resubmitting. Read-only diagnosis in v1.
+<strong>AI:</strong> <strong>Inappropriate.</strong> Deterministic code-list translation.
+<strong>Why a spreadsheet won't do:</strong> The input is EDI, not tabular.
+<strong>Complexity:</strong> Small to medium. Shares infrastructure with O1.
+<strong>Learning difficulty:</strong> Very low.
+<strong>Value:</strong> Front-door rejections are the cheapest denials to fix and the easiest to miss, because they never age into an AR report.
+<strong>Risks:</strong> Requires the practice to be able to download raw acknowledgment files — Office Ally offers SFTP and Claim.MD returns X12, so this is achievable but not universal.
+<strong>Existing products:</strong> Stedi's free browser-based EDI Inspector renders X12 generically (<a href="https://www.stedi.com/edi/inspector">Stedi</a>) but is a developer tool, not a biller worklist, and requires pasting data into a website — a non-starter for PHI.
+<strong>Paid customization:</strong> Low to moderate.</p>
+<hr />
+<h3 id="o5-offset-ledger-plb-recoupment-and-takeback-register">O5 — Offset Ledger (PLB recoupment and takeback register)</h3>
+<p><strong>Working title:</strong> Offset Ledger
+<strong>Intended user:</strong> Payment poster; billing-company owner reconciling a client's deposits.
+<strong>Problem solved:</strong> P5. Recoupments arrive in a PLB segment on an unrelated later remittance and get lost.
+<strong>Current workflow:</strong> Park it in an unallocated account and explain it to accounting — the literal advice given on a forum thread that went 18 months unanswered.
+<strong>Proposed workflow:</strong> Parse PLB segments across all 835s → build a register of every provider-level adjustment with its reason code, amount, and the referenced original claim → reconcile each 835's total payment against the sum of its claim payments plus PLB adjustments → flag: recoupments with no matching original claim, the same claim recouped twice, and recoupments taken beyond a user-configured lookback window.
+<strong>Required inputs:</strong> 835 files (shares O1's parser).
+<strong>Expected outputs:</strong> Offset register CSV; an exception list of suspicious recoupments; an EFT-to-835 reconciliation summary.
+<strong>Essential features:</strong> Full PLB reason-code handling (WO, FB, L6, CS, 72, and the rest); linkage from the PLB reference identifier back to the original claim across files.
+<strong>Deliberately excluded:</strong> Determining whether a recoupment is <em>legally</em> valid — that is state-law dependent and the practitioner evidence shows even experts disagree (180 days to 5 years). The tool surfaces facts and a configurable threshold; it does not opine.
+<strong>AI:</strong> <strong>Inappropriate.</strong>
+<strong>Why a spreadsheet won't do:</strong> Cross-file claim linkage.
+<strong>Complexity:</strong> Small, given O1's parser exists.
+<strong>Learning difficulty:</strong> Very low.
+<strong>Value:</strong> Direct cash. Duplicate and time-barred recoupments are pure recovery.
+<strong>Risks:</strong> Low. Read-only.
+<strong>Existing products:</strong> None found for small practices. This is the most differentiated concept in the list — I found no product, free or paid, that markets PLB-level offset reconciliation to a small practice.
+<strong>Paid customization:</strong> Moderate.</p>
+<hr />
+<h3 id="o6-appeal-kit-carc-keyed-appeal-packet-builder">O6 — Appeal Kit (CARC-keyed appeal packet builder)</h3>
+<p><strong>Working title:</strong> Appeal Kit
+<strong>Intended user:</strong> Biller writing appeals.
+<strong>Problem solved:</strong> P4 and P6. Appeal letters are rebuilt from scratch each time; four in five appealable denials are abandoned, and four in five pursued are won.
+<strong>Current workflow:</strong> <em>"I constantly modify our appeal letters based on the patient's policy vs. provider/hospital contracts, state vs. federal laws, CMS policy manuals, LCD, and NCDs."</em>
+<strong>Proposed workflow:</strong> Select a denied claim (from O1's output or a CSV) → the tool matches the CARC/RARC and payer to a <strong>template library</strong> → merges claim facts (dates, codes, amounts, provider, member ID) → produces a formatted letter plus an evidence checklist ("attach: op note, prior auth number, LCD L#####, proof of timely filing") → logs the appeal in a register with the deadline (feeding O3).
+<strong>Required inputs:</strong> Denied-claim detail; a template library; practice letterhead details.
+<strong>Expected outputs:</strong> DOCX or PDF appeal letter; evidence checklist; register entry.
+<strong>Essential features:</strong> Template library as plain editable files under version control, so a practice's institutional appeal knowledge stops living in one person's head (addresses P8 obliquely without pretending to be a knowledge-management platform). Merge-field validation so no letter goes out with an unfilled placeholder.
+<strong>AI:</strong> <strong>Optional and genuinely useful — the one place in this catalog where it earns its keep.</strong> Drafting the medical-necessity narrative paragraph from a pasted clinical note is exactly the interpretation-and-drafting task conventional code cannot do. It must be strictly opt-in, must default to off, must run against a local model or a BAA-covered endpoint, and must never be the source of any code, date, or dollar amount — those come from the deterministic merge. Without AI the tool is still fully useful; with AI it is faster.
+<strong>Why a spreadsheet won't do:</strong> Document generation.
+<strong>Complexity:</strong> Small to medium.
+<strong>Learning difficulty:</strong> Low.
+<strong>Value:</strong> The AMA/KFF asymmetry is the entire business case: <strong>80.7% of appealed MA prior-auth denials were overturned in 2024, and only 11.5% were appealed.</strong> Reducing the per-appeal cost changes the calculus for the 48% of physicians who cite staff time as the reason they don't appeal.
+<strong>Risks:</strong> Templates that assert law or policy incorrectly are a liability. Ship templates as user-owned content with clear disclaimers, not as legal advice. Any AI drafting path must be off by default and PHI-aware.
+<strong>Existing products:</strong> Appeal-letter generators exist inside enterprise RCM suites and as ad-hoc web tools; nothing free, local, and CARC-keyed that I could verify.
+<strong>Paid customization:</strong> <strong>Highest in the catalog.</strong> A practice's appeal template library, tuned to its specialty and its top five payers, is a recurring, defensible service engagement.</p>
+<hr />
+<h3 id="o7-preflight-nccimue-and-claim-data-validator">O7 — PreFlight (NCCI/MUE and claim-data validator)</h3>
+<p><strong>Working title:</strong> PreFlight
+<strong>Intended user:</strong> Biller/coder before submission.
+<strong>Problem solved:</strong> Preventable front-end denials — MGMA's poll attributes 29% of denials to demographic issues and 23% of the "other" bucket to coding issues such as wrong modifier and improper CPT bundling.
+<strong>Current workflow:</strong> Rely on whatever the PM system's scrubber catches, which varies enormously by vendor and tier.
+<strong>Proposed workflow:</strong> Load a charge batch (837P file or CSV export) → run CMS <strong>NCCI Procedure-to-Procedure edits</strong> and <strong>Medically Unlikely Edits</strong>, plus structural checks (missing referring NPI when required, invalid POS/CPT combinations, units exceeding MUE, diagnosis pointer sanity, subscriber vs. patient mismatch) → return a pass/flag list before the batch goes out.
+<strong>Required inputs:</strong> 837P or charge CSV; CMS NCCI files (free, quarterly ZIPs — the hospital PTP file alone contains 475,091 records).
+<strong>Expected outputs:</strong> Flagged-claim list with the specific edit violated and the modifier that would (or would not) override it.
+<strong>Essential features:</strong> Correct PTP modifier-indicator logic (0 = no override permitted, 1 = override allowed with an appropriate modifier, 9 = not applicable). Quarterly edit-file update workflow with a visible "your edits are from Q3 2026" banner.
+<strong>Deliberately excluded:</strong> Payer-proprietary edits (which are the majority of commercial denials and are not published). Do not claim to replace a clearinghouse scrubber.
+<strong>AI:</strong> <strong>Inappropriate.</strong> Rule tables.
+<strong>Why a spreadsheet won't do:</strong> Half a million edit pairs.
+<strong>Complexity:</strong> Medium.
+<strong>Learning difficulty:</strong> Low.
+<strong>Value:</strong> Prevention is worth roughly $25 per avoided rework plus the &gt;50% never-reworked loss.
+<strong>Risks:</strong> <strong>Some MUE values are confidential and not published by CMS</strong> — the tool must say so rather than implying full coverage. NCCI applies to Medicare and most Medicaid programs; commercial payers vary.
+<strong>Existing products:</strong> This is the most crowded concept in the list — every clearinghouse and PM scrubber does some version. <strong>The differentiator is narrow: it runs on a practice's own data, offline, before submission, at zero cost, and it explains <em>why</em>.</strong> I score it lower for differentiation accordingly and would build it only after O1/O2.
+<strong>Paid customization:</strong> Moderate — practice-specific and payer-specific rule additions.</p>
+<hr />
+<h3 id="o8-enrollment-gap-detector">O8 — Enrollment Gap Detector</h3>
+<p><strong>Working title:</strong> Enrollment Gap Detector
+<strong>Intended user:</strong> Practice administrator, billing-company owner onboarding a new provider.
+<strong>Problem solved:</strong> P7. Enrollment lapses generate months of denials before anyone connects the pattern to credentialing.
+<strong>Current workflow:</strong> Denials accumulate; someone eventually notices they all involve one provider or one payer; six months of AR is already at risk.
+<strong>Proposed workflow:</strong> Runs on top of O1's parsed 835 data. Maintains a small register of provider × payer enrollment records (effective date, PTAN/group ID, revalidation due, CAQH attestation date). Cross-references denials carrying enrollment-related CARC/RARC codes against that register and raises an alert the <em>first week</em> a pattern appears rather than the sixth month. Also flags upcoming revalidation and CAQH re-attestation dates.
+<strong>Required inputs:</strong> 835 data; a manually maintained enrollment register.
+<strong>Expected outputs:</strong> Alert list; a provider × payer enrollment matrix; upcoming-deadline view.
+<strong>Essential features:</strong> The CARC/RARC-to-enrollment-cause mapping is the intellectual content — knowing which codes actually indicate a provider-not-on-file, wrong-taxonomy, or terminated-contract problem.
+<strong>Deliberately excluded:</strong> Credentialing application workflow, CAQH integration, document collection. Those are a different (and crowded) product category.
+<strong>AI:</strong> <strong>Inappropriate.</strong>
+<strong>Why a spreadsheet won't do:</strong> The register alone is a spreadsheet; the value is the automatic join to denial data.
+<strong>Complexity:</strong> Small, given O1.
+<strong>Learning difficulty:</strong> Low, but requires the register be populated — real adoption friction.
+<strong>Value:</strong> MGMA cites (via Merritt Hawkins, which I did not independently verify) <strong>$10,122 per day</strong> of delayed provider onboarding. Even at a fraction of that, catching a six-month enrollment gap in week two is large.
+<strong>Risks:</strong> The CARC-to-cause mapping is inferential and needs practitioner validation before it can be trusted.
+<strong>Existing products:</strong> Credentialing platforms (CredyApp, Modio, Medallion, Verifiable) manage applications; none that I found detect enrollment problems from remittance data.
+<strong>Paid customization:</strong> Moderate.</p>
+<hr />
+<h3 id="o9-scrub-share-x12-de-identifier-and-synthetic-file-generator">O9 — Scrub &amp; Share (X12 de-identifier and synthetic file generator)</h3>
+<p><strong>Working title:</strong> Scrub &amp; Share
+<strong>Intended user:</strong> Billing-company owners, consultants, and any developer building the other eight tools.
+<strong>Problem solved:</strong> A practice cannot send a real 835 to a consultant, a vendor, a forum, or a developer for troubleshooting without transmitting PHI — so troubleshooting happens by description rather than by file. This is a direct, verifiable blocker: the forum evidence in §3 is full of people describing file problems in prose because they cannot show the file.
+<strong>Current workflow:</strong> Screenshots with redaction boxes, or nothing.
+<strong>Proposed workflow:</strong> Point at an 835/837 → the tool replaces the 18 HIPAA identifiers (names, member IDs, account numbers, dates shifted by a consistent per-patient offset, addresses, NPIs optionally) with realistic surrogates while preserving EDI structure, code values, and dollar amounts → outputs a shareable file plus a mapping key that stays local. A second mode generates synthetic 835s from scratch for testing.
+<strong>Required inputs:</strong> A real 835/837, or a specification for synthetic generation.
+<strong>Expected outputs:</strong> De-identified X12 file; local-only re-identification key; validation report confirming no residual identifiers.
+<strong>Essential features:</strong> Structure-preserving substitution (so the file still parses). Consistent date-shifting so day-count arithmetic survives. An explicit residual-identifier scan — the tool's credibility depends on being able to prove it worked.
+<strong>Deliberately excluded:</strong> Any claim of Safe Harbor or Expert Determination certification. The tool assists de-identification; it does not certify it, and the documentation must say so unambiguously.
+<strong>AI:</strong> <strong>Inappropriate</strong> for substitution (deterministic), though free-text remark fields are the one place where detection is genuinely hard and where a local NER model could add value in a later version.
+<strong>Why a spreadsheet won't do:</strong> EDI structure.
+<strong>Complexity:</strong> Small.
+<strong>Learning difficulty:</strong> Very low.
+<strong>Value:</strong> Indirect but structural — it unlocks the entire rest of the catalog's testing, support, and community-contribution loop. It is also the tool most likely to earn goodwill and inbound users among developers, which matters for an open-source distribution strategy.
+<strong>Risks:</strong> <strong>The most important risk in this list.</strong> A de-identification tool that misses an identifier creates the exact harm it claims to prevent. Conservative defaults, a loud residual scan, and honest documentation are mandatory.
+<strong>Existing products:</strong> Commercial EDI de-identification services exist; open-source PHI de-identification tools target clinical free text, not X12.
+<strong>Paid customization:</strong> Low. This is a credibility and ecosystem play, not a revenue play.</p>
+<hr />
+<h3 id="deliberately-not-recommended">Deliberately not recommended</h3>
+<ul>
+<li><strong>A biller-continuity / credential-vault application (P8).</strong> Real problem, wrong solution shape — this is a password manager plus a policy, and building a healthcare-specific one duplicates mature, inexpensive tools without meaningful advantage.</li>
+<li><strong>A prior-authorization submission portal.</strong> CMS-0057-F's Prior Authorization API arrives January 1, 2027 for government-sponsored plans; building a pre-standard workflow now means building something with an expiry date. Revisit after the APIs are live.</li>
+<li><strong>A general practice-management or EHR system.</strong> Explicitly excluded by the brief and by common sense; OpenEMR already occupies the free end.</li>
+<li><strong>An AI denial-prediction engine.</strong> The adoption data reads as hype: the 2025 Smarter Technologies / Modern Healthcare survey found 57% "implemented some AI in RCM" but <strong>49% dedicate under 10% of tech budget to it</strong> and <strong>34% cite insufficient ROI demonstration</strong> as a barrier (<a href="https://www.businesswire.com/news/home/20251007979563/en/Smarter-Technologies-and-Modern-Healthcare-Release-Inaugural-2025-AI-in-RCM-National-Survey-Results">BusinessWire</a>). Small practices need to <em>count</em> their denials before they need to predict them.</li>
+</ul>
+<hr />
+<h2 id="5-opportunity-ranking">5. Opportunity ranking</h2>
+<p>Each concept scored 1–5 on ten criteria. Maximum 50.</p>
+<p>| # | Concept | Severity | Frequency | ROI clarity | Ease of learning | Ease of impl. | Narrow scope | Differentiation | Customization | Test data | Evidence confidence | <strong>Total</strong> |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| <strong>O1</strong> | <strong>Remit Lens</strong> (835 denial analytics) | 5 | 5 | 5 | 4 | 4 | 4 | 4 | 5 | 4 | 5 | <strong>45</strong> |
+| <strong>O2</strong> | <strong>Allowable Check</strong> (payment variance) | 5 | 4 | 5 | 4 | 3 | 4 | 5 | 5 | 4 | 4 | <strong>43</strong> |
+| <strong>O3</strong> | <strong>Filing Clock</strong> (deadline tickler) | 4 | 5 | 4 | 5 | 5 | 5 | 4 | 4 | 3 | 4 | <strong>43</strong> |
+| <strong>O5</strong> | <strong>Offset Ledger</strong> (PLB recoupments) | 4 | 3 | 4 | 5 | 4 | 5 | 5 | 3 | 3 | 4 | <strong>40</strong> |
+| <strong>O4</strong> | <strong>Ack Triage</strong> (999/277CA reader) | 4 | 5 | 4 | 5 | 4 | 5 | 3 | 3 | 3 | 4 | <strong>40</strong> |
+| <strong>O6</strong> | <strong>Appeal Kit</strong> (CARC-keyed packets) | 4 | 4 | 4 | 4 | 4 | 3 | 3 | 5 | 3 | 4 | <strong>38</strong> |
+| <strong>O8</strong> | <strong>Enrollment Gap Detector</strong> | 4 | 3 | 4 | 5 | 4 | 4 | 4 | 4 | 3 | 3 | <strong>38</strong> |
+| <strong>O9</strong> | <strong>Scrub &amp; Share</strong> (X12 de-identifier) | 3 | 2 | 3 | 5 | 4 | 5 | 4 | 2 | 5 | 4 | <strong>37</strong> |
+| <strong>O7</strong> | <strong>PreFlight</strong> (NCCI/MUE validator) | 4 | 5 | 4 | 4 | 3 | 3 | 2 | 3 | 4 | 4 | <strong>36</strong> |</p>
+<h3 id="the-top-three">The top three</h3>
+<p><strong>O1 — Remit Lens (45).</strong> It scores highest because it is the only concept where every criterion is at least a 4. The problem is universal and continuous, the evidence is the strongest in the report (the <em>recommended best practice</em> in the professional literature is a hand-tallied spreadsheet, which is a direct admission that no tool exists at this price), the input is a standardized file the practice already owns, and the output is immediately legible to a physician-owner who has never thought about denial rates. Critically, <strong>it is the platform</strong>: O2, O5, O8 and half of O6 are features layered on its parser. Build order should follow that dependency.</p>
+<p><strong>O2 — Allowable Check (43).</strong> The highest-value concept and the highest-uncertainty one. It scores 5 on differentiation because the entire commercial category is explicitly hospital-scoped and quote-only, and 5 on customization because loading a practice's real contracts is exactly the recurring paid service the catalog's model wants. It loses points on implementation (PFS pricing has real edge cases, and the AMA CPT licensing question is unresolved) and on evidence confidence — I have strong evidence that small practices <em>don't check</em> for underpayment, and no evidence of how much money is actually there. That gap is the first thing validation must close.</p>
+<p><strong>O3 — Filing Clock (43).</strong> Ties O2 on total with an opposite risk profile: lower ceiling, near-certain floor. It is the smallest build in the catalog, the easiest to learn, the most narrowly scoped, and it addresses a loss that is 100% unrecoverable — you cannot appeal it, cannot bill the patient, and cannot cleanly write it off. Its only weakness is that a determined Excel user could approximate it, which is why it scores 4 rather than 5 on differentiation.</p>
+<h3 id="what-to-investigate-next">What to investigate next</h3>
+<p><strong>Build O1 first and O3 alongside it.</strong> O3 requires none of O1's infrastructure and can ship in a fraction of the time, which gives something to put in practitioners' hands while the 835 parser hardens. Then O5 and O4, which are cheap once the parser exists. <strong>O2 is the prize but should not be built until the validation in §6 confirms the dollars are real and the CPT licensing path is clear.</strong> O9 should be built early and quietly, because without it there is no safe way to collect the real-world test files the other eight tools need.</p>
+<hr />
+<h2 id="6-validation-plan">6. Validation plan</h2>
+<h3 id="questions-to-ask-practitioners">Questions to ask practitioners</h3>
+<p><strong>For O1 (Remit Lens):</strong>
+1. Can you download your raw 835 files today — from your clearinghouse, your PM system, or neither? How? (This is the single largest adoption gate. If the answer is "neither," the concept dies.)
+2. Do you know your denial rate this month? Where would you look? How long would it take?
+3. When you last found a recurring denial pattern, how did you find it, and how long had it been running?
+4. What would you do differently if a report told you Payer X denies CPT Y 40% of the time?</p>
+<p><strong>For O2 (Allowable Check):</strong>
+5. Do you have a written fee schedule from each of your top five payers? In what format — PDF, spreadsheet, portal-only, or "we never got one"?
+6. Have you ever found a payer paying below your contracted rate? How did you find it? What happened when you challenged it?
+7. If a tool told you a payer underpaid you $8,000 last year, what would you actually do with that?</p>
+<p><strong>For O3 (Filing Clock):</strong>
+8. How many timely-filing write-offs did you take last year? Do you know? Where is that number?
+9. When a secondary claim is involved, what date does the clock run from for your top payers — do you know per payer, or do you assume?
+10. How do you keep track of a claim once it's under appeal?</p>
+<p><strong>General:</strong>
+11. If a free tool ran entirely on your own computer and sent nothing anywhere, would that satisfy your privacy officer / your own comfort? What would you need to see to believe it?
+12. Who decides to install new software on your machines?</p>
+<h3 id="who-to-interview">Who to interview</h3>
+<ul>
+<li><strong>Owners of 1–15 person independent billing companies.</strong> The highest-information counterparty: they see many practices, they buy their own tools, and the Medical Billing Live forum shows they discuss tooling openly and in detail. Recruit there and through AAPC local chapters.</li>
+<li><strong>AAPC local chapter officers and CPC-credentialed billers</strong> at small practices — reachable through chapter meetings, which are explicitly designed for this.</li>
+<li><strong>Practice administrators at 3–8 provider single-specialty groups</strong> in high-denial specialties (behavioral health, physical therapy, DME-adjacent, allergy/immunology).</li>
+<li><strong>Clearinghouse support staff at Office Ally and Claim.MD</strong> — they know exactly which customers can and cannot retrieve raw files, and both companies serve the low end.</li>
+<li><strong>One healthcare privacy attorney or compliance consultant</strong>, on the single question of whether a locally-run, no-egress tool distributed free creates a Business Associate relationship. This is a gating legal question, not a nice-to-have.</li>
+</ul>
+<h3 id="search-terms-for-further-research">Search terms for further research</h3>
+<p><code>835 ERA download SFTP [clearinghouse name]</code> · <code>"denial rate" small practice benchmark specialty</code> · <code>"underpayment" appeal commercial payer small practice</code> · <code>CPT license "distribute" software CMS RVU file terms</code> · <code>X12 CARC list machine readable free bulk</code> · <code>"timely filing" appeal overturned "date of service" secondary</code> · <code>PLB segment recoupment posting [PM system]</code> · <code>NCCI MUE confidential values</code> · <code>CMS-0057-F Provider Access API provider implementation 2027</code> · <code>HIPAA business associate "locally installed" software no transmission</code></p>
+<h3 id="sample-files-and-data-needed-for-testing">Sample files and data needed for testing</h3>
+<ul>
+<li><strong>Real (de-identified) 835 files from at least six distinct payers</strong> — Medicare, a Medicare Advantage plan, a Blues plan, a national commercial, a state Medicaid, and a small regional plan. Payer-specific 835 variance is the primary technical risk and cannot be assessed from the specification.</li>
+<li><strong>Matching 837P files</strong> for the same claims, to test claim-to-remit linkage and compute true denial rates.</li>
+<li><strong>999 and 277CA acknowledgment files</strong> including real rejections.</li>
+<li><strong>At least two real (de-identified) payer fee schedules</strong> in whatever format practices actually receive them.</li>
+<li><strong>A real AR aging export</strong> from each of Tebra, AdvancedMD, eClinicalWorks, and Office Ally, to establish how much CSV normalization O3 requires.</li>
+<li><strong>CMS PPRRVU, GPCI, and NCCI quarterly files</strong> — free, but must be tested for parsing stability across releases.</li>
+</ul>
+<p>Building <strong>O9 first</strong> is the practical way to obtain the first four items legally.</p>
+<h3 id="a-prototype-that-would-validate-the-idea">A prototype that would validate the idea</h3>
+<p>A single Python script, run once against one practice's folder of 835s, that outputs one page: denial rate, top ten CARC codes by dollars, top five payer × CPT denial combinations, and total dollars denied. No UI, no installer, no configuration. Sit with three billers while it runs and watch what they point at. If they do not immediately name a claim they want to go work, the concept is wrong. This is a two-day build against the existing free <code>edi-835-parser</code> and it de-risks the entire catalog.</p>
+<p>For O2, the parallel prototype is narrower: take one payer, one practice, twelve months of 835s, and one contracted percent-of-Medicare, and answer a single question — <strong>is there any money there at all?</strong> If the variance is under a few hundred dollars a year, O2 is dead regardless of how good the software would be.</p>
+<h3 id="assumptions-most-likely-to-make-this-fail">Assumptions most likely to make this fail</h3>
+<ol>
+<li><strong>That small practices can obtain their own raw 835 files.</strong> If most are locked inside a PM system's auto-posting with no export path, the entire remittance-based half of the catalog collapses. Office Ally's SFTP and Claim.MD's X12 return prove it is <em>possible</em>; nothing proves it is <em>typical</em>.</li>
+<li><strong>That underpayment at 3-provider scale is materially large.</strong> Assumed, not demonstrated. Entirely untested.</li>
+<li><strong>That "free and local" overcomes healthcare's software-procurement caution.</strong> Practices are trained to ask for a BAA and a SOC 2 report reflexively. A gift with no vendor behind it may read as a risk rather than a bargain.</li>
+<li><strong>That the AMA's CPT copyright does not block distribution.</strong> Unresolved. If shipping code descriptors or the RVU files is restricted, O2 and O7 need redesign around user-supplied files.</li>
+<li><strong>That payer-specific 835 variation is manageable.</strong> The one mature free parser explicitly warns it does not handle everything. If each payer needs bespoke handling, the maintenance burden may exceed a solo developer's capacity.</li>
+<li><strong>That the person with the pain has the authority to install software.</strong> In a practice with outsourced IT and a locked-down workstation image, they may not.</li>
+</ol>
+<hr />
+<h2 id="7-cross-industry-patterns">7. Cross-industry patterns</h2>
+<p><strong>Pattern A — "The mandated transaction file is free, standardized, and nobody reads it."</strong>
+Where a regulator or industry body mandates a machine-readable exchange format, every party holds a rich structured dataset about its own business and almost nobody analyzes it, because the incumbent software presents only a rendered view. Here it is X12 835/837. <em>Transfers to:</em> <strong>Third-party truck dispatch services</strong> and <strong>Small motor carriers (5-50 trucks)</strong> (EDI 210/214/990 and factoring submission files), <strong>Independent pharmacy third-party reconciliation</strong> (NCPDP), <strong>Dental billing and insurance coordination</strong> (837D/835 with far lower electronic adoption — CAQH shows dental claim payment at only 33% electronic vs. 78% medical), <strong>Workers' compensation medical billing</strong> (state-mandated e-billing formats), and <strong>Environmental laboratories producing regulator EDD deliverables</strong>.</p>
+<p><strong>Pattern B — "A free public rate table turns 'did I get paid right?' into arithmetic."</strong>
+When an authoritative public schedule exists (CMS Physician Fee Schedule RVU/GPCI/conversion factor files), variance detection against actual payments becomes a deterministic join rather than a judgment call — and the commercial products that do this sell only to large organizations. <em>Transfers to:</em> <strong>Freight bill audit for small shippers</strong> (published tariffs and contracted rate tables), <strong>Premium audit and payroll classification consulting</strong> (NCCI class-code rate tables), <strong>Property tax consulting and assessment appeal firms</strong> (assessor rolls and comparable sales), <strong>Asphalt plant producer QC</strong> (DOT pay-factor schedules), and <strong>Ready-mix concrete producer QC</strong> (bid item unit prices).</p>
+<p><strong>Pattern C — "Deadline arithmetic from a user-owned rule library."</strong>
+Where the deadline varies by counterparty and by which event starts the clock, and where missing it is a total loss, a small tool that joins a work list to an editable rules file beats both memory and a spreadsheet. Ship a starter library, never claim it is authoritative. <em>Transfers to:</em> <strong>Property tax consulting and assessment appeal firms</strong> (county-by-county appeal windows), <strong>Multi-state charitable solicitation registration compliance</strong> (~40 state renewal calendars), <strong>Cargo claims and OS&amp;D handling</strong> (49 CFR 370 windows), <strong>Building permit expediting and code consulting</strong> (AHJ resubmittal clocks), and <strong>Small-firm litigation support</strong> (jurisdictional filing deadlines).</p>
+<p><strong>Pattern D — "Acknowledgment-file triage: the rejection that never became a record."</strong>
+Submissions rejected at the gate never enter the system of record, never age into a report, and are therefore invisible unless someone actively opens a cryptic acknowledgment. <em>Transfers to:</em> <strong>Environmental laboratories producing regulator EDD deliverables</strong> (EQuIS and state format validators), <strong>Building permit expediting</strong> (portal intake rejections), <strong>Fire alarm and sprinkler AHJ submittals</strong> (already in the catalog as the "checklist-as-data" pattern from the gatekeeper cycle — this is its acknowledgment-file sibling), and <strong>Freight factoring client onboarding desks</strong>.</p>
+<p><strong>Pattern E — "De-identify so you can ask for help."</strong>
+In any regulated market, the practitioner with a broken file cannot show the file to the person who could fix it. A structure-preserving redaction tool is low-glamour infrastructure that unlocks community troubleshooting, vendor support, and developer testing for every other tool in the market. <em>Transfers to:</em> <strong>Federally qualified health centers</strong>, <strong>Third-party claims administration (TPA)</strong>, <strong>Small defense suppliers navigating CMMC Level 2</strong> (CUI rather than PHI, same shape), <strong>Title abstracting</strong>, and <strong>Small CPA tax preparation practices</strong>.</p>
+<p><strong>Pattern F — "The appeal asymmetry."</strong>
+Where an automated adversary denies at scale and a manual practitioner appeals one at a time, the appeal win rate is high and the appeal rate is low — because per-appeal cost, not merit, determines whether anyone bothers. Any tool that drops the marginal cost of a well-formed challenge attacks a documented 5:1 gap. Here: 80.7% of appealed MA prior-auth denials overturned, 11.5% appealed. <em>Transfers to:</em> <strong>Independent property and casualty claims adjusting</strong>, <strong>Tenant-side lease audit</strong>, <strong>Property tax appeal firms</strong>, <strong>Cargo claims and OS&amp;D</strong>, and <strong>Premium audit disputes</strong>.</p>
+<hr />
+<h2 id="8-sources-and-confidence">8. Sources and confidence</h2>
+<h3 id="verified-findings-primary-or-authoritative-sources-directly-retrieved">Verified findings — primary or authoritative sources, directly retrieved</h3>
+<table>
+<thead>
+<tr>
+<th>Finding</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>47.4% of physicians in practices ≤10; 11.9% solo; 42.2% physician-owned (2024)</td>
+<td><a href="https://www.ama-assn.org/system/files/2024-prp-pp-characteristics.pdf">AMA Physician Practice Benchmark Survey / PRP 2024 (PDF)</a></td>
+</tr>
+<tr>
+<td>ACA marketplace: 19% in-network denial rate (range 3%–36%); 36% of denial reasons coded "Other," 25% "administrative"; fewer than 1% of denials appealed; 66% of appeals upheld</td>
+<td><a href="https://www.kff.org/patient-consumer-protections/claims-denials-and-appeals-in-aca-marketplace-plans-in-2024/">KFF, Claims Denials and Appeals in ACA Marketplace Plans in 2024</a></td>
+</tr>
+<tr>
+<td>Medicare Advantage: 52.8M PA determinations in 2024; 7.7% denied; 11.5% of denials appealed; 80.7% of appeals overturned; insurer denial range 4.2%–12.8%</td>
+<td><a href="https://www.kff.org/medicare/medicare-advantage-insurers-made-nearly-53-million-prior-authorization-determinations-in-2024/">KFF, MA Prior Authorization 2024</a></td>
+</tr>
+<tr>
+<td>62% of physicians don't appeal due to expected futility; 48% staff time; 12–13 hrs/week on PA; 35–40% have PA-dedicated staff</td>
+<td><a href="https://www.ama-assn.org/practice-management/prior-authorization/over-80-prior-auth-appeals-succeed-why-aren-t-there-more">AMA, "Over 80% of prior auth appeals succeed"</a></td>
+</tr>
+<tr>
+<td>~$25 to rework a denied claim; &gt;50% of denied claims never reworked; $13,200/physician/year example</td>
+<td><a href="https://www.aafp.org/fpm/2015/0300/p7">AAFP Family Practice Management, "The Cure for Claims Denials"</a></td>
+</tr>
+<tr>
+<td>~$25 rework; "as many as 60% of returned claims are never resubmitted"</td>
+<td><a href="https://www.physicianspractice.com/view/why-getting-claims-right-first-time-cheaper-reworking-them">Physicians Practice</a></td>
+</tr>
+<tr>
+<td>Denial sources: 42% prior auth, 29% demographic, 7% timely filing (Dec 2020, 619 responses)</td>
+<td><a href="https://www.mgma.com/mgma-stat/mgma-stats/finding-hidden-treasure-by-uncovering-and-fixing-the-sources-of-claim-denials">MGMA Stat</a></td>
+</tr>
+<tr>
+<td>45% of practice phone time on eligibility/prior auth (Mar 2026, 294 responses)</td>
+<td><a href="https://www.mgma.com/mgma-stat/phones-are-still-a-backlog-costing-medical-practices-time">MGMA Stat</a></td>
+</tr>
+<tr>
+<td>54% of practices report credentialing-related denials rising; approvals up to 100 days (Aug 2021, 425 responses)</td>
+<td><a href="https://www.mgma.com/mgma-stat/more-than-half-of-practices-report-credentialing-related-denials-on-the-rise-in-2021">MGMA Stat</a></td>
+</tr>
+<tr>
+<td>Per-transaction provider costs: PA $12.88/$8.93/$5.38 (24 min phone); eligibility $8.57/$4.46/$2.00; claim status $13.80/$5.24/$3.64 (25 min phone); remittance $5.67/$5.31/$2.95</td>
+<td><a href="https://www.caqh.org/hubfs/Index/2024%20Index%20Report/CAQH_IndexReport_2024_FINAL.pdf">CAQH Index 2024 (PDF)</a></td>
+</tr>
+<tr>
+<td>CAQH 2025: $20B remaining savings opportunity; ePA adoption 40%; claim status 81%; medical claim payment 78%; dental claim payment 33%</td>
+<td><a href="https://www.ajmc.com/view/caqh-index-finds-20-billion-in-cost-savings-opportunities">AJMC on CAQH Index</a></td>
+</tr>
+<tr>
+<td>Experian State of Claims 2025: 41% report ≥1 in 10 claims denied; 54% say denials increasing; only 14% use AI; 56% say current tech adequate (down from 77% in 2022)</td>
+<td><a href="https://www.experian.com/blogs/healthcare/healthcare-claim-denials-statistics-state-of-claims-report/">Experian Health</a></td>
+</tr>
+<tr>
+<td>Change Healthcare outage: 77% disrupted, 80% lost revenue, 39% could not obtain ERAs, 31% struggled with payroll (1,400 practices)</td>
+<td><a href="https://www.ama-assn.org/system/files/change-healthcare-survey-results.pdf">AMA survey (PDF)</a></td>
+</tr>
+<tr>
+<td>CMS-0057-F: 72hr/7-day PA decisions and specific denial reasons effective Jan 1 2026; four FHIR APIs effective Jan 1 2027; commercial/ERISA excluded</td>
+<td><a href="https://www.cms.gov/newsroom/fact-sheets/cms-interoperability-prior-authorization-final-rule-cms-0057-f">CMS fact sheet</a></td>
+</tr>
+<tr>
+<td>CMS PFS Relative Value Files free and machine-readable; CY2026 conversion factors $33.57 (QP) / $33.40 (non-QP) vs $32.35 in 2025</td>
+<td><a href="https://www.cms.gov/medicare/payment/fee-schedules/physician/pfs-relative-value-files">CMS PFS RVU files</a></td>
+</tr>
+<tr>
+<td>NCCI PTP and MUE files free, quarterly; one hospital PTP file = 475,091 records; some MUE values confidential</td>
+<td><a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-procedure-procedure-ptp-edits">CMS NCCI PTP</a> · <a href="https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits/medicare-ncci-medically-unlikely-edits-mues">CMS NCCI MUE</a></td>
+</tr>
+<tr>
+<td>CARC list free to view (139 codes, reviewed 8/1/2026); no free bulk download; FHIR value sets republish in JSON</td>
+<td><a href="https://x12.org/codes/claim-adjustment-reason-codes">X12 codes</a> · <a href="https://build.fhir.org/ig/HL7/carin-bb/ValueSet-X12ClaimAdjustmentReasonCodesCMSRemittanceAdviceRemarkCodes.json.html">HL7 CARIN BB value set</a></td>
+</tr>
+<tr>
+<td>Rivet published at $6,000/year; all other underpayment vendors quote-only and hospital-scoped</td>
+<td><a href="https://www.capterra.com/p/205843/Rivet/">Capterra</a> · <a href="https://www.mdclarity.com/comparison/best-healthcare-underpayment-detection-software">MD Clarity comparison</a></td>
+</tr>
+<tr>
+<td>Claim.MD published pricing $30/$60/$120 per month; Office Ally Practice Mate free with SFTP batch access</td>
+<td><a href="https://www.claim.md/pricing.html">Claim.MD pricing</a> · <a href="https://cms.officeally.com/pricing">Office Ally pricing</a></td>
+</tr>
+<tr>
+<td>eClinicalWorks $449–599/provider/month, RCM 2.9% of collections; AdvancedMD $429–1,070/provider/month, RCM 4–8%</td>
+<td><a href="https://www.eclinicalworks.com/products-services/pricing/">eCW pricing</a> · <a href="https://www.advancedmd.com/software-pricing/">AdvancedMD pricing</a></td>
+</tr>
+<tr>
+<td>OpenEMR imports/auto-posts 835 but has <strong>no built-in denial report</strong></td>
+<td><a href="https://www.capminds.com/blog/the-complete-openemr-billing-rcm-reporting-guide/">CapMinds OpenEMR billing/RCM guide</a></td>
+</tr>
+<tr>
+<td><code>edi-835-parser</code> (MIT, PyPI) states not all 835 segments parsable, not all codes mapped</td>
+<td><a href="https://pypi.org/project/edi-835-parser">PyPI</a></td>
+</tr>
+<tr>
+<td>pyx12 — maintained HIPAA X12 parser/validator, 4010 and 5010</td>
+<td><a href="https://github.com/azoner/pyx12">GitHub</a></td>
+</tr>
+<tr>
+<td>AI-in-RCM survey: 57% implemented, 49% under 10% of tech budget, 34% cite insufficient ROI</td>
+<td><a href="https://www.businesswire.com/news/home/20251007979563/en/Smarter-Technologies-and-Modern-Healthcare-Release-Inaugural-2025-AI-in-RCM-National-Survey-Results">BusinessWire</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="verified-practitioner-evidence-direct-quotes-from-named-professional-forums">Verified practitioner evidence — direct quotes from named professional forums</h3>
+<p>All quotations in §2 and §3 are from two sources, both populated by credentialed coders/billers and independent billing-service owners rather than vendor marketing:</p>
+<ul>
+<li><strong>AAPC discussion forums</strong> — <a href="https://www.aapc.com/discuss/">aapc.com/discuss</a> (auto-write-off of denials, CO-45/PR-45 confusion, eCW recoupment posting, Oscar takeback terminology, timely filing failure modes, Office Ally limitations, credentialing gaps, "Biller quit suddenly and has all insurance carrier logins," appeal-letter construction, EMRs not designed for coders)</li>
+<li><strong>Medical Billing Live member forum</strong> — <a href="https://www.medicalbillinglive.com/members/">medicalbillinglive.com</a> (Kareo/NueMD/HealthFusion auto-posting behavior, $499 ERA module, ERA reader question with no answers, AR recovery worked "off of reports," fee schedules set as multiples of Medicare, Horizon BCBS underpayment case, "no way to look that information up yourself," COB calculation methods, LogMeIn access costs, billing-company software cost structures)</li>
+<li><strong>AAPC Knowledge Center</strong> — <a href="https://www.aapc.com/blog/10034-streamline-your-denials-with-one-simple-spreadsheet/">the "one simple spreadsheet" denial tracking log</a>, the single most important artifact in this report: the profession's own published best practice for denial analysis is a hand-tallied grid.</li>
+</ul>
+<h3 id="strong-inferences-well-supported-but-not-directly-stated-by-a-practitioner">Strong inferences — well-supported but not directly stated by a practitioner</h3>
+<ul>
+<li><strong>That a local, no-egress tool is the correct architecture for this market.</strong> Follows from HIPAA structure and from the observed procurement caution, but I did not find a practitioner or attorney stating it.</li>
+<li><strong>That small billing companies are the best initial buyers.</strong> Follows from their tool-purchasing behavior and margin structure, visible in forum discussions of software cost per claim, but not directly asserted.</li>
+<li><strong>That O1's parser is the platform for O2, O5, and O8.</strong> An engineering judgment.</li>
+<li><strong>That CARC/RARC patterns can reliably detect enrollment gaps (O8).</strong> Plausible from the code semantics; unvalidated against real data.</li>
+<li><strong>That small practices can generally retrieve raw 835s.</strong> Proven possible (Office Ally SFTP, Claim.MD X12) but not proven typical. <strong>This is the highest-leverage unknown in the report.</strong></li>
+</ul>
+<h3 id="tentative-hypotheses-requiring-practitioner-validation">Tentative hypotheses requiring practitioner validation</h3>
+<ul>
+<li><strong>The magnitude of underpayment at 1–10 provider scale is unknown.</strong> O2's entire business case rests on it. No source I found measures it below hospital scale.</li>
+<li><strong>That a free tool will be adopted at all</strong> in a market conditioned to demand BAAs and vendor accountability.</li>
+<li><strong>That AMA CPT licensing permits distributing a tool that consumes CMS RVU files.</strong> Unresolved; could force redesign of O2 and O7.</li>
+<li><strong>The MGMA-cited $10,122/day onboarding-delay figure</strong> traces to a 2019 Merritt Hawkins survey that was not independently retrieved.</li>
+<li><strong>Whether payer-specific 835 variance is manageable by one developer.</strong> The single largest technical risk.</li>
+</ul>
+<h3 id="sources-i-could-not-reach">Sources I could not reach</h3>
+<p>Reddit (r/medicalbilling, r/CodingandBilling, r/therapists, r/physicaltherapy, r/privatepractice) returned 403 to all retrieval attempts, as did Indeed, G2, Capterra, TrustRadius, Physicians Practice's archive, and Becker's. <strong>The clinician-owner voice is therefore largely absent from this report</strong> — the practitioner evidence skews toward certified coders and independent billing-service owners. Forum threads from Medical Billing Live cluster 2008–2020, so software-specific complaints (NueMD, HealthFusion, Medisoft) may be dated; the MGMA, CAQH, KFF, AMA, and CMS data are 2021–2026. Several AAPC threads rendered only their opening post, so where I noted "no replies" it may mean replies were not retrieved.</p>
+<hr />
+<p><em>Report produced 2026-08-06 · claim <code>790d3912</code> · market: Medical billing and revenue cycle for small practices · angle: core-practitioner-workflow</em></p>
+</div>
+</body>
+</html>

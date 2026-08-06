@@ -80,16 +80,17 @@
       "report": "reports/2026-08-06-geotechnical-materials-testing-labs-narrow-subspecialty.md",
       "top_opportunity": "CureWatch - cure-room (ASTM C511) data-logger auditor that produces the required weekly evaluation record, detects excursions AND logger gaps, and maps each excursion window to the exact specimen population that was in the room at the time",
       "score": 48
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Medical billing and revenue cycle for small practices",
       "angle": "core-practitioner-workflow",
-      "claimed_at": "2026-08-06T18:48:46.278852+00:00",
-      "claim_id": "790d3912"
+      "date": "2026-08-06",
+      "report": "reports/2026-08-06-medical-billing-rcm-small-practices-core-practitioner-workflow.md",
+      "top_opportunity": "Remit Lens - local X12 835 remittance analytics for 1-10 provider practices: parses a folder of ERA files, joins CARC/RARC to plain language, and produces denial rate by payer/CPT/provider/reason with dollars at risk, replacing the profession's own published best practice of a hand-tallied spreadsheet",
+      "score": 45
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1350,6 +1351,72 @@
       "angle": "narrow-subspecialty",
       "source": "discovered",
       "note": "Daily production testing, control charts, and pay-factor disputes with DOTs; a distinct spec regime from vertical construction CMT."
+    },
+    {
+      "market": "Small third-party medical billing companies (RCM service bureaus, 1-25 staff)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Highest-information, highest-motivation buyer in healthcare RCM: margin is directly hours-per-claim, they see 5-30 practices' books at once, and they already buy their own tools."
+    },
+    {
+      "market": "Behavioral health and therapy practice billing (SimplePractice / TherapyNotes ecosystem)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Distinct unit/authorization arithmetic (fractional units, session limits, authorization draw-down) with documented vendor bugs; solo-clinician buyers on $49-99/mo platforms with no analytics."
+    },
+    {
+      "market": "Dental billing and insurance coordination",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "CAQH shows dental far behind medical on electronic adoption (33% claim payment vs 78%, 28% attachments); the same 835/837D data with a much larger manual residue."
+    },
+    {
+      "market": "Workers' compensation medical billing and state fee schedule compliance",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "State-mandated fee schedules and e-billing formats make payment-variance detection a pure public-data join, jurisdiction by jurisdiction."
+    },
+    {
+      "market": "Provider credentialing and payer enrollment services",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "MGMA: 54% of practices report credentialing-related denials rising, approvals up to 100 days; no 1-10 provider practice found using any tracking system."
+    },
+    {
+      "market": "Durable medical equipment (DME) suppliers - documentation and billing compliance",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Documentation requirements (WOPD, proof of delivery, medical necessity) are the denial driver; a checklist-as-data problem with audit exposure."
+    },
+    {
+      "market": "Independent pharmacy third-party reconciliation and PBM claw-backs",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "NCPDP transaction files plus DIR/effective-rate claw-backs; the pharmacy analogue of the 835 offset-reconciliation problem, at thousands of independent stores."
+    },
+    {
+      "market": "Ambulance and EMS billing",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Origin/destination modifiers, medical necessity, and heavy Medicare/Medicaid mix at small municipal and private services; distinct denial taxonomy."
+    },
+    {
+      "market": "Patient financial counseling and No Surprises Act Good Faith Estimate compliance",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "A dated federal requirement producing a document nobody has tooling for at small-practice scale; estimate-vs-actual reconciliation is arithmetic against a fee schedule."
+    },
+    {
+      "market": "Anesthesia and pain management billing",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Base units plus time units plus modifiers make payment verification a formula the PM system rarely checks; concentrated in small independent groups."
+    },
+    {
+      "market": "Medicare Advantage risk adjustment / HCC coding at small groups",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Annual recapture of chronic conditions is a documentation-completeness problem with direct revenue impact and growing audit exposure (RADV)."
     }
   ],
   "patterns": [
@@ -2035,6 +2102,86 @@
         "Title abstracting and independent title search contractors",
         "Estate planning and probate practice",
         "Multi-state charitable solicitation registration compliance"
+      ]
+    },
+    {
+      "pattern": "The mandated machine-readable transaction file is free, standardized, sitting in the practitioner's own possession - and nobody reads it, because the incumbent software shows only a rendered view",
+      "seen_in": [
+        "Medical billing and revenue cycle for small practices",
+        "Freight brokerage and dispatch operations"
+      ],
+      "transfers_to": [
+        "Third-party truck dispatch services (5-50 owner-operator trucks)",
+        "Small motor carriers (5-50 trucks) back office and settlement",
+        "Dental billing and insurance coordination",
+        "Independent pharmacy third-party reconciliation and PBM claw-backs",
+        "Workers' compensation medical billing and state fee schedule compliance",
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)"
+      ]
+    },
+    {
+      "pattern": "A free public rate table turns 'did I get paid the right amount?' from a judgment call into a deterministic join - and every commercial product that does this join sells only to large organizations",
+      "seen_in": [
+        "Medical billing and revenue cycle for small practices"
+      ],
+      "transfers_to": [
+        "Freight bill audit for small shippers",
+        "Premium audit and payroll classification consulting",
+        "Property tax consulting and assessment appeal firms",
+        "Asphalt plant producer quality control technicians",
+        "Ready-mix concrete producer quality control departments",
+        "Tenant-side lease audit and occupancy cost consulting"
+      ]
+    },
+    {
+      "pattern": "Deadline arithmetic from a user-owned, editable counterparty rule library - where the clock length AND the event that starts it both vary by counterparty, and missing it is a total unrecoverable loss",
+      "seen_in": [
+        "Medical billing and revenue cycle for small practices"
+      ],
+      "transfers_to": [
+        "Property tax consulting and assessment appeal firms",
+        "Multi-state charitable solicitation registration compliance",
+        "Cargo claims and OS&D handling at brokerages and small carriers",
+        "Building permit expediting and code consulting firms",
+        "Small-firm litigation support and paralegal work"
+      ]
+    },
+    {
+      "pattern": "Acknowledgment-file triage: the submission rejected at the gate never becomes a record, never ages into any report, and is invisible unless someone opens a cryptic machine-generated acknowledgment",
+      "seen_in": [
+        "Medical billing and revenue cycle for small practices"
+      ],
+      "transfers_to": [
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Building permit expediting and code consulting firms",
+        "Fire protection / fire sprinkler design and coordination subcontractors",
+        "Freight factoring companies and their client onboarding/verification desks"
+      ]
+    },
+    {
+      "pattern": "De-identify so you can ask for help: in regulated markets the practitioner with a broken file cannot show the file to the person who could fix it, which silently blocks community troubleshooting, vendor support, and all third-party tool development",
+      "seen_in": [
+        "Medical billing and revenue cycle for small practices"
+      ],
+      "transfers_to": [
+        "Federally qualified health centers - HRSA Section 330 grant compliance",
+        "Third-party claims administration (TPA) and self-insured program operations",
+        "Small defense suppliers navigating CMMC Level 2 compliance",
+        "Title abstracting and independent title search contractors",
+        "Small CPA tax preparation practices"
+      ]
+    },
+    {
+      "pattern": "The appeal asymmetry: an automated adversary denies at scale while a manual practitioner challenges one at a time, so per-challenge cost rather than merit decides whether anyone bothers - and the win rate on the few pursued is very high",
+      "seen_in": [
+        "Medical billing and revenue cycle for small practices"
+      ],
+      "transfers_to": [
+        "Independent property and casualty claims adjusting",
+        "Tenant-side lease audit and occupancy cost consulting",
+        "Property tax consulting and assessment appeal firms",
+        "Cargo claims and OS&D handling at brokerages and small carriers",
+        "Premium audit and payroll classification consulting"
       ]
     }
   ]
