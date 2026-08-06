@@ -98,7 +98,14 @@
       "score": 45
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Independent property and casualty claims adjusting",
+      "angle": "narrow-subspecialty",
+      "claimed_at": "2026-08-06T21:48:47Z",
+      "claim_id": "1c0329d5"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -469,12 +476,6 @@
     {
       "market": "Independent property and casualty claims adjusting",
       "angle": "core-practitioner-workflow",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Independent property and casualty claims adjusting",
-      "angle": "narrow-subspecialty",
       "source": "seed",
       "note": ""
     },
