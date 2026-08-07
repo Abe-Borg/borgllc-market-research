@@ -30,7 +30,7 @@
       "angle": "core-practitioner-workflow",
       "date": "2026-08-03",
       "report": "reports/2026-08-03-land-surveying-firms-core-practitioner-workflow.md",
-      "top_opportunity": "ALTA Table A Scope Configurator \u2014 client-facing 21-item scope selector producing a signed scope exhibit (2026 standard)",
+      "top_opportunity": "ALTA Table A Scope Configurator — client-facing 21-item scope selector producing a signed scope exhibit (2026 standard)",
       "score": 45
     },
     {
@@ -102,7 +102,7 @@
       "angle": "narrow-subspecialty",
       "date": "2026-08-06",
       "report": "reports/2026-08-06-independent-pc-claims-adjusting-narrow-subspecialty.md",
-      "top_opportunity": "Preflight \u2014 carrier-specific estimate and file QA checklist runner that catches kickback triggers before upload",
+      "top_opportunity": "Preflight — carrier-specific estimate and file QA checklist runner that catches kickback triggers before upload",
       "score": 43
     }
   ],
@@ -112,6 +112,12 @@
       "angle": "back-office",
       "claimed_at": "2026-08-07T14:43:45.709917+00:00",
       "claim_id": "6449b7ae"
+    },
+    {
+      "market": "Construction submittal, RFI, and closeout coordination (project engineer role)",
+      "angle": "handoffs-and-qa",
+      "claimed_at": "2026-08-07T14:48:17.109636+00:00",
+      "claim_id": "67123969"
     }
   ],
   "backlog": [
@@ -286,12 +292,6 @@
     {
       "market": "Construction submittal, RFI, and closeout coordination (project engineer role)",
       "angle": "back-office",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Construction submittal, RFI, and closeout coordination (project engineer role)",
-      "angle": "handoffs-and-qa",
       "source": "seed",
       "note": ""
     },
