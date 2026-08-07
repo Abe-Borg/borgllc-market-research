@@ -162,7 +162,14 @@
       "score": 45
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Estate planning and probate practice",
+      "angle": "narrow-subspecialty",
+      "claimed_at": "2026-08-07T21:48:44Z",
+      "claim_id": "a001b2b9"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -401,12 +408,6 @@
     {
       "market": "Estate planning and probate practice",
       "angle": "core-practitioner-workflow",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Estate planning and probate practice",
-      "angle": "narrow-subspecialty",
       "source": "seed",
       "note": ""
     },
