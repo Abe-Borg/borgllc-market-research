@@ -106,7 +106,14 @@
       "score": 43
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Small motor carriers (5-50 trucks) back office and settlement",
+      "angle": "back-office",
+      "claimed_at": "2026-08-07T14:43:45.709917+00:00",
+      "claim_id": "6449b7ae"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1163,12 +1170,6 @@
       "angle": "core-practitioner-workflow",
       "source": "discovered",
       "note": "The shipper-side mirror of broker AP audit; enterprise freight-audit vendors ignore companies below a few million in annual freight spend."
-    },
-    {
-      "market": "Small motor carriers (5-50 trucks) back office and settlement",
-      "angle": "back-office",
-      "source": "discovered",
-      "note": "Driver settlements, detention recovery, factoring submission and IFTA - the carrier-side counterpart to this report's broker-side findings."
     },
     {
       "market": "Intermodal drayage operators and port trucking",
