@@ -30,7 +30,7 @@
       "angle": "core-practitioner-workflow",
       "date": "2026-08-03",
       "report": "reports/2026-08-03-land-surveying-firms-core-practitioner-workflow.md",
-      "top_opportunity": "ALTA Table A Scope Configurator \u2014 client-facing 21-item scope selector producing a signed scope exhibit (2026 standard)",
+      "top_opportunity": "ALTA Table A Scope Configurator — client-facing 21-item scope selector producing a signed scope exhibit (2026 standard)",
       "score": 45
     },
     {
@@ -102,7 +102,7 @@
       "angle": "narrow-subspecialty",
       "date": "2026-08-06",
       "report": "reports/2026-08-06-independent-pc-claims-adjusting-narrow-subspecialty.md",
-      "top_opportunity": "Preflight \u2014 carrier-specific estimate and file QA checklist runner that catches kickback triggers before upload",
+      "top_opportunity": "Preflight — carrier-specific estimate and file QA checklist runner that catches kickback triggers before upload",
       "score": 43
     },
     {
@@ -130,7 +130,14 @@
       "score": 46
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Bookkeeping and outsourced accounting firms",
+      "angle": "core-practitioner-workflow",
+      "claimed_at": "2026-08-07T16:48:42+00:00",
+      "claim_id": "bad3e2ef"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -423,12 +430,6 @@
     {
       "market": "Title, escrow, and real estate closing",
       "angle": "back-office",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Bookkeeping and outsourced accounting firms",
-      "angle": "core-practitioner-workflow",
       "source": "seed",
       "note": ""
     },
