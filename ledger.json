@@ -30,7 +30,7 @@
       "angle": "core-practitioner-workflow",
       "date": "2026-08-03",
       "report": "reports/2026-08-03-land-surveying-firms-core-practitioner-workflow.md",
-      "top_opportunity": "ALTA Table A Scope Configurator — client-facing 21-item scope selector producing a signed scope exhibit (2026 standard)",
+      "top_opportunity": "ALTA Table A Scope Configurator \u2014 client-facing 21-item scope selector producing a signed scope exhibit (2026 standard)",
       "score": 45
     },
     {
@@ -102,7 +102,7 @@
       "angle": "narrow-subspecialty",
       "date": "2026-08-06",
       "report": "reports/2026-08-06-independent-pc-claims-adjusting-narrow-subspecialty.md",
-      "top_opportunity": "Preflight — carrier-specific estimate and file QA checklist runner that catches kickback triggers before upload",
+      "top_opportunity": "Preflight \u2014 carrier-specific estimate and file QA checklist runner that catches kickback triggers before upload",
       "score": 43
     },
     {
@@ -122,7 +122,14 @@
       "score": 45
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Small defense suppliers navigating CMMC Level 2 compliance",
+      "angle": "core-practitioner-workflow",
+      "claimed_at": "2026-08-07T15:48:57Z",
+      "claim_id": "031af032"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -963,12 +970,6 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "FDA QMSR incorporated ISO 13485:2016 into 21 CFR Part 820 effective 2 February 2026 - a fresh dated regulatory transition across every device contract manufacturer."
-    },
-    {
-      "market": "Small defense suppliers navigating CMMC Level 2 compliance",
-      "angle": "core-practitioner-workflow",
-      "source": "discovered",
-      "note": "Roughly 1,042 organizations certified against an estimated 76,598 needing certification; assessments $35k-$75k with reported eight-month waits."
     },
     {
       "market": "Small defense suppliers navigating CMMC Level 2 compliance",
