@@ -146,7 +146,14 @@
       "score": 45
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting",
+      "angle": "narrow-subspecialty",
+      "claimed_at": "2026-08-07T18:49:02Z",
+      "claim_id": "08d5b219"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -787,12 +794,6 @@
     {
       "market": "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting",
       "angle": "core-practitioner-workflow",
-      "source": "discovered",
-      "note": "Narrow regulated deliverable; one study found 68.4% of 5,082 elevation certificates contained at least one error, and FEMA retired its dedicated surveyor training course."
-    },
-    {
-      "market": "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting",
-      "angle": "narrow-subspecialty",
       "source": "discovered",
       "note": "Narrow regulated deliverable; one study found 68.4% of 5,082 elevation certificates contained at least one error, and FEMA retired its dedicated surveyor training course."
     },
