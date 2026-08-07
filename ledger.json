@@ -120,16 +120,17 @@
       "report": "reports/2026-08-07-construction-submittal-rfi-closeout-coordination-handoffs-and-qa.md",
       "top_opportunity": "SpecComply - Comply/Deviate/N-A compliance matrix generator: extracts the checkable requirements from one spec section into a fillable matrix the subcontractor completes and returns with the submittal, shifting the line-by-line spec comparison to the party holding the product data. Positioned where AI over-extraction costs a spurious checklist row rather than a false submittal obligation - the failure mode that kills register generators.",
       "score": 45
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Small defense suppliers navigating CMMC Level 2 compliance",
       "angle": "core-practitioner-workflow",
-      "claimed_at": "2026-08-07T15:48:57Z",
-      "claim_id": "031af032"
+      "date": "2026-08-07",
+      "report": "reports/2026-08-07-small-defense-suppliers-cmmc-level-2-core-practitioner-workflow.md",
+      "top_opportunity": "CUI Stamper - local batch marking tool for drawing and document packages that applies the CUI banner/footer to every sheet, the DoDI 5200.48 designation indicator block, and the correct DoDI 5230.24 Distribution Statement (B-F) from saved per-customer profiles, and flags mismarkings including the common category-in-the-banner error. Chosen first because its obligation flows from DoDI 5200.48 / 5230.24 / 32 CFR 2002 rather than from CMMC, so it is unaffected by the July 2026 Phase 2 suspension and the September 2026 reform task force.",
+      "score": 46
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1660,6 +1661,72 @@
       "angle": "back-office",
       "source": "discovered",
       "note": "The most underserved user found this cycle. Subs are structurally second-class guests in N client platforms (cannot close, distribute, or delete; never the Lead Company), hold the delivery risk without the controls, and pay for nothing but Bluebeam."
+    },
+    {
+      "market": "Registered Practitioner Organizations (RPO) and CMMC consultancies serving 10-200 person suppliers",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Consultants bill $360/hr and re-author near-identical SSP and evidence packages per client; templating and multi-client evidence management is an obvious tool gap."
+    },
+    {
+      "market": "C3PAO assessment operations and evidence sampling",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Peer-reviewed survey (arXiv 2602.09905): 71% of assessors report no C3PAO sampling methodology and 71% observed inconsistency between assessors; sampling-plan tooling is unbuilt."
+    },
+    {
+      "market": "MSPs and MSSPs serving the defense industrial base as External Service Providers",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "32 CFR 170.19 puts ESP services inside the client's assessment scope and requires a Customer Responsibility Matrix per client; MSPs author these ad hoc across dozens of clients."
+    },
+    {
+      "market": "CUI enclave and GCC High migration providers for small contractors",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "GCC High migrations run $25k-$200k over 3-6 months with a 300-seat Business Premium cap and AOS-G partner-only purchasing; scoping and cutover documentation is manual."
+    },
+    {
+      "market": "ITAR and EAR export compliance administration at small manufacturers",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Overlaps CUI marking (export-controlled information mandates a distribution statement) but adds licensing, deemed-export and screening obligations; same practitioner, adjacent rule set."
+    },
+    {
+      "market": "SBIR/STTR small business award administration and data rights marking",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Navy publishes a dedicated SBIR/STTR CUI marking resource; SBIR data rights legends plus CUI plus distribution statements land on a 5-15 person company with no contracts staff."
+    },
+    {
+      "market": "Prime contractor supplier cyber-compliance desks (supplier attestation collection)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Five primes issued supplier cyber mandates Feb-Dec 2025 routed through Exostar CCRA and registration forms; the collecting side has no way to verify a reported SPRS score."
+    },
+    {
+      "market": "Government contracts administration at small govcons (clause and mod review)",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "The Feb 2026 Revolutionary FAR Overhaul renumbered clauses by class deviation while acquisition.gov still publishes the old text; a 30-person shop's contracts admin cannot tell what binds."
+    },
+    {
+      "market": "FedRAMP 3PAO assessment and body-of-evidence production",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "FedRAMP Moderate equivalency demands 100% of 323 controls, zero POA&Ms, annual 3PAO assessment and a full body of evidence; the assembly of that package is manual."
+    },
+    {
+      "market": "DoD component CUI program management and marking quality assurance (government side)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "DODIG-2026-047 found 48% of a 300-document DoD sample lacked a designation indicator block; the marking-QA problem exists on the originator side too."
+    },
+    {
+      "market": "DCAA-audit-ready incurred cost and indirect rate submissions at small government contractors",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Adjacent obligation on the same 15-200 person companies, also spreadsheet-driven, also with retrospective-audit provenance requirements."
     }
   ],
   "patterns": [
@@ -2794,6 +2861,97 @@
         "HR and benefits administration in companies under 200 employees",
         "Community association (HOA and condominium) management back office",
         "Staffing and recruiting agency operations"
+      ]
+    },
+    {
+      "pattern": "Objective-decomposition compiler - a standard's headline requirements decompose into finer determination statements; practitioners author to the headline but are graded on the leaves, so the tool inverts the structure (one narrative plus one dated evidence pointer per leaf), rolls up using the standard's own conjunction rule, generates the conventional document, and reports uncovered leaves",
+      "seen_in": [
+        "Small defense suppliers navigating CMMC Level 2 compliance"
+      ],
+      "transfers_to": [
+        "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+        "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)",
+        "Calibration and metrology service providers / in-house gage management",
+        "Workforce development boards and WIOA subrecipients",
+        "Federally qualified health centers - HRSA Section 330 grant compliance"
+      ]
+    },
+    {
+      "pattern": "Weighted-score recorder with provenance and diff - a regulator publishes a scoring formula, the practitioner self-computes and submits, the submission carries legal weight, and nothing preserves why each input was what it was; the tool computes exactly per the published method, captures per-input provenance and date, hashes an immutable snapshot, and diffs against the prior submission",
+      "seen_in": [
+        "Small defense suppliers navigating CMMC Level 2 compliance"
+      ],
+      "transfers_to": [
+        "Premium audit and payroll classification consulting",
+        "Property tax consulting and assessment appeal firms",
+        "Medicare Advantage risk adjustment / HCC coding at small groups",
+        "Ready-mix concrete producer quality control departments",
+        "Asphalt plant producer quality control technicians"
+      ]
+    },
+    {
+      "pattern": "Batch document marking with jurisdiction rule packs - a document must carry a specific set of marks whose composition depends on jurisdiction, document type and customer, applied per page across large packages, following published rules that contradict each other between sources; the tool holds versioned rule packs, applies marks deterministically, validates, and logs",
+      "seen_in": [
+        "Small defense suppliers navigating CMMC Level 2 compliance"
+      ],
+      "transfers_to": [
+        "Independent specification writers and master-spec maintenance consultants",
+        "Delegated-design submittal coordination (specialty engineers of record for delegated components)",
+        "Structural engineering firms, 5-30 staff",
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Title abstracting and independent title search contractors"
+      ]
+    },
+    {
+      "pattern": "Incoming-deliverable defect register with auto-drafted notice to the originator - the practitioner receives deliverables from an upstream party obligated to prepare them correctly who frequently does not, bears the downstream consequence, and has a clocked duty to notify; the tool logs every receipt, assesses it against the expected form, and drafts the notice back upstream",
+      "seen_in": [
+        "Small defense suppliers navigating CMMC Level 2 compliance"
+      ],
+      "transfers_to": [
+        "Architectural construction administration (CA) desks at small A/E firms - submittal and RFI review",
+        "County recorder offices - document intake, indexing and rejection handling",
+        "Mortgage post-closing QC and trailing document vendors",
+        "Supplier quality engineering at OEMs and primes (receiving side of supplier deliverables)",
+        "Industrial distributors and metal service centers issuing material test reports"
+      ]
+    },
+    {
+      "pattern": "Evidence-freshness clock keyed to a control or task set - a recurring obligation set requires artifacts refreshed on a cadence the standard does not specify, so practitioners gather in a panic before inspection; the tool registers artifacts against the control set with owner, capture date, cadence and final-versus-draft status, and surfaces staleness continuously",
+      "seen_in": [
+        "Small defense suppliers navigating CMMC Level 2 compliance"
+      ],
+      "transfers_to": [
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
+        "Calibration and metrology service providers / in-house gage management",
+        "Radiation safety officer services and portable gauge licensee compliance",
+        "Consortium / third-party administrators (C-TPAs) for DOT drug and alcohol programs",
+        "Title 24 acceptance test technicians (ATT) and acceptance testing providers"
+      ]
+    },
+    {
+      "pattern": "Third-party responsibility-matrix register with document-insert generation - work is split with an outside party, a reviewer requires the split documented inside the practitioner's own deliverable rather than merely attached, and 'the vendor handles that' is insufficient; the tool registers each third party, captures a per-requirement responsibility split, flags unassigned requirements, and generates insert language for the primary document",
+      "seen_in": [
+        "Small defense suppliers navigating CMMC Level 2 compliance"
+      ],
+      "transfers_to": [
+        "Delegated-design submittal coordination (specialty engineers of record for delegated components)",
+        "Integrated facilities management providers serving corporate real estate",
+        "Fiscal sponsorship organizations administering awards for sponsored projects",
+        "Third-party claims administration (TPA) and self-insured program operations",
+        "Building automation and controls contractors (BAS integrators) for existing-building retrofits"
+      ]
+    },
+    {
+      "pattern": "Obligation decoder across a renumbered or forked regulatory regime - a regulation is renumbered, deviated from, or forked across jurisdictions so the published text no longer describes the live obligation; the tool extracts the citations actually present in the practitioner's document and maps them through a hand-maintained date-stamped rules table to plain-language obligations. Extraction by model, interpretation by table - never the reverse",
+      "seen_in": [
+        "Small defense suppliers navigating CMMC Level 2 compliance"
+      ],
+      "transfers_to": [
+        "Certificate-of-insurance compliance from the holder side (GCs, property managers, municipalities)",
+        "Energy code compliance consultants and Title 24 documentation shops",
+        "Multi-state charitable solicitation registration compliance",
+        "Building permit expediting and code consulting firms",
+        "Truck permitting and registration service agencies (IRP, IFTA, OS-OW, state permits)"
       ]
     }
   ]
