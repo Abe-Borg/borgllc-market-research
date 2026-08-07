@@ -170,7 +170,14 @@
       "score": 44
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
+      "angle": "core-practitioner-workflow",
+      "claimed_at": "2026-08-07T22:48:52Z",
+      "claim_id": "d1451557"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -747,12 +754,6 @@
       "angle": "core-practitioner-workflow",
       "source": "discovered",
       "note": "Concentration and enclosure-integrity calculations are spreadsheet-bound and high-stakes; growing fast with AI data center buildout."
-    },
-    {
-      "market": "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
-      "angle": "core-practitioner-workflow",
-      "source": "discovered",
-      "note": "Large recurring-service market with heavy deficiency-reporting and scheduling paperwork; different economics from installation work."
     },
     {
       "market": "Building permit expediting and code consulting firms",
