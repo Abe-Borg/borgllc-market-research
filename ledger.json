@@ -144,16 +144,17 @@
       "report": "reports/2026-08-07-staffing-recruiting-agency-operations-back-office.md",
       "top_opportunity": "RateGuard - true-burden bill rate and margin calculator for staffing quotes: models the burden components the standard markup calculator omits (FUTA/FICA ceiling-dependent front-loading on a high-churn temp book, per-state experience-rated SUTA, workers' comp by class code, MSP/VMS fee deducted from rather than added to the bill rate, ACA and local sick-leave loads, and cost of capital at actual rather than contractual DSO), and shows markup vs true margin side by side. Zero client data required, so it is the cheapest possible entry into the market and converts directly into paid per-agency rate-table customization.",
       "score": 45
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting",
       "angle": "narrow-subspecialty",
-      "claimed_at": "2026-08-07T18:49:02Z",
-      "claim_id": "08d5b219"
+      "date": "2026-08-07",
+      "report": "reports/2026-08-07-flood-zone-elevation-certificate-loma-lomr-consulting-narrow-subspecialty.md",
+      "top_opportunity": "ECheck - Elevation Certificate pre-submittal validator (AcroForm extraction + CRS cross-field consistency rules + FEMA NFHL registry join) for the surveyor who seals the certificate",
+      "score": 47
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1846,6 +1847,48 @@
       "angle": "narrow-subspecialty",
       "source": "discovered",
       "note": "Single documented audit adjustments of $80k and $620k; the defensible artifact is a code-assignment audit trail nobody currently keeps"
+    },
+    {
+      "market": "Community floodplain administration at small municipalities (permit-side floodplain compliance)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The reviewer counterpart to flood consultants; part-time FPAs at sub-50k-population communities review ECs against the CRS checklist with spreadsheets and folders, and carry the 90% document-accuracy threshold that drives a community-wide 5% insurance discount step."
+    },
+    {
+      "market": "Community floodplain administration at small municipalities (permit-side floodplain compliance)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "EC intake, correction-memo vs resubmittal triage, and permit-list reconciliation are explicitly documented in county training material and implemented nowhere."
+    },
+    {
+      "market": "State NFIP coordinating offices and CTP LOMR review partners",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Public-sector reviewers whose participation swings with grant funding - Kentucky took MT-2 review in-house Jan 2024 while Illinois paused its role for want of FY2025 CTP money; they author the pre-submittal expectations private firms fail."
+    },
+    {
+      "market": "Floodproofing and V-Zone design certification for non-residential and coastal buildings",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Dry Floodproofing Certificate was restructured alongside the 2022 EC into separate design/elevation/construction certifications; missing or incomplete V Zone certificates are a named EC rejection reason."
+    },
+    {
+      "market": "Flood mitigation grant administration (FMA/BRIC subapplicant benefit-cost analysis)",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "BCA workbooks, elevation data and documentation packages assembled by small communities and consultants; adjacent buyer to the FPA with dated federal deadlines."
+    },
+    {
+      "market": "Vertical datum modernization readiness services (NSRS 2022 / NAPGD2022 transition)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "NAD83 and NAVD88 are being retired for NATRF2022 and NAPGD2022 with tools following within five years; every archived elevation on every FEMA form is expressed in a datum on its way out and no coordinated FEMA migration guidance exists yet."
+    },
+    {
+      "market": "Lender flood zone determination vendors and Letter of Determination Review (LODR) disputes",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The mass-market one-page flood report business that consultants openly criticise as insufficiently rigorous; the LODR dispute path is a defined FEMA process with an evidence-assembly burden."
     }
   ],
   "patterns": [
@@ -3258,6 +3301,92 @@
         "Freight bill audit and payment for small shippers",
         "Retail shopping center management - percentage rent and gross sales reporting",
         "E-commerce accounting specialists (Amazon, Shopify, Stripe settlement reconciliation)"
+      ]
+    },
+    {
+      "pattern": "Regulator-form cross-field consistency validator: completeness checking is the low-value half; the expensive defects are contradictions between individually-populated fields (datum vs datum, diagram vs measurements, elevation vs threshold)",
+      "seen_in": [
+        "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting"
+      ],
+      "transfers_to": [
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
+        "Certified payroll and prevailing wage compliance service providers",
+        "Provider credentialing and payer enrollment services",
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)"
+      ]
+    },
+    {
+      "pattern": "Authoritative-registry join to validate self-reported identifiers: query the issuing authority's live API instead of format-checking what the user typed",
+      "seen_in": [
+        "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting"
+      ],
+      "transfers_to": [
+        "DOT compliance consultancies and third-party safety managers serving small fleets",
+        "Commercial trucking insurance agencies and fleet underwriting submissions",
+        "Title abstracting and independent title search contractors",
+        "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)",
+        "Calibration and metrology service providers / in-house gage management"
+      ]
+    },
+    {
+      "pattern": "Defect triage - reviewer-fixable versus originator-must-resubmit: the rule separating what a reviewer may correct at their desk from what forces a round trip to a sealing professional is the most operationally valuable knowledge in a review workflow and is almost never encoded",
+      "seen_in": [
+        "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting"
+      ],
+      "transfers_to": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)",
+        "Architectural construction administration (CA) desks at small A/E firms - submittal and RFI review",
+        "Supplier quality engineering at OEMs and primes (receiving side of supplier deliverables)",
+        "County recorder offices - document intake, indexing and rejection handling"
+      ]
+    },
+    {
+      "pattern": "Submittal-round economics: where the review cycle is long and fixed, total schedule reduces to round count, so a pre-submission completeness gate is worth more than improving the underlying work",
+      "seen_in": [
+        "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting"
+      ],
+      "transfers_to": [
+        "Federal construction contractors on NAVFAC / USACE projects - UFGS submittal register and eCMS compliance",
+        "Registered Practitioner Organizations (RPO) and CMMC consultancies serving 10-200 person suppliers",
+        "FedRAMP 3PAO assessment and body-of-evidence production",
+        "Building permit expediting and code consulting firms",
+        "Delegated-design submittal coordination (specialty engineers of record for delegated components)"
+      ]
+    },
+    {
+      "pattern": "Baseline-versus-proposed diff with a documented tolerance test: demonstrate the change against an established baseline within a stated numeric tolerance, and generate the exhibit from the source files rather than by hand",
+      "seen_in": [
+        "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting"
+      ],
+      "transfers_to": [
+        "Test, adjust and balance (TAB) contractors",
+        "Commissioning (Cx) providers for small and midsize buildings",
+        "Building automation and controls contractors (BAS integrators) for existing-building retrofits",
+        "Geodetic control and least-squares network adjustment specialists"
+      ]
+    },
+    {
+      "pattern": "Continuous audit-metric monitoring against a published threshold: where a program publishes a numeric compliance threshold audited episodically, computing it continuously turns a periodic surprise into a managed number",
+      "seen_in": [
+        "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting"
+      ],
+      "transfers_to": [
+        "Small defense suppliers navigating CMMC Level 2 compliance",
+        "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+        "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)",
+        "Nonprofit grant management and compliance"
+      ]
+    },
+    {
+      "pattern": "Form-edition and validity-window sentry: regulators issue dated form editions with hard transition dates, and using the wrong edition voids otherwise correct work - trivially automatable, almost never automated",
+      "seen_in": [
+        "Flood zone / FEMA elevation certificate and LOMA-LOMR consulting"
+      ],
+      "transfers_to": [
+        "Certified payroll and prevailing wage compliance service providers",
+        "Remote online notarization (RON) platform operators and RON-commissioned notaries",
+        "Provider credentialing and payer enrollment services",
+        "Truck permitting and registration service agencies (IRP, IFTA, OS-OW, state permits)"
       ]
     }
   ]
