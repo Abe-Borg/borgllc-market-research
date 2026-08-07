@@ -136,16 +136,17 @@
       "report": "reports/2026-08-07-bookkeeping-outsourced-accounting-firms-core-practitioner-workflow.md",
       "top_opportunity": "DriftWatch - prior-period drift detector: archives a dated trial-balance snapshot at each close and diffs prior periods at the next close, reporting every closed-period account balance that moved, with transaction-level attribution and a firm-wide roll-up. Answers the question no incumbent answers in this form: has anything I already delivered to the client changed? Insulated from Intuit's 2026 platform churn because it consumes exports, not a live API.",
       "score": 44
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Staffing and recruiting agency operations",
       "angle": "back-office",
-      "claimed_at": "2026-08-07T17:49:13Z",
-      "claim_id": "1c4aa110"
+      "date": "2026-08-07",
+      "report": "reports/2026-08-07-staffing-recruiting-agency-operations-back-office.md",
+      "top_opportunity": "RateGuard - true-burden bill rate and margin calculator for staffing quotes: models the burden components the standard markup calculator omits (FUTA/FICA ceiling-dependent front-loading on a high-churn temp book, per-state experience-rated SUTA, workers' comp by class code, MSP/VMS fee deducted from rather than added to the bill rate, ACA and local sick-leave loads, and cost of capital at actual rather than contractual DSO), and shows markup vs true margin side by side. Zero client data required, so it is the cheapest possible entry into the market and converts directly into paid per-agency rate-table customization.",
+      "score": 45
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1802,6 +1803,48 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "Work is prepared offshore and reviewed onshore; the review handoff and quality-gate artifact is entirely improvised"
+    },
+    {
+      "market": "Payrolling and Employer of Record (EOR) providers serving staffing agencies",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Absorb the entire W-2 burden for agencies that only recruit; carry the multi-state tax, WC and ACA load at scale with almost no internal headcount"
+    },
+    {
+      "market": "Healthcare credentialing service bureaus and Credentials Verification Organizations (CVOs)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The outsourced counterparty to the credentialing pain found here; primary-source verification is their entire product and it is still largely manual"
+    },
+    {
+      "market": "Staffing back-office service bureaus and payroll funders",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Advance Partners / Madison Resources / Signature type firms process hundreds of agencies' payroll, billing and collections on shared systems and see every failure mode; the 1-5% of invoice value they charge defines the buy-vs-build boundary"
+    },
+    {
+      "market": "MSP program offices and VMS supplier-management desks",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The receiving side of the reconciliation problem found here; they run supplier scorecards, rate-card governance and self-billing exception queues across dozens of suppliers"
+    },
+    {
+      "market": "Certified payroll and prevailing wage compliance service providers",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "WH-347 carries a DOL-published 55 minute per form burden estimate, criminal exposure under 18 USC 1001, and a fringe-per-hour calculation error that is both the most common and the most expensive; portal choice (LCPtracker, CA DIR eCPR) is dictated by the GC"
+    },
+    {
+      "market": "Home care and home health agency scheduling and EVV back office",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Same per-assignment credential and visit-verification loop as staffing but under state Medicaid EVV mandates, with far thinner margins and even weaker tooling"
+    },
+    {
+      "market": "Workers' compensation class code and premium audit defense for high-payroll-churn employers",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Single documented audit adjustments of $80k and $620k; the defensible artifact is a code-assignment audit trail nobody currently keeps"
     }
   ],
   "patterns": [
@@ -3122,6 +3165,98 @@
         "HR and benefits administration in companies under 200 employees",
         "Nonprofit grant management and compliance",
         "Small defense suppliers navigating CMMC Level 2 compliance"
+      ]
+    },
+    {
+      "pattern": "Pre-flight validation against a receiver's published rejection rules: a supplier-side checker run before submission converts a multi-day rejection loop into seconds, using acceptance rules the gatekeeper already publishes",
+      "seen_in": [
+        "Staffing and recruiting agency operations"
+      ],
+      "transfers_to": [
+        "Medical billing and revenue cycle for small practices",
+        "County recorder offices - document intake, indexing and rejection handling",
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Building permit expediting and code consulting firms",
+        "Federal construction contractors on NAVFAC / USACE projects - UFGS submittal register and eCMS compliance",
+        "Title abstracting and independent title search contractors"
+      ]
+    },
+    {
+      "pattern": "Per-assignment rather than per-employee compliance re-trigger: obligations that attach to each engagement instead of to the person or the year, which master-record systems systematically under-serve",
+      "seen_in": [
+        "Staffing and recruiting agency operations"
+      ],
+      "transfers_to": [
+        "Construction subcontractor project management at 15-150 employee specialty trades",
+        "Electrical or plumbing trade subcontractor field operations",
+        "DOT compliance consultancies and third-party safety managers serving small fleets",
+        "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+        "Home care and home health agency scheduling and EVV back office"
+      ]
+    },
+    {
+      "pattern": "True-cost quoting calculator that models the burden the incumbent markup calculator omits - ceiling-dependent, experience-rated, and deferred costs that make markup and margin diverge by double digits",
+      "seen_in": [
+        "Staffing and recruiting agency operations"
+      ],
+      "transfers_to": [
+        "Machine shop / job shop quoting and production control",
+        "General contractor preconstruction and estimating",
+        "Third-party truck dispatch services (5-50 owner-operator trucks)",
+        "Small motor carriers (5-50 trucks) back office and settlement",
+        "Marketing and creative agency account and production management"
+      ]
+    },
+    {
+      "pattern": "Two-source reconciliation where the counterparty owns the invoice (self-billing): the supplier's system becomes the challenger rather than the record, making reconciliation permanent rather than fixable by better data entry",
+      "seen_in": [
+        "Staffing and recruiting agency operations"
+      ],
+      "transfers_to": [
+        "Freight brokerage and dispatch operations",
+        "Medical billing and revenue cycle for small practices",
+        "Warehouse and 3PL fulfillment receiving/shipping document control",
+        "Industrial distributors and metal service centers issuing material test reports",
+        "Submetering and utility expense recovery service providers"
+      ]
+    },
+    {
+      "pattern": "Expiry-and-eligibility guard: the credential x customer-requirement-profile x scheduled-future-date three-way join that spreadsheets cannot express, because a spreadsheet only evaluates expiry against today",
+      "seen_in": [
+        "Staffing and recruiting agency operations"
+      ],
+      "transfers_to": [
+        "Welding inspection (AWS CWI) and NDT service providers under ASTM E543 / SNT-TC-1A",
+        "Calibration and metrology service providers / in-house gage management",
+        "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)",
+        "DOT compliance consultancies and third-party safety managers serving small fleets",
+        "Radiation safety officer services and portable gauge licensee compliance",
+        "Title 24 acceptance test technicians (ATT) and acceptance testing providers"
+      ]
+    },
+    {
+      "pattern": "Jurisdictional document generator driven by a maintained rules table: deterministic assembly of the correct forms, in the correct language, for the correct jurisdiction, with change detection and an issuance log",
+      "seen_in": [
+        "Staffing and recruiting agency operations"
+      ],
+      "transfers_to": [
+        "HR and benefits administration in companies under 200 employees",
+        "Payroll service bureaus and small independent payroll providers",
+        "Community association (HOA and condominium) management back office",
+        "Multi-state charitable solicitation registration compliance",
+        "Estate planning and probate practice"
+      ]
+    },
+    {
+      "pattern": "Expected-deduction netting: where a counterparty routinely remits net of contractual deductions, aging at gross makes every payment look like a dispute; modelling the expected deduction separates structural short-pays from real ones",
+      "seen_in": [
+        "Staffing and recruiting agency operations"
+      ],
+      "transfers_to": [
+        "Independent pharmacy third-party reconciliation and PBM claw-backs",
+        "Freight bill audit and payment for small shippers",
+        "Retail shopping center management - percentage rent and gross sales reporting",
+        "E-commerce accounting specialists (Amazon, Shopify, Stripe settlement reconciliation)"
       ]
     }
   ]
