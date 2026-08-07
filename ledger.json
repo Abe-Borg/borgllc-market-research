@@ -30,7 +30,7 @@
       "angle": "core-practitioner-workflow",
       "date": "2026-08-03",
       "report": "reports/2026-08-03-land-surveying-firms-core-practitioner-workflow.md",
-      "top_opportunity": "ALTA Table A Scope Configurator — client-facing 21-item scope selector producing a signed scope exhibit (2026 standard)",
+      "top_opportunity": "ALTA Table A Scope Configurator \u2014 client-facing 21-item scope selector producing a signed scope exhibit (2026 standard)",
       "score": 45
     },
     {
@@ -102,17 +102,19 @@
       "angle": "narrow-subspecialty",
       "date": "2026-08-06",
       "report": "reports/2026-08-06-independent-pc-claims-adjusting-narrow-subspecialty.md",
-      "top_opportunity": "Preflight — carrier-specific estimate and file QA checklist runner that catches kickback triggers before upload",
+      "top_opportunity": "Preflight \u2014 carrier-specific estimate and file QA checklist runner that catches kickback triggers before upload",
       "score": 43
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Small motor carriers (5-50 trucks) back office and settlement",
       "angle": "back-office",
-      "claimed_at": "2026-08-07T14:43:45.709917+00:00",
-      "claim_id": "6449b7ae"
-    },
+      "date": "2026-08-07",
+      "report": "reports/2026-08-07-small-motor-carriers-back-office-settlement-back-office.md",
+      "top_opportunity": "QueryGuard - FMCSA Clearinghouse & driver-qualification obligation ledger with evidence attachment",
+      "score": 45
+    }
+  ],
+  "claimed": [
     {
       "market": "Construction submittal, RFI, and closeout coordination (project engineer role)",
       "angle": "handoffs-and-qa",
@@ -1548,6 +1550,42 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "Offshore and domestic desks writing estimates from adjuster photo/scope packets; the intake packet quality problem is acute and well defined."
+    },
+    {
+      "market": "DOT compliance consultancies and third-party safety managers serving small fleets",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Fragmented vendor market ($49/driver/mo managed services, $300/mo category average) serving 69,500 small carriers; the consultants themselves run on spreadsheets across dozens of client carriers."
+    },
+    {
+      "market": "Consortium / third-party administrators (C-TPAs) for DOT drug and alcohol programs",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Carrier retains the evidentiary burden while the C-TPA does the draw; random-selection evidence, quarterly spread, and MIS roll-ups are a documented audit-finding cluster."
+    },
+    {
+      "market": "Truck permitting and registration service agencies (IRP, IFTA, OS-OW, state permits)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "One mileage dataset drives 5-6 filing cadences (IFTA, IRP, NY HUT, KYU, NM WDT, OR monthly) priced as separate SKUs; agencies do it by hand for many carriers."
+    },
+    {
+      "market": "Oversize/overweight permitting and heavy-haul route survey coordination",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Per-state permit rules, bridge analyses and escort requirements change constantly; heavy-haul back offices reconcile them manually per move."
+    },
+    {
+      "market": "Commercial trucking insurance agencies and fleet underwriting submissions",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "92% of trucking underwriters reportedly price off CSA/SMS data; submission packets assemble loss runs, MVRs, and safety scores by hand at small agencies."
+    },
+    {
+      "market": "Independent heavy-truck repair shops serving outside fleet customers",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Estimate-to-invoice, warranty claim, and DOT annual inspection documentation flow; repair and maintenance costs rose 8.6% in 2025, the fastest-growing carrier cost line."
     }
   ],
   "patterns": [
@@ -2469,6 +2507,85 @@
         "UAS / drone mapping and reality-capture service providers",
         "Mobile notary and loan signing service operators",
         "Geotechnical drilling subcontractors and rig operations"
+      ]
+    },
+    {
+      "pattern": "Regulatory obligation ledger with mandatory evidence attachment - tracks 'never collected' separately from 'expired', each item carrying its citation, recurrence rule, retention clock and proving document",
+      "seen_in": [
+        "Small motor carriers (5-50 trucks) back office and settlement"
+      ],
+      "transfers_to": [
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
+        "Radiation safety officer services and portable gauge licensee compliance",
+        "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)",
+        "Provider credentialing and payer enrollment services",
+        "Calibration and metrology service providers / in-house gage management",
+        "Multi-state charitable solicitation registration compliance"
+      ]
+    },
+    {
+      "pattern": "Pre-submission linter modeled on the reviewing authority's own selection or rejection logic - criticizes a finished deliverable before it is filed rather than after it is rejected",
+      "seen_in": [
+        "Small motor carriers (5-50 trucks) back office and settlement"
+      ],
+      "transfers_to": [
+        "Small third-party medical billing companies (RCM service bureaus, 1-25 staff)",
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Premium audit and payroll classification consulting",
+        "Property tax consulting and assessment appeal firms",
+        "Building permit expediting and code consulting firms"
+      ]
+    },
+    {
+      "pattern": "Community-maintained vendor-export normalization layer - the per-counterparty column mapping is the shared asset, versioned and contributed back rather than re-derived per customer",
+      "seen_in": [
+        "Small motor carriers (5-50 trucks) back office and settlement"
+      ],
+      "transfers_to": [
+        "Independent pharmacy third-party reconciliation and PBM claw-backs",
+        "Freight bill audit and payment for small shippers",
+        "Submetering and utility expense recovery service providers",
+        "Industrial distributors and metal service centers issuing material test reports",
+        "Outsourced real-estate accounting and lease administration service providers (CRE back-office BPO)"
+      ]
+    },
+    {
+      "pattern": "Compliance-grade source archive held independently of the vendor cloud that produced it - the regulator wants the raw record for years, the vendor retains on its own schedule, and the practitioner churns vendors",
+      "seen_in": [
+        "Small motor carriers (5-50 trucks) back office and settlement"
+      ],
+      "transfers_to": [
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Geotechnical and environmental consulting / materials testing labs",
+        "Title abstracting and independent title search contractors",
+        "UAS / drone mapping and reality-capture service providers",
+        "Deep foundation testing specialists (CSL, PIT, PDA/dynamic load testing)"
+      ]
+    },
+    {
+      "pattern": "Effective-dated rate or schedule table driving a recurring computed pass-through - a published index updates on a cadence, a per-counterparty table converts it to a charge, and the table goes stale silently",
+      "seen_in": [
+        "Small motor carriers (5-50 trucks) back office and settlement"
+      ],
+      "transfers_to": [
+        "Workers' compensation medical billing and state fee schedule compliance",
+        "Retail shopping center management - percentage rent and gross sales reporting",
+        "Submetering and utility expense recovery service providers",
+        "Employee benefits brokerage and benefits administration",
+        "Tenant-side lease audit and occupancy cost consulting"
+      ]
+    },
+    {
+      "pattern": "The recurring statement as a regulated legal artifact rather than an accounting output - itemization, backup-document linkage and interest computation mandated by regulation and litigated when wrong",
+      "seen_in": [
+        "Small motor carriers (5-50 trucks) back office and settlement"
+      ],
+      "transfers_to": [
+        "Real estate brokerage trust and escrow account compliance administration",
+        "Independent escrow companies (California DFPI-licensed, non-title)",
+        "Third-party claims administration (TPA) and self-insured program operations",
+        "HOA and condominium management companies - estoppel and demand response desk",
+        "1031 exchange qualified intermediaries"
       ]
     }
   ]
