@@ -160,16 +160,17 @@
       "report": "reports/2026-08-07-hr-benefits-administration-under-200-back-office.md",
       "top_opportunity": "I9Audit - Form I-9 self-audit and substantive-error scanner keyed to ICE's unannounced March 16, 2026 reclassification, which moved a dozen categories of ordinary clerical omission (missing employer title, missing first date of employment, missing DOB) from curable technical failures to immediately fineable substantive violations at $288-$2,861 each, retroactively across the existing file, with no 10-day cure window and a 3-business-day NOI response deadline. Local-only, file-in/file-out, ruleset-as-product.",
       "score": 45
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Estate planning and probate practice",
       "angle": "narrow-subspecialty",
-      "claimed_at": "2026-08-07T21:48:44Z",
-      "claim_id": "a001b2b9"
+      "date": "2026-08-07",
+      "report": "reports/2026-08-07-estate-planning-probate-practice-narrow-subspecialty.md",
+      "top_opportunity": "ScheduleForge - bank/brokerage activity to statutory fiduciary accounting schedules with a provable charges-equals-credits balance",
+      "score": 44
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1940,6 +1941,54 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "Already in backlog under core-practitioner-workflow; the handoffs angle is distinct and richer - deduction-holiday configuration, the 2026 27th-pay-period problem, garnishment intake, and the deduction-vs-carrier-premium seam all live at the bureau/client boundary."
+    },
+    {
+      "market": "Licensed professional fiduciaries and private trustees",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Non-family fiduciaries carrying many estates at once; highest-volume producers of court accountings and the most software-receptive buyer found in this cycle."
+    },
+    {
+      "market": "Conservatorship and guardianship accountings (court-supervised GC-400 series)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Same statutory accounting machinery as decedents' estates but recurring annually for years per ward; larger lifetime volume per matter."
+    },
+    {
+      "market": "Legal document preparers and registered LDAs handling probate filings",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Non-attorney filers who absorb the form-assembly and examiner-note cure loop for self-represented petitioners; price-sensitive and tooling-starved."
+    },
+    {
+      "market": "Elder law and Medicaid planning practices (spend-down and estate recovery)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Asset-tracing and eligibility documentation with hard lookback arithmetic; adjacent buyer to the probate administration desk."
+    },
+    {
+      "market": "Probate real estate specialists and estate personal-property liquidators",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Court-confirmation sales, overbid procedure and inventory-to-proceeds reconciliation feed directly into the accounting schedules."
+    },
+    {
+      "market": "Small bank and trust company trust operations departments",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Principal/income allocation, fee calculation and statement production at institutions too small for a full trust accounting platform."
+    },
+    {
+      "market": "Court probate examiner and clerk offices (public-sector reviewer side)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The gatekeeper that publishes the defect corpus; a reviewer-side triage tool is the mirror image of the filer-side opportunity."
+    },
+    {
+      "market": "Fiduciary and forensic accountants producing court accountings for litigation",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Reconstruct accountings from incomplete records for surcharge disputes; buys precision tooling and has real budget."
     }
   ],
   "patterns": [
@@ -3522,6 +3571,77 @@
         "Small third-party medical billing companies (RCM service bureaus, 1-25 staff)",
         "Freight factoring companies and their client onboarding/verification desks",
         "Outsourced real-estate accounting and lease administration service providers (CRE back-office BPO)"
+      ]
+    },
+    {
+      "pattern": "Ledger-to-statutory-schedule classifier with a mandatory balancing identity: classify raw transactions into prescribed statutory categories and prove the totals tie by the rule the statute itself states (classification may be assisted; arithmetic must be deterministic)",
+      "seen_in": [
+        "Estate planning and probate practice"
+      ],
+      "transfers_to": [
+        "Trust accounting and IOLTA three-way reconciliation for law firms",
+        "Community association (HOA and condominium) management back office",
+        "Church, school and small-nonprofit bookkeeping (fund and restricted-fund accounting)",
+        "Real estate brokerage trust and escrow account compliance administration"
+      ]
+    },
+    {
+      "pattern": "Mine the gatekeeper's own published rejection notices to build a pre-filing defect checklist, inverting a reactive cure loop into a preventive one (the reviewer publishes its defects in unstructured prose; that prose is a free labeled dataset)",
+      "seen_in": [
+        "Estate planning and probate practice"
+      ],
+      "transfers_to": [
+        "County recorder offices - document intake, indexing and rejection handling",
+        "Building permit expediting and code consulting firms",
+        "County surveyor and municipal plan-check offices (public sector reviewers)",
+        "Mortgage post-closing QC and trailing document vendors"
+      ]
+    },
+    {
+      "pattern": "All-or-nothing signature ledger: a close is gated on acknowledgments from every counterparty, so visibility into who has NOT signed is the entire value",
+      "seen_in": [
+        "Estate planning and probate practice"
+      ],
+      "transfers_to": [
+        "Prime contractor supplier cyber-compliance desks (supplier attestation collection)",
+        "Certified payroll and prevailing wage compliance service providers",
+        "Mortgage post-closing QC and trailing document vendors",
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
+      ]
+    },
+    {
+      "pattern": "Election-window guard: a decision cheap to make now and catastrophic to miss, with a long but finite statutory cure period and no forcing event; the deliverable is the dated memo documenting the recommendation, not the filing",
+      "seen_in": [
+        "Estate planning and probate practice"
+      ],
+      "transfers_to": [
+        "SBIR/STTR small business award administration and data rights marking",
+        "Unclaimed property and escheat compliance service providers",
+        "Property tax consulting and assessment appeal firms",
+        "Premium audit and payroll classification consulting"
+      ]
+    },
+    {
+      "pattern": "Diligence log as the deliverable: where the obligation is to search reasonably, the defensible artifact is a timestamped record of what was searched - including the searches that found nothing",
+      "seen_in": [
+        "Estate planning and probate practice"
+      ],
+      "transfers_to": [
+        "Employer immigration compliance and I-9 audit consultancies",
+        "C3PAO assessment operations and evidence sampling",
+        "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)",
+        "Forensic engineering firms performing cause-and-origin investigations for insurers"
+      ]
+    },
+    {
+      "pattern": "Restate a compliance artifact in plain language under a structural no-new-numbers guarantee: AI drafts prose, figures are injected from computed values, the generator is architecturally forbidden from producing a number",
+      "seen_in": [
+        "Estate planning and probate practice"
+      ],
+      "transfers_to": [
+        "Patient financial counseling and No Surprises Act Good Faith Estimate compliance",
+        "Retirement plan third-party administrators (TPAs) for small 401(k) plans",
+        "Nonprofit grant management and compliance"
       ]
     }
   ]
