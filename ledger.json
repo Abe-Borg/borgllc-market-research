@@ -128,16 +128,17 @@
       "report": "reports/2026-08-07-small-defense-suppliers-cmmc-level-2-core-practitioner-workflow.md",
       "top_opportunity": "CUI Stamper - local batch marking tool for drawing and document packages that applies the CUI banner/footer to every sheet, the DoDI 5200.48 designation indicator block, and the correct DoDI 5230.24 Distribution Statement (B-F) from saved per-customer profiles, and flags mismarkings including the common category-in-the-banner error. Chosen first because its obligation flows from DoDI 5200.48 / 5230.24 / 32 CFR 2002 rather than from CMMC, so it is unaffected by the July 2026 Phase 2 suspension and the September 2026 reform task force.",
       "score": 46
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Bookkeeping and outsourced accounting firms",
       "angle": "core-practitioner-workflow",
-      "claimed_at": "2026-08-07T16:48:42+00:00",
-      "claim_id": "bad3e2ef"
+      "date": "2026-08-07",
+      "report": "reports/2026-08-07-bookkeeping-outsourced-accounting-firms-core-practitioner-workflow.md",
+      "top_opportunity": "DriftWatch - prior-period drift detector: archives a dated trial-balance snapshot at each close and diffs prior periods at the next close, reporting every closed-period account balance that moved, with transaction-level attribution and a firm-wide roll-up. Answers the question no incumbent answers in this form: has anything I already delivered to the client changed? Insulated from Intuit's 2026 platform churn because it consumes exports, not a live API.",
+      "score": 44
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1728,6 +1729,78 @@
       "angle": "back-office",
       "source": "discovered",
       "note": "Adjacent obligation on the same 15-200 person companies, also spreadsheet-driven, also with retrospective-audit provenance requirements."
+    },
+    {
+      "market": "Outsourced controller and fractional CFO service providers",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Layer above bookkeeping with its own deliverables (cash forecasts, KPI packages, board reporting) built almost entirely in spreadsheets"
+    },
+    {
+      "market": "Trust accounting and IOLTA three-way reconciliation for law firms",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "State-bar-mandated three-way reconciliation with disciplinary consequences, performed monthly in Excel by non-accountants"
+    },
+    {
+      "market": "Construction bookkeeping and WIP schedule specialists (job costing, percentage of completion)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "WIP schedules, over/under billings and job cost allocation are spreadsheet-bound and drive bonding and lending decisions"
+    },
+    {
+      "market": "E-commerce accounting specialists (Amazon, Shopify, Stripe settlement reconciliation)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Settlement statements must be decomposed into revenue, fees, refunds and sales tax; a control-total reconciliation problem at high volume"
+    },
+    {
+      "market": "Church, school and small-nonprofit bookkeeping (fund and restricted-fund accounting)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Fund restriction tracking is bolted onto general-purpose ledgers with classes and spreadsheets; release-from-restriction errors are common"
+    },
+    {
+      "market": "Restaurant and hospitality bookkeeping (daily sales journal from POS to GL)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Daily POS-to-GL sales journal with tips, comps, discounts and multiple tender types is a recurring high-frequency mapping problem"
+    },
+    {
+      "market": "Payroll service bureaus and small independent payroll providers",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Multi-client payroll tax filing calendars, agency notices and GL delivery to client bookkeepers"
+    },
+    {
+      "market": "Information-return filing services and B-notice remediation providers",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Receives payer data of wildly varying quality; TIN validation, CP2100 response and backup withholding administration are procedural and deadline-driven"
+    },
+    {
+      "market": "Sales tax compliance outsourcing for small multi-state sellers",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Economic nexus threshold monitoring, registration tracking and multi-state filing calendars at firms too small for Avalara"
+    },
+    {
+      "market": "Accounting firm client-book transitions, M&A and succession operations",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Transferring hundreds of client files, credentials, recurring schedules and workpapers between firms with no standard handoff artifact"
+    },
+    {
+      "market": "Cannabis and cash-intensive business bookkeeping (280E cost allocation)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "280E forces rigorous COGS-versus-opex allocation with audit exposure; done today in spreadsheets"
+    },
+    {
+      "market": "Offshore and BPO bookkeeping staffing providers serving US firms",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Work is prepared offshore and reviewed onshore; the review handoff and quality-gate artifact is entirely improvised"
     }
   ],
   "patterns": [
@@ -2953,6 +3026,101 @@
         "Multi-state charitable solicitation registration compliance",
         "Building permit expediting and code consulting firms",
         "Truck permitting and registration service agencies (IRP, IFTA, OS-OW, state permits)"
+      ]
+    },
+    {
+      "pattern": "Snapshot-diff drift detection on already-delivered recurring reporting: archive a dated snapshot of what was delivered, then diff prior periods at the next cycle to catch silent restatement",
+      "seen_in": [
+        "Bookkeeping and outsourced accounting firms"
+      ],
+      "transfers_to": [
+        "Commercial property management",
+        "Medical billing and revenue cycle for small practices",
+        "Small motor carriers (5-50 trucks) back office and settlement",
+        "Outsourced real-estate accounting and lease administration service providers (CRE back-office BPO)",
+        "Community association (HOA and condominium) management back office"
+      ]
+    },
+    {
+      "pattern": "Threshold-crossing determination from a payments/activity ledger with year-specific statutory thresholds and mandatory statutory exclusions netted out",
+      "seen_in": [
+        "Bookkeeping and outsourced accounting firms"
+      ],
+      "transfers_to": [
+        "Multi-state charitable solicitation registration compliance",
+        "Small third-party medical billing companies (RCM service bureaus, 1-25 staff)",
+        "Workers' compensation medical billing and state fee schedule compliance",
+        "Premium audit and payroll classification consulting",
+        "Independent pharmacy third-party reconciliation and PBM claw-backs"
+      ]
+    },
+    {
+      "pattern": "Register-to-journal mapping profile with a mandatory tie-out proof and blocking on unmapped source lines - the blocking behavior is what makes even AI-assisted extraction safe",
+      "seen_in": [
+        "Bookkeeping and outsourced accounting firms"
+      ],
+      "transfers_to": [
+        "Small motor carriers (5-50 trucks) back office and settlement",
+        "Freight factoring companies and their client onboarding/verification desks",
+        "Warehouse and 3PL fulfillment receiving/shipping document control",
+        "Retail shopping center management - percentage rent and gross sales reporting",
+        "Submetering and utility expense recovery service providers"
+      ]
+    },
+    {
+      "pattern": "Entity-level dispersion and change-point auditing to surface silent classification drift: group by entity, measure classification dispersion, weight by consequence, detect the date assignment changed",
+      "seen_in": [
+        "Bookkeeping and outsourced accounting firms"
+      ],
+      "transfers_to": [
+        "Metal finishing, plating, heat treat and NDT job shops (special-process suppliers)",
+        "Machine shop / job shop quoting and production control",
+        "Independent insurance agencies - commercial lines",
+        "Property tax consulting and assessment appeal firms",
+        "DCAA-audit-ready incurred cost and indirect rate submissions at small government contractors"
+      ]
+    },
+    {
+      "pattern": "Control-total reconciliation of an imported dataset against the source document's own printed totals, run before any downstream processing rather than after",
+      "seen_in": [
+        "Bookkeeping and outsourced accounting firms"
+      ],
+      "transfers_to": [
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Title abstracting and independent title search contractors",
+        "Freight bill audit and payment for small shippers",
+        "Mortgage post-closing QC and trailing document vendors",
+        "Medicare Advantage risk adjustment / HCC coding at small groups"
+      ]
+    },
+    {
+      "pattern": "Pre-engagement condition scan of inherited work product that enumerates defects with evidence, converts countable drivers into an effort estimate with visible coefficients, and emits a client-facing priced scope-and-exclusions exhibit",
+      "seen_in": [
+        "Bookkeeping and outsourced accounting firms",
+        "Land surveying firms"
+      ],
+      "transfers_to": [
+        "Insurance restoration contractors and supplement writers",
+        "Public adjusting firms (policyholder-side property claims)",
+        "Building permit expediting and code consulting firms",
+        "Registered Practitioner Organizations (RPO) and CMMC consultancies serving 10-200 person suppliers",
+        "Independent specification writers and master-spec maintenance consultants",
+        "Estate planning and probate practice"
+      ]
+    },
+    {
+      "pattern": "Bulk-verification file builder for a free government matching service that practitioners avoid because the file format is hostile, plus a response-code decoder and statutory deadline calendar",
+      "seen_in": [
+        "Bookkeeping and outsourced accounting firms"
+      ],
+      "transfers_to": [
+        "Small motor carriers (5-50 trucks) back office and settlement",
+        "DOT compliance consultancies and third-party safety managers serving small fleets",
+        "Provider credentialing and payer enrollment services",
+        "Staffing and recruiting agency operations",
+        "HR and benefits administration in companies under 200 employees",
+        "Nonprofit grant management and compliance",
+        "Small defense suppliers navigating CMMC Level 2 compliance"
       ]
     }
   ]
