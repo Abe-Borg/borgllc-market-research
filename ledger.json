@@ -178,7 +178,14 @@
       "score": 45
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Metal finishing, plating, heat treat and NDT job shops (special-process suppliers)",
+      "angle": "handoffs-and-qa",
+      "claimed_at": "2026-08-07T23:48:28.375275+00:00",
+      "claim_id": "924337f2"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -951,12 +958,6 @@
     {
       "market": "Metal finishing, plating, heat treat and NDT job shops (special-process suppliers)",
       "angle": "back-office",
-      "source": "discovered",
-      "note": "The counterparty receiving flow-down chaos from non-expert customers; Nadcap-accredited and defined by the documents they must produce."
-    },
-    {
-      "market": "Metal finishing, plating, heat treat and NDT job shops (special-process suppliers)",
-      "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "The counterparty receiving flow-down chaos from non-expert customers; Nadcap-accredited and defined by the documents they must produce."
     },
