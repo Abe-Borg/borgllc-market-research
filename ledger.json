@@ -30,7 +30,7 @@
       "angle": "core-practitioner-workflow",
       "date": "2026-08-03",
       "report": "reports/2026-08-03-land-surveying-firms-core-practitioner-workflow.md",
-      "top_opportunity": "ALTA Table A Scope Configurator \u2014 client-facing 21-item scope selector producing a signed scope exhibit (2026 standard)",
+      "top_opportunity": "ALTA Table A Scope Configurator — client-facing 21-item scope selector producing a signed scope exhibit (2026 standard)",
       "score": 45
     },
     {
@@ -102,7 +102,7 @@
       "angle": "narrow-subspecialty",
       "date": "2026-08-06",
       "report": "reports/2026-08-06-independent-pc-claims-adjusting-narrow-subspecialty.md",
-      "top_opportunity": "Preflight \u2014 carrier-specific estimate and file QA checklist runner that catches kickback triggers before upload",
+      "top_opportunity": "Preflight — carrier-specific estimate and file QA checklist runner that catches kickback triggers before upload",
       "score": 43
     },
     {
@@ -112,16 +112,17 @@
       "report": "reports/2026-08-07-small-motor-carriers-back-office-settlement-back-office.md",
       "top_opportunity": "QueryGuard - FMCSA Clearinghouse & driver-qualification obligation ledger with evidence attachment",
       "score": 45
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Construction submittal, RFI, and closeout coordination (project engineer role)",
       "angle": "handoffs-and-qa",
-      "claimed_at": "2026-08-07T14:48:17.109636+00:00",
-      "claim_id": "67123969"
+      "date": "2026-08-07",
+      "report": "reports/2026-08-07-construction-submittal-rfi-closeout-coordination-handoffs-and-qa.md",
+      "top_opportunity": "SpecComply - Comply/Deviate/N-A compliance matrix generator: extracts the checkable requirements from one spec section into a fillable matrix the subcontractor completes and returns with the submittal, shifting the line-by-line spec comparison to the party holding the product data. Positioned where AI over-extraction costs a spurious checklist row rather than a false submittal obligation - the failure mode that kills register generators.",
+      "score": 45
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1586,6 +1587,78 @@
       "angle": "core-practitioner-workflow",
       "source": "discovered",
       "note": "Estimate-to-invoice, warranty claim, and DOT annual inspection documentation flow; repair and maintenance costs rose 8.6% in 2025, the fastest-growing carrier cost line."
+    },
+    {
+      "market": "Federal construction contractors on NAVFAC / USACE projects - UFGS submittal register and eCMS compliance",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "UFGS 01 33 00 defines a genuinely standardized SD-01..SD-11 submittal taxonomy with G-designation office codes - a far better automation target than CSI, whose article numbering is not standardized. Practitioners document mandatory duplicate entry between Procore and the Navy eCMS portal."
+    },
+    {
+      "market": "Federal construction contractors on NAVFAC / USACE projects - UFGS submittal register and eCMS compliance",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "UFGS 01 33 00 defines a genuinely standardized SD-01..SD-11 submittal taxonomy with G-designation office codes - a far better automation target than CSI, whose article numbering is not standardized. Practitioners document mandatory duplicate entry between Procore and the Navy eCMS portal."
+    },
+    {
+      "market": "Architectural construction administration (CA) desks at small A/E firms - submittal and RFI review",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The receiving counterparty in this cycle. Architects and MEP engineers voiced acute, quotable pain: no budget or time for CA, 3-4 week consultant sub-loops, and AIA A201 imposing no numeric review deadline on them while Division 01 imposes hard clocks on the contractor."
+    },
+    {
+      "market": "Architectural construction administration (CA) desks at small A/E firms - submittal and RFI review",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The receiving counterparty in this cycle. Architects and MEP engineers voiced acute, quotable pain: no budget or time for CA, 3-4 week consultant sub-loops, and AIA A201 imposing no numeric review deadline on them while Division 01 imposes hard clocks on the contractor."
+    },
+    {
+      "market": "Delegated-design submittal coordination (specialty engineers of record for delegated components)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "A practitioner reported 47 delegated-design sections on a single $40M project. PE-stamped submittals carry a distinct liability and licensure workflow under AIA A201 3.12.10 that no general submittal tool models."
+    },
+    {
+      "market": "Delegated-design submittal coordination (specialty engineers of record for delegated components)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "A practitioner reported 47 delegated-design sections on a single $40M project. PE-stamped submittals carry a distinct liability and licensure workflow under AIA A201 3.12.10 that no general submittal tool models."
+    },
+    {
+      "market": "Independent specification writers and master-spec maintenance consultants",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Stale master specs are the named root cause of the 25-70% boilerplate registers documented this cycle - one architect admitted their master spec decayed after the maintainer retired. Practitioners report the spec-authoring tool market has stagnated for 20 years at $2,400-$4,100/seat with poor pricing transparency."
+    },
+    {
+      "market": "Independent specification writers and master-spec maintenance consultants",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Stale master specs are the named root cause of the 25-70% boilerplate registers documented this cycle - one architect admitted their master spec decayed after the maintainer retired. Practitioners report the spec-authoring tool market has stagnated for 20 years at $2,400-$4,100/seat with poor pricing transparency."
+    },
+    {
+      "market": "Equipment manufacturer and manufacturer-rep submittal desks (producers of the product data package)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The upstream source of the boilerplate problem: 80% of subs forward a generic full-line catalog because that is what the manufacturer rep supplied. Packages inflated from ~20 to 120+ pages. Whoever fixes it at this layer fixes it for everyone downstream."
+    },
+    {
+      "market": "Equipment manufacturer and manufacturer-rep submittal desks (producers of the product data package)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The upstream source of the boilerplate problem: 80% of subs forward a generic full-line catalog because that is what the manufacturer rep supplied. Packages inflated from ~20 to 120+ pages. Whoever fixes it at this layer fixes it for everyone downstream."
+    },
+    {
+      "market": "Construction subcontractor project management at 15-150 employee specialty trades",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The most underserved user found this cycle. Subs are structurally second-class guests in N client platforms (cannot close, distribute, or delete; never the Lead Company), hold the delivery risk without the controls, and pay for nothing but Bluebeam."
+    },
+    {
+      "market": "Construction subcontractor project management at 15-150 employee specialty trades",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "The most underserved user found this cycle. Subs are structurally second-class guests in N client platforms (cannot close, distribute, or delete; never the Lead Company), hold the delivery risk without the controls, and pay for nothing but Bluebeam."
     }
   ],
   "patterns": [
@@ -2586,6 +2659,140 @@
         "Third-party claims administration (TPA) and self-insured program operations",
         "HOA and condominium management companies - estoppel and demand response desk",
         "1031 exchange qualified intermediaries"
+      ]
+    },
+    {
+      "pattern": "Requirement extraction from a long governing document into an assignable, trackable checklist - the obligations exist in prose and someone hand-transcribes them into a tracking artifact",
+      "seen_in": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
+      ],
+      "transfers_to": [
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
+        "Energy code compliance consultants and Title 24 documentation shops",
+        "Small defense suppliers navigating CMMC Level 2 compliance",
+        "Nonprofit grant management and compliance",
+        "Provider credentialing and payer enrollment services",
+        "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)",
+        "Multi-state charitable solicitation registration compliance"
+      ]
+    },
+    {
+      "pattern": "Push the compliance assertion upstream to the party holding the data - instead of verifying a counterparty submission against a standard, generate the form that makes them assert conformance line by line",
+      "seen_in": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
+      ],
+      "transfers_to": [
+        "Supplier quality engineering at OEMs and primes (receiving side of supplier deliverables)",
+        "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+        "Metal finishing, plating, heat treat and NDT job shops (special-process suppliers)",
+        "Industrial distributors and metal service centers issuing material test reports",
+        "Certificate-of-insurance compliance from the holder side (GCs, property managers, municipalities)"
+      ]
+    },
+    {
+      "pattern": "A document package as condition precedent to a large payment release - a defined document set gates the money under a contractual or statutory clock, and the collector has weak leverage over the holders",
+      "seen_in": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
+      ],
+      "transfers_to": [
+        "Durable medical equipment (DME) suppliers - documentation and billing compliance",
+        "Freight factoring companies and their client onboarding/verification desks",
+        "Mortgage post-closing QC and trailing document vendors",
+        "HOA and condominium management companies - estoppel and demand response desk",
+        "Utility energy-efficiency program implementers and trade-ally rebate documentation",
+        "Patient financial counseling and No Surprises Act Good Faith Estimate compliance"
+      ]
+    },
+    {
+      "pattern": "Format-compliant composite deliverable assembly to a client written specification - the client dictates pagination, indexing, bookmarking, naming and searchability, so compliance is checkable and rejection is expensive",
+      "seen_in": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
+      ],
+      "transfers_to": [
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Small-firm litigation support and paralegal work",
+        "Forensic engineering firms performing cause-and-origin investigations for insurers",
+        "Building envelope and roofing consultants performing field water testing (ASTM E1105, AAMA 501.2)",
+        "Welding inspection (AWS CWI) and NDT service providers under ASTM E543 / SNT-TC-1A"
+      ]
+    },
+    {
+      "pattern": "Back-calculating a required action date from a downstream need date through fixed intermediate windows, where the windows are contractual and unit-inconsistent (calendar vs working days, per-client holiday calendars)",
+      "seen_in": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
+      ],
+      "transfers_to": [
+        "Building permit expediting and code consulting firms",
+        "Title 24 acceptance test technicians (ATT) and acceptance testing providers",
+        "Right-of-way and easement acquisition consulting",
+        "Premium audit and payroll classification consulting",
+        "Commissioning (Cx) providers for small and midsize buildings"
+      ]
+    },
+    {
+      "pattern": "Contract-clock-aware notice generation where missing the window forfeits the claim entirely - the right exists only if asserted in a specific form inside a specific window",
+      "seen_in": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
+      ],
+      "transfers_to": [
+        "Public adjusting firms (policyholder-side property claims)",
+        "Cargo claims and OS&D handling at brokerages and small carriers",
+        "Property tax consulting and assessment appeal firms",
+        "Insurance restoration contractors and supplement writers",
+        "Independent property and casualty claims adjusting"
+      ]
+    },
+    {
+      "pattern": "Vendor-neutral reconciliation of a counterparty record against the governing document - their system is authoritative but wrong, and you need a defensible diff to hand back",
+      "seen_in": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
+      ],
+      "transfers_to": [
+        "Freight bill audit and payment for small shippers",
+        "Tenant-side lease audit and occupancy cost consulting",
+        "Independent pharmacy third-party reconciliation and PBM claw-backs",
+        "Retail shopping center management - percentage rent and gross sales reporting",
+        "Commercial real estate acquisition due diligence and rent roll verification"
+      ]
+    },
+    {
+      "pattern": "Normalizing exports from N client-mandated portals into one internal register - the provider holds the aggregate risk but no aggregate view because every client mandates a different system",
+      "seen_in": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
+      ],
+      "transfers_to": [
+        "Independent property and casualty claims adjusting",
+        "Provider credentialing and payer enrollment services",
+        "Freight brokerage and dispatch operations",
+        "Medical billing and revenue cycle for small practices",
+        "Independent insurance agencies - commercial lines",
+        "Third-party estimate writing services (Xactimate estimating desks)"
+      ]
+    },
+    {
+      "pattern": "Position AI where its error mode is cheap - identical extraction technology fails commercially as a register generator (over-extraction creates false obligations and damages counterparty relationships) and can succeed as a checklist generator (over-extraction creates a spurious row). Before recommending an AI-assisted concept, ask what an over-extraction costs the user and prefer the framing where the answer is almost nothing.",
+      "seen_in": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
+      ],
+      "transfers_to": [
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
+        "Small defense suppliers navigating CMMC Level 2 compliance",
+        "Nonprofit grant management and compliance",
+        "Small-firm litigation support and paralegal work",
+        "Estate planning and probate practice"
+      ]
+    },
+    {
+      "pattern": "The unnamed role - work that is universal and consequential but has no stable job title and no BLS SOC code, so it is statistically invisible, assigned to the cheapest available staff, and systematically under-tooled",
+      "seen_in": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)"
+      ],
+      "transfers_to": [
+        "Commercial property management",
+        "Dental and specialty clinic practice administration",
+        "HR and benefits administration in companies under 200 employees",
+        "Community association (HOA and condominium) management back office",
+        "Staffing and recruiting agency operations"
       ]
     }
   ]
