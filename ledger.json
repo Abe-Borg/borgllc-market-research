@@ -154,7 +154,14 @@
       "score": 47
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "HR and benefits administration in companies under 200 employees",
+      "angle": "back-office",
+      "claimed_at": "2026-08-07T19:48:41Z",
+      "claim_id": "bdf2a32e"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -597,12 +604,6 @@
     {
       "market": "HR and benefits administration in companies under 200 employees",
       "angle": "narrow-subspecialty",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "HR and benefits administration in companies under 200 employees",
-      "angle": "back-office",
       "source": "seed",
       "note": ""
     },
