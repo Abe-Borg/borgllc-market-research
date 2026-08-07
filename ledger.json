@@ -152,16 +152,17 @@
       "report": "reports/2026-08-07-flood-zone-elevation-certificate-loma-lomr-consulting-narrow-subspecialty.md",
       "top_opportunity": "ECheck - Elevation Certificate pre-submittal validator (AcroForm extraction + CRS cross-field consistency rules + FEMA NFHL registry join) for the surveyor who seals the certificate",
       "score": 47
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "HR and benefits administration in companies under 200 employees",
       "angle": "back-office",
-      "claimed_at": "2026-08-07T19:48:41Z",
-      "claim_id": "bdf2a32e"
+      "date": "2026-08-07",
+      "report": "reports/2026-08-07-hr-benefits-administration-under-200-back-office.md",
+      "top_opportunity": "I9Audit - Form I-9 self-audit and substantive-error scanner keyed to ICE's unannounced March 16, 2026 reclassification, which moved a dozen categories of ordinary clerical omission (missing employer title, missing first date of employment, missing DOB) from curable technical failures to immediately fineable substantive violations at $288-$2,861 each, retroactively across the existing file, with no 10-day cure window and a 3-business-day NOI response deadline. Local-only, file-in/file-out, ruleset-as-product.",
+      "score": 45
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1890,6 +1891,54 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "The mass-market one-page flood report business that consultants openly criticise as insufficiently rigorous; the LODR dispute path is a defined FEMA process with an evidence-assembly burden."
+    },
+    {
+      "market": "Employee benefits brokerage account management and service teams (the broker-side desk that owns Employee Navigator/Ease for its clients)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Employee Navigator/Ease are licensed BY brokers FOR clients; the account manager, not the employer, is the real operator of small-group benefits admin and may be the actual buyer for reconciliation tooling."
+    },
+    {
+      "market": "Third-party COBRA administrators and continuation-coverage TPAs serving small groups",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "44-day combined notice deadline, $110/day ERISA plus IRC 4980B excise tax self-reported on Form 8928, and Marrow-style litigation over notice DRAFTING defects rather than missed deadlines - notice content is auditable software work."
+    },
+    {
+      "market": "Employer immigration compliance and I-9 audit consultancies",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "ICE NOI rate reportedly 10x higher in H1 2025 vs 2024 and the March 2026 substantive-error reclassification created immediate demand for privileged self-audits; distinct from immigration law practice (already covered) because the client is the employer, not the beneficiary."
+    },
+    {
+      "market": "Retirement plan third-party administrators (TPAs) for small 401(k) plans",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Six of ten documented 401(k) operational failures trace to payroll data disagreeing with recordkeeper records; census validation, compensation-definition mapping and EPCRS correction are recurring, checkable, and expensive to get wrong."
+    },
+    {
+      "market": "Fractional and outsourced HR service providers serving 20-200 employee companies",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Sees many companies' files at intake, so it is the natural first buyer and distribution channel for every audit-shaped HR tool; also the only party in the segment that would pay for per-client customization."
+    },
+    {
+      "market": "State unemployment insurance cost control and SUTA experience-rating consultancies",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "UI Integrity Act bars relief of charges after a 'pattern' of untimely responses - as few as one offense in Hawaii, two in Alabama - against a sub-10-day response window; free SIDES E-Response exists and adoption below 200 employees appears near zero."
+    },
+    {
+      "market": "Voluntary and worksite benefits enrollment firms (enrollment counselors and call centers)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Producers of the election data that downstream payroll and carrier systems must match; the pending-EOI failure mode that generated Gimeno and McIver originates at this handoff."
+    },
+    {
+      "market": "Payroll service bureaus and small independent payroll providers",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Already in backlog under core-practitioner-workflow; the handoffs angle is distinct and richer - deduction-holiday configuration, the 2026 27th-pay-period problem, garnishment intake, and the deduction-vs-carrier-premium seam all live at the bureau/client boundary."
     }
   ],
   "patterns": [
@@ -3388,6 +3437,90 @@
         "Remote online notarization (RON) platform operators and RON-commissioned notaries",
         "Provider credentialing and payer enrollment services",
         "Truck permitting and registration service agencies (IRP, IFTA, OS-OW, state permits)"
+      ]
+    },
+    {
+      "pattern": "Regulator-classification linter: where an agency maintains a published taxonomy of which defects are curable versus immediately penalized, the maintained dated ruleset is the entire product and the checking code is trivial - and the taxonomy can change without rulemaking (ICE moved a dozen I-9 defect categories from technical to substantive on 2026-03-16 via an unannounced fact-sheet edit)",
+      "seen_in": [
+        "HR and benefits administration in companies under 200 employees"
+      ],
+      "transfers_to": [
+        "Certified payroll and prevailing wage compliance service providers",
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Truck permitting and registration service agencies (IRP, IFTA, OS-OW, state permits)",
+        "County recorder offices - document intake, indexing and rejection handling"
+      ]
+    },
+    {
+      "pattern": "Cross-cycle open-item aging: in any reconciliation where the correction arrives one or more cycles after the request, all recoverable value lives in state that persists between runs - which is precisely what a monthly spreadsheet destroys, and why every published reconciliation procedure names the next-cycle verification step as the one practitioners skip",
+      "seen_in": [
+        "HR and benefits administration in companies under 200 employees"
+      ],
+      "transfers_to": [
+        "Freight bill audit and payment for small shippers",
+        "Independent pharmacy third-party reconciliation and PBM claw-backs",
+        "Submetering and utility expense recovery service providers",
+        "Cargo claims and OS&D handling at brokerages and small carriers"
+      ]
+    },
+    {
+      "pattern": "Pending-state register: where a submission to a third party must reach approval before something already being relied upon is actually in force, the pending state is reported nowhere and the failure is silent until a claim - deducting premiums for life coverage whose evidence-of-insurability was never submitted produced two federal appellate liability decisions (Gimeno 11th Cir. 2022, McIver 9th Cir. 2024)",
+      "seen_in": [
+        "HR and benefits administration in companies under 200 employees"
+      ],
+      "transfers_to": [
+        "Provider credentialing and payer enrollment services",
+        "Delegated-design submittal coordination (specialty engineers of record for delegated components)",
+        "Building permit expediting and code consulting firms",
+        "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)"
+      ]
+    },
+    {
+      "pattern": "Threshold determinator: when multiple obligations trigger at similar-looking numeric thresholds but each counts a DIFFERENT population (headcount vs FTE vs per-establishment peak vs participants-with-balances vs covered-by-any-benefit), a single headcount figure answers every question wrong - the applicability determination is harder and more valuable than the compliance work that follows it",
+      "seen_in": [
+        "HR and benefits administration in companies under 200 employees"
+      ],
+      "transfers_to": [
+        "Sales tax compliance outsourcing for small multi-state sellers",
+        "ITAR and EAR export compliance administration at small manufacturers",
+        "Community floodplain administration at small municipalities (permit-side floodplain compliance)",
+        "Government contracts administration at small govcons (clause and mod review)"
+      ]
+    },
+    {
+      "pattern": "Statutory clock detection at first knowledge: where a deadline starts when the organization 'acquires knowledge' rather than when a form is filed, the dominant failure is never learning the clock started - cheap intake capture at the point of first contact is worth more than any downstream rules engine (29 CFR 825.300(b)(1) plus 825.302(c): the employee need not mention the FMLA at all)",
+      "seen_in": [
+        "HR and benefits administration in companies under 200 employees"
+      ],
+      "transfers_to": [
+        "HOA and condominium management companies - estoppel and demand response desk",
+        "Mortgage servicer payoff and lien release departments",
+        "Estate planning and probate practice",
+        "Public adjusting firms (policyholder-side property claims)"
+      ]
+    },
+    {
+      "pattern": "Jurisdiction rule dataset as the product, code as a thin shell: where obligations vary by state with no unifying standard (five different paid-sick-leave accrual denominators across 21+ states; 16 PFML jurisdictions; 15+ state retirement mandates), the differentiator is a versioned, per-row-dated, cited dataset that degrades honestly to 'not verified since X' rather than a clever engine that confidently returns stale answers",
+      "seen_in": [
+        "HR and benefits administration in companies under 200 employees"
+      ],
+      "transfers_to": [
+        "Multi-state charitable solicitation registration compliance",
+        "Workers' compensation medical billing and state fee schedule compliance",
+        "Title 24 acceptance test technicians (ATT) and acceptance testing providers",
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25"
+      ]
+    },
+    {
+      "pattern": "NEGATIVE pattern - free-because-someone-else-pays software creates a data-ownership gap: when a service provider licenses the client's system of record as a retention device (benefits brokers licensing Employee Navigator/Ease, now a 195,000-employer near-monopoly after the 2023 Ease acquisition), the client's operational history lives in a system it does not contract for, changing providers means re-implementation, and the only artifact the client actually owns is the export - which is why file-in/file-out tooling is the correct architecture for these markets rather than merely the convenient one",
+      "seen_in": [
+        "HR and benefits administration in companies under 200 employees"
+      ],
+      "transfers_to": [
+        "Independent insurance agencies - commercial lines",
+        "Small third-party medical billing companies (RCM service bureaus, 1-25 staff)",
+        "Freight factoring companies and their client onboarding/verification desks",
+        "Outsourced real-estate accounting and lease administration service providers (CRE back-office BPO)"
       ]
     }
   ]
