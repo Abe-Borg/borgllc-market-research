@@ -266,7 +266,14 @@
       "score": 47
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Veterinary practice administration and specialty referral coordination",
+      "angle": "handoffs-and-qa",
+      "claimed_at": "2026-08-08T12:49:25Z",
+      "claim_id": "0f90c511"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -2145,12 +2152,6 @@
       "angle": "back-office",
       "source": "discovered",
       "note": "16.1% of dentists DSO-affiliated and rising to 27% among early-career; multi-site payer-rule standardization and internal chart QA at scale"
-    },
-    {
-      "market": "Veterinary practice administration and specialty referral coordination",
-      "angle": "handoffs-and-qa",
-      "source": "discovered",
-      "note": "Structurally near-identical to dental - referral packets, imaging transfer, lab submissions, records release - in a sector the catalog has not touched at all"
     },
     {
       "market": "Dental benefit administrators and dental plan clinical review desks (payer side)",
