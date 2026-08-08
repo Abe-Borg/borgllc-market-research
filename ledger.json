@@ -288,16 +288,17 @@
       "report": "reports/2026-08-08-certified-payroll-prevailing-wage-compliance-core-practitioner-workflow.md",
       "top_opportunity": "CPR Preflight - pre-submission certified payroll validator: takes the week's payroll export plus the incorporated wage determination and runs, locally and before anything is uploaded, both the checks the destination portal will run and the substantive checks it never runs - fringe credit separated from cash-in-lieu (6B vs 6C), overtime half-time computed on the wage determination's basic hourly rate floor per 29 CFR 5.32, apprentice defaulting to the FULL wage determination fringe where the registered program is silent, classification present on the incorporated WD, payroll number sequence unbroken, last-4 SSN federally vs full SSN for CA DIR. Occupies a structurally unoccupied position: the portal vendor is paid by the public agency on a tier keyed to the agency's construction volume (LCPtracker bills Michigan $85,240-$186,029/yr, LA County $116,741/yr) and therefore has no commercial incentive to reduce contractor rejections, and by design validates only after upload - LCPtracker markets its 'over 80 automated validations' as a feature of the agency's system. Anchored on the Massachusetts State Auditor finding that 1,608 of 3,344 sampled employees had certified-payroll classifications that did not match the state's own wage rate sheets (90 actually underpaid), on DOL's published 55-minute-per-WH-347 burden across 10.5M annual burden hours, and on four independent practitioner accounts of 2-6 hours every week at 12-30 person firms. Every rule is deterministic and published in the CFR, the FOH or a schema; AI is confined to proposing a column mapping a human confirms once per payroll system. Local-only by necessity (CA DIR XML carries full SSNs).",
       "score": 46
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Unclaimed property and escheat compliance service providers",
       "angle": "back-office",
-      "claimed_at": "2026-08-08T16:49:21Z",
-      "claim_id": "542772a3"
+      "date": "2026-08-08",
+      "report": "reports/2026-08-08-unclaimed-property-escheat-compliance-back-office.md",
+      "top_opportunity": "DiligenceWindow - statutory due-diligence window calculator and compliant letter generator: computes, per state, the exact legal mailing window and threshold split (must mail / need not mail / must mail certified) for unclaimed property owner notices, generates letters carrying each state's mandated language, and emits the mail log and affidavit worksheet that constitute the evidence file. Anchored on three independently varying per-state variables verified against primary sources - thresholds (TX $250, OH/NY certified above $1,000, FL exempt under $10, CA/VT $50), windows (the 60-120 day norm, VT 60-180 days before remittance, CA a completely different 6-12 months before the Notice Report), and mandated heading text - and on IOFM's assessment that due diligence is 'the most difficult unclaimed property requirement for businesses to fulfill.' Pure date-and-threshold arithmetic, no AI, local-only for SSN-bearing files, and the thinnest viable slice of the versioned state rules matrix that four other concepts in this report share. The endorsed free incumbent HRS Pro generates letters but states in its own FAQ that it cannot determine what is escheatable, so it cannot compute the window.",
+      "score": 45
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -2734,6 +2735,54 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "NYC Rule 50-08 requires daily sign-in logs with original signatures showing start and end times to accompany certified payroll; the people-on-site vs people-on-payroll reconciliation is the highest-signal compliance check and nobody supports it."
+    },
+    {
+      "market": "Third-party contingency-fee unclaimed property audit firms and holder-side audit defense",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The examiner side of the Temple-Inland estimation problem; document production under a 10-22 year lookback is a defined, evidence-heavy handoff with a documented six-figure failure mode."
+    },
+    {
+      "market": "Securities transfer agents and stock plan administrators - lost shareholder and RPO compliance",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "SEC Rule 17Ad-17 imposes its own database-search and notice obligations that run in parallel with state escheat; a second rules layer on the same population."
+    },
+    {
+      "market": "Gift card, stored-value and loyalty program administrators - escheat and breakage accounting",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Gift card escheat is separately legislated and litigated state by state, and breakage revenue recognition sits on top of it; deliberately excluded from this cycle's scope as a distinct problem."
+    },
+    {
+      "market": "State unclaimed property administrator offices - holder report intake, deficiency handling and outreach",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "They publish the common-error lists and see the defect rate across every filer; the authoritative validation counterparty for any holder-side reporting tool."
+    },
+    {
+      "market": "Payroll service bureaus and PEOs - uncashed wage check escheatment for client employers",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Wages carry a 1-year dormancy in most states, the shortest of any common property type, and the bureau holds the data while the client holds the liability."
+    },
+    {
+      "market": "ERISA retirement plan uncashed distribution checks and missing participant search providers",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "DOL has an open position on permissive transfers of uncashed plan checks to state funds; a federal-versus-state overlay absent from every other escheat market."
+    },
+    {
+      "market": "Heir locator and unclaimed property finder firms (owner-side claim recovery)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The claimant side of the same $3B/yr flow, state-licensed with capped fees and per-state claim evidence packets; states return only 8.6-59% of what they collect."
+    },
+    {
+      "market": "Multi-state filing-obligation calendar management at small SALT and compliance practices",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "The generalized version of the obligation-derivation problem found here: obligations that must be derived from law per entity per jurisdiction rather than typed into a list."
     }
   ],
   "patterns": [
@@ -5649,6 +5698,71 @@
         "Multi-state charitable solicitation registration compliance",
         "Sales tax compliance outsourcing for small multi-state sellers",
         "Unclaimed property and escheat compliance service providers"
+      ]
+    },
+    {
+      "pattern": "Regulatory rules matrix as versioned, cited data - a jurisdiction x subject grid published as machine-readable data with a citation and effective date on every cell, driving a deterministic determination and rendering a defensible memo; the scarcity is that the rules exist only as fifty PDFs",
+      "seen_in": [
+        "Unclaimed property and escheat compliance service providers"
+      ],
+      "transfers_to": [
+        "Multi-state charitable solicitation registration compliance",
+        "Multi-state income and franchise tax nexus monitoring for small businesses",
+        "State unemployment insurance cost control and SUTA experience-rating consultancies",
+        "Remote online notarization (RON) platform operators and RON-commissioned notaries",
+        "Consortium / third-party administrators (C-TPAs) for DOT drug and alcohol programs",
+        "Public adjusting firms (policyholder-side property claims)"
+      ]
+    },
+    {
+      "pattern": "Statutory notice window calculator plus compliant letter generator plus evidence log - where law requires a specific notice to a specific person in a specific window in specific words with proof, compute the window, generate the letter, and keep the evidence",
+      "seen_in": [
+        "Unclaimed property and escheat compliance service providers"
+      ],
+      "transfers_to": [
+        "Mortgage servicer payoff and lien release departments",
+        "DBE/MBE/WBE compliance consultants and good-faith-effort documentation services",
+        "Community association (HOA and condominium) management back office",
+        "Building permit expediting and code consulting firms",
+        "Tax representation and IRS collections practices (EA-led, offer in compromise and installment agreements)"
+      ]
+    },
+    {
+      "pattern": "Fixed-width/EDI pre-flight validator ahead of a scheduled format migration - validate the file before the counterparty rejects it and report readiness for the announced successor format (here: NAUPA II fixed-width to NAUPA III XML, Phase 1 Spring 2027)",
+      "seen_in": [
+        "Unclaimed property and escheat compliance service providers"
+      ],
+      "transfers_to": [
+        "Home care and home health agency scheduling and EVV back office",
+        "Non-emergency medical transportation (NEMT) brokers and providers",
+        "Apprenticeship program sponsors and DOL RAPIDS reporting",
+        "Dental billing and insurance coordination",
+        "Workers' compensation medical billing and state fee schedule compliance"
+      ]
+    },
+    {
+      "pattern": "Void/reissue and duplicate-disbursement reconciliation with preserved disposition rationale - match reversals to their replacements, isolate the unmatched against a bright-line presumption, and force the human explanation to be recorded rather than remembered",
+      "seen_in": [
+        "Unclaimed property and escheat compliance service providers"
+      ],
+      "transfers_to": [
+        "Trust accounting and IOLTA three-way reconciliation for law firms",
+        "Independent pharmacy third-party reconciliation and PBM claw-backs",
+        "Medical billing and revenue cycle for small practices",
+        "Small motor carriers (5-50 trucks) back office and settlement",
+        "Retirement plan third-party administrators (TPAs) for small 401(k) plans"
+      ]
+    },
+    {
+      "pattern": "Record-gap map that predicts adverse estimation - where an examiner may estimate liability for periods you cannot document, map the documentation before the examiner does and quantify the exposure",
+      "seen_in": [
+        "Unclaimed property and escheat compliance service providers"
+      ],
+      "transfers_to": [
+        "DCAA-audit-ready incurred cost and indirect rate submissions at small government contractors",
+        "Workers' compensation class code and premium audit defense for high-payroll-churn employers",
+        "Certified payroll and prevailing wage compliance service providers",
+        "Small defense suppliers navigating CMMC Level 2 compliance"
       ]
     }
   ]
