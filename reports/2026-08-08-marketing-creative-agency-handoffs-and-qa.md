@@ -577,7 +577,7 @@ It then produces (a) advance warnings at configurable intervals, (b) a **takedow
 Each concept scored 1–5 on ten criteria; maximum 50.
 
 | # | Concept | Severity | Frequency | ROI clarity | Ease of learning | Ease of build | Stays narrow | Differentiation | Customisation | Test data | Evidence confidence | **Total** |
-|---|---|---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | **A3** | **Rights & Usage Expiry Ledger** | 5 | 4 | 4 | 5 | 5 | 5 | 5 | 5 | 4 | 5 | **47** |
 | **A2** | **Sign-Off Certificate** | 4 | 5 | 4 | 5 | 5 | 5 | 4 | 4 | 5 | 5 | **46** |
 | **A4** | **Destination Spec Gate** | 4 | 5 | 5 | 5 | 4 | 4 | 4 | 5 | 5 | 5 | **46** |
