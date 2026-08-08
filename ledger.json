@@ -240,16 +240,17 @@
       "report": "reports/2026-08-08-retirement-plan-tpas-small-401k-core-practitioner-workflow.md",
       "top_opportunity": "CensusGuard - plan-rule-aware census intake validator and normalizer: the administrator selects a saved per-plan rule profile (eligibility service and hours method, entry dates, excluded classes, compensation definition, plan year) and drops in whatever the client's payroll system exported; out comes a severity-ranked exception report split by who must answer it (client vs administrator), a normalized census in the administration software's import layout, and a year-over-year delta report flagging people who vanished without a termination date or whose DOB/hire date moved. Sits at the single point where every downstream failure enters - wrong compensation, missed eligibility, unreported terminations - and is used on every plan every year against an 80+ plan caseload, so an hour saved is eighty hours saved. Offline-only by necessity (full SSNs); rules are deterministic code, AI confined to proposing a column mapping the human confirms once. The rule-profile schema it requires is shared by three of the other concepts.",
       "score": 45
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Independent pharmacy third-party reconciliation and PBM claw-backs",
       "angle": "back-office",
-      "claimed_at": "2026-08-08T08:49:40Z",
-      "claim_id": "0d33e95c"
+      "date": "2026-08-08",
+      "report": "reports/2026-08-08-independent-pharmacy-pbm-reconciliation-back-office.md",
+      "top_opportunity": "NADACGuard - claim-level below-cost and state-floor shortfall detector: joins the pharmacy's own claim export to the free weekly CMS NADAC file and to the 2024-2026 wave of state NADAC-plus-dispensing-fee statutes (Kentucky $10.64, Nebraska $10.38, California SB 41 $10.05, AR/GA/TN/WV/IA at the Medicaid rate), then ranks every shortfall by dollars and flags which are still inside the ~60-day MAC appeal window. Incumbent reconciliation vendors measure promised-versus-paid; nobody measures paid-versus-legally-required. Local-only desktop (PHI), free public benchmark data, deterministic arithmetic, no AI.",
+      "score": 44
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -2428,6 +2429,54 @@
       "angle": "core-practitioner-workflow",
       "source": "discovered",
       "note": "The advisor controls the small-plan relationship and must document a prudent fee process; the review is a comparison of incommensurable disclosure documents currently done in Word."
+    },
+    {
+      "market": "Independent pharmacy third-party reconciliation and PBM claw-backs",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Long-term-care/closed-door and specialty pharmacy claim finance sits inside the same store type but on different contracts, cycle-fill rules and accreditation gates; worth its own pass."
+    },
+    {
+      "market": "Independent pharmacy third-party reconciliation and PBM claw-backs",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The PBM audit exchange itself - discrepancy report in, indexed evidence package out, 30-day appeal clock - is a distinct handoff worth mapping from both sides."
+    },
+    {
+      "market": "Pharmacy services administrative organizations (PSAOs) and their member-support desks",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The intermediary that signs PBM contracts for thousands of independents and computes effective-rate true-ups at the aggregate level; holds the data pharmacies cannot see."
+    },
+    {
+      "market": "Long-term care and closed-door pharmacy billing and cycle-fill operations",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Cycle fill, facility billing, short-cycle Part D rules and per-facility credit/return reconciliation; a different money desk from retail with almost no small-tool coverage."
+    },
+    {
+      "market": "Pharmacy audit assistance and FWA/HIPAA compliance service providers",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "PAAS-style membership bureaus that assemble audit responses for hundreds of pharmacies; the aggregator side of the audit-evidence problem and a plausible channel partner."
+    },
+    {
+      "market": "State insurance department and board of pharmacy PBM complaint intake and enforcement units",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "The regulator receiving the shortfall complaints created by the 2024-2026 reimbursement-floor statutes; gatekeeper-side view of the same arithmetic."
+    },
+    {
+      "market": "Independent pharmacy purchasing, wholesaler contract compliance and generic sourcing",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Wholesaler generic-compliance tiers, secondary-supplier sourcing and invoice-cost verification drive the acquisition-cost side of every margin question found in this cycle."
+    },
+    {
+      "market": "Specialty pharmacy accreditation and payer network access operations (URAC / ACHC)",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Accreditation evidence binders plus limited-distribution network applications; document-assembly work on a recurring survey cycle."
     }
   ],
   "patterns": [
@@ -4848,6 +4897,91 @@
         "Employer immigration compliance and I-9 audit consultancies",
         "Property tax consulting and assessment appeal firms",
         "Elder law and Medicaid planning practices (spend-down and estate recovery)"
+      ]
+    },
+    {
+      "pattern": "Free-reference-data shortfall detector: a government or standards body publishes a free reference price/rate, the payer pays something else, and nobody joins the two at line-item level",
+      "seen_in": [
+        "Independent pharmacy third-party reconciliation and PBM claw-backs"
+      ],
+      "transfers_to": [
+        "Workers' compensation medical billing and state fee schedule compliance",
+        "Ambulance and EMS billing",
+        "Certified payroll and prevailing wage compliance service providers",
+        "Freight bill audit and payment for small shippers"
+      ]
+    },
+    {
+      "pattern": "New-law arithmetic verifier: a wave of state legislation creates a checkable numeric obligation 12-24 months before any vendor productizes the check",
+      "seen_in": [
+        "Independent pharmacy third-party reconciliation and PBM claw-backs"
+      ],
+      "transfers_to": [
+        "Community floodplain administration at small municipalities (permit-side floodplain compliance)",
+        "Multi-state charitable solicitation registration compliance",
+        "Multi-state income and franchise tax nexus monitoring for small businesses",
+        "Patient financial counseling and No Surprises Act Good Faith Estimate compliance"
+      ]
+    },
+    {
+      "pattern": "Provider-level adjustment decoder: remittances carry aggregate deductions (X12 835 PLB, settlement offsets) untraceable to the transactions that caused them, so 'why is this deposit short' has no answer",
+      "seen_in": [
+        "Independent pharmacy third-party reconciliation and PBM claw-backs"
+      ],
+      "transfers_to": [
+        "Small motor carriers (5-50 trucks) back office and settlement",
+        "Staffing back-office service bureaus and payroll funders",
+        "Freight factoring companies and their client onboarding/verification desks",
+        "Small third-party medical billing companies (RCM service bureaus, 1-25 staff)"
+      ]
+    },
+    {
+      "pattern": "Deadline-clock-as-product: the right exists, the counterparty publishes the form, the deadline is fixed, and the loss is caused by the clock rather than the merits",
+      "seen_in": [
+        "Independent pharmacy third-party reconciliation and PBM claw-backs"
+      ],
+      "transfers_to": [
+        "Legal document preparers and registered LDAs handling probate filings",
+        "Provider credentialing and payer enrollment services",
+        "Unclaimed property and escheat compliance service providers",
+        "HOA and condominium management companies - estoppel and demand response desk",
+        "Government contracts administration at small govcons (clause and mod review)"
+      ]
+    },
+    {
+      "pattern": "Pre-run the auditor's own test: the audit procedure is published, so the subject can execute it on itself before the demand letter arrives",
+      "seen_in": [
+        "Independent pharmacy third-party reconciliation and PBM claw-backs"
+      ],
+      "transfers_to": [
+        "DCAA-audit-ready incurred cost and indirect rate submissions at small government contractors",
+        "ERISA employee benefit plan auditors at small and midsize CPA firms",
+        "Premium audit and payroll classification consulting",
+        "Supplier quality engineering at OEMs and primes (receiving side of supplier deliverables)"
+      ]
+    },
+    {
+      "pattern": "Aging with per-counterparty rules: generic aging is a commodity, but aging where each item's deadline comes from a different contract buried in a provider manual is not",
+      "seen_in": [
+        "Independent pharmacy third-party reconciliation and PBM claw-backs"
+      ],
+      "transfers_to": [
+        "Certificate-of-insurance compliance from the holder side (GCs, property managers, municipalities)",
+        "Mortgage servicer payoff and lien release departments",
+        "Cargo claims and OS&D handling at brokerages and small carriers",
+        "Third-party COBRA administrators and continuation-coverage TPAs serving small groups"
+      ]
+    },
+    {
+      "pattern": "Local-only desktop as the differentiator rather than the compromise: in regulated small businesses, 'runs on your machine, sends nothing anywhere' beats a better-featured SaaS product and makes a free open-source base version credible",
+      "seen_in": [
+        "Independent pharmacy third-party reconciliation and PBM claw-backs"
+      ],
+      "transfers_to": [
+        "Behavioral health and therapy practice billing (SimplePractice / TherapyNotes ecosystem)",
+        "Hospital and clinic release-of-information (ROI) departments and their outsourced vendors",
+        "Independent legal nurse consultant (LNC) practices",
+        "Fiduciary and forensic accountants producing court accountings for litigation"
       ]
     }
   ]
