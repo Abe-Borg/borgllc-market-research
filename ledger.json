@@ -264,16 +264,17 @@
       "report": "reports/2026-08-08-calibration-metrology-in-house-gage-management-narrow-subspecialty.md",
       "top_opportunity": "CertCheck - calibration certificate intake and review assistant: parses the PDF certificates that arrive from outside labs into structured register fields (asset ID, cal date, next due, as-found/as-left, uncertainty, coverage factor, conformity statement, decision rule) and then runs the 6-10 point review nobody performs at volume - as-found out of tolerance, every individual range in spec, missing uncertainty or traceability statement, lab outside its accredited scope for that instrument and range, lab not on the approved list. Verified as an unsolved gap across the entire product category: every incumbent attaches the certificate as a blob and makes a human retype the metadata, and the industry's own answer (Digital Calibration Certificates in XML) requires supply-side adoption by every small regional lab. Anchored on the practitioner's own account - 'certificate arrives in post; technician takes one look, seems to be Ok, puts away in drawer, forgets it and does nothing' - and on AS9100 clause 7.1.5.2 ranking #3 of all clauses across 17,184 documented findings. Feeds the register rather than replacing it, so there is nothing to migrate.",
       "score": 47
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Veterinary practice administration and specialty referral coordination",
       "angle": "handoffs-and-qa",
-      "claimed_at": "2026-08-08T12:49:25Z",
-      "claim_id": "0f90c511"
+      "date": "2026-08-08",
+      "report": "reports/2026-08-08-veterinary-practice-admin-specialty-referral-handoffs-and-qa.md",
+      "top_opportunity": "Records Release Packet Assembler - per-recipient profile driven records packet assembly, page stamping, completeness check and disclosure log",
+      "score": 44
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -2578,6 +2579,60 @@
       "angle": "narrow-subspecialty",
       "source": "discovered",
       "note": "PTB/DKD XML standard is real but supply-side adoption is the bottleneck; a transition-services niche with a clear start and end."
+    },
+    {
+      "market": "Veterinary practice administration and specialty referral coordination",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Specialist and ER clinician day: case load, EMR documentation, estimate building; the receiving side of every handoff in this report and the buyer for most of its tooling."
+    },
+    {
+      "market": "Veterinary practice administration and specialty referral coordination",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "1,600 ER/specialty hospitals averaging 82 staff with 79% technician turnover - scheduling, credentialing, controlled-substance logs and estimate-to-invoice reconciliation are untouched."
+    },
+    {
+      "market": "Veterinary reference and diagnostic laboratories - requisition intake and specimen accessioning",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Receiving end of the submission problem: every lab publishes its own requisition and rejects incomplete history; accessioning is manual transcription at scale."
+    },
+    {
+      "market": "Veterinary teleradiology reading groups and submission QA",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "ACVR/ECVDI 2024 consensus sets explicit report and submission requirements and permits radiologists to decline service for missing history - a published standard with no tooling against it."
+    },
+    {
+      "market": "Pet insurance claims adjudication desks and pet insurance MGAs",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "7.6M pets insured on $6.2B premium growing ~19%/yr, with claims processed against 35,000 practices' non-standard invoices and free-text records."
+    },
+    {
+      "market": "Animal shelter and rescue medical records, transfer and adoption handoffs",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Same record-transfer problem with no PIMS budget, high volume, multi-organization transport chains and public-funding reporting obligations."
+    },
+    {
+      "market": "Veterinary compounding pharmacies and prescription intake verification",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Prescription management already quantified at 400-600 staff hours/yr per practice; the compounding pharmacy sits on the receiving side verifying VCPR, dose and species suitability."
+    },
+    {
+      "market": "Equine and food-animal ambulatory practice field operations",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Truck-based practice with no front desk: record capture, inventory and billing happen roadside; the JVIM referral satisfaction data that anchors this report is drawn from this population."
+    },
+    {
+      "market": "Veterinary PACS and imaging administration at multi-site hospital groups",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "DICOM is the one working standard in veterinary data exchange, which makes tag hygiene, study routing and retention a solvable and unowned problem."
     }
   ],
   "patterns": [
@@ -5266,6 +5321,88 @@
         "Premium audit and payroll classification consulting",
         "Flood mitigation grant administration (FMA/BRIC subapplicant benefit-cost analysis)",
         "Building analytics and FDD onboarding desks at master systems integrators"
+      ]
+    },
+    {
+      "pattern": "Per-recipient submission profile driving a pre-flight validation before the deliverable leaves",
+      "seen_in": [
+        "Veterinary practice administration and specialty referral coordination"
+      ],
+      "transfers_to": [
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "First Article Inspection (AS9102) report production at small aerospace machine shops",
+        "Federal construction contractors on NAVFAC / USACE projects - UFGS submittal register and eCMS compliance",
+        "Aerospace supplier quality clause library administration at machine shops and Tier 2 suppliers",
+        "Certified payroll and prevailing wage compliance service providers",
+        "Title abstracting and independent title search contractors"
+      ]
+    },
+    {
+      "pattern": "Inbound document pile to structured brief plus explicit gap list, every field carrying click-through provenance to its source page",
+      "seen_in": [
+        "Veterinary practice administration and specialty referral coordination"
+      ],
+      "transfers_to": [
+        "Small third-party medical billing companies (RCM service bureaus, 1-25 staff)",
+        "Healthcare credentialing service bureaus and Credentials Verification Organizations (CVOs)",
+        "Hospital and clinic release-of-information (ROI) departments and their outsourced vendors",
+        "Legal process outsourcing (LPO) vendors producing medical chronologies, deposition summaries and indexing for US firms",
+        "Public adjusting firms (policyholder-side property claims)",
+        "Mortgage post-closing QC and trailing document vendors",
+        "Freight factoring companies and their client onboarding/verification desks"
+      ]
+    },
+    {
+      "pattern": "Outbound deliverable aging queue against a promised turnaround, backed by a send-and-confirm ledger rather than a task list",
+      "seen_in": [
+        "Veterinary practice administration and specialty referral coordination"
+      ],
+      "transfers_to": [
+        "Court reporting and deposition services firms (transcript production and summary delivery)",
+        "Accredited calibration laboratories under 25 staff (ISO/IEC 17025 lab operations)",
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
+        "Independent specification writers and master-spec maintenance consultants",
+        "Third-party estimate writing services (Xactimate estimating desks)"
+      ]
+    },
+    {
+      "pattern": "Cross-vendor result extraction into one longitudinal, unit-normalized table with per-value provenance",
+      "seen_in": [
+        "Veterinary practice administration and specialty referral coordination"
+      ],
+      "transfers_to": [
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Calibration and metrology service providers / in-house gage management",
+        "Ready-mix concrete producer quality control departments",
+        "Asphalt plant producer quality control technicians",
+        "Property tax consulting and assessment appeal firms",
+        "Premium audit and payroll classification consulting"
+      ]
+    },
+    {
+      "pattern": "Identity normalization and manifest generation for binary artifact transfer, where internal metadata is the only link to the job",
+      "seen_in": [
+        "Veterinary practice administration and specialty referral coordination"
+      ],
+      "transfers_to": [
+        "UAS / drone mapping and reality-capture service providers",
+        "BAS graphics and floor-plan production vendors (outsourced graphics shops serving integrators)",
+        "Print brokers, trade printers and prepress service bureaus",
+        "CMM programming and inspection-data management at small machine shops"
+      ]
+    },
+    {
+      "pattern": "Loop-closure audit reconciling what was sent out against what came back, producing a counterparty response-time scorecard",
+      "seen_in": [
+        "Veterinary practice administration and specialty referral coordination"
+      ],
+      "transfers_to": [
+        "Prime contractor supplier cyber-compliance desks (supplier attestation collection)",
+        "Construction submittal, RFI, and closeout coordination (project engineer role)",
+        "Approved supplier list and supplier qualification administration at small manufacturers",
+        "Special process source approval administration at primes (D1-4426, EQI-011 style approved-processor lists)",
+        "Mortgage post-closing QC and trailing document vendors",
+        "Multi-state charitable solicitation registration compliance"
       ]
     }
   ]

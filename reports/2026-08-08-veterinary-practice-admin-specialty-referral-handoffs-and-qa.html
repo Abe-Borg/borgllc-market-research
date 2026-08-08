@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veterinary Practice Administration &amp; Specialty Referral Coordination — Handoffs and QA</title>
+<style>
+:root{
+  --ink:#1c1c1a; --muted:#5f5c55; --rule:#ded9cf; --bg:#faf8f4;
+  --panel:#f2eee6; --accent:#6b4f2a; --accentsoft:#8c7150;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  font-size:18px; line-height:1.72;
+  font-kerning:normal; text-rendering:optimizeLegibility;
+}
+.wrap{max-width:900px;margin:0 auto;padding:64px 32px 120px}
+header.doc{border-bottom:3px double var(--rule);padding-bottom:28px;margin-bottom:44px}
+header.doc .kicker{
+  font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accentsoft);
+  margin:0 0 14px;font-weight:600;
+}
+header.doc h1{font-size:2.15rem;line-height:1.22;margin:0 0 10px;font-weight:600;letter-spacing:-.01em}
+header.doc .sub{color:var(--muted);font-size:1rem;margin:0;font-style:italic}
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.005em}
+h1{font-size:2rem;line-height:1.25;margin:2.6em 0 .6em}
+h2{
+  font-size:1.5rem;margin:2.8em 0 .7em;padding-bottom:.32em;
+  border-bottom:1px solid var(--rule);
+}
+h3{font-size:1.18rem;margin:2.1em 0 .5em;color:#2f2a22}
+h4{font-size:1rem;margin:1.6em 0 .4em;color:var(--muted);
+   font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+   text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}
+p{margin:0 0 1.15em}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(107,79,42,.32)}
+a:hover{border-bottom-color:var(--accent);background:rgba(107,79,42,.06)}
+ul,ol{margin:0 0 1.25em;padding-left:1.5em}
+li{margin:.4em 0}
+li>ul,li>ol{margin:.4em 0}
+strong{font-weight:650;color:#141310}
+em{font-style:italic}
+hr{border:0;border-top:1px solid var(--rule);margin:3em 0}
+blockquote{margin:1.4em 0;padding:.2em 0 .2em 1.4em;border-left:3px solid var(--rule);color:var(--muted);font-style:italic}
+code{
+  font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  font-size:.86em;background:var(--panel);padding:.14em .38em;border-radius:3px;
+  border:1px solid var(--rule);
+}
+table{
+  border-collapse:collapse;width:100%;margin:1.6em 0 2em;
+  font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:.86rem;line-height:1.5;
+}
+thead th{
+  background:var(--panel);text-align:left;font-weight:650;color:#2f2a22;
+  border-bottom:2px solid var(--accentsoft);
+  padding:10px 11px;vertical-align:bottom;
+}
+tbody td{border-bottom:1px solid var(--rule);padding:9px 11px;vertical-align:top}
+tbody tr:nth-child(even){background:rgba(242,238,230,.45)}
+tbody tr:hover{background:rgba(140,113,80,.09)}
+th[align="center"],td[align="center"]{text-align:center}
+table td:first-child{font-weight:600}
+footer.doc{
+  margin-top:4em;padding-top:22px;border-top:3px double var(--rule);
+  color:var(--muted);font-size:.85rem;font-style:italic;
+}
+@media (max-width:640px){
+  body{font-size:16.5px}
+  .wrap{padding:40px 18px 80px}
+  header.doc h1{font-size:1.6rem}
+  table{font-size:.78rem}
+  thead th,tbody td{padding:7px 7px}
+}
+@media print{
+  body{background:#fff;font-size:11pt}
+  .wrap{max-width:none;padding:0}
+  a{color:var(--ink);border:0}
+  h2{page-break-after:avoid}
+  table{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="doc">
+  <p class="kicker">Borg LLC &middot; Market Research Catalog</p>
+  <h1>Veterinary Practice Administration &amp; Specialty Referral Coordination</h1>
+  <p class="sub">Angle: handoffs and QA &middot; 8 August 2026 &middot; Claim 0f90c511</p>
+</header>
+<h2 id="0-cycle-header">0. Cycle header</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Market claimed</strong></td>
+<td>Veterinary practice administration and specialty referral coordination</td>
+</tr>
+<tr>
+<td><strong>Angle claimed</strong></td>
+<td>handoffs-and-qa</td>
+</tr>
+<tr>
+<td><strong>Claim ID</strong></td>
+<td><code>0f90c511</code></td>
+</tr>
+<tr>
+<td><strong>Date</strong></td>
+<td>2026-08-08</td>
+</tr>
+<tr>
+<td><strong>Report path</strong></td>
+<td><code>reports/2026-08-08-veterinary-practice-admin-specialty-referral-handoffs-and-qa.md</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-this-assignment-over-the-others-available">Why this assignment over the others available</h3>
+<p>At claim time the ledger held 33 completed reports and 385 open backlog assignments across 269 markets, of which 239 markets had zero completed entries. Selection followed the stated preference order:</p>
+<p><strong>(a) Breadth first.</strong> Companion-animal veterinary medicine is a sector the catalog has never touched. The nearest completed neighbour is <em>Dental and specialty clinic practice administration</em> (2026-08-08, handoffs-and-qa) — human dentistry. Everything else in the healthcare cluster (medical billing, home care/EVV, independent pharmacy) is human-side and payer-driven. Veterinary medicine is structurally different in the one way that matters most for this catalog: <strong>HIPAA does not apply</strong>, there is no CMS, no ICD-10 mandate, no HITECH incentive, and no TEFCA. The regulatory scaffolding that forced human healthcare into interoperability is simply absent, which means the manual workarounds are still in place and still visible.</p>
+<p><strong>(b) Evidence availability.</strong> This market has an unusually good primary-source base for a research cycle: a peer-reviewed referral-satisfaction survey with hard turnaround numbers (<a href="https://academic.oup.com/jvim/article/32/2/822/8449637">JVIM, n=187 rDVMs + 92 specialists</a>); a brand-new professional guideline published specifically about this handoff (<a href="https://www.aaha.org/resources/2025-aaha-referral-guidelines/">2025 AAHA Referral Guidelines</a>); a vendor-independent quantified productivity study (<a href="https://www.prnewswire.com/news-releases/groundbreaking-idexx-study-reveals-opportunities-to-increase-veterinary-practice-productivity-301750165.html">IDEXX, n=786</a>); a sector census of the receiving side (<a href="https://info.instinct.vet/state-of-er-specialty-veterinary-care-2024">Instinct, ~1,600 ER/specialty hospitals</a>); and an unusually candid independent technical analysis of why the software doesn't connect (<a href="https://priorknowledgeandpractice.substack.com/p/the-pims-integration-problem-is-real">Prior Knowledge &amp; Practice</a>).</p>
+<p><strong>(c) Angle diversity.</strong> <code>handoffs-and-qa</code> was the least-covered angle in the ledger (7 completed, versus 10 for core-practitioner-workflow and 8 each for the other two). This market's defining problem <em>is</em> the handoff, so the angle is not a stretch fit.</p>
+<p><strong>Assignments remaining in backlog after this claim:</strong> 384 (before this report's discovered additions).</p>
+<hr />
+<h2 id="1-market-examined">1. Market examined</h2>
+<h3 id="the-two-sides-of-the-handoff">The two sides of the handoff</h3>
+<p>This report examines a single transaction — the transfer of a patient, and the record that describes it, between two independent veterinary businesses — from both ends.</p>
+<p><strong>Side A — the referring practice (rDVM).</strong> A general/primary-care companion animal clinic. The US has roughly 30,000–35,000 companion animal practices (<a href="https://priorknowledgeandpractice.substack.com/p/the-pims-integration-problem-is-real">Prior Knowledge &amp; Practice</a> cites ~30,000; <a href="https://insurnest.com/blog/veterinary-invoice-standardization-pet-insurance-claims/">Insurnest</a> cites 35,000). Typical staffing is 1–6 veterinarians plus 4–20 support staff (technicians/nurses, veterinary assistants, and client service representatives — "CSRs" — who are the front desk). The person who actually executes a referral is usually a CSR or a veterinary technician, not the veterinarian.</p>
+<p><strong>Side B — the receiving hospital (specialty / emergency).</strong> As of 2024 there were approximately <strong>1,600 emergency, specialty and urgent-care veterinary centers</strong> in the US, employing an estimated <strong>131,200 people, averaging 82 employees per facility</strong>; 42% corporate-owned, 32.5% privately owned, 18.6% partnership/group (<a href="https://info.instinct.vet/state-of-er-specialty-veterinary-care-2024">Instinct, <em>State of ER &amp; Specialty Veterinary Care 2024</em></a>). 51.3% run 6–20 full-time veterinarians. These hospitals employ a dedicated job title — <strong>referral coordinator</strong> or <strong>referral specialist</strong> — whose entire function is managing this handoff.</p>
+<p>There are <strong>20,636 active board-certified veterinary diplomates</strong> in the US as of 31 December 2025, of whom the referral-relevant clinical colleges dominate: ACVIM 4,537 (small animal internal medicine 1,957; oncology 656; neurology 557; cardiology 497) and ACVS 2,588 (small animal 1,167) (<a href="https://www.avma.org/resources-tools/reports-statistics/veterinary-specialists">AVMA</a>).</p>
+<p><strong>Side C — the third parties who also demand records.</strong> Pet insurers, reference and histopathology laboratories, teleradiology reading groups, and (increasingly) online pharmacies. North American pet insurance covered <strong>7.6 million pets at end-2025 on $6.2B gross written premium, up 8.5% in pets and 19.4% in premium year over year</strong>, though still only ~4.3% of pets (<a href="https://naphia.org/industry-data/">NAPHIA</a>; <a href="https://www.insurancebusinessmag.com/us/news/breaking-news/naphia-only-4-27-of-us-pets-insured-despite-decade-of-doubledigit-growth-580314.aspx">Insurance Business</a>). Every one of those policies is a potential records request landing on a practice's front desk.</p>
+<h3 id="organization-size-most-likely-to-benefit">Organization size most likely to benefit</h3>
+<p>The sweet spot for the tools proposed here is:</p>
+<ul>
+<li><strong>rDVM side:</strong> 1–4 doctor independent practices and small 2–8 location groups, where nobody has a full-time records person and the referral packet is assembled between appointments.</li>
+<li><strong>Specialty side:</strong> single-site and 2–5 site specialty/ER hospitals with 1–3 referral coordinators — large enough to feel the volume, too small to fund a custom integration project or to be a priority customer for IDEXX.</li>
+<li><strong>Explicitly outside scope:</strong> the large consolidators (Ethos/NVA, BluePearl/Mars, VEG, Thrive) who will build or buy platform solutions, and academic teaching hospitals who mostly already run rVetLink.</li>
+</ul>
+<h3 id="type-of-user">Type of user</h3>
+<p>Non-technical. The primary user is a CSR, referral coordinator, or veterinary technician earning around $45–60k (technician average ~$57,000 per the Instinct report), working on a Windows desktop, comfortable with a PIMS and Outlook and a scanner, and with essentially zero tolerance for setup friction. The secondary user is the practice owner or hospital administrator who signs off. Any tool that requires an IT project is dead on arrival.</p>
+<hr />
+<h2 id="2-how-the-work-is-performed">2. How the work is performed</h2>
+<h3 id="21-the-outbound-referral-rdvm-specialist">2.1 The outbound referral (rDVM → specialist)</h3>
+<ol>
+<li>
+<p><strong>The decision.</strong> A general practitioner determines a case exceeds their scope — a mass needing oncology, a cruciate needing surgery, a seizure needing neurology, a refractory GI case needing internal medicine. The 2025 AAHA Referral Guidelines formalize three modes: general collaborative conversation, professional-to-professional consultation (no transfer of care), and hands-on referral (formal transfer) (<a href="https://www.dvm360.com/view/aaha-releases-2025-guidelines-for-effective-veterinary-specialist-referrals">dvm360 summary</a>).</p>
+</li>
+<li>
+<p><strong>The client conversation.</strong> The GP explains why, sets cost expectations, and warns that the specialist may repeat diagnostics. AAHA specifically calls out that primary teams often <em>cannot</em> give accurate estimates before specialist assessment, and recommends normalizing that conversation.</p>
+</li>
+<li>
+<p><strong>Choosing the destination and learning its rules.</strong> Every receiving hospital has different requirements, and they are not uniform even <em>within</em> a hospital. UF's Small Animal Hospital, for example, <strong>requires</strong> a referral letter plus supporting documentation for Dentistry, Infectious Disease, Internal Medicine, Medical Oncology, Radiation Oncology and Surgical Oncology, but treats it as optional for Cardiology, Dermatology, Neurology and Ophthalmology, and requires a separate appointment-request form for non-emergent Orthopedic Surgery (<a href="https://smallanimal.vethospital.ufl.edu/contact-us/referring-veterinarians/">UF</a>). Submission channels are equally scattered: Integrity Veterinary Center runs <em>two</em> separate email addresses — <code>referrals@</code> for the case and <code>records@</code> for the documents — plus a phone line and a web form with a 40 MB per-file cap (<a href="https://integrityvetcenter.com/for-veterinarians/how-referrals-work/">Integrity</a>).</p>
+</li>
+<li>
+<p><strong>Assembling the packet.</strong> A CSR or technician exports the patient history from the PIMS — AVImark (25.4% share), IDEXX Cornerstone (19.5%), ezyVet (16.5%), and a long tail of 12+ others making up 38.6% (<a href="https://priorknowledgeandpractice.substack.com/p/the-pims-integration-problem-is-real">Prior Knowledge &amp; Practice</a>) — usually as a PDF or a print-to-PDF of the chart. They then hunt down the attachments: reference lab PDFs (IDEXX, Antech), in-house analyzer printouts, radiographs, prior specialist reports that were themselves received as faxes and scanned back in. Radiographs go separately, in DICOM, if the receiving hospital can take them — UF states "Digital radiographs are accepted DICOM format" and offers a fax line for paper items.</p>
+</li>
+<li>
+<p><strong>Transmission.</strong> Fax, email attachment, portal upload, or a burned CD/USB handed to the client. Fax remains widespread: it is described as "the most notorious offender" in a workflow analysis of inter-clinic record transfer (<a href="https://www.puppilot.co/blog/from-chaos-to-continuity-automating-health-record-transfers-between-clinics">PupPilot</a>), and VitusVet's practitioner-facing critique lists fax's failure modes as: doesn't work after hours, staff forget to send, illegible copies, and excessive time cost on both ends (<a href="https://vitusvet.com/blog/five-reasons-the-veterinary-referral-process-is-broken/">VitusVet</a>).</p>
+</li>
+<li>
+<p><strong>What actually arrives.</strong> Often nothing, or not in time. VitusVet's canonical example: a client calls an oncologist Monday, gets a Thursday appointment, and the records "STILL have not arrived" on Thursday. PetVet Magazine, summarizing specialists and ER doctors, reports that "the most common frustration expressed by specialists and emergency doctors was the lack of complete, legible records" (<a href="https://digital.petvetmagazine.com/issue/february-march-2023/5-ways-to-streamline-referrals-for-successful-collaborative-care/">PetVet Magazine</a>).</p>
+</li>
+</ol>
+<h3 id="22-intake-at-the-specialty-hospital">2.2 Intake at the specialty hospital</h3>
+<p>The referral coordinator's posted duties are the workflow: answering incoming calls and triaging routine vs. emergency; scheduling consults, procedures and rechecks; <strong>"gathering and maintaining accurate client and patient information"</strong>; coordinating communication between clients, specialists, technicians and leadership; providing estimates; and acting as liaison to the referring veterinarian (<a href="https://careers.thrivepetcare.com/jobs/17592341-veterinary-referral-coordinator">Thrive Pet Healthcare posting</a>). Notably, the posting names <strong>no software at all</strong> for the records-handling portion of the job.</p>
+<p>In practice, intake means: open the <code>records@</code> inbox and the fax queue; identify which of 40 pages belongs to which patient; read a narrative chart written in another practice's shorthand; extract signalment, presenting complaint, current medications and doses, relevant lab values with dates, and what imaging has already been done; retype the essentials into the receiving hospital's own EMR (Instinct, ezyVet, Cornerstone); attach the PDF; and call the rDVM back for whatever is missing.</p>
+<p>Two independently reported figures frame the cost of that retyping. Duplicate data entry across a single patient visit is estimated at <strong>15–30 minutes per visit</strong> across four or five separate entry points (<a href="https://digitail.com/blog/5-hidden-time-drains-stealing-hours-from-your-vet-team/">Digitail</a>). And manual transcription of clinical data carries a <strong>5–15% error rate</strong>, with one cited study finding a <strong>73% discrepancy rate in manually entered lab results</strong> (<a href="https://www.puppilot.co/blog/veterinary-data-interoperability-the-complete-guide-to-connecting-pims-labs-insurers">PupPilot</a>) — a figure I flag as tentative because the underlying study is not identified, but the direction is consistent with everything else.</p>
+<h3 id="23-the-return-leg-specialist-rdvm">2.3 The return leg (specialist → rDVM)</h3>
+<p>This is where the measurable failure lives. In the JVIM referral satisfaction study, the <strong>average wait for the referring veterinarian to receive a discharge statement was 9 days — median 2, range 0 to 365</strong> (<a href="https://academic.oup.com/jvim/article/32/2/822/8449637">JVIM</a>). Satisfaction with discharge turnaround scored 68.33/100, well below satisfaction with quality of care (88.40), and the delay was negatively associated with overall satisfaction. Poor communication ranked as the third-largest barrier to referral named by referring veterinarians (15.5%), behind cost (26.4%) and lack of rDVM involvement (16.9%).</p>
+<p>Practitioner-facing writing describes the same gap from the GP's chair: <em>"When a patient is referred to a specialist, your clinic sends the records. But do you get the specialist's SOAP notes and diagnostic test results back? Often not, or only after repeated calls"</em> (<a href="https://www.puppilot.co/blog/from-chaos-to-continuity-automating-health-record-transfers-between-clinics">PupPilot</a>). VitusVet notes that most referring vets receive only a discharge fax, with no visibility into patient status during the stay.</p>
+<p>This matters commercially, not just clinically. AAHA cites Collaborative Care Coalition research that client perceptions were <strong>six times more likely to improve after a referral</strong> when the primary care team stayed engaged. For a specialty hospital, the return leg <em>is</em> the marketing channel — and it is currently averaging nine days.</p>
+<h3 id="24-the-parallel-handoffs">2.4 The parallel handoffs</h3>
+<p>The same practice, the same front desk, and often the same person handles three more outbound document flows:</p>
+<ul>
+<li><strong>Diagnostic lab and histopathology submissions.</strong> Every reference lab and university diagnostic lab has its own requisition form (see e.g. <a href="https://vetmed.iastate.edu/vpath/wp-content/uploads/Histopath-submission-Master-080520.pdf">Iowa State</a>, <a href="https://www.vet.cornell.edu/sites/default/files/2024-11/AHDC-WEB-1001%20Histopathology%20Submission%20Form_V1.pdf">Cornell AHDC</a>). A histopath submission with no clinical history produces a report the clinician can't act on.</li>
+<li><strong>Teleradiology.</strong> The 2024 ACVR/ECVDI consensus statement specifies the minimum report header: client name, patient name/indicator, study type, study date and time, study location, report requester, report status, and <em>"relevant historical and clinical details, including specific clinical queries."</em> It states plainly that when pertinent information is absent and cannot easily be obtained, the radiologist should "seek it, provide the best possible interpretation, or <strong>decline service</strong>" (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11649853/">ACVR/ECVDI, PMC</a>). Teleradiology SLAs typically run 2–4h routine / 1–2h urgent for radiographs and 4–8h for CT (<a href="https://www.asteris.com/blog/blog-veterinary-teleradiology-turnaround-time-sla/">Asteris</a>) — turnaround the practice pays for and then squanders by submitting an incomplete history.</li>
+<li><strong>Pet insurance records requests.</strong> Insurers want the <em>full</em> record: clear owner and pet identification, complete SOAP notes rather than after-visit summaries, and <strong>actual numerical lab values with reference ranges</strong> rather than "CBC normal," because they are looking for pre-existing conditions (<a href="https://www.lemonade.com/pet/explained/pet-insurance-optimized-medical-records/">Lemonade</a>). Submission is by email or fax with a policy number, and "a single digit error can delay processing."</li>
+</ul>
+<h3 id="25-the-software-situation">2.5 The software situation</h3>
+<p>There is a real product in this space: <strong>rVetLink</strong> (IDEXX). It gives a specialty hospital a branded referral portal, lets rDVMs submit cases from phone or desktop, auto-uploads reports/results/imaging from integrated PIMS, and pushes status notifications. Referring practices pay nothing; the specialty hospital pays a setup fee plus monthly subscription. It integrates directly with ezyVet, Cornerstone, DVMAX and ImproMed Infinity (<a href="https://software.idexx.com/products/rvetlink">IDEXX</a>).</p>
+<p>Its limits define the opportunity. It solves the transaction between <em>one</em> specialty hospital and the rDVMs who use <em>that hospital's</em> portal. It does nothing for a GP practice that refers to six different hospitals, four labs and two teleradiology groups — each with a different portal, form and requirement set. And on the receiving side it does not read an inbound 40-page fax from a non-integrated practice, which is the actual daily work.</p>
+<p>The structural reason nothing better exists is well documented. Around 15 PIMS platforms with meaningful share sit beneath 140+ point solutions, a theoretical integration surface of 2,100+ pairs. APIs are "closed, undocumented, or fee-gated"; schemas don't align (<code>patient_name_first</code>/<code>patient_name_last</code> vs. <code>patient_full_name</code>); and above both, the semantic layer is unsolved — "Vomiting" vs "Emesis" vs "V+", "IMHA" vs "Immune-mediated hemolytic anemia", "DM" vs "Diabetes" (<a href="https://priorknowledgeandpractice.substack.com/p/the-three-layers-of-veterinary-software">Prior Knowledge &amp; Practice, layers</a>). Human medicine bought its way out with $30B of HITECH incentives against a $10–13B EHR market; the entire veterinary PIMS market is <strong>$200–400M/year</strong>. Nobody is coming to fix this with a platform. <strong>85% of practices say their software does not integrate well with their PIMS</strong> (<a href="https://www.prnewswire.com/news-releases/groundbreaking-idexx-study-reveals-opportunities-to-increase-veterinary-practice-productivity-301750165.html">IDEXX study, n=786</a>).</p>
+<p>Standards exist but are thin: VetXML/VetEnvoy is real but UK-centric (<a href="http://www.vetxml.co.uk/en/about-the-consortium/">VetXML Consortium</a>); VeNom coding and a SNOMED-CT veterinary extension exist but adoption is inconsistent (<a href="http://venomcoding.org/">VeNom</a>); DICOM is the one genuinely working standard because it came from human radiology. An open-source PIMS, <a href="https://openvpm.com/">OpenVPM</a> (AGPLv3, REST API, $79/location/month managed tier), has appeared explicitly because "your data is locked in."</p>
+<hr />
+<h2 id="3-most-important-problems-ranked">3. Most important problems, ranked</h2>
+<h3 id="p1-the-inbound-referral-packet-must-be-read-by-a-human-before-it-is-usable">P1 — The inbound referral packet must be read by a human before it is usable</h3>
+<p><strong>Who:</strong> Referral coordinators, intake technicians and specialists at ER/specialty hospitals.
+<strong>When:</strong> Every referred case. At ~1,600 hospitals averaging 82 staff, this is a continuous, all-day activity.
+<strong>Currently handled by:</strong> A person opening a PDF or fax, reading someone else's narrative, and retyping signalment, history, medications, and lab values into the receiving EMR.
+<strong>Why inadequate:</strong> It is the single largest retyping task in the transaction, it is where transcription error enters the clinical record, and it is unskilled work being done by clinically-trained staff. Duplicate data entry is estimated at 15–30 min per patient visit across all entry points; manual clinical transcription runs 5–15% error.
+<strong>Frequency:</strong> Continuous.
+<strong>Cost:</strong> For a hospital taking 30 referrals/day, even 10 minutes of extraction per case is 5 staff-hours/day — roughly a full-time position, in a sector where 78% report staffing shortages and 79.3% report technician turnover.
+<strong>Evidence:</strong> Instinct sector census; Digitail time-drain analysis; PupPilot; Thrive job posting (records-gathering is an explicit duty with no named software).
+<strong>Confidence:</strong> High on existence and mechanism; medium on the per-case minute count.</p>
+<h3 id="p2-the-return-report-reaches-the-referring-vet-late-or-not-at-all">P2 — The return report reaches the referring vet late, or not at all</h3>
+<p><strong>Who:</strong> Referring general practitioners; secondarily the specialty hospital, which loses referral volume.
+<strong>When:</strong> After every referral episode and every ER visit.
+<strong>Currently handled by:</strong> A specialist dictating or typing a discharge/consult letter when they get to it, then someone faxing or emailing it. Whether it arrived is generally not tracked.
+<strong>Why inadequate:</strong> The measured average is <strong>9 days</strong> (median 2, range 0–365). The GP is fielding client questions about a case they have no report on. AAHA's headline finding is that continued rDVM engagement makes positive client perception six times more likely — impossible when the GP is uninformed.
+<strong>Frequency:</strong> Every case.
+<strong>Cost:</strong> Directly measurable in referral-source retention. Satisfaction with discharge timeliness scored 68.33 vs. 88.40 for quality of care — the gap is entirely administrative, and 15.5% of rDVMs name poor communication as a top barrier to referring at all.
+<strong>Evidence:</strong> JVIM (n=279 total respondents); AAHA 2025 guidelines; VitusVet; PupPilot.
+<strong>Confidence:</strong> High. The JVIM population is equine, which is a genuine limitation — but the small-animal practitioner literature describes the identical failure qualitatively, and the AAHA guidelines were written in 2025 specifically because the problem persists.</p>
+<h3 id="p3-records-requests-from-insurers-new-clinics-and-clients-are-unbounded-manual-assembly">P3 — Records requests from insurers, new clinics and clients are unbounded manual assembly</h3>
+<p><strong>Who:</strong> CSRs and practice managers at general practices, plus specialty hospitals.
+<strong>When:</strong> Growing with insurance penetration — 7.6M insured pets, +8.5% YoY.
+<strong>Currently handled by:</strong> Export from PIMS, hunt for attachments, print/scan, fax or email with a policy number on a cover sheet.
+<strong>Why inadequate:</strong> What insurers actually need (complete SOAP notes; numerical lab values with reference ranges; unambiguous pet and owner identification) is systematically different from what a PIMS export produces (after-visit summaries, "CBC normal"). The consequence lands on the insurer and bounces back as another request: <strong>35–45% of pet insurance claims require manual review</strong>, manual claim processing costs <strong>$40–60 vs $25–36</strong>, resolution takes <strong>15–30 days vs 3–7</strong>, and error rates run <strong>12–18% vs 2–5%</strong>. Scanned/faxed documents drop OCR accuracy to <strong>60–70%</strong> against 92–97% for structured formats.
+<strong>Frequency:</strong> Daily at any practice with insured clients.
+<strong>Cost/risk:</strong> Beyond staff time, this is a compliance surface. HIPAA does not apply to veterinary records; state practice acts do, governing content, retention (CA 3 years, TX 5, NY 3, FL 3; AVMA recommends ≥5 where silent), release authorization and confidentiality. Releasing the wrong client's pages — a real risk when working from scanned fax piles — is a state-board matter.
+<strong>Evidence:</strong> Insurnest; Lemonade; NAPHIA; co.vet records-law survey; AccountableHQ.
+<strong>Confidence:</strong> High on the requirement mismatch and the regulatory frame. <strong>Medium-low on the Insurnest percentages</strong> — that is a vendor blog with no cited methodology, and the figures should be treated as directional, not as a basis for pricing.</p>
+<h3 id="p4-outbound-submissions-to-labs-radiologists-and-hospitals-fail-their-recipients-requirements-before-they-are-sent">P4 — Outbound submissions to labs, radiologists and hospitals fail their recipient's requirements before they are sent</h3>
+<p><strong>Who:</strong> GP practices sending to any external reader.
+<strong>When:</strong> Every histopath submission, teleradiology study, and referral.
+<strong>Currently handled by:</strong> Paper or PDF forms per recipient, filled from memory, with the clinical history section frequently left thin or blank.
+<strong>Why inadequate:</strong> The recipient's own standards say what is required, and the recipient is entitled to refuse. ACVR/ECVDI: when pertinent clinical information is missing and cannot be obtained, the radiologist may "decline service." A histopath report without history is often non-diagnostic, which means a repeat biopsy — a second anesthesia on the patient and a second bill to a client already unhappy.
+<strong>Frequency:</strong> Multiple per week at a typical GP practice.
+<strong>Cost:</strong> A wasted teleradiology fee plus a lost 2–4h turnaround window; for histopath, the cost of a repeat procedure.
+<strong>Evidence:</strong> ACVR/ECVDI consensus (PMC, open access); lab submission form specimens; UF/Integrity per-service requirement variation.
+<strong>Confidence:</strong> High on the requirements; medium on failure frequency, which I could not quantify from public sources.</p>
+<h3 id="p5-prior-diagnostics-arrive-as-an-unstructured-pile-so-trends-are-invisible-at-the-moment-of-decision">P5 — Prior diagnostics arrive as an unstructured pile, so trends are invisible at the moment of decision</h3>
+<p><strong>Who:</strong> Specialists receiving a chronic case.
+<strong>When:</strong> Any referral with a history — most internal medicine, oncology and nephrology cases.
+<strong>Currently handled by:</strong> The specialist flips through PDFs from IDEXX, Antech, in-house Abaxis/Heska and a prior specialist, each with a different layout, and mentally reconstructs the trend.
+<strong>Why inadequate:</strong> It is precisely the task computers do well and humans do badly, and getting it wrong means repeating diagnostics — which AAHA specifically flags as a referral failure mode and instructs teams to document against.
+<strong>Frequency:</strong> Most non-trivial referrals.
+<strong>Cost:</strong> Duplicate diagnostics billed to the client, plus specialist time (the scarcest resource in the transaction) spent on clerical reconstruction.
+<strong>Evidence:</strong> AAHA 2025 (documenting completed/pending tests to avoid duplication); interoperability analyses on format fragmentation.
+<strong>Confidence:</strong> Medium-high.</p>
+<h3 id="p6-medication-lists-cross-the-boundary-as-free-text-and-must-be-reconciled-by-hand">P6 — Medication lists cross the boundary as free text and must be reconciled by hand</h3>
+<p><strong>Who:</strong> Receiving clinicians.
+<strong>When:</strong> Every transfer of care.
+<strong>Currently handled by:</strong> Reading the med list out of a narrative and re-deriving mg/kg from a weight that may be stale.
+<strong>Why inadequate:</strong> Veterinary free-text notes are documented as hostile to automated extraction — local shorthand ("bilat. ear," "PU/PD query Cushing's," "?IBD"), hedging ("I suspect we may be looking at early-stage otitis"), and procedures buried in narrative. Reported search sensitivity for diagnoses in free text ranges from <strong>33% to 98%</strong>, and accuracy can fall to <strong>60%</strong> on hard free-text coding tasks (<a href="https://tandemhealth.ai/resources/knowledge/why-veterinary-free-text-notes-break-automated-coding">Tandem Health</a>).
+<strong>Frequency:</strong> Every case.
+<strong>Cost/risk:</strong> Direct patient-safety and professional-liability exposure. This is also the problem where AI is <em>most</em> justified and <em>least</em> trustworthy — see the design notes in §4.
+<strong>Confidence:</strong> High on the difficulty; the same evidence that motivates the tool constrains how it may be built.</p>
+<h3 id="p7-imaging-transfer-is-a-separate-badly-labelled-channel">P7 — Imaging transfer is a separate, badly-labelled channel</h3>
+<p><strong>Who:</strong> Both sides.
+<strong>When:</strong> Any referral involving radiographs, CT or MRI.
+<strong>Currently handled by:</strong> DICOM on CD/USB, a vendor cloud link, or — worst case — JPEGs pasted into an email.
+<strong>Why inadequate:</strong> DICOM is the one working standard in the stack, but veterinary DICOM tag hygiene is poor: patient name populated with the owner's surname, species/breed absent or in the wrong tag, study description blank. Recipients then can't match the study to the case. Portals impose file-size caps (Integrity: 40 MB) that a CT study blows through instantly.
+<strong>Frequency:</strong> Common.
+<strong>Cost:</strong> Repeat imaging, or a specialist reading a study they cannot confirm belongs to the patient in front of them.
+<strong>Confidence:</strong> Medium. The mechanism is well established from human radiology and from the existence of a whole category of veterinary PACS products; I did not find a veterinary-specific quantification of tag-error rates. Flagged for validation.</p>
+<hr />
+<h2 id="4-application-opportunities">4. Application opportunities</h2>
+<p>Nine concepts. All are deliberately <em>file-in / file-out</em> rather than integrations, because the integration surface is provably hostile and any tool depending on PIMS APIs inherits a five-year problem.</p>
+<hr />
+<h3 id="a1-records-release-packet-assembler-relayvet">A1 — Records Release Packet Assembler ("RelayVet")</h3>
+<ul>
+<li><strong>Working title:</strong> Records Release Packet Assembler</li>
+<li><strong>Intended user:</strong> CSR or practice manager at a 1–4 doctor GP practice; records clerk at a specialty hospital.</li>
+<li><strong>Problem solved:</strong> Assembling a records release that satisfies the specific recipient's requirements on the first attempt, and logging the disclosure.</li>
+<li><strong>Current workflow:</strong> Export chart from PIMS → hunt down lab PDFs and imaging reports in a shared folder → print/scan/merge in whatever order they land → attach to email or fax with a handwritten cover sheet → no record kept of what was sent to whom.</li>
+<li><strong>Proposed workflow:</strong> Drop the PIMS export and attachments into the tool → pick a <strong>recipient profile</strong> (Trupanion, Lemonade, Nationwide, "referral hospital — surgery", "new clinic — client transfer") → the tool filters to the requested date range, merges into one paginated, bookmarked PDF with a generated index, stamps patient/owner/policy identifiers on <strong>every page</strong>, runs a completeness check against the profile, and writes a disclosure log entry.</li>
+<li><strong>Inputs:</strong> PDF exports, lab PDFs, image files; a recipient profile (YAML/JSON); date range; identifiers.</li>
+<li><strong>Outputs:</strong> One indexed PDF; a completeness report listing what the profile requires and what wasn't found; a CSV disclosure log line (date, requester, authorization basis, date range, page count).</li>
+<li><strong>Essential features:</strong> Profile library; page stamping; bookmark/index generation; date filtering; completeness checklist; disclosure log; "pages that mention a different patient name" warning (a cheap regex guard against the classic fax-pile leak).</li>
+<li><strong>Excluded from v1:</strong> PIMS integration; e-fax sending; OCR of handwritten notes; e-signature; cloud storage.</li>
+<li><strong>AI:</strong> <em>Optional.</em> Everything above is conventional PDF work. AI adds value only in one place — checking whether an included visit note actually contains all four SOAP elements rather than just an after-visit summary. Ship v1 without it.</li>
+<li><strong>Why not a spreadsheet:</strong> The artifact is a PDF, not a table. A spreadsheet cannot merge, stamp, bookmark or verify.</li>
+<li><strong>Complexity:</strong> Medium. <strong>Learning:</strong> ~20 minutes.</li>
+<li><strong>Value:</strong> Eliminates the bounce-back cycle. If the directional Insurnest figures hold, each avoided bounce saves the practice a second assembly and the client 1–3 weeks of claim delay.</li>
+<li><strong>Risks/regulatory:</strong> State practice acts govern release authorization, confidentiality and retention (CA 3y, TX 5y, NY 3y, FL 3y; AVMA ≥5y where silent). HIPAA does not apply, which lowers the compliance bar but does <em>not</em> remove state-board exposure. The tool must never auto-transmit; it assembles, a human sends. Must run fully local — records must not leave the practice.</li>
+<li><strong>Substitutes:</strong> Adobe Acrobat plus discipline; PIMS "print record" functions; ScanSTAT-style ROI outsourcing (priced for human medicine).</li>
+<li><strong>Why still attractive:</strong> No substitute encodes <em>per-recipient requirements</em>, and none produces a disclosure log. The profile library is the moat and it is community-maintainable.</li>
+<li><strong>Paid customization:</strong> High — a practice group's own profiles, letterhead, insurer list, and PIMS export quirks.</li>
+</ul>
+<hr />
+<h3 id="a2-inbound-referral-brief-generator">A2 — Inbound Referral Brief Generator</h3>
+<ul>
+<li><strong>Intended user:</strong> Referral coordinator / intake technician at a specialty or ER hospital.</li>
+<li><strong>Problem solved:</strong> Turning a 40-page inbound fax or PDF into a one-page structured case brief plus an explicit list of what's missing.</li>
+<li><strong>Current workflow:</strong> Read the whole thing; retype the essentials; call the rDVM for gaps; hope nothing was missed.</li>
+<li><strong>Proposed workflow:</strong> Drop the inbound PDF in → OCR if needed → extract into a fixed schema (signalment, weight + date of weight, presenting complaint, problem list, current medications with dose/route/frequency, most recent lab panel with dates, imaging performed, known allergies/adverse reactions, rDVM name and callback) → render a one-page brief with <strong>every extracted field hyperlinked to its source page</strong> → render a second page listing required-but-absent fields.</li>
+<li><strong>Inputs:</strong> PDF/TIFF (native or scanned).</li>
+<li><strong>Outputs:</strong> One-page HTML/PDF brief with page-level provenance; a gap list; a structured JSON/CSV for optional paste into the EMR.</li>
+<li><strong>Essential features:</strong> OCR fallback; schema extraction; <strong>click-through to source page for every field</strong>; gap list; confidence flags on low-certainty extractions.</li>
+<li><strong>Excluded from v1:</strong> Writing into the EMR; diagnosis coding; any clinical interpretation or recommendation.</li>
+<li><strong>AI:</strong> <em>Needed.</em> This is the one concept where conventional parsing genuinely fails — narrative charts, local shorthand, hedged language. But the free-text literature (33–98% sensitivity; ~60% accuracy on hard tasks) is the design constraint, not a footnote. <strong>The tool must be built as an assistive index into the source document, never as a replacement for it.</strong> Every field shows its provenance; nothing is presented as authoritative.</li>
+<li><strong>Why not a spreadsheet:</strong> The input is unstructured prose.</li>
+<li><strong>Complexity:</strong> Medium. <strong>Learning:</strong> ~30 minutes, most of it spent learning to distrust it appropriately.</li>
+<li><strong>Value:</strong> If it saves 8 of 12 minutes per case at 30 cases/day, that is ~4 staff-hours/day.</li>
+<li><strong>Risks:</strong> Extraction error entering a clinical record is the central hazard, hence provenance-first design and a hard rule against auto-writing to the EMR. Local or private-endpoint inference only; a fax pile contains other people's client data.</li>
+<li><strong>Substitutes:</strong> rVetLink (only for integrated, portal-using rDVMs); human labour.</li>
+<li><strong>Paid customization:</strong> High — house schema, EMR-specific export format, specialty-specific field sets (oncology vs. cardiology need different summaries).</li>
+</ul>
+<hr />
+<h3 id="a3-rdvm-report-aging-send-ledger">A3 — rDVM Report Aging &amp; Send Ledger</h3>
+<ul>
+<li><strong>Intended user:</strong> Specialty/ER hospital administrator or referral coordinator.</li>
+<li><strong>Problem solved:</strong> Nobody currently owns the fact that a discharge report hasn't gone out. The measured average is 9 days.</li>
+<li><strong>Current workflow:</strong> Reports go out when the clinician gets to them; delivery is unverified; the GP calls to chase.</li>
+<li><strong>Proposed workflow:</strong> Daily case-list export from the EMR + a send log (manual tick, or parsed e-fax/email confirmations) → an aging queue grouped by clinician and by referral source → a per-rDVM ledger showing every case sent, when, and by what channel → a weekly "your referral sources are waiting on these" email to service heads.</li>
+<li><strong>Inputs:</strong> CSV case export; send confirmations.</li>
+<li><strong>Outputs:</strong> Aging queue (overdue / due today / sent); per-rDVM communication ledger; weekly summary.</li>
+<li><strong>Essential features:</strong> Configurable SLA per case type (ER discharge: 24h; specialty consult: 72h); clinician and referral-source rollups; sent-log with channel and timestamp.</li>
+<li><strong>Excluded from v1:</strong> Writing the report; sending it; anything resembling a general task manager. <strong>This is a single queue with a single clock.</strong> If it grows tabs, it has failed.</li>
+<li><strong>AI:</strong> <em>Inappropriate.</em> Dates and joins.</li>
+<li><strong>Why not a spreadsheet:</strong> Honestly, a well-built spreadsheet gets you most of the way. The tool earns its keep by ingesting the EMR export automatically and by holding the per-rDVM ledger over time.</li>
+<li><strong>Complexity:</strong> Small. <strong>Learning:</strong> ~15 minutes.</li>
+<li><strong>Value:</strong> Directly attacks a measured 9-day mean against a 68/100 satisfaction score on a metric that drives referral volume.</li>
+<li><strong>Risks:</strong> Low. Could be perceived as clinician surveillance — frame and default it as service-level, not individual, reporting.</li>
+<li><strong>Substitutes:</strong> rVetLink status notifications; EMR task lists; spreadsheets.</li>
+<li><strong>Why still attractive:</strong> Cheap, obvious, and the thing that makes it real is the <em>sent-and-confirmed</em> log, which no substitute keeps.</li>
+<li><strong>Paid customization:</strong> Medium.</li>
+</ul>
+<hr />
+<h3 id="a4-submission-pre-flight-checker-lab-teleradiology-referral">A4 — Submission Pre-Flight Checker (lab / teleradiology / referral)</h3>
+<ul>
+<li><strong>Intended user:</strong> GP technician or CSR preparing an outbound submission.</li>
+<li><strong>Problem solved:</strong> Catching a missing clinical history, absent clinical question, or unmatched patient ID <em>before</em> the submission leaves.</li>
+<li><strong>Current workflow:</strong> Fill the recipient's PDF form from memory; send; discover the problem when a non-diagnostic report comes back.</li>
+<li><strong>Proposed workflow:</strong> Choose recipient profile → the tool presents that recipient's required fields as a short form (pre-filled from the case where available) → validates completeness, checks that the DICOM study's patient identifier matches the requisition, warns when the clinical-question field is empty → emits the completed requisition plus a packaging manifest.</li>
+<li><strong>Inputs:</strong> Recipient profile; case data; optional DICOM folder.</li>
+<li><strong>Outputs:</strong> Completed requisition PDF; validation report; manifest.</li>
+<li><strong>Essential features:</strong> Profile library (built directly from published lab forms and the ACVR/ECVDI header requirements); required-field validation; DICOM ID cross-check; clinical-question prompt.</li>
+<li><strong>Excluded from v1:</strong> Submitting to lab portals; specimen tracking; billing.</li>
+<li><strong>AI:</strong> <em>Inappropriate</em> for validation. Rules and required-field logic. (A "your history says 'mass' — the lab asks for location, duration and growth rate" prompt is a template, not a model.)</li>
+<li><strong>Why not a spreadsheet:</strong> Needs to read DICOM headers and emit a filled PDF.</li>
+<li><strong>Complexity:</strong> Small. <strong>Learning:</strong> ~10 minutes.</li>
+<li><strong>Value:</strong> Each avoided non-diagnostic histopath report avoids a repeat biopsy; each avoided teleradiology re-query preserves a paid 2–4h turnaround.</li>
+<li><strong>Risks:</strong> Profile drift — labs revise forms. Version the profiles and show the profile's date in the output.</li>
+<li><strong>Substitutes:</strong> The labs' own web portals (where they exist, one per lab).</li>
+<li><strong>Why still attractive:</strong> The practice deals with 4–8 recipients; no single recipient's portal solves the practice's problem. A neutral, local, multi-recipient checker is precisely the gap enterprise vendors have no reason to fill.</li>
+<li><strong>Paid customization:</strong> High, and naturally recurring — profile maintenance is a service.</li>
+</ul>
+<hr />
+<h3 id="a5-longitudinal-diagnostics-timeline-builder">A5 — Longitudinal Diagnostics Timeline Builder</h3>
+<ul>
+<li><strong>Intended user:</strong> Specialist receiving a chronic case; also GPs managing CKD, diabetes and thyroid patients.</li>
+<li><strong>Problem solved:</strong> Reconstructing an analyte trend from lab PDFs issued by several different labs in several different layouts.</li>
+<li><strong>Current workflow:</strong> Flip through PDFs; mentally interpolate; sometimes re-run the panel.</li>
+<li><strong>Proposed workflow:</strong> Drop the folder of lab PDFs in → layout-aware extraction of analyte / value / units / reference range / date → one tidy longitudinal table plus small-multiple sparklines with reference bands → flag unit mismatches between labs (the classic mg/dL vs µmol/L trap) → export CSV and a one-page PDF for the chart.</li>
+<li><strong>Inputs:</strong> Lab report PDFs (IDEXX, Antech, in-house analyzers).</li>
+<li><strong>Outputs:</strong> Tidy CSV; sparkline sheet; unit-conflict warnings.</li>
+<li><strong>Essential features:</strong> Per-lab layout templates; unit normalization with explicit conflict flagging; reference-range banding; provenance column (which file/page each value came from).</li>
+<li><strong>Excluded from v1:</strong> Clinical interpretation, staging, or alerts. It charts; it does not opine.</li>
+<li><strong>AI:</strong> <em>Optional.</em> Template extraction handles the big labs. Reserve a model for unrecognized layouts only, and mark those values as low-confidence.</li>
+<li><strong>Why not a spreadsheet:</strong> The spreadsheet is the <em>output</em>. The work is getting values out of heterogeneous PDFs.</li>
+<li><strong>Complexity:</strong> Medium. <strong>Learning:</strong> ~15 minutes.</li>
+<li><strong>Value:</strong> Avoids duplicate diagnostics — the exact failure AAHA tells teams to document against — and returns specialist minutes, the most expensive minutes in the building.</li>
+<li><strong>Risks:</strong> A misextracted creatinine is a clinical hazard. Provenance column and confidence marking are non-negotiable; never suppress the source document.</li>
+<li><strong>Substitutes:</strong> IDEXX VetConnect PLUS trends <em>within</em> IDEXX only — which is exactly the neutrality problem.</li>
+<li><strong>Paid customization:</strong> High — a hospital's own in-house analyzer layouts.</li>
+</ul>
+<hr />
+<h3 id="a6-medication-reconciliation-sheet-generator">A6 — Medication Reconciliation Sheet Generator</h3>
+<ul>
+<li><strong>Intended user:</strong> Receiving clinician or technician at referral intake.</li>
+<li><strong>Problem solved:</strong> Turning a free-text medication narrative into a checkable table with computed mg/kg.</li>
+<li><strong>Current workflow:</strong> Read the narrative; re-derive dosing by hand; hope the weight is current.</li>
+<li><strong>Proposed workflow:</strong> Paste or drop the inbound record → extract candidate medication mentions → build a table (drug, strength, dose, route, frequency, computed mg/kg against the recorded weight, weight date, prescriber, last dispensed) → flag out-of-range doses, duplicate therapy within a class, and <strong>stale weights</strong> → present for human confirmation before anything is saved.</li>
+<li><strong>Inputs:</strong> Record text/PDF; patient weight and its date.</li>
+<li><strong>Outputs:</strong> Reconciliation table (PDF/CSV) with a confirm-and-initial column.</li>
+<li><strong>Essential features:</strong> Extraction with per-row provenance; mg/kg computation; species-specific dose-range reference (a maintained data file, not a model); duplicate-class detection; stale-weight warning; mandatory human confirmation step.</li>
+<li><strong>Excluded from v1:</strong> Prescribing, dispensing, interaction checking beyond duplicate-class, controlled-substance logging.</li>
+<li><strong>AI:</strong> <em>Needed for extraction, inappropriate for the check.</em> The dose-range comparison must be deterministic table lookup — a model must never be the thing that says a dose is safe.</li>
+<li><strong>Why not a spreadsheet:</strong> The input is prose; the arithmetic and range check are the easy part.</li>
+<li><strong>Complexity:</strong> Medium. <strong>Learning:</strong> ~20 minutes.</li>
+<li><strong>Value:</strong> Removes a genuine patient-safety hole at the handoff.</li>
+<li><strong>Risks:</strong> The highest-liability concept here. Ship it as a worksheet a clinician signs, never as a decision. Given 33–98% extraction sensitivity in free text, the UI must make omission visible — show the source paragraph alongside every row, and show paragraphs it <em>didn't</em> extract from.</li>
+<li><strong>Substitutes:</strong> None specific to the handoff.</li>
+<li><strong>Paid customization:</strong> Medium-high — house formulary ranges.</li>
+</ul>
+<hr />
+<h3 id="a7-dicom-study-packager-identity-fixer">A7 — DICOM Study Packager &amp; Identity Fixer</h3>
+<ul>
+<li><strong>Intended user:</strong> Imaging technician at either end.</li>
+<li><strong>Problem solved:</strong> Studies that arrive unlabelled, mislabelled, or too large for the recipient's portal.</li>
+<li><strong>Current workflow:</strong> Burn a CD, or upload and hope; recipient can't confirm the study matches the patient.</li>
+<li><strong>Proposed workflow:</strong> Point at a study folder → audit tags against a house convention (PatientName, PatientID, species/breed, StudyDescription, ReferringPhysicianName) → propose corrections with a full before/after diff → write a corrected copy (<strong>never in place</strong>) → split into portal-sized parts if needed → emit a transfer manifest listing series, image counts, and a checksum per file.</li>
+<li><strong>Inputs:</strong> DICOM folder.</li>
+<li><strong>Outputs:</strong> Corrected copy; manifest; size-split archives.</li>
+<li><strong>Essential features:</strong> Tag audit; safe non-destructive rewrite with audit trail; manifest with checksums; size splitting; optional pseudonymization for teaching/consult use.</li>
+<li><strong>Excluded from v1:</strong> Viewing, PACS functions, cloud hosting, any image processing.</li>
+<li><strong>AI:</strong> <em>Inappropriate.</em></li>
+<li><strong>Why not a spreadsheet:</strong> Binary format.</li>
+<li><strong>Complexity:</strong> Small-medium (pydicom does the heavy lifting). <strong>Learning:</strong> ~20 minutes; the user is already technical about imaging.</li>
+<li><strong>Value:</strong> Prevents repeat imaging and the "is this the right dog?" call.</li>
+<li><strong>Risks:</strong> Editing DICOM tags alters a medical record — hence copy-only, with a diff log retained. Note that pseudonymization here is a courtesy feature, not a legal requirement, since HIPAA doesn't apply.</li>
+<li><strong>Substitutes:</strong> Full veterinary PACS products (dicomPACS Vet, PostDICOM, MedDream) — which solve storage and viewing, at storage-and-viewing prices.</li>
+<li><strong>Why still attractive:</strong> A practice that already has a PACS still has no clean tool for <em>outbound</em> packaging and identity QA.</li>
+<li><strong>Confidence caveat:</strong> This concept rests on the weakest evidence in the set (P7). Validate before building.</li>
+<li><strong>Paid customization:</strong> Medium.</li>
+</ul>
+<hr />
+<h3 id="a8-referral-loop-closure-audit-gp-side">A8 — Referral Loop-Closure Audit (GP side)</h3>
+<ul>
+<li><strong>Intended user:</strong> Practice manager at a GP practice.</li>
+<li><strong>Problem solved:</strong> The GP does not know which of their referred patients never generated a return report.</li>
+<li><strong>Current workflow:</strong> Nobody tracks it. The gap surfaces when a client asks a question the GP can't answer.</li>
+<li><strong>Proposed workflow:</strong> Maintain a lightweight referral register (case, date, destination, service) → periodically reconcile against inbound documents (by scanning the records inbox/folder for matching patient names and destination senders) → produce an open-loop list: referred ≥N days ago, no report received.</li>
+<li><strong>Inputs:</strong> Referral register (CSV, or entries made in the tool); inbound document folder.</li>
+<li><strong>Outputs:</strong> Open-loop list; per-destination response-time report (which becomes real leverage when choosing where to refer).</li>
+<li><strong>Essential features:</strong> Register; fuzzy matching of inbound docs to referrals; aging; per-destination scorecard.</li>
+<li><strong>Excluded from v1:</strong> Email integration, client messaging, anything CRM-shaped.</li>
+<li><strong>AI:</strong> <em>Optional</em> — only for matching inbound documents to register entries; fuzzy string matching handles most of it.</li>
+<li><strong>Why not a spreadsheet:</strong> The register is a spreadsheet. The tool adds the reconciliation against inbound documents.</li>
+<li><strong>Complexity:</strong> Small. <strong>Learning:</strong> ~15 minutes.</li>
+<li><strong>Value:</strong> Moderate time savings; substantial risk reduction; the per-destination scorecard is a genuinely novel artifact — it gives the GP data for the conversation AAHA says they should be having.</li>
+<li><strong>Risks:</strong> Low.</li>
+<li><strong>Substitutes:</strong> None found.</li>
+<li><strong>Paid customization:</strong> Low-medium.</li>
+</ul>
+<hr />
+<h3 id="a9-referral-destination-requirements-profile-kit">A9 — Referral Destination Requirements Profile Kit</h3>
+<ul>
+<li><strong>Intended user:</strong> Practice manager; also the maintainer of profiles for A1 and A4.</li>
+<li><strong>Problem solved:</strong> The requirement knowledge for each destination lives in someone's head or a binder, and each hospital differs <em>by service</em>.</li>
+<li><strong>Current workflow:</strong> Institutional memory; a laminated sheet at the front desk.</li>
+<li><strong>Proposed workflow:</strong> A small structured schema for a destination profile (per service: required documents, required form, submission channel, file-size cap, contact, promised turnaround) plus an editor and a one-page printable per destination — and a shared, versioned open profile repository seeded from public hospital referral pages.</li>
+<li><strong>Inputs:</strong> Manual entry; seeded profiles.</li>
+<li><strong>Outputs:</strong> Machine-readable profiles consumed by A1/A4; printable front-desk sheets.</li>
+<li><strong>Essential features:</strong> Schema; editor; export; version stamps; diff when a profile updates.</li>
+<li><strong>Excluded from v1:</strong> Scraping hospital websites automatically (fragile and impolite); any directory-of-hospitals ambition. <strong>This is a schema and an editor, not a marketplace.</strong></li>
+<li><strong>AI:</strong> <em>Inappropriate.</em></li>
+<li><strong>Complexity:</strong> Small. <strong>Learning:</strong> ~10 minutes.</li>
+<li><strong>Value:</strong> Low standalone — this is infrastructure. It is listed because A1 and A4 both depend on it, and because a community-maintained open profile set is the durable asset in this whole space.</li>
+<li><strong>Risks:</strong> Staleness. Version stamps and a visible "last verified" date.</li>
+<li><strong>Paid customization:</strong> This <em>is</em> the customization product.</li>
+</ul>
+<hr />
+<h2 id="5-opportunity-ranking">5. Opportunity ranking</h2>
+<p>Scored 1–5 on ten criteria (max 50).</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Concept</th>
+<th style="text-align: center;">Severity</th>
+<th style="text-align: center;">Frequency</th>
+<th style="text-align: center;">ROI clarity</th>
+<th style="text-align: center;">Ease of learning</th>
+<th style="text-align: center;">Ease of implementation</th>
+<th style="text-align: center;">Narrow scope</th>
+<th style="text-align: center;">Differentiation</th>
+<th style="text-align: center;">Customization</th>
+<th style="text-align: center;">Test data</th>
+<th style="text-align: center;">Evidence confidence</th>
+<th style="text-align: center;"><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1</td>
+<td>Records Release Packet Assembler</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>44</strong></td>
+</tr>
+<tr>
+<td>A2</td>
+<td>Inbound Referral Brief Generator</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>43</strong></td>
+</tr>
+<tr>
+<td>A4</td>
+<td>Submission Pre-Flight Checker</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>43</strong></td>
+</tr>
+<tr>
+<td>A3</td>
+<td>rDVM Report Aging &amp; Send Ledger</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>42</strong></td>
+</tr>
+<tr>
+<td>A5</td>
+<td>Longitudinal Diagnostics Timeline</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>42</strong></td>
+</tr>
+<tr>
+<td>A6</td>
+<td>Medication Reconciliation Sheet</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>40</strong></td>
+</tr>
+<tr>
+<td>A8</td>
+<td>Referral Loop-Closure Audit</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>39</strong></td>
+</tr>
+<tr>
+<td>A7</td>
+<td>DICOM Packager &amp; Identity Fixer</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><strong>39</strong></td>
+</tr>
+<tr>
+<td>A9</td>
+<td>Destination Requirements Profile Kit</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>40</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-top-three">The top three</h3>
+<p><strong>A1 — Records Release Packet Assembler (44).</strong> The strongest concept, and not because it is the most clever. It wins on the boring criteria: the problem occurs daily at essentially every practice, the volume is growing with insurance penetration (+8.5% pets YoY), the ROI is legible to a practice owner in one sentence, and — critically — <strong>it needs no clinical judgment and no AI to deliver its core value.</strong> It is PDF assembly, page stamping, and a checklist. That means it can be built correctly by one developer, it can be verified deterministically, and it carries no patient-safety liability. The per-recipient profile library is the piece that makes it hard to copy and easy to sell as a customization service, and it doubles as the shared asset behind A4 and A9. The disclosure log is a small feature that quietly addresses a real state-board exposure nobody currently tracks.</p>
+<p><strong>A2 — Inbound Referral Brief Generator (43).</strong> The highest-severity problem in the market and the concept a specialty hospital would pay most for — 1,600 hospitals averaging 82 staff, 78% reporting staffing shortages, doing this work by hand all day. It scores lower than A1 only on implementation and test data, and both discounts are real: the extraction problem is genuinely hard (33–98% sensitivity in the literature), and getting realistic sample records requires a partner practice willing to share de-identified charts. The provenance-first design is what makes it defensible: a tool that indexes the source document is honest about its own error rate in a way a tool that summarizes is not.</p>
+<p><strong>A4 — Submission Pre-Flight Checker (43).</strong> The best risk-adjusted first build. Smallest scope, no AI, requirements published in citable form by the recipients themselves (ACVR/ECVDI consensus, lab requisition forms), immediately demonstrable before-and-after, and it forces you to build the profile schema that A1 and A9 both need. If the goal is to enter this market with something shippable in weeks rather than months, this is the entry point.</p>
+<h3 id="what-to-investigate-next">What to investigate next</h3>
+<p><strong>A4 first, A1 second.</strong> Build A4 as the beachhead: it is small, it validates the profile schema, and it puts you in conversation with practice managers about their recipient list — which is exactly the discovery you need to build A1's profile library. Then A1 as the commercial product.</p>
+<p><strong>A2 deferred until a partner exists.</strong> Do not start it without a specialty hospital willing to supply de-identified inbound packets. Building a clinical extractor against synthetic data would produce a tool that fails in exactly the ways the free-text literature predicts.</p>
+<p><strong>A3 is a candidate for a weekend build</strong> to open doors on the specialty side, but its differentiation score of 2 is honest — do not build a business on it.</p>
+<hr />
+<h2 id="6-validation-plan">6. Validation plan</h2>
+<h3 id="questions-to-ask-practitioners">Questions to ask practitioners</h3>
+<p><strong>GP practice managers and CSRs:</strong>
+- How many records requests did you fulfil last week? From whom — insurers, other clinics, clients, specialists?
+- How long does one take, start to finish? How often does one come back asking for more?
+- How many different referral destinations do you send to? Do you keep their requirements written down anywhere?
+- Do you know which of the patients you referred last month generated a report back to you?
+- What do you actually send — a PIMS export, a printed chart, a scan? Show me one.</p>
+<p><strong>Specialty referral coordinators:</strong>
+- Walk me through the last referral that arrived this morning. What did you have to retype?
+- How often do you call the rDVM back for something missing? What is it usually?
+- What percentage of your inbound arrives by fax vs. email vs. portal?
+- What is your internal target for getting a report back to the rDVM, and do you know whether you hit it?</p>
+<p><strong>Specialists:</strong>
+- When a chronic case is referred, how do you reconstruct the lab trend?
+- How often do you repeat a diagnostic because you couldn't confirm what was already done?</p>
+<h3 id="who-to-interview">Who to interview</h3>
+<ul>
+<li>Practice managers at 1–4 doctor independent GP practices (VHMA membership is the natural channel).</li>
+<li>Referral coordinators at single-site specialty hospitals — deliberately <em>not</em> the corporate groups, whose workflows are being centralized.</li>
+<li>A veterinary technician specialist (VTS) in ECC.</li>
+<li>A boarded radiologist doing teleradiology reads, on submission quality specifically.</li>
+<li>A pet insurance claims adjudicator on what actually causes a claim to bounce.</li>
+<li>The <a href="https://openvpm.com/">OpenVPM</a> maintainer — an aligned open-source project already fighting the same data-lock-in problem.</li>
+</ul>
+<h3 id="search-terms-for-further-research">Search terms for further research</h3>
+<p><code>veterinary referral coordinator workflow</code>; <code>rDVM portal requirements &lt;specialty&gt;</code>; <code>histopathology submission form &lt;lab name&gt;</code>; <code>teleradiology submission clinical history requirements</code>; <code>pet insurance medical records request veterinary practice</code>; <code>VeNom coding adoption</code>; <code>veterinary DICOM tag conventions</code>; <code>VHMA records request survey</code>; <code>veterinary practice act medical records release &lt;state&gt;</code>; plus targeted forum reads on VIN (paywalled — needs a member contact), VetPartners, and the r/Veterinary and r/VetTech communities (both blocked to automated fetch in this environment; validate manually).</p>
+<h3 id="sample-files-and-data-needed">Sample files and data needed</h3>
+<ol>
+<li>Three to five real PIMS record exports (de-identified) from <strong>different</strong> PIMS — AVImark, Cornerstone and ezyVet cover 61.4% of the market between them.</li>
+<li>Ten inbound referral packets as actually received (fax scans included — the OCR-quality question is decisive for A2).</li>
+<li>Lab report PDFs from IDEXX, Antech and at least two in-house analyzers, for the same patient across ≥3 dates.</li>
+<li>A DICOM study as it left a GP practice, unedited, tag warts and all.</li>
+<li>Referral requirement pages from 20 specialty hospitals — these are public and can be collected immediately.</li>
+<li>Two or three insurer records-request letters.</li>
+</ol>
+<h3 id="simplest-validating-prototype">Simplest validating prototype</h3>
+<p><strong>One week, for A4:</strong> a single-page local HTML tool with three hardcoded recipient profiles (one histopath lab, one teleradiology group, one specialty hospital surgery service). User picks a profile, fills the short form, drops a DICOM folder, and the tool reports "requisition complete / PatientID matches / clinical question present." Take it to five practice managers. If three of them say <em>"which lab profiles do you have?"</em>, the profile library is the product and A1 follows. If they shrug, the pre-flight framing is wrong and you should test A1's assembly value directly instead.</p>
+<h3 id="assumptions-most-likely-to-be-wrong">Assumptions most likely to be wrong</h3>
+<ol>
+<li><strong>That practices perceive records assembly as a problem worth paying for.</strong> It may be so normalized as invisible. This is the assumption that kills A1 — test it first, and test it by asking what they <em>did</em> last week, not what they think.</li>
+<li><strong>That PIMS exports are consistent enough to parse.</strong> If AVImark's export is unstable across versions, A1 and A5 both get much harder. Test with real files early.</li>
+<li><strong>That the buyer exists.</strong> A CSR feels the pain; a practice owner writes the cheque. If owners see this as front-desk overhead rather than revenue or risk, nothing sells. The disclosure log and the per-destination scorecard exist partly to give the owner a reason to care.</li>
+<li><strong>That AI extraction clears the accuracy bar for clinical use.</strong> The published range (33–98%) says it may not. Provenance-first design is the mitigation, but if coordinators don't trust it, they will re-read the source anyway and A2's value collapses.</li>
+<li><strong>That the 9-day discharge finding generalizes from equine to small animal.</strong> The qualitative small-animal literature agrees, but the hard number does not transfer. Verify before quoting it to a customer.</li>
+<li><strong>That IDEXX doesn't simply extend rVetLink downward.</strong> They own the PIMS, the labs and the portal. The defensible ground is precisely where IDEXX cannot go — neutral, multi-vendor, local-first tooling for practices that use <em>someone else's</em> lab.</li>
+</ol>
+<hr />
+<h2 id="7-cross-industry-patterns">7. Cross-industry patterns</h2>
+<p>Six patterns from this market that transfer to named backlog markets.</p>
+<p><strong>Pattern 1 — Per-recipient submission profile driving a pre-flight validation (A1, A4, A9).</strong>
+The general shape: N senders, M recipients, each recipient publishing its own requirements, and no sender able to hold all M rule sets in their head. Transfers directly to: <em>Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)</em> — the same problem with more formal schemas; <em>First Article Inspection (AS9102) report production at small aerospace machine shops</em>; <em>Federal construction contractors on NAVFAC/USACE projects — UFGS submittal register</em>; <em>Aerospace supplier quality clause library administration</em>; <em>Certified payroll and prevailing wage compliance service providers</em>; <em>Title abstracting and independent title search contractors</em>.</p>
+<p><strong>Pattern 2 — Inbound document pile → structured brief + explicit gap list, with per-field provenance (A2).</strong>
+Any desk where work arrives as someone else's unstructured documents. Transfers to: <em>Small third-party medical billing companies (RCM service bureaus)</em>; <em>Healthcare credentialing service bureaus and CVOs</em>; <em>Hospital and clinic release-of-information (ROI) departments</em>; <em>Legal process outsourcing vendors producing medical chronologies</em>; <em>Public adjusting firms</em>; <em>Mortgage post-closing QC and trailing document vendors</em>; <em>Freight factoring client onboarding/verification desks</em>. The provenance-first design rule — index the source, never replace it — is the transferable part, not the extraction itself.</p>
+<p><strong>Pattern 3 — Outbound deliverable aging queue against a promised turnaround, with a send-and-confirm ledger (A3).</strong>
+Wherever a professional owes an external party a document by an implied deadline and nobody owns the clock. Transfers to: <em>Court reporting and deposition services firms (transcript production)</em>; <em>Accredited calibration laboratories (certificate delivery)</em>; <em>Fire protection ITM contractors (NFPA 25 reports to AHJs and owners)</em>; <em>Independent specification writers</em>; <em>Third-party estimate writing services (Xactimate desks)</em>; <em>Environmental laboratories (holding-time and report-due tracking)</em>.</p>
+<p><strong>Pattern 4 — Cross-vendor result extraction into one longitudinal, unit-normalized table (A5).</strong>
+Where the same measurand is reported over time by several vendors in several layouts. Transfers to: <em>Environmental laboratories and their EDD consumers</em>; <em>Calibration and metrology service providers</em> (as-found/as-left history across vendors); <em>Ready-mix concrete producer quality control departments</em>; <em>Asphalt plant producer QC technicians</em>; <em>Property tax consulting and assessment appeal firms</em> (assessment history across jurisdictions); <em>Premium audit and payroll classification consulting</em>.</p>
+<p><strong>Pattern 5 — Identity normalization and manifest generation for binary artifact transfer (A7).</strong>
+Where the deliverable is a folder of binaries whose internal metadata is the only thing tying it to the job. Transfers to: <em>UAS/drone mapping and reality-capture service providers</em>; <em>BAS graphics and floor-plan production vendors</em>; <em>Print brokers, trade printers and prepress service bureaus</em>; <em>CMM programming and inspection-data management at small machine shops</em>.</p>
+<p><strong>Pattern 6 — Loop-closure audit: reconcile what I sent out against what came back, and score the counterparty (A8).</strong>
+Transfers to: <em>Prime contractor supplier cyber-compliance desks (supplier attestation collection)</em>; <em>Construction submittal, RFI and closeout coordination</em>; <em>Approved supplier list and supplier qualification administration</em>; <em>Special process source approval administration at primes</em>; <em>Mortgage post-closing QC and trailing document vendors</em>; <em>Multi-state charitable solicitation registration compliance</em>. The counterparty scorecard — turning your own tracking data into leverage in the next negotiation — is the part that usually goes unbuilt.</p>
+<hr />
+<h2 id="8-sources-and-confidence">8. Sources and confidence</h2>
+<h3 id="verified-findings-primary-peer-reviewed-or-first-party-with-stated-methodology">Verified findings (primary, peer-reviewed, or first-party with stated methodology)</h3>
+<table>
+<thead>
+<tr>
+<th>Finding</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Discharge statement to rDVM: mean 9 days, median 2, range 0–365. Discharge-timeliness satisfaction 68.33 vs 88.40 for care quality. Poor communication is the #3 rDVM barrier (15.5%). n=187 rDVMs + 92 specialists. <strong>Equine population.</strong></td>
+<td><a href="https://academic.oup.com/jvim/article/32/2/822/8449637">JVIM — Survey of Equine Referring Veterinarians' Satisfaction</a></td>
+</tr>
+<tr>
+<td>85% of practices say their software does not integrate well with their PIMS; 82% struggling to hire; up to 2,000 hours/year of recoverable time. n=786.</td>
+<td><a href="https://www.prnewswire.com/news-releases/groundbreaking-idexx-study-reveals-opportunities-to-increase-veterinary-practice-productivity-301750165.html">IDEXX productivity study press release</a></td>
+</tr>
+<tr>
+<td>2025 AAHA Referral Guidelines: three collaboration models; document completed/pending tests to prevent duplication; designate a single referral coordinator; web-based portals recommended; client perceptions 6× more likely to improve when rDVM stays engaged.</td>
+<td><a href="https://www.aaha.org/resources/2025-aaha-referral-guidelines/">AAHA</a> · <a href="https://www.dvm360.com/view/aaha-releases-2025-guidelines-for-effective-veterinary-specialist-referrals">dvm360</a></td>
+</tr>
+<tr>
+<td>Imaging report minimum header requirements incl. clinical history and specific clinical queries; radiologist may decline service when pertinent info is missing.</td>
+<td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11649853/">ACVR/ECVDI consensus statement, PMC11649853</a></td>
+</tr>
+<tr>
+<td>20,636 active US board-certified veterinary diplomates as of 2025-12-31; ACVIM 4,537; ACVS 2,588.</td>
+<td><a href="https://www.avma.org/resources-tools/reports-statistics/veterinary-specialists">AVMA</a></td>
+</tr>
+<tr>
+<td>~1,600 US ER/specialty/urgent care hospitals; 131,200 professionals; avg 82 employees; 78% report staffing shortages; 79.3% technician turnover; 71% on cloud PIMS/EMR.</td>
+<td><a href="https://info.instinct.vet/state-of-er-specialty-veterinary-care-2024">Instinct, State of ER &amp; Specialty Veterinary Care 2024</a></td>
+</tr>
+<tr>
+<td>7.6M North American pets insured end-2025; $6.2B GWP; +8.5% pets, +19.4% premium; ~4.3% penetration.</td>
+<td><a href="https://naphia.org/industry-data/">NAPHIA</a> · <a href="https://www.insurancebusinessmag.com/us/news/breaking-news/naphia-only-4-27-of-us-pets-insured-despite-decade-of-doubledigit-growth-580314.aspx">Insurance Business</a></td>
+</tr>
+<tr>
+<td>PIMS share: AVImark 25.4%, Cornerstone 19.5%, ezyVet 16.5%, others 38.6%; ~15 platforms + 140 point solutions; vet PIMS market $200–400M/yr vs $10–13B human EHR.</td>
+<td><a href="https://priorknowledgeandpractice.substack.com/p/the-pims-integration-problem-is-real">Prior Knowledge &amp; Practice</a></td>
+</tr>
+<tr>
+<td>Free-text extraction: diagnosis search sensitivity 33–98%; accuracy as low as 60% on hard tasks; specific shorthand/hedging failure modes.</td>
+<td><a href="https://tandemhealth.ai/resources/knowledge/why-veterinary-free-text-notes-break-automated-coding">Tandem Health</a></td>
+</tr>
+<tr>
+<td>HIPAA generally does not apply to veterinary records; state practice acts govern content, retention, release and confidentiality. Retention: CA 3y, TX 5y, NY 3y, FL 3y; AVMA recommends ≥5y.</td>
+<td><a href="https://www.accountablehq.com/post/veterinary-clinic-hipaa-requirements-what-applies-and-what-doesn-t">AccountableHQ</a> · <a href="https://co.vet/post/veterinary-medical-records-laws/">co.vet records laws</a></td>
+</tr>
+<tr>
+<td>rVetLink: specialty hospital pays setup + monthly, rDVMs free; integrates ezyVet, Cornerstone, DVMAX, ImproMed Infinity.</td>
+<td><a href="https://software.idexx.com/products/rvetlink">IDEXX</a></td>
+</tr>
+<tr>
+<td>Per-service referral requirement variation; DICOM accepted; rVetLink used for discharge/report return.</td>
+<td><a href="https://smallanimal.vethospital.ufl.edu/contact-us/referring-veterinarians/">UF Small Animal Hospital</a></td>
+</tr>
+<tr>
+<td>Separate <code>referrals@</code> and <code>records@</code> intake addresses; 40 MB per-file portal cap.</td>
+<td><a href="https://integrityvetcenter.com/for-veterinarians/how-referrals-work/">Integrity Veterinary Center</a></td>
+</tr>
+<tr>
+<td>What insurers require: full SOAP notes not after-visit summaries; numerical lab values with reference ranges; unambiguous pet/owner ID; email or fax with policy number.</td>
+<td><a href="https://www.lemonade.com/pet/explained/pet-insurance-optimized-medical-records/">Lemonade</a></td>
+</tr>
+<tr>
+<td>Teleradiology SLA norms: 2–4h routine / 1–2h urgent radiographs; 4–8h routine CT.</td>
+<td><a href="https://www.asteris.com/blog/blog-veterinary-teleradiology-turnaround-time-sla/">Asteris</a></td>
+</tr>
+<tr>
+<td>VetXML/VetEnvoy exists as a UK-centric standard; VeNom coding exists with inconsistent adoption; OpenVPM is an AGPLv3 open PIMS motivated by data lock-in.</td>
+<td><a href="http://www.vetxml.co.uk/en/about-the-consortium/">VetXML</a> · <a href="http://venomcoding.org/">VeNom</a> · <a href="https://openvpm.com/">OpenVPM</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="strong-inferences-consistent-across-independent-practitioner-facing-sources-not-formally-measured">Strong inferences (consistent across independent practitioner-facing sources, not formally measured)</h3>
+<ul>
+<li><strong>Records routinely do not arrive before the specialist appointment</strong>, and fax remains a primary channel with well-described failure modes (after-hours, forgotten sends, illegibility). Asserted independently by <a href="https://vitusvet.com/blog/five-reasons-the-veterinary-referral-process-is-broken/">VitusVet</a>, <a href="https://digital.petvetmagazine.com/issue/february-march-2023/5-ways-to-streamline-referrals-for-successful-collaborative-care/">PetVet Magazine</a> and <a href="https://www.puppilot.co/blog/from-chaos-to-continuity-automating-health-record-transfers-between-clinics">PupPilot</a>. All three are vendor-adjacent, which is why this sits here and not above — but the AAHA guidelines exist because the problem is real.</li>
+<li><strong>"Lack of complete, legible records" is specialists' most common frustration</strong> (PetVet Magazine, summarizing specialists and ER doctors — no n given).</li>
+<li><strong>The return leg frequently fails entirely</strong> — "do you get the specialist's SOAP notes back? Often not, or only after repeated calls" (PupPilot). Consistent with the JVIM 0–365 day range.</li>
+<li><strong>Records handling is an unnamed-software job.</strong> The Thrive referral coordinator posting lists gathering and maintaining patient information as a core duty and names no system for it.</li>
+<li><strong>Prescription administration is a large, quantified adjacent burden</strong> — 400–600 staff hours/year per practice, per an FDB white paper cited by <a href="https://www.aaha.org/trends-magazine/publications/reclaiming-lost-hours-how-digital-prescription-management-is-reshaping-veterinary-workflows/">AAHA Trends</a>. Vendor-sponsored, and adjacent rather than central to this angle, but it establishes that the sector quantifies and publishes this kind of burden.</li>
+</ul>
+<h3 id="tentative-hypotheses-requiring-practitioner-validation">Tentative hypotheses requiring practitioner validation</h3>
+<ul>
+<li><strong>Insurance claim economics</strong> — 35–45% of claims needing manual review, $40–60 vs $25–36 per claim, 15–30 vs 3–7 days, 12–18% vs 2–5% error, 60–70% OCR on scans. All from <a href="https://insurnest.com/blog/veterinary-invoice-standardization-pet-insurance-claims/">Insurnest</a>, a vendor blog with no stated methodology. <strong>Directionally useful, not quotable.</strong> Verify with a claims adjudicator before using in any pitch.</li>
+<li><strong>Transcription error rates</strong> — 5–15% general, "73% discrepancy in manually entered lab results" (<a href="https://www.puppilot.co/blog/veterinary-data-interoperability-the-complete-guide-to-connecting-pims-labs-insurers">PupPilot</a>). The 73% figure cites an unnamed study and should be treated as unverified.</li>
+<li><strong>Duplicate data entry at 15–30 min/visit and 1.8 h/employee/day lost to scattered communication</strong> (<a href="https://digitail.com/blog/5-hidden-time-drains-stealing-hours-from-your-vet-team/">Digitail</a>) — vendor content marketing. Plausible, unverified.</li>
+<li><strong>Veterinary DICOM tag hygiene is poor.</strong> Inferred from the existence of the veterinary PACS product category and from human-radiology experience. <strong>No veterinary-specific evidence found.</strong> This is the sole basis for A7 and must be validated by inspecting real studies before any build.</li>
+<li><strong>The 9-day discharge delay generalizes to small animal practice.</strong> The measured population is equine.</li>
+<li><strong>Practices will pay for records assembly tooling.</strong> Untested. The single most important commercial assumption in this report.</li>
+</ul>
+<h3 id="sources-that-could-not-be-retrieved">Sources that could not be retrieved</h3>
+<p>Reddit (r/Veterinary, r/VetTech) was blocked to automated fetch, and VIN News returned a request-blocked page. Both are the richest sources of unfiltered practitioner complaint in this market, and their absence is the main gap in this cycle's evidence base. A follow-up cycle with manual access to VIN message boards would materially strengthen — or usefully undermine — the severity rankings in §3.</p>
+<hr />
+<p><em>Report generated 2026-08-08 · claim <code>0f90c511</code> · Borg LLC market research catalog</em></p>
+<footer class="doc">Borg LLC market research catalog &middot; cycle report &middot; generated 2026-08-08</footer>
+</div>
+</body>
+</html>
