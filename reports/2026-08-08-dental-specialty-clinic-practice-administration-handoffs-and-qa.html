@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dental &amp; Specialty Clinic Practice Administration &mdash; Handoffs and QA | Market Research Cycle 340ca135</title>
+<style>
+:root{ --ink:#1b1c1e; --muted:#5c6169; --rule:#dfe1e5; --accent:#8c2f22; --bg:#fbfaf8; --panel:#f4f2ee; }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{ margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  font-size:18px; line-height:1.68; }
+.wrap{ max-width:900px; margin:0 auto; padding:56px 28px 96px; }
+h1,h2,h3,h4{ font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; line-height:1.25; color:var(--ink); }
+h1{ font-size:2.05rem; font-weight:700; letter-spacing:-.015em; margin:0 0 .2em; }
+h2{ font-size:1.34rem; font-weight:700; letter-spacing:-.01em; margin:2.6em 0 .7em;
+    padding-bottom:.35em; border-bottom:2px solid var(--rule); }
+h3{ font-size:1.08rem; font-weight:700; margin:2.1em 0 .55em; color:var(--accent); }
+h4{ font-size:.97rem; font-weight:700; margin:1.7em 0 .45em; color:var(--muted);
+    text-transform:uppercase; letter-spacing:.06em; }
+p{ margin:0 0 1.05em; }
+a{ color:#1f4f8a; text-decoration:none; border-bottom:1px solid rgba(31,79,138,.32); }
+a:hover{ border-bottom-color:#1f4f8a; }
+strong{ font-weight:700; }
+em{ font-style:italic; }
+ul,ol{ margin:0 0 1.15em; padding-left:1.4em; }
+li{ margin:.34em 0; }
+li > ul, li > ol{ margin:.3em 0 .3em; }
+hr{ border:0; border-top:1px solid var(--rule); margin:2.8em 0; }
+blockquote{ margin:1.4em 0; padding:.2em 0 .2em 1.2em; border-left:3px solid var(--rule);
+  color:var(--muted); font-style:italic; }
+code{ font-family:"SF Mono",Menlo,Consolas,"Liberation Mono",monospace; font-size:.86em;
+  background:var(--panel); padding:.12em .38em; border-radius:3px; }
+table{ border-collapse:collapse; width:100%; margin:1.5em 0 1.8em;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; font-size:.83rem; line-height:1.45; }
+thead th{ background:var(--panel); text-align:left; font-weight:700; color:var(--ink);
+  border-bottom:2px solid #c9ccd1; padding:.6em .7em; vertical-align:bottom; }
+tbody td{ border-bottom:1px solid var(--rule); padding:.55em .7em; vertical-align:top; }
+tbody tr:nth-child(even){ background:rgba(0,0,0,.018); }
+table td:first-child, table th:first-child{ padding-left:.5em; }
+.meta{ color:var(--muted); font-size:.92rem; font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin:0 0 2.4em; padding-bottom:1.4em; border-bottom:1px solid var(--rule); }
+@media (max-width:640px){
+  body{ font-size:17px; } .wrap{ padding:34px 18px 70px; }
+  h1{ font-size:1.6rem; } table{ font-size:.74rem; }
+}
+@media print{ body{ background:#fff; } .wrap{ max-width:none; padding:0; } a{ color:#000; border:0; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<p class="meta">Borg LLC &middot; Open-Source Business Application Catalog &middot; Market Research Cycle <code>340ca135</code> &middot; 2026-08-08</p>
+<h1>Dental and Specialty Clinic Practice Administration</h1>
+<h2>Angle: handoffs-and-qa</h2>
+<hr />
+<h2>0. Cycle header</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Market claimed</strong></td>
+<td>Dental and specialty clinic practice administration</td>
+</tr>
+<tr>
+<td><strong>Angle claimed</strong></td>
+<td>handoffs-and-qa</td>
+</tr>
+<tr>
+<td><strong>Claim ID</strong></td>
+<td><code>340ca135</code></td>
+</tr>
+<tr>
+<td><strong>Date</strong></td>
+<td>2026-08-08</td>
+</tr>
+<tr>
+<td><strong>Reports completed before this one</strong></td>
+<td>23</td>
+</tr>
+<tr>
+<td><strong>Backlog remaining after this claim</strong></td>
+<td>318 assignments (plus 6 newly discovered, see §7)</td>
+</tr>
+</tbody>
+</table>
+<h3>Why this assignment was chosen over the others available</h3>
+<p>The ledger showed 23 completed reports and 319 available backlog assignments, with zero active claims. Applying the stated preference order:</p>
+<p><strong>(a) Markets with zero completed entries.</strong> 256 of the 319 backlog items sat in markets with no completed report. But most of those clustered into sectors the catalog already covers deeply. Counting completed reports by sector: architecture/engineering/construction 7, insurance 3, manufacturing and quality 3, legal 2, real estate 2, transportation 2, plus a scattering of finance and back-office markets. The sectors with <strong>literally zero coverage</strong> were healthcare delivery (as opposed to healthcare <em>billing</em>, which is covered by "Medical billing and revenue cycle for small practices"), education and training, marketing/creative services, and hospitality.</p>
+<p>Healthcare delivery was the largest of those and the one where I expected the strongest practitioner evidence. Dental was the best entry point into it: ~180,000–195,000 discrete practice locations, an unusually well-documented set of external counterparties, and a large body of peer-reviewed and regulatory material to work from.</p>
+<p><strong>(b) Markets where strong practitioner evidence exists online.</strong> This turned out to be the decisive filter. Dentistry has three properties that make the handoff angle unusually researchable: state dental boards publish statutory requirements for the practice→laboratory work authorization; dental payers publish per-CDT-code documentation requirements as PDFs; and OCR has brought an unusual number of enforcement actions against dental practices specifically. There is also a small peer-reviewed literature quantifying referral-packet completeness and medical-consult response rates that has no analogue in most of the other backlog markets.</p>
+<p><strong>(c) Angles that expand catalog diversity.</strong> Completed angle counts were core-practitioner-workflow 8, back-office 5, narrow-subspecialty 5, handoffs-and-qa 5. Any angle other than core-practitioner-workflow was defensible. I chose handoffs-and-qa deliberately because a dental practice's <em>core</em> clinical workflow is the part of the market least addressable by small software — the chair-side work is clinical judgment plus imaging hardware — while the practice's boundaries with outside organizations are almost entirely paper, fax, and untracked email. The angle and the market fit each other better than the alternatives did.</p>
+<p><strong>A note on what I deliberately did not claim.</strong> "Dental billing and insurance coordination / back-office" is a separate backlog item. This report touches claim attachments because attachments are an outbound deliverable to an external reviewer, which is squarely a handoff. It does not attempt to cover posting, collections, AR aging, or fee schedules, which belong to that other assignment.</p>
+<hr />
+<h2>1. Market examined</h2>
+<h3>1.1 Who is in it</h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Count / figure</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Professionally active US dentists</td>
+<td><strong>202,485</strong> (2024)</td>
+<td><a href="https://www.ada.org/-/media/project/ada-organization/ada/ada-org/files/resources/research/hpi/US_dentist_workforce_2025.pdf">ADA HPI, US Dentist Workforce 2025</a></td>
+</tr>
+<tr>
+<td>Share who are specialists</td>
+<td><strong>21.2%</strong> (≈159,562 GPs)</td>
+<td><a href="https://www.ada.org/resources/research/health-policy-institute/dentist-workforce">ADA HPI Dentist Workforce</a></td>
+</tr>
+<tr>
+<td>Orthodontists</td>
+<td>~10,000</td>
+<td>ADA HPI</td>
+</tr>
+<tr>
+<td>Pediatric dentists</td>
+<td>9,312</td>
+<td>ADA HPI</td>
+</tr>
+<tr>
+<td>Endodontists</td>
+<td>5,685</td>
+<td>ADA HPI</td>
+</tr>
+<tr>
+<td>Periodontists</td>
+<td>5,471</td>
+<td>ADA HPI</td>
+</tr>
+<tr>
+<td>Oral &amp; maxillofacial surgeons</td>
+<td>4,977</td>
+<td>ADA HPI</td>
+</tr>
+<tr>
+<td>Prosthodontists</td>
+<td>3,540</td>
+<td>ADA HPI</td>
+</tr>
+<tr>
+<td>Solo practitioners (1 location, 1 dentist)</td>
+<td><strong>34%</strong></td>
+<td>ADA HPI</td>
+</tr>
+<tr>
+<td>Practice ownership, all dentists</td>
+<td>85% (2005) → <strong>73% (2023)</strong></td>
+<td><a href="https://www.ada.org/-/media/project/ada-organization/ada/ada-org/files/resources/research/hpi/practice_ownership_trends_dentistry_new_look_old_data.pdf">ADA HPI, Practice Ownership Trends</a></td>
+</tr>
+<tr>
+<td>DSO-affiliated dentists</td>
+<td><strong>16.1%</strong> overall; <strong>27%</strong> of those ≤10 yrs out</td>
+<td>ADA HPI; <a href="https://www.beckersdental.com/benchmarking/16-of-us-dentists-affiliated-with-a-dso-state-by-state-breakdown/">Becker's Dental</a></td>
+</tr>
+<tr>
+<td>National dental expenditures</td>
+<td><strong>$189B</strong> (2024)</td>
+<td><a href="https://www.ada.org/resources/research/health-policy-institute/dental-care-market">ADA HPI, The Dental Care Market</a></td>
+</tr>
+<tr>
+<td>Average GP net income</td>
+<td><strong>$215,320</strong> (2025)</td>
+<td><a href="https://www.ada.org/resources/research/health-policy-institute/dental-practice-research/trends-in-dentist-income">ADA HPI, Trends in Dentists' Income</a></td>
+</tr>
+<tr>
+<td>Commercial dental laboratories with employees</td>
+<td>7,800 (2004) → <strong>~6,100</strong> (2019)</td>
+<td><a href="https://www.groupdentistrynow.com/dso-group-blog/current-dental-laboratory-market-trends-their-impact-on-dsos-part-1-technology/">Group Dentistry Now</a></td>
+</tr>
+<tr>
+<td>Lab cases processed annually in the US</td>
+<td><strong>~35 million</strong></td>
+<td><a href="https://henryscheinequipmentcatalog.com/content-library/launch-labwork-into-the-cloud-with-henry-schein-ddx">Henry Schein DDX</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Practice-count caution.</strong> ADA HPI counts <em>dentists</em> (202,485); IBISWorld counts <em>businesses</em> (179,584 in 2026). Neither is a count of physical office locations. A defensible working estimate is <strong>~180,000–195,000 discrete US dental office locations</strong>, of which roughly 55,000–65,000 are specialty offices. Any market sizing in this report uses that band and says so.</p>
+<h3>1.2 The organization that would actually buy</h3>
+<p>The target buyer for everything in §4 is a <strong>1–4 dentist independent practice or a small specialty practice, with 1 to 4 administrative staff</strong>. The staffing benchmark that anchors this: McGill Advisory's ratio of <strong>one front-desk FTE per $60,000/month of production</strong> (average practice), rising to $75,000 at the 75th percentile and $100,000 at the 95th (<a href="https://advancedpracticemanagement.com/wp-content/uploads/2018/11/MCGILL-ARTICLE-NOVEMBER-2018.pdf">McGill via Advanced Practice Management</a>). A solo GP producing $70–90k/month therefore runs on <strong>1 to 1.5 administrative FTEs</strong>. Total staff cost runs ~26% of collections, of which administrative staff is 6–8 percentage points.</p>
+<p>The economic pressure that makes admin tooling interesting right now is visible in ADA HPI's own numbers: over five years, <strong>practice revenues rose 1.4% while expenses rose 4.9%</strong>. The only lever available to most owners is administrative labor productivity.</p>
+<p>The user is almost never the dentist. It is the office manager, the treatment coordinator, the insurance/billing coordinator, or in a specialty office the referral coordinator. These are people who already maintain elaborate manual systems — the evidence in §2 and §3 includes several of those systems captured in the wild — and who will adopt a tool that removes a phone call, but will abandon anything that adds a login.</p>
+<h3>1.3 The external counterparties — the actual subject of this report</h3>
+<p>A dental practice's day is structured around five recurring handoffs to organizations it does not control:</p>
+<ol>
+<li><strong>The dental laboratory</strong> — outbound prescription + impression or scan; inbound finished restoration, materials disclosure, and point-of-origin statement.</li>
+<li><strong>The specialist (or the referring GP, in the other direction)</strong> — outbound referral packet with imaging and history; inbound consultation report.</li>
+<li><strong>The dental payer</strong> — outbound claim with radiographs, perio charting, narrative; outbound predetermination; inbound denial, request for information, and periodically an audit.</li>
+<li><strong>The patient's physician</strong> — outbound medical clearance/consult request; inbound (or not) labs, medication detail, and an opinion.</li>
+<li><strong>Whoever requests the record</strong> — the patient, the next dentist, an attorney, a payer auditor; outbound a compiled record including radiographs, under a statutory clock.</li>
+</ol>
+<p>Every one of these is a package of documents assembled by hand from two or three different software systems, transmitted over a channel with no receipt, and reviewed by a stranger against rules the sender does not have in front of them.</p>
+<hr />
+<h2>2. How the work is performed</h2>
+<h3>2.1 The laboratory handoff</h3>
+<p><strong>People:</strong> dentist (design intent), dental assistant (usually fills out the prescription and packs the case), front desk (schedules the seat appointment and tracks the due date), lab case coordinator or technician on the receiving side.</p>
+<p><strong>The artifact.</strong> A work authorization, which is a legal document in the states that regulate it. Its content requirements vary enormously. California (<a href="https://www.law.cornell.edu/regulations/california/16-CCR-1063">16 CCR § 1063</a>) requires four things: date, description of work, dentist's signature, license number. Ohio (<a href="https://codes.ohio.gov/ohio-administrative-code/rule-4715-5-02">OAC 4715-5-02</a>) requires contractor name and address, patient identification, work description with diagrams, material types, date, and the dentist's <strong>original ink signature</strong>, license number and office address — plus a <em>return section</em> the laboratory must complete disclosing materials used, fabrication location <strong>with FDA registration number</strong>, subcontractors, and disinfection method. Retention is 2 years on both sides in Ohio and Mississippi, <strong>4 years on both sides in Florida</strong>, where lab noncompliance is a second-degree misdemeanor and the lab is civilly liable for inaccurate material or origin disclosures (<a href="https://law.justia.com/codes/florida/title-xxxii/chapter-466/section-466-021/">Fla. Stat. § 466.021</a>). Washington requires labs to register with DOH, employ a CDT from Jan 2025, disclose complete material content and point of origin, and requires <strong>the dentist to put the lab's registration number on the work order</strong> (<a href="https://lawfilesext.leg.wa.gov/Law/RCWArchive/2023/htm/RCW%20%2070%20%20TITLE/RCW%20%2070%20.352%20%20CHAPTER/RCW%20%2070%20.352%20.030.htm">RCW 70.352.030</a>).</p>
+<p>Twelve states regulate dental laboratories at all; nine require material and/or point-of-origin disclosure (FL, IL, KY, MN, MO, NC, SC, TX, VA) (<a href="https://dentallabs.org/state-regulation/">NADL</a>). A 2009 ADA survey found <strong>nearly 65% of dentists believed technicians were regulated in their state</strong> when they were not.</p>
+<p>A real production Rx form (<a href="https://dnsdental.com/wp-content/uploads/2021/10/rx_form.pdf">D&amp;S Dental, Wisconsin</a>) carries roughly <strong>60 discrete fields</strong>: doctor identity and license, patient identity, shade, finish, try-in, a Mon–Fri grid for date <em>and time</em> to be returned, impression material and disinfectant used, a lab-use received-items checklist, an 11-option substructure material menu, minimal occlusal clearance, ridge relief, contacts, glaze level, partial framework material, denture tooth mold and acrylic color.</p>
+<p><strong>Transmission.</strong> Physical case in a box by courier or carrier, or digital. On the digital side the fragmentation is countable: <a href="https://www.oralartsdental.com/intraoral-scanners/">Oral Arts Dental Laboratories publishes connection instructions for <strong>12 distinct scanner ecosystems</strong></a> — 3Shape, AS Connect, Carestream Connect, CEREC/Sirona Connect, DEXIS IS Connect, DS Core, iTero Element, Medit Link, Ori, Planmeca, Shining 3D, Straumann AXS — each with a different onboarding path. One of them requires phoning the scanner manufacturer to have the lab added by ID.</p>
+<p>A lab owner's own description of the state of play, on a public technician forum: <em>"We use every matching portal, 3Shape, iTero, Sirona, Medit, Dexis, Care Stream, EasyRX, and about </em><em>50% of our daily cases just get sent via email</em><em>."</em> Verdict on the landscape: <em>"A mess, if you ask me."</em> (<a href="https://dentallabnetwork.com/forums/threads/what-portal-do-you-use-for-sending-or-receiving-scans.35376/">Dental Lab Network</a>)</p>
+<p><strong>Tracking on the practice side.</strong> Open Dental and CareStack both ship lab-case modules at no additional charge, which attach cases to appointments and carry a tracking status (<a href="https://www.opendental.com/site/0_labcases.html">Open Dental</a>; <a href="https://carestack.com/dental-software/features/lab-case-management">CareStack</a>). Open Dental's own marketing names the two canonical failures the module exists to prevent: staff need to "quickly see how many appointments for the day have labs outstanding," and cases get "forgot[ten] to attach to appointments." The defensive practice consultants teach is to put the <strong>earliest possible</strong> due date on the Rx and then build <strong>a week of buffer</strong> between arrival and the insertion appointment (<a href="https://theultimatepatientexperience.com/dental-business-processes-101-ordering-and-receiving-dental-laboratory-cases/">The Ultimate Patient Experience</a>).</p>
+<p>That a market exists for a <a href="https://www.carepatron.com/templates/printable-dental-lab-case-log-sheet/">printable dental lab case log sheet</a> and a <a href="https://www.dentallabguru.com/templates/case-tracking-spreadsheet/">dental lab case tracking spreadsheet template</a> is decent circumstantial evidence that a meaningful share of practices track cases outside the PMS entirely.</p>
+<h3>2.2 The specialist referral handoff</h3>
+<p><strong>The artifact is still a paper slip.</strong> The ADA's own <a href="https://www.ada.org/-/media/project/ada-organization/ada/ada-org/files/publications/guidelines-for-practice-success/mngpatients_referral_to_specialist.pdf">sample Referral to Dental Specialist form</a> is a carbon-style slip whose radiograph field is a set of checkboxes: <em>"Radiographs: sent with patient | mailed/transmitted | attached | </em><em>none available</em><em>."</em> The profession's canonical form anticipates a referral arriving with no imaging.</p>
+<p>A periodontist quoted in <em>Dental Products Report</em>: <em>"For the most part, it's been the good old carbon copy, paper referral that…gets sent out."</em> A practice-management consultant's description of the actual eight-step process — doctor fills the slip, front office phones the specialist, follow-up reminders, chart documentation, <em>"scanning and emailing referral slips, x-rays, perio charts,"</em> chase the specialist's report, rebuild the treatment plan from insurance info, call the patient back — ends with: <em>"I recall spending hours alone just going back and forth on the phone with the specialist's office for all of the necessary follow ups."</em> (<a href="https://www.candicemartinconsulting.com/finally-a-way-to-streamline-specialty-referrals/">Candice Martin Consulting</a>)</p>
+<p><strong>Imaging is the hard part.</strong> The ADA formally told HHS and ONC in March 2026 that <em>"Dental diagnostic images are often stored in systems that operate independently of electronic dental records, restricting efficient exchange between dentists,"</em> naming <em>"reliance on proprietary formats, inconsistent implementation of the Digital Imaging and Communications in Medicine standard"</em> and <em>"fragmented exchange pathways"</em> as causes, and <strong>"repeat imaging and unnecessary radiation exposure"</strong> plus <em>"image quality degradation and metadata loss during transfers"</em> as consequences. The ADA's explanation for how dentistry got here: dentistry was excluded from the federal Meaningful Use health-IT incentive programs (<a href="https://adanews.ada.org/ada-news/2026/march/ada-calls-for-improved-interoperability-standards-for-dental-imaging/">ADA News, Mar 2026</a>).</p>
+<p>The mechanics are concrete. <em>Dentistry Today</em> names <code>.dex</code> (DEXIS) and <code>.jif</code> (Gendex) as native formats not universally readable, and its practical advice reveals the workaround culture: <em>"If you are unsure of the system or technical experience of the receiving doctor… send in JPEG format"</em> — i.e., degrade the diagnostic image to guarantee it opens. CBCT is worse: <strong>100–500 MB per scan</strong>, one <code>.dcm</code> file per slice. A dental laboratory that receives CBCT for surgical guides publishes a spec — <em>"uncompressed, multi-file, DICOM, 0.3mm or 0.4mm slices"</em>, files must <em>"remain as individual DICOM files (.dcm), not converted to viewer applications or executable files"</em> — and maintains video tutorials for <strong>18+ CBCT manufacturers</strong> because each export path is different (<a href="https://www.roedentallab.com/collaboration/managing-dicoms">ROE Dental Lab</a>).</p>
+<p><strong>Specialist-side intake.</strong> Receive the packet by whatever channel; check for a legible tooth number and reason; open the imaging and verify it is openable, recent, and adequate; verify medical history and medications; verify insurance; call the referring office for anything missing; key the patient in; call the patient to schedule. Academic centers publish the turnaround this implies: the University of Minnesota's OMS clinic tells referrers to <em>"allow two weeks after referral submission"</em> before the patient may call to schedule; Iowa asks for 48 hours.</p>
+<p><strong>Existing software.</strong> Standalone referral platforms exist and are cheap — Sindi ($59/mo Pro, 500 MB attachments), Refera ($29 GP / $99 specialist, 2 GB, accepts DICOM, and critically <strong>specialists do not need an account to receive</strong>), RecordLinc ($47/mo), Brightsquid Secure-Mail (500 MB per message), PepCare, eDossea (free, and mandates a radiograph-date field before submission). The incumbent PMS offerings are thinner than they look: <strong>Dentrix Ascend's "Outbound Referrals" feature marks procedures as referred and colors them purple on the odontogram</strong> — its documentation describes no image attachment, no transmission method, and no status report coming back (<a href="https://learn.dentrixascend.com/outbound-referrals/">Dentrix Ascend docs</a>). It is a tagging feature, not a handoff feature.</p>
+<h3>2.3 The payer handoff</h3>
+<p><strong>Two outbound artifacts: the claim-with-attachments and the predetermination.</strong></p>
+<p>Every major payer publishes per-procedure documentation requirements, and they do not agree with each other. Delta Dental nationally requires bitewings <strong>within 12 months</strong> showing bone levels on both arches for scaling and root planing; Delta Dental of NJ/CT's 2025 required-documentation chart says radiographs <strong>within 36 months</strong> for the same codes; Aetna's global rule is <strong>less than 36 months old</strong>; Medi-Cal Dental uses <strong>8 months for primary teeth, 14 months for permanent, 36 months for arch integrity</strong>. Cigna publishes numeric clinical criteria (SRP requires pockets <strong>≥4 mm</strong>; osseous surgery <strong>≥5 mm</strong> plus a re-evaluation of non-surgical therapy generally within 3–6 months); UnitedHealthcare's guideline specifies <em>documents</em> but no numeric thresholds at all.</p>
+<p>Delta states flatly: <em>"Claims submitted without the required documentation will be denied automatically."</em></p>
+<p><strong>How practices cope: a hand-built rules table outside the software.</strong> The single most revealing artifact found in this cycle is a dental group's internal claim-requirements cheat sheet, publicly hosted on its own website (<a href="https://verberdentalgroup.com/wp-content/uploads/2025/01/Claim_Requirements_-_Supporting_Information-1.pdf">Verber Dental Group, 2025</a>). It is a per-CDT-code grid with columns for <strong>Narrative / Radiographs / Perio Chart / Intraoral Photo / Seat Date / Submission Notes</strong>, containing entries like "D2950 — narrative explains why treatment is necessary. Add endo completion date," payer exceptions in capitals — <strong>"BLUE CROSS DENTAL DOES NOT ALLOW ELECTRONIC ATTACHMENTS — CLAIMS MUST BE MAILED"</strong> — and an internal QA rule: <strong><em>"ALL PREPPED CLAIMS NEED A CORRESPONDING CLAIM STATUS NOTE."</em></strong></p>
+<p>That PDF is the product any attachment-completeness tool would be replacing. It is maintained by hand, specific to one practice's payer mix, and goes stale when Delta or Cigna revises a guideline, which they do roughly annually.</p>
+<p><strong>Transmission.</strong> The attachment and the claim are usually two separate objects joined by a reference number. NEA FastAttach / Vyne is the incumbent: upload images, get an NEA number, type it into the claim. Open Dental's manual notes the NEA number <em>"is inserted into the claim </em><em>after</em><em> the claim has been sent."</em> Open Dental's own attachments tab warns that attachments added there <em>"are for reference only and </em><em>are not sent by Open Dental</em><em>"</em> — they must be exported to a temp folder and sent by a third-party service (<a href="https://www.opendental.com/manual/claimtabattach.html">Open Dental manual</a>). DentalXChange's ClaimConnect help documents that it <em>"doesn't permit attachments with initial claims unless you have a FastAttach account,"</em> and for MetLife describes a <strong>print-and-mail cover-sheet loop</strong> as the sanctioned workflow, in 2026 (<a href="https://claimconnect.dentalxchange.com/dci/claims/help/singleclaim/attachments.jsp">ClaimConnect help</a>).</p>
+<p>Dentrix (G7.3+) does automatically include required attachments and warns when one can't be found — but the rules are hand-maintained: <em>"as you work with different insurance payors and learn their requirements, you can customize Dentrix by adding or updating which procedures require attachments"</em> (<a href="https://blog.dentrix.com/blog/2020/01/29/add-required-attachments-to-claims-automatically/">Dentrix blog</a>). There is no shipped, maintained payer library.</p>
+<p><strong>Adoption reality.</strong> The 2024 CAQH Index puts dental attachments at <strong>37% fully electronic / 63% fully manual</strong> (26 million electronic vs 45 million manual transactions), against 90% electronic adoption for dental <em>claim submission</em>. Provider cost per attachment transaction: <strong>$5.54 manual vs $4.51 electronic</strong>. Total dental savings opportunity: <strong>$2.1 billion</strong> (<a href="https://www.caqh.org/hubfs/Index/2024%20Index%20Report/CAQH_IndexReport_2024_FINAL.pdf">2024 CAQH Index</a>).</p>
+<p><strong>A regulatory clock is now running.</strong> CMS finalized the HIPAA claims-attachment standard — X12N 275 v6020 plus HL7 C-CDA implementation guides — <strong>effective May 26, 2026, with full compliance required May 26, 2028</strong>. Prior-authorization attachments were explicitly <strong>not</strong> included (<a href="https://www.cms.gov/files/document/nsg-attachments-final-rule-fact-sheet.pdf-0">CMS fact sheet</a>). That means the claim-attachment path is being standardized while the predetermination path is not.</p>
+<p><strong>Predeterminations</strong> are the other outbound artifact and are worse behaved. Turnaround estimates range from Delta Dental of Virginia's <em>"seven to ten days"</em> to CDA's and Dentaltown's <em>"four to six weeks."</em> Validity ranges from 60 days (preauthorization) to <strong>90 days</strong> (Delta VA's predetermination). None guarantee payment — the ADA is explicit that <em>"the benefit outlined in the preauthorization is tempered by the allowable benefits at the time of service, not the time of preauthorization submission"</em> — and the ADA specifically flags the <strong>calendar-year rollover</strong> failure, where a predetermination received in one year is stale by the time treatment begins in the next because maximums and deductibles have reset.</p>
+<h3>2.4 The physician handoff (medical clearance)</h3>
+<p><strong>When it happens.</strong> Before oral surgery, sedation, or invasive treatment on a patient with anticoagulants or DOACs, antiresorptive therapy (MRONJ risk), recent MI/stent, uncontrolled hypertension or diabetes, high-risk cardiac conditions, or pulmonary compromise.</p>
+<p><strong>The current mechanism is a fax.</strong> Every clearance form found in the wild is a one-page PDF designed to be faxed to a physician's office — none reference a portal, a health information exchange, or Direct secure messaging. Dental PMS systems are essentially never connected to an HIE, and dentists rarely hold credentials at the physician's practice. This is close to the last fully analog interface in US ambulatory care.</p>
+<p><strong>The best quantitative evidence in this entire cycle</strong> comes from a retrospective study of <strong>240 consult requests for 179 patients</strong> at a dental institution over three years (<a href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2022.838538/full">Frontiers in Digital Health 2022;4:838538</a>):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Requested</th>
+<th>Actually returned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Laboratory / diagnostic reports</td>
+<td>56.3%</td>
+<td><strong>34.2%</strong></td>
+</tr>
+<tr>
+<td>Recommendations / clearance</td>
+<td>39.6%</td>
+<td><strong>19.2%</strong></td>
+</tr>
+<tr>
+<td>Medication information</td>
+<td>38.3%</td>
+<td>41.3%</td>
+</tr>
+<tr>
+<td>Current medical conditions</td>
+<td>19.2%</td>
+<td>13.3%</td>
+</tr>
+</tbody>
+</table>
+<p>Turnaround: <strong>57% returned within 10 days, 86% within 30 days, 14% took more than 30 days</strong>, mean <strong>19.6 ± 36.6 days</strong> — a standard deviation nearly twice the mean. <strong>About 20% of responses contained none of the requested information.</strong> Dental providers <strong>needed multiple contact attempts in 45% of cases.</strong></p>
+<p><strong>What a good request contains,</strong> per MedPro Group's risk guidance: the specific planned procedure; whether local anesthetic with epinephrine will be used; whether anxiolytics, nitrous oxide, or sedation are planned; and for anticoagulated patients, an explicit ask for <strong>the most recent INR or PT</strong> and an assessment of stability. <em>"A dentist should not rely on a patient stating that blood tests are stable."</em> If the physician doesn't respond, call and <strong>document the name of the staff member and the message left</strong> (<a href="https://resource.medpro.com/what-dentists-should-know-about-medical-clearance">MedPro</a>).</p>
+<p><strong>A meaningful share of this volume should not exist.</strong> The two most commonly requested clearances are exactly the two current guidelines say are usually unnecessary. ADA/AAOS: <em>"In general, for patients with prosthetic joint implants, prophylactic antibiotics are not recommended prior to dental procedures."</em> ADA on anticoagulants: <em>"treatment regimens with older anticoagulants (e.g., warfarin) and antiplatelet agents… should not be altered before dental procedures,"</em> and for DOACs <em>"no change to the anticoagulant regimen is required"</em> in most patients. AAFP's physician-facing summary states plainly that <em>"stable chronic diseases rarely require physician consultation before dental treatment."</em></p>
+<h3>2.5 The records-release handoff</h3>
+<p><strong>The rules.</strong> A covered entity must act on an access request <strong>no later than 30 calendar days</strong> after receipt, with <strong>one 30-day extension</strong> available only if a written explanation is provided <em>within</em> the initial 30 days. Fees must be reasonable and cost-based: labor for copying, supplies, and postage are chargeable; <strong>search and retrieval, administrative overhead, and vendor fees are not</strong>. There is no fee at all for inspection without copies. The <strong>$6.50 flat-fee option is a safe harbor, not a cap</strong> (<a href="https://www.hhs.gov/hipaa/for-professionals/faq/right-to-access-and-research/index.html">HHS OCR Right to Access FAQs</a>).</p>
+<p>The ADA adds an ethical obligation with sharp operational teeth: a dentist must furnish records on request of the patient or the new dentist <strong><em>"whether or not the patient's account is paid in full."</em></strong></p>
+<p><strong>Dental practices are conspicuously over-represented in OCR's enforcement docket:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Amount</th>
+<th>Date</th>
+<th>Facts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Great Expressions Dental Center of Georgia</td>
+<td><strong>$80,000</strong></td>
+<td>Sept 2022</td>
+<td>Records withheld pending a <strong>$170 copying fee</strong>; delivered ~15 months after request; fee found not reasonable and cost-based</td>
+</tr>
+<tr>
+<td>Gums Dental Care, LLC (solo, MD)</td>
+<td><strong>$70,000 CMP</strong></td>
+<td>Oct 2024</td>
+<td>Requests April and June 2019; records not attempted until May 2022. Withheld over a <strong>$25 certified-mail fee</strong> when the patient had asked for <strong>email</strong> delivery. OCR found <strong>willful neglect</strong></td>
+</tr>
+<tr>
+<td>Family Dental Care, P.C. (IL)</td>
+<td><strong>$30,000</strong></td>
+<td>Sept 2022</td>
+<td>Partial records only; full set 5+ months late</td>
+</tr>
+<tr>
+<td>B. Steven L. Hardy DDS / Paradise Family Dental (NV)</td>
+<td><strong>$25,000</strong></td>
+<td>Sept 2022</td>
+<td>Records requested April 2020, provided Dec 2020 (~8 months)</td>
+</tr>
+<tr>
+<td>Elite Dental Associates (TX)</td>
+<td><strong>$10,000</strong></td>
+<td>Oct 2019</td>
+<td>Not access — a <strong>Yelp reply</strong> disclosing a patient's condition, treatment plan, insurance and cost</td>
+</tr>
+</tbody>
+</table>
+<p>Sources: <a href="https://www.hipaajournal.com/dental-practices-fined-for-hipaa-right-of-access-violations/">HIPAA Journal</a>, <a href="https://www.saul.com/insights/alert/scary-ocr-cmp-imposed-upon-solo-dental-practice">Saul Ewing on Gums Dental</a>, <a href="https://www.hipaajournal.com/dental-practice-fined-10000-for-phi-disclosures-on-yelp/">HIPAA Journal on Elite Dental</a>.</p>
+<p><strong>The pattern is the important part: in four of five cases the proximate trigger was a copying-fee dispute or a partial/slow response, not a refusal in principle.</strong> Two turned specifically on charging for a delivery method the patient never asked for.</p>
+<p><strong>Why it breaks.</strong> The request arrives by fax, voicemail, walk-in, or a general inbox — there is no queue, no clock, and no owner, and the practice often cannot prove when receipt occurred. Assembling the record is a multi-system job: chart notes from the PMS, radiographs from a separate imaging application (frequently a <em>different</em> application for intraoral vs pano vs CBCT), scanned consents from a document module. In Dentrix and Eaglesoft, <strong>imaging is stored outside the SQL database in a separate folder structure requiring independent backup</strong> — the chart and the images are two systems with two export paths. Dentrix users on Capterra describe imaging/X-ray transfer as <em>"hard and time-consuming."</em></p>
+<h3>2.6 What software is actually installed</h3>
+<p>There is <strong>no credible public vendor-level market-share dataset</strong> for US dental PMS. What can be verified: Dentrix claims <em>"over 35,000 teams"</em>; Planet DDS claims 13,000+ practices; analyst reports publish no vendor splits. Directional consensus from integration-partner lists is Dentrix first, Eaglesoft second, Open Dental third and fastest-growing, then a long tail.</p>
+<p><strong>The API economics are the most decision-relevant fact for anyone building here</strong> (<a href="https://ddp.dentrix.com/pages/faq">Dentrix Developer Program FAQ</a>):</p>
+<ul>
+<li><strong>Dentrix on-premise: $5,000 one-time for the READ API, $5,000 for the WRITE API, plus a monthly royalty</strong> by API category.</li>
+<li><strong>Dentrix Ascend: $5,000 one-time registration, then $47/month per location</strong>, including 30,000 calls and 3 GB; overages $0.0018/call and $1.00/GB.</li>
+<li><strong>Prohibited categories for third-party developers: patient financing, credit card processing, and insurance claim processing.</strong> Henry Schein One explicitly fences off the revenue-cycle categories it competes in.</li>
+<li>Henry Schein One's public vendor page prominently lists <strong>~60+ <em>unauthorized</em> vendors</strong> — a naming-and-shaming posture toward companies reading the database directly, and indirect evidence of a large gray market of direct-SQL readers.</li>
+</ul>
+<p><strong>Open Dental is the opposite.</strong> A REST API with <strong>80+ resource endpoints</strong> (Patients, Appointments, Procedures, TreatPlans, Claims, InsPlans, Benefits, Carriers, Documents, PerioExams, Diseases, MedicationPats, SecurityLogs…), two-key auth, onboarding by plain email to vendor relations, a <strong>free test database</strong>, a MySQL back end with direct database access, and fully public office pricing ($199/mo/location for 12 months, then $149) (<a href="https://www.opendental.com/site/apisetup.html">API setup</a>, <a href="https://www.opendental.com/site/apispecification.html">spec</a>, <a href="https://www.opendental.com/site/fees.html">fees</a>). Planet DDS launched an open API program in July 2024 with writebacks and webhooks but no public pricing.</p>
+<p><strong>Implication for every concept in §4: build Open Dental first, Denticon second, Dentrix on request.</strong> And note that anything touching claim submission is structurally harder on Dentrix by contract, not by technology.</p>
+<hr />
+<h2>3. Most important problems, ranked</h2>
+<h3>Problem 1 — The medical clearance request is a fax into a void, and the reply usually doesn't answer the question</h3>
+<p><strong>Who:</strong> any practice doing oral surgery, extractions, implants, periodontal surgery, or sedation. Disproportionately OMS, periodontics, and GPs who place implants.
+<strong>When:</strong> before scheduling an invasive procedure on a medically complex patient. For an OMS office, several times a week.
+<strong>Currently handled:</strong> a one-page fax PDF, followed by phone calls.
+<strong>Why inadequate:</strong> clearance was specifically requested in 39.6% of consults and specifically returned in <strong>19.2%</strong>. Roughly <strong>20% of replies contained none of the requested information</strong>. <strong>45% required multiple contact attempts.</strong> Mean turnaround 19.6 days with a standard deviation of 36.6.
+<strong>Cost:</strong> the direct cost is staff time chasing — plausibly 20–40 minutes per consult across attempts. The larger cost is a deferred or cancelled surgical appointment, which for an OMS is an hour of surgical block. The tail risk is a malpractice claim: MedPro cites cases where a missing clearance preceded anticoagulant bleeding complications, undisclosed pulmonary disease after sedation, cardiac arrest, and seizure activity.
+<strong>Evidence quality:</strong> <strong>strong.</strong> One peer-reviewed retrospective study with per-item request/return rates, plus a malpractice carrier's published guidance on what a proper request must contain.</p>
+<h3>Problem 2 — Payer documentation requirements are heterogeneous, unversioned, and re-learned practice by practice</h3>
+<p><strong>Who:</strong> the insurance/billing coordinator in every insurance-participating practice.
+<strong>When:</strong> at every claim for a major or basic service, and again at every denial.
+<strong>Currently handled:</strong> a hand-maintained PDF or spreadsheet of per-code, per-payer requirements, owned by one person; supplemented by Dentrix's office-maintained attachment rules; or outsourced entirely.
+<strong>Why inadequate:</strong> the rules genuinely conflict across payers and even within a payer brand (Delta national's 12-month bitewing window vs Delta NJ/CT's 36-month window for the same codes). They change roughly annually. No PMS ships a maintained payer-specific rules library; clearinghouse validation checks <em>file format and carrier eligibility</em>, not <em>clinical completeness for this code under this plan</em>. And the linkage failure is separately documented: <em>"A surprising number of 'missing X-ray' denials happen because the attachment was uploaded but not correctly associated"</em> with the claim.
+<strong>Frequency:</strong> continuous. Roughly 71 million dental attachment transactions per year, 63% still fully manual.
+<strong>Cost:</strong> MGMA's figure of <strong>~$25 rework per denied claim</strong> and <strong>50–65% of denied claims never reworked</strong> is the defensible pair. Zentist's Feb 2026 survey of 160+ dental RCM professionals found <strong>78% report denials and payer scrutiny increased in the past 12 months</strong> and <strong>71% name insurance verification as their top operational challenge</strong>. The retroactive tail is real: a Texas HHS OIG dental settlement of <strong>$66,804</strong> (roughly half penalties) plus a <strong>2-year Medicaid exclusion</strong>, driven by <em>"poor quality and non-diagnostic X-rays, missing or incomplete documentation"</em> and failure to produce <strong>86 of 120 requested records</strong>. Commercial payers offset unrecovered overpayments directly against future claims after 90 days.
+<strong>Evidence quality:</strong> <strong>strong on requirements and mechanism; weak on the specific share of denials attributable to documentation.</strong> A cluster of very specific-sounding statistics (19.3% first-submission denial rate, 18% of denials from missing documentation, $117 rework cost) circulates across dental-AI vendor blogs; traced to origin, the source page cites no studies and the $117 figure conflicts with MGMA's $25 by nearly 5×. <strong>Those numbers should not be used.</strong> That a defensible documentation-share-of-denials figure does not exist is itself a finding.</p>
+<h3>Problem 3 — Referral packets arrive incomplete, and the imaging that does arrive is often not diagnostically adequate</h3>
+<p><strong>Who:</strong> specialist front desks (receiving); GP front desks (assembling).
+<strong>When:</strong> every outbound referral. US per-GP referral volume is unmeasured, but 53% of GPs now refer root canals to endodontists, and the average endodontist sees ~1,930 referred patients/year.
+<strong>Currently handled:</strong> paper slip plus a separate scan-and-email of radiographs, or the patient carries it.
+<strong>Why inadequate:</strong> the best dataset is a Swedish audit of <strong>1,891 oral surgery referrals</strong> (<a href="https://www.dovepress.com/article/download/35616">CCIDE 2017</a>):</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Missing or inadequate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tobacco use</td>
+<td>90.1% absent</td>
+</tr>
+<tr>
+<td>Allergies</td>
+<td>71.8% absent</td>
+</tr>
+<tr>
+<td>Previous treatment</td>
+<td>63.6% absent</td>
+</tr>
+<tr>
+<td>Current medication</td>
+<td>60% absent</td>
+</tr>
+<tr>
+<td><strong>Adequate radiographs</strong></td>
+<td><strong>53.4% inadequate</strong></td>
+</tr>
+<tr>
+<td>Presenting complaint</td>
+<td>40% absent</td>
+</tr>
+<tr>
+<td>Radiographs missing entirely</td>
+<td>9.8%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note the shape:</strong> radiographs usually arrive (only 9.8% missing) but are <strong>inadequate more than half the time</strong>. This is a QA problem, not a transport problem — and every referral platform in the market competes on file-size caps (50 MB → 500 MB → 2 GB), not on adequacy. The audit's own recommendation is exactly the product spec: <em>"electronic referral systems should only allow for submission once all of the essential information has been considered."</em></p>
+<p>Corroborating from the receiving side: a 2025 BDJ service evaluation of <strong>673 periodontal referrals</strong> found <strong>160 (23.8%) rejected at triage, 93% of them for "insufficient clinical information"</strong> (<a href="https://www.nature.com/articles/s41415-025-9047-y">BDJ 2025</a>). And a 2002 BDJ study found a structured proforma produced a <strong>29.3% increase in information provided</strong> over free-text letters.</p>
+<p><strong>Cost:</strong> up to <strong>20 minutes of staff time</strong> per referral when the receiving office must contact the referring dentist or the patient for missing information, vs ~3 minutes for a complete electronic referral. A retaken radiograph is unnecessary radiation, which the ADA has now named to HHS. The tail risk is documented and severe: MedPro's published case of a phone-only referral for <em>"upper right #8"</em> — the central incisor in the Universal system, the third molar in Palmer — with no written referral and no radiographs, resulting in <strong>extraction of the wrong tooth</strong>.
+<strong>Evidence quality:</strong> <strong>strong</strong> (peer-reviewed audits on both sides, a carrier case study), with the caveat that the largest audits are non-US.</p>
+<h3>Problem 4 — Lab prescriptions omit the design-intent fields, and nobody measures it</h3>
+<p><strong>Who:</strong> dental laboratories (receiving), assistants and dentists (sending).
+<strong>When:</strong> every case. ~35 million lab cases/year in the US.
+<strong>Currently handled:</strong> paper Rx or a scanner-portal order form; clarification by telephone.
+<strong>Why inadequate:</strong> the omissions are systematic and specific. A technician survey (85 labs) found <strong>69% of work authorizations lacked preferred margin design</strong>, <strong>56% did not specify pontic design</strong>, <strong>51.2% did not say whether a try-in was required</strong>, and <strong>60.7% said fewer than 25% of forms arrived with photographs</strong> (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7335025/">PMC7335025</a>). A dentist-side survey (n=453) found shade not selected on <strong>44.6%</strong>, alloy type unspecified on <strong>46.7%</strong>, and <em>"nearly 43% of dentists did not draw the design of the restoration"</em> (<a href="https://www.mdpi.com/2076-3417/12/12/6263">Appl. Sci. 12(12):6263</a>). A UK survey of 248 labs found the two most commonly omitted items were <strong>shade and date required</strong>, that 13% of labs had to contact dentists for clarification — but <strong>22% among the labs that answered from records rather than memory</strong> (<a href="https://www.nature.com/articles/sj.bdj.2014.643">BDJ 2014</a>).</p>
+<p>The consistent cross-study signal: <strong>the fields that get skipped are the design-intent fields, not the identity fields.</strong> Patient name and signature are nearly always present because they are on the legal checklist. This is exactly the pattern you get when a form is filled under time pressure with a compliance-shaped mental model of "complete."</p>
+<p>Digital has added a new failure mode rather than removing one. Implant scan-body library version mismatches produce documented <strong>0.1–0.2 mm platform offsets</strong>, and mixing scan body / Ti-base / implant brands produced a documented <strong>0.5 mm screw channel displacement</strong> — and essentially none of the required fields (scan body brand, SKU, height, lot, library name and version) exist on a conventional Rx form (<a href="https://associateddl.com/scan-body-libraries-version-control-brand-mixing-accuracy-traps/">Associated Dental Lab</a>).</p>
+<p><strong>Cost:</strong> the prospectively measured single-unit crown remake rate is <strong>3.8%</strong> across 3,750 crowns (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7005880/">PMC7005880</a>); labs consider <strong>10% remake-or-significant-adjustment</strong> normal (<a href="https://glidewelldental.com/company/blog/how-to-reduce-crown-remake-rates-and-recover-lost-chair-time">Glidewell</a>). LMT's 2024 survey found <em>"over 80% of external remakes are attributed to dentist error,"</em> stable across the 2011, 2018 and 2024 surveys, with inadequate impressions and incorrect shade specification the primary causes. On the practice side the cost is chair time: a 20-minute adjustment ≈ <strong>$125</strong> of lost revenue, a 30-minute recall ≈ <strong>$187.50</strong>, against practice overhead of roughly <strong>$375/hour</strong>; Glidewell computes that a 15-crown-per-week practice at a 10% rate loses ~75 cases and <strong>~40 hours per year — a full clinical week</strong>.</p>
+<p><strong>The asymmetry is why this never gets fixed:</strong> the lab's remake cost is bounded (materials + tech hours, self-insured at 3–5% of revenue) while the practice's cost is chair time plus a patient in the chair twice — and that cost appears in no lab KPI. Each side measures the other, which is why "80% dentist error" (lab survey) and "laboratory error most common" (clinician survey) coexist.</p>
+<p><strong>Evidence quality:</strong> <strong>strong on omission rates and remake rates; weak on US-specific Rx completeness.</strong> The two best field-by-field datasets are from India and Pakistan; the UK BDJ survey is the strongest Western dataset. The widely repeated claim that <em>"80% of dentists do not complete the information legally required on the prescription form"</em> is a US claim with <strong>no traceable source</strong> and should not be cited.</p>
+<h3>Problem 5 — Lab cases and the appointment schedule drift apart, in one direction only</h3>
+<p><strong>Who:</strong> front desk and the seating dentist; the lab.
+<strong>When:</strong> whenever a patient reschedules, or a case runs late.
+<strong>Currently handled:</strong> PMS lab-case modules where they exist; whiteboards, printed log sheets and spreadsheets where they don't; a week of deliberate schedule buffer as defense.
+<strong>Why inadequate:</strong> every system found pushes lab status <strong>to</strong> the practice. <strong>Nothing found pushes "the patient moved to the 22nd" back to the lab.</strong> A practice consultant's symptom list reads like a bug report: <em>"Doctor always has to ask if the case is here"</em>; <em>"Patient scheduled and product has not been delivered from lab"</em>; <em>"Vital information about the prescription is missing from the patient's chart"</em> (<a href="https://desergo.com/blog/9-smart-ways-to-improve-your-dental-lab-case-management-system">Desergo</a>). The consultant's opening anecdote is a patient arriving for a sedated extraction and immediate denture whose prosthetic had not arrived.
+<strong>Cost:</strong> a wasted seat appointment is 45–60 minutes of chair time (~$280–$375 at typical overhead) plus a patient inconvenienced. Henry Schein's 2011 DDX survey found <strong>35% of DDX-enabled practices attributed reduced patient rebookings to it</strong>, and DDX-enabled labs reported an <strong>~30% reduction in staff phone time</strong> — the only sourced figure available on lab phone burden.
+<strong>Evidence quality:</strong> <strong>moderate.</strong> Vendor marketing frames the problem consistently; consultant content treats a week of buffer as necessary; commercial log-sheet templates sell. No published study quantifies the rate of seat appointments without a case.</p>
+<h3>Problem 6 — Records requests have a statutory clock and no queue</h3>
+<p><strong>Who:</strong> office manager or front desk.
+<strong>When:</strong> a few times a month in a small practice; more in a practice with turnover or active litigation.
+<strong>Currently handled:</strong> ad hoc. A fax lands, someone remembers.
+<strong>Why inadequate:</strong> the 30-day clock starts on receipt and the practice frequently cannot prove when receipt occurred. Fee logic is the number one enforcement trap — staff apply a habitual per-page or flat records fee without distinguishing paper copying from electronic delivery and without knowing that search/retrieval and unrequested-delivery charges are prohibited. Balance holds persist despite being contrary to both the right of access and ADA ethics. And <strong>no dental PMS ships a records-request queue with an SLA timer.</strong>
+<strong>Cost:</strong> the enforcement record is unambiguous — <strong>$80,000, $70,000, $30,000, $25,000</strong> in four dental right-of-access actions, with the $70,000 case turning on a <strong>$25 mailing fee applied to an email request</strong>. Ordinary-course cost is smaller but real: assembling a record across PMS, imaging, and document systems is 30–90 minutes.
+<strong>Evidence quality:</strong> <strong>strong</strong> (federal enforcement actions with amounts, dates, and published facts; OCR fee guidance is explicit).</p>
+<h3>Problem 7 — Predeterminations expire, reset, and are matched to claims by hand</h3>
+<p><strong>Who:</strong> treatment coordinator and billing coordinator.
+<strong>When:</strong> on any treatment plan above roughly $250 — Delta Dental of Virginia's own stated trigger.
+<strong>Currently handled:</strong> a manual log or a tickler, plus carrying a reference number forward from a document generated weeks earlier.
+<strong>Why inadequate:</strong> predeterminations take 7–10 days to 6 weeks, are valid 60–90 days, are non-binding, and <strong>reset at the plan year</strong>. MetLife requires the predetermination reference number as an attachment on the eventual claim, and Delta Oregon's submission process leaves procedure dates blank on the predetermination form — meaning the predetermination and the eventual claim are literally different documents with no shared key beyond what staff carry forward. <strong>No PMS or clearinghouse feature was found that reconciles an approved predetermination against the eventual claim or flags one approaching expiry or crossing a plan year.</strong> Note also that the 2026 CMS attachments rule explicitly excluded prior authorization — regulation is not coming to fix this.
+<strong>Cost:</strong> patient attrition during the wait (Dentaltown: during 4–6 weeks <em>"patients often lose interest or reconsider treatment plans"</em>), plus the harder failure of treatment delivered against a stale approval. Dentaltown documents a case where an insurer stated 50% coverage of a $5,000 plan when the actual annual maximum was $1,000, and the patient refused treatment.
+<strong>Evidence quality:</strong> <strong>moderate to strong on mechanism; the absence of an existing feature is "no evidence found," not proven absence.</strong></p>
+<h3>Problem 8 — Radiographs and CBCT volumes cannot reliably be opened by the recipient</h3>
+<p><strong>Who:</strong> whoever sends imaging out — to a specialist, a lab, an insurer, or a patient.
+<strong>When:</strong> every referral, every surgical-guide case, every records release involving imaging.
+<strong>Currently handled:</strong> burn to CD/USB with a bundled viewer executable; zip the DICOM folder to Dropbox or WeTransfer; or export to JPEG and email.
+<strong>Why inadequate:</strong> each path has a distinct failure mode. Optical media assume a drive the receiving office no longer has and an <code>.exe</code> its IT may block. Cloud links raise HIPAA exposure and expire. JPEG is the only one that reliably opens — and it irreversibly degrades the diagnostic image, which is why it persists. Practitioner voice on the underlying lock-in: <em>"some devices are privet [sic] tagged and can not be viewed by any other software but it's own"</em>; on crippled bundled viewers: <em>"The Simplant viewer only allows you to look at the scan but cannot add IAN or place implants."</em> Endodontists now publish "how to open the scan I'm sending you" instruction pages.</p>
+<p>The standards pipeline exists but is early: ANSI/ADA Std. No. 1114 (DICOM conformance for dentistry) was out for public comment through December 2025, and dentistry's <strong>first full record exchange via HL7 FHIR happened at a Connectathon in September 2024</strong>.
+<strong>Cost:</strong> a re-request cycle, a retaken radiograph, or a rescheduled appointment.
+<strong>Evidence quality:</strong> <strong>strong</strong> (ADA's own submission to HHS/ONC; a receiving lab's published spec with named failure modes; practitioner forum voice).</p>
+<h3>Problem 9 — The referral loop does not close, and the money says it matters</h3>
+<p><strong>Who:</strong> the referring GP (production and liability) and the specialist (revenue).
+<strong>Currently handled:</strong> hope, plus a phone call if someone remembers.
+<strong>Why inadequate:</strong> in general healthcare, <strong>up to 50% of referrals are not completed</strong>, and <em>"while 70 percent of referring physicians said they sent patient histories, less than 35 percent of specialists reported receiving them"</em> — a 35-point perception gap. <strong>20–30% of diagnostic errors</strong> are attributed to breakdowns in the referral process (<a href="https://www.thedoctors.com/articles/patient-safety-in-dentistry-communication">The Doctors Company</a>, citing Weiner et al., O'Malley &amp; Reschovsky, and Singh et al.). Dental-specific: paper referrals show a <strong>30–40% failure rate for patient follow-through</strong>. The frequently cited "46% of dental specialist referrals go unfulfilled, at $953–$5,150 per unfulfilled referral" figure is <strong>from 2008 Kelton Research with no disclosed sample size</strong> and must be dated when used.</p>
+<p>Meanwhile the AAE's 2009 GP survey (n=983) found <strong>96% of GPs rate "timely follow-up of reports and film" as an effective relationship-builder — the highest-rated item in the survey.</strong></p>
+<p><strong>A non-obvious asymmetry worth stating:</strong> the loop most likely to close is the one where the <em>specialist</em> has commercial incentive. Specialist→GP reports probably arrive more reliably than GP→specialist packets do, because the report is the specialist's primary marketing instrument. The failure runs <em>with</em> the direction of the referral, not against it.
+<strong>Cost:</strong> lost production on both sides; documented malpractice exposure for failure to document and follow up a referral.
+<strong>Evidence quality:</strong> <strong>moderate.</strong> The strongest statistics are general-healthcare, not dental. The dental-specific numbers are old or vendor-sourced.</p>
+<hr />
+<h2>4. Application opportunities</h2>
+<p>Nine concepts. Complexity is rated relative to a solo developer or a two-person team: <strong>small</strong> ≈ 2–6 weeks to a usable v1; <strong>medium</strong> ≈ 2–4 months.</p>
+<p>A structural note that applies to all of them: <strong>the integration path is Open Dental first.</strong> Its REST API has 80+ endpoints, onboarding is an email, and a free test database is provided. Dentrix costs $5,000–$10,000 up front plus royalties and <strong>contractually prohibits third-party insurance claim processing</strong>. Any concept below that touches claims is therefore effectively Open-Dental-and-Denticon-first regardless of technical merit.</p>
+<hr />
+<h3>C1 — Clearance Request Builder &amp; Reply Tracker</h3>
+<p><strong>Working title:</strong> <em>ClearanceDesk</em>
+<strong>Intended user:</strong> OMS, periodontal and implant-placing GP practices; the surgical scheduler or office manager.
+<strong>Problem solved:</strong> the dentist asks a physician a vague question by fax and gets, 19.2% of the time, the answer they asked for.</p>
+<p><strong>Current workflow:</strong> staff pull a generic one-page clearance PDF, hand-write the patient name and a sentence about the procedure, fax it, and put a sticky note on the monitor. If nothing comes back in a week or two, someone calls. Mean turnaround 19.6 days; 45% need multiple attempts; 20% of replies are empty.</p>
+<p><strong>Proposed workflow:</strong> the user picks the planned procedure and the patient's flagged conditions from a short list. The tool (a) runs a <strong>guideline pre-check</strong> — if the only trigger is a prosthetic joint or stable warfarin, it says so and cites the ADA/AHA position rather than generating a request; (b) if a request is warranted, generates a <strong>structured one-page form with named answer slots</strong> the physician fills in — INR value <em>and</em> draw date, A1C value <em>and</em> date, antiresorptive drug/dose/route/duration, "is the patient stable for a 60-minute procedure under local with epinephrine: yes/no," "sedation planned: nitrous / oral anxiolytic / IV" — rather than a blank "please advise"; (c) opens a tracked item with a due date, escalation reminders at 7 and 14 days, and a contact log that records who was called and what was said; (d) on reply, checks whether each requested slot was actually filled and flags the ones that weren't.</p>
+<p><strong>Required inputs:</strong> patient name/DOB, planned procedure, anesthesia plan, flagged medical conditions and medications, physician name and fax/email.
+<strong>Expected outputs:</strong> a printable/faxable structured request; a tracked request record; a reply-completeness check; a chart-ready documentation note including all contact attempts.</p>
+<p><strong>Essential features:</strong> procedure→question templates for the ~12 common triggers; the guideline pre-check table; the tickler with escalation; the contact log; a one-page audit summary that satisfies MedPro's documentation guidance.
+<strong>Deliberately excluded from v1:</strong> actually sending faxes (print or export a PDF and let the office's existing fax or eFax handle it); any HIE or Direct messaging integration; physician-side portal; e-signature.</p>
+<p><strong>AI:</strong> <em>optional, and not in v1.</em> The guideline pre-check is a lookup table over ~12 conditions, not a reasoning problem, and a table is auditable in a way a model is not. AI has one credible later use: parsing a returned free-text reply to detect which requested items it actually contains. That is a nice-to-have on top of a manual checkbox.</p>
+<p><strong>Would a spreadsheet suffice?</strong> Partially — a spreadsheet can hold the tickler. It cannot generate the structured form, cannot hold the guideline table in a usable way at the point of decision, and produces no chart-ready documentation artifact. The value is concentrated in the <em>form generation</em> and the <em>documentation output</em>, not the list.</p>
+<p><strong>Complexity:</strong> small-to-medium. <strong>Learning difficulty:</strong> ~15 minutes; the interface is "pick procedure, pick conditions, print."
+<strong>Value:</strong> eliminates a meaningful fraction of the 45% of consults requiring repeat contact by making the reply fillable; removes guideline-obsolete requests entirely; produces the documentation a malpractice carrier explicitly asks for.
+<strong>Risks and constraints:</strong> the guideline table is clinical content and must cite its sources and carry a "not clinical advice; verify against current ADA/AHA guidance" disclaimer. Guidelines change — the table needs a visible version and date. PHI is present, so a local-first or self-hosted deployment is strongly preferable; a cloud version needs a BAA.
+<strong>Existing products/substitutes:</strong> free clearance form PDFs from a hundred practice websites; general practice-management ticklers. <strong>No product was found that addresses medical clearance as a workflow.</strong> Every AI dental product maps to radiographs, phones, verification, notes, or marketing.
+<strong>Why still attractive:</strong> the failure is quantified in peer-reviewed literature, the fix is a form and a timer, and nobody is in the category.
+<strong>Paid customization:</strong> per-specialty question libraries; a practice's own physician directory with preferred fax numbers; hospital-specific clearance forms for OMS practices with privileges; integration to pull the medication list and conditions from Open Dental's <code>MedicationPats</code> and <code>Diseases</code> endpoints.</p>
+<hr />
+<h3>C2 — Claim Attachment Completeness Gate</h3>
+<p><strong>Working title:</strong> <em>ClaimGate</em>
+<strong>Intended user:</strong> insurance/billing coordinator in an insurance-participating practice; also outsourced dental billing companies as a per-seat tool.
+<strong>Problem solved:</strong> the hand-maintained per-payer, per-code documentation cheat sheet.</p>
+<p><strong>Current workflow:</strong> the coordinator consults a PDF or spreadsheet built by a predecessor, checks whether the radiograph exists and is recent enough, writes or pastes a narrative, uploads images to NEA or DentalXChange, and types the reference number into the claim. Delta says the claim is auto-denied if documentation is missing.</p>
+<p><strong>Proposed workflow:</strong> before submission, the tool takes the claim's CDT codes, tooth numbers, dates of service, and the patient's plan, and produces a <strong>per-claim requirements checklist</strong> from a maintained rules corpus: radiograph type required (PA vs BW vs pano, and whether pano is an acceptable substitute for this payer), currency window (12 / 24 / 36 months / 8 or 14 months for Medi-Cal), perio charting site count and threshold values, narrative required elements (does this payer want percent of tooth structure lost? the endo completion date? the seat date? prior SRP dates?), and dependent dates. It checks what the chart actually contains, and flags what's missing <strong>before</strong> submission rather than after denial.</p>
+<p><strong>Required inputs:</strong> claim lines (CDT, tooth, surface, DOS), payer and plan identifier, and read access to imaging dates and perio exam data.
+<strong>Expected outputs:</strong> a pass/fail checklist per claim; a list of specific missing items in the words the payer uses; an exportable pre-submission audit log.</p>
+<p><strong>Essential features:</strong> the rules corpus (YAML or JSON, versioned in git, one file per payer, with a source URL and effective date on every rule — this is the actual product); the claim evaluator; a radiograph-currency check against imaging dates; a narrative element checker (regex/keyword against required elements, not generation).
+<strong>Deliberately excluded from v1:</strong> narrative <em>writing</em>; transmitting anything; posting or AR; eligibility verification; any payer whose rules aren't published.</p>
+<p><strong>AI:</strong> <em>optional and secondary.</em> The gate itself must be rules — an auditable rule with a source URL is worth more than a probabilistic judgment when the downstream consequence is a denial or an audit. AI is defensible for one narrow job: drafting the narrative <em>scaffold</em> from the chart's measurements. Note the live tension — eAssist warns that <em>"a cookie-cutter narrative template may be a red flag to a claim examiner,"</em> while the entire industry distributes template libraries. The real requirement is a template populated with patient-specific measurements, which is exactly the AI shape and exactly the audit-flag risk.</p>
+<p><strong>Would a spreadsheet suffice?</strong> No, and the proof is that practices already use one and it fails — it goes stale, it lives with one person, and it cannot look at whether <em>this</em> patient's bitewing is 14 months old.</p>
+<p><strong>Complexity:</strong> medium. <strong>Learning difficulty:</strong> ~30 minutes for the checklist; ongoing effort is in trusting it.
+<strong>Value:</strong> at MGMA's ~$25 rework per denied claim, with 50–65% of denials never reworked, a practice that prevents a handful of documentation denials a month pays for the tool many times over. The larger value is audit posture — the Texas OIG settlement was $66,804 plus a two-year exclusion, driven by documentation.
+<strong>Risks and constraints:</strong> the corpus is a maintenance commitment; a stale rule is worse than no rule, so every rule needs a visible effective date and source link. <strong>Henry Schein One prohibits third-party insurance claim processing integrations on Dentrix</strong> — this is a contractual, not technical, barrier and must shape go-to-market. The 2026–2028 CMS attachments transition (X12 275 v6020) will replatform the transport layer underneath this, which is an opportunity, not a threat, since the gate operates above transport.
+<strong>Existing products/substitutes:</strong> Dentrix's office-maintained attachment rules; DentalXChange/Denticon format validation; VideaHealth ClaimsAI and Overjet (image selection and narrative generation); eAssist and Dental Claim Support (human expertise at $1,400/month or 2.5–3.5% of collections). Each solves an adjacent slice. <strong>None was documented to ship a maintained, payer-specific, code-level completeness gate.</strong>
+<strong>Why still attractive:</strong> the outsourcers' actual moat is a maintained payer-rules corpus plus labor. An open corpus attacks the corpus half directly, and it is the kind of asset that gets better from community contribution — a practice that learns Blue Cross won't take electronic attachments can submit that as a pull request.
+<strong>Paid customization:</strong> building a practice's specific payer mix into the corpus; importing an existing cheat-sheet PDF; DSO-wide deployment with per-region payer sets.</p>
+<hr />
+<h3>C3 — Lab Case / Schedule Reconciler</h3>
+<p><strong>Working title:</strong> <em>SeatCheck</em>
+<strong>Intended user:</strong> front desk and office manager; a solo practice's single administrative person.
+<strong>Problem solved:</strong> the patient arrives and the case isn't here — or the case arrives and nobody scheduled the patient.</p>
+<p><strong>Current workflow:</strong> a lab-case module if the PMS has one, a whiteboard or printed log if not, plus a deliberate week of schedule buffer as insurance.</p>
+<p><strong>Proposed workflow:</strong> a small daily job that reads lab cases and appointments from the PMS and emails or prints a four-part exception report:
+1. <strong>Seat appointments in the next N days with no case received</strong> — the one that costs chair time.
+2. <strong>Cases received with no scheduled appointment</strong> — the one that costs production.
+3. <strong>Cases past their due date with no receipt logged</strong> — the one that requires a call to the lab.
+4. <strong>Appointments rescheduled or cancelled since the case was sent</strong> — with a one-click "notify the lab" email, because <em>nothing in the market pushes this direction.</em></p>
+<p><strong>Required inputs:</strong> read access to the PMS lab-case table and appointment table (Open Dental exposes both), plus lab contact emails.
+<strong>Expected outputs:</strong> a daily exception list; a pre-drafted reschedule notice to the lab; a weekly on-time-delivery summary per lab.</p>
+<p><strong>Essential features:</strong> the four exception queries; configurable lead-time window; the lab-notification email; per-lab on-time statistics accumulated over time — a metric labs themselves are not measuring (8&amp;9 Consulting's argument is precisely that labs do not track customer-facing compliance).
+<strong>Deliberately excluded from v1:</strong> case status polling from lab portals; anything that requires the lab to adopt software; shipping/tracking integration; a case-tracking UI to replace the PMS module.</p>
+<p><strong>AI:</strong> <em>inappropriate.</em> This is four SQL queries and a mail merge. Adding a model would add cost, latency, and failure modes to something whose entire value is that it is boring and correct.</p>
+<p><strong>Would a spreadsheet suffice?</strong> Only if someone retypes both lists daily, which is the current state and is why it fails. The value is that it runs unattended and compares two systems of record.</p>
+<p><strong>Complexity:</strong> small. <strong>Learning difficulty:</strong> near zero — the output is an email.
+<strong>Value:</strong> the clearest ROI in this report. One prevented wasted seat appointment is 45–60 minutes of chair time at roughly $375/hour of overhead. Henry Schein's DDX survey found 35% of practices attributed reduced rebookings to better lab-case visibility.
+<strong>Risks and constraints:</strong> minimal. PHI in the exception report means it should be delivered internally, not to a personal email. The reschedule notice to the lab should carry the case number and date only, not clinical detail.
+<strong>Existing products/substitutes:</strong> Open Dental and CareStack lab-case modules (which cover exceptions 1–3 partially, if staff actually attach cases to appointments — Open Dental's own blog says they forget); Henry Schein DDX (free to dentists, Dentrix-anchored, 15 years old); printable log sheets and spreadsheet templates.
+<strong>Why still attractive:</strong> it works <em>because</em> staff forget to attach cases — the exception report catches the omission the module depends on. And exception 4, the practice→lab direction, appears genuinely unserved.
+<strong>Paid customization:</strong> per-lab SLA thresholds; multi-location rollups; adding the lab's own tracking numbers; a lab-side version sold to laboratories that want to give their accounts the report.</p>
+<hr />
+<h3>C4 — Right-of-Access Request Register</h3>
+<p><strong>Working title:</strong> <em>AccessLog</em>
+<strong>Intended user:</strong> office manager or HIPAA privacy officer in a 1–10 person practice.
+<strong>Problem solved:</strong> a statutory 30-day clock with no queue, and a fee policy that has produced four federal enforcement actions against dental practices.</p>
+<p><strong>Current workflow:</strong> a fax lands, or a patient calls, or an attorney's letter arrives. Someone starts assembling. Nobody records the receipt date. Someone applies a habitual copying fee.</p>
+<p><strong>Proposed workflow:</strong> log the request the moment it arrives — requester, relationship, records requested, <strong>delivery format requested</strong>, receipt timestamp. The tool computes the 30-day due date, warns at day 20, and generates the <strong>extension letter</strong> (which is only valid if sent within the initial 30 days). A <strong>fee calculator with guardrails</strong> computes a permissible charge: labor for copying and supplies and postage yes; search and retrieval, administrative overhead, and vendor fees no; <strong>no delivery charge for a method the requester didn't ask for</strong>; offers the $6.50 flat-rate safe harbor; and blocks a fee entirely when the request is for inspection only. It refuses to let the user mark a request "held for balance" without displaying the ADA ethical obligation and the access rule. On fulfillment it logs what was sent, how, and when.</p>
+<p><strong>Required inputs:</strong> typed request details; optionally a scan of the request form.
+<strong>Expected outputs:</strong> a live queue with due dates; a compliant extension letter; a fee worksheet showing the basis for every charge; a delivery log; an exportable register for a privacy audit.</p>
+<p><strong>Essential features:</strong> the clock; the fee guardrails; the extension letter; the delivery log; a records-assembly checklist (chart notes / radiographs / consents / referral letters, per the ADA's definition of the dental record).
+<strong>Deliberately excluded from v1:</strong> actually assembling or transmitting records; identity verification; state-by-state retention rules beyond a configurable value; anything resembling a document management system.</p>
+<p><strong>AI:</strong> <em>inappropriate.</em> Statutory deadlines and fee rules are exactly the domain where a deterministic rule with a citation beats a model. A wrong answer here costs $70,000.</p>
+<p><strong>Would a spreadsheet suffice?</strong> A spreadsheet can hold the dates. It cannot generate the extension letter, cannot enforce fee logic at the moment staff are about to quote a number to a patient, and produces no register. Note that in the Gums Dental case the practice had three years and still didn't act — the binding constraint is not calculation, it is that nothing is watching.</p>
+<p><strong>Complexity:</strong> small. <strong>Learning difficulty:</strong> ~10 minutes.
+<strong>Value:</strong> insurance-shaped rather than time-saving, and that should be stated honestly. The expected value is dominated by tail risk: $25,000 to $80,000 per enforcement action, four of them against dental practices, with the largest turning on a $25 fee. Secondary value is real but modest — 30–90 minutes saved per request in assembly coordination, plus not having a fee argument at the front desk.
+<strong>Risks and constraints:</strong> it must not be presented as legal advice. Fee rules have state overlays. The register itself contains PHI-adjacent metadata and should be local or self-hosted.
+<strong>Existing products/substitutes:</strong> generic release-of-information vendors serving hospitals (priced and scoped for institutions); nothing dental-sized. <strong>No dental PMS ships a records-request queue with an SLA timer.</strong>
+<strong>Why still attractive:</strong> it maps one-to-one onto every published OCR dental case, it is genuinely small, and it is the kind of thing a practice adopts after reading about a $70,000 penalty — a marketing hook that writes itself.
+<strong>Paid customization:</strong> state retention rules; practice letterhead and fee schedule; multi-location registers for a group; an attorney-request variant with subpoena handling.</p>
+<hr />
+<h3>C5 — Predetermination Register</h3>
+<p><strong>Working title:</strong> <em>PredetWatch</em>
+<strong>Intended user:</strong> treatment coordinator; billing coordinator.
+<strong>Problem solved:</strong> approvals that expire, reset at the plan year, or never get matched to the eventual claim.</p>
+<p><strong>Current workflow:</strong> a manual log, a tickler, or nothing. The reference number is carried forward by memory or by a note in the chart.</p>
+<p><strong>Proposed workflow:</strong> log each submitted predetermination with payer, patient, planned codes, submission date, and the payer's stated validity window. On approval, record the reference number and the approved amounts. The register then does three things nothing else does: <strong>counts down to expiry</strong> with a warning at 30 and 7 days; <strong>flags any predetermination whose validity window crosses a plan-year boundary</strong>, because maximums and deductibles reset; and <strong>flags divergence</strong> when the treatment actually scheduled no longer matches the approved code set. At claim time, it surfaces the reference number to be attached.</p>
+<p><strong>Required inputs:</strong> predetermination submissions and responses (typed, or parsed from the payer's letter); the patient's plan-year boundary.
+<strong>Expected outputs:</strong> an aging register; expiry and plan-year alerts; a divergence flag; a claim-time reference-number prompt.</p>
+<p><strong>Essential features:</strong> the register; the three alerts; per-payer default validity windows (60 days preauth, 90 days for Delta VA's predetermination, configurable); a stale-predetermination report for the treatment coordinator's follow-up calls.
+<strong>Deliberately excluded from v1:</strong> submitting predeterminations; eligibility verification; benefit breakdowns; any attempt to predict approval.</p>
+<p><strong>AI:</strong> <em>inappropriate for the register.</em> Optionally useful later for extracting reference numbers and approved amounts from scanned payer letters — that is OCR plus extraction, and is a v2 convenience, not the product.</p>
+<p><strong>Would a spreadsheet suffice?</strong> Closer here than anywhere else in this report, and that should be conceded. A disciplined coordinator with a good spreadsheet gets most of the value. What the spreadsheet doesn't do is know the plan-year boundary, know each payer's default validity window, or notice that the scheduled treatment drifted from the approved codes. The honest positioning is "a spreadsheet with the three rules that matter built in," which is a modest but real claim.</p>
+<p><strong>Complexity:</strong> small. <strong>Learning difficulty:</strong> ~15 minutes.
+<strong>Value:</strong> prevents treatment delivered against a stale approval and gives the treatment coordinator a call list that is currently improvised. Note that <strong>CMS explicitly excluded prior-authorization attachments from the 2026 standard</strong>, so no regulatory relief is coming.
+<strong>Risks and constraints:</strong> validity windows vary by payer and are sometimes unpublished; the register must present them as <em>the practice's configured value</em>, not as authoritative.
+<strong>Existing products/substitutes:</strong> none found. Every source describes tracking as a manual log or tickler. This is stated as "no evidence found," not proven absence.
+<strong>Paid customization:</strong> payer-specific windows for a practice's mix; integration to pull the treatment plan from the PMS and diff it against the approved codes.</p>
+<hr />
+<h3>C6 — Lab Rx Design-Intent Gate</h3>
+<p><strong>Working title:</strong> <em>RxComplete</em>
+<strong>Intended user:</strong> dental assistant filling out the prescription; the dentist signing it; secondarily the laboratory receiving it.
+<strong>Problem solved:</strong> the legal core of the work authorization gets filled in; the design-intent fields — margin design, pontic design, occlusal clearance, shade, try-in, due date — do not.</p>
+<p><strong>Current workflow:</strong> a paper form or a scanner-portal order screen. The assistant fills the identity fields; the design fields get skipped under time pressure; the lab calls.</p>
+<p><strong>Proposed workflow:</strong> a structured Rx builder organized around the <em>restoration type</em>, not around the form. Choosing "zirconia crown, tooth #19" surfaces exactly the fields that matter for that restoration and marks them required: margin design, occlusal clearance, contacts, glaze level, shade <strong>with a prompt to attach a photo including the shade tab in frame</strong>, try-in required yes/no, and a due date <em>and time</em>. For implant cases it surfaces the fields that don't exist on any conventional form: implant system and platform, <strong>scan body brand / SKU / height / lot with a photo of the packaging</strong>, scan body library name and version, planned Ti-base, torque and driver. It will not produce a signed authorization until required fields are answered — which is precisely the recommendation the largest published referral audit made about referral systems, applied here. It then renders a work authorization that satisfies the sending state's statutory content requirements, retains a copy per that state's retention period, and files the returned materials disclosure against the case.</p>
+<p><strong>Required inputs:</strong> restoration type, tooth numbers, patient and doctor identity, laboratory identity (including the lab's registration number where the state requires it on the work order, as Washington does).
+<strong>Expected outputs:</strong> a printable/PDF work authorization; a structured record retained per state rules; a case file that later holds the returned materials and point-of-origin disclosure.</p>
+<p><strong>Essential features:</strong> restoration-type field templates; the completeness gate; state content and retention profiles for the ~12 regulating states plus a generic profile; photo attachment; the returned-disclosure filing slot.
+<strong>Deliberately excluded from v1:</strong> transmitting scan files (the scanner ecosystems own that and will not be dislodged); lab production management; billing; any attempt to be a lab management system.</p>
+<p><strong>AI:</strong> <em>optional and marginal.</em> Shade selection from a photograph is a real research area but is a clinical claim with a device-regulation shadow, and belongs nowhere near a v1. Everything the gate does is a required-field rule.</p>
+<p><strong>Would a spreadsheet suffice?</strong> No — the output is a legal document with state-specific content requirements and a retention obligation, and the value is in conditional field logic that a spreadsheet cannot express cleanly.</p>
+<p><strong>Complexity:</strong> medium. <strong>Learning difficulty:</strong> ~30 minutes for an assistant; the field vocabulary is already familiar.
+<strong>Value:</strong> attacks the documented omissions directly — 69% missing margin design, 56% missing pontic design, 51.2% missing try-in instruction, 44.6% missing shade. If it moves the crown remake-and-adjustment rate even modestly, the practice-side value is chair time at ~$375/hour, and Glidewell's arithmetic puts a 15-crown/week practice's exposure at ~40 hours/year.
+<strong>Risks and constraints:</strong> the state content profiles are legal content and need citations and dates. Several states require an <strong>original ink signature</strong> (Ohio explicitly), and a Virginia lab reports board inspectors demanding ink signatures — so "print and sign" must remain a first-class output, not a fallback. Retention obligations differ (2 years typical, <strong>4 years in Florida on both sides</strong>).
+<strong>Existing products/substitutes:</strong> EasyRx (from $68/month, plus a no-cost per-script lab plan); Henry Schein DDX (free to dentists, Dentrix-anchored); scanner-portal order forms; lab management systems (LabStar ~$250/mo, Seazona ~$80/mo) which are lab-internal. <strong>The structural gap is that the scanner Rx and the legal work authorization are two different documents that no system reconciles</strong> — a lab owner's own words: <em>"Digital order systems from scanning devices bypass traditional prescription workflows entirely, creating ambiguity about documentation requirements."</em>
+<strong>Why still attractive:</strong> existing tools digitize the compliance layer; the omissions are in the design-intent layer. And the state-legal layer is real, unglamorous work that nobody has open-sourced.
+<strong>Paid customization:</strong> a specific laboratory's field set and material menu, distributed by that lab to its accounts (the lab is arguably the better customer here than the practice); DSO-wide standardization.</p>
+<hr />
+<h3>C7 — Referral Packet Completeness Gate</h3>
+<p><strong>Working title:</strong> <em>ReferReady</em>
+<strong>Intended user:</strong> GP front desk assembling an outbound referral; secondarily the specialist's referral coordinator.
+<strong>Problem solved:</strong> referrals arrive with radiographs 90% of the time and with <em>adequate</em> radiographs 47% of the time, and 23.8% get rejected at triage — 93% of those for insufficient clinical information.</p>
+<p><strong>Current workflow:</strong> fill a paper slip, scan it, separately export radiographs from the imaging application, attach both to an email, and hope. A Dentrix user's feature request describes the workflow verbatim: scan the referral slip to the Document Center, export it to the desktop, separately go to the Image Center to export x-rays, and manually attach everything to an email.</p>
+<p><strong>Proposed workflow:</strong> choose the receiving specialty and the tool presents that specialty's required-element set (endo, OMS, perio, ortho, pedo each differ). It enforces the elements the audits say go missing: <strong>tooth number rendered simultaneously in Universal, Palmer and FDI notation</strong> — the single cheapest fix for the documented wrong-site extraction failure mode — reason for referral, presenting complaint, current medications, allergies, relevant medical history, imaging with <strong>acquisition date</strong>, and an explicit "written report requested" flag with an expected-return date. It assembles a single PDF cover packet plus an imaging folder, produces a manifest, and logs what was sent and when. It refuses to finalize with required elements blank.</p>
+<p><strong>Required inputs:</strong> patient demographics, medical history and medications (pullable from the PMS), tooth number, reason, imaging files and their dates.
+<strong>Expected outputs:</strong> a single referral PDF; an imaging bundle with a manifest; a chart-ready transmission log entry.</p>
+<p><strong>Essential features:</strong> per-specialty required-element sets; tri-notation tooth rendering; imaging date capture; the completeness gate; the transmission log.
+<strong>Deliberately excluded from v1:</strong> being a referral network — no accounts for the receiving specialist, no directory, no two-sided marketplace. <strong>The account-creation wall is why fifteen years of dental referral platforms have failed to reach general penetration</strong>, and the successful ones (Refera) explicitly let specialists receive without an account. The output here is a file the practice sends by its existing channel.</p>
+<p><strong>AI:</strong> <em>inappropriate for the gate.</em> One later possibility with real merit: checking whether an attached radiograph actually shows the referenced tooth. That is a clinical image claim and probably a regulated one — out of scope.</p>
+<p><strong>Would a spreadsheet suffice?</strong> No. This is document assembly plus conditional required fields.</p>
+<p><strong>Complexity:</strong> medium — image handling is the hard part and the reason implementation scores lower than the problem severity would suggest.
+<strong>Learning difficulty:</strong> ~20 minutes.
+<strong>Value:</strong> the receiving side spends up to 20 minutes chasing missing information per incomplete referral vs ~3 minutes for a complete one; a structured proforma produced a measured <strong>29.3% increase in information provided</strong>. The tail risk avoided is wrong-site surgery.
+<strong>Risks and constraints:</strong> PHI in transit — the tool should produce a package, not a transmission channel, unless the practice already has secure email. Image export remains dependent on whatever the imaging application permits.
+<strong>Existing products/substitutes:</strong> Sindi, Refera, RecordLinc, PepCare, Brightsquid, eDossea, CareStack's built-in referrals, Dentrix Ascend's tagging-only feature. The category is crowded on <em>transport</em> — the competition is on file-size caps, 50 MB → 500 MB → 2 GB — and <strong>empty on completeness enforcement</strong>. Given the Swedish audit found radiographs present 90% of the time but inadequate 53% of the time, the industry is optimizing the wrong axis.
+<strong>Why still attractive despite the crowding:</strong> it is not competing with them. It produces a better package for whatever channel the practice already uses, which means it can be adopted unilaterally by one office without asking anyone else to sign up.
+<strong>Paid customization:</strong> a specific specialist's required-element set, distributed by that specialist to their referrers (the specialist is the natural buyer — this is their marketing budget); imaging-system-specific export helpers.</p>
+<hr />
+<h3>C8 — Imaging Export Validator</h3>
+<p><strong>Working title:</strong> <em>WillItOpen</em>
+<strong>Intended user:</strong> anyone in the practice who sends imaging out — front desk, assistant, or the person handling a records request.
+<strong>Problem solved:</strong> the recipient can't open the file, so it gets re-sent, degraded to JPEG, or the radiograph gets retaken.</p>
+<p><strong>Current workflow:</strong> export from the imaging application by whatever path is quickest, zip it, and send. Discover the problem days later.</p>
+<p><strong>Proposed workflow:</strong> point the tool at an export folder. It reports, in plain language: whether the DICOM series is complete and multi-file (a receiving lab's published spec demands <em>"uncompressed, multi-file DICOM, 0.3mm or 0.4mm slices"</em> and explicitly rejects single-file and viewer-executable conversions); slice thickness and file count, warning when 0.1–0.2 mm slicing has produced a file count too large to upload; whether any <code>.exe</code> viewer is bundled (and offers to strip it, since many IT departments block executables); whether the files are proprietary rather than standard (<code>.dex</code>, <code>.jif</code> and similar); total size against common transfer limits; and whether acquisition dates are present. It then writes a <strong>manifest</strong> — patient, tooth or region, acquisition date, modality, file count, format — and a one-page <strong>plain-language "how to open this" sheet</strong> for the recipient.</p>
+<p><strong>Required inputs:</strong> a folder of exported imaging.
+<strong>Expected outputs:</strong> a validation report; a cleaned, correctly structured package; a manifest; a recipient instruction sheet.</p>
+<p><strong>Essential features:</strong> DICOM series integrity check; slice-thickness and count reporting; executable detection and removal; proprietary-format detection; the manifest; the instruction sheet.
+<strong>Deliberately excluded from v1:</strong> exporting <em>from</em> imaging applications (each vendor is different and this is where projects die); viewing or rendering images; anonymization; transmission.</p>
+<p><strong>AI:</strong> <em>inappropriate.</em> This is file inspection against a spec.</p>
+<p><strong>Would a spreadsheet suffice?</strong> Not applicable.</p>
+<p><strong>Complexity:</strong> small-to-medium. <strong>Learning difficulty:</strong> ~5 minutes — drag a folder, read a report.
+<strong>Value:</strong> prevents a re-request cycle and, per the ADA's own submission to HHS, prevents repeat imaging and unnecessary radiation. Applies across referrals, lab surgical-guide cases, records releases, and insurer submissions — one tool, four workflows.
+<strong>Risks and constraints:</strong> it touches PHI-bearing files and should run entirely locally with no upload. It must not claim to assess <em>diagnostic</em> adequacy, only technical openability — that distinction is the line between a utility and a regulated device.
+<strong>Existing products/substitutes:</strong> generic DICOM validators aimed at radiology; nothing dental-shaped or front-desk-shaped. Vendors are building <em>around</em> the gap (Carestream's Imaging Case Collaboration, CBCTHub, browser DICOM viewers) rather than validating exports.
+<strong>Why attractive:</strong> it is the smallest genuinely useful thing in this report, it has no competitor at this scope, and the ADA has publicly named the underlying problem to a federal regulator — which is unusually good validation for a market-research finding.
+<strong>Paid customization:</strong> per-recipient profiles (this lab wants 0.4 mm multi-file DICOM; this endodontist wants PAs as PNG); a batch mode for a DSO's records department.</p>
+<hr />
+<h3>C9 — Referral Loop Closer</h3>
+<p><strong>Working title:</strong> <em>LoopClose</em>
+<strong>Intended user:</strong> GP treatment coordinator; specialist marketing/relationship coordinator.
+<strong>Problem solved:</strong> up to half of referrals never complete, and the report often never comes back.</p>
+<p><strong>Current workflow:</strong> nothing systematic.</p>
+<p><strong>Proposed workflow:</strong> each outbound referral gets an expected-contact date and an expected-report date. The tool produces two weekly lists: <strong>patients who were referred and show no evidence of having gone</strong>, and <strong>referrals with no report received by the expected date</strong>. It drafts the patient follow-up call script and the specialist report request, and — importantly for liability — logs every attempt, including a structured "patient declined referral" outcome with an informed-refusal note, which is exactly what malpractice carriers instruct practices to document.</p>
+<p><strong>Required inputs:</strong> referral records (from C7 or entered directly); report receipt logging.
+<strong>Expected outputs:</strong> two exception lists; drafted follow-ups; a documentation trail.</p>
+<p><strong>Essential features:</strong> the two lists; the outcome vocabulary including informed refusal; the log.
+<strong>Deliberately excluded from v1:</strong> anything requiring the specialist to participate; patient messaging automation; analytics dashboards.</p>
+<p><strong>AI:</strong> <em>inappropriate.</em></p>
+<p><strong>Would a spreadsheet suffice?</strong> Largely yes, which is why this ranks last. The differentiator is the informed-refusal documentation artifact and the fact that it runs unattended.</p>
+<p><strong>Complexity:</strong> small. <strong>Learning difficulty:</strong> ~10 minutes.
+<strong>Value:</strong> GPs rate timely report-back the single most important specialist relationship factor (96%); referral breakdowns are implicated in 20–30% of diagnostic errors. But the dental-specific completion statistics are 2008-vintage or vendor-sourced, so the ROI case is softer than the others here.
+<strong>Risks and constraints:</strong> requires disciplined data entry, which is the failure mode of every tracking tool.
+<strong>Existing products/substitutes:</strong> every referral platform claims tracking; CareStack and Dentrix Ascend include status flags.
+<strong>Why still attractive:</strong> modest. It is included because it is cheap to build alongside C7 and because the documentation artifact has independent liability value — but it should not be built first.
+<strong>Paid customization:</strong> specialist-side deployment measuring referrer-by-referrer completion.</p>
+<hr />
+<h2>5. Opportunity ranking</h2>
+<p>Scored 1–5 on ten criteria. <strong>SEV</strong> severity of problem · <strong>FRQ</strong> frequency of use · <strong>ROI</strong> clarity of return · <strong>LRN</strong> ease of learning · <strong>IMP</strong> ease of implementation · <strong>SCP</strong> ability to stay narrowly scoped · <strong>DIF</strong> market differentiation · <strong>CST</strong> customization potential · <strong>DAT</strong> availability of realistic test data · <strong>CNF</strong> confidence in evidence.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Concept</th>
+<th>SEV</th>
+<th>FRQ</th>
+<th>ROI</th>
+<th>LRN</th>
+<th>IMP</th>
+<th>SCP</th>
+<th>DIF</th>
+<th>CST</th>
+<th>DAT</th>
+<th>CNF</th>
+<th><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1</td>
+<td>Clearance Request Builder &amp; Reply Tracker</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+<td><strong>45</strong></td>
+</tr>
+<tr>
+<td>C2</td>
+<td>Claim Attachment Completeness Gate</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td><strong>44</strong></td>
+</tr>
+<tr>
+<td>C3</td>
+<td>Lab Case / Schedule Reconciler</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+<td><strong>44</strong></td>
+</tr>
+<tr>
+<td>C4</td>
+<td>Right-of-Access Request Register</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td><strong>43</strong></td>
+</tr>
+<tr>
+<td>C5</td>
+<td>Predetermination Register</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td><strong>43</strong></td>
+</tr>
+<tr>
+<td>C6</td>
+<td>Lab Rx Design-Intent Gate</td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+<td><strong>42</strong></td>
+</tr>
+<tr>
+<td>C7</td>
+<td>Referral Packet Completeness Gate</td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td><strong>41</strong></td>
+</tr>
+<tr>
+<td>C8</td>
+<td>Imaging Export Validator</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td><strong>41</strong></td>
+</tr>
+<tr>
+<td>C9</td>
+<td>Referral Loop Closer</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td><strong>39</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>The top three</h3>
+<p><strong>C1 — Clearance Request Builder &amp; Reply Tracker (45).</strong> It wins on the combination that matters most for this catalog: a failure quantified in peer-reviewed literature, a fix that is a form and a timer, and <strong>no competitor in the category at all</strong>. Every AI dental product found maps to radiographs, phones, verification, notes, or marketing; clearance is unoccupied despite having a documented 19.2% success rate, a 45% repeat-contact rate, and a malpractice carrier publishing exactly what the artifact should contain. It also has a feature no other concept here has — the guideline pre-check that <em>eliminates</em> work rather than speeding it up, by telling the practice that a prosthetic-joint or stable-warfarin clearance isn't indicated. That is the kind of thing a professional notices and remembers.</p>
+<p><strong>C2 — Claim Attachment Completeness Gate (44).</strong> The largest dollar value and the strongest evidence, held back by scope discipline and by one contractual fact. Scope: the rules corpus is a permanent maintenance commitment, and a stale rule is worse than no rule. Contract: <strong>Henry Schein One prohibits third-party insurance claim processing integrations on Dentrix</strong>, which by itself removes the largest installed base from the addressable market unless the tool operates purely as an advisor outside the claim path. Its real strategic appeal is that the open corpus is a community asset — a practice that discovers Blue Cross won't accept electronic attachments contributes a rule, and the corpus compounds. That is a genuinely good fit for a free open-source base with paid per-practice customization, because the customization ("build my payer mix in") is exactly what practices currently do by hand.</p>
+<p><strong>C3 — Lab Case / Schedule Reconciler (44).</strong> The cleanest, smallest, most immediately demonstrable of the nine. Four queries, one email, near-zero learning curve, and a before-and-after a dentist understands in one sentence: <em>"you will stop finding out at 8:40 that the crown isn't here."</em> It scores lower on differentiation because PMS lab modules exist — but it works precisely <em>because</em> those modules depend on staff remembering to attach cases, and Open Dental's own marketing admits they forget. Exception 4, notifying the lab when the patient reschedules, appears genuinely unserved by anything in the market.</p>
+<h3>What should be investigated next</h3>
+<p><strong>Build C3 first, even though it ranks third.</strong> It is the fastest path to a working artifact with a real practice, it requires only read access to Open Dental, it contains no clinical or legal content, and a working exception report is the credibility that gets a conversation about C1 or C2. Use it as the wedge, then interview the same practices for C1.</p>
+<p><strong>Investigate C2's corpus feasibility before committing.</strong> Spend a week building the rules corpus for exactly three payers — Delta Dental (one state entity), Cigna DPPO, and one state Medicaid — from their published PDFs. If three payers take a week, the corpus is viable; if they take a month, the concept needs to shrink to a single-payer or single-procedure-family tool.</p>
+<hr />
+<h2>6. Validation plan</h2>
+<h3>Questions to ask practitioners</h3>
+<p><strong>For C1 (clearance) — ask an OMS or perio office manager:</strong>
+- How many clearance requests do you send in a typical month, and what fraction come back with what you actually asked for?
+- When a reply comes back as a signature with no data, what do you do next?
+- Have you ever postponed or cancelled a surgical appointment because clearance hadn't arrived? How often?
+- Do you ever send a clearance request for a joint replacement or a patient on warfarin? (Listen for whether they know current guidance says it's usually unnecessary — this tests whether the pre-check has value or is insulting.)
+- Who decides the request is needed — the surgeon, or the scheduler working from a rule?</p>
+<p><strong>For C2 (attachments) — ask a billing coordinator:</strong>
+- Show me the document you use to know what each payer requires. <em>(Ask to see it. If it's a PDF or spreadsheet, the thesis is confirmed; photograph the structure.)</em>
+- Who maintains it, and when was it last updated?
+- What happens when a payer changes a rule — how do you find out?
+- Of your denials last month, how many were documentation problems? <em>(Ask for the actual denial report, not a recollection.)</em>
+- Have you ever had a claim denied for "missing X-ray" when you know you uploaded it?</p>
+<p><strong>For C3 (lab cases) — ask a front desk:</strong>
+- Walk me through this morning. How did you know which of today's patients have lab work outstanding?
+- When was the last time a patient came in and the case wasn't here? What happened?
+- When a patient reschedules a seat appointment, does the lab find out? How?
+- Do you keep anything outside the software — a whiteboard, a binder, a spreadsheet? <em>(Ask to see it.)</em></p>
+<h3>Who to interview</h3>
+<ul>
+<li><strong>2–3 independent GP practices on Open Dental</strong> — the beachhead, and the only ones who can give you a test database easily.</li>
+<li><strong>1–2 oral surgery practices and 1 periodontal practice</strong> — the clearance and referral-intake volume lives here.</li>
+<li><strong>1–2 commercial dental laboratories under 25 employees</strong> — they see hundreds of practices' Rx habits and are the most quantitatively honest party in the whole chain, because remakes cost them money. Dental Lab Network is a publicly readable forum where lab owners speak candidly; it is the best recruiting ground.</li>
+<li><strong>1 outsourced dental billing company</strong> (eAssist-style) — they will tell you exactly what the payer-rules corpus is worth, because it is their moat.</li>
+<li><strong>1 dental practice-management consultant or AADOM member</strong> — for cross-practice pattern, not for single-practice truth.</li>
+</ul>
+<h3>Search terms for further research</h3>
+<p><code>dental "work authorization" statute [state]</code> · <code>"required documentation" dental claim [payer] PDF</code> · <code>dental lab "remake" rate KPI</code> · <code>"medical clearance" dental fax form template</code> · <code>OCR right of access settlement dental</code> · <code>Open Dental API labcase appointment</code> · <code>CBCT export DICOM lab surgical guide requirements</code> · <code>dental referral rejected triage insufficient information</code> · <code>predetermination expiration dental plan year</code></p>
+<h3>Sample files and data needed</h3>
+<ul>
+<li>A real (de-identified) <strong>claim-requirements cheat sheet</strong> from a practice — the Verber Dental Group PDF is a public specimen to start from.</li>
+<li><strong>Three payer documentation PDFs</strong> to seed the corpus: Delta Dental of NJ/CT's 2025 Required Documentation Chart, Cigna's 2026 DPPO Coverage Determination Guidelines, and one state Medicaid manual.</li>
+<li>An <strong>Open Dental test database</strong> (provided free by Open Dental to developers) with lab case and appointment tables populated.</li>
+<li>A <strong>de-identified CBCT export</strong> from at least three different scanner ecosystems — this is the hardest artifact to obtain and the one that determines whether C8 is real.</li>
+<li>Three or four <strong>blank lab Rx forms</strong> from labs in different states, to derive the field templates.</li>
+<li>A set of <strong>clearance forms</strong> from practice websites (dozens are public) to derive the question templates.</li>
+</ul>
+<h3>Cheapest prototypes that would validate</h3>
+<ul>
+<li><strong>C3:</strong> a Python script against the Open Dental test database that prints the four exception lists. One day of work. If a real practice looks at the output and says "wait, that one's wrong" and then goes and fixes it, the concept is validated.</li>
+<li><strong>C1:</strong> a single well-designed PDF — one procedure family, structured answer slots — faxed by one OMS office for two weeks. Measure the reply completeness rate against their historical baseline. No code at all.</li>
+<li><strong>C2:</strong> the three-payer corpus plus a script that takes a CSV of claim lines and prints the requirements checklist. If a billing coordinator finds one thing their cheat sheet had wrong, that's the validation.</li>
+<li><strong>C8:</strong> a script that walks a folder and prints the validation report. Half a day. The binding question is whether you can get three real CBCT exports.</li>
+</ul>
+<h3>The assumptions most likely to make each fail</h3>
+<ul>
+<li><strong>C1:</strong> that practices <em>want</em> fewer clearance requests. Some send them defensively regardless of guidelines, precisely because the request is a liability transfer. If the pre-check is perceived as talking them out of documentation, the feature is a liability, not an asset. Test this early and be prepared to make the pre-check advisory only.</li>
+<li><strong>C2:</strong> that published payer rules match what payers actually enforce. The Verber cheat sheet says D7210 needs no PA x-ray while Delta and Aetna both require one — either the practice learned an unpublished exception, or the practice is wrong. If the answer is "the published rules aren't the real rules," the corpus is much less valuable and the outsourcers' moat is knowledge that cannot be documented.</li>
+<li><strong>C3:</strong> that the PMS lab-case table is actually populated. If staff don't create lab case records at all, there is nothing to reconcile and the tool needs a data-entry front end, which changes its complexity class entirely. <strong>Check this first — it is a single query and it determines whether the concept exists.</strong></li>
+<li><strong>C4:</strong> that practices perceive the risk. Four enforcement actions in a profession with 180,000+ offices is a low base rate; the tool may be a hard sell absent a news hook.</li>
+<li><strong>C6:</strong> that assistants will tolerate a gate. A required-field wall on a form someone fills 20 times a day is the classic adoption failure. It may need a "save incomplete, flag for doctor" path, which weakens the gate.</li>
+<li><strong>C7:</strong> that a completeness gate on the <em>sending</em> side helps when the <em>receiving</em> side has no obligation to use the format. It may be that the specialist is the real customer and the GP tool is the giveaway.</li>
+<li><strong>All of them:</strong> that the buyer is the practice. For C6 and C7 the natural buyer may be the <em>counterparty</em> — the laboratory and the specialist respectively — who would distribute the tool to their accounts as a relationship investment. That is a materially different go-to-market and worth testing directly.</li>
+</ul>
+<hr />
+<h2>7. Cross-industry patterns</h2>
+<p>Seven patterns from this market that transfer to named backlog markets.</p>
+<p><strong>P1 — Completeness gate at the moment of transmission.</strong> Block or flag an outbound package against a recipient-specific required-field schema, rather than validating after rejection. Grounded here in a 1,891-referral audit whose own recommendation was that systems <em>"only allow for submission once all of the essential information has been considered."</em>
+<em>Transfers to:</em> Architectural construction administration (CA) desks at small A/E firms · Delegated-design submittal coordination · Federal construction contractors on NAVFAC/USACE projects (UFGS submittal register) · Equipment manufacturer and manufacturer-rep submittal desks · Title abstracting and independent title search contractors · Provider credentialing and payer enrollment services.</p>
+<p><strong>P2 — Structured ask with named answer slots.</strong> When you must get information from an external party you do not control, the leverage is not in faster transmission but in converting a free-text request into a form whose reply has slots to fill — and then checking whether they were filled. Grounded here in a 19.2% clearance return rate against a 39.6% request rate.
+<em>Transfers to:</em> Right-of-way and easement acquisition consulting · Employer immigration compliance and I-9 audit consultancies · Prime contractor supplier cyber-compliance desks (supplier attestation collection) · Consortium/third-party administrators (C-TPAs) for DOT drug and alcohol programs · Commercial real estate acquisition due diligence and rent roll verification.</p>
+<p><strong>P3 — Statutory-clock register for inbound external requests.</strong> Log receipt with a timestamp, compute the statutory deadline, generate the extension instrument, guard the fee calculation, and log delivery. Grounded here in four OCR dental right-of-access actions totaling $205,000, four of five triggered by a fee dispute or a slow partial response.
+<em>Transfers to:</em> HOA and condominium management companies (estoppel and demand response desk) · County recorder offices (document intake and rejection handling) · Mortgage servicer payoff and lien release departments · Unclaimed property and escheat compliance service providers · County surveyor and municipal plan-check offices.</p>
+<p><strong>P4 — Versioned counterparty rule corpus with change diffing.</strong> A maintained, machine-readable, source-cited table of what each external authority requires, replacing a hand-built spreadsheet owned by one person. The corpus, not the UI, is the product. Grounded here in per-CDT-code payer documentation charts that conflict across and within payer brands and change roughly annually.
+<em>Transfers to:</em> Workers' compensation medical billing and state fee schedule compliance · Certified payroll and prevailing wage compliance service providers · Multi-state charitable solicitation registration compliance · Sales tax compliance outsourcing for small multi-state sellers · Aerospace supplier quality clause library administration at machine shops and Tier 2 suppliers.</p>
+<p><strong>P5 — Approval-document ↔ eventual-invoice reconciliation.</strong> An approval is granted weeks before the work, expires, and is matched to the eventual billing document by a reference number carried forward by hand. Grounded here in predeterminations valid 60–90 days, resetting at plan year, matched to claims manually.
+<em>Transfers to:</em> Oversize/overweight permitting and heavy-haul route survey coordination · Government contracts administration at small govcons (clause and mod review) · Insurance restoration contractors and supplement writers · Truck permitting and registration service agencies.</p>
+<p><strong>P6 — Receiver-openability validation for technical file deliverables.</strong> Before sending a technical file package, verify the recipient can actually consume it: format, structure, completeness, embedded executables, size, required metadata — and ship a manifest and instruction sheet with it. Grounded here in the ADA formally telling HHS that dental imaging transfer causes repeat imaging and radiation exposure, and in a receiving lab publishing a spec with named failure modes across 18+ scanner manufacturers.
+<em>Transfers to:</em> Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats) · UAS/drone mapping and reality-capture service providers · Pipe and duct fabrication shops serving mechanical and fire protection trades · Investment casting and forging suppliers under Nadcap · Geodetic control and least-squares network adjustment specialists.</p>
+<p><strong>P7 — Bidirectional schedule ↔ external-production-order reconciliation.</strong> Every system pushes production status <em>to</em> the scheduler; almost none pushes schedule changes <em>back</em> to the producer. The unserved direction is usually the cheaper one to build and the more valuable one to the counterparty. Grounded here in the finding that nothing in the dental market notifies a laboratory when the patient reschedules.
+<em>Transfers to:</em> Pipe and duct fabrication shops serving mechanical and fire protection trades · Ready-mix concrete producer quality control departments · Construction subcontractor project management at 15–150 employee specialty trades · Warehouse and 3PL fulfillment receiving/shipping document control · Machine shop / job shop quoting and production control (already completed — this pattern would be a second-pass finding there).</p>
+<hr />
+<h2>8. Sources and confidence</h2>
+<h3>Verified findings — high confidence, primary or peer-reviewed sources</h3>
+<p><strong>Market structure</strong>
+- <a href="https://www.ada.org/-/media/project/ada-organization/ada/ada-org/files/resources/research/hpi/US_dentist_workforce_2025.pdf">ADA HPI, US Dentist Workforce 2025 (PDF)</a> — 202,485 dentists, specialty counts, solo/group/DSO splits.
+- <a href="https://www.ada.org/-/media/project/ada-organization/ada/ada-org/files/resources/research/hpi/practice_ownership_trends_dentistry_new_look_old_data.pdf">ADA HPI, Practice Ownership Trends (PDF)</a> — ownership 85%→73%; DSO 27% early-career.
+- <a href="https://www.ada.org/resources/research/health-policy-institute/dental-care-market">ADA HPI, The Dental Care Market</a> — $189B, 2024.
+- <a href="https://www.ada.org/resources/research/health-policy-institute/dental-practice-research/trends-in-dentist-income">ADA HPI, Trends in Dentists' Income</a> — revenue +1.4% vs expenses +4.9%.
+- <a href="https://advancedpracticemanagement.com/wp-content/uploads/2018/11/MCGILL-ARTICLE-NOVEMBER-2018.pdf">McGill Advisory admin staffing ratios (PDF)</a> — 1 admin FTE per $60k/month production.</p>
+<p><strong>Medical clearance</strong>
+- <a href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2022.838538/full">Frontiers in Digital Health 2022;4:838538</a> — <strong>the single most important source in this report.</strong> 240 consults; clearance requested 39.6% / returned 19.2%; 20% empty replies; 45% needed repeat contact; mean 19.6 ± 36.6 days.
+- <a href="https://resource.medpro.com/what-dentists-should-know-about-medical-clearance">MedPro Group, What Dentists Should Know About Medical Clearance</a> — required contents of a proper request; documentation duties.
+- <a href="https://www.ada.org/resources/ada-library/oral-health-topics/antibiotic-prophylaxis">ADA, Antibiotic Prophylaxis Prior to Dental Procedures</a> — AHA 2021 high-risk list; prosthetic joints generally not indicated.
+- <a href="https://www.ada.org/resources/ada-library/oral-health-topics/oral-anticoagulant-and-antiplatelet-medications-and-dental-procedures">ADA, Oral Anticoagulant and Antiplatelet Medications</a> — do not alter regimens; INR ≤3.0.
+- <a href="https://www.aafp.org/pubs/afp/issues/2021/1100/p476.html">AFP 2021;104(5):476, Medical Clearance for Common Dental Procedures</a> — physician-side view; 6 wks post-MI, 6 mo post-DES; A1C in the reply.</p>
+<p><strong>Referrals and imaging</strong>
+- <a href="https://www.dovepress.com/article/download/35616">Alwaeli et al., CCIDE 2017 (PDF)</a> — n=1,891 oral surgery referrals; 53.4% inadequate radiographs; 60% missing medications; recommends blocking submission until complete.
+- <a href="https://www.nature.com/articles/s41415-025-9047-y">BDJ 2025, GDP referral letters: reasons for rejection</a> — 673 perio referrals, 23.8% rejected, 93% for insufficient information.
+- <a href="https://www.nature.com/articles/4811477">BDJ 2002, restorative referral proforma study</a> — structured proforma → +29.3% information.
+- <a href="https://adanews.ada.org/ada-news/2026/march/ada-calls-for-improved-interoperability-standards-for-dental-imaging/">ADA News, Mar 2026 — ADA calls for improved interoperability standards for dental imaging</a> — proprietary formats, inconsistent DICOM, repeat imaging and radiation, exclusion from Meaningful Use.
+- <a href="https://www.roedentallab.com/collaboration/managing-dicoms">ROE Dental Lab, Managing DICOMs</a> — the receiving spec; 18+ CBCT manufacturer tutorials; explicit rejection of viewer executables.
+- <a href="https://oms.medprodental.com/risk-tips/communication-mishap-between-providers-leads-to-wrong-site-extraction">MedPro OMS, wrong-site extraction from a phone-only referral</a> — Universal vs Palmer "#8."
+- <a href="https://www.thedoctors.com/articles/patient-safety-in-dentistry-communication">The Doctors Company, Patient Safety in Dentistry: Communication</a> — up to 50% of referrals not completed; 70%/35% histories gap; 20–30% of diagnostic errors.
+- <a href="https://www.aae.org/specialty/wp-content/uploads/sites/2/2017/08/2009_gp_referrals_study.pdf">AAE 2009 GP Referrals Study (PDF)</a> — n=983; 96% rate timely report-back as top relationship driver.
+- <a href="https://www.ada.org/-/media/project/ada-organization/ada/ada-org/files/publications/guidelines-for-practice-success/mngpatients_referral_to_specialist.pdf">ADA sample Referral to Dental Specialist form (PDF)</a> — the "Radiographs: …none available" checkbox.</p>
+<p><strong>Payer documentation and claims</strong>
+- <a href="https://www.deltadentalct.com/-/media/DDCT/pdf/DDNJCT_Required-Documentation-Chart-2025.ashx">Delta Dental NJ/CT Required Documentation Chart 2025 (PDF)</a> — the most granular per-code payer artifact found.
+- <a href="https://www1.deltadentalins.com/dentists/fyi-online/2026/complete-documentation-for-claims.html">Delta Dental, 2026 complete documentation for claims</a> — named documentation gaps by code.
+- <a href="https://campaigns.cigna.com/static/campaigns-cigna-com/docs/dental-hcpemails/Clinical%20Documents/Cigna%20Dental%20Coverage%20Determination%20Guidelines%20-%20DPPO%20-%202026%20-%20Final.pdf">Cigna DPPO Coverage Determination Guidelines 2026 (PDF)</a> — numeric criteria (4 mm SRP, 5 mm osseous).
+- <a href="https://www.aetnadental.com/professionals/pdf/claim-documentation-guidelines.pdf">Aetna Dental Claim Documentation Guidelines (PDF)</a> — radiographs &lt;36 months, six probing depths per tooth.
+- <a href="https://www.uhcprovider.com/content/dam/provider/docs/public/policies/dental/dental-utilization-review-guideline.pdf">UnitedHealthcare National Standardized Dental Claim Review Guidelines (PDF)</a> — documents specified, no numeric thresholds.
+- <a href="https://www.dental.dhcs.ca.gov/DC_documents/providers/FAQ_TAR_denials.pdf">Medi-Cal Dental TAR denials FAQ (PDF)</a> — 8/14/36-month radiograph currency; 45-day RTD clock; wet signatures.
+- <a href="https://verberdentalgroup.com/wp-content/uploads/2025/01/Claim_Requirements_-_Supporting_Information-1.pdf">Verber Dental Group internal claim requirements cheat sheet (PDF)</a> — <strong>a real practice's per-code rules table, in the wild.</strong> The single best evidence for the C2 thesis.
+- <a href="https://www.caqh.org/hubfs/Index/2024%20Index%20Report/CAQH_IndexReport_2024_FINAL.pdf">2024 CAQH Index Report (PDF)</a> — dental attachments 37% electronic / 63% manual; $2.1B savings opportunity.
+- <a href="https://www.cms.gov/files/document/nsg-attachments-final-rule-fact-sheet.pdf-0">CMS attachments final rule fact sheet (PDF)</a> — X12 275 v6020 effective 5/26/2026, compliance 5/26/2028; <strong>prior authorization excluded.</strong>
+- <a href="https://claimconnect.dentalxchange.com/dci/claims/help/singleclaim/attachments.jsp">ClaimConnect attachments help</a> — no attachment on initial claim without NEA; MetLife print-and-mail loop.
+- <a href="https://www.opendental.com/manual/claimtabattach.html">Open Dental manual, claim attachments</a> — "for reference only and are not sent by Open Dental."
+- <a href="https://oig.hhs.texas.gov/about-us/news/dental-cases-review-offers-insight-avoiding-billing-and-compliance-issues">Texas HHS OIG dental cases review</a> — $66,804 settlement; 86 of 120 records unproduced; 2-year exclusion.
+- <a href="https://www.ada.org/resources/practice/dental-insurance/pre-authorizations">ADA, Pre-authorizations vs predeterminations</a> and <a href="https://www.cda.org/newsroom/billing/dental-benefits-101-preauthorization-versus-predetermination/">CDA</a> — validity, calendar-year rollover, why payers prefer the non-binding instrument.</p>
+<p><strong>Laboratory</strong>
+- <a href="https://codes.ohio.gov/ohio-administrative-code/rule-4715-5-02">Ohio Admin. Code 4715-5-02</a> — the most complete statutory work-authorization spec found, including the lab return-disclosure section.
+- <a href="https://law.justia.com/codes/florida/title-xxxii/chapter-466/section-466-021/">Fla. Stat. § 466.021</a> — 4-year retention both sides; criminal penalty for lab noncompliance.
+- <a href="https://lawfilesext.leg.wa.gov/Law/RCWArchive/2023/htm/RCW%20%2070%20%20TITLE/RCW%20%2070%20.352%20%20CHAPTER/RCW%20%2070%20.352%20.030.htm">RCW 70.352.030 (Washington)</a> — registration, CDT staffing, material content and point-of-origin disclosure.
+- <a href="https://dentallabs.org/state-regulation/">NADL, State Regulation</a> — 12 regulating states; 65% of dentists wrongly assume regulation.
+- <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7005880/">PMC7005880 — Remake rates for single-unit crowns</a> — <strong>3.8% measured</strong> across 3,750 crowns; causes ranked.
+- <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7335025/">PMC7335025 — technician survey on work authorizations</a> — margin design missing 69%, pontic 56%, try-in 51.2%.
+- <a href="https://www.mdpi.com/2076-3417/12/12/6263">Appl. Sci. 2022, 12(12):6263</a> — dentist-side omission rates (shade 44.6%, alloy 46.7%).
+- <a href="https://www.nature.com/articles/sj.bdj.2014.643">BDJ 2014, UK communication methods survey</a> — 24% say &gt;half of prescriptions inadequate; 22% clarification rate among record-keeping labs.
+- <a href="https://lmtmag.com/articles/survey-report-productivity-disrupter-remakes">LMT 2024 Remakes Survey</a> — &gt;80% of external remakes attributed to dentist error, stable since 2011.
+- <a href="https://dentallabnetwork.com/forums/threads/what-portal-do-you-use-for-sending-or-receiving-scans.35376/">Dental Lab Network, portal fragmentation thread</a> — "about 50% of our daily cases just get sent via email"; "A mess, if you ask me."
+- <a href="https://www.oralartsdental.com/intraoral-scanners/">Oral Arts, 12 scanner ecosystems</a> · <a href="https://associateddl.com/scan-body-libraries-version-control-brand-mixing-accuracy-traps/">Associated Dental Lab, scan body library version control</a> — 0.1–0.5 mm error magnitudes.</p>
+<p><strong>Records and privacy</strong>
+- <a href="https://www.hhs.gov/hipaa/for-professionals/faq/right-to-access-and-research/index.html">HHS OCR, Right to Access FAQs</a> — 30 days, one extension, permitted vs prohibited fees.
+- <a href="https://www.saul.com/insights/alert/scary-ocr-cmp-imposed-upon-solo-dental-practice">Saul Ewing on Gums Dental Care, $70,000 CMP</a> — $25 mailing fee on an email request; willful neglect.
+- <a href="https://www.hipaajournal.com/dental-practices-fined-for-hipaa-right-of-access-violations/">HIPAA Journal, three dental right-of-access fines</a> — $80,000 / $30,000 / $25,000.
+- <a href="https://www.aapd.org/globalassets/media/safety-toolkit/dental-records-ada.pdf">ADA, Dental Records (PDF)</a> — record contents; retention; the "whether or not the patient's account is paid in full" obligation.</p>
+<p><strong>Software and integration</strong>
+- <a href="https://ddp.dentrix.com/pages/faq">Dentrix Developer Program FAQ</a> — <strong>$5,000 READ + $5,000 WRITE plus royalty; Ascend $47/location/month; insurance claim processing prohibited.</strong> The most decision-relevant single URL for anyone building here.
+- <a href="https://www.opendental.com/site/apisetup.html">Open Dental API setup</a> · <a href="https://www.opendental.com/site/apispecification.html">API specification</a> · <a href="https://www.opendental.com/site/fees.html">Fees</a> · <a href="https://www.opendental.com/site/programbridges.html">Program Bridges</a>.
+- <a href="https://www.henryscheinone.com/dental-solutions/api-exchange/vendors-list/">Henry Schein One API Exchange vendors list</a> — publishes ~60+ <em>unauthorized</em> vendors.
+- <a href="https://www.planetdds.com/newsroom/planet-dds-unveils-open-api-program/">Planet DDS Open API Program</a> — launched July 2024; writebacks and webhooks.
+- <a href="https://learn.dentrixascend.com/outbound-referrals/">Dentrix Ascend Outbound Referrals</a> — tagging only; no transmission, no images, no report-back.
+- <a href="https://www.ada.org/resources/research/health-policy-institute/dental-practice-research/dentists-ai-usage-and-attitudes">ADA HPI, Dentists' AI Usage and Attitudes (July 2026)</a> — 43.3% use AI for some task; <strong>planned growth is 34.8% charting/notes and 32.6% insurance verification vs 25.4% imaging</strong>; 82.6% will not use AI for treatment recommendations.</p>
+<h3>Strong inferences — reasoning from verified facts, not directly sourced</h3>
+<ol>
+<li><strong>No PMS ships a maintained, payer-specific, code-level attachment-completeness rules engine.</strong> Dentrix comes closest and explicitly hands maintenance to the practice; clearinghouse validation checks format and carrier eligibility, not clinical completeness. Stated as documented absence across the systems whose documentation is accessible, not as proven absence across all systems.</li>
+<li><strong>No product addresses medical clearance or records-release as a workflow.</strong> Every AI dental product found maps to radiographs, phones, verification, notes, or marketing.</li>
+<li><strong>No system pushes practice-side schedule changes back to the laboratory.</strong> Every case-tracking product found moves status in the other direction.</li>
+<li><strong>The referral market competes on transport, not adequacy.</strong> Every platform's differentiation is a file-size cap; the audit evidence says the binding constraint is imaging adequacy and clinical completeness.</li>
+<li><strong>Open Dental is the correct first integration</strong> for any new dental admin product — not because of installed base but because it is the only major system where a two-person team can prototype without a five-figure contract.</li>
+<li><strong>Administrative AI has roughly 2.4× the forward demand of diagnostic AI in dentistry and none of the FDA burden</strong> — ADA HPI's planned-adoption numbers against 44 dental AI 510(k) clearances issued 2021–2025.</li>
+<li><strong>The outsourced dental billing companies' actual moat is a maintained payer-rules corpus plus labor</strong>, not proprietary technology — which is what makes an open corpus a credible attack.</li>
+<li><strong>A practice's hand-built per-payer cheat sheet is near-universal above a few operatories</strong>, and is a key-person and staleness liability. One public specimen plus consistent descriptions across billing-industry sources; not surveyed.</li>
+</ol>
+<h3>Tentative hypotheses requiring practitioner validation</h3>
+<ol>
+<li>That practices <em>want</em> fewer clearance requests rather than sending them defensively as liability transfer. <strong>This is the assumption most likely to sink C1 and should be tested first.</strong></li>
+<li>That published payer documentation rules match enforced rules. The Verber sheet's "D7210 — PA x-ray not required" contradicts both Delta and Aetna.</li>
+<li>That PMS lab-case tables are actually populated in practices that would buy C3.</li>
+<li>That pulp-testing results are re-performed on arrival at endodontic offices because they are never transmitted. Plausible from the absence of such fields on every referral form reviewed, but <strong>not documented as a complaint anywhere</strong> — treat as an interview question, not a finding.</li>
+<li>That the natural buyer for C6 and C7 is the counterparty (laboratory, specialist) rather than the practice.</li>
+<li>That the ~10–25% band for "share of lab cases requiring a clarification touch" holds in the US. Derived from a UK survey (13% recalled, 22% among labs answering from records); <strong>no US figure exists.</strong></li>
+</ol>
+<h3>Statistics encountered and deliberately rejected</h3>
+<p>Stated here so a future cycle does not re-import them:</p>
+<ul>
+<li><strong>"19.3% first-submission denial rate," "18% of denials from missing documentation," "$117 average rework cost per denied claim."</strong> Circulated widely across dental-AI vendor blogs; traced to a single uncited page claiming "analysis of over 500,000 dental claims" with no footnotes. The $117 conflicts with MGMA's ~$25 by nearly 5×. <strong>A defensible documentation-share-of-denials figure does not currently exist. That absence is itself a finding.</strong></li>
+<li><strong>"80% of dentists do not complete the information legally required on the prescription form."</strong> A US claim with no traceable source, repeated across lab-industry content.</li>
+<li><strong>"46% of dental specialist referrals go unfulfilled; $953–$5,150 lost per unfulfilled referral."</strong> Kelton Research, <strong>2008</strong>, no disclosed sample size or sponsor. The most-cited dental referral statistic in the industry and eighteen years old. Date it explicitly if used at all.</li>
+<li><strong>TrazaLab's cluster</strong> (34% of paper prescriptions missing a critical field; 65% of remakes from communication failures; 45 min/technician/day chasing information). Vendor blog, attributions vague, untraceable to any primary source.</li>
+<li><strong>Vendor referral-completion claims</strong> (Refera "80% vs 50%," CareStack "35%+ no-show," PepCare "47% leakage reduction"). Marketing.</li>
+</ul>
+<h3>Known gaps in this cycle's research</h3>
+<ul>
+<li><strong>Reddit and Dentaltown message boards were inaccessible</strong> from this environment (403 / not indexed). Dental Lab Network <em>was</em> readable and supplied the best practitioner voice in the lab thread; the equivalent GP and specialist voice is missing. Open Dental Forum threads on sharing CBCTs and on sending reports to referring GPs were identified but not retrievable.</li>
+<li><strong>No US study quantifies lab Rx completeness</strong>, referral packet assembly time, referrals per GP per month, or share of production referred out.</li>
+<li><strong>No published on-time-delivery benchmark exists for the dental laboratory industry</strong>, and the strongest argument found is that labs are not measuring customer-facing compliance at all — which makes it a defensible finding rather than a search failure.</li>
+<li><strong>LMT Magazine's surveys are paywalled.</strong> The 2024 Remakes Survey, 2024 Scanner Survey and 2025 State of the Industry Survey likely contain the exact operational numbers otherwise missing. A subscription or the NADL member surveys are the highest-value next acquisition for the laboratory thread.</li>
+<li><strong>The 2024 CAQH dental attachments cost table returned conflicting values on two passes</strong> and should be re-read against the printed table before any per-transaction figure is published.</li>
+<li><strong>Vendor-level PMS market share is genuinely not public.</strong> Every percentage in circulation is someone's estimate.</li>
+</ul>
+</div>
+</body>
+</html>

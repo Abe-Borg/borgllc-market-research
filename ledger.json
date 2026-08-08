@@ -184,16 +184,17 @@
       "report": "reports/2026-08-08-metal-finishing-plating-heat-treat-ndt-job-shops-handoffs-and-qa.md",
       "top_opportunity": "CertForge - per-customer certificate of conformance generator with spec-coordinate validation, unique cert serialization and immutable as-issued archive",
       "score": 45
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Dental and specialty clinic practice administration",
       "angle": "handoffs-and-qa",
-      "claimed_at": "2026-08-08T00:49:34Z",
-      "claim_id": "340ca135"
+      "date": "2026-08-08",
+      "report": "reports/2026-08-08-dental-specialty-clinic-practice-administration-handoffs-and-qa.md",
+      "top_opportunity": "Clearance Request Builder & Reply Tracker - structured medical-clearance request with named answer slots, guideline pre-check, and reply-completeness tracking",
+      "score": 45
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -2102,6 +2103,42 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "The party that must expand clause codes into obligations and flow them to sub-tiers; every prime publishes a different clause set."
+    },
+    {
+      "market": "Commercial dental laboratories under 25 staff - case intake and Rx clarification",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Receiving side of the dental Rx handoff; 6,100 US labs, ~35M cases/yr, 49% under $250k sales; labs measure remakes but not instruction compliance or on-time delivery"
+    },
+    {
+      "market": "Oral and maxillofacial surgery practice administration",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Highest clearance, sedation-record and referral-intake volume in dentistry; 4,977 OMS nationally; documented wrong-site risk from ambiguous referrals"
+    },
+    {
+      "market": "Orthodontic practice operations - aligner case submission and long-arc scheduling",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "~10,000 orthodontists; multi-year treatment arcs, aligner vendor submission portals, and retention recall are a distinct scheduling/QA problem from restorative dentistry"
+    },
+    {
+      "market": "Dental service organization (DSO) multi-location chart audit and revenue cycle operations",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "16.1% of dentists DSO-affiliated and rising to 27% among early-career; multi-site payer-rule standardization and internal chart QA at scale"
+    },
+    {
+      "market": "Veterinary practice administration and specialty referral coordination",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Structurally near-identical to dental - referral packets, imaging transfer, lab submissions, records release - in a sector the catalog has not touched at all"
+    },
+    {
+      "market": "Dental benefit administrators and dental plan clinical review desks (payer side)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The receiving side of the claim-attachment handoff; publishes the rules corpus this cycle identified as the key asset, and runs its own documentation-sufficiency QA"
     }
   ],
   "patterns": [
@@ -3937,6 +3974,97 @@
         "MSPs and MSSPs serving the defense industrial base as External Service Providers",
         "SBIR/STTR small business award administration and data rights marking",
         "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)"
+      ]
+    },
+    {
+      "pattern": "Completeness gate at the moment of transmission - block or flag an outbound package against a recipient-specific required-field schema rather than validating after rejection",
+      "seen_in": [
+        "Dental and specialty clinic practice administration"
+      ],
+      "transfers_to": [
+        "Architectural construction administration (CA) desks at small A/E firms - submittal and RFI review",
+        "Delegated-design submittal coordination (specialty engineers of record for delegated components)",
+        "Federal construction contractors on NAVFAC / USACE projects - UFGS submittal register and eCMS compliance",
+        "Equipment manufacturer and manufacturer-rep submittal desks (producers of the product data package)",
+        "Title abstracting and independent title search contractors",
+        "Provider credentialing and payer enrollment services"
+      ]
+    },
+    {
+      "pattern": "Structured ask with named answer slots - convert a free-text request to an uncontrolled external party into a form whose reply has slots to fill, then check whether they were filled",
+      "seen_in": [
+        "Dental and specialty clinic practice administration"
+      ],
+      "transfers_to": [
+        "Right-of-way and easement acquisition consulting",
+        "Employer immigration compliance and I-9 audit consultancies",
+        "Prime contractor supplier cyber-compliance desks (supplier attestation collection)",
+        "Consortium / third-party administrators (C-TPAs) for DOT drug and alcohol programs",
+        "Commercial real estate acquisition due diligence and rent roll verification"
+      ]
+    },
+    {
+      "pattern": "Statutory-clock register for inbound external requests - timestamp receipt, compute the statutory deadline, generate the extension instrument, guard the fee calculation, log delivery",
+      "seen_in": [
+        "Dental and specialty clinic practice administration"
+      ],
+      "transfers_to": [
+        "HOA and condominium management companies - estoppel and demand response desk",
+        "County recorder offices - document intake, indexing and rejection handling",
+        "Mortgage servicer payoff and lien release departments",
+        "Unclaimed property and escheat compliance service providers",
+        "County surveyor and municipal plan-check offices (public sector reviewers)"
+      ]
+    },
+    {
+      "pattern": "Versioned counterparty rule corpus with change diffing - a maintained, machine-readable, source-cited table of what each external authority requires, replacing a hand-built spreadsheet owned by one person; the corpus is the product, not the UI",
+      "seen_in": [
+        "Dental and specialty clinic practice administration"
+      ],
+      "transfers_to": [
+        "Workers' compensation medical billing and state fee schedule compliance",
+        "Certified payroll and prevailing wage compliance service providers",
+        "Multi-state charitable solicitation registration compliance",
+        "Sales tax compliance outsourcing for small multi-state sellers",
+        "Aerospace supplier quality clause library administration at machine shops and Tier 2 suppliers"
+      ]
+    },
+    {
+      "pattern": "Approval-document to eventual-invoice reconciliation - an approval granted weeks early, with an expiry and a period boundary, matched to the eventual billing document by a reference number carried forward by hand",
+      "seen_in": [
+        "Dental and specialty clinic practice administration"
+      ],
+      "transfers_to": [
+        "Oversize/overweight permitting and heavy-haul route survey coordination",
+        "Government contracts administration at small govcons (clause and mod review)",
+        "Insurance restoration contractors and supplement writers",
+        "Truck permitting and registration service agencies (IRP, IFTA, OS-OW, state permits)"
+      ]
+    },
+    {
+      "pattern": "Receiver-openability validation for technical file deliverables - verify the recipient can actually consume the package (format, structure, completeness, embedded executables, size, metadata) and ship a manifest plus an instruction sheet with it",
+      "seen_in": [
+        "Dental and specialty clinic practice administration"
+      ],
+      "transfers_to": [
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "UAS / drone mapping and reality-capture service providers",
+        "Pipe and duct fabrication shops serving mechanical and fire protection trades",
+        "Investment casting and forging suppliers under Nadcap AC7141 / AC7140",
+        "Geodetic control and least-squares network adjustment specialists"
+      ]
+    },
+    {
+      "pattern": "Bidirectional schedule to external-production-order reconciliation - every system pushes production status to the scheduler and almost none pushes schedule changes back to the producer; the unserved direction is usually cheaper to build and more valuable to the counterparty",
+      "seen_in": [
+        "Dental and specialty clinic practice administration"
+      ],
+      "transfers_to": [
+        "Pipe and duct fabrication shops serving mechanical and fire protection trades",
+        "Ready-mix concrete producer quality control departments",
+        "Construction subcontractor project management at 15-150 employee specialty trades",
+        "Warehouse and 3PL fulfillment receiving/shipping document control",
+        "Machine shop / job shop quoting and production control"
       ]
     }
   ]
