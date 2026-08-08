@@ -272,16 +272,17 @@
       "report": "reports/2026-08-08-veterinary-practice-admin-specialty-referral-handoffs-and-qa.md",
       "top_opportunity": "Records Release Packet Assembler - per-recipient profile driven records packet assembly, page stamping, completeness check and disclosure log",
       "score": 44
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "General contractor preconstruction and estimating",
       "angle": "handoffs-and-qa",
-      "claimed_at": "2026-08-08T13:49:14Z",
-      "claim_id": "4fe03de8"
+      "date": "2026-08-08",
+      "report": "reports/2026-08-08-gc-preconstruction-estimating-handoffs-and-qa.md",
+      "top_opportunity": "BidGate - pre-submission bid responsiveness validator: parses the Instructions to Bidders and bid form into a reusable per-agency requirement profile, then validates the assembled submission before it leaves the building - every issued addendum number actually acknowledged in the acknowledgment block, every required form present and signed, no two listed subcontractors named for the same portion of work (CA PCC s4106), bid bond amount matching the required percentage. Anchored on three documented total losses: DeSilva Gates v. Caltrans (unacknowledged Addendum 1 on a $31.7M bid), SC CPO 2022-004 (award vacated) and SC CPO 2022-001 ($379,870 award vacated because the cure letter was not sworn). Deterministic validation, free and unlimited public test data, and genuine white space - the incumbent bid platforms sell the subcontractor network and the leveling grid, nobody validates the GC's own submission.",
+      "score": 47
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -2634,6 +2635,60 @@
       "angle": "back-office",
       "source": "discovered",
       "note": "DICOM is the one working standard in veterinary data exchange, which makes tag hygiene, study routing and retention a solvable and unowned problem."
+    },
+    {
+      "market": "Owner's representative and program management firms validating CM-at-risk GMP proposals",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Sits on the receiving end of the GC's qualifications-and-assumptions exhibit and owns buyout-savings verification under open-book GMP; executed contracts give the owner's accountants a 45-day final-accounting review window."
+    },
+    {
+      "market": "Construction surety bond agencies and contractor bond underwriting submission desks",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "NASBP material shows a document-heavy underwriting submission (WIP schedules, A/R aging, third-party financials, single and aggregate capacity letters) that perishes in 30-90 days and is rebuilt per pursuit."
+    },
+    {
+      "market": "Independent cost estimating and quantity surveying consultancies serving owners and A/E firms",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The owner-side mirror of GC estimating; produces independent checks against contractor GMPs and reconciliation reports between estimate versions at each design milestone."
+    },
+    {
+      "market": "Public agency and school district construction bid administration (owner-side responsiveness review)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Published CPO protest decisions show the reviewer side is a checklist exercise with binding legal consequence; agency staff apply waivable-vs-material tests by hand under a bid-opening clock."
+    },
+    {
+      "market": "DBE/MBE/WBE compliance consultants and good-faith-effort documentation services",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "49 CFR 26.53 plus state guidance require an evidence file of solicitation letters, timestamped follow-up logs, bids received and reasons for rejecting DBE quotes, assembled by 9am on bid day."
+    },
+    {
+      "market": "Construction ERP implementation and cost-code migration consultants (Sage 300 CRE, Vista, CMiC)",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Cost-code restructuring inside Sage 300 CRE requires a paid vendor key change; Procore connectors impose tier and delimiter rules that break legacy code schemes, creating a repeatable crosswalk-and-validate engagement."
+    },
+    {
+      "market": "Regional plan rooms and bid depositories operated by AGC and ABC chapters",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Membership-funded document distribution and plan-holder-of-record tracking sits between the architect's addenda and the GC's coverage problem; ECMag documents depositories as a live but voluntary institution."
+    },
+    {
+      "market": "Subcontractor estimating desks: bid/no-bid triage and ITB inbox management at specialty trades",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "The receiving end of 5M+ monthly bid invitations; measured at ~3.5 minutes per email with roughly half generating zero revenue, and platform reviews confirm invitations read as spam and get ignored."
+    },
+    {
+      "market": "Construction claims consultants and delay, disruption and scope-change analysis firms",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Arcadis reports errors and omissions in contract documents as the top North American dispute cause; pre-bid RFI waiver clauses (Ohio OFCC 2.3.4, Virginia CO-7a) make bid-period records the decisive evidence."
     }
   ],
   "patterns": [
@@ -5404,6 +5459,85 @@
         "Special process source approval administration at primes (D1-4426, EQI-011 style approved-processor lists)",
         "Mortgage post-closing QC and trailing document vendors",
         "Multi-state charitable solicitation registration compliance"
+      ]
+    },
+    {
+      "pattern": "Pre-submission responsiveness validator built from the recipient's own instructions document",
+      "seen_in": [
+        "General contractor preconstruction and estimating"
+      ],
+      "transfers_to": [
+        "Federal construction contractors on NAVFAC / USACE projects",
+        "Nonprofit grant management and compliance",
+        "Government contracts administration at small govcons",
+        "Third-party CE/CME accreditation consultants and joint-providership partners",
+        "Specialty pharmacy accreditation and payer network access operations (URAC / ACHC)"
+      ]
+    },
+    {
+      "pattern": "Acknowledgment-receipt matrix: prove every downstream party received and priced the latest revision, populated from what they returned rather than from delivery confirmation",
+      "seen_in": [
+        "General contractor preconstruction and estimating"
+      ],
+      "transfers_to": [
+        "Independent specification writers and master-spec maintenance consultants",
+        "Equipment manufacturer and manufacturer-rep submittal desks",
+        "Delegated-design submittal coordination (specialty engineers of record for delegated components)",
+        "Recordkeeper conversion and plan takeover operations",
+        "Employee benefits brokerage account management and service teams"
+      ]
+    },
+    {
+      "pattern": "Perishable-document ledger: per-document expiry clocks with a date-specific eligibility query, instead of a single compliance boolean",
+      "seen_in": [
+        "General contractor preconstruction and estimating"
+      ],
+      "transfers_to": [
+        "Healthcare credentialing service bureaus and Credentials Verification Organizations (CVOs)",
+        "DOT compliance consultancies and third-party safety managers serving small fleets",
+        "Aerospace supplier quality clause library administration at machine shops and Tier 2 suppliers",
+        "Approved supplier list and supplier qualification administration at small manufacturers",
+        "Personnel certification bodies under ISO/IEC 17024",
+        "Apprenticeship program sponsors and DOL RAPIDS reporting"
+      ]
+    },
+    {
+      "pattern": "Narrative-qualification register: extract the assumptions-and-exclusions prose from inbound counterparty documents into a numbered register with verbatim text and source citation, never a paraphrase",
+      "seen_in": [
+        "General contractor preconstruction and estimating"
+      ],
+      "transfers_to": [
+        "Managing general agents (MGAs), wholesale brokers, and program administrators",
+        "Third-party claims administration (TPA) and self-insured program operations",
+        "Government contracts administration at small govcons",
+        "Legal process outsourcing (LPO) vendors producing medical chronologies and deposition summaries",
+        "Commercial real estate acquisition due diligence and rent roll verification"
+      ]
+    },
+    {
+      "pattern": "Silent-drop detection: audit whether an automated comparison actually compared everything, and report what it quietly discarded",
+      "seen_in": [
+        "General contractor preconstruction and estimating"
+      ],
+      "transfers_to": [
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "CMM programming and inspection-data management at small machine shops",
+        "ERISA employee benefit plan auditors at small and midsize CPA firms",
+        "Title abstracting and independent title search contractors",
+        "Mortgage post-closing QC and trailing document vendors"
+      ]
+    },
+    {
+      "pattern": "Turnover package with sign-off: make the executing party co-author the plan rather than receive it - the measurable variable is participation and signature, not documentation volume",
+      "seen_in": [
+        "General contractor preconstruction and estimating"
+      ],
+      "transfers_to": [
+        "Construction subcontractor project management at 15-150 employee specialty trades",
+        "Home care and home health agency M&A diligence and quality-of-earnings preparation",
+        "Staffing back-office service bureaus and payroll funders",
+        "Architectural construction administration (CA) desks at small A/E firms",
+        "Outsourced controller and fractional CFO service providers"
       ]
     }
   ]
