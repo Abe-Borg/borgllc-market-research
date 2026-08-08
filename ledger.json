@@ -256,16 +256,17 @@
       "report": "reports/2026-08-08-bas-integrators-existing-building-retrofits-narrow-subspecialty.md",
       "top_opportunity": "CheckoutKit - offline point-to-point checkout generated from the reconciled points list: imports the point list, creates one test record per point grouped by trunk/panel/controller, captures commanded value, measured value, pass/fail, calibration offset and photo on a tablet with no signal, computes coverage by panel rather than asserting it, and emits the specification-required signed checkout package plus a punch list split by responsible trade. Anchored on a commissioning consultant's field observation of 'more than 50 controls items operating incorrectly' in a building certified 100% point-to-point, and on Oregon State 230900's requirement to check out ALL newly installed points. Smallest build in the set, ten-minute learning curve, abundant test data, no AI; incumbents (KORE PointCheck, CxAlloy, Facility Grid) sell to the commissioning agent or the enterprise while the 15-person integrator still uses paper. Strategic wedge: it forces a clean points list, which is what makes the reconciler, the survey tool and the name normalizer valuable.",
       "score": 46
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Calibration and metrology service providers / in-house gage management",
       "angle": "narrow-subspecialty",
-      "claimed_at": "2026-08-08T11:49:40Z",
-      "claim_id": "db0e16df"
+      "date": "2026-08-08",
+      "report": "reports/2026-08-08-calibration-metrology-in-house-gage-management-narrow-subspecialty.md",
+      "top_opportunity": "CertCheck - calibration certificate intake and review assistant: parses the PDF certificates that arrive from outside labs into structured register fields (asset ID, cal date, next due, as-found/as-left, uncertainty, coverage factor, conformity statement, decision rule) and then runs the 6-10 point review nobody performs at volume - as-found out of tolerance, every individual range in spec, missing uncertainty or traceability statement, lab outside its accredited scope for that instrument and range, lab not on the approved list. Verified as an unsolved gap across the entire product category: every incumbent attaches the certificate as a blob and makes a human retype the metadata, and the industry's own answer (Digital Calibration Certificates in XML) requires supply-side adoption by every small regional lab. Anchored on the practitioner's own account - 'certificate arrives in post; technician takes one look, seems to be Ok, puts away in drawer, forgets it and does nothing' - and on AS9100 clause 7.1.5.2 ranking #3 of all clauses across 17,184 documented findings. Feeds the register rather than replacing it, so there is nothing to migrate.",
+      "score": 47
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -2516,6 +2517,66 @@
       "angle": "core-practitioner-workflow",
       "source": "discovered",
       "note": "The contractual counterpart to the sequence-verification problem: savings must be proven from trend and utility data against a written M&V plan, currently in Excel, with money attached to the answer."
+    },
+    {
+      "market": "Accredited calibration laboratories under 25 staff (ISO/IEC 17025 lab operations)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The supply side of this report: certificate production, scope of accreditation management, uncertainty budgets, proficiency testing and CMC claims at very small labs."
+    },
+    {
+      "market": "Accredited calibration laboratories under 25 staff (ISO/IEC 17025 lab operations)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Certificate delivery, customer portals, as-found data policy and the Digital Calibration Certificate transition - the counterparty to the gage owner."
+    },
+    {
+      "market": "Mobile and on-site calibration service route operations",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Route batching, pickup scheduling, chain of custody and turnaround commitments; vendors publish 5-day standard and 1-2 week accreditation premiums, suggesting real scheduling pain."
+    },
+    {
+      "market": "Tool crib and cutting-tool inventory management at precision machine shops",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Adjacent to gage crib control; ProShop documents that E2/JobBOSS has no tooling catalog at all, so shops run it on spreadsheets."
+    },
+    {
+      "market": "First Article Inspection (AS9102) report production at small aerospace machine shops",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Ballooning, Forms 1/2/3, customer-specific FAIR templates; named repeatedly by practitioners as the work that competes with calibration admin for the same person."
+    },
+    {
+      "market": "CMM programming and inspection-data management at small machine shops",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "The missing data layer behind gage-to-part traceability; only 1factory serves it and at a $4,500/yr floor."
+    },
+    {
+      "market": "Approved supplier list and supplier qualification administration at small manufacturers",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Accreditation scope, expiry tracking and re-evaluation records; the audit trap that a lab can be accredited but out of scope generalizes to every qualified supplier."
+    },
+    {
+      "market": "Gage and fixture design/build job shops (tool and gage houses)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Distinct trade with its own quoting, design and certification workflow; live job postings for gage crib technicians confirm the segment exists."
+    },
+    {
+      "market": "Registrar and certification body audit operations for ISO 9001 / AS9100 / IATF (auditor side)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The reviewer side of every compliance market in this catalog; IAQG and IAOB publish finding datasets, so evidence is unusually good."
+    },
+    {
+      "market": "Digital Calibration Certificate (DCC) adoption services for small calibration laboratories",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "PTB/DKD XML standard is real but supply-side adoption is the bottleneck; a transition-services niche with a clear start and end."
     }
   ],
   "patterns": [
@@ -5110,6 +5171,100 @@
         "Federal construction contractors on NAVFAC / USACE projects - UFGS submittal register and eCMS compliance",
         "Architectural construction administration (CA) desks at small A/E firms - submittal and RFI review",
         "Nonprofit grant management and compliance"
+      ]
+    },
+    {
+      "pattern": "Third-party certificate intake, parsing and rule-based review: a small organization receives compliance-bearing PDFs from outside parties, files them unread, and retypes a few fields into a tracker; the tool parses the document, joins it to the organization own register, and runs a deterministic checklist",
+      "seen_in": [
+        "Calibration and metrology service providers / in-house gage management"
+      ],
+      "transfers_to": [
+        "Industrial distributors and metal service centers issuing material test reports",
+        "Aerospace materials testing laboratories under Nadcap AC7101 and A2LA",
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Certificate-of-insurance compliance from the holder side (GCs, property managers, municipalities)",
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
+        "AHJ fire prevention bureau ITM report review and code enforcement desks",
+        "Backflow prevention assembly testers and cross-connection control programs",
+        "Prime contractor supplier cyber-compliance desks (supplier attestation collection)"
+      ]
+    },
+    {
+      "pattern": "Retrospective impact assessment after an instrument, process or person is found defective: bound the exposure window, enumerate the candidate affected population, apply deterministic arithmetic to eliminate what cannot have been affected, emit a signed assessment record",
+      "seen_in": [
+        "Calibration and metrology service providers / in-house gage management"
+      ],
+      "transfers_to": [
+        "Ready-mix concrete producer quality control departments",
+        "Asphalt plant producer quality control technicians",
+        "Third-party equipment calibration providers serving construction test labs",
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)",
+        "Deep foundation testing specialists (CSL, PIT, PDA/dynamic load testing)"
+      ]
+    },
+    {
+      "pattern": "Custody ledger for physical items that must be recalled on a schedule, where the label does not survive the environment: scan the location rather than the item, capture last-known-user, and support declare-lost-as-of-due-date as a first-class record",
+      "seen_in": [
+        "Calibration and metrology service providers / in-house gage management"
+      ],
+      "transfers_to": [
+        "Portable fire extinguisher and kitchen hood suppression service routes (NFPA 10 / NFPA 96 / UL 300)",
+        "Fire door inspection providers under NFPA 80",
+        "Radiation safety officer services and portable gauge licensee compliance",
+        "Tool crib and cutting-tool inventory management at precision machine shops",
+        "Geotechnical drilling subcontractors and rig operations"
+      ]
+    },
+    {
+      "pattern": "Interval and frequency justification computed from the organization own historical pass/fail record, using a published method (ILAC-G24 staircase) the organization already has the data for and ignores",
+      "seen_in": [
+        "Calibration and metrology service providers / in-house gage management"
+      ],
+      "transfers_to": [
+        "Fire pump service, testing and repair specialists",
+        "Water-based system corrosion monitoring and nitrogen inerting service providers",
+        "Owner-side facilities engineering: end-of-life equipment replacement planning",
+        "Building envelope and roofing consultants performing field water testing (ASTM E1105, AAMA 501.2)"
+      ]
+    },
+    {
+      "pattern": "Audit-evidence pack generated read-only on top of the client existing spreadsheet with zero migration: the migration refusal is the adoption insight, because this segment repeatedly buys compliance software and reverts to Excel",
+      "seen_in": [
+        "Calibration and metrology service providers / in-house gage management"
+      ],
+      "transfers_to": [
+        "Small defense suppliers navigating CMMC Level 2 compliance",
+        "Registered Practitioner Organizations (RPO) and CMMC consultancies serving 10-200 person suppliers",
+        "Personnel certification bodies under ISO/IEC 17024",
+        "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)",
+        "Hospital and Joint Commission facilities life-safety compliance management (EC/LS chapters, Statement of Conditions)",
+        "State licensing board education/CE audit units (regulator side)"
+      ]
+    },
+    {
+      "pattern": "Deliverable field cross-check: extract the identifiers a submitted form references, look each one up in the organization register, and report the ones that fail a date-window or status test before the package ships",
+      "seen_in": [
+        "Calibration and metrology service providers / in-house gage management"
+      ],
+      "transfers_to": [
+        "Federal construction contractors on NAVFAC / USACE projects - UFGS submittal register and eCMS compliance",
+        "Supplier quality engineering at OEMs and primes (receiving side of supplier deliverables)",
+        "Aerospace supplier quality clause library administration at machine shops and Tier 2 suppliers",
+        "Certified payroll and prevailing wage compliance service providers",
+        "Delegated-design submittal coordination (specialty engineers of record for delegated components)"
+      ]
+    },
+    {
+      "pattern": "Underpowered-statistics warning layer: tell the user when their sample or study design cannot support the conclusion they are about to record, instead of silently returning a number (the industry-standard 10-part gage R&R design fails acceptable gages about one time in four)",
+      "seen_in": [
+        "Calibration and metrology service providers / in-house gage management"
+      ],
+      "transfers_to": [
+        "Ready-mix concrete producer quality control departments",
+        "Premium audit and payroll classification consulting",
+        "Flood mitigation grant administration (FMA/BRIC subapplicant benefit-cost analysis)",
+        "Building analytics and FDD onboarding desks at master systems integrators"
       ]
     }
   ]
