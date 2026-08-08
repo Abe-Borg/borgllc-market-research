@@ -4,12 +4,13 @@ Catalog research for free, open-source business applications aimed at small and 
 
 | Reports completed | Assignments remaining | Markets touched | Patterns catalogued |
 |---|---|---|---|
-| 22 | 314 | 22 | 134 |
+| 23 | 319 | 23 | 142 |
 
 ## Completed reports (newest first)
 
 | Date | Market | Angle | Top opportunity | Score | Report |
 |---|---|---|---|---|---|
+| 2026-08-08 | Metal finishing, plating, heat treat and NDT job shops (special-process suppliers) | handoffs-and-qa | CertForge - per-customer certificate of conformance generator with spec-coordinate validation, unique cert serialization and immutable as-issued archive | 45 | [md](reports/2026-08-08-metal-finishing-plating-heat-treat-ndt-job-shops-handoffs-and-qa.md) |
 | 2026-08-07 | Staffing and recruiting agency operations | back-office | RateGuard - true-burden bill rate and margin calculator for staffing quotes: models the burden components the standard markup calculator omits (FUTA/FICA ceiling-dependent front-loading on a high-churn temp book, per-state experience-rated SUTA, workers' comp by class code, MSP/VMS fee deducted from rather than added to the bill rate, ACA and local sick-leave loads, and cost of capital at actual rather than contractual DSO), and shows markup vs true margin side by side. Zero client data required, so it is the cheapest possible entry into the market and converts directly into paid per-agency rate-table customization. | 45 | [md](reports/2026-08-07-staffing-recruiting-agency-operations-back-office.md) |
 | 2026-08-07 | Small motor carriers (5-50 trucks) back office and settlement | back-office | QueryGuard - FMCSA Clearinghouse & driver-qualification obligation ledger with evidence attachment | 45 | [md](reports/2026-08-07-small-motor-carriers-back-office-settlement-back-office.md) |
 | 2026-08-07 | Small defense suppliers navigating CMMC Level 2 compliance | core-practitioner-workflow | CUI Stamper - local batch marking tool for drawing and document packages that applies the CUI banner/footer to every sheet, the DoDI 5200.48 designation indicator block, and the correct DoDI 5230.24 Distribution Statement (B-F) from saved per-customer profiles, and flags mismarkings including the common category-in-the-banner error. Chosen first because its obligation flows from DoDI 5200.48 / 5230.24 / 32 CFR 2002 rather than from CMMC, so it is unaffected by the July 2026 Phase 2 suspension and the September 2026 reform task force. | 46 | [md](reports/2026-08-07-small-defense-suppliers-cmmc-level-2-core-practitioner-workflow.md) |
@@ -32,4 +33,3 @@ Catalog research for free, open-source business applications aimed at small and 
 | 2026-08-03 | Independent insurance agencies - commercial lines | back-office | ContractCheck - contract insurance requirement to policy gap matcher | 44 | [md](reports/2026-08-03-independent-insurance-agencies-commercial-lines-back-office.md) |
 | 2026-08-03 | Immigration law practice | core-practitioner-workflow | unknown | 0 | [md]((pre-ledger run, not archived)) |
 | 2026-08-03 | Fire protection / fire sprinkler design and coordination subcontractors | core-practitioner-workflow | SubmittalBinder - sprinkler & device cut-sheet submittal package builder | 46 | [md](reports/2026-08-03-fire-protection-sprinkler-design-core-practitioner-workflow.md) |
-
