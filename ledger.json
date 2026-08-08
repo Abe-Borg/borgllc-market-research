@@ -288,6 +288,12 @@
       "angle": "core-practitioner-workflow",
       "claimed_at": "2026-08-08T15:49:14Z",
       "claim_id": "336fa8ab"
+    },
+    {
+      "market": "Unclaimed property and escheat compliance service providers",
+      "angle": "back-office",
+      "claimed_at": "2026-08-08T16:49:21Z",
+      "claim_id": "542772a3"
     }
   ],
   "backlog": [
@@ -1520,12 +1526,6 @@
       "angle": "core-practitioner-workflow",
       "source": "discovered",
       "note": "45-day identification and 180-day exchange clocks with catastrophic consequences for missing them; tiny firms holding large sums."
-    },
-    {
-      "market": "Unclaimed property and escheat compliance service providers",
-      "angle": "back-office",
-      "source": "discovered",
-      "note": "50 different state regimes, dormancy clocks and due-diligence letter requirements; serves title, brokerage, insurance and payroll clients."
     },
     {
       "market": "Real estate closing law firms in attorney-opinion and attorney-closing states",
