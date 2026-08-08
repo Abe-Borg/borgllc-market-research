@@ -282,7 +282,14 @@
       "score": 47
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Certified payroll and prevailing wage compliance service providers",
+      "angle": "core-practitioner-workflow",
+      "claimed_at": "2026-08-08T15:49:14Z",
+      "claim_id": "336fa8ab"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1879,12 +1886,6 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "The receiving side of the reconciliation problem found here; they run supplier scorecards, rate-card governance and self-billing exception queues across dozens of suppliers"
-    },
-    {
-      "market": "Certified payroll and prevailing wage compliance service providers",
-      "angle": "core-practitioner-workflow",
-      "source": "discovered",
-      "note": "WH-347 carries a DOL-published 55 minute per form burden estimate, criminal exposure under 18 USC 1001, and a fringe-per-hour calculation error that is both the most common and the most expensive; portal choice (LCPtracker, CA DIR eCPR) is dictated by the GC"
     },
     {
       "market": "Workers' compensation class code and premium audit defense for high-payroll-churn employers",
