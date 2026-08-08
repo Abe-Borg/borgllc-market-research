@@ -224,16 +224,17 @@
       "report": "reports/2026-08-08-home-care-agency-scheduling-and-evv-back-office.md",
       "top_opportunity": "CleanRate - per-payer EVV clean-capture scorecard and quarter-end projector: recomputes the payer's own manual-edit compliance score per payer mid-quarter and expresses remaining headroom in whole visits, against dated 2026 thresholds (Michigan MMP 26-10 85% per-payer, Highmark Wholecare 85%/15% two-quarter CAP-to-termination ladder, MassHealth 50% checkpoint). Local-only CSV in, one-page scorecard out; threshold profiles are the durable rule-pack asset.",
       "score": 48
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Marketing and creative agency account and production management",
       "angle": "handoffs-and-qa",
-      "claimed_at": "2026-08-08T06:50:11Z",
-      "claim_id": "31eace6d"
+      "date": "2026-08-08",
+      "report": "reports/2026-08-08-marketing-creative-agency-handoffs-and-qa.md",
+      "top_opportunity": "Rights & Usage Expiry Ledger - per-asset rights register for talent, music, stock, footage and likeness that computes each expiry by its own governing rule (SAG-AFTRA MPU = first production day + 10 business days + 2 years - 1 day; independent 13-week holding-fee cycles; sync term x territory x media; stock numeric caps re-checked when the media plan changes), then emits advance warnings, a takedown checklist enumerating every live placement, and an evidence bundle. Deterministic dates-and-database problem, no AI, no client-side adoption required; anchored on Olive v. GNC ($1,123,000 for a missed calendar entry) and Beastie Boys v. Monster ($1.7M + $667,849 fees).",
+      "score": 47
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -2328,6 +2329,66 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "Roll-up buyers now diligence EVV compliance scores, authorization utilization and payroll-to-billing reconciliation; sell-side agencies have no artifact to produce"
+    },
+    {
+      "market": "Video and content production companies (10-60 staff) - talent, music and rights administration",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The signatory party on SAG-AFTRA commercials contracts is often the production company rather than the agency; they hold the MPU, holding-fee and digital-replica obligations directly and are the sharpest buyer for a rights ledger."
+    },
+    {
+      "market": "Video and content production companies (10-60 staff) - talent, music and rights administration",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Broadcast and platform deliverable specs (AICP, CBS 5-business-day S&P ladder, Extreme Reach 12-character filenames, -24 LKFS) land on the post house; the receiving end of the spec-gate problem found this cycle."
+    },
+    {
+      "market": "Healthcare and pharma marketing agencies serving the MLR review gate",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Assemble the annotated claim-to-reference package but work inside client-owned Veeva vaults they cannot export from; Veeva's only agency-facing product is a $500/person/yr certification. FDA issued 44 untitled letters in a single day (9 Sept 2025)."
+    },
+    {
+      "market": "Healthcare and pharma marketing agencies serving the MLR review gate",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Cross-client tracking of which asset sits in which sponsor's vault, at which round, with which reviewer - a view no vendor sells because vendors sell to sponsors one vault at a time."
+    },
+    {
+      "market": "Financial services and RIA marketing compliance review (broker-dealer and adviser side)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "FINRA 2210(b)(4)(A) mandates principal name, approval date and first/last-use dates; SEC 204-2 mandates 5-year retention with 2 years on-site. SEC sweeps charged $1.24M across 9 advisers for documentation failures, not creative ones. FINRA RN 26-14 (comment closes 11 Sept 2026) would shift the burden further onto written procedures and evidence."
+    },
+    {
+      "market": "Print brokers, trade printers and prepress service bureaus",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "They receive the failing files and contractually push liability back to the supplier; the Ghent Workgroup ships 14 preflight variants and a 260-file test suite, and its own specification is distributed as a spreadsheet."
+    },
+    {
+      "market": "Influencer marketing agencies and creator-talent management",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "FTC 16 CFR 465 (effective 21 Oct 2024) reaches agencies at $53,088/violation on a knew-or-should-have-known standard, and nobody archives as-published creative with disclosure placement - the exact record both FTC and FINRA demand."
+    },
+    {
+      "market": "Out-of-home and DOOH media planning and creative operations",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "25.00 fps progressive, publisher pre-approval for HTML5, and 30-minute-to-overnight transcode with skipped first plays make DOOH a scheduling regime distinct from every other channel in the same campaign."
+    },
+    {
+      "market": "Independent media buying agencies - insertion order and makegood administration",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "IAB/4A's Standard T&Cs v3.0 set two-business-day material rejection windows, pro-rata billing for late creative, makegood negotiation rules and sequential-liability language that only protects the agency if the IO says so."
+    },
+    {
+      "market": "Freelance creative operations - contract, IP assignment and 1099 administration for agencies",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Post-CCNV v. Reid, freelancer work belongs to the freelancer absent a signed assignment, so agencies routinely sell clients ownership they do not hold; a silent, common, unremediated defect."
     }
   ],
   "patterns": [
@@ -4575,6 +4636,103 @@
         "Small motor carriers (5-50 trucks) back office and settlement",
         "Staffing back-office service bureaus and payroll funders",
         "Construction subcontractor project management at 15-150 employee specialty trades"
+      ]
+    },
+    {
+      "pattern": "Approval-of-record as a liability artifact: a content-hash-bound, timestamped record of who approved exactly which version, with explicit scope-of-approval caveats and first-use/last-use dates - the artifact that reassigns cost when an error reaches production (the print trade has called this AA-vs-PE for a century), currently sold only in enterprise tiers",
+      "seen_in": [
+        "Marketing and creative agency account and production management"
+      ],
+      "transfers_to": [
+        "Small architectural studios - project administration and specification writing",
+        "Structural engineering firms, 5-30 staff",
+        "Commercial dental laboratories under 25 staff - case intake and Rx clarification",
+        "Ready-mix concrete producer quality control departments",
+        "Building envelope and roofing consultants performing field water testing (ASTM E1105, AAMA 501.2)"
+      ]
+    },
+    {
+      "pattern": "Multi-clock expiry ledger with rule-based date computation: where an obligation's end date is produced by a domain-specific rule rather than calendar arithmetic (SAG-AFTRA MPU = +10 business days +2 years -1 day) and several non-aligned clocks attach to one object, a plain date field is useless and the takedown checklist, not the reminder, is the product",
+      "seen_in": [
+        "Marketing and creative agency account and production management"
+      ],
+      "transfers_to": [
+        "Welding inspection (AWS CWI) and NDT service providers under ASTM E543 / SNT-TC-1A",
+        "Calibration and metrology service providers / in-house gage management",
+        "Radiation safety officer services and portable gauge licensee compliance",
+        "Multi-state charitable solicitation registration compliance",
+        "Property tax consulting and assessment appeal firms"
+      ]
+    },
+    {
+      "pattern": "Destination-profile conformance gate: a versioned, dated library of receiving-organization specs held as editable data, with deterministic measurement of the actual artifact against the selected profile - a gate that refuses, never a converter that fixes, so the tool stays small and trustworthy and profile maintenance becomes the community contribution surface",
+      "seen_in": [
+        "Marketing and creative agency account and production management"
+      ],
+      "transfers_to": [
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Certified payroll and prevailing wage compliance service providers",
+        "Information return (1099/W-2) filing service providers and January filing desks",
+        "Pipe and duct fabrication shops serving mechanical and fire protection trades"
+      ]
+    },
+    {
+      "pattern": "Comment-to-resolution reconciliation across document versions: proving each reviewer comment was addressed in the next revision, carrying unresolved items forward, and flagging where two reviewers asked for opposite things - collection is a commodity, reconciliation is unserved even by the category leaders, who list change verification on their roadmap",
+      "seen_in": [
+        "Marketing and creative agency account and production management"
+      ],
+      "transfers_to": [
+        "Small architectural studios - project administration and specification writing",
+        "Civil / land development engineering and entitlement consulting",
+        "County surveyor and municipal plan-check offices (public sector reviewers)",
+        "Court probate examiner and clerk offices (public-sector reviewer side)"
+      ]
+    },
+    {
+      "pattern": "Transferability manifest at handover: an itemised statement of what is being delivered and under what terms, where the delivered bundle's components carry different ownership and licensing rules (agency-authored layers transfer on payment; Adobe Fonts may not be copied at all; stock is non-transferable below the top license tier; unpapered freelancer work is not the agency's to give) - one folder handoff can breach three licenses at once and no tool checks at export",
+      "seen_in": [
+        "Marketing and creative agency account and production management"
+      ],
+      "transfers_to": [
+        "Small architectural studios - project administration and specification writing",
+        "UAS / drone mapping and reality-capture service providers",
+        "Title abstracting and independent title search contractors"
+      ]
+    },
+    {
+      "pattern": "Loud versus silent failure triage: rejections and QC returns announce themselves and get systematically defended against; misfiled taxonomy values, overprint-on-white, a wrong-version file and missing document tags do not, and are discovered weeks later when the record is already wrong - the silent class is where the money is and where no gate exists at small-firm price points",
+      "seen_in": [
+        "Marketing and creative agency account and production management"
+      ],
+      "transfers_to": [
+        "Medical billing and revenue cycle for small practices",
+        "Workers' compensation medical billing and state fee schedule compliance",
+        "Freight bill audit and payment for small shippers",
+        "Bookkeeping and outsourced accounting firms"
+      ]
+    },
+    {
+      "pattern": "Quote-gating as an unserved-segment signal (sourcing heuristic, not an application pattern): where an entire tool category publishes no price at all - ObservePoint, callas pdfToolbox, Equidox, CommonLook, Veeva, Vodori, 8 of 10 major DAM vendors - small firms are structurally excluded regardless of budget, because the enterprise sales cycle is itself disqualifying. Treat a fully quote-gated category as a reliable marker of an unserved small-firm segment in any market",
+      "seen_in": [
+        "Marketing and creative agency account and production management"
+      ],
+      "transfers_to": [
+        "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+        "Aerospace materials testing laboratories under Nadcap AC7101 and A2LA",
+        "Special hazard / clean agent suppression design (data centers, MRI, switchgear)",
+        "Hospital and Joint Commission facilities life-safety compliance management (EC/LS chapters, Statement of Conditions)"
+      ]
+    },
+    {
+      "pattern": "Claim-to-source substantiation register with a retention clock: every assertion in a deliverable linked to a source document, page, date and approver, with a cross-version diff so a claim cannot lose its reference in a handoff, and an evidence bundle assemblable against a short externally-imposed clock (NAD: 15 business days) years after the team has moved on",
+      "seen_in": [
+        "Marketing and creative agency account and production management"
+      ],
+      "transfers_to": [
+        "Aerospace materials testing laboratories under Nadcap AC7101 and A2LA",
+        "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
+        "Fiduciary and forensic accountants producing court accountings for litigation",
+        "Independent legal nurse consultant (LNC) practices"
       ]
     }
   ]

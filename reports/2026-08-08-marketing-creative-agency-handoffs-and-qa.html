@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marketing and Creative Agency — Handoffs and QA | Market Research</title>
+<style>
+:root{ --ink:#1c1c1a; --muted:#5c5a54; --rule:#ddd9d0; --bg:#fbfaf7; --accent:#7a4b1e; --soft:#f3f0e9; }
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+ font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+ font-size:18px;line-height:1.65;}
+.wrap{max-width:900px;margin:0 auto;padding:56px 28px 96px;}
+h1,h2,h3,h4{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+ line-height:1.25;color:#141412;}
+h1{font-size:2.05rem;margin:0 0 .3em;letter-spacing:-.015em;font-weight:700;}
+h2{font-size:1.5rem;margin:2.6em 0 .7em;padding-bottom:.3em;border-bottom:2px solid var(--rule);font-weight:700;}
+h3{font-size:1.18rem;margin:2em 0 .5em;font-weight:650;color:var(--accent);}
+h4{font-size:1rem;margin:1.6em 0 .4em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);}
+p{margin:0 0 1.05em;}
+a{color:#215a8c;text-decoration:none;border-bottom:1px solid rgba(33,90,140,.28);word-break:break-word;}
+a:hover{border-bottom-color:#215a8c;}
+strong{font-weight:700;color:#111;}
+em{font-style:italic;}
+ul,ol{margin:0 0 1.1em;padding-left:1.4em;}
+li{margin:.34em 0;}
+li>ul,li>ol{margin:.3em 0;}
+hr{border:0;border-top:1px solid var(--rule);margin:2.8em 0;}
+blockquote{margin:1.2em 0;padding:.2em 0 .2em 1.1em;border-left:3px solid var(--accent);color:var(--muted);font-style:italic;}
+code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.86em;
+ background:var(--soft);padding:.12em .38em;border-radius:3px;border:1px solid var(--rule);}
+pre{background:var(--soft);border:1px solid var(--rule);border-radius:5px;padding:14px 16px;overflow-x:auto;}
+pre code{background:none;border:0;padding:0;}
+.tablewrap{overflow-x:auto;margin:1.4em 0;-webkit-overflow-scrolling:touch;}
+table{border-collapse:collapse;width:100%;font-size:.83rem;
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.45;}
+th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top;}
+th{background:var(--soft);font-weight:700;color:#2a2a26;}
+tbody tr:nth-child(even){background:rgba(0,0,0,.018);}
+td strong{color:#111;}
+@media (max-width:640px){ body{font-size:16.5px} .wrap{padding:34px 16px 64px} h1{font-size:1.6rem} h2{font-size:1.25rem} table{font-size:.76rem} th,td{padding:6px 7px} }
+@media print{ body{background:#fff} .wrap{max-width:none;padding:0} a{border:0;color:#000} h2{page-break-after:avoid} table{page-break-inside:avoid} }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1 id="marketing-and-creative-agency-account-and-production-management-handoffs-and-qa">Marketing and Creative Agency Account and Production Management — Handoffs and QA</h1>
+<p><strong>Market research cycle report — Borg LLC free/open-source business application catalog</strong></p>
+<hr />
+<h2 id="0-cycle-header">0. Cycle header</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Market</strong></td>
+<td>Marketing and creative agency account and production management</td>
+</tr>
+<tr>
+<td><strong>Angle</strong></td>
+<td>handoffs-and-qa (client-facing deliverable exchange, review and QA, coordination with outside organizations)</td>
+</tr>
+<tr>
+<td><strong>Claim ID</strong></td>
+<td><code>31eace6d</code></td>
+</tr>
+<tr>
+<td><strong>Date</strong></td>
+<td>2026-08-08</td>
+</tr>
+<tr>
+<td><strong>Assignments remaining in backlog after this cycle</strong></td>
+<td>349</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="why-this-assignment-was-chosen">Why this assignment was chosen</h3>
+<p>The ledger held 350 available assignments across roughly 200 markets with zero completed entries, so the "prefer untouched markets" rule did not discriminate on its own. Three tiebreakers decided it.</p>
+<p><strong>Catalog breadth at the sector level.</strong> Of the 28 completed reports, seven sit in architecture/engineering/construction (fire sprinkler design, MEP/HVAC, land surveying, geotechnical and materials testing, construction submittals, flood/FEMA consulting, fire ITM), three in legal, three in healthcare revenue cycle, two each in insurance, transportation, real estate, accounting and staffing/HR. <strong>Marketing and creative services — one of the largest SMB professional-services sectors in the United States — had zero coverage.</strong> Promethean Research's 2024 industry census counts roughly 46,000 digital agencies in the US and Canada, of which 64% have fewer than 10 employees and 27% have 10–49 — a population sitting almost entirely inside the catalog's target band and entirely absent from the catalog. The four seed angles for this market were all still unclaimed, meaning the whole market was unexamined.</p>
+<p><strong>Angle diversity.</strong> Completed angles run core-practitioner-workflow 9, back-office 7, narrow-subspecialty 6, handoffs-and-qa 6. <code>handoffs-and-qa</code> is tied for least-covered, and it is also the angle where this particular market is most interesting: an agency is, structurally, an organization whose entire product crosses an organizational boundary. Almost everything that goes wrong at an agency goes wrong at a handoff.</p>
+<p><strong>Expected evidence quality.</strong> I expected — correctly — that the review-and-approval half of this market would be documented mainly by vendor surveys of questionable independence, and that the regulatory half (pharma MLR, FINRA/SEC, FTC, SAG-AFTRA, stock licensing) would be documented by primary regulatory and case sources. That mix is workable: it lets the report anchor its strongest recommendations on primary law and case law rather than on marketing statistics.</p>
+<p><strong>What I deliberately did not choose.</strong> "General contractor preconstruction and estimating / handoffs-and-qa" was the strongest runner-up — sub-bid leveling and scope-gap analysis is a famously unsolved, spreadsheet-bound problem with clear dollar consequences. I passed on it because it would have been the eighth AEC report in a 29-report catalog. It should be claimed next cycle; it does not need to wait long.</p>
+<h3 id="evidence-health-warning-stated-up-front">Evidence health warning, stated up front</h3>
+<p>Three structural problems with the published record in this market shape everything below.</p>
+<ol>
+<li><strong>Reddit and Stack Exchange were unreachable from this environment (HTTP 403).</strong> The richest practitioner-forum evidence base for agency operations could not be sampled. I substituted Creative COW forums, Adobe community threads, verified-reviewer complaints on G2/Capterra/TrustRadius (which turn out to be the single best practitioner-voice source available for tool gaps), named practitioner blogs, and professional-indemnity insurers' published claim files.</li>
+<li><strong>Nearly all quantified creative-workflow data is vendor-sponsored, and much of it surveys <em>in-house</em> creative teams, not agencies.</strong> The two longitudinal surveys with real sample sizes (InSource/inMotionNow, n=400–600; Filestage, n=263) are flagged individually below. I have not silently transferred in-house numbers onto agencies.</li>
+<li><strong>The web is now heavily polluted with AI-generated SEO content in this vertical.</strong> Roughly a dozen domains returning confident-sounding agency statistics had no methodology, no sample, and no source. They are excluded and named in section 8.</li>
+</ol>
+<p>Where the evidence is thin I say so rather than filling the gap. Two of the ten opportunities below are recommended <em>because</em> their underlying facts come from statute, contract text and court records rather than from surveys.</p>
+<hr />
+<h2 id="1-market-examined">1. Market examined</h2>
+<p><strong>Industry.</strong> Marketing services: full-service and digital agencies, brand and design studios, video and content production shops, B2B demand-generation agencies, PR firms, and the specialist agencies serving regulated verticals (healthcare/pharma, financial services, legal, government).</p>
+<p><strong>Professional roles this report is about.</strong> The people who own the boundary between the agency and everyone outside it:</p>
+<ul>
+<li><strong>Account manager / account director</strong> — the IPA's own definition describes the role as "the bridge between the client and the agency," responsible for presenting creative work, "handl[ing] approval processes," and ensuring materials comply with regulatory codes. Notably, neither the IPA description nor US recruiter job descriptions name <em>consolidating feedback</em> as a discrete task — at 5–75 people, it is unowned work that falls to whoever is on the account.</li>
+<li><strong>Project / traffic manager</strong> — routes files, chases approvals, assembles delivery packages.</li>
+<li><strong>Producer / production manager</strong> — owns vendor coordination, print and broadcast delivery, talent and music paperwork.</li>
+<li><strong>Creative director and designers/editors</strong> — absorb the rework.</li>
+<li><strong>Agency principal</strong> — in a shop under 25 people, this is frequently the same person as one or more of the above, and is the person who signs the contract that carries the liability.</li>
+</ul>
+<p><strong>Organization size most likely to benefit.</strong> 5–75 employees, with the sharpest fit at <strong>8–40</strong>. Below ~5 people the owner holds everything in their head and any tool is overhead; above ~75 the agency starts to be able to justify Workamajig ($45–49/user/month, 2–3 month implementation) or an enterprise DAM. The 5–75 band is large: Promethean's census puts 64% of ~46,000 US/CA digital agencies under 10 employees and 27% at 10–49; SparkToro's 2025 State of Digital Agencies survey (n=376) found 84% of respondents at 1–25 people and ~15% at 26–100.</p>
+<p><strong>Type of user.</strong> Non-technical to moderately technical. Comfortable with Adobe CC, Google Workspace, a project tool (Asana/ClickUp/Monday/Notion), a time tracker, and spreadsheets. Will not install a database, will not stand up a server, and — critically — <strong>cannot compel their clients to log into anything.</strong> Any tool whose value depends on client-side adoption is dead on arrival at this scale.</p>
+<p><strong>Financial shape that determines what they will pay for.</strong> Agency margin at this size is a function of hours: production staff utilization targets of 75–85% against realization of 75–95%, meaning an effective billing rate well below the nominal rate. Ignition's 2025 Agency Pricing &amp; Cash Flow Report (n=273 agency managers and executives across branding, creative, digital, marketing, PR, social and web) found <strong>57% of agencies lose $1,000–$5,000 per month on unbilled projects and tasks, 30% exceed $5,000/month, and 78% "rarely or only sometimes charge for out-of-scope work."</strong> Australian coverage of the same dataset reports 52% of agency leaders over-servicing "all the time" and 14% putting the cost at $20,000–30,000/month. Drew McLellan of the Agency Management Institute uses ~20% of the monthly retainer as the benchmark over-service level.</p>
+<p>That is the buying context: a business that already knows it is leaking money at the boundary, has no per-seat budget, and is chronically short of the one thing a new tool costs — attention.</p>
+<hr />
+<h2 id="2-how-the-work-is-performed">2. How the work is performed</h2>
+<h3 id="21-the-shape-of-a-job">2.1 The shape of a job</h3>
+<p>A typical engagement at this size runs: brief → client materials collected → concepts → internal review → client review round 1 → revisions → round 2 → (rounds 3–5 in practice) → approval → production/adaptation → deliverable spec conformance → handoff to an outside organization (printer, publisher, broadcaster, platform, developer) → live → measurement and reporting → archive → eventual takedown or renewal.</p>
+<p>The angle of this report covers everything after "client review round 1," plus the inbound collection step, plus the terminal archive/takedown step that almost nobody performs.</p>
+<h3 id="22-the-review-round-as-actually-practiced">2.2 The review round, as actually practiced</h3>
+<p><strong>Who is involved.</strong> On the agency side, the account manager presents and the project manager routes; the creative director gatekeeps. On the client side the picture is worse: InSource/inMotionNow found <strong>85% of creatives serve 10 or more stakeholders</strong>, and Ziflow/AMA's 2023 survey found 39% of creative team members work with 7+ clients or stakeholder groups simultaneously. Peter Kang, co-founder of the New York digital agency Barrel, names new stakeholders appearing mid-project as his third-ranked cause of delay — "especially those looking to make their mark," who "second-guess decisions" — and describes the standard failure: "What initially started as a promise to provide aggregated feedback… could be pushed out by a few days or even weeks."</p>
+<p><strong>What moves, and how.</strong> PDF is the default deliverable, because it "shows placement clearly in the layout." The channels that carry feedback back, documented by a 25-year practitioner (Colleen Gratzer, Design Domination), are: Acrobat "Send for Comments," Dropbox comments on the PDF, email, InDesign Share for Review — and, from clients, "a whole new Word document — and usually without tracked changes," photographs of pages marked up by hand, illegible handwriting, and overlapping comments that become indistinguishable. Round tracking is filename numbering, done by hand.</p>
+<p>Filestage's 2021 survey of 263 advertising and marketing professionals found <strong>53% had to consolidate feedback from multiple sources or channels</strong>, and <strong>71% of project managers had arranged a meeting purely to clarify feedback</strong>. In enterprise pharma, where the discipline is highest, one study of digital-operations leads counted <strong>twelve distinct feedback channels in simultaneous use</strong>: Jira, email, spreadsheets, slide decks, Word docs, Veeva PromoMats, PDFs, meetings, Slack/Teams, SharePoint, screen recordings, and annotated screenshots. If that is the enterprise state, the 15-person shop is not doing better.</p>
+<p><strong>How many rounds.</strong> This is the report's central numerical tension and it is well-attested on both sides:</p>
+<ul>
+<li><strong>Contracts say two.</strong> Creative COW practitioners, agency-published policies (Trillion Creative: "Most of our projects include two rounds of revisions. Beyond that, we invoice hourly"), and the Law Insider clause corpus ("The Company is entitled to two (2) design revisions during the development process at no additional cost") converge on two rounds as the contracted norm at small-shop scale.</li>
+<li><strong>Practice is three to five.</strong> InSource/inMotionNow (n=566) found <strong>61% experience 3–5 rounds, 19% require 5–10, 4% need 10+, and only 16% finish in 1–2</strong>.</li>
+</ul>
+<p>Every round past the second is, by the agency's own paperwork, unbilled. That is the mechanism that produces the over-servicing numbers in section 1.</p>
+<p><strong>Approval turnaround.</strong> 78% of projects receive final approval within a week; 15% take 6–7 days, 13% take 8–14 days, and <strong>8% take more than two weeks</strong>. 49% of Filestage respondents said delayed reviewer feedback slowed progress, 48% had to chase reviewers, 38% postponed deadlines, and 8% had projects cancelled because approvals never arrived.</p>
+<h3 id="23-the-outbound-handoff-to-outside-organizations">2.3 The outbound handoff to outside organizations</h3>
+<p>This is where the report finds its hardest facts, because the receiving organizations publish their requirements.</p>
+<p><strong>To a printer.</strong> Print-ready PDF with bleed ≥0.125", safe area ≥0.25" inside trim, 300 DPI at final size, CMYK, embedded or outlined fonts, PDF/X-1a or PDF/X-4, and total ink coverage inside the limit for the press and stock (320–340% sheetfed coated, 300–320% heatset web, 240–260% non-heatset uncoated). The Ghent Workgroup — the industry's actual preflight standard — defines <strong>14 variants</strong> on top of ISO PDF/X-4, with a 260-file certification test suite. And the liability is contractual: trade printers explicitly transfer responsibility to the file supplier ("The reprint comes out of your budget").</p>
+<p><strong>To a broadcaster.</strong> The AICP file deliverable standard is ProRes 422 HQ in QuickTime, three permitted formats, PCM 48 kHz 24-bit audio, <strong>−24 LKFS with true peak below −2 dBFS</strong> per ATSC A/85, a 5-second slate then 2 seconds of black then content and <em>no extra frames</em>, and an Ad-ID with "H" appended for HD. CBS's own 2024–25 Commercial Integration Manual demands an 8-second slate (a conflict with AICP's 5), a filename of exactly 20 alphanumeric characters plus "H", and a deadline ladder: <strong>files to Standards &amp; Practices 5 business days before scheduling; traffic instructions in writing 3 working days before first airdate; billboards 7–14 days out; sectionals 10 business days out.</strong> Its rejection language is unambiguous: "Commercials sent with missing or misspelled captioning cannot be corrected by CBS and will be returned for re-editing." Unaired commercials are <strong>purged from inventory after 80 days</strong> and must be resubmitted.</p>
+<p><strong>To a platform or ad server.</strong> IAB fixed-size units carry gzipped weight caps from 50 KB (mobile banner) to 250/500 KB (billboard), a maximum of 10 file requests on initial load, and a 30% CPU ceiling. Google Ads display: 150 KB static, HTML5 ZIP ≤600 KB and ≤40 files, animated GIF ≤30s and slower than 5 FPS. DV360 CTV: MP4 only, at least one asset at ≥15 Mbps, <strong>duplicate frames not allowed</strong> (which rejects many conformed exports), and separate asynchronous publisher approval — FreeWheel requires pre-approval before the creative can receive bid requests at all. Extreme Reach requires <strong>filenames of 12 characters or fewer, letters and numbers only, "to avoid potential rejections."</strong> DOOH runs at <strong>25.00 fps progressive</strong> — a frame rate used nowhere else in the same campaign — with 30-minute-to-overnight transcode latency during which the first plays are skipped.</p>
+<p><strong>To a media vendor.</strong> The IAB/4A's Standard Terms &amp; Conditions v3.0 govern the insertion order: the media company must flag damaged or non-compliant materials within two business days, <strong>late creative is billed pro-rata from the IO start date regardless</strong>, and sequential liability protects the agency from the advertiser's non-payment <em>only if the IO says so</em>.</p>
+<p><strong>To a client's regulated review system.</strong> For a pharma client, the agency assembles the MLR package — annotated copy with every claim linked to a source, a reference pack, static PDFs, screenshots of every web state, video transcripts — and submits it into <strong>the client's</strong> Veeva vault, which the agency does not own, cannot export from, and cannot use for its own tracking. The only sanctioned agency entry point Veeva publishes is a <strong>$500 per person per year certification</strong> to work inside someone else's vault. An agency with three pharma clients is operating in three systems it does not control.</p>
+<h3 id="24-what-software-is-actually-in-use">2.4 What software is actually in use</h3>
+<ul>
+<li><strong>Project/PM:</strong> Asana ($10.99–24.99/user/mo; proofing requires the Advanced tier), ClickUp ($7–12/user/mo; unlimited proofing on Business+), Monday ($9–19/seat, 3-seat minimum, proofing not a priced feature), Notion, Trello, Basecamp.</li>
+<li><strong>Proofing/review:</strong> Ziflow (free tier of 2 billable users; $199–329/mo plans), Filestage (free tier capped at 1 active project and 5 files/month; $199–329/mo), Frame.io ($15–25/user/mo), Markup.io ($79/mo unlimited users), BugHerd ($50–150/mo by member pack), ReviewStudio ($15–25/user/mo, free tier capped at 3 active reviews <em>total</em>), Approval Studio ($60–300/mo), PageProof ($249–399/mo), GoVisually ($16–33/user/mo), Dropbox Replay ($10/user/mo add-on). Unlimited free external reviewers is now table stakes across essentially all of them.</li>
+<li><strong>Agency management:</strong> Workamajig ($45–49/user/mo, 10-user minimum, 2–3 month implementation), Productive ($10–25/user/mo — with <strong>no proofing or creative-review feature anywhere in its pricing matrix</strong>), Scoro, Teamwork.</li>
+<li><strong>Onboarding/intake:</strong> Content Snare ($35–215/mo), Leadsie ($59–299/mo priced <em>per new client onboarded</em>), AgencyAccess, Dubsado ($335–525/yr), HoneyBook ($29–129/mo), Ignition ($39–399/mo).</li>
+<li><strong>Reporting:</strong> AgencyAnalytics ($20–25/client/mo → $500–625/mo at 25 clients), Swydo ($49/mo + per-source), DashThis ($44–429/mo by dashboard and source count), Whatagraph (<strong>€699/mo annual minimum</strong>), Looker Studio + Supermetrics ($44–222/mo, capped at 3–6 sources).</li>
+<li><strong>Preflight and QA:</strong> Adobe Acrobat Pro ($287.88/yr per seat — which, per practitioners on PrintPlanet, <em>is</em> the callas pdfToolbox engine under the hood, licensed by Adobe), Enfocus PitStop Pro ($480/yr), Enfocus Connect YOU ($150 one-time), GTM Preview/Debug (free), the free axe browser extension.</li>
+<li><strong>Everything else:</strong> Google Sheets, email, Slack, WeTransfer, Dropbox, and memory.</li>
+</ul>
+<hr />
+<h2 id="3-most-important-problems-ranked">3. Most important problems, ranked</h2>
+<h3 id="p1-nobody-can-prove-a-comment-was-addressed-and-no-tool-tries">P1 — Nobody can prove a comment was addressed, and no tool tries</h3>
+<p><strong>Who and when.</strong> The designer or editor, on every version after the first; the account manager, immediately before sending version <em>n+1</em> back.</p>
+<p><strong>Currently handled by:</strong> eyeballing two panes. Filestage's own help documentation describes the process plainly — the comments sidebar "doubles as a to-do list for collaborators… for creatives (who use it as a to-do list while working on the next version) or managers (to verify that everyone's feedback has been met)." Gratzer's manual method is to use Acrobat's comment filters (read/unread, checked/unchecked, by commenter, by type) and tick items off one at a time "even in hundred-page documents." Her stated failure: "a few clients pointed out some edits I had missed that I really shouldn't have missed. I hadn't checked my work."</p>
+<p><strong>Why inadequate.</strong> Comments are bound to the version they were made on. Ziflow customers report "Comments stay on the old version, not updating to the new one, which can be confusing." Two customers of two <em>different</em> products independently request the identical missing feature — Filestage: "It would be nice if there were a way to transfer unresolved comments from one version over to the next version"; Ziflow: "I would love open items to migrate to the new version if they're not complete."</p>
+<p><strong>Confirmation from the vendors themselves.</strong> Ziflow's ReviewAI launch lists <strong>"change verification," "automated revision comparisons," and "review summaries"</strong> as future/in-development capabilities in Enterprise public preview — i.e. the category leader publicly concedes it does not ship this. What <em>does</em> ship is visual comparison only: Ziflow side-by-side, Frame.io's Comparison Viewer with pixel-difference mode, Filestage's automatic text diff. A pixel diff tells you pixels moved; it does not tell you that comment #7 was satisfied.</p>
+<p><strong>Frequency and cost.</strong> Every round of every job — call it 3–5 times per deliverable, at 60% of projects. The cost is a mix of unbillable re-review time and the specific, expensive failure of a missed comment surviving into production.</p>
+<p><strong>Evidence grade: VERIFIED.</strong> Vendor help docs, vendor roadmap, and two independent verified-reviewer feature requests.</p>
+<hr />
+<h3 id="p2-usage-rights-expire-on-schedules-nobody-is-tracking-and-the-downside-is-six-figures">P2 — Usage rights expire on schedules nobody is tracking, and the downside is six figures</h3>
+<p><strong>Who and when.</strong> The producer or account lead, 13 weeks and then 24 months after a shoot; the agency principal, when a letter arrives.</p>
+<p><strong>The arithmetic that has to be right.</strong> Under the SAG-AFTRA 2025 Commercials Contract (in force 1 April 2025 through 31 March 2028), a single spot generates at least two independent, non-aligned clocks:</p>
+<ul>
+<li><strong>Holding fees</strong> run in fixed <strong>13-week cycles</strong>, the first beginning on the first day of production, and buy performer exclusivity.</li>
+<li>The <strong>Maximum Period of Use is now 24 months</strong>, computed as "10 business days from the first production day plus 2 years minus one day." SAG-AFTRA's own worked example: production starting 19 Aug 2025 → MPU ends <strong>2 Sept 2027</strong>. That is not a date any calendar tool will compute for you.</li>
+<li>Use must be paid through the MPU, and <strong>commercials cannot remain accessible on social or streaming after use-cycle payments expire even if the MPU has not been reached.</strong></li>
+<li>Digital replicas require consent ≥48 hours in advance, a minimum of 1.5 session fees, and <strong>24-month retention renewals</strong>.</li>
+<li>Late payment penalties accrue at $3.85/business day to a $96.30 cap per performer — and under the 2025 contract, liquidated damages accrue without pause, "A Producer has to pay regardless of notice. <strong>Notice is not the trigger</strong>," and <strong>if one performer sends notice, escalated damages apply to every performer on the spot.</strong></li>
+<li>Where the agency is the signatory, <strong>the agency is the Producer</strong> and carries the payment obligation.</li>
+</ul>
+<p><strong>Then the other rights on the same asset run on different rules.</strong> Music sync licenses are term × territory × media, and rights owners charge the full annual fee even for six non-consecutive four-week bursts because the track is "tied up with your brand" across the whole span; pre-negotiated renewal options cap at roughly +10%, and without one you renegotiate from zero leverage. Shutterstock's license (effective 19 Jan 2026) imposes <strong>numeric</strong> thresholds — ≤500,000 print reproductions, &lt;500,000 OOH impressions, video production budgets ≤$10,000 for a Standard license — which are checked once at asset selection and then quietly invalidated by campaign success, with Shutterstock's indemnity capped at $10,000 against statutory copyright damages reaching $150,000 per work. Photography usage is licensed by term, territory and media, with agency-side pricing guidance of +50–75% over one-time use for unlimited use and +100–150% for a buyout.</p>
+<p><strong>Currently handled by:</strong> a "usage rights" tab in the campaign spreadsheet, PDF licenses in a Drive folder named after the shoot, calendar reminders set by whoever remembered, signed releases photographed on someone's phone, and a "kill list" email at campaign end.</p>
+<p><strong>What it costs when it fails.</strong> <em>Olive v. General Nutrition Centers</em> (Cal. Ct. App. 2d Dist., decided 27 Dec 2018, affirmed 31 Jan 2019): a one-year print license with a renewal option; GNC kept using the images after expiry and admitted the violation. Verdict <strong>$213,000 license damages plus $910,000 emotional distress — $1,123,000 total.</strong> The underlying failure was not a judgment call. It was a calendar entry nobody made, and the emotional-distress component was 4.3× the license damages. On the music side: <em>Beastie Boys v. Monster Energy</em> produced a <strong>$1.7M jury verdict plus $667,849 in attorneys' fees</strong> where a remix had been cleared only for free promotional use; the Chili's/"Sabotage" suit filed July 2024 settled 21 May 2025.</p>
+<p><strong>Frequency.</strong> Every produced asset with a person, a song, a stock image, or a location in it — which at a video- or campaign-producing agency is most of them.</p>
+<p><strong>Evidence grade: VERIFIED</strong> (union contract text, published court decisions, licensor terms of service). This is the single best-evidenced problem in the report, and the one where the evidence is least dependent on anyone's survey.</p>
+<hr />
+<h3 id="p3-the-approval-of-record-the-artifact-that-transfers-liability-is-priced-for-enterprises">P3 — The approval of record — the artifact that transfers liability — is priced for enterprises</h3>
+<p><strong>Who and when.</strong> The agency principal, six weeks after a job shipped with an error.</p>
+<p><strong>Why it matters, in the industry's own vocabulary.</strong> Print has had a word for this for a century: <strong>AA (author's alteration) versus PE (printer's error)</strong>. The sign-off event is what reassigns cost. Peter Bowerman, a commercial copywriter writing about a typo that reached 5,000 brochures, states the mechanism exactly: "With a formal written sign-off, if an error is discovered after the fact, even if it's the writer's fault, he/she can't be held liable since the client approved it." (His actual response, worth noting as the representative small-shop outcome, was that he and the designer "decided on a vow of silence.")</p>
+<p><strong>What it costs when it's missing.</strong> Professional-indemnity insurers publish the claims:
+- A marketing firm <strong>omitted a digit from a client's phone number and left out the web address</strong> in a printed advert; reprinted at its own cost; <strong>£21,995</strong> claim (PolicyBee).
+- A design studio made late amendments to a client's annual report, the file corrupted and the changes did not save, and <strong>5,000 copies printed with a duplicated name and a wrong index</strong>; reprint quoted at <strong>~£14,000</strong>, settled at <strong>just over £9,000</strong> by the PI insurer. The broker's own lesson: get sign-off <em>on last-minute amendments specifically</em>, because that is where liability transfer breaks (PolicyBee).
+- A flyer campaign printer error cost <strong>£1,000 in reprint plus event cancellation fees</strong>, and the insurer's position was that the client holds the designer responsible regardless of where the error originated, "because the freelancer is their point of contact" (With Jack).</p>
+<p><strong>For regulated clients, the approval record is not optional, it is the rule.</strong> FINRA Rule 2210(b)(4)(A), read with SEA Rule 17a-4(b), requires a firm to retain a copy of each retail communication, <strong>"the dates of first and (if applicable) last use,"</strong> the <strong>name of the registered principal who approved it and the date</strong>, and <strong>"information concerning the source of any statistical table, chart, graph or other illustration."</strong> The SEC Marketing Rule's recordkeeping provisions (Rule 204-2(a)(11), (15), (16), (19)) require the advertisement, the substantiation, the performance working papers, and a record of the <strong>intended audience</strong> — retained <strong>not less than five years, the first two in an appropriate office of the adviser.</strong></p>
+<p><strong>Why the current tools don't solve it for this segment.</strong> Audit trails, e-signature and compliance export are <strong>Enterprise-tier features</strong> at Ziflow, Filestage and PageProof alike. The 5–75-person agency — which is precisely the party carrying the liability in every insurance claim above — is priced out of the artifact that would discharge it.</p>
+<p><strong>Evidence grade: VERIFIED</strong> (insurer claim files, FINRA rule text, eCFR, vendor pricing pages).</p>
+<hr />
+<h3 id="p4-every-destination-has-incompatible-technical-specs-and-the-failures-are-either-loud-and-expensive-or-silent-and-worse">P4 — Every destination has incompatible technical specs, and the failures are either loud and expensive or silent and worse</h3>
+<p><strong>Who and when.</strong> The producer or designer, at the moment of export, under deadline.</p>
+<p><strong>The structural finding.</strong> The problem is not the <em>number</em> of specs. It is that the constraint families are mutually irreconcilable within one campaign. Frame rate (23.98 broadcast vs 25 DOOH vs 29.97 vs 30 platform), colour space (CMYK print vs RGB DOOH at 72 ppi vs Rec.709 broadcast), filename length (12 alphanumeric characters for Extreme Reach display, 20+H for CBS, unconstrained elsewhere), weight caps spanning five orders of magnitude (50 KB IAB mobile banner to 5 GB XR upload), audio loudness (−24 LKFS broadcast vs muted-by-default display), and safe-zone geometry (TikTok LTR vs RTL template zips vs DOOH physical inches vs broadcast title-safe). <strong>No export preset satisfies two of these simultaneously</strong>, so every deliverable set requires a per-destination human check.</p>
+<p><strong>What it costs.</strong> Rejections are loud but the clock is unforgiving: CBS's 5-business-day S&amp;P window, DV360's separate asynchronous publisher approval, DOOH's 30-minute-to-overnight transcode with skipped first plays. A caption typo is a full return-to-post round trip. Missing a flight date on a bought media placement is not recoverable — and under the IAB/4A's standard T&amp;Cs, late creative is billed pro-rata from the IO start date anyway.</p>
+<p><strong>Frequency.</strong> Every campaign, every flight, every adaptation cycle.</p>
+<p><strong>A note on what we could not establish:</strong> <strong>no ad platform publishes creative rejection rates,</strong> and no print trade body publishes a preflight failure rate. Every "30–40% of files get rejected" figure in circulation traces to prepress-outsourcing vendor marketing with no methodology. The honest statement is that rejection <em>frequency</em> is undocumented while rejection <em>consequence</em> (the deadline ladders above) is precisely documented.</p>
+<p><strong>Evidence grade: VERIFIED</strong> for the specs and deadlines; <strong>explicit gap</strong> on frequency.</p>
+<hr />
+<h3 id="p5-tracking-taxonomy-failures-are-silent-and-they-destroy-the-measurement-the-client-is-paying-for">P5 — Tracking taxonomy failures are silent, and they destroy the measurement the client is paying for</h3>
+<p><strong>Who and when.</strong> The media or performance lead, at campaign launch; the account manager, at the monthly report, wondering why a channel shows nothing.</p>
+<p><strong>The mechanism, from Google's own documentation.</strong> GA4 UTM parameter values are case-sensitive: <code>utm_source=google</code> and <code>utm_source=Google</code> are different, and "SpringSale and Spring_Sale are considered distinct." GA4's default channel groups then apply exact-match and regex rules: Email requires medium exactly <code>email|e-mail|e_mail|e mail</code>; Organic Social requires medium in <code>('social','social-network','social-media','sm')</code>; Paid Search requires a medium matching <code>^(.*cp.*|ppc|retargeting|paid.*)$</code> <em>and</em> a recognised search source. So <code>utm_medium=newsletter</code> lands in <strong>Unassigned</strong>. <code>utm_medium=paid_social</code> lands in <strong>Unassigned</strong>. <code>utm_medium=Social</code> fails the list. Google's own official remedy is procedural, not technical: "maintain a strict, case-sensitive naming convention for all fields." <strong>There is no platform-side validation.</strong> Two of GA4's own accepted parameters — <code>utm_creative_format</code> and <code>utm_marketing_tactic</code> — are accepted but not reported, which is silent data loss by design.</p>
+<p><strong>Why this is worse than a rejected ad.</strong> A rejected ad announces itself. A misfiled UTM produces a link that works perfectly, a campaign that runs perfectly, and a report that is wrong — discovered, if ever, weeks later when a channel's spend cannot be attributed and the client asks why.</p>
+<p><strong>Currently handled by:</strong> a shared Google Sheet — which is the literal implementation of Google's own written guidance.</p>
+<p><strong>Tooling reality.</strong> GTM Preview/Debug is free but is a manual, per-page, per-session check with no debug interface for mobile app, AMP or server-side containers; it does not sweep a site or diff against an expected tag inventory. The commercial tag-governance category is entirely <strong>quote-gated</strong>: ObservePoint's "pricing" page contains no figures, no tiers and no terms, and utm.io's pricing URL redirects to a dead page. For a 20-person agency, quote-gating is not an expense problem; it is a de facto exclusion mechanism.</p>
+<p><strong>Evidence grade: VERIFIED</strong> on the mechanism (Google documentation) and the tool pricing wall (verified absence); <strong>INFERRED</strong> on small-agency behaviour, since practitioner forums were unreachable.</p>
+<hr />
+<h3 id="p6-rounds-are-contracted-at-two-and-delivered-at-four-and-78-of-agencies-never-bill-the-difference">P6 — Rounds are contracted at two and delivered at four, and 78% of agencies never bill the difference</h3>
+<p><strong>Who and when.</strong> The agency principal, monthly, looking at realization.</p>
+<p><strong>Currently handled by:</strong> the awkward conversation, or more often its absence. Ignition's survey of professional-services practitioners found <strong>90% (US) have had work go unbilled for out-of-scope requests</strong>, 43% absorb the cost personally, 89% have delayed or avoided the conversation, 67% say avoiding it damaged the relationship, and 30% reported staff resignations as a consequence. That survey is accountants, not agencies — I flag it as adjacent-vertical, and note that <strong>the absence of an agency-specific equivalent is itself a finding.</strong> The agency-specific data we do have is Ignition's 2025 agency report (57% losing $1–5k/month, 78% rarely charging for out-of-scope) and PMI's cross-industry Pulse (n=4,455): <strong>52% of projects experienced scope creep, 33% among top performers versus 69% among underperformers.</strong></p>
+<p><strong>Why current handling fails.</strong> The evidence needed to bill an overage — that round 3 was requested after approval of round 2, in writing, by someone with authority — exists only as scattered email. Creative COW practitioner Ned Miller states the failure exactly: "I am not interfacing with the final decision maker… they come back with changes, that should be an additional cost… I have to eat the cost or start arguing with the client." His workaround is to require the request by email and later cite "As per your email of…" — a manual, memory-dependent audit trail.</p>
+<p><strong>Evidence grade: VERIFIED</strong> on the practitioner mechanism and the round-count mismatch; <strong>VENDOR-SURVEY (adjacent vertical)</strong> on the dollar figures.</p>
+<hr />
+<h3 id="p7-final-files-is-a-bundle-of-components-with-different-transferability-rules-and-nothing-checks-it">P7 — "Final files" is a bundle of components with different transferability rules, and nothing checks it</h3>
+<p><strong>Who and when.</strong> The designer, at handover; the agency, when a client's new vendor calls asking for the fonts.</p>
+<p><strong>The rules, from the licensors.</strong> Adobe's own documentation states the Adobe Fonts terms "don't allow copying or moving the files," and that fonts "may only be embedded in a document for viewing or printing existing content" — so <strong><code>File &gt; Package</code> in InDesign, the standard agency handoff move, silently produces an incomplete and non-compliant package whenever Adobe Fonts are used.</strong> Flattened output (PDF/JPEG/PNG with embedded or rasterised font data) is fine; anything the client needs to <em>edit</em> triggers a licensing event. Shutterstock: "Standard and Enhanced Licenses do not allow for content to be transferred in whole to another party" — only Premier permits transfer. Photography is licensed by term, territory and media. And post-<em>CCNV v. Reid</em>, <strong>freelancer contributions belong to the freelancer</strong> absent a signed written assignment — meaning an agency that promised the client ownership but never papered the freelancer has sold something it does not own.</p>
+<p><strong>What the reference contract says.</strong> The AIGA Standard Form of Agreement distinguishes <strong>§1.6 "Final Deliverables"</strong> from <strong>§1.13 "Working Files"</strong> as separate defined terms, offers four mutually exclusive IP options of which only work-made-for-hire conveys rights in preliminary works, and conditions transfer on payment in full (§3.4). §9.1(c) puts responsibility for third-party licenses on the client. §5 requires the client to supply content "in a form suitable for reproduction… without further preparation" — the contractual hook for the asset chase, routinely unenforced.</p>
+<p><strong>What it costs when it fails.</strong> Michael Janda documents an agency demanding <strong>$40,000 to release source files</strong> after a relationship ended; the client paid, then damaged the agency by word of mouth. On the access side, <em>DSPT International v. Nahum</em> (9th Cir. 2010) held that using a domain to get leverage in a business dispute violates the ACPA — <strong>~$152,000 in damages</strong> — and no published UDRP decision supports a developer holding a client domain over non-payment.</p>
+<p><strong>Evidence grade: VERIFIED</strong> (licensor terms, AIGA SFA text, case law); <strong>INFERRED</strong> on prevalence.</p>
+<hr />
+<h3 id="p8-for-regulated-clients-the-agency-assembles-the-compliance-record-but-does-not-own-the-system-that-holds-it">P8 — For regulated clients, the agency assembles the compliance record but does not own the system that holds it</h3>
+<p><strong>Who and when.</strong> The account lead on a pharma, financial-services, health or supplement account, on every deliverable, forever.</p>
+<p><strong>The asymmetry.</strong> The legal obligation — the FDA Form 2253 submission under 21 CFR 314.81(b)(3)(i), the FINRA principal approval, the SEC substantiation record — sits on the sponsor, the broker-dealer or the adviser. <strong>The artifact that satisfies it is assembled by the agency.</strong> The agency carries operational and contractual risk without the regulatory license, and works inside client-owned systems it cannot export from.</p>
+<p><strong>The enforcement environment is not theoretical.</strong> FDA OPDP issued <strong>44 untitled letters on a single day (9 Sept 2025)</strong> following a presidential memorandum, against a baseline of 8 untitled letters in the ~21 months since the CCN rule was finalised; 2026 letters continue at pace (Sanofi, Viatris, Lundbeck, Bayer, Pfizer, Novo Nordisk ×2, Janssen, argenx ×2 in the first seven months). The SEC's Marketing Rule sweeps charged 5 advisers <strong>$200,000</strong> total in April 2024 and 9 advisers <strong>$1,240,000</strong> total in September 2024 — and the violations were overwhelmingly <em>documentation</em> failures, not creative ones: no written promoter agreement, a third-party rating missing its date and period, a disclosure placed behind a hyperlink, an unsubstantiated "conflict-free" claim. The SEC's December 2025 Risk Alert names hyperlinked disclosures explicitly: they "fail to meet the 'clear and prominent' obligation."</p>
+<p><strong>Agencies are directly reachable.</strong> FTC Endorsement Guides <strong>§255.1(f)</strong> makes intermediaries "including advertising agencies and PR firms" responsible for endorsements they create or disseminate where they "know or should know" these are deceptive. The 2024 Consumer Reviews and Testimonials Rule (16 CFR Part 465, effective 21 Oct 2024) reaches "advertising agencies, PR firms, review brokers, and reputation management companies" on a knew-or-should-have-known standard, with civil penalties of <strong>up to $53,088 per violation</strong>; the FTC warned ten companies in December 2025. The named-agency precedents are real if old: <strong>TBWA Worldwide</strong> was a named respondent alongside Nissan in 2014, and <strong>Creaxion Corporation</strong> was charged in 2018 <em>without</em> the advertiser being named.</p>
+<p><strong>And the clocks are short.</strong> A NAD challenge lands with a <strong>15-business-day</strong> response window and requires the complete substantiation file for every challenged claim — files the agency may hold and the client may not.</p>
+<p><strong>Currently handled by:</strong> a "legal/claims" tab in the campaign deck, a substantiation folder on Drive, a compliance-log spreadsheet, screenshots of influencer posts taken sometimes, and email chains standing in for approval records.</p>
+<p><strong>Evidence grade: VERIFIED</strong> (eCFR, FDA letter list, SEC press releases and Risk Alert, FTC rule text and penalty schedule, NAD procedures).</p>
+<hr />
+<h3 id="p9-client-reporting-is-unbilled-labour-that-most-clients-do-not-read">P9 — Client reporting is unbilled labour that most clients do not read</h3>
+<p>AgencyAnalytics' benchmark study (n=121 agencies, 46% of them 6–20 employees — dead centre of this report's band) found <strong>58% report monthly</strong>, with <strong>2.5–5 hours per report before automation</strong> and 52% under 30 minutes after. <strong>96% of agencies do not charge separately for reporting.</strong> And only <strong>5% of clients read the report "all of the time"</strong> (29% "most of the time"; 54% average email open rate). A 15-person agency with 25 monthly-reporting clients at the pre-automation figure is spending <strong>62–125 hours a month</strong> assembling documents two-thirds of clients do not reliably read, at zero revenue.</p>
+<p>The reporting tool category is mature and reasonably priced, so this is <em>not</em> a recommended build target — but note what none of them do: the <em>narrative</em>, weekly <strong>status</strong> reporting (project state, blockers, what we're waiting on from you) as distinct from <strong>performance</strong> reporting, offline channels, and getting the result into the client's own deck template.</p>
+<p><strong>Evidence grade: VERIFIED</strong> (real survey with disclosed sample and geography; note the respondent base is a vendor's own customers, which biases toward already-automated agencies and makes the time figures a floor).</p>
+<hr />
+<h3 id="p10-the-asset-chase-at-kickoff">P10 — The asset chase at kickoff</h3>
+<p>Access collection alone cost one named agency "at least half a day" per client, run as "very much a back-and-forth email discussion" with a customised up-to-100-slide onboarding document. A client complained about lack of progress "during the two weeks it took them to get asset access." Content is the deeper stall: one practitioner describes sites finished and waiting, "weeks and months go by. When (if) the content finally arrives, my timeline is thrown off. And depending on the amount of time that's passed (sometimes years!), the design needs updating!"</p>
+<p>This problem is real but <strong>already served</strong> at reasonable prices (Content Snare from $35/mo, Leadsie from $49/mo). It is ranked last for that reason, and the recommendation below addresses only the specific sliver — offboarding revocation — that those tools do not cover. Note also: <strong>no independent survey quantifies agency project delay attributable to missing client assets at kickoff.</strong> Every number in circulation is vendor-sourced.</p>
+<hr />
+<h2 id="4-application-opportunities">4. Application opportunities</h2>
+<p>Ten concepts, small and medium complexity. Each is scoped to be free and open-source in its base version, with paid client-specific customisation as the commercial layer.</p>
+<hr />
+<h3 id="a1-comment-ledger-feedback-reconciliation-and-resolution-sheet">A1 — Comment Ledger (feedback reconciliation and resolution sheet)</h3>
+<p><strong>Intended user.</strong> Project manager or designer at a 5–40 person agency, on every revision round.</p>
+<p><strong>Problem solved.</strong> P1. Feedback arrives from three or four channels bound to a version that no longer exists, and nobody can prove each item was addressed.</p>
+<p><strong>Current workflow.</strong> Export Acrobat comments or read them in the proofing tool; retype into a checklist or work straight from the sidebar; tick items off by memory; hope.</p>
+<p><strong>Proposed workflow.</strong> Drop in the sources — an exported PDF annotation set (FDF/XFDF or the PDF itself), a pasted email thread, a pasted Slack export, a marked-up Word doc — and the tool emits one numbered, deduplicated <strong>comment register</strong> for that version, with each item classified (copy / layout / factual / scope-change / question), attributed to a commenter, and <strong>flagged where two comments contradict each other</strong>. The designer marks each item done / not done / needs-client-decision / out-of-scope. On the next version, the tool emits a <strong>resolution sheet</strong> that ships alongside the file: "24 comments received, 21 addressed, 2 conflict — please pick, 1 out of contracted scope — see change order."</p>
+<p><strong>Inputs.</strong> PDF/FDF/XFDF annotations; pasted email or Slack text; optional CSV export from a proofing tool.
+<strong>Outputs.</strong> Comment register (CSV + PDF); resolution sheet (PDF) for client delivery; carry-forward list of unresolved items.</p>
+<p><strong>Essential features.</strong> Deduplication of the same note from three people; conflict detection; carry-forward of unresolved items to the next round; out-of-scope tagging that feeds A9.
+<strong>Excluded from initial scope.</strong> Being a proofing tool. It does not host files, does not render previews, does not accept client logins. It sits <em>behind</em> whatever the client already uses.</p>
+<p><strong>AI: optional-to-useful.</strong> Rules handle deduplication of near-identical text and extraction of PDF annotations. An LLM materially helps with two things conventional code cannot do: turning "the blue feels a bit corporate, and can we look at the headline again?" into two discrete action items, and detecting that reviewer A's "make it bigger" contradicts reviewer B's "too heavy, dial it back." Ship the rules-only version first; the AI layer should be optional and local-model-capable, because client copy is confidential.</p>
+<p><strong>Why not a spreadsheet.</strong> The register itself is spreadsheet-shaped. What is not: extracting annotations from PDFs, carrying unresolved items across versions, and generating the client-facing resolution sheet. The spreadsheet is what agencies use today and it is exactly where the retyping cost lives.</p>
+<p><strong>Complexity: medium. Learning: 20 minutes.</strong>
+<strong>Value.</strong> If it removes one round from 30% of jobs, at a contracted two-round allowance and 3–5 rounds actual, it converts unbilled rework directly into capacity. More reliably: it produces the resolution sheet, which is a client-facing artifact that visibly changes the conversation about round counts.</p>
+<p><strong>Risks.</strong> Client copy is confidential — an AI layer must be optional and offline-capable. Over-scoping into a proofing tool is the obvious failure mode.
+<strong>Substitutes.</strong> Ziflow, Filestage, Frame.io, PageProof — all of which <em>collect</em> feedback well and none of which reconcile it. Ziflow lists change verification on its roadmap in Enterprise preview.
+<strong>Customisation potential.</strong> High: per-agency comment taxonomies, scope-clause language, integration with the agency's PM tool.</p>
+<hr />
+<h3 id="a2-sign-off-certificate-approval-of-record">A2 — Sign-Off Certificate (approval of record)</h3>
+<p><strong>Intended user.</strong> Agency principal or account manager, on every deliverable that leaves the building.</p>
+<p><strong>Problem solved.</strong> P3. The artifact that transfers liability at sign-off is behind an enterprise paywall, and insurers' claim files show exactly what it costs to lack it.</p>
+<p><strong>Current workflow.</strong> An email that says "looks good, go ahead" — from someone who may not be the decision-maker — filed nowhere in particular.</p>
+<p><strong>Proposed workflow.</strong> Point the tool at the exact file being approved. It computes a content hash, captures the version label, the approver's name/role/email, the timestamp, the delivery channel, and a short statement of what is being approved (and explicitly what is not — e.g. "colour on press not yet verified"). It emails a one-click confirmation link; on confirmation it emits a <strong>signed PDF certificate</strong> embedding the hash and a thumbnail, and files it in a per-client register. A <strong>first-use / last-use</strong> field is captured at publish and takedown, and a retention clock (3 years FINRA, 5 years SEC, 3 years ABPI, or a custom term) is started.</p>
+<p><strong>Inputs.</strong> The approved file; approver contact; optional regulatory profile.
+<strong>Outputs.</strong> Signed certificate PDF; per-client approval register (CSV); retention/expiry report.</p>
+<p><strong>Essential features.</strong> Content hash so nobody can argue about which version; explicit scope-of-approval text; first-use and last-use date fields; retention clock; export of the whole register.
+<strong>Excluded.</strong> Legally binding e-signature under eIDAS/ESIGN in v1 (a hash-plus-email-confirmation record is what actually gets used in a dispute at this scale); workflow routing; multi-stage approval chains.</p>
+<p><strong>AI: inappropriate.</strong> This is a hashing, dates and records problem. Adding a model would weaken it.</p>
+<p><strong>Why not a spreadsheet.</strong> A spreadsheet cannot bind the record to the bytes of the file. The hash is the whole point: it is what distinguishes "the client approved <em>this</em>" from "the client approved something we called v4."</p>
+<p><strong>Complexity: small. Learning: 10 minutes.</strong>
+<strong>Value.</strong> Direct: the PolicyBee claims run £9,000–£21,995 and are exactly the shape of dispute a sign-off record resolves. Indirect: for financial-services clients, the first-use/last-use field is <em>mandatory</em> under FINRA 2210(b)(4)(A) and, per the research, is a field literally nobody's project tool has.</p>
+<p><strong>Risks.</strong> Must not be marketed as legal advice or as a qualified electronic signature. Retention periods vary by regime and must be configurable, not hardcoded.
+<strong>Substitutes.</strong> Ziflow/Filestage/PageProof audit trails and e-signature — all Enterprise-tier. DocuSign, which is built for contracts, not for deliverables, and prices per envelope.
+<strong>Customisation potential.</strong> High: regime-specific certificate templates (FINRA, SEC, ABPI, FDA 2253 transmittal), agency branding, PM-tool integration.</p>
+<hr />
+<h3 id="a3-rights-usage-expiry-ledger">A3 — Rights &amp; Usage Expiry Ledger</h3>
+<p><strong>Intended user.</strong> Producer, account director, or principal at any agency that produces original content with people, music, stock or licensed footage in it.</p>
+<p><strong>Problem solved.</strong> P2. Multiple non-aligned expiry clocks per asset, computed by rules no calendar tool implements, with six-figure downside.</p>
+<p><strong>Current workflow.</strong> A spreadsheet tab, PDFs in a Drive folder, and calendar reminders set by whoever remembered.</p>
+<p><strong>Proposed workflow.</strong> Register each <em>element</em> inside a deliverable — performer, music track, stock image, footage, location, likeness, font — with rights holder, license type, license document, territory, permitted media, term start, numeric caps (print run, OOH impressions, production budget), renewal option and its cap, and release status. The tool computes the correct end date <strong>per rule type</strong>, including:</p>
+<ul>
+<li>SAG-AFTRA <strong>MPU</strong>: first production day + 10 business days + 2 years − 1 day (verified against SAG-AFTRA's own worked example: 19 Aug 2025 → 2 Sept 2027)</li>
+<li><strong>13-week holding fee cycles</strong> from first production day, tracked independently of the MPU</li>
+<li>Music sync terms by term × territory × media, including the full-annual-fee rule for non-consecutive flighting</li>
+<li>Stock license <strong>numeric thresholds</strong>, re-checked whenever the media plan changes</li>
+</ul>
+<p>It then produces (a) advance warnings at configurable intervals, (b) a <strong>takedown checklist</strong> enumerating every live placement of an expiring asset, and (c) an evidence bundle — licenses, releases, payment records — when a claim arrives.</p>
+<p><strong>Inputs.</strong> Per-element license metadata; the media plan (for numeric caps); a placement list.
+<strong>Outputs.</strong> Expiry calendar (with ICS export); takedown checklist; per-asset rights dossier PDF.</p>
+<p><strong>Essential features.</strong> Rule-based date computation (this is the differentiator — a plain date field is useless here); numeric-threshold tracking against actual buy volumes; the takedown checklist; the evidence bundle.
+<strong>Excluded.</strong> Payment processing, union filing, contract negotiation, DAM/asset storage. It tracks rights, not files.</p>
+<p><strong>AI: inappropriate for the core; optional at the edge.</strong> The date arithmetic must be deterministic and auditable — an LLM here is a liability. An optional assist for extracting terms from an uploaded license PDF is reasonable, provided every extracted field is presented for human confirmation.</p>
+<p><strong>Why not a spreadsheet.</strong> Because the arithmetic is not calendar arithmetic. "+10 business days, +2 years, −1 day" is not a formula anyone gets right by hand twice, the 13-week cycles do not align with the MPU, and the numeric caps are invalidated by events (a media plan change) rather than by time. A spreadsheet also cannot generate the takedown checklist, which is the thing that actually prevents the loss.</p>
+<p><strong>Complexity: medium (small if scoped to SAG + stock only in v1). Learning: 30–45 minutes for the concepts, 10 for the interface.</strong>
+<strong>Value.</strong> <em>Olive v. GNC</em> is $1,123,000 against a missed calendar entry. <em>Beastie Boys v. Monster</em> is $1.7M plus $667,849 in fees. SAG-AFTRA late-payment liquidated damages accrue without notice, and one performer's notice escalates damages for every performer on the spot. This is the highest-consequence, lowest-complexity problem in the entire report.</p>
+<p><strong>Risks.</strong> Getting a rule wrong is worse than having no tool — every computed date must show its working and cite the governing clause, and the tool must carry a clear "not legal advice, verify against your contract" posture. Union agreements change on a three-year cycle (the current one runs to 31 Mar 2028), so the rule set needs versioning and dating.
+<strong>Substitutes.</strong> Essentially none at this tier. Enterprise talent-payment houses (Extreme Reach, Cast &amp; Crew, Talent Partners) handle payments for their own clients but do not give the agency a cross-vendor ledger. A 2023 US patent application for an "automated talent usage rights negotiation &amp; management tool" (US20230010020A1) confirms the problem is recognised and unserved.
+<strong>Customisation potential.</strong> Very high: per-agency rule packs (SAG vs non-union vs UK Equity), integration with a payroll house's export, per-client media-plan feeds.</p>
+<hr />
+<h3 id="a4-destination-spec-gate">A4 — Destination Spec Gate</h3>
+<p><strong>Intended user.</strong> Producer, editor, or designer, at export, on every campaign.</p>
+<p><strong>Problem solved.</strong> P4. Mutually incompatible destination specs, checked by hand under deadline.</p>
+<p><strong>Current workflow.</strong> A spec PDF from the media partner, opened in another window, checked by eye; a rejection email two days later.</p>
+<p><strong>Proposed workflow.</strong> Maintain a <strong>destination profile library</strong> as plain YAML/JSON — IAB fixed sizes with gzipped weight caps, Google Ads display, DV360 CTV bitrate ladder and no-duplicate-frames, LinkedIn, TikTok (including the LTR/RTL safe-zone templates), YouTube durations, Extreme Reach display and broadcast, CBS-style broadcast, DOOH at 25 fps, and print (bleed, safe area, DPI, colour space, total ink coverage by press/stock). Point the tool at a folder of finished files, tick the destinations, and it runs the actual technical checks — dimensions, duration, container and codec, bitrate, frame rate, duplicate-frame detection, gzipped byte size, filename length and character set, loudness in LKFS, true peak, colour space, embedded fonts, bleed box, ink coverage — and emits a pass/fail matrix with the specific failing value and the required value, plus suggested compliant filenames.</p>
+<p><strong>Inputs.</strong> A folder of deliverables; a destination selection; optionally a client-specific profile.
+<strong>Outputs.</strong> Pass/fail matrix (HTML + CSV); rename script; a delivery manifest listing what is being sent where, to which spec, on what date.</p>
+<p><strong>Essential features.</strong> The profile library as editable text (so agencies can add a client's or a publisher's own spec sheet without touching code); the checks that require real tooling — ffprobe/ffmpeg for loudness, true peak, frame rate and duplicate frames; ImageMagick for raster; a PDF library plus Ghostscript for ink coverage and boxes; gzip for real transfer weight.
+<strong>Excluded.</strong> Transcoding, resizing, or fixing anything. It is a gate, not a converter — this keeps it small, keeps it trustworthy, and avoids competing with the entire encoding industry.</p>
+<p><strong>AI: inappropriate.</strong> Every one of these checks is a deterministic measurement against a published number.</p>
+<p><strong>Why not a spreadsheet.</strong> A spreadsheet can hold the specs (the Ghent Workgroup literally distributes its own specification as a spreadsheet) but cannot measure the file. The measurement is the product.</p>
+<p><strong>Complexity: medium. Learning: 15 minutes.</strong>
+<strong>Value.</strong> A single missed broadcast S&amp;P window (5 business days at CBS) or a rejected CTV asset waiting on FreeWheel publisher approval can cost a flight. Under the IAB/4A's T&amp;Cs, late creative is billed pro-rata from the IO start date regardless — so the media is paid for whether or not it runs.</p>
+<p><strong>Risks.</strong> Spec drift. Platform specs change without notice, and a stale profile that says PASS is worse than no tool. Mitigation: date-stamp every profile, show its age prominently, and treat profile maintenance as the community contribution surface — which is a genuine argument for the open-source model here.
+<strong>Substitutes.</strong> Acrobat Pro's preflight (which <em>is</em> the callas pdfToolbox engine, already owned at $287.88/yr and rarely opened), Enfocus PitStop Pro ($480/yr, print only), and ad-server-side rejection (which is the current, expensive gate). Nothing spans print + broadcast + digital + DOOH in one pass.
+<strong>Customisation potential.</strong> Very high: per-client and per-publisher profiles are the natural paid service.</p>
+<hr />
+<h3 id="a5-claim-substantiation-register">A5 — Claim &amp; Substantiation Register</h3>
+<p><strong>Intended user.</strong> Account lead or copywriter on a regulated account — pharma, medical device, financial services, supplements, health, and any client making performance or comparative claims.</p>
+<p><strong>Problem solved.</strong> P8. The agency assembles the compliance record inside systems it does not own, and the record is the thing regulators actually examine.</p>
+<p><strong>Current workflow.</strong> A Word table, an Acrobat comment layer, a Drive folder, and a hope that whoever knew where the source document lived is still on the account.</p>
+<p><strong>Proposed workflow.</strong> For a given deliverable, register every claim: claim text, location in the piece, supporting source (document, page, figure), source date, who approved it, and the required disclosure and <strong>where it is physically placed</strong> (in-copy versus behind a hyperlink — the exact distinction the SEC's December 2025 Risk Alert flags as a failure). The tool then emits an <strong>annotated PDF plus reference bundle</strong> ready to hand into the client's Veeva vault or compliance review, tracks which claims changed between versions (the "superscript lost between MLR-approved and live" failure mode is a diff problem), starts the retention clock, and can assemble the whole substantiation file on demand against a <strong>15-business-day NAD clock</strong> or an FTC CID.</p>
+<p><strong>Inputs.</strong> Deliverable copy; source documents; approver identities.
+<strong>Outputs.</strong> Annotated PDF; reference bundle (zip); claim register (CSV); a change report between versions.</p>
+<p><strong>Essential features.</strong> Claim-to-source-page linkage that survives the Word → design → digital-adaptation handoff; disclosure-placement field; version diff on the claim set; retention clock.
+<strong>Excluded.</strong> Being a DMS or a review platform. It prepares packages for someone else's system.</p>
+<p><strong>AI: genuinely useful, optional.</strong> Extracting <em>candidate</em> claims from copy — identifying which sentences assert a fact, a comparison, a performance figure or a health benefit — is a real language task that rules do poorly. Every extracted claim must be human-confirmed. Never let a model decide whether substantiation is adequate; that is a regulated judgement.</p>
+<p><strong>Why not a spreadsheet.</strong> The register is spreadsheet-shaped; the annotated PDF, the bundle assembly and the cross-version claim diff are not, and the diff is where the documented failures happen.</p>
+<p><strong>Complexity: medium. Learning: 45 minutes (the concepts are unfamiliar to non-regulated staff).</strong>
+<strong>Value.</strong> SEC Marketing Rule penalties ran $60,000–$325,000 per adviser in the 2024 sweeps, overwhelmingly for documentation failures. FTC penalties reach $53,088 per violation under 16 CFR 465, and the FTC states explicitly that agencies are covered on a knew-or-should-have-known standard.</p>
+<p><strong>Risks.</strong> Confidentiality is acute — pharma copy is pre-launch material. Local-first architecture is not a nicety here, it is a requirement. Also: the tool must never present itself as a compliance determination.
+<strong>Substitutes.</strong> Veeva Vault PromoMats (no public price; third-party estimates $600–$2,400/user/yr plus $10k–$50k implementation; licensed to the sponsor, not the agency — the agency's only sanctioned entry is a <strong>$500/person/yr certification</strong>), Vodori Pepper Flow and Aprimo (~$20,000/yr entry by Aprimo's own published statement). Ten leading MLR tools surveyed: none discloses pricing.
+<strong>Customisation potential.</strong> Very high, and this is arguably the best paid-services opportunity in the report: per-client claim taxonomies, per-vault export formats, and a cross-client tracker showing which asset sits in which client's system, at which round, with which reviewer, since when — something no vendor sells because vendors sell to sponsors, one vault at a time.</p>
+<hr />
+<h3 id="a6-campaign-taxonomy-validator">A6 — Campaign Taxonomy Validator</h3>
+<p><strong>Intended user.</strong> Media/performance lead or account manager, at every campaign launch.</p>
+<p><strong>Problem solved.</strong> P5. Silent tracking failures caused by case sensitivity and non-matching channel-group values.</p>
+<p><strong>Current workflow.</strong> A shared Google Sheet, which is the literal implementation of Google's own written guidance.</p>
+<p><strong>Proposed workflow.</strong> Define the agency's taxonomy once (allowed sources, mediums, campaign name segments, separators, case rules). Paste or import a list of destination URLs and campaign metadata; the tool builds the tagged URLs, <strong>validates every <code>utm_medium</code> against GA4's actual default channel-group rules</strong> and warns explicitly when a value will land in Unassigned, normalises case, detects near-duplicates that will fragment a campaign across report rows (<code>SpringSale</code> vs <code>Spring_Sale</code>), warns on parameters that are accepted but not reported (<code>utm_creative_format</code>, <code>utm_marketing_tactic</code>), and exports a QA sheet plus the final link set.</p>
+<p><strong>Inputs.</strong> Destination URLs; campaign metadata; a taxonomy definition file.
+<strong>Outputs.</strong> Tagged URL set (CSV); validation report; a per-client taxonomy document.</p>
+<p><strong>Essential features.</strong> The GA4 channel-group rule set as data (versioned and dated, since Google changes it — an AI Assistants channel was added recently); near-duplicate detection; the taxonomy definition as a shareable file so a client's in-house team and the agency use the same one.
+<strong>Excluded.</strong> Link shortening, click tracking, redirects, analytics. It produces correct strings and refuses incorrect ones.</p>
+<p><strong>AI: inappropriate.</strong> Regex and string normalisation.</p>
+<p><strong>Why not a spreadsheet.</strong> A spreadsheet can build the string. It cannot tell you the string will silently fail GA4's channel rules, which is the actual failure mode.</p>
+<p><strong>Complexity: small. Learning: 15 minutes.</strong>
+<strong>Value.</strong> Prevents a category of failure that is invisible until the monthly report, at which point the spend for a channel is unattributable and cannot be reconstructed. Also directly improves the reporting deliverable in P9.</p>
+<p><strong>Risks.</strong> GA4 rules change; the rule set must be dated and easy to update. Low ceiling on value per incident, offset by very low cost.
+<strong>Substitutes.</strong> Google's own Campaign URL Builder (builds, does not validate), dozens of free UTM builders (same), ObservePoint (no public pricing at all), utm.io (pricing page dead). <strong>This is the concept with the weakest differentiation</strong> — the honest positioning is "the free builder everyone uses, plus the one validation step Google documents but does not implement."
+<strong>Customisation potential.</strong> Moderate: per-client taxonomies, CRM/CMS naming alignment.</p>
+<hr />
+<h3 id="a7-handoff-manifest-license-auditor">A7 — Handoff Manifest &amp; License Auditor</h3>
+<p><strong>Intended user.</strong> Designer or producer at final delivery; the principal at contract close-out.</p>
+<p><strong>Problem solved.</strong> P7. "Final files" is a bundle whose components have different transferability rules, and one folder handoff can breach three licenses at once.</p>
+<p><strong>Current workflow.</strong> <code>File &gt; Package</code>, zip, WeTransfer, hope.</p>
+<p><strong>Proposed workflow.</strong> Point the tool at the delivery folder or an InDesign package. It inventories the components, cross-references a per-agency <strong>license register</strong> (fonts and their source, stock assets and their license tier, photography and its usage terms, freelancer contributions and whether an assignment is on file), and flags what cannot be transferred as-is: Adobe Fonts (per Adobe's own terms, the files may not be copied or moved), Shutterstock Standard/Enhanced assets (non-transferable; only Premier permits transfer), photography outside its licensed media, freelancer work with no signed assignment. It then emits a <strong>delivery manifest</strong> stating, item by item, what is being transferred and under what terms — a document that both protects the agency and tells the client exactly what they must license themselves.</p>
+<p><strong>Inputs.</strong> The delivery folder or package; the agency's license register.
+<strong>Outputs.</strong> Delivery manifest PDF; exceptions list; a "flattened-only" packaging recommendation where editable transfer is not permitted.</p>
+<p><strong>Essential features.</strong> Font source detection (Adobe Fonts vs licensed desktop vs open-source); asset-to-license matching; the manifest.
+<strong>Excluded.</strong> Reading and interpreting license PDFs automatically in v1; DAM functionality; rights <em>expiry</em> (that is A3, and the two should share a data model).</p>
+<p><strong>AI: optional and marginal.</strong> Matching a filename to a license record is fuzzy string matching. Reading a license PDF to extract terms is an AI task, but it is also the one where a wrong answer is most dangerous.</p>
+<p><strong>Why not a spreadsheet.</strong> The register is a spreadsheet. Walking the folder, identifying the fonts actually used, and producing the manifest is not.</p>
+<p><strong>Complexity: medium. Learning: 30 minutes.</strong>
+<strong>Value.</strong> Prevents a specific, documented, silent compliance breach (the InDesign package with Adobe Fonts in it) and creates the manifest that pre-empts the "$40,000 for the source files" fight.</p>
+<p><strong>Risks.</strong> License terms change (Shutterstock's current ToS is dated 19 Jan 2026); the rules must be dated. Font detection across the Adobe ecosystem is fiddly.
+<strong>Substitutes.</strong> None found. No agency-facing tool checks licensing at export.
+<strong>Customisation potential.</strong> High: agency-specific license registers and manifest templates.</p>
+<hr />
+<h3 id="a8-access-register-offboarding-verifier">A8 — Access Register &amp; Offboarding Verifier</h3>
+<p><strong>Intended user.</strong> Operations lead or principal, at onboarding and — critically — at offboarding.</p>
+<p><strong>Problem solved.</strong> The offboarding sliver of P10 that Leadsie and AgencyAccess do not cover: proving that access was actually and completely revoked.</p>
+<p><strong>Current workflow.</strong> A password manager, a mental list, and a hope that nothing was missed.</p>
+<p><strong>Proposed workflow.</strong> Maintain a per-client register of every access grant: platform, asset (Page, Instagram account, ad account, pixel, catalog, property, container, MCC link), grant type, who holds it, when granted. At offboarding, generate a <strong>revocation checklist</strong> derived from that register — including the specific traps: Meta partner removal is <strong>asset-by-asset</strong>, not one action, and staff holding direct "People" access must be removed separately from the partner removal; Google Ads has exactly <strong>one owner manager account</strong> and ownership must be explicitly transferred; GA4 properties inside an agency-controlled account must be <em>moved</em>, not re-permissioned. Then capture confirmation of each revocation and emit a dated <strong>access closure record</strong> for the client file.</p>
+<p><strong>Inputs.</strong> The access register; the offboarding date.
+<strong>Outputs.</strong> Revocation checklist; access closure record PDF; an asset-ownership summary for the client.</p>
+<p><strong>Essential features.</strong> The platform-specific gotcha library (this is the value — the checklists, not the storage); the closure record.
+<strong>Excluded.</strong> Storing credentials (never), OAuth grant automation (Leadsie does this well at $49–299/mo), password management.</p>
+<p><strong>AI: inappropriate.</strong></p>
+<p><strong>Why not a spreadsheet.</strong> Mostly it could be — the honest answer. The differentiator is the maintained platform-gotcha library and the closure record. This is the weakest "why not a spreadsheet" case in the report and is scored accordingly.</p>
+<p><strong>Complexity: small. Learning: 15 minutes.</strong>
+<strong>Value.</strong> Reduces a real security and professional-liability exposure (residual partner access on a pixel after "offboarding" is complete) and pre-empts ownership disputes — the domain-hostage version of which produced ~$152,000 in damages in <em>DSPT v. Nahum</em>.</p>
+<p><strong>Risks.</strong> Platform UIs and permission models change constantly; the gotcha library ages fast.
+<strong>Substitutes.</strong> Leadsie and AgencyAccess (onboarding-side grants), password managers (credentials, not grants).
+<strong>Customisation potential.</strong> Moderate.</p>
+<hr />
+<h3 id="a9-round-counter-overage-notice">A9 — Round Counter &amp; Overage Notice</h3>
+<p><strong>Intended user.</strong> Account manager and principal, continuously.</p>
+<p><strong>Problem solved.</strong> P6. Two contracted rounds, four delivered, 78% never billed, and no evidence assembled at the moment it would have been easy to assemble.</p>
+<p><strong>Current workflow.</strong> Nothing, then an awkward conversation, then absorption.</p>
+<p><strong>Proposed workflow.</strong> Record the contracted allowance per job (rounds, or hours, or both). Log each round with its date, the requester, and the source of the request. When an incoming request would exceed the allowance, or arrives after an approval was captured by A2, the tool flags it and drafts an <strong>overage notice</strong> citing the evidence — "as per your approval of v3 on 14 July and your request of 22 July" — with the change-order amount computed from the agency's rate card. It also tracks <strong>client feedback latency</strong>, so the agency can show that its own delays were not the cause of the schedule slip.</p>
+<p><strong>Inputs.</strong> Contracted allowance; round log (ideally fed from A1 and A2 rather than typed).
+<strong>Outputs.</strong> Overage notice draft; per-job round and latency summary; a portfolio view of over-servicing by client.</p>
+<p><strong>Essential features.</strong> The evidence-citing draft (the thing that makes the conversation possible); the client latency record; the portfolio view that shows <em>which</em> client is the problem.
+<strong>Excluded.</strong> Invoicing, time tracking, contract management. It produces a notice; the agency's existing systems bill it.</p>
+<p><strong>AI: optional.</strong> Drafting the notice in the agency's tone is a reasonable LLM task; the arithmetic and the evidence are not.</p>
+<p><strong>Why not a spreadsheet.</strong> The counting is spreadsheet work, but nobody does it, because it has to happen at the moment of the request rather than at month-end. The value is in the trigger, not the tally.</p>
+<p><strong>Complexity: small. Learning: 20 minutes.</strong>
+<strong>Value.</strong> Ignition's agency data: 57% of agencies lose $1,000–$5,000/month on unbilled work, 30% lose more than $5,000. Recovering even a third of that is $4,000–$20,000/year for a small shop.</p>
+<p><strong>Risks.</strong> Cultural, not technical. An agency that will not have the conversation will not use the tool — and the Ignition data says 89% delay or avoid it. Mitigation: the strongest framing is not "bill more" but "show the client their own decision history," which is the same artifact.
+<strong>Substitutes.</strong> Ignition's Instant Bill (accounting-vertical-first, $39–399/mo), Productive/Scoro/Workamajig budget alerts (which fire on hours, not on rounds, and only for agencies already running full agency-management software).
+<strong>Customisation potential.</strong> High: rate cards, contract clause language, PM-tool integration.</p>
+<hr />
+<h3 id="a10-accessible-delivery-gate-pdf-and-web-deliverables">A10 — Accessible Delivery Gate (PDF and web deliverables)</h3>
+<p><strong>Intended user.</strong> Designer or production lead delivering to public-sector, education, healthcare, or accessibility-conscious clients.</p>
+<p><strong>Problem solved.</strong> Client-bound PDFs and pages that fail WCAG, discovered after delivery, remediated at $5–25 per page.</p>
+<p><strong>Current workflow.</strong> Nothing, or Acrobat's built-in accessibility checker run once by whoever knows it exists.</p>
+<p><strong>Proposed workflow.</strong> Run the delivery set through structural checks — document tags, reading order, alt text presence, document language, heading hierarchy, colour contrast, table headers, bookmark structure — and emit both a <strong>remediation to-do list</strong> for the designer and a short <strong>conformance summary</strong> for the client stating what was checked, against which standard version, on what date.</p>
+<p><strong>Inputs.</strong> PDFs or a URL set; the target standard (WCAG 2.1 AA or 2.2 AA).
+<strong>Outputs.</strong> Remediation list; conformance summary PDF.</p>
+<p><strong>Essential features.</strong> The client-facing conformance summary (the differentiator — existing checkers produce developer output, not a deliverable); correct handling of the <strong>2.1-versus-2.2 gap</strong>, since both binding US rules mandate WCAG <strong>2.1 AA</strong> while most client language now says 2.2.
+<strong>Excluded.</strong> Automated remediation, VPAT/ACR authoring, screen-reader testing (which is inherently manual).</p>
+<p><strong>AI: optional.</strong> Drafting candidate alt text is a legitimate assist that must be human-reviewed. Everything structural is deterministic.</p>
+<p><strong>Why not a spreadsheet.</strong> It is a file-inspection problem.</p>
+<p><strong>Complexity: medium. Learning: 45 minutes (the standard is the hard part, not the tool).</strong>
+<strong>Value.</strong> Remediation runs $5–25/page by vendor estimate — a 40-page brochure is $200–1,000, frequently more than the fee for the export step and almost never scoped. Federal website-accessibility filings hit <strong>3,117 in 2025, up 27% year over year</strong>.</p>
+<p><strong>Regulatory note, and this matters because most published guidance is now stale:</strong> the ADA Title II web rule deadlines were <strong>extended by DOJ interim final rule on 20 April 2026</strong> — entities serving populations ≥50,000 move from 24 Apr 2026 to <strong>26 Apr 2027</strong>, smaller entities and special districts to <strong>26 Apr 2028</strong>. HHS followed on <strong>7 May 2026</strong>, moving its Section 504 web/mobile deadlines from 11 May 2026 to <strong>11 May 2027</strong> (15+ employees) and to <strong>10 May 2028</strong> (under 15). Both mandate <strong>WCAG 2.1 AA</strong>. Two of the research threads for this report disagreed on the HHS date; I verified it directly against the HHS press release. Note that the extension moves the enforcement floor, not the contractual ceiling — procurement language written against the original dates is already in market, and private ADA litigation is unaffected.</p>
+<p><strong>Risks.</strong> Automated checks cover perhaps 30–40% of WCAG criteria; over-claiming conformance would be worse than saying nothing. The summary must state precisely what was and was not machine-checkable.
+<strong>Substitutes.</strong> Acrobat Pro's accessibility checker (already owned), PAC (free), the free axe extension, Deque's axe DevTools Pro and Equidox/CommonLook (all quote-gated with no public pricing).
+<strong>Customisation potential.</strong> Moderate-to-high for agencies with recurring public-sector work.</p>
+<hr />
+<h2 id="5-opportunity-ranking">5. Opportunity ranking</h2>
+<p>Each concept scored 1–5 on ten criteria; maximum 50.</p>
+<p>| # | Concept | Severity | Frequency | ROI clarity | Ease of learning | Ease of build | Stays narrow | Differentiation | Customisation | Test data | Evidence confidence | <strong>Total</strong> |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| <strong>A3</strong> | <strong>Rights &amp; Usage Expiry Ledger</strong> | 5 | 4 | 4 | 5 | 5 | 5 | 5 | 5 | 4 | 5 | <strong>47</strong> |
+| <strong>A2</strong> | <strong>Sign-Off Certificate</strong> | 4 | 5 | 4 | 5 | 5 | 5 | 4 | 4 | 5 | 5 | <strong>46</strong> |
+| <strong>A4</strong> | <strong>Destination Spec Gate</strong> | 4 | 5 | 5 | 5 | 4 | 4 | 4 | 5 | 5 | 5 | <strong>46</strong> |
+| <strong>A1</strong> | <strong>Comment Ledger</strong> | 5 | 5 | 4 | 4 | 4 | 4 | 5 | 4 | 4 | 5 | <strong>44</strong> |
+| <strong>A6</strong> | <strong>Campaign Taxonomy Validator</strong> | 3 | 5 | 4 | 5 | 5 | 5 | 3 | 4 | 5 | 5 | <strong>44</strong> |
+| <strong>A5</strong> | <strong>Claim &amp; Substantiation Register</strong> | 5 | 3 | 4 | 4 | 4 | 4 | 5 | 5 | 3 | 5 | <strong>42</strong> |
+| <strong>A9</strong> | <strong>Round Counter &amp; Overage Notice</strong> | 4 | 5 | 5 | 5 | 4 | 4 | 3 | 4 | 3 | 4 | <strong>41</strong> |
+| <strong>A7</strong> | <strong>Handoff Manifest &amp; License Auditor</strong> | 4 | 4 | 3 | 4 | 3 | 4 | 5 | 4 | 3 | 4 | <strong>38</strong> |
+| <strong>A8</strong> | <strong>Access Register &amp; Offboarding Verifier</strong> | 4 | 3 | 3 | 5 | 4 | 4 | 3 | 4 | 3 | 4 | <strong>37</strong> |
+| <strong>A10</strong> | <strong>Accessible Delivery Gate</strong> | 3 | 3 | 3 | 4 | 3 | 4 | 2 | 4 | 4 | 4 | <strong>34</strong> |</p>
+<h3 id="the-top-three-explained">The top three explained</h3>
+<p><strong>A3 — Rights &amp; Usage Expiry Ledger (47).</strong> This is the strongest opportunity in the report and it is not close on the dimensions that matter most. The problem is documented by union contract text, licensor terms of service and published court decisions rather than by anyone's survey — <em>Olive v. GNC</em> is a $1,123,000 judgment against a missed calendar entry, and the emotional-distress component was over four times the license damages. The build is a database, a rule engine and a notification schedule; there is no AI, no integration surface, and no dependency on client adoption. Differentiation is near-total: the enterprise talent-payment houses serve their own payment workflow, not the agency's cross-vendor ledger, and a 2023 patent application confirms the problem is recognised and unserved. The only scoring deductions are frequency (a produced-content agency touches it constantly; a pure digital shop rarely) and test-data availability (the rules are public; real client licenses are not).</p>
+<p><strong>A2 — Sign-Off Certificate (46).</strong> The cheapest thing to build in the report and the one with the clearest artifact. Every deliverable that leaves the building needs one; every professional-indemnity claim in the research turns on whether one existed; and for financial-services clients the first-use/last-use fields it captures are legally mandatory under FINRA 2210(b)(4)(A) and, per the research, exist in no project tool anyone sells. The strategic value is higher than its score suggests, because it is the natural data spine for A1, A5 and A9 — build it first and the others get their event log for free.</p>
+<p><strong>A4 — Destination Spec Gate (46).</strong> The most immediately demonstrable. It produces a red-and-green matrix in thirty seconds against files an agency already has, which makes it the easiest of the ten to validate with a practitioner in a single conversation. Its scores are held down only by ongoing spec maintenance — the one real risk — which is also the best argument for the open-source model, since profile contributions are exactly what a community can supply and a solo developer cannot.</p>
+<h3 id="what-should-be-investigated-next">What should be investigated next</h3>
+<p><strong>A3 first</strong>, and specifically the SAG-AFTRA MPU and holding-fee arithmetic, because it is the narrowest slice with the largest consequence and can be validated against SAG-AFTRA's own published worked examples before speaking to a single practitioner. <strong>A2 in parallel</strong>, because it is a weekend build and is the shared substrate for three other concepts. <strong>A4 third</strong>, as the demo that opens conversations.</p>
+<p>Deprioritise <strong>A10</strong> — the automated-check ceiling is low, the incumbents are free or already owned, and the differentiation rests on a document rather than on a capability. <strong>A6</strong> is worth building anyway despite its differentiation score, purely because it is a day of work and improves the reporting deliverable that 96% of agencies give away.</p>
+<hr />
+<h2 id="6-validation-plan">6. Validation plan</h2>
+<h3 id="questions-to-ask-practitioners">Questions to ask practitioners</h3>
+<p><strong>For A3 (rights):</strong>
+- Walk me through the last spot you produced with union talent. Who computed the MPU end date, and where is it written down today?
+- Has an asset ever stayed live past its window? What happened? <em>(Expect deflection; ask instead: "do you know anyone this happened to?")</em>
+- When the client scales a buy, who re-checks whether the stock licenses still cover it?
+- Who gets the call when a performer's agent asks about a holding fee — you or the client?</p>
+<p><strong>For A2 (sign-off):</strong>
+- Show me the last approval you relied on. What form is it in?
+- Has an error ever shipped? Who paid? Was there a written approval, and did it matter?
+- For your regulated clients, where do you record who approved a piece and when it was first used?</p>
+<p><strong>For A4 (spec gate):</strong>
+- How many times in the last quarter did a file come back rejected or fail QC at a vendor? What did it cost?
+- Who keeps your spec sheets, and how do you know they are current?</p>
+<p><strong>For A1 (comments):</strong>
+- After you send v3, how do you know every comment from v2 was handled?
+- What do you do when two people on the client side ask for opposite things?</p>
+<h3 id="who-to-interview">Who to interview</h3>
+<p>Production managers and executive producers at 10–50 person video/content shops (highest A3 exposure); studio managers at design firms doing print (A2 and A4); account directors at healthcare and financial-services agencies (A5 and A2); freelance producers who work across several agencies and see multiple systems; a talent payroll house account rep (Extreme Reach, Cast &amp; Crew, Talent Partners) to learn what agencies ask them that they cannot answer; a professional-indemnity broker serving creative firms (PolicyBee and With Jack both publish claim narratives and are natural first calls); the Agency Management Institute and Bureau of Digital communities; and a SAG-AFTRA business representative for a sanity check on the MPU rule implementation.</p>
+<h3 id="search-terms-for-further-research">Search terms for further research</h3>
+<p><code>SAG-AFTRA holding fee missed</code>, <code>maximum period of use expired commercial</code>, <code>usage rights spreadsheet agency</code>, <code>stock license print run exceeded</code>, <code>sync license renewal option agency</code>, <code>"approval of record" advertising liability</code>, <code>client approved wrong version reprint</code>, <code>preflight failed missed air date</code>, <code>Extreme Reach filename rejected</code>, <code>DV360 CTV creative rejected duplicate frames</code>, <code>utm_medium unassigned GA4 fix</code>, <code>MLR submission package checklist agency</code>, <code>agency revision round change order template</code>, <code>InDesign package Adobe Fonts client</code>. On forums: r/agency, r/advertising, r/editors, r/PPC, r/analytics, Creative COW, PrintPlanet, the Measure Slack — <strong>all of which were unreachable in this research environment and represent the highest-value unexplored evidence source.</strong></p>
+<h3 id="sample-files-and-data-needed">Sample files and data needed</h3>
+<ul>
+<li>A real (or realistic) set of campaign deliverables: 8 IAB display sizes with HTML5 bundles, a 30s spot in ProRes and MP4, social cutdowns at 16:9/1:1/4:5/9:16, a print PDF, a DOOH file. Needed for A4; largely constructible from public spec documents.</li>
+<li>An exported PDF annotation set (XFDF) from a real review round, plus the corresponding email thread. Needed for A1; the hardest artifact to obtain because it is client-confidential — anonymised or synthetic is acceptable for a prototype.</li>
+<li>SAG-AFTRA's published contract, FAQs and worked examples (public); Shutterstock's current ToS (public, effective 19 Jan 2026); a real music sync license (hard).</li>
+<li>A GA4 property with messy historical UTM data, for A6.</li>
+</ul>
+<h3 id="prototypes-that-would-validate">Prototypes that would validate</h3>
+<ul>
+<li><strong>A3:</strong> a single-file script that takes a first-production-day date and prints the MPU end date, the 13-week holding fee cycle dates, and the release-from-exclusivity events. Validate the output against SAG-AFTRA's own worked example (19 Aug 2025 → 2 Sept 2027) before writing any interface. If a producer looks at that output and says "that's the thing I get wrong," the concept is confirmed in one meeting.</li>
+<li><strong>A2:</strong> a 200-line script that hashes a file, sends a confirmation email, and emits a certificate PDF. Show it to a principal who has had a reprint dispute.</li>
+<li><strong>A4:</strong> an ffprobe/ImageMagick wrapper reading one YAML profile, run live against an agency's own delivery folder. The demo <em>is</em> the validation.</li>
+</ul>
+<h3 id="assumptions-most-likely-to-make-these-fail">Assumptions most likely to make these fail</h3>
+<ol>
+<li><strong>That agencies will maintain a register.</strong> All of A3, A7 and A8 depend on someone entering data at the moment an asset is licensed — before there is any felt pain. This is the single largest risk across the report. Mitigation: the entry point must be the moment the license PDF arrives (drag it in, confirm four fields) rather than a separate discipline.</li>
+<li><strong>That the pain is felt by the buyer.</strong> For A3, the catastrophic loss lands on whoever is the signatory — sometimes the advertiser, not the agency. If the agency is never the signatory, its motivation drops sharply. This must be tested early: ask what proportion of their work they sign for.</li>
+<li><strong>That "we've never had a problem" is not disqualifying.</strong> Silent-failure tools are hard to sell to people who have not yet failed. A3's demo must lead with <em>Olive</em>, not with features.</li>
+<li><strong>That spec profiles can be kept current</strong> without a paid maintainer (A4).</li>
+<li><strong>That an agency will act on an overage flag</strong> (A9) when 89% of practitioners report delaying or avoiding the conversation.</li>
+<li><strong>That AI extraction is accurate enough to trust</strong> (A1, A5). If the register needs full human verification anyway, the AI saves less than it appears to.</li>
+</ol>
+<hr />
+<h2 id="7-cross-industry-patterns">7. Cross-industry patterns</h2>
+<p>Patterns from this market that transfer to specific backlog markets:</p>
+<ol>
+<li>
+<p><strong>Approval-of-record as a liability artifact.</strong> A hash-bound, timestamped record of who approved exactly which version, when, and with what scope caveats. Transfers to: <em>Small architectural studios (specification writing)</em>, <em>Structural engineering firms 5-30 staff</em>, <em>Commercial dental laboratories (case intake and Rx clarification)</em>, <em>Ready-mix concrete producer QC departments</em>, and <em>Building envelope and roofing consultants</em>. Anywhere a professional's deliverable is approved by a client and then executed by a third party, the sign-off event is what reassigns cost.</p>
+</li>
+<li>
+<p><strong>Multi-clock expiry ledger with rule-based date computation.</strong> Where an obligation's end date is computed by a domain-specific rule rather than by calendar arithmetic, and multiple non-aligned clocks attach to one object. Transfers to: <em>Welding inspection (AWS CWI) and NDT providers under ASTM E543/SNT-TC-1A</em> (personnel certification and vision-test cycles), <em>Calibration and metrology service providers</em> (gage recall intervals), <em>Radiation safety officer services and portable gauge licensee compliance</em> (leak tests, dosimetry), <em>Multi-state charitable solicitation registration compliance</em> (~40 separate renewal regimes), and <em>Property tax consulting and assessment appeal firms</em> (county-by-county deadline arithmetic).</p>
+</li>
+<li>
+<p><strong>Destination-profile conformance gate.</strong> A library of receiving-organization specs held as editable data, with deterministic measurement of the actual artifact against the selected profile. Transfers to: <em>Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)</em>, <em>Certified payroll and prevailing wage compliance service providers</em> (WH-347, DIR eCPR, LCPtracker formats), <em>Information return (1099/W-2) filing service providers</em>, and <em>Pipe and duct fabrication shops serving mechanical and fire protection trades</em>.</p>
+</li>
+<li>
+<p><strong>Comment-to-resolution reconciliation across document versions.</strong> Proving each reviewer comment was addressed in the next revision, with conflict detection between reviewers. Transfers to: <em>Small architectural studios</em>, <em>Civil / land development engineering and entitlement consulting</em> (plan-check comment responses), <em>County surveyor and municipal plan-check offices</em> (the reviewer side of the same loop), and <em>Court probate examiner and clerk offices</em>.</p>
+</li>
+<li>
+<p><strong>Claim-to-source substantiation register.</strong> Every assertion in a deliverable linked to a source document, page, date and approver, with a version diff and a retention clock. Transfers to: <em>Aerospace materials testing laboratories under Nadcap AC7101</em>, <em>Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)</em>, <em>Fiduciary and forensic accountants producing court accountings</em>, and <em>Independent legal nurse consultant practices</em> (medical chronologies are claim-to-record mappings by another name).</p>
+</li>
+<li>
+<p><strong>Silent-failure taxonomy validation.</strong> Validating identifiers and codes against the exact-match rules of a downstream system that will accept bad input without erroring and produce wrong output. Transfers to: <em>Medical billing and revenue cycle</em> (modifier and code combinations), <em>Workers' compensation medical billing and state fee schedule compliance</em>, and <em>Freight bill audit and payment for small shippers</em>.</p>
+</li>
+<li>
+<p><strong>Transferability manifest at handover.</strong> An itemised statement of what is being delivered and under what terms, where the bundle's components have different ownership and licensing rules. Transfers to: <em>Small architectural studios</em>, <em>UAS / drone mapping and reality-capture service providers</em> (data rights on captured imagery), and <em>Title abstracting and independent title search contractors</em>.</p>
+</li>
+<li>
+<p><strong>Quote-gating as a market-structure signal.</strong> Where an entire tool category publishes no pricing (ObservePoint, Equidox, CommonLook, callas pdfToolbox, Veeva, Vodori, 8 of 10 major DAM vendors), small firms are structurally excluded regardless of budget, because the sales cycle itself is disqualifying. This is a <em>sourcing heuristic</em> rather than an application pattern: in any market, the presence of a fully quote-gated tool category is a reliable indicator of an unserved small-firm segment. Applies to every market in the backlog.</p>
+</li>
+</ol>
+<hr />
+<h2 id="8-sources-and-confidence">8. Sources and confidence</h2>
+<h3 id="verified-findings-primary-regulatory-case-law-or-first-party-practitioner">Verified findings — primary, regulatory, case law, or first-party practitioner</h3>
+<p><strong>Rights, talent and licensing</strong>
+- SAG-AFTRA 2025 Commercials Contract MOA and Joint FAQs (term 1 Apr 2025 – 31 Mar 2028; MPU arithmetic; 13-week holding cycles) — https://www.sagaftra.org/sites/default/files/2025-05/2025%20Commercials%20Contract%20MOA.pdf · https://www.sagaftra.org/sites/default/files/sa_documents/2025%20Commercials%20Contracts%20Joint%20FAQs.pdf
+- SAG-AFTRA Producer's Guide (agency-as-signatory liability) — https://www.sagaftra.org/sites/default/files/producers_guide_commercials_9_43_0.pdf
+- SAG-AFTRA late payment penalties ("Notice is not the trigger") — https://www.sagaftra.org/what-are-penalties-if-my-check-paid-late · https://www.sagaftra.org/what-are-holding-fees
+- <em>Olive v. General Nutrition Centers</em> — $213,000 + $910,000 = $1,123,000; Cal. Ct. App. 2d Dist., 27 Dec 2018, affirmed 31 Jan 2019 — https://www.lgt-law.com/blog/2019/01/models-11-million-jury-award-for-license-violation-upheld/ <em>(verified directly during this cycle)</em>
+- <em>Beastie Boys v. Monster Energy</em> — $1.7M verdict + $667,849 fees — https://www.venable.com/insights/publications/2015/05/beastie-boys-win-17-million-verdict-underscoring-t
+- Shutterstock license terms effective 19 Jan 2026 (numeric caps; non-transferability; indemnity caps) — https://www.shutterstock.com/license
+- Adobe Fonts packaging prohibition — https://helpx.adobe.com/fonts/using/package-font-files.html
+- 17 U.S.C. §504(c) statutory damages — https://www.law.cornell.edu/uscode/text/17/504
+- Music sync term × territory × media practice — https://resilientmusic.com/usage-term-territory-media/</p>
+<p><strong>Regulatory</strong>
+- FINRA Rule 2210 (principal approval; recordkeeping incl. first/last use, principal name, source of statistics) — https://www.finra.org/rules-guidance/rulebooks/finra-rules/2210
+- FINRA Regulatory Notice 26-14 (proposed risk-based supervision; comment closes 11 Sept 2026 — <strong>proposed, not effective</strong>) — https://www.finra.org/rules-guidance/notices/26-14
+- SEC Advisers Act Rule 204-2 recordkeeping (5 years, first 2 on-site) — https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.204-2
+- SEC Marketing Rule Risk Alert, 16 Dec 2025 (hyperlinked disclosures fail "clear and prominent") — https://www.sec.gov/files/exams-riskalert-mrkt-rule-2512-508.pdf
+- SEC enforcement sweeps: 12 Apr 2024 ($200,000 / 5 advisers) — https://www.sec.gov/newsroom/press-releases/2024-46 · 9 Sept 2024 ($1,240,000 / 9 advisers) — https://www.sec.gov/newsroom/press-releases/2024-121
+- FTC Endorsement Guides, 16 CFR Part 255 — §255.1(f) agency liability — https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255
+- FTC Consumer Reviews and Testimonials Rule, 16 CFR Part 465, effective 21 Oct 2024 — https://www.ecfr.gov/current/title-16/chapter-I/subchapter-D/part-465 · penalty $53,088/violation per 16 CFR 1.98 — https://www.ecfr.gov/current/title-16/chapter-I/subchapter-A/part-1/subpart-L/section-1.98
+- FTC v. Nissan/TBWA Worldwide (agency named respondent, 2014) — https://www.ftc.gov/legal-library/browse/cases-proceedings/122-3010-tbwa-worldwide-inc-matter
+- FDA OPDP untitled letters list — https://www.fda.gov/drugs/warning-letters-and-notice-violation-letters-pharmaceutical-companies/untitled-letters
+- 21 CFR 314.81(b)(3)(i) Form FDA-2253 obligation — https://www.ecfr.gov/current/title-21/chapter-I/subchapter-D/part-314/subpart-B/section-314.81
+- NAD/NARB Procedures revised effective 16 Mar 2026 (15-business-day response) — https://bbbprograms.org/getmedia/133fded6-5046-44de-a30e-f0890377480c/NAD-NARB-Procedures.pdf
+- ADA Title II compliance date extension, DOJ interim final rule, 20 Apr 2026 → 26 Apr 2027 / 26 Apr 2028 — https://www.federalregister.gov/documents/2026/04/20/2026-07663/extension-of-compliance-dates-for-nondiscrimination-on-the-basis-of-disability-accessibility-of-web
+- HHS Section 504 deadline extension, 7 May 2026 → 11 May 2027 / 10 May 2028 — https://www.hhs.gov/press-room/hhs-extends-mobile-and-web-accessibility-deadline.html <em>(verified directly during this cycle to resolve a conflict between research threads)</em>
+- WCAG 2.2 (W3C Recommendation, updated 12 Dec 2024) — https://www.w3.org/TR/WCAG22/</p>
+<p><strong>Technical specifications</strong>
+- IAB New Ad Portfolio fixed-size specs and weight caps — https://www.iab.com/wp-content/uploads/2019/04/IABNewAdPortfolio_LW_FixedSizeSpec.pdf
+- Google Ads display specs — https://support.google.com/google-ads/answer/1722096
+- DV360 CTV creative requirements (≥15 Mbps mezzanine; no duplicate frames; FreeWheel pre-approval) — https://support.google.com/displayvideo/answer/14175098
+- LinkedIn ads guide — https://business.linkedin.com/advertise/ads/ads-guide
+- TikTok in-feed ad specs — https://ads.tiktok.com/help/article/tiktok-auction-in-feed-ads
+- Extreme Reach display and broadcast specs (12-character filenames; −24 LKFS) — https://helpcenter.xr.global/hc/en-us/articles/39719565197716-Digital-Ad-Serving-Display-Specifications · https://helpcenter.xr.global/hc/en-us/articles/5758928813332-North-America-Broadcast-Specifications-and-Requirements
+- AICP file deliverable specifications — https://aicp.com/assets/editor/AICP_File_Deliverable_Specifications.pdf
+- CBS Commercial Integration Manual 2024–2025 (deadline ladder; 80-day purge; caption-typo return) — https://www.paramount.com/files/documents/2024-2025%20CBS%20Commercial%20Integration%20Manual.pdf
+- DMI/DPAA DOOH creative specs (25.00 fps) and programmatic latency — https://www.dmi-org.com/download/DMI_Standards_DOOH_Creative_Specs.pdf · http://dmi-org.com/downloads/DPAA-Programmatic-Technical-Specs-v.9.11.pdf
+- Ghent Workgroup preflight compliance (14 variants, 260-file test suite) — https://gwg.org/ghent-pdf-preflight-compliancy/
+- Total ink coverage limits — https://www.prepressure.com/design/basics/tic
+- GA4 UTM reference and default channel group definitions — https://support.google.com/analytics/answer/10917952 · https://support.google.com/analytics/answer/9756891
+- IAB/4A's Standard Terms &amp; Conditions v3.0 — https://www.iab.com/wp-content/uploads/2015/06/IAB_4As-tsandcs-FINAL.pdf</p>
+<p><strong>Practitioner and liability evidence</strong>
+- PolicyBee PI claim narratives (£21,995 phone-number error; ~£14,000 quoted / ~£9,000 settled corrupted-file reprint) — https://www.policybee.co.uk/blog/professional-indemnity-claims-examples · https://www.policybee.co.uk/blog/professional-indemnity-insurance-claims-the-case-of-the-corrupted-file
+- With Jack (printer error, designer held responsible) — https://withjack.co.uk/printers-mistake-has-cost-thousands-of-pounds-help/
+- Colleen Gratzer, "How to manage client revisions to design proofs" — https://creative-boost.com/how-to-manage-client-revisions-to-design-proofs/
+- Creative COW, "Defining rounds of revisions" (Ned Miller, Todd Terry, Greg Ball, Rich Rubasch) — https://creativecow.net/forums/thread/defining-rounds-of-revisions/
+- Peter Kang (Barrel), "8 ways client projects get delayed" — https://www.peterkang.com/8-ways-client-projects-get-delayed-and-how-to-avoid-them/
+- Peter Bowerman on written sign-off and liability — https://wellfedwriter.com/your-typo-gets-printed-in-5000-brochures-what-do-you-do/
+- AA vs PE (author's alteration / printer's error) — https://printwiki.org/Author's_Alteration
+- C17 Media, "Why print files fail" (liability transfer to the file supplier) — https://c17media.com/why-print-files-fail/
+- PrintPlanet thread: Acrobat's preflight is the callas pdfToolbox engine — https://printplanet.com/threads/pdftoolbox-alternatives.277624/
+- AIGA Standard Form of Agreement, 2022 update (§1.6, §1.13, §3.4, §5, §9.1(c)) — https://www.aiga.org/sites/default/files/2023-11/Standardformofagreement_2022update.pdf
+- Second Wind, "Agencies, Clients and Copyright Issues" — https://www.secondwindonline.com/library/public/powerpack/AgenciesClientsandCopyrightIssues.pdf
+- Michael Janda on source files (the $40,000 release demand) — https://michaeljanda.com/blog/should-you-deliver-source-files-to-clients/
+- Bill Hartzer on domain hostage; <em>DSPT International v. Nahum</em> (9th Cir. 2010), ~$152,000 — https://www.billhartzer.com/domain-names/when-developer-holds-domain-hostage/
+- Meta partner removal is asset-by-asset — https://www.graphed.com/blog/how-to-remove-access-from-meta-business-suite
+- Google Ads MCC single-owner model — https://support.google.com/google-ads/answer/7456532
+- PPC Hero on account access and the withheld negative keyword list — https://ppchero.com/who-owns-your-ppc-ads-account/
+- Ziflow ReviewAI announcement (change verification listed as future) — https://www.ziflow.com/blog/introducing-reviewai-more-efficient-reviews-powered-by-ai
+- Filestage help: verifying feedback has been met (manual side-by-side) — https://help.filestage.io/en/articles/9113215-how-to-verify-that-everyone-s-feedback-has-been-met
+- Verified-reviewer feature requests and complaints — https://www.capterra.com/p/162035/Filestage/reviews/ · https://www.trustradius.com/products/ziflow/reviews · https://www.g2.com/products/ziflow/reviews · https://www.capterra.com/p/178111/Ziflow/reviews/
+- Vendor pricing pages (all fetched 8 Aug 2026): https://www.ziflow.com/pricing · https://filestage.io/pricing/ · https://frame.io/pricing · https://www.markup.io/pricing/ · https://bugherd.com/pricing · https://www.reviewstudio.com/pricing/ · https://approval.studio/pricing/ · https://pageproof.com/pricing/ · https://www.workamajig.com/pricing · https://www.productive.io/pricing/ · https://www.adobe.com/acrobat/pricing/business.html · https://www.enfocus.com/en/pitstop-pro/buy-now · https://agencyanalytics.com/pricing · https://www.swydo.com/pricing/ · https://dashthis.com/pricing/ · https://whatagraph.com/pricing · https://contentsnare.com/pricing/ · https://www.leadsie.com/pricing
+- Veeva VPRAC agency certification, $500/person/yr — https://www.veeva.com/meet-veeva/partners/content/vprac/
+- Aprimo's own published entry price (~$20,000/yr, "medium to large enterprises") — https://www.aprimo.com/blog/how-much-does-a-digital-asset-management-system-cost
+- US patent application US20230010020A1, automated talent usage rights management — https://patents.google.com/patent/US20230010020A1/en</p>
+<h3 id="strong-inferences-reasoned-from-verified-inputs-not-directly-stated-by-a-source">Strong inferences — reasoned from verified inputs, not directly stated by a source</h3>
+<ul>
+<li><strong>Constraint-family incompatibility, not spec count, is the binding problem</strong> in outbound delivery (arithmetic over the verified specs; not a sourced statistic).</li>
+<li><strong>Failures split into loud and silent, and agencies only systematically defend against the loud ones.</strong> Rejections and QC returns announce themselves; UTM misfiling, overprint-on-white, a wrong-version PDF and untagged PDFs do not. The silent class is where the money is.</li>
+<li><strong>Liability is contractually pushed onto the agency at every handoff</strong> — trade printers, CBS's return-for-re-editing rule, DV360's "work directly with the publisher," SAG-AFTRA signatory status. The agency is the residual risk-holder by design.</li>
+<li><strong>Quote-gating functions as a small-agency exclusion mechanism</strong>, independent of budget.</li>
+<li><strong>The agency assembles the compliance record but never owns the system of record</strong>, and is the only party holding the whole picture with no tool for it.</li>
+<li><strong>The contracted round count (2) and the observed round count (3–5) differ</strong>, and that delta is the mechanism behind the documented over-servicing figures.</li>
+</ul>
+<h3 id="tentative-hypotheses-requiring-practitioner-validation">Tentative hypotheses requiring practitioner validation</h3>
+<ul>
+<li>That agencies will actually maintain a rights register at the moment of licensing rather than at the moment of pain (<strong>the largest risk in the report</strong>).</li>
+<li>That the agency, rather than the advertiser, is the SAG signatory often enough for A3's buyer and victim to be the same party.</li>
+<li>That small agencies use shared spreadsheets for UTM taxonomy — strongly implied by Google's own guidance and by the absence of affordable tooling, but not directly evidenced here because practitioner forums were unreachable.</li>
+<li>That credential sharing is the SMB default — supported only by vendor framing and by the market existence of Leadsie (545,647 accounts connected, 202,827 clients onboarded since 2020) as circumstantial evidence.</li>
+<li>That an agency will act on an overage flag, given that 89% of surveyed practitioners report delaying or avoiding the conversation.</li>
+</ul>
+<h3 id="numbers-deliberately-excluded">Numbers deliberately excluded</h3>
+<ul>
+<li><strong>"30–40% of print files are rejected before prepress intervention," "67% of print production errors trace to prepress," "$8.4 billion annual cost to the printing industry"</strong> — uncited, published by a prepress outsourcing vendor. No credible industry-wide print rejection rate is published.</li>
+<li><strong>Ad platform creative rejection rates</strong> — do not exist publicly. Meta's Integrity Reports cover organic enforcement, not ad disapprovals. Every circulating figure is content-farm output.</li>
+<li><strong>Ziflow's "90% of marketers say approval delays are the top reason for missed deadlines"</strong> — attributed to "Simple.io research" that could not be located; the cited pages contain no such statistic.</li>
+<li><strong>Filestage's "$152,851.92/yr saved for a 15-person team"</strong> — a self-derived figure from the vendor's own n=263 user survey, quoted to the cent.</li>
+<li><strong>MLR cost-per-asset ($2,500–$5,000) and cycle time (21 days, 3 rounds)</strong> — vendor-published with no disclosed methodology, and explicitly rejected by practitioners in the field ("every single pharma company has different protocols… anything that groups all elements under one average is going to be implicitly incorrect").</li>
+<li><strong>Roughly a dozen AI-generated SEO domains</strong> returning confident agency statistics with no methodology, sample, or source.</li>
+</ul>
+<h3 id="two-corrections-to-guidance-currently-in-circulation">Two corrections to guidance currently in circulation</h3>
+<ol>
+<li><strong>ADA Title II and HHS Section 504 web accessibility deadlines were both extended in spring 2026.</strong> Any material citing April 2026 or May 2026 compliance dates is stale. The correct dates are 26 Apr 2027 / 26 Apr 2028 (Title II) and 11 May 2027 / 10 May 2028 (Section 504), both against <strong>WCAG 2.1 AA</strong> — not 2.2.</li>
+<li><strong>The FTC Green Guides have not been substantively revised since 1 October 2012</strong>, despite widespread assumption otherwise. Do not describe them as recently updated.</li>
+</ol>
+<hr />
+<p><em>Report produced 2026-08-08 · claim <code>31eace6d</code> · market "Marketing and creative agency account and production management" · angle <code>handoffs-and-qa</code></em></p>
+</div>
+</body>
+</html>
