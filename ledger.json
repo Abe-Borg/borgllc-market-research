@@ -274,7 +274,14 @@
       "score": 44
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "General contractor preconstruction and estimating",
+      "angle": "handoffs-and-qa",
+      "claimed_at": "2026-08-08T13:49:14Z",
+      "claim_id": "4fe03de8"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -399,12 +406,6 @@
     {
       "market": "General contractor preconstruction and estimating",
       "angle": "back-office",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "General contractor preconstruction and estimating",
-      "angle": "handoffs-and-qa",
       "source": "seed",
       "note": ""
     },
