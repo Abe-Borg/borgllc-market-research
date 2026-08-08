@@ -258,7 +258,14 @@
       "score": 46
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Calibration and metrology service providers / in-house gage management",
+      "angle": "narrow-subspecialty",
+      "claimed_at": "2026-08-08T11:49:40Z",
+      "claim_id": "db0e16df"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1049,12 +1056,6 @@
     {
       "market": "Calibration and metrology service providers / in-house gage management",
       "angle": "core-practitioner-workflow",
-      "source": "discovered",
-      "note": "Gage calibration recall, certificates and ISO 17025; named by practitioners as part of the lone quality manager's bundle and currently spreadsheet-run."
-    },
-    {
-      "market": "Calibration and metrology service providers / in-house gage management",
-      "angle": "narrow-subspecialty",
       "source": "discovered",
       "note": "Gage calibration recall, certificates and ISO 17025; named by practitioners as part of the lone quality manager's bundle and currently spreadsheet-run."
     },
