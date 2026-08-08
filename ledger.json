@@ -248,16 +248,17 @@
       "report": "reports/2026-08-08-independent-pharmacy-pbm-reconciliation-back-office.md",
       "top_opportunity": "NADACGuard - claim-level below-cost and state-floor shortfall detector: joins the pharmacy's own claim export to the free weekly CMS NADAC file and to the 2024-2026 wave of state NADAC-plus-dispensing-fee statutes (Kentucky $10.64, Nebraska $10.38, California SB 41 $10.05, AR/GA/TN/WV/IA at the Medicaid rate), then ranks every shortfall by dollars and flags which are still inside the ~60-day MAC appeal window. Incumbent reconciliation vendors measure promised-versus-paid; nobody measures paid-versus-legally-required. Local-only desktop (PHI), free public benchmark data, deterministic arithmetic, no AI.",
       "score": 44
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Building automation and controls contractors (BAS integrators) for existing-building retrofits",
       "angle": "narrow-subspecialty",
-      "claimed_at": "2026-08-08T09:49:19.838159+00:00",
-      "claim_id": "d306b04c"
+      "date": "2026-08-08",
+      "report": "reports/2026-08-08-bas-integrators-existing-building-retrofits-narrow-subspecialty.md",
+      "top_opportunity": "CheckoutKit - offline point-to-point checkout generated from the reconciled points list: imports the point list, creates one test record per point grouped by trunk/panel/controller, captures commanded value, measured value, pass/fail, calibration offset and photo on a tablet with no signal, computes coverage by panel rather than asserting it, and emits the specification-required signed checkout package plus a punch list split by responsible trade. Anchored on a commissioning consultant's field observation of 'more than 50 controls items operating incorrectly' in a building certified 100% point-to-point, and on Oregon State 230900's requirement to check out ALL newly installed points. Smallest build in the set, ten-minute learning curve, abundant test data, no AI; incumbents (KORE PointCheck, CxAlloy, Facility Grid) sell to the commissioning agent or the enterprise while the 15-person integrator still uses paper. Strategic wedge: it forces a clean points list, which is what makes the reconciler, the survey tool and the name normalizer valuable.",
+      "score": 46
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -2478,6 +2479,42 @@
       "angle": "back-office",
       "source": "discovered",
       "note": "Accreditation evidence binders plus limited-distribution network applications; document-assembly work on a recurring survey cycle."
+    },
+    {
+      "market": "BAS graphics and floor-plan production vendors (outsourced graphics shops serving integrators)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "A whole outsourcing industry (QA Graphics, BASGFX) exists because integrators cannot staff graphics; one integrator now outsources 100% of floor-plan services. Intake, style-standard enforcement and point-binding QA are the workflow."
+    },
+    {
+      "market": "Owner-side campus controls program management (universities, health systems, large portfolios)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The party that writes the Division 25 standard and rejects the turnover package. Published standards (UConn, Oregon State, Texas A&M, U Toronto) make the requirements machine-readable and the market unusually researchable."
+    },
+    {
+      "market": "Independent commissioning agents and retro-commissioning providers under building performance standards (LL87-style)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Distinct from the Cx-provider backlog entry: this is the compliance-clock version driven by NYC LL87's 10-year cycle and the widening US BPS map, with a statutory report as the deliverable."
+    },
+    {
+      "market": "Building analytics and FDD onboarding desks at master systems integrators",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "LBNL found 'significantly more work is required to integrate BAS data into FDD software... a variety of points must be mapped'; point normalization is the entire job and it is billed per building."
+    },
+    {
+      "market": "OT/network security for building control systems at small integrators and facility owners",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Legacy BAS front ends running Windows XP/7 are being exposed to IT networks during retrofits; segmentation evidence and device inventories are becoming a contractual deliverable with no small-firm tooling."
+    },
+    {
+      "market": "Energy service companies (ESCOs) performing IPMVP measurement and verification on guaranteed-savings contracts",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The contractual counterpart to the sequence-verification problem: savings must be proven from trend and utility data against a written M&V plan, currently in Excel, with money attached to the answer."
     }
   ],
   "patterns": [
@@ -4983,6 +5020,95 @@
         "Hospital and clinic release-of-information (ROI) departments and their outsourced vendors",
         "Independent legal nurse consultant (LNC) practices",
         "Fiduciary and forensic accountants producing court accountings for litigation"
+      ]
+    },
+    {
+      "pattern": "Generate the field checklist from the equipment/point list, complete it offline, and let coverage be computed rather than asserted - the defect being killed is a signature that outruns the work",
+      "seen_in": [
+        "Building automation and controls contractors (BAS integrators) for existing-building retrofits"
+      ],
+      "transfers_to": [
+        "Test, adjust and balance (TAB) contractors",
+        "Commissioning (Cx) providers for small and midsize buildings",
+        "Backflow prevention assembly testers and cross-connection control programs",
+        "Fire door inspection providers under NFPA 80",
+        "Fire pump service, testing and repair specialists",
+        "Calibration and metrology service providers / in-house gage management"
+      ]
+    },
+    {
+      "pattern": "Three-way reconciliation of what was specified vs what was submitted vs what was actually installed, producing a signable exception sheet - for wherever a document is contractually signed as verified but the verification is done by scrolling",
+      "seen_in": [
+        "Building automation and controls contractors (BAS integrators) for existing-building retrofits"
+      ],
+      "transfers_to": [
+        "Delegated-design submittal coordination (specialty engineers of record for delegated components)",
+        "Federal construction contractors on NAVFAC / USACE projects - UFGS submittal register and eCMS compliance",
+        "Equipment manufacturer and manufacturer-rep submittal desks (producers of the product data package)",
+        "Aerospace supplier quality clause library administration at machine shops and Tier 2 suppliers",
+        "Industrial distributors and metal service centers issuing material test reports"
+      ]
+    },
+    {
+      "pattern": "Name/code normalization delivered as a reversible PLAN with rule provenance and an audit trail rather than an executed change - the plan is safer to sell and safer to run than the write",
+      "seen_in": [
+        "Building automation and controls contractors (BAS integrators) for existing-building retrofits"
+      ],
+      "transfers_to": [
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Freight bill audit and payment for small shippers",
+        "E-commerce accounting specialists (Amazon, Shopify, Stripe settlement reconciliation)",
+        "Provider credentialing and payer enrollment services"
+      ]
+    },
+    {
+      "pattern": "Capacity/licence sizing computed from a component inventory with headroom warnings before the tier boundary, so the overage is found at bid rather than at commissioning",
+      "seen_in": [
+        "Building automation and controls contractors (BAS integrators) for existing-building retrofits"
+      ],
+      "transfers_to": [
+        "Fire alarm system design and programming subcontractors",
+        "Special hazard / clean agent suppression design (data centers, MRI, switchgear)",
+        "Electrical or plumbing trade subcontractor field operations",
+        "Pipe and duct fabrication shops serving mechanical and fire protection trades"
+      ]
+    },
+    {
+      "pattern": "Assertion checking of exported telemetry against a written prose specification, ranked by hours-in-violation - the general form is that the spec is prose, the evidence is a CSV, and nobody joins them",
+      "seen_in": [
+        "Building automation and controls contractors (BAS integrators) for existing-building retrofits"
+      ],
+      "transfers_to": [
+        "Test, adjust and balance (TAB) contractors",
+        "Title 24 acceptance test technicians (ATT) and acceptance testing providers",
+        "Utility energy-efficiency program implementers and trade-ally rebate documentation",
+        "Commissioning (Cx) providers for small and midsize buildings",
+        "Owner-side facilities engineering: end-of-life equipment replacement planning"
+      ]
+    },
+    {
+      "pattern": "As-found field survey captured as an enforced tree (site/trunk/panel/device) that outputs a priced scope and a gap report, not a PDF - the transcription step a form app leaves behind IS the problem",
+      "seen_in": [
+        "Building automation and controls contractors (BAS integrators) for existing-building retrofits"
+      ],
+      "transfers_to": [
+        "Building envelope and roofing consultants performing field water testing (ASTM E1105, AAMA 501.2)",
+        "Electrical or plumbing trade subcontractor field operations",
+        "Owner-side facilities engineering: end-of-life equipment replacement planning",
+        "Geotechnical drilling subcontractors and rig operations",
+        "Independent heavy-truck repair shops serving outside fleet customers"
+      ]
+    },
+    {
+      "pattern": "Closeout completeness checked against a machine-readable profile of the owner's own PUBLISHED standard - public owner standards are free, stable and enumerable, so the profile library compounds",
+      "seen_in": [
+        "Building automation and controls contractors (BAS integrators) for existing-building retrofits"
+      ],
+      "transfers_to": [
+        "Construction subcontractor project management at 15-150 employee specialty trades",
+        "Federal construction contractors on NAVFAC / USACE projects - UFGS submittal register and eCMS compliance",
+        "Architectural construction administration (CA) desks at small A/E firms - submittal and RFI review",
+        "Nonprofit grant management and compliance"
       ]
     }
   ]
