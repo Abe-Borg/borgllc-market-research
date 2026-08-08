@@ -250,7 +250,14 @@
       "score": 44
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Building automation and controls contractors (BAS integrators) for existing-building retrofits",
+      "angle": "narrow-subspecialty",
+      "claimed_at": "2026-08-08T09:49:19.838159+00:00",
+      "claim_id": "d306b04c"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1113,12 +1120,6 @@
     {
       "market": "Building automation and controls contractors (BAS integrators) for existing-building retrofits",
       "angle": "core-practitioner-workflow",
-      "source": "discovered",
-      "note": "ASHRAE Guideline 36 became mandatory for VAV and economizers under the 2025 California Energy Code (effective 1 Jan 2026); DOE field study found BAS programming routinely drifts from designed sequences after occupancy - points lists, graphics and sequence implementation are hand-built."
-    },
-    {
-      "market": "Building automation and controls contractors (BAS integrators) for existing-building retrofits",
-      "angle": "narrow-subspecialty",
       "source": "discovered",
       "note": "ASHRAE Guideline 36 became mandatory for VAV and economizers under the 2025 California Energy Code (effective 1 Jan 2026); DOE field study found BAS programming routinely drifts from designed sequences after occupancy - points lists, graphics and sequence implementation are hand-built."
     },
