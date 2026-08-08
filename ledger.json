@@ -232,16 +232,17 @@
       "report": "reports/2026-08-08-marketing-creative-agency-handoffs-and-qa.md",
       "top_opportunity": "Rights & Usage Expiry Ledger - per-asset rights register for talent, music, stock, footage and likeness that computes each expiry by its own governing rule (SAG-AFTRA MPU = first production day + 10 business days + 2 years - 1 day; independent 13-week holding-fee cycles; sync term x territory x media; stock numeric caps re-checked when the media plan changes), then emits advance warnings, a takedown checklist enumerating every live placement, and an evidence bundle. Deterministic dates-and-database problem, no AI, no client-side adoption required; anchored on Olive v. GNC ($1,123,000 for a missed calendar entry) and Beastie Boys v. Monster ($1.7M + $667,849 fees).",
       "score": 47
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Retirement plan third-party administrators (TPAs) for small 401(k) plans",
       "angle": "core-practitioner-workflow",
-      "claimed_at": "2026-08-08T07:49:11.584415+00:00",
-      "claim_id": "11240bde"
+      "date": "2026-08-08",
+      "report": "reports/2026-08-08-retirement-plan-tpas-small-401k-core-practitioner-workflow.md",
+      "top_opportunity": "CensusGuard - plan-rule-aware census intake validator and normalizer: the administrator selects a saved per-plan rule profile (eligibility service and hours method, entry dates, excluded classes, compensation definition, plan year) and drops in whatever the client's payroll system exported; out comes a severity-ranked exception report split by who must answer it (client vs administrator), a normalized census in the administration software's import layout, and a year-over-year delta report flagging people who vanished without a termination date or whose DOB/hire date moved. Sits at the single point where every downstream failure enters - wrong compensation, missed eligibility, unreported terminations - and is used on every plan every year against an 80+ plan caseload, so an hour saved is eighty hours saved. Offline-only by necessity (full SSNs); rules are deterministic code, AI confined to proposing a column mapping the human confirms once. The rule-profile schema it requires is shared by three of the other concepts.",
+      "score": 45
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -2390,6 +2391,42 @@
       "angle": "back-office",
       "source": "discovered",
       "note": "Post-CCNV v. Reid, freelancer work belongs to the freelancer absent a signed assignment, so agencies routinely sell clients ownership they do not hold; a silent, common, unremediated defect."
+    },
+    {
+      "market": "Cash balance and DB/DC combination plan administration at small actuarial TPA firms",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Combo plans require iterative cross-testing between two plans against 401(a)(4), 415, 404 deduction limits and PBGC coverage - the most judgment-heavy, most spreadsheet-mediated corner of small-plan administration, served by a few hundred firms nationally."
+    },
+    {
+      "market": "ERISA employee benefit plan auditors at small and midsize CPA firms",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The receiving side of the TPA's annual package; SAS 136 removed the limited-scope opt-out and forced auditors to test payroll-to-recordkeeper data participant by participant, and AuditMiner's existence proves firms will pay for the reconciliation."
+    },
+    {
+      "market": "Pooled employer plan (PEP) and 3(16) fiduciary service providers",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Fastest-growing segment of the small-plan market post-SECURE; a 3(16) provider signs the Form 5500 itself, so it absorbs the sponsor's operational obligations wholesale and needs evidence trails no TPA tool currently produces."
+    },
+    {
+      "market": "Recordkeeper conversion and plan takeover operations",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "DOL ERISA Advisory Council testimony singles out the data that does NOT transfer at conversion - beneficiary forms, loan documents, historical plan documents - as the recurring failure; TPA roll-up consolidation is multiplying these events."
+    },
+    {
+      "market": "Payroll service bureaus running 360/180 retirement plan file integrations",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Manual file movement between payroll and recordkeeper is the documented root cause of late deferral deposits, one of the most common ERISA compliance findings; the bureau is the party actually holding the file."
+    },
+    {
+      "market": "Retirement plan advisory practices performing fee benchmarking and 408(b)(2) disclosure review",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The advisor controls the small-plan relationship and must document a prudent fee process; the review is a comparison of incommensurable disclosure documents currently done in Word."
     }
   ],
   "patterns": [
@@ -4734,6 +4771,82 @@
         "Contract manufacturers serving FDA-regulated medical devices (ISO 13485 / QMSR)",
         "Fiduciary and forensic accountants producing court accountings for litigation",
         "Independent legal nurse consultant (LNC) practices"
+      ]
+    },
+    {
+      "pattern": "Rule-profile-driven intake validator: a per-client configuration file encodes the governing document's rules (eligibility, definitions, exclusions, thresholds), a recurring inbound data file is validated against it, and exceptions are split by who must answer them - client vs practitioner. The configuration, not the validation code, is the product and the moat; generic upload validators check schema, never the governing document",
+      "seen_in": [
+        "Retirement plan third-party administrators (TPAs) for small 401(k) plans"
+      ],
+      "transfers_to": [
+        "Payroll service bureaus and small independent payroll providers",
+        "Third-party COBRA administrators and continuation-coverage TPAs serving small groups",
+        "Certified payroll and prevailing wage compliance service providers",
+        "Medicaid HCBS self-direction Financial Management Services (FMS) agencies and fiscal intermediaries"
+      ]
+    },
+    {
+      "pattern": "Source-system code crosswalk with unmapped-code alarm: map an external system's arbitrary codes (payroll earnings codes, POS categories, class codes) to a governed internal taxonomy, capture an attestation, and alarm when a code appears that has never been classified. The failure never begins with a wrong answer on a questionnaire - it begins when someone adds a code and tells nobody, so the alarm on new codes is the product and the mapping is merely setup",
+      "seen_in": [
+        "Retirement plan third-party administrators (TPAs) for small 401(k) plans"
+      ],
+      "transfers_to": [
+        "Workers' compensation class code and premium audit defense for high-payroll-churn employers",
+        "Premium audit and payroll classification consulting",
+        "Restaurant and hospitality bookkeeping (daily sales journal from POS to GL)",
+        "Independent pharmacy third-party reconciliation and PBM claw-backs",
+        "Industrial distributors and metal service centers issuing material test reports"
+      ]
+    },
+    {
+      "pattern": "Two-source reconciliation at entity-and-period granularity with variance classification: totals-level tie-outs pass while offsetting per-entity errors hide inside them, so match at the finest available grain and classify each variance by probable cause (timing, misclassification, missing entity, amount) so it can be routed rather than merely listed",
+      "seen_in": [
+        "Retirement plan third-party administrators (TPAs) for small 401(k) plans"
+      ],
+      "transfers_to": [
+        "E-commerce accounting specialists (Amazon, Shopify, Stripe settlement reconciliation)",
+        "Freight bill audit and payment for small shippers",
+        "Submetering and utility expense recovery service providers",
+        "Independent pharmacy third-party reconciliation and PBM claw-backs",
+        "Mortgage servicer payoff and lien release departments"
+      ]
+    },
+    {
+      "pattern": "Regulatory clock ledger: an event creates an obligation whose deadline is computed from rules rather than typed in by a human, the ledger ages open obligations, applies transition rules for rule changes, and escalates as deadlines approach. Distinct from a task manager because the due date is derived, not entered",
+      "seen_in": [
+        "Retirement plan third-party administrators (TPAs) for small 401(k) plans",
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25"
+      ],
+      "transfers_to": [
+        "Unclaimed property and escheat compliance service providers",
+        "Multi-state charitable solicitation registration compliance",
+        "Radiation safety officer services and portable gauge licensee compliance",
+        "Calibration and metrology service providers / in-house gage management"
+      ]
+    },
+    {
+      "pattern": "Branching annual attestation whose primary output is the diff: a recurring client questionnaire prefilled with last year's answers, branching into sub-interviews, where the deliverable the reviewer actually reads is the year-over-year change log rather than the responses. Turns an unread compliance form into a short exception list",
+      "seen_in": [
+        "Retirement plan third-party administrators (TPAs) for small 401(k) plans"
+      ],
+      "transfers_to": [
+        "Third-party COBRA administrators and continuation-coverage TPAs serving small groups",
+        "Multi-state income and franchise tax nexus monitoring for small businesses",
+        "Government contracts administration at small govcons (clause and mod review)",
+        "Certificate-of-insurance compliance from the holder side (GCs, property managers, municipalities)",
+        "Employer immigration compliance and I-9 audit consultancies"
+      ]
+    },
+    {
+      "pattern": "Structured legal-determination worksheet that refuses to conclude: for determinations that are genuinely legal conclusions (controlled group, worker classification, tax nexus), gather facts through a branching interview, show the arithmetic, and explicitly decline to opine on ambiguous cases - escalating instead. Liability-conscious professionals will reject an oracle but will adopt a worksheet, so declining to conclude is a feature that unlocks the market",
+      "seen_in": [
+        "Retirement plan third-party administrators (TPAs) for small 401(k) plans"
+      ],
+      "transfers_to": [
+        "Multi-state income and franchise tax nexus monitoring for small businesses",
+        "Employer immigration compliance and I-9 audit consultancies",
+        "Property tax consulting and assessment appeal firms",
+        "Elder law and Medicaid planning practices (spend-down and estate recovery)"
       ]
     }
   ]
