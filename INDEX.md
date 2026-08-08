@@ -4,7 +4,7 @@ Ongoing market research for a catalog of free, open-source business applications
 
 | Reports completed | Assignments remaining | Markets touched | Patterns recorded |
 |---|---|---|---|
-| 26 | 334 | 26 | 162 |
+| 27 | 343 | 27 | 169 |
 
 ## Completed reports (newest first)
 
@@ -12,6 +12,7 @@ Ongoing market research for a catalog of free, open-source business applications
 |---|---|---|---|---|---|
 | 2026-08-08 | Training organizations and continuing-education providers | `back-office` | Webinar Attendance-to-Credit Reconciler - turns Zoom/Teams participant, poll and registration exports into a board-rule-correct credit award list plus an audit-evidence sheet | 45/50 | [markdown](reports/2026-08-08-training-and-ce-providers-back-office.md) |
 | 2026-08-08 | Small-firm litigation support and paralegal work | `narrow-subspecialty` | RecordsRate - patient-directed (HIPAA right-of-access) records request generator with a state-by-state statutory fee checker and automatic invoice-dispute letters | 49/50 | [markdown](reports/2026-08-08-small-firm-litigation-support-and-paralegal-work-narrow-subspecialty.md) |
+| 2026-08-08 | Small CPA tax preparation practices | `core-practitioner-workflow` | E-File Control Log and Acknowledgement Reconciler - reconciles the tax software's e-file status export against the client master list to prove every intended filing was actually transmitted and accepted | 46/50 | [markdown](reports/2026-08-08-small-cpa-tax-preparation-practices-core-practitioner-workflow.md) |
 | 2026-08-08 | Metal finishing, plating, heat treat and NDT job shops (special-process suppliers) | `handoffs-and-qa` | CertForge - per-customer certificate of conformance generator with spec-coordinate validation, unique cert serialization and immutable as-issued archive | 45/50 | [markdown](reports/2026-08-08-metal-finishing-plating-heat-treat-ndt-job-shops-handoffs-and-qa.md) |
 | 2026-08-08 | Dental and specialty clinic practice administration | `handoffs-and-qa` | Clearance Request Builder & Reply Tracker - structured medical-clearance request with named answer slots, guideline pre-check, and reply-completeness tracking | 45/50 | [markdown](reports/2026-08-08-dental-specialty-clinic-practice-administration-handoffs-and-qa.md) |
 | 2026-08-07 | Staffing and recruiting agency operations | `back-office` | RateGuard - true-burden bill rate and margin calculator for staffing quotes: models the burden components the standard markup calculator omits (FUTA/FICA ceiling-dependent front-loading on a high-churn temp book, per-state experience-rated SUTA, workers' comp by class code, MSP/VMS fee deducted from rather than added to the bill rate, ACA and local sick-leave loads, and cost of capital at actual rather than contractual DSO), and shows markup vs true margin side by side. Zero client data required, so it is the cheapest possible entry into the market and converts directly into paid per-agency rate-table customization. | 45/50 | [markdown](reports/2026-08-07-staffing-recruiting-agency-operations-back-office.md) |
@@ -34,17 +35,5 @@ Ongoing market research for a catalog of free, open-source business applications
 | 2026-08-03 | Machine shop / job shop quoting and production control | `handoffs-and-qa` | Cert Package Assembler and Completeness Gate - assembles the shipped document package and blocks release on missing/inconsistent certs | 45/50 | [markdown](reports/2026-08-03-machine-shop-job-shop-handoffs-and-qa.md) |
 | 2026-08-03 | Land surveying firms | `core-practitioner-workflow` | ALTA Table A Scope Configurator — client-facing 21-item scope selector producing a signed scope exhibit (2026 standard) | 45/50 | [markdown](reports/2026-08-03-land-surveying-firms-core-practitioner-workflow.md) |
 | 2026-08-03 | Independent insurance agencies - commercial lines | `back-office` | ContractCheck - contract insurance requirement to policy gap matcher | 44/50 | [markdown](reports/2026-08-03-independent-insurance-agencies-commercial-lines-back-office.md) |
-| 2026-08-03 | Immigration law practice | `core-practitioner-workflow` | unknown | — | [markdown]((pre-ledger run, not archived)) |
+| 2026-08-03 | Immigration law practice | `core-practitioner-workflow` | unknown | 0/50 | [markdown](reports/(pre-ledger run, not archived)) |
 | 2026-08-03 | Fire protection / fire sprinkler design and coordination subcontractors | `core-practitioner-workflow` | SubmittalBinder - sprinkler & device cut-sheet submittal package builder | 46/50 | [markdown](reports/2026-08-03-fire-protection-sprinkler-design-core-practitioner-workflow.md) |
-
-Each report also has a self-contained HTML version alongside it in `reports/` with the same filename.
-
-## Angle coverage
-
-| Angle | Reports completed |
-|---|---|
-| `core-practitioner-workflow` | 8 |
-| `narrow-subspecialty` | 6 |
-| `back-office` | 6 |
-| `handoffs-and-qa` | 6 |
-

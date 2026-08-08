@@ -208,16 +208,17 @@
       "report": "reports/2026-08-08-small-firm-litigation-support-and-paralegal-work-narrow-subspecialty.md",
       "top_opportunity": "RecordsRate - patient-directed (HIPAA right-of-access) records request generator with a state-by-state statutory fee checker and automatic invoice-dispute letters",
       "score": 49
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Small CPA tax preparation practices",
       "angle": "core-practitioner-workflow",
-      "claimed_at": "2026-08-08T03:48:45Z",
-      "claim_id": "8295946c"
+      "date": "2026-08-08",
+      "report": "reports/2026-08-08-small-cpa-tax-preparation-practices-core-practitioner-workflow.md",
+      "top_opportunity": "E-File Control Log and Acknowledgement Reconciler - reconciles the tax software's e-file status export against the client master list to prove every intended filing was actually transmitted and accepted",
+      "score": 46
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -2216,6 +2217,66 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "Deposition summarizing runs 20-25 pages/hour and is priced at $2.50-$3.00/page by US vendors; adjacent to the same paralegal desk and similarly untooled."
+    },
+    {
+      "market": "Tax representation and IRS collections practices (EA-led, offer in compromise and installment agreements)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Heaviest users of IRS transcripts and notices; TDS limits of 30 transcripts per client and 5 clients per call make bulk transcript work a documented bottleneck with zero open-source tooling."
+    },
+    {
+      "market": "Tax representation and IRS collections practices (EA-led, offer in compromise and installment agreements)",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "Heaviest users of IRS transcripts and notices; TDS limits of 30 transcripts per client and 5 clients per call make bulk transcript work a documented bottleneck with zero open-source tooling."
+    },
+    {
+      "market": "Information return (1099/W-2) filing service providers and January filing desks",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "FIRE system retires 19 Nov 2026 forcing every filer onto IRIS; free IRIS portal caps CSVs at 100 records and one form type per file; the only open-source 1099 tooling targets the retiring format."
+    },
+    {
+      "market": "Enrolled agent solo practices and unenrolled AFSP preparers (sub-$150k revenue)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "The 500k+ non-credentialed and 68k EA segment is the largest by headcount, lowest by willingness to pay, and completely absent from Rosenberg and every published benchmark."
+    },
+    {
+      "market": "Tax software conversion and firm technology migration consultants",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Vendor conversion docs enumerate 16+ carryover categories that silently fail to migrate plus a 2,500-asset cap; a specialist trade exists to manage this and has no tooling."
+    },
+    {
+      "market": "Professional liability risk management and E&O program administration for accounting and law firms",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "CAMICO reports >60% of claims are tax-related and 56% of 2024 tax claims lacked an engagement letter; carriers publish defect taxonomies that are ready-made product specifications."
+    },
+    {
+      "market": "Accounting and tax firm outsourcing coordinators (offshore prep desks serving US firms)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "IRC 7216 consent is the binding legal constraint on offshore preparation and requires separate per-disclosure consent documents; the review handoff is the entire quality gate."
+    },
+    {
+      "market": "Payroll and information-return compliance at small business advisory firms (TIN matching, B-notice, backup withholding)",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "The 10-return aggregate e-file threshold dragged formerly-paper payers into e-filing; TIN mismatch and CP2100 response is a pure checklist-as-data problem."
+    },
+    {
+      "market": "Multi-state income and franchise tax nexus monitoring for small businesses",
+      "angle": "narrow-subspecialty",
+      "source": "discovered",
+      "note": "State return difficulties were a recurring write-in dislike across every tax software product in the 2025 survey; nexus thresholds are public data and change annually."
+    },
+    {
+      "market": "Tax practice quality control and peer review preparation consultants",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "AICPA quality control guide mandates due date control logs and independent reviewer sign-off with no prescribed system; the consultants who prepare firms for review are the distribution channel."
     }
   ],
   "patterns": [
@@ -4306,6 +4367,97 @@
         "Retirement plan third-party administrators (TPAs) for small 401(k) plans",
         "DOT compliance consultancies and third-party safety managers serving small fleets",
         "Court probate examiner and clerk offices (public-sector reviewer side)"
+      ]
+    },
+    {
+      "pattern": "Acknowledgement reconciliation: prove the submission you transmitted to an external authority was actually accepted",
+      "seen_in": [
+        "Small CPA tax preparation practices"
+      ],
+      "transfers_to": [
+        "Certified payroll and prevailing wage compliance service providers",
+        "Truck permitting and registration service agencies (IRP, IFTA, OS-OW, state permits)",
+        "Multi-state charitable solicitation registration compliance",
+        "Provider credentialing and payer enrollment services",
+        "Sales tax compliance outsourcing for small multi-state sellers",
+        "Community floodplain administration at small municipalities (permit-side floodplain compliance)"
+      ]
+    },
+    {
+      "pattern": "Prior-period rollforward as the source of the current-period request list, rather than a static generic form",
+      "seen_in": [
+        "Small CPA tax preparation practices"
+      ],
+      "transfers_to": [
+        "Small third-party medical billing companies (RCM service bureaus, 1-25 staff)",
+        "Bookkeeping and outsourced accounting firms",
+        "Retirement plan third-party administrators (TPAs) for small 401(k) plans",
+        "Property tax consulting and assessment appeal firms",
+        "Fiscal sponsorship organizations administering awards for sponsored projects",
+        "Association management companies (AMCs) running education for multiple client associations"
+      ]
+    },
+    {
+      "pattern": "Dependency graph between deliverables held by different parties, currently tracked as a status word instead of a link",
+      "seen_in": [
+        "Small CPA tax preparation practices"
+      ],
+      "transfers_to": [
+        "Delegated-design submittal coordination (specialty engineers of record for delegated components)",
+        "Architectural construction administration (CA) desks at small A/E firms - submittal and RFI review",
+        "Commercial title and escrow for multi-property portfolio closings",
+        "1031 exchange qualified intermediaries",
+        "Aerospace supplier quality clause library administration at machine shops and Tier 2 suppliers"
+      ]
+    },
+    {
+      "pattern": "Multiple legal retention clocks with different trigger events attached to one engagement, tracked in different places",
+      "seen_in": [
+        "Small CPA tax preparation practices"
+      ],
+      "transfers_to": [
+        "Employer immigration compliance and I-9 audit consultancies",
+        "Consortium / third-party administrators (C-TPAs) for DOT drug and alcohol programs",
+        "Radiation safety officer services and portable gauge licensee compliance",
+        "Personnel certification bodies under ISO/IEC 17024",
+        "Third-party COBRA administrators and continuation-coverage TPAs serving small groups"
+      ]
+    },
+    {
+      "pattern": "Carry-forward continuity across a system migration: cumulative state silently fails to migrate and the loss surfaces years later",
+      "seen_in": [
+        "Small CPA tax preparation practices"
+      ],
+      "transfers_to": [
+        "Fire protection service consolidator M&A integration operations (Pye-Barker style roll-ups)",
+        "Accounting firm client-book transitions, M&A and succession operations",
+        "Small bank and trust company trust operations departments",
+        "Dental service organization (DSO) multi-location chart audit and revenue cycle operations"
+      ]
+    },
+    {
+      "pattern": "The review-point object: a senior's corrections to a junior's work exist only as pen marks or verbal clearing, so the defect data that would drive training is never captured",
+      "seen_in": [
+        "Small CPA tax preparation practices"
+      ],
+      "transfers_to": [
+        "Architectural construction administration (CA) desks at small A/E firms - submittal and RFI review",
+        "Small-firm litigation support and paralegal work",
+        "Offshore and BPO bookkeeping staffing providers serving US firms",
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Legal process outsourcing (LPO) vendors producing medical chronologies, deposition summaries and indexing for US firms"
+      ]
+    },
+    {
+      "pattern": "Regulator-published rejection-code or error catalog as a free, ready-made product specification for a validation tool",
+      "seen_in": [
+        "Small CPA tax preparation practices"
+      ],
+      "transfers_to": [
+        "County recorder offices - document intake, indexing and rejection handling",
+        "State licensing board education/CE audit units (regulator side)",
+        "Mortgage post-closing QC and trailing document vendors",
+        "Apprenticeship program sponsors and DOL RAPIDS reporting"
       ]
     }
   ]
