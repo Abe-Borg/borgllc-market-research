@@ -194,7 +194,14 @@
       "score": 45
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Training organizations and continuing-education providers",
+      "angle": "back-office",
+      "claimed_at": "2026-08-08T01:48:37Z",
+      "claim_id": "9460e720"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -739,12 +746,6 @@
     {
       "market": "Training organizations and continuing-education providers",
       "angle": "narrow-subspecialty",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Training organizations and continuing-education providers",
-      "angle": "back-office",
       "source": "seed",
       "note": ""
     },
