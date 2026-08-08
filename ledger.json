@@ -216,16 +216,17 @@
       "report": "reports/2026-08-08-small-cpa-tax-preparation-practices-core-practitioner-workflow.md",
       "top_opportunity": "E-File Control Log and Acknowledgement Reconciler - reconciles the tax software's e-file status export against the client master list to prove every intended filing was actually transmitted and accepted",
       "score": 46
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Home care and home health agency scheduling and EVV back office",
       "angle": "back-office",
-      "claimed_at": "2026-08-08T05:48:52Z",
-      "claim_id": "814fb26b"
+      "date": "2026-08-08",
+      "report": "reports/2026-08-08-home-care-agency-scheduling-and-evv-back-office.md",
+      "top_opportunity": "CleanRate - per-payer EVV clean-capture scorecard and quarter-end projector: recomputes the payer's own manual-edit compliance score per payer mid-quarter and expresses remaining headroom in whole visits, against dated 2026 thresholds (Michigan MMP 26-10 85% per-payer, Highmark Wholecare 85%/15% two-quarter CAP-to-termination ladder, MassHealth 50% checkpoint). Local-only CSV in, one-page scorecard out; threshold profiles are the durable rule-pack asset.",
+      "score": 48
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -2278,6 +2279,54 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "AICPA quality control guide mandates due date control logs and independent reviewer sign-off with no prescribed system; the consultants who prepare firms for review are the distribution channel."
+    },
+    {
+      "market": "Home care and home health agency scheduling and EVV back office",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Scheduler/care-coordinator side: authorization-constrained shift filling, call-off recovery and client-caregiver matching under an 80% turnover workforce"
+    },
+    {
+      "market": "Medicaid HCBS self-direction Financial Management Services (FMS) agencies and fiscal intermediaries",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Payroll-and-EVV back office for consumer-directed care: they employ the member's chosen caregiver, carry the tax and wage-and-hour exposure, and run on thinner tooling than agencies"
+    },
+    {
+      "market": "Private duty nursing agencies serving pediatric and complex-care clients",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "PDN authorizations are hour-dense, nurse-credential-gated and chronically under-filled; unfilled authorized hours are a measurable, quantifiable loss"
+    },
+    {
+      "market": "Hospice agency back office (election, recertification, IDG documentation, face-to-face)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Election/benefit-period arithmetic and face-to-face timing windows are date-rule problems with hard survey and payment consequences"
+    },
+    {
+      "market": "Adult day health centers and PACE program back office",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Attendance-to-billing verification, transportation coordination and participant authorization tracking with the same aggregator-and-units mechanics as home care"
+    },
+    {
+      "market": "Alternate-EVV software vendors serving small HCBS providers",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "They implement per-state interface specs against multiple aggregators and eat the rejection cycle; a spec-versioned preflight validator is a vendor product, not an agency product"
+    },
+    {
+      "market": "Non-emergency medical transportation (NEMT) brokers and providers",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Trip verification, per-trip authorization and broker scorecards mirror EVV mechanics in a market with even weaker tooling"
+    },
+    {
+      "market": "Home care and home health agency M&A diligence and quality-of-earnings preparation",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Roll-up buyers now diligence EVV compliance scores, authorization utilization and payroll-to-billing reconciliation; sell-side agencies have no artifact to produce"
     }
   ],
   "patterns": [
@@ -4459,6 +4508,72 @@
         "State licensing board education/CE audit units (regulator side)",
         "Mortgage post-closing QC and trailing document vendors",
         "Apprenticeship program sponsors and DOL RAPIDS reporting"
+      ]
+    },
+    {
+      "pattern": "Threshold-compliance early-warning meter: a counterparty grades the small business on a rate against a published threshold, scores it only after the period closes, and the business watches a blended average that is systematically optimistic against a per-counterparty test - the tool recomputes the score the grader's way, per counterparty, mid-period, with headroom stated in whole units of work",
+      "seen_in": [
+        "Home care and home health agency scheduling and EVV back office"
+      ],
+      "transfers_to": [
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
+        "DOT compliance consultancies and third-party safety managers serving small fleets",
+        "MSP program offices and VMS supplier-management desks",
+        "Personnel certification bodies under ISO/IEC 17024",
+        "Utility energy-efficiency program implementers and trade-ally rebate documentation",
+        "State licensing board education/CE audit units (regulator side)"
+      ]
+    },
+    {
+      "pattern": "Export-only reconciliation bridge: three to five systems hold the same transaction, none agree, and the vendors will not integrate - a tool consuming each system's ordinary CSV export, matching on a natural key with tolerance, emits a categorized discrepancy report plus a per-period reconciliation artifact that did not previously exist, requiring no vendor cooperation",
+      "seen_in": [
+        "Home care and home health agency scheduling and EVV back office"
+      ],
+      "transfers_to": [
+        "Payroll service bureaus and small independent payroll providers",
+        "Staffing back-office service bureaus and payroll funders",
+        "Small third-party medical billing companies (RCM service bureaus, 1-25 staff)",
+        "Freight bill audit and payment for small shippers",
+        "Retirement plan third-party administrators (TPAs) for small 401(k) plans",
+        "Independent pharmacy third-party reconciliation and PBM claw-backs"
+      ]
+    },
+    {
+      "pattern": "Entitlement burn-down radar: a finite dated allotment (units, dollars, hours, credits) is consumed against a recurring commitment where overrun and underrun are both expensive in opposite directions - project the exhaustion date against the forward schedule, flag expiries, and price the underrun as recoverable revenue",
+      "seen_in": [
+        "Home care and home health agency scheduling and EVV back office"
+      ],
+      "transfers_to": [
+        "Insurance defense litigation support and claims file review at small defense firms",
+        "Third-party claims administration (TPA) and self-insured program operations",
+        "Durable medical equipment (DME) suppliers - documentation and billing compliance",
+        "Tenant-side lease audit and occupancy cost consulting",
+        "Community action agencies and Head Start grantees"
+      ]
+    },
+    {
+      "pattern": "Pre-flight validator against a published interface specification: a public authority publishes a versioned data-interchange spec, the small business submits blind and learns of defects only through rejection - a local validator with version-stamped spec profiles catches them before transmission, and often sells better to the submitter's software vendor than to the submitter",
+      "seen_in": [
+        "Home care and home health agency scheduling and EVV back office"
+      ],
+      "transfers_to": [
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "County recorder offices - document intake, indexing and rejection handling",
+        "Information return (1099/W-2) filing service providers and January filing desks",
+        "Mortgage post-closing QC and trailing document vendors",
+        "Apprenticeship program sponsors and DOL RAPIDS reporting"
+      ]
+    },
+    {
+      "pattern": "Exposure simulator run before the irreversible commit: the cost or legal exposure is created by a decision made days before the moment it becomes visible (the schedule creates the overtime; the pay run reveals it) - running the pricing at the decision point with dated, configurable jurisdiction rules converts a post-hoc report into a choice",
+      "seen_in": [
+        "Home care and home health agency scheduling and EVV back office"
+      ],
+      "transfers_to": [
+        "Certified payroll and prevailing wage compliance service providers",
+        "Small motor carriers (5-50 trucks) back office and settlement",
+        "Staffing back-office service bureaus and payroll funders",
+        "Construction subcontractor project management at 15-150 employee specialty trades"
       ]
     }
   ]

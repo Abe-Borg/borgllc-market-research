@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home Care &amp; Home Health Agency Scheduling and EVV Back Office</title>
+<style>
+:root{--ink:#1c1c1e;--muted:#5c5f66;--rule:#e2e2e6;--accent:#7a3b12;--bg:#fbfaf8;--tblhead:#f3f1ed;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+ font-size:18px;line-height:1.68;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:900px;margin:0 auto;padding:64px 28px 120px;}
+h1{font-size:2.15em;line-height:1.2;margin:0 0 .1em;letter-spacing:-.015em;}
+h2{font-size:1.5em;margin:2.4em 0 .5em;padding-bottom:.28em;border-bottom:2px solid var(--rule);letter-spacing:-.01em;}
+h3{font-size:1.18em;margin:1.9em 0 .35em;color:var(--accent);}
+h4{font-size:1.02em;margin:1.4em 0 .3em;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);}
+p{margin:0 0 1.05em;}
+a{color:#0f4c81;text-decoration:none;border-bottom:1px solid rgba(15,76,129,.28);}
+a:hover{border-bottom-color:#0f4c81;}
+ul,ol{margin:0 0 1.15em;padding-left:1.5em;}
+li{margin:.34em 0;}
+li>ul,li>ol{margin:.3em 0;}
+strong{font-weight:600;}
+code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.85em;
+ background:#efedea;padding:.12em .38em;border-radius:3px;}
+hr{border:0;border-top:1px solid var(--rule);margin:2.8em 0;}
+blockquote{margin:1.2em 0;padding:.2em 0 .2em 1.2em;border-left:3px solid var(--rule);color:var(--muted);}
+table{border-collapse:collapse;width:100%;margin:1.5em 0 1.9em;font-size:.86em;
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.45;}
+th,td{border:1px solid var(--rule);padding:8px 11px;text-align:left;vertical-align:top;}
+th{background:var(--tblhead);font-weight:600;}
+tbody tr:nth-child(even){background:#f7f6f3;}
+td:first-child{white-space:nowrap;}
+table td:nth-child(n+3){text-align:left;}
+.meta{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+ font-size:.9em;color:var(--muted);margin:0 0 2.2em;}
+h1+hr{display:none;}
+@media (max-width:640px){body{font-size:16.5px}.wrap{padding:36px 18px 80px}table{font-size:.78em}td:first-child{white-space:normal}}
+@media print{body{background:#fff}.wrap{padding:0}a{border:0;color:#000}}
+</style></head>
+<body><div class="wrap">
+<h1>Home Care and Home Health Agency Scheduling and EVV Back Office</h1>
+<p class="meta"><strong>Market:</strong> Home care and home health agency scheduling and EVV back office &nbsp;·&nbsp;
+<strong>Angle:</strong> back-office &nbsp;·&nbsp;
+<strong>Claim ID:</strong> 814fb26b &nbsp;·&nbsp;
+<strong>Date:</strong> 2026-08-08</p>
+<p><strong>Cycle date:</strong> 2026-08-08
+<strong>Market:</strong> Home care and home health agency scheduling and EVV back office
+<strong>Angle:</strong> back-office
+<strong>Claim ID:</strong> <code>814fb26b</code></p>
+<h2 id="0-cycle-header">0. Cycle header</h2>
+<p><strong>Why this assignment.</strong> The ledger held 343 open assignments across 228 markets, 203 of which had zero completed entries. I filtered to zero-coverage markets first (catalog breadth beats depth per the standing instruction), then applied two further tests: is there hard, citable, non-vendor evidence of the problem online, and does the assignment expand the catalog into a domain it has not touched?</p>
+<p>Home care back office won on all three:</p>
+<ul>
+<li><strong>Zero coverage, new domain.</strong> The catalog currently has 27 reports across legal, insurance, construction/AEC, manufacturing, trucking, accounting, dental, staffing and grants. It has nothing in home- and community-based services (HCBS). The nearest neighbours — staffing agency operations (2026-08-07) and medical billing/RCM (2026-08-06) — share the credential-and-visit-verification loop but not the regulatory machinery, and the ledger's own backlog note flagged that similarity as a reason to look here.</li>
+<li><strong>Unusually hard evidence.</strong> Most markets force you to infer pain from vendor marketing. This one has <em>numeric regulatory thresholds published by state Medicaid agencies and managed-care plans</em> — Michigan's 85%-per-payer clean-capture rule, MassHealth's 30/40/50% phased checkpoints, Highmark Wholecare's 85%/15% manual-edit ceiling with corrective action plans and network termination. That converts "agencies find EVV annoying" into a measurable, dated, financially enforced obligation. Verified obligations are the strongest possible foundation for a narrow tool.</li>
+<li><strong>Angle balance.</strong> Completed angles stood at core-practitioner-workflow 9, back-office 6, narrow-subspecialty 6, handoffs-and-qa 6. Taking a back-office assignment keeps the non-core angles from falling further behind.</li>
+</ul>
+<p>Assignments I considered and passed over: <em>Retirement plan TPAs for small 401(k) plans</em> (strong, but core-practitioner-workflow, the already-over-represented angle); <em>Provider credentialing and payer enrollment</em> (good, but heavily adjacent to the medical-billing report already in the catalog); <em>Court reporting and deposition services</em> (smaller market, thinner published-obligation evidence); <em>Calibration and metrology providers</em> (strong candidate, kept in backlog — recommend it next).</p>
+<p><strong>Backlog after this claim:</strong> 342 assignments remaining (before this report's discovered additions).</p>
+<hr />
+<h2 id="1-market-examined">1. Market examined</h2>
+<h3 id="the-two-adjacent-industries">The two adjacent industries</h3>
+<p>The phrase "home care" covers two regulated businesses that share a back office but almost nothing else:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Non-medical home care / personal care</strong></th>
+<th><strong>Medicare-certified home health</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Service</td>
+<td>ADL assistance, homemaking, companionship, respite</td>
+<td>Skilled nursing, PT/OT/ST, home health aide under a plan of care</td>
+</tr>
+<tr>
+<td>Staff</td>
+<td>Personal care aides, HHAs, caregivers</td>
+<td>RN, LPN, therapists, HHAs</td>
+</tr>
+<tr>
+<td>Payers</td>
+<td>Medicaid HCBS waivers, Medicaid managed care (MCOs), private pay, long-term care insurance, VA, area agencies on aging</td>
+<td>Medicare (PDGM), Medicare Advantage, Medicaid</td>
+</tr>
+<tr>
+<td>Licensure</td>
+<td>State home care licensure (varies widely; some states none)</td>
+<td>State licensure + CMS certification + accreditation</td>
+</tr>
+<tr>
+<td>Typical unit</td>
+<td>15-minute or hourly units against an authorization</td>
+<td>30/60-day periods, OASIS, NOA</td>
+</tr>
+</tbody>
+</table>
+<p>Both are subject to <strong>Electronic Visit Verification (EVV)</strong> for Medicaid personal care services (since 1 January 2020) and Medicaid home health services (since 1 January 2023) under §12006 of the 21st Century Cures Act. EVV is the spine this report is built around, because it is the single obligation that touches scheduling, payroll, billing, compliance and licensure simultaneously — which is exactly what makes its back-office cost so high and so poorly served.</p>
+<h3 id="organization-profile">Organization profile</h3>
+<ul>
+<li><strong>Population.</strong> Roughly 35,000 companies in the broader US home care industry, of which about 17,000 are personal care / home care aide agencies (<a href="https://www.ankota.com/home-care-industry-overview-and-statistics">Ankota industry statistics</a>). Highly fragmented: independents, small multi-site operators, and franchise units (Home Instead, Right at Home, Comfort Keepers, Visiting Angels, BrightStar) that run their own P&amp;L and their own back office.</li>
+<li><strong>Size.</strong> The 2026 Activated Insights (formerly Home Care Pulse) Home Care Benchmarking Report puts <strong>median agency revenue at $1.40M for agencies that do not track every client inquiry and $3.15M for those that do</strong> — a gap that has widened five consecutive years (<a href="https://www.homecarepost.com/activated-insights-releases-2026-home-care-benchmarking-report/">Home Care Post summary</a>). That $1M–$5M band is the sweet spot for this catalog.</li>
+<li><strong>Workforce shape.</strong> A $2M personal-care agency typically runs 60–150 active caregivers serving 60–120 clients, against an office of <strong>3 to 8 people</strong>: an administrator/owner, one or two schedulers (often called care coordinators), one billing/payroll person, one recruiter/HR person, and a DON or care manager if clinical services are provided. Caregiver turnover has run in the <strong>77%–80%</strong> range in association reporting (<a href="https://www.hcaoa.org/newsletters/home-care-turnover-rate-jumps-to-80hcaoa-is-here-to-help-members">HCAOA</a>), so the office is permanently rebuilding its own workforce while operating it.</li>
+<li><strong>The user of these tools.</strong> Not the caregiver and not the owner. The intended user is the <strong>scheduler/care coordinator and the billing/payroll administrator</strong> — a non-technical, Excel-literate, chronically interrupted person, usually paid $19–$28/hr, who is measured on shifts filled, claims paid, and audits survived.</li>
+</ul>
+<hr />
+<h2 id="2-how-the-work-is-performed">2. How the work is performed</h2>
+<p>The back office of a home care agency is a loop that runs weekly, with a quarterly compliance overlay. Traced end to end:</p>
+<h3 id="21-referral-and-authorization-intake">2.1 Referral and authorization intake</h3>
+<p>A referral arrives from a hospital discharge planner, an MCO care manager, an area agency on aging, or a family. For Medicaid clients the agency receives (or must chase) a <strong>service authorization</strong>: member ID, procedure code (e.g. T1019 for personal care), an allotment of units, and a date range. NJ's Office of the State Comptroller warns providers explicitly that <strong>MCOs may retroactively modify authorizations</strong> based on reassessment, and that eligibility must be re-verified monthly (<a href="https://www.nj.gov/comptroller/library/Resources/PCA%20Q%20and%20A%20(Final)_10242023.pdf">NJ Comptroller PCA Q&amp;A</a>).</p>
+<p>Authorizations arrive as PDFs, portal screens, faxes, or MCO letters. They are re-keyed by hand into the agency system. In small agencies a parallel spreadsheet of "auths and end dates" is near-universal.</p>
+<h3 id="22-recruiting-and-onboarding-the-workforce">2.2 Recruiting and onboarding the workforce</h3>
+<p>Because turnover is ~80%, hiring is a continuous back-office process, not an episodic one. Published 2026 funnel data from agencies using automated recruiting workflows shows <strong>application → interview in 3.19 days, 46.1% application-to-interview conversion, and a 42.6% interview no-show rate</strong> (<a href="https://www.tryhellohire.com/the-state-of-home-care-hiring-may-2026-hiring-trends/">HelloHire, May 2026</a>) — applicants typically apply to 10–20 agencies at once. Every hire then generates a personnel file that a state surveyor will later inspect: application, license/certification verification, competency evaluation, references, criminal background check, TB screening, orientation record, in-service training records, annual evaluation (<a href="https://townhall.virginia.gov/l/GetFile.cfm?File=C:%5CTownHall%5Cdocroot%5CGuidanceDocs%5C601%5CGDoc_VDH_4271_v3.pdf">Virginia home care licensure survey checklist</a>).</p>
+<p>Several EVV programs additionally require the <strong>servicing caregiver's license or certification number inside the EVV record itself</strong>, distinct from the agency NPI — so a lapsed credential is not merely a survey finding, it is a data-quality defect in every visit that caregiver performs.</p>
+<h3 id="23-scheduling">2.3 Scheduling</h3>
+<p>The scheduler builds a recurring "master week" per client and fills exceptions daily. The real job is the exception traffic: call-offs, client hospitalizations, new starts of care, caregiver availability changes, and geography. Job descriptions describe the role as ensuring "100 percent of shifts are fully and reliably staffed," managing client-caregiver matching, and carrying an on-call rotation (<a href="https://www.tnadvancecare.com/homecare-scheduling-coordinator-2">TN Advance Care scheduling coordinator posting</a>). In practice this is done by phone and text against a scheduling grid, with the authorization constraint held in the scheduler's head or in a side spreadsheet.</p>
+<h3 id="24-visit-capture-evv">2.4 Visit capture (EVV)</h3>
+<p>The caregiver clocks in and out at the point of care by mobile app with GPS, by client landline telephony (IVR), or by a fixed device/FOB in the home. Six data elements are federally required for every visit: <strong>who received service, who provided it, type of service, location, date, and start/end time</strong> (<a href="https://www.dhcs.ca.gov/wp-content/uploads/2025/10/Alternate-EVV-User-Guide.pdf">CalEVV Alternate EVV User Guide</a>).</p>
+<p>The visit record flows to a <strong>state aggregator</strong> — Sandata, HHAeXchange, Netsmart, CareBridge, or a state-branded instance such as CalEVV — either from the state's free EVV system or from the agency's own "alternate EVV" (alt-EVV) system via a published interface spec (Ohio, North Carolina, Pennsylvania, Rhode Island, Arizona and California all publish their own).</p>
+<h3 id="25-visit-maintenance-the-daily-exception-queue">2.5 Visit maintenance — the daily exception queue</h3>
+<p>Visits that do not arrive clean become <strong>exceptions</strong>. Causes are mundane and constant: caregiver forgot to clock out, clocked in from an unregistered phone number, GPS outside the geofence, service code mismatch against the authorization, client Medicaid ID changed, duplicate client record, wrong jurisdictional entity. CalEVV's guidance is representative: identify red-dot records in the aggregator, correct the data in the alt-EVV system, resubmit, and for a changed Medicaid ID inactivate the client with status <code>04</code> and resend as <code>02</code> with a new SequenceID.</p>
+<p>Every one of these corrections is a <strong>manual edit</strong>, and manual edits are the metric the payers now police.</p>
+<h3 id="26-payroll">2.6 Payroll</h3>
+<p>Hours flow from EVV (or from a parallel timesheet — NJ's guidance is blunt that "EVV was not implemented as a timesheet solution; time keeping is a separate process") into payroll. Complications that are normal here and rare elsewhere: multiple visit types with distinct pay rates, weekend and holiday differentials, live-in and 24-hour shift rules, mileage, and <strong>compensable travel time between consecutive client visits</strong>. Agencies routinely run 50+ visit types and a corresponding sprawl of pay codes, and reconcile across systems by hand (<a href="https://www.whirks.com/blog/home-care-payroll-problems">Whirks, "The 6 Biggest Home Care Payroll Problems"</a>).</p>
+<h3 id="27-billing">2.7 Billing</h3>
+<p>Verified visits become claims to Medicaid FFS, MCOs, VA, or invoices to private-pay clients and long-term care insurers. <strong>Approximately 82% of Medicaid claim denials in home care stem from administrative, eligibility and documentation failures rather than billing errors</strong>, with the named triggers being caregiver codes not matching the authorization, expired or exceeded authorizations, and missing EVV data points (<a href="https://www.hhaexchange.com/blog/billing-problems">HHAeXchange</a>).</p>
+<h3 id="28-the-quarterly-compliance-overlay">2.8 The quarterly compliance overlay</h3>
+<p>Payers now grade agencies on EVV data quality:</p>
+<ul>
+<li><strong>Michigan (MMP 26-10, effective 1 April 2026):</strong> at least <strong>85% of verified visits captured with no manual edits</strong>, measured <strong>separately for each payer</strong> each quarter — not blended. A worked example: Medicaid FFS 94%, MCO A 91%, MCO B 79%, agency average 92% — and the agency is still non-compliant because of the smallest payer (<a href="https://caretap.net/blog/how-michigan-scores-evv-compliance-per-payer/">Caretap analysis</a>).</li>
+<li><strong>Highmark Wholecare (PA), 2026 enforcement:</strong> 85% verified-visit compliance, manual entries not to exceed 15%; exceeding for <strong>two consecutive quarters</strong> triggers a formal non-compliance letter and a Corrective Action Plan due in 30 days, with continued violation exposing the agency to "overpayment notifications or termination from the network" (<a href="https://providers.highmark.com/wholecare/wholecare-newsfeed/2026-evv-compliance-enforcement-for-home-health-providers.html">Highmark provider newsfeed</a>).</li>
+<li><strong>MassHealth:</strong> phased checkpoints of 30% (Apr–Jun 2025), 40% (Jul 2025–Mar 2026) and 50% (from Apr 2026, alongside claims edits) auto-approved verified visits, measured on visits submitted, assessed from the Sandata BI reporting tool mid-month after each period, with "sanction enforcement" for failure (<a href="https://www.mass.gov/doc/evv-compliance-checkpoints-0/download">MassHealth EVV compliance checkpoints</a>).</li>
+<li><strong>Texas HHS</strong> runs formal EVV Compliance Reviews with published Usage and Reason Code policy in its EVV Policy Handbook (<a href="https://www.hhs.texas.gov/handbooks/electronic-visit-verification-policy-handbook">TX HHS EVV Policy Handbook</a>).</li>
+</ul>
+<p>The critical structural fact: <strong>these are period-end scores computed after the period closes.</strong> By the time the agency learns it failed, the quarter is unrecoverable.</p>
+<h3 id="29-software-actually-in-use">2.9 Software actually in use</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Products</th>
+<th>What they do well</th>
+<th>Where they fall short for a $1–5M agency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agency platform</td>
+<td>HHAeXchange, WellSky Personal Care (ClearCare), AxisCare, AlayaCare, Axxess, Alora, KanTime, CareVoyant, Smartcare, MatrixCare</td>
+<td>Scheduling, EVV capture, claims, credential expiry alerts</td>
+<td>Reviewers cite slow/timing-out systems, EVV freezes, 10-minute delays viewing clock-ins, reports that take minutes to load, claim batches that miscount, poor support (<a href="https://www.capterra.com/p/140366/eXchange-Suite/reviews/?page=3">Capterra HHAeXchange reviews</a>)</td>
+</tr>
+<tr>
+<td>State aggregator</td>
+<td>Sandata, HHAeXchange, Netsmart, CareBridge, CalEVV</td>
+<td>Authoritative compliance data</td>
+<td>Reporting is transactional, not managerial; scores surface after period close; per-payer view requires manual assembly</td>
+</tr>
+<tr>
+<td>Payroll</td>
+<td>ADP, Paychex, Paycor, QuickBooks</td>
+<td>Pay runs, taxes</td>
+<td>Not built for visit types, differentials, travel time; drives 50+ pay-code sprawl</td>
+</tr>
+<tr>
+<td>Everything else</td>
+<td>Excel, shared drives, email, text</td>
+<td>Whatever the platform doesn't do</td>
+<td>Undocumented, unversioned, dies with the employee who built it</td>
+</tr>
+</tbody>
+</table>
+<p>The gap is consistent and specific: <strong>the platforms are systems of record, not systems of early warning.</strong> They will tell you what happened. They will not tell you, on a Tuesday in month two of the quarter, that MCO B is tracking to 79% and you have eleven clean visits of headroom left.</p>
+<hr />
+<h2 id="3-most-important-problems-ranked">3. Most important problems, ranked</h2>
+<h3 id="p1-per-payer-evv-clean-capture-rate-drifts-to-failure-invisibly-and-is-only-scored-after-the-quarter-closes">P1 — Per-payer EVV clean-capture rate drifts to failure invisibly, and is only scored after the quarter closes</h3>
+<p><strong>Who:</strong> Owner/administrator and billing manager. <strong>When:</strong> continuously; discovered quarterly.
+<strong>Currently handled by:</strong> pulling an aggregator report at or after quarter end, or not at all.
+<strong>Why inadequate:</strong> the threshold is per payer, the agency's instinct is to watch the blended average, and the blended average is systematically optimistic — Michigan's own arithmetic shows a 92% agency at 79% on one plan. Remediation after quarter close is impossible; the score is final.
+<strong>Frequency:</strong> every quarter, every payer, forever.
+<strong>Cost:</strong> a Corrective Action Plan is 20–60 hours of administrative work; two consecutive failing quarters at a Highmark-style plan puts network participation — often 15–40% of revenue — at risk. There is no upper bound on the cost of losing an MCO contract.
+<strong>Evidence:</strong> Michigan MMP 26-10 85% per-payer rule; Highmark Wholecare 85%/15% two-quarter CAP-to-termination ladder; MassHealth 30/40/50% checkpoints with sanction language. <strong>Verified.</strong></p>
+<h3 id="p2-the-visit-exception-visit-maintenance-queue-is-unstructured-daily-manual-labour">P2 — The visit-exception (visit maintenance) queue is unstructured daily manual labour</h3>
+<p><strong>Who:</strong> scheduler and billing clerk. <strong>When:</strong> every business day.
+<strong>Currently handled by:</strong> working a list in the aggregator or platform, correcting records one at a time, selecting a reason code and typing free text.
+<strong>Why inadequate:</strong> the queue is presented transactionally, so the same root cause (a client whose landline is not registered; a caregiver whose phone changed; a geofence set too tight) is re-fixed dozens of times instead of once. Corrections must also happen inside a state-specific time window, and each correction is counted against P1.
+<strong>Frequency:</strong> daily; a 100-client agency plausibly generates dozens of exceptions per day.
+<strong>Cost:</strong> conservatively 5–10 admin hours/week at a mid-size agency, plus its direct contribution to the compliance score.
+<strong>Evidence:</strong> CalEVV correction workflow; Capterra reviewer complaints about EVV freezes and delayed clock-in visibility; state alt-EVV specs. <strong>Verified process, inferred hour count.</strong></p>
+<h3 id="p3-authorization-units-are-consumed-exceeded-or-left-unused-without-anyone-seeing-it-in-time">P3 — Authorization units are consumed, exceeded, or left unused without anyone seeing it in time</h3>
+<p><strong>Who:</strong> scheduler (over-schedule risk) and owner (revenue leakage risk). <strong>When:</strong> throughout each authorization period.
+<strong>Currently handled by:</strong> a spreadsheet of authorizations with end dates, checked when someone remembers; platform reports that show consumption but not <em>projected</em> consumption against the recurring schedule.
+<strong>Why inadequate:</strong> over-authorization produces an unbillable visit that was still worked and must still be paid — pure margin loss plus an audit exposure. Under-utilization is silent lost revenue the client was entitled to. MCOs retroactively modify authorizations, so yesterday's arithmetic can be wrong today.
+<strong>Frequency:</strong> continuous; every client, every auth period.
+<strong>Cost:</strong> expired/exceeded authorizations are named as a top denial trigger inside the 82% administrative-denial figure. At a $25.16 PCA rate, one client running 4 unauthorized hours/week for a month is ~$400 of unpaid worked time — trivially reaching five figures annually across a book.
+<strong>Evidence:</strong> HHAeXchange denial-cause analysis; NJ Comptroller guidance on retroactive MCO authorization changes and monthly eligibility verification. <strong>Verified.</strong></p>
+<h3 id="p4-schedule-evv-payroll-and-claim-never-get-reconciled-against-each-other">P4 — Schedule, EVV, payroll and claim never get reconciled against each other</h3>
+<p><strong>Who:</strong> billing/payroll administrator. <strong>When:</strong> each pay period and each billing cycle.
+<strong>Currently handled by:</strong> manual comparison of exported reports; "agencies spend hours manually reconciling reports and entering data multiple times across systems, despite having software integrations in place."
+<strong>Why inadequate:</strong> four systems, four record sets, and no artifact that proves they agree. The failure modes are asymmetric and expensive: paid-but-never-billed (silent margin loss), billed-but-not-EVV-verified (audit and recoupment exposure), verified-but-never-scheduled (fraud flag), and duplicates.
+<strong>Frequency:</strong> biweekly at minimum.
+<strong>Cost:</strong> revenue leakage from claims never resubmitted before timely-filing windows close is called out explicitly by HHAeXchange; OIG home health provider compliance audits routinely find overpayments traced to internal safeguards that "failed to detect the errors" because of "staffing shortages and human error" (<a href="https://oig.hhs.gov/reports/all/2026/medicare-home-health-agency-provider-compliance-audit-alternate-solutions-homecare-of-dayton/">OIG audit, Alternate Solutions Homecare of Dayton, 2026</a>).
+<strong>Evidence:</strong> Whirks payroll analysis; HHAeXchange; OIG audit series. <strong>Verified.</strong></p>
+<h3 id="p5-overtime-and-travel-time-exposure-is-discovered-after-the-pay-run-not-before-it">P5 — Overtime and travel-time exposure is discovered after the pay run, not before it</h3>
+<p><strong>Who:</strong> payroll administrator and owner. <strong>When:</strong> every pay period.
+<strong>Currently handled by:</strong> running payroll and reacting; off-cycle runs to fix errors.
+<strong>Why inadequate:</strong> overtime in home care is created by the <em>schedule</em>, days before payroll — but nothing in the scheduling workflow prices it. Travel time between consecutive same-day client visits is compensable and routinely missed. Massachusetts fined one home health agency <strong>$85,000+, including $77,000 in restitution to 79 workers</strong>, precisely for paying a reduced overtime rate and failing to pay travel time between job sites (<a href="https://www.mass.gov/news/home-health-agency-to-pay-more-than-85000-for-failing-to-pay-workers-overtime-and-travel-time">Mass AG</a>).
+<strong>Frequency:</strong> every pay period.
+<strong>Cost:</strong> unbudgeted OT is the largest controllable margin line in a labour business; wage-and-hour exposure is uncapped and personally attaches to owners in some states.
+<strong>Regulatory note:</strong> DOL published an NPRM on <strong>2 July 2025</strong> proposing to return to the 1975 regulations and restore the companionship and live-in exemptions for third-party employers; comments closed 2 September 2025 and <strong>no final rule or effective date has been announced — the 2013 rule remains operative</strong> (<a href="https://www.dol.gov/agencies/whd/direct-care">DOL Direct Care page</a>, <a href="https://www.federalregister.gov/documents/2025/07/02/2025-12316/application-of-the-fair-labor-standards-act-to-domestic-service">Federal Register</a>). Any tool here must treat the classification rule as a configurable input, not a hard-coded assumption.
+<strong>Evidence:</strong> Mass AG enforcement action; Whirks; DOL rulemaking record. <strong>Verified.</strong></p>
+<h3 id="p6-caregiver-credential-and-training-expirations-are-tracked-in-spreadsheets-and-discovered-at-survey">P6 — Caregiver credential and training expirations are tracked in spreadsheets and discovered at survey</h3>
+<p><strong>Who:</strong> HR/recruiter and administrator. <strong>When:</strong> at rehire, at survey, at claim denial.
+<strong>Currently handled by:</strong> platform expiry alerts where they exist (HHAeXchange reviewers do praise this), otherwise Excel plus a folder of scanned PDFs.
+<strong>Why inadequate:</strong> with ~80% turnover the file set churns completely inside 18 months; expiry alerting without <em>scheduling enforcement</em> means an expired-credential caregiver still gets assigned. Where the payer requires the caregiver certification number in the EVV record, the defect propagates into the visit data.
+<strong>Frequency:</strong> continuous; acute at annual survey.
+<strong>Cost:</strong> survey deficiencies, plan-of-correction cycles, and unbillable visits.
+<strong>Evidence:</strong> Virginia licensure survey checklist; NJ EVV caregiver-credential requirement; Capterra. <strong>Verified.</strong></p>
+<h3 id="p7-missed-and-late-visits-are-neither-reliably-detected-nor-defensibly-documented">P7 — Missed and late visits are neither reliably detected nor defensibly documented</h3>
+<p><strong>Who:</strong> scheduler; escalates to owner and MCO. <strong>When:</strong> daily.
+<strong>Currently handled by:</strong> noticing the absence, phoning around, and completing an MCO missed-visit form (Texas MCOs use a universal home health missed-visit form).
+<strong>Why inadequate:</strong> detection depends on someone noticing a <em>non-event</em>. Alora's worked example: 10 missed visits per week at $140 each is <strong>~$67,000 in annual lost revenue</strong>, before rescheduling overtime, satisfaction and audit-flag costs (<a href="https://www.alorahealth.com/blog-the-financial-impact-of-missed-homecare-visits/">Alora</a>).
+<strong>Evidence:</strong> Alora; TAHC MCO universal missed-visit form. <strong>Verified problem, vendor-sourced dollar figure — treat as illustrative.</strong></p>
+<h3 id="p8-accounts-receivable-ages-by-payer-with-no-early-warning-against-timely-filing-deadlines">P8 — Accounts receivable ages by payer with no early warning against timely-filing deadlines</h3>
+<p><strong>Who:</strong> billing administrator, owner. <strong>When:</strong> monthly, felt at payroll.
+<strong>Currently handled by:</strong> monthly AR aging review; weekly in better shops.
+<strong>Why inadequate:</strong> payment lags differ structurally by payer — <strong>Medicaid waiver 45–65 days, private LTC insurers 70–90+ days</strong> — so a blended DSO hides the problem payer. Aging past 90 days traces back to coding errors or missing authorizations, i.e. to P3 and P4 (<a href="https://prnfunding.com/why-accounts-receivable-management-is-the-key-to-scaling-your-homecare-agency/">PRN Funding</a>).
+<strong>Evidence:</strong> PRN Funding; HHAeXchange on timely-filing revenue leakage. <strong>Verified (finance-vendor sourced).</strong></p>
+<h3 id="p9-long-term-care-insurance-claim-packets-are-assembled-by-hand-per-carrier">P9 — Long-term care insurance claim packets are assembled by hand, per carrier</h3>
+<p><strong>Who:</strong> billing administrator, private-pay side. <strong>When:</strong> monthly per LTCi client.
+<strong>Currently handled by:</strong> manually assembling invoices, service logs, care plans and caregiver notes to each carrier's format; families often mismanage elimination periods and physician documentation, and the agency absorbs the rework.
+<strong>Why inadequate:</strong> carriers reimburse on documentation, each has its own requirements, and the agency carries 70–90+ day AR while the packet is in dispute.
+<strong>Evidence:</strong> <a href="https://assistinghands.com/130/tennessee/franklin/blog/common-long-term-care-insurance-claim-mistakes/">Assisting Hands on common LTCi claim mistakes</a>; PRN Funding on LTCi payment lags. <strong>Verified problem, agency-blog sourced — validate with practitioners.</strong></p>
+<h3 id="p10-alt-evv-submissions-are-rejected-by-the-aggregator-for-spec-violations-found-downstream">P10 — Alt-EVV submissions are rejected by the aggregator for spec violations found downstream</h3>
+<p><strong>Who:</strong> agencies running their own EVV system that transmits to a state aggregator.
+<strong>Currently handled by:</strong> submit, wait, read the rejection, call the vendor.
+<strong>Why inadequate:</strong> states publish detailed interface specs (Ohio v4.3, NC OpenEVV-altEVV v7.10, Arizona, Rhode Island 3.2, CalEVV). The rules — required elements, ID immutability, status codes, SequenceID discipline — are knowable <em>before</em> transmission.
+<strong>Evidence:</strong> the published state specs themselves. <strong>Verified obligation; the frequency of rejection at small agencies is an inference.</strong></p>
+<hr />
+<h2 id="4-application-opportunities">4. Application opportunities</h2>
+<p>Design constraint applied throughout: <strong>every one of these works from files the agency can already export</strong> (visit detail CSV, payroll register, claim/remit file, authorization list). No API integration, no vendor partnership, no cloud data custody. That is the wedge — these agencies cannot get their vendors to build anything, but every one of them can click "Export to Excel."</p>
+<hr />
+<h3 id="c1-cleanrate-per-payer-evv-clean-capture-scorecard-and-quarter-end-projector">C1 — CleanRate: per-payer EVV clean-capture scorecard and quarter-end projector</h3>
+<ul>
+<li><strong>User:</strong> owner/administrator and billing manager at a 40–300 caregiver agency.</li>
+<li><strong>Problem solved:</strong> P1. The agency cannot see, mid-quarter, which individual payer is tracking to fail its clean-capture threshold.</li>
+<li><strong>Current workflow:</strong> pull an aggregator report at or after quarter end; look at the agency-wide number; discover the failure in the payer's letter.</li>
+<li><strong>Proposed workflow:</strong> weekly, drop the visit-detail export into the tool. It computes clean-capture % <strong>per payer</strong> for the quarter to date, projects the quarter-end score at current run-rate, and answers the only question that matters: <em>"How many more clean visits — or how few more manual edits — before payer X falls below threshold?"</em> It ranks the caregivers, clients and exception reasons driving the edits.</li>
+<li><strong>Inputs:</strong> visit detail export (visit ID, client, payer/plan, caregiver, date, verified flag, manual-edit/reason-code flag). A per-payer threshold profile (Michigan 85%, Highmark 85%, MassHealth 50%, custom).</li>
+<li><strong>Outputs:</strong> a one-page per-payer scorecard with headroom in <em>visits</em>, a trend line, a top-10 root-cause table, and a printable quarter-end evidence sheet.</li>
+<li><strong>Essential features:</strong> payer grouping and aliasing; threshold profiles as editable data; run-rate projection; headroom in whole visits; drill-down to the offending visits.</li>
+<li><strong>Deliberately excluded:</strong> submitting or correcting visits, any write-back to the platform, live integration, caregiver-facing anything, multi-agency benchmarking.</li>
+<li><strong>AI:</strong> <strong>inappropriate.</strong> This is arithmetic against a published threshold. Adding a model would reduce trust in a compliance number.</li>
+<li><strong>Why not a spreadsheet:</strong> a one-off pivot gets you the current percentage. It does not get you threshold profiles per payer maintained as rules, run-rate projection, headroom expressed in whole visits, or a repeatable weekly artifact a non-analyst can produce. In practice the spreadsheet is built once by the one capable person and abandoned when they leave — and the failure mode of this task is precisely <em>not doing it every week</em>.</li>
+<li><strong>Complexity:</strong> small (a focused single-page web app or Python + HTML report; no server needed).</li>
+<li><strong>Learning difficulty:</strong> ~10 minutes. Upload, read.</li>
+<li><strong>Value:</strong> avoids a CAP (20–60 admin hours) and, at the tail, protects an MCO contract worth 15–40% of revenue.</li>
+<li><strong>Risks / privacy:</strong> contains PHI. Must be local-first — browser-side processing or a local script, no upload. Say so loudly; it is a selling point in this market.</li>
+<li><strong>Substitutes:</strong> aggregator BI reports (transactional, post-hoc, not per-payer projected); platform compliance dashboards (blended); consultants.</li>
+<li><strong>Why still attractive:</strong> the incumbents own the data and still do not answer the forward-looking question. The threshold profiles are the product, and they change by state and by plan every year — which is exactly the shape of thing an open-source rule pack maintains well.</li>
+<li><strong>Paid customization:</strong> per-state and per-MCO threshold packs; agency-specific payer alias maps; branded quarterly board report; multi-site roll-up for franchise operators.</li>
+</ul>
+<hr />
+<h3 id="c2-exceptionsort-visit-maintenance-root-cause-triage-queue">C2 — ExceptionSort: visit-maintenance root-cause triage queue</h3>
+<ul>
+<li><strong>User:</strong> scheduler / billing clerk.</li>
+<li><strong>Problem solved:</strong> P2. The exception queue is fixed one record at a time instead of one <em>cause</em> at a time.</li>
+<li><strong>Current workflow:</strong> work the aggregator's list top to bottom, daily, forever.</li>
+<li><strong>Proposed workflow:</strong> import the exception export; the tool clusters exceptions by inferred root cause (unregistered client phone, caregiver device change, geofence too tight for this address, service code mismatch, chronic late clock-out by one caregiver, client Medicaid ID change) and produces a <strong>fix-the-cause worklist</strong> ranked by how many future exceptions each fix prevents. It also produces a per-exception reason-code suggestion consistent with the state's code list, and tracks whether the cause actually stopped recurring.</li>
+<li><strong>Inputs:</strong> exception/visit-maintenance export; optional client address and phone list.</li>
+<li><strong>Outputs:</strong> ranked cause list with projected exception reduction; a per-cause action card; a recurrence tracker.</li>
+<li><strong>Essential features:</strong> clustering rules per state code list; recurrence measurement; export of the still-manual corrections.</li>
+<li><strong>Deliberately excluded:</strong> performing the corrections, connecting to the aggregator, caregiver messaging.</li>
+<li><strong>AI:</strong> <strong>optional and secondary.</strong> Clustering should be rule-based on structured columns. AI is defensible only for grouping free-text reason narratives where agencies have typed prose — a nice-to-have, not the core.</li>
+<li><strong>Why not a spreadsheet:</strong> the clustering rules are the asset and they encode state-specific code semantics; recurrence tracking requires state across weeks, which spreadsheets handle badly and non-analysts maintain worse.</li>
+<li><strong>Complexity:</strong> small–medium.</li>
+<li><strong>Learning difficulty:</strong> ~30 minutes.</li>
+<li><strong>Value:</strong> removes a meaningful share of a 5–10 hr/week task and directly improves C1's number.</li>
+<li><strong>Risks:</strong> PHI; state code lists drift.</li>
+<li><strong>Substitutes:</strong> the aggregator's own queue.</li>
+<li><strong>Paid customization:</strong> state-specific rule packs; agency-specific geofence and phone-registry hygiene reports.</li>
+</ul>
+<hr />
+<h3 id="c3-authradar-authorization-burn-down-and-expiry-projector">C3 — AuthRadar: authorization burn-down and expiry projector</h3>
+<ul>
+<li><strong>User:</strong> scheduler and owner.</li>
+<li><strong>Problem solved:</strong> P3.</li>
+<li><strong>Current workflow:</strong> an "auths" spreadsheet with end dates; consumption checked reactively.</li>
+<li><strong>Proposed workflow:</strong> load the authorization list, the delivered-visit export, and the recurring schedule. The tool projects, per client per service code, the date on which authorized units will be exhausted at the current recurring schedule; flags every authorization expiring within a configurable window; and flags <strong>underutilization</strong> (clients tracking to leave &gt;15% of authorized units unused) as recoverable revenue. It produces a weekly "authorizations at risk" sheet the scheduler works before building next week's schedule.</li>
+<li><strong>Inputs:</strong> authorization export (client, payer, procedure code, units, start/end), delivered visits, recurring schedule.</li>
+<li><strong>Outputs:</strong> projected-exhaustion date per authorization; expiring-soon list; over-schedule warnings for next week; underutilization list with dollars.</li>
+<li><strong>Essential features:</strong> unit-basis handling (15-minute vs hourly vs visit); multi-authorization clients; retroactive-change re-baselining.</li>
+<li><strong>Deliberately excluded:</strong> requesting reauthorization, portal integration, care planning.</li>
+<li><strong>AI:</strong> <strong>inappropriate.</strong> Arithmetic and calendars.</li>
+<li><strong>Why not a spreadsheet:</strong> it is a three-way join plus a forward projection over a recurring calendar, re-run weekly across 100+ clients. Spreadsheets do the join badly and the recurrence projection worse; and this is the exact spreadsheet that already exists and already fails.</li>
+<li><strong>Complexity:</strong> medium.</li>
+<li><strong>Learning difficulty:</strong> ~1 hour.</li>
+<li><strong>Value:</strong> eliminates worked-but-unbillable hours and recovers silent under-utilization; attacks a named top-3 denial cause.</li>
+<li><strong>Risks:</strong> PHI; authorizations retroactively modified by MCOs — the tool must timestamp its inputs and never present a projection as authoritative.</li>
+<li><strong>Substitutes:</strong> platform authorization reports (consumption to date, not projection).</li>
+<li><strong>Paid customization:</strong> payer-specific unit rules; MCO authorization-letter parsing for a specific agency's carriers.</li>
+</ul>
+<hr />
+<h3 id="c4-fourway-schedule-evv-payroll-claim-reconciliation">C4 — FourWay: schedule ↔ EVV ↔ payroll ↔ claim reconciliation</h3>
+<ul>
+<li><strong>User:</strong> billing/payroll administrator; also the owner preparing for an audit or a sale.</li>
+<li><strong>Problem solved:</strong> P4.</li>
+<li><strong>Current workflow:</strong> hours of manual export comparison, or nothing.</li>
+<li><strong>Proposed workflow:</strong> drop in four exports for a date range. The tool matches on client + caregiver + date + time window and emits a categorized exception report: <strong>paid but never billed</strong>, <strong>billed but not EVV-verified</strong>, <strong>EVV-verified but never scheduled</strong>, <strong>scheduled and paid but no EVV record</strong>, <strong>duplicates</strong>, and <strong>quantity mismatches</strong>. Each category carries a dollar figure and a suggested owner. It also emits a signed-off reconciliation certificate per period — the artifact that does not currently exist anywhere in this industry.</li>
+<li><strong>Inputs:</strong> schedule export, EVV visit export, payroll register, claim/billing register (or 835 remittance).</li>
+<li><strong>Outputs:</strong> categorized exception workbook with dollars; period reconciliation certificate; trend of exception counts by category.</li>
+<li><strong>Essential features:</strong> fuzzy time-window matching with configurable tolerance; category rules; dollar attribution; period archive.</li>
+<li><strong>Deliberately excluded:</strong> correcting anything, posting adjustments, general ledger.</li>
+<li><strong>AI:</strong> <strong>inappropriate</strong> for matching (deterministic rules must be auditable). Arguably optional for parsing heterogeneous export headers on first setup — but a saved column-mapping profile does that better.</li>
+<li><strong>Why not a spreadsheet:</strong> four-way matching with time tolerance across thousands of rows, re-run every period, producing an archived artifact. This is the canonical case where a spreadsheet technically can and practically does not.</li>
+<li><strong>Complexity:</strong> medium.</li>
+<li><strong>Learning difficulty:</strong> ~1 hour for first column mapping, minutes thereafter.</li>
+<li><strong>Value:</strong> direct cash recovery from paid-not-billed; audit defense against the exact finding pattern the OIG reports describe; and it makes the agency materially more sellable.</li>
+<li><strong>Risks:</strong> PHI plus payroll data — the most sensitive combination in this report. Local-only is mandatory.</li>
+<li><strong>Substitutes:</strong> none focused; platform "unbilled visits" reports cover one of six categories.</li>
+<li><strong>Paid customization:</strong> column-mapping profiles per platform; agency-specific category rules; quality-of-earnings pack for agencies preparing to sell.</li>
+</ul>
+<hr />
+<h3 id="c5-shiftcost-pre-payroll-overtime-and-travel-time-exposure-simulator">C5 — ShiftCost: pre-payroll overtime and travel-time exposure simulator</h3>
+<ul>
+<li><strong>User:</strong> scheduler (before publishing the week) and payroll administrator (before the run).</li>
+<li><strong>Problem solved:</strong> P5.</li>
+<li><strong>Current workflow:</strong> find out on the payroll register.</li>
+<li><strong>Proposed workflow:</strong> load next week's schedule. The tool projects each caregiver's weekly hours across all clients and sites, flags those crossing 40, prices the marginal OT, identifies consecutive same-day visits with a travel gap that is likely compensable, and flags classification-sensitive arrangements (live-in, 24-hour, companionship-only) against a configurable rule profile. Run it again against actuals before the pay run.</li>
+<li><strong>Inputs:</strong> schedule export; caregiver pay rates; client addresses; a jurisdiction rule profile.</li>
+<li><strong>Outputs:</strong> per-caregiver projected hours and OT dollars; travel-time exposure list; classification-risk flags; a "cheapest reassignment" hint list.</li>
+<li><strong>Essential features:</strong> multi-client hour aggregation per caregiver; configurable OT and travel rules by state; before/after comparison.</li>
+<li><strong>Deliberately excluded:</strong> running payroll, auto-reassigning shifts, giving legal advice.</li>
+<li><strong>AI:</strong> <strong>inappropriate.</strong> Wage-and-hour arithmetic must be explainable line by line.</li>
+<li><strong>Why not a spreadsheet:</strong> caregivers work across multiple clients, so per-client schedules must be aggregated per person before the 40-hour test — the exact aggregation the scheduler's per-client view hides. And the rule profile must be maintainable as the FLSA rulemaking resolves.</li>
+<li><strong>Complexity:</strong> small–medium.</li>
+<li><strong>Learning difficulty:</strong> ~30 minutes.</li>
+<li><strong>Value:</strong> OT is often the largest controllable variance in a labour business; the Massachusetts action shows the wage-and-hour tail ($85k on 79 workers at a single small agency).</li>
+<li><strong>Risks:</strong> must not be presented as legal compliance certification. Rule profiles must be dated and cite their source. The pending DOL companionship/live-in rule means the rule pack will change — build for that.</li>
+<li><strong>Substitutes:</strong> payroll system OT reports (after the fact); platform overtime alerts (per-client, not per-person, in some products).</li>
+<li><strong>Paid customization:</strong> state rule packs (CA, NY, MA, WA are materially different); agency-specific differential structures.</li>
+</ul>
+<hr />
+<h3 id="c6-credgate-credential-expiry-board-with-scheduling-enforcement-and-survey-binder-export">C6 — CredGate: credential expiry board with scheduling enforcement and survey binder export</h3>
+<ul>
+<li><strong>User:</strong> HR/recruiter and administrator.</li>
+<li><strong>Problem solved:</strong> P6.</li>
+<li><strong>Current workflow:</strong> Excel plus a scan folder; platform alerts where present.</li>
+<li><strong>Proposed workflow:</strong> maintain a credential matrix per caregiver against a <strong>state licensure rule pack</strong> (the survey checklist items: background check, TB screening, competency evaluation, references, orientation, annual in-service hours, annual evaluation) plus <strong>payer-specific</strong> requirements (e.g. certification number required in the EVV record). Cross-check the next two weeks of schedule against expirations to produce a "do not assign" list, and export a survey-ready personnel-file index showing, per employee, which required document is present, its date, and where it lives.</li>
+<li><strong>Inputs:</strong> caregiver roster, credential dates, document folder, schedule export, state rule pack.</li>
+<li><strong>Outputs:</strong> expiry calendar; do-not-assign list; per-employee survey binder index; missing-document report.</li>
+<li><strong>Essential features:</strong> state rule packs as data; schedule cross-check; document presence verification (does the file actually exist?); printable binder index.</li>
+<li><strong>Deliberately excluded:</strong> document storage/DMS, e-signature, training delivery, HRIS.</li>
+<li><strong>AI:</strong> <strong>optional, narrow.</strong> Reading an expiry date off a scanned certificate is a real OCR/extraction win. Everything else is rules. Ship v1 without it.</li>
+<li><strong>Why not a spreadsheet:</strong> the spreadsheet exists and is the status quo; what it cannot do is verify the document is actually in the folder, cross-check the forward schedule, and print a survey index. Also, with ~80% turnover the roster churns faster than a hand-maintained sheet survives.</li>
+<li><strong>Complexity:</strong> small–medium.</li>
+<li><strong>Learning difficulty:</strong> ~45 minutes; ongoing use is trivial.</li>
+<li><strong>Value:</strong> survey deficiency avoidance; prevents unbillable visits by uncredentialed staff.</li>
+<li><strong>Risks:</strong> PII-heavy. Local-only. Rule packs vary enormously by state — under-promise coverage.</li>
+<li><strong>Substitutes:</strong> <strong>this is the most contested concept in the list.</strong> HHAeXchange reviewers explicitly praise its credential tracking with expiration alerts, and most platforms ship something. Differentiation rests entirely on (a) state survey rule packs, (b) schedule enforcement rather than alerting, (c) the printable binder index, (d) working for agencies whose platform does it badly or who run two platforms.</li>
+<li><strong>Paid customization:</strong> state rule packs; franchise-brand requirement overlays.</li>
+</ul>
+<hr />
+<h3 id="c7-missedvisit-ledger-gap-detection-and-mco-notification-packet">C7 — MissedVisit Ledger: gap detection and MCO notification packet</h3>
+<ul>
+<li><strong>User:</strong> scheduler; reviewed by administrator.</li>
+<li><strong>Problem solved:</strong> P7.</li>
+<li><strong>Current workflow:</strong> notice, phone around, fill a form.</li>
+<li><strong>Proposed workflow:</strong> diff scheduled visits against verified visits daily. Every unmatched scheduled visit becomes a ledger entry requiring disposition (client refused, client hospitalized, caregiver call-off covered, caregiver call-off uncovered, documentation error). The tool pre-fills the payer's missed-visit notification form, tracks whether notification was sent within the payer's window, and produces a monthly pattern report by caregiver, client, day-of-week and geography.</li>
+<li><strong>Inputs:</strong> schedule export, verified visit export, payer form templates.</li>
+<li><strong>Outputs:</strong> daily disposition worklist; pre-filled notification forms; monthly pattern analysis with revenue impact.</li>
+<li><strong>Essential features:</strong> matching with tolerance; disposition taxonomy; notification-window timer; pattern report.</li>
+<li><strong>Deliberately excluded:</strong> filling the shift, caregiver messaging, client communication.</li>
+<li><strong>AI:</strong> <strong>inappropriate.</strong></li>
+<li><strong>Why not a spreadsheet:</strong> it is a daily diff of two changing datasets plus a deadline timer.</li>
+<li><strong>Complexity:</strong> small.</li>
+<li><strong>Learning difficulty:</strong> ~20 minutes.</li>
+<li><strong>Value:</strong> the $67k/yr illustrative figure aside, the defensible artifact matters more — missed-visit documentation is what an MCO audit asks for.</li>
+<li><strong>Risks:</strong> PHI; forms vary by payer.</li>
+<li><strong>Substitutes:</strong> platform missed-visit reports; the manual form.</li>
+<li><strong>Paid customization:</strong> payer form templates; state reporting-window rules.</li>
+</ul>
+<hr />
+<h3 id="c8-packetbuilder-ltci-long-term-care-insurance-claim-packet-assembler">C8 — PacketBuilder LTCi: long-term care insurance claim packet assembler</h3>
+<ul>
+<li><strong>User:</strong> billing administrator on the private-pay side.</li>
+<li><strong>Problem solved:</strong> P9.</li>
+<li><strong>Current workflow:</strong> hand-assemble invoice + service log + care plan + notes per carrier, monthly, per client.</li>
+<li><strong>Proposed workflow:</strong> maintain a <strong>carrier requirement profile</strong> (which documents, which fields, what format, submission channel, elimination-period handling). Generate the month's packet per client from the visit export and note export, validate it against the profile before sending, log the submission, and age the receivable against a carrier-specific expected-payment window.</li>
+<li><strong>Inputs:</strong> visit export, care notes, client policy details, carrier profile.</li>
+<li><strong>Outputs:</strong> assembled PDF packet; pre-submission completeness check; submission log and aging.</li>
+<li><strong>Essential features:</strong> carrier profiles as data; completeness validation; aging by carrier.</li>
+<li><strong>Deliberately excluded:</strong> carrier portal automation, benefit-eligibility determination, policy interpretation.</li>
+<li><strong>AI:</strong> <strong>optional.</strong> Reading a carrier's requirement letter into a draft profile is a legitimate extraction task; the profile is then human-reviewed and reused. Core assembly is templating.</li>
+<li><strong>Why not a spreadsheet:</strong> the output is a document packet, not a table.</li>
+<li><strong>Complexity:</strong> medium.</li>
+<li><strong>Learning difficulty:</strong> ~1 hour to build the first carrier profile.</li>
+<li><strong>Value:</strong> compresses a 70–90+ day receivable and reduces resubmission cycles.</li>
+<li><strong>Risks:</strong> PHI; carrier requirements are not publicly documented in a usable way — profiles must be built from real correspondence, which makes this <strong>evidence-thin without practitioner input</strong>.</li>
+<li><strong>Substitutes:</strong> platform private-pay invoicing (invoice only, not packet).</li>
+<li><strong>Paid customization:</strong> this concept is almost entirely customization revenue — each agency's carrier mix is different.</li>
+</ul>
+<hr />
+<h3 id="c9-agingsplit-payer-segmented-ar-aging-with-timely-filing-countdown">C9 — AgingSplit: payer-segmented AR aging with timely-filing countdown</h3>
+<ul>
+<li><strong>User:</strong> billing administrator and owner.</li>
+<li><strong>Problem solved:</strong> P8.</li>
+<li><strong>Current workflow:</strong> monthly aging review on a blended report.</li>
+<li><strong>Proposed workflow:</strong> ingest the AR export and/or 835 remittances. Segment aging <strong>by payer against that payer's normal payment window</strong> (Medicaid waiver 45–65 days, LTCi 70–90+) so "late" means late <em>for that payer</em>, not late in the abstract. Overlay a timely-filing countdown per claim and rank by dollars about to become permanently unbillable. Cluster denials by reason code × payer × service code.</li>
+<li><strong>Inputs:</strong> AR aging export or 835 files; payer profile (payment window, timely-filing limit).</li>
+<li><strong>Outputs:</strong> payer-segmented aging; "dollars expiring in 30 days" list; denial-cluster report.</li>
+<li><strong>Essential features:</strong> payer profiles; timely-filing arithmetic; CARC/RARC grouping.</li>
+<li><strong>Deliberately excluded:</strong> claim submission, appeals, collections workflow.</li>
+<li><strong>AI:</strong> <strong>inappropriate</strong> for the arithmetic; optional for parsing denial letters received as PDFs.</li>
+<li><strong>Why not a spreadsheet:</strong> the timely-filing countdown and per-payer normalization must be maintained as rules and re-run.</li>
+<li><strong>Complexity:</strong> medium.</li>
+<li><strong>Learning difficulty:</strong> ~45 minutes.</li>
+<li><strong>Value:</strong> directly recovers revenue that would otherwise be lost to filing deadlines.</li>
+<li><strong>Risks:</strong> PHI. <strong>Note the overlap:</strong> the catalog already contains "Remit Lens" (2026-08-06, medical billing) doing 835 denial analytics for small practices. The home care differentiator is payer-window normalization and the timely-filing countdown, not the 835 parsing — consider whether this should be a home-care rule pack <em>for</em> Remit Lens rather than a separate product.</li>
+<li><strong>Paid customization:</strong> payer profile libraries by state.</li>
+</ul>
+<hr />
+<h3 id="c10-altevv-preflight-aggregator-submission-validator">C10 — AltEVV Preflight: aggregator submission validator</h3>
+<ul>
+<li><strong>User:</strong> agencies transmitting from their own EVV system to a state aggregator; also the small alt-EVV vendors themselves.</li>
+<li><strong>Problem solved:</strong> P10.</li>
+<li><strong>Current workflow:</strong> submit, wait, read rejections, call the vendor.</li>
+<li><strong>Proposed workflow:</strong> validate the outbound payload against the <strong>published state spec</strong> before transmission — required elements present, ID formats, client status codes, SequenceID monotonicity, service codes valid for the payer, timestamps well-formed, no duplicate visit IDs. Produce a pass/fail report with per-record errors keyed to the spec section.</li>
+<li><strong>Inputs:</strong> the outbound file/payload; a state spec profile (Ohio v4.3, NC OpenEVV-altEVV v7.10, AZ, RI 3.2, CalEVV).</li>
+<li><strong>Outputs:</strong> validation report; corrected-file checklist.</li>
+<li><strong>Essential features:</strong> spec profiles as versioned data; per-record error messages citing the spec.</li>
+<li><strong>Deliberately excluded:</strong> transmitting, correcting, or storing the data.</li>
+<li><strong>AI:</strong> <strong>inappropriate.</strong> Schema validation.</li>
+<li><strong>Why not a spreadsheet:</strong> it is schema validation of a structured payload.</li>
+<li><strong>Complexity:</strong> small–medium per spec, and it scales by adding specs.</li>
+<li><strong>Learning difficulty:</strong> ~20 minutes.</li>
+<li><strong>Value:</strong> removes a rejection-and-rework cycle; highest value to the smallest alt-EVV vendors, who may be a better customer than the agencies.</li>
+<li><strong>Risks:</strong> specs version frequently; a stale profile is worse than none, so version-stamping is mandatory.</li>
+<li><strong>Substitutes:</strong> the aggregator's own rejection messages (after the fact); the alt-EVV vendor's validation (variable quality).</li>
+<li><strong>Paid customization:</strong> per-state spec profiles; white-label for alt-EVV vendors — the clearest B2B upsell in this list.</li>
+</ul>
+<hr />
+<h2 id="5-opportunity-ranking">5. Opportunity ranking</h2>
+<p>Scored 1–5 on each of ten criteria; 50 maximum.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Concept</th>
+<th style="text-align: center;">Severity</th>
+<th style="text-align: center;">Frequency</th>
+<th style="text-align: center;">ROI clarity</th>
+<th style="text-align: center;">Ease of learning</th>
+<th style="text-align: center;">Ease of build</th>
+<th style="text-align: center;">Stays narrow</th>
+<th style="text-align: center;">Differentiation</th>
+<th style="text-align: center;">Customization</th>
+<th style="text-align: center;">Test data</th>
+<th style="text-align: center;">Evidence confidence</th>
+<th style="text-align: center;"><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1</td>
+<td><strong>CleanRate</strong> — per-payer EVV clean-capture scorecard</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>48</strong></td>
+</tr>
+<tr>
+<td>C3</td>
+<td><strong>AuthRadar</strong> — authorization burn-down and expiry</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>44</strong></td>
+</tr>
+<tr>
+<td>C4</td>
+<td><strong>FourWay</strong> — schedule/EVV/payroll/claim reconciliation</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><strong>43</strong></td>
+</tr>
+<tr>
+<td>C5</td>
+<td><strong>ShiftCost</strong> — pre-payroll OT and travel-time exposure</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>42</strong></td>
+</tr>
+<tr>
+<td>C7</td>
+<td><strong>MissedVisit Ledger</strong> — gap detection + MCO packet</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>42</strong></td>
+</tr>
+<tr>
+<td>C2</td>
+<td><strong>ExceptionSort</strong> — visit-maintenance root-cause triage</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>39</strong></td>
+</tr>
+<tr>
+<td>C6</td>
+<td><strong>CredGate</strong> — credential expiry + schedule enforcement</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>38</strong></td>
+</tr>
+<tr>
+<td>C10</td>
+<td><strong>AltEVV Preflight</strong> — aggregator submission validator</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>40</strong></td>
+</tr>
+<tr>
+<td>C9</td>
+<td><strong>AgingSplit</strong> — payer-segmented AR + filing countdown</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><strong>35</strong></td>
+</tr>
+<tr>
+<td>C8</td>
+<td><strong>PacketBuilder LTCi</strong> — LTC insurance claim packets</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><strong>36</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-top-three">The top three</h3>
+<p><strong>1. CleanRate (48/50).</strong> The strongest concept in this cycle and, on the evidence, one of the strongest in the catalog. Three things make it unusual. First, the obligation is <em>published, numeric and dated</em> — Michigan's 85% per-payer rule effective 1 April 2026, Highmark's 85%/15% two-quarter ladder, MassHealth's 50% checkpoint from April 2026. There is no need to persuade anyone the problem exists; the payer already sent them a letter. Second, the incumbents structurally cannot serve it: aggregators report transactionally after period close, and platforms show a blended average that is <em>systematically optimistic</em> against a per-payer threshold. Third, it is genuinely small — a few hundred lines over a CSV, no server, no PHI leaving the building. The threshold profiles are the durable asset, and they are exactly the kind of thing an open-source rule pack maintains better than a vendor roadmap.</p>
+<p><strong>2. AuthRadar (44/50).</strong> Attacks a named component of the 82% administrative-denial figure and has a symmetric payoff — it stops unbillable worked hours on one side and recovers unused authorized units on the other. The reason it scores below CleanRate is build risk: authorization data is messier than visit data, unit bases differ by payer, and MCOs retroactively modify authorizations, so the tool must be honest about the age of its inputs. Still, the "spreadsheet that already exists and already fails" test points straight at it.</p>
+<p><strong>3. FourWay (43/50).</strong> The highest ceiling and the highest effort. It produces something that does not exist anywhere in this industry — a per-period artifact proving the four systems agree — which is valuable at three separate moments: cash recovery now, audit defense later, and diligence when the owner sells. Its scoring is dragged down by build complexity and by needing four clean exports rather than one. Best treated as the second build, reusing CleanRate's export-parsing layer.</p>
+<p><strong>Investigate next:</strong> <strong>CleanRate</strong>, without qualification. Build the Michigan and Highmark threshold profiles first because those are the two with hard 2026 dates and explicit escalation ladders, then add MassHealth and Texas. C3 and C4 should share its file-ingest and column-mapping foundation, which argues for treating C1/C3/C4 as one codebase with three reports rather than three products.</p>
+<p><strong>Reconsider before building:</strong> C6 (CredGate) — platform vendors genuinely ship this and reviewers praise it; only the state survey rule packs and schedule enforcement differentiate. C9 (AgingSplit) — likely better as a home-care rule pack for the catalog's existing Remit Lens than as a new product.</p>
+<hr />
+<h2 id="6-validation-plan">6. Validation plan</h2>
+<h3 id="questions-to-ask-practitioners">Questions to ask practitioners</h3>
+<p><strong>On C1 (highest priority):</strong></p>
+<ol>
+<li>Which payers do you bill, and do you currently know your clean-capture percentage for each one <em>separately</em>?</li>
+<li>When in the quarter do you find out your EVV score? What do you do if it's bad?</li>
+<li>Have you ever received a corrective action plan or non-compliance letter over EVV? What did it cost you in hours?</li>
+<li>Can you export a visit detail report that includes payer and a manual-edit or reason-code flag? <em>(This is the make-or-break feasibility question — ask for the actual file.)</em></li>
+<li>Who in the office would run this weekly, and would they actually do it?</li>
+</ol>
+<p><strong>On C3:</strong> How do you track authorization units today — show me the spreadsheet. How often do you work hours you can't bill because the auth ran out? How often do you find out an auth expired <em>after</em> the visit?</p>
+<p><strong>On C4:</strong> Do you ever find visits you paid for but never billed? How do you find them today? What would you pay to have that list every pay period?</p>
+<p><strong>On C5:</strong> How much overtime do you budget vs actual? Do you pay travel time between same-day clients? Has a wage claim ever been filed against you?</p>
+<h3 id="who-to-interview">Who to interview</h3>
+<ul>
+<li>Owners and administrators of independent agencies with 40–300 caregivers in <strong>Michigan, Pennsylvania and Massachusetts</strong> — the three states with dated 2026 thresholds and therefore the sharpest pain right now.</li>
+<li>Franchise unit owners (Home Instead, Right at Home, Comfort Keepers) — they run their own back office but share brand-level requirements, which is a natural rule-pack customer.</li>
+<li>Billing/payroll administrators specifically, not just owners: they know which exports actually exist.</li>
+<li>Home care association staff: HCAOA, state associations (PHA, Michigan HomeCare &amp; Hospice Association, Home Care Alliance of Massachusetts, TAHC in Texas).</li>
+<li>Small alt-EVV vendors — the natural design partner for C10 and a channel to agencies for C1.</li>
+<li>Home care–specialist bookkeeping and payroll firms (e.g. the kind that publish the payroll-problem analyses cited here) — they see many agencies' data and are a distribution channel.</li>
+</ul>
+<h3 id="search-terms-for-further-research">Search terms for further research</h3>
+<p><code>"EVV" "manual edit" percentage provider compliance &lt;state&gt;</code> · <code>visit maintenance reason code &lt;state&gt; EVV handbook</code> · <code>alt-EVV interface specification &lt;state&gt; version</code> · <code>home care "corrective action plan" EVV managed care</code> · <code>"missed visit" form MCO home health &lt;state&gt;</code> · <code>personal care services audit findings state auditor &lt;state&gt;</code> · <code>home care agency "unbilled visits" report</code> · <code>HCBS provider EVV compliance webinar 2026</code> · <code>home care agency quality of earnings diligence EVV</code></p>
+<h3 id="sample-files-needed-for-prototyping">Sample files needed for prototyping</h3>
+<ol>
+<li>A <strong>visit detail export</strong> with payer, verified status and manual-edit/reason-code columns from HHAeXchange, Sandata and AxisCare — de-identified. Without this, C1 cannot be built; with it, C1 is a weekend.</li>
+<li>An <strong>exception / visit maintenance export</strong>.</li>
+<li>An <strong>authorization export</strong> showing units, procedure code and date range.</li>
+<li>A <strong>payroll register</strong> and a <strong>claim register</strong> for the same period (for C4).</li>
+<li>One <strong>state EVV compliance report</strong> as the payer actually issues it, to confirm the tool's arithmetic reproduces the official score.</li>
+</ol>
+<h3 id="minimum-prototype-that-validates-c1">Minimum prototype that validates C1</h3>
+<p>A single self-contained HTML file. The agency drops in a visit detail CSV; everything is computed in the browser, nothing is uploaded. It outputs one table: payer, visits this quarter, clean %, projected quarter-end %, headroom in visits before threshold. Two hours of work if the export format is known. If a practitioner looks at that table and immediately says "wait, that plan is at 79%?" — the concept is validated and everything else is elaboration.</p>
+<h3 id="assumptions-most-likely-to-be-fatal">Assumptions most likely to be fatal</h3>
+<ul>
+<li><strong>That the manual-edit flag is exportable.</strong> If platforms do not expose a per-visit manual-edit indicator in any user-accessible export, C1 collapses to an estimate and its whole value proposition — reproducing the official score — evaporates. <strong>Verify this first, before anything else.</strong></li>
+<li><strong>That payer identity is a usable field.</strong> If MCO plans appear as inconsistent free text, the per-payer grouping needs an alias map the user must maintain, which raises learning cost.</li>
+<li><strong>That agencies will run something weekly.</strong> The entire premise is that mid-quarter visibility changes behaviour. An agency that will not open the tool until quarter end gets no value from it. Mitigation: make it a 30-second task and make the output a single printable page the owner asks for.</li>
+<li><strong>That state thresholds stay stable enough to package.</strong> They will not; that is why they are rule packs, and why an open-source project with practitioner contributors beats a vendor's annual release cycle.</li>
+<li><strong>That the platform vendors won't just build it.</strong> They could. They have not, across a decade of EVV, because their incentive is to report their own data favourably, not to tell an agency it is failing. That is a durable but not permanent moat.</li>
+</ul>
+<hr />
+<h2 id="7-cross-industry-patterns">7. Cross-industry patterns</h2>
+<p>Five patterns from this market that transfer, with the specific backlog markets they transfer to.</p>
+<p><strong>Pattern A — Threshold-compliance early-warning meter.</strong>
+A regulator or counterparty grades the small business on a <em>rate</em> against a published threshold, computed after the period closes, and reported as a blended figure that hides per-counterparty failure. The tool recomputes the rate the way the grader does, per counterparty, mid-period, and expresses remaining headroom in whole units of work. Transfers to: <strong>Fire protection ITM contractors under NFPA 25</strong> (inspection-completion rates per AHJ/customer); <strong>DOT compliance consultancies and third-party safety managers serving small fleets</strong> (CSA BASIC percentile trajectory between refresh dates); <strong>MSP program offices and VMS supplier-management desks</strong> (supplier scorecard trajectory per client program); <strong>Personnel certification bodies under ISO/IEC 17024</strong>; <strong>Utility energy-efficiency program implementers and trade-ally rebate documentation</strong> (per-program QC pass rates); <strong>State licensing board education/CE audit units</strong>.</p>
+<p><strong>Pattern B — Export-only reconciliation bridge.</strong>
+The business runs three to five systems that all hold the same transaction and none of which agree; the vendors will not integrate and the business cannot make them. A tool that consumes each system's ordinary CSV export, matches on a natural key with tolerance, and emits a categorized discrepancy report plus a per-period reconciliation artifact. Requires no vendor cooperation, which is why it is buildable at all. Transfers to: <strong>Payroll service bureaus and small independent payroll providers</strong>; <strong>Staffing back-office service bureaus and payroll funders</strong>; <strong>Small third-party medical billing companies (RCM service bureaus, 1-25 staff)</strong>; <strong>Freight bill audit and payment for small shippers</strong>; <strong>Retirement plan third-party administrators (TPAs) for small 401(k) plans</strong>; <strong>Independent pharmacy third-party reconciliation and PBM claw-backs</strong>.</p>
+<p><strong>Pattern C — Entitlement burn-down radar.</strong>
+A finite, dated allotment (units, dollars, hours, credits) is consumed against a recurring commitment, and both overrun and underrun are expensive in opposite ways. The tool projects the exhaustion date against the forward schedule, flags expiries, and prices the underrun as recoverable. Transfers to: <strong>Insurance defense litigation support and claims file review at small defense firms</strong> (litigation budget burn against case plan); <strong>Third-party claims administration (TPA) and self-insured program operations</strong>; <strong>Durable medical equipment (DME) suppliers</strong>; <strong>Tenant-side lease audit and occupancy cost consulting</strong>; <strong>Retirement plan TPAs</strong> (contribution/testing limits); <strong>Community action agencies and Head Start grantees</strong> (grant line burn).</p>
+<p><strong>Pattern D — Pre-flight validator against a published interface specification.</strong>
+A public authority publishes a versioned data-interchange spec; the small business submits against it blind and learns of defects only through rejection. A local validator with versioned spec profiles catches defects before transmission. Transfers to: <strong>Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)</strong>; <strong>County recorder offices — document intake, indexing and rejection handling</strong> (and the submitter side); <strong>Information return (1099/W-2) filing service providers</strong>; <strong>Mortgage post-closing QC and trailing document vendors</strong>; <strong>Apprenticeship program sponsors and DOL RAPIDS reporting</strong>.</p>
+<p><strong>Pattern E — Exposure simulator run before an irreversible commit.</strong>
+A cost or legal exposure is created by a decision made days before the moment it is discovered (the schedule creates the overtime; the pay run reveals it). A simulator run at the decision point, pricing the consequence with configurable jurisdiction rules, converts a post-hoc report into a choice. Transfers to: <strong>Certified payroll and prevailing wage compliance service providers</strong>; <strong>Small motor carriers (5-50 trucks) back office and settlement</strong> (HOS and settlement exposure before dispatch); <strong>Staffing back-office service bureaus</strong>; <strong>Construction subcontractor project management at 15-150 employee specialty trades</strong> (crew cost before the week is committed); <strong>Home care's own neighbours in adult day and PACE</strong>.</p>
+<hr />
+<h2 id="8-sources-and-confidence">8. Sources and confidence</h2>
+<h3 id="verified-findings-cited-to-regulators-payers-enforcement-actions-or-published-specifications">Verified findings — cited to regulators, payers, enforcement actions, or published specifications</h3>
+<ul>
+<li>Michigan MMP 26-10: 85% of verified visits with no manual edits, <strong>measured separately per payer</strong>, effective 1 April 2026, with the worked example showing a 92% agency failing on a 79% plan — <a href="https://caretap.net/blog/how-michigan-scores-evv-compliance-per-payer/">Caretap analysis of Michigan per-payer scoring</a>, <a href="https://caretap.net/blog/michigans-evv-rule-grades-quarter-ends-stay-ahead/">Michigan EVV compliance calendar</a></li>
+<li>Highmark Wholecare 2026 enforcement: 85% verified-visit compliance, manual entries ≤15%, two consecutive failing quarters → non-compliance letter → CAP in 30 days → overpayment notification or network termination — <a href="https://providers.highmark.com/wholecare/wholecare-newsfeed/2026-evv-compliance-enforcement-for-home-health-providers.html">Highmark provider newsfeed</a></li>
+<li>MassHealth phased EVV checkpoints 30% / 40% / 50% auto-approved verified visits, measured on visits submitted, assessed from Sandata BI mid-month after each period, sanction enforcement for failure — <a href="https://www.mass.gov/doc/evv-compliance-checkpoints-0/download">MassHealth EVV compliance checkpoints</a></li>
+<li>Texas HHS EVV Policy Handbook (compliance reviews, usage, reason codes, reports) — <a href="https://www.hhs.texas.gov/handbooks/electronic-visit-verification-policy-handbook">TX HHS</a></li>
+<li>Six federally required EVV data elements; CalEVV visit-exception and correction workflow; Medicaid ID immutability, status codes <code>02</code>/<code>04</code>, SequenceID discipline — <a href="https://www.dhcs.ca.gov/wp-content/uploads/2025/10/Alternate-EVV-User-Guide.pdf">CalEVV Alternate EVV User Guide (Oct 2025)</a></li>
+<li>Published alt-EVV interface specifications: <a href="https://medicaid.ncdhhs.gov/documents/providers/programs-services/evv/openevv-altevv-v7-10-final/download">NC OpenEVV-altEVV v7.10</a>, <a href="https://dam.assets.ohio.gov/image/upload/medicaid.ohio.gov/Providers/EVV/AltSystem/ODM_AltDataCollectionInterface_v4.3_8-28-2025.pdf">Ohio ODM Alt-EVV v4.3</a>, <a href="https://www.azahcccs.gov/AHCCCS/Downloads/EVV/OpenEVV_AltEVV.pdf">Arizona AHCCCS</a>, <a href="https://eohhs.ri.gov/sites/g/files/xkgbur226/files/2022-07/RI%20Alt%20EVV%20Specification%203.2.pdf">Rhode Island 3.2</a>, <a href="https://www.pa.gov/agencies/dhs/resources/for-providers/evv/alternate-evv">Pennsylvania DHS</a></li>
+<li>NJ Office of the State Comptroller PCA guidance: monthly eligibility verification, retroactive MCO authorization modification, caregiver license/certification number required in the EVV record, "EVV was not implemented as a timesheet solution" — <a href="https://www.nj.gov/comptroller/library/Resources/PCA%20Q%20and%20A%20(Final)_10242023.pdf">NJ Comptroller PCA Q&amp;A</a></li>
+<li>Wage-and-hour enforcement: $85,000+ settlement including $77,000 restitution to 79 workers for reduced-rate overtime and unpaid travel time between job sites — <a href="https://www.mass.gov/news/home-health-agency-to-pay-more-than-85000-for-failing-to-pay-workers-overtime-and-travel-time">Massachusetts Attorney General</a></li>
+<li>FLSA companionship/live-in rulemaking: NPRM published 2 July 2025, comments closed 2 September 2025, <strong>no final rule or effective date announced; 2013 rule remains operative</strong> — <a href="https://www.dol.gov/agencies/whd/direct-care">DOL Direct Care</a>, <a href="https://www.federalregister.gov/documents/2025/07/02/2025-12316/application-of-the-fair-labor-standards-act-to-domestic-service">Federal Register 2025-12316</a>, <a href="https://www.littler.com/news-analysis/asap/dol-proposes-rule-reinstate-companionship-live-exemptions-minimum-wage-and">Littler analysis</a></li>
+<li>State licensure survey personnel-file items: application, license/certification verification, competency evaluation, references, criminal background check, TB/substance screening, annual evaluation, in-service training records — <a href="https://townhall.virginia.gov/l/GetFile.cfm?File=C:%5CTownHall%5Cdocroot%5CGuidanceDocs%5C601%5CGDoc_VDH_4271_v3.pdf">Virginia home care licensure survey checklist</a>; see also <a href="https://info.ncdhhs.gov/dhsr/ahc/pdf/checklist.pdf">NC initial survey checklist</a>, <a href="https://doh.wa.gov/licenses-permits-and-certificates/facilities-z/home-care-agencies/survey-program">Washington DOH in-home services survey program</a></li>
+<li>OIG home health provider compliance audit series, including the 2026 finding that internal safeguards "failed to detect the errors" due to "staffing shortages and human error" — <a href="https://oig.hhs.gov/reports/all/2026/medicare-home-health-agency-provider-compliance-audit-alternate-solutions-homecare-of-dayton/">Alternate Solutions Homecare of Dayton (2026)</a>, <a href="https://oig.hhs.gov/reports/all/2026/medicare-home-health-agency-provider-compliance-audit-vns-health/">VNS Health (2026)</a></li>
+<li>Practitioner product complaints (system slowness, EVV freezes, 10-minute clock-in visibility delay, claim batch miscounts, poor support) alongside praise for credential expiry alerts — <a href="https://www.capterra.com/p/140366/eXchange-Suite/reviews/?page=3">Capterra HHAeXchange reviews</a></li>
+</ul>
+<h3 id="strong-inferences-well-supported-but-industry-or-vendor-sourced">Strong inferences — well-supported but industry- or vendor-sourced</h3>
+<ul>
+<li><strong>82% of Medicaid claim denials</strong> in home care stem from administrative, eligibility and documentation failures rather than billing errors; named triggers include caregiver codes not matching the authorization, expired/exceeded authorizations, and missing EVV data points — <a href="https://www.hhaexchange.com/blog/billing-problems">HHAeXchange</a>. Vendor-published; the causal breakdown is consistent with the OIG and state audit record, so treated as strong.</li>
+<li>Median agency revenue <strong>$1.40M vs $3.15M</strong> split on inquiry tracking, gap widening five consecutive years — <a href="https://www.homecarepost.com/activated-insights-releases-2026-home-care-benchmarking-report/">Activated Insights 2026 Home Care Benchmarking Report, via Home Care Post</a> (full report paywalled)</li>
+<li>Caregiver turnover in the <strong>77–80%</strong> range — <a href="https://www.hcaoa.org/newsletters/home-care-turnover-rate-jumps-to-80hcaoa-is-here-to-help-members">HCAOA</a></li>
+<li>Hiring funnel: <strong>3.19 days application→interview, 46.1% application-to-interview conversion, 42.6% interview no-show, 12.8% cancellation</strong>; applicants apply to 10–20 agencies — <a href="https://www.tryhellohire.com/the-state-of-home-care-hiring-may-2026-hiring-trends/">HelloHire, May 2026</a> (vendor's own customer base, so optimistic on speed metrics)</li>
+<li>Payer payment lags: <strong>Medicaid waiver 45–65 days, private LTC insurers 70–90+ days</strong>; DSO above 60–65 days signals systemic issues — <a href="https://prnfunding.com/why-accounts-receivable-management-is-the-key-to-scaling-your-homecare-agency/">PRN Funding</a> (a factoring company — directionally credible, motivated on the conclusion)</li>
+<li>Payroll structural problems: disconnected systems requiring hours of manual reconciliation despite "integrations," 50+ visit types driving pay-code sprawl, chronic off-cycle runs as a systemic-failure signal — <a href="https://www.whirks.com/blog/home-care-payroll-problems">Whirks</a></li>
+<li>Industry scale: ~35,000 home care companies, ~17,000 in personal care specifically — <a href="https://www.ankota.com/home-care-industry-overview-and-statistics">Ankota</a></li>
+</ul>
+<h3 id="tentative-hypotheses-requiring-practitioner-validation">Tentative hypotheses requiring practitioner validation</h3>
+<ul>
+<li><strong>That a per-visit manual-edit flag is present in ordinary user-accessible exports</strong> from HHAeXchange, Sandata, AxisCare and WellSky Personal Care. This is the single load-bearing assumption for the top-ranked concept and it has not been verified. Everything else in C1 is arithmetic.</li>
+<li><strong>That the exception queue costs 5–10 admin hours per week</strong> at a 100-client agency. Reasonable from the described workflow; no published measurement found.</li>
+<li><strong>The $67,000/year missed-visit figure</strong> ($140 × 10 visits/week) — <a href="https://www.alorahealth.com/blog-the-financial-impact-of-missed-homecare-visits/">Alora</a>. Vendor-constructed illustration, not measured; the per-visit rate is plausible for skilled home health and far too high for personal care. Use the <em>mechanism</em>, not the number.</li>
+<li><strong>That LTC insurance packet assembly is a significant recurring back-office cost.</strong> Sourced only to agency marketing content (<a href="https://assistinghands.com/130/tennessee/franklin/blog/common-long-term-care-insurance-claim-mistakes/">Assisting Hands</a>) and inferred from the 70–90+ day AR lag. C8 should not be built before a practitioner confirms both volume and pain.</li>
+<li><strong>That alt-EVV file rejection is frequent enough at small agencies to justify C10 on its own.</strong> The specs are verified; the rejection frequency is not. C10 may be a better product for alt-EVV <em>vendors</em> than for agencies.</li>
+<li><strong>That platform vendors will continue not to build the per-payer mid-quarter view.</strong> Reasoned from incentives, not from evidence.</li>
+</ul>
+</div></body></html>
