@@ -200,16 +200,17 @@
       "report": "reports/2026-08-08-training-and-ce-providers-back-office.md",
       "top_opportunity": "Webinar Attendance-to-Credit Reconciler - turns Zoom/Teams participant, poll and registration exports into a board-rule-correct credit award list plus an audit-evidence sheet",
       "score": 45
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Small-firm litigation support and paralegal work",
       "angle": "narrow-subspecialty",
-      "claimed_at": "2026-08-08T02:48:31.918922+00:00",
-      "claim_id": "e6d5d6aa"
+      "date": "2026-08-08",
+      "report": "reports/2026-08-08-small-firm-litigation-support-and-paralegal-work-narrow-subspecialty.md",
+      "top_opportunity": "RecordsRate - patient-directed (HIPAA right-of-access) records request generator with a state-by-state statutory fee checker and automatic invoice-dispute letters",
+      "score": 49
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -2178,6 +2179,42 @@
       "angle": "core-practitioner-workflow",
       "source": "discovered",
       "note": "ELDT providers must report to the FMCSA Training Provider Registry per driver; card issuance and verification are separate manual systems."
+    },
+    {
+      "market": "Independent legal nurse consultant (LNC) practices",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Bills $150-175/hr for record review and $250-400/hr as testifying expert; sits between the law firm and the record set and is both a substitute for and a buyer of chronology tooling."
+    },
+    {
+      "market": "Legal process outsourcing (LPO) vendors producing medical chronologies, deposition summaries and indexing for US firms",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Published per-page rate cards ($0.07-$0.10 indexing, $0.20-$0.75 review, $1.00-$1.50 deposition summary) mean every page removed or automated is directly measurable margin - unusually price-legible buyer."
+    },
+    {
+      "market": "Hospital and clinic release-of-information (ROI) departments and their outsourced vendors",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Supply side of the same transaction; under active OCR right-of-access enforcement (54 penalties) and fee class actions, with fragmented portals Datavant's own press release calls out."
+    },
+    {
+      "market": "Mass tort and class action claimant intake and plaintiff fact sheet production",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Same records pipeline at 13,000+ pages per case and thousands of claimants; court-mandated PFS deadlines make completeness auditing a sanctions issue rather than a convenience."
+    },
+    {
+      "market": "Insurance defense litigation support and claims file review at small defense firms",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Mirror image of the plaintiff workflow with a materially different HIPAA posture - defense counsel receiving PHI from a covered entity IS a business associate, which changes what software may touch the records."
+    },
+    {
+      "market": "Court reporting and deposition services firms (transcript production and summary delivery)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "Deposition summarizing runs 20-25 pages/hour and is priced at $2.50-$3.00/page by US vendors; adjacent to the same paralegal desk and similarly untooled."
     }
   ],
   "patterns": [
@@ -4165,6 +4202,109 @@
         "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)",
         "Federally qualified health centers - HRSA Section 330 grant compliance",
         "Premium audit and payroll classification consulting"
+      ]
+    },
+    {
+      "pattern": "Statutory fee-schedule checker: compute the maximum lawful charge for a routine transaction from a versioned jurisdiction-keyed rules table, and auto-generate a citation-bearing dispute letter when an invoice exceeds it",
+      "seen_in": [
+        "Small-firm litigation support and paralegal work"
+      ],
+      "transfers_to": [
+        "Workers' compensation medical billing and state fee schedule compliance",
+        "Patient financial counseling and No Surprises Act Good Faith Estimate compliance",
+        "Independent pharmacy third-party reconciliation and PBM claw-backs",
+        "Freight bill audit and payment for small shippers",
+        "Property tax consulting and assessment appeal firms"
+      ]
+    },
+    {
+      "pattern": "Document-blob decomposer: split a large multi-document PDF into labeled units using deterministic layout signals first, with a mandatory human correction pass and an explicit 'could not classify' report",
+      "seen_in": [
+        "Small-firm litigation support and paralegal work"
+      ],
+      "transfers_to": [
+        "Title abstracting and independent title search contractors",
+        "Mortgage post-closing QC and trailing document vendors",
+        "County recorder offices - document intake, indexing and rejection handling",
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Federal construction contractors on NAVFAC / USACE projects - UFGS submittal register and eCMS compliance"
+      ]
+    },
+    {
+      "pattern": "Duplicate suppression with an auditable suppression log: two-channel hashing (normalized text + perceptual image) where the log of what was removed is a first-class deliverable and nothing is ever deleted",
+      "seen_in": [
+        "Small-firm litigation support and paralegal work"
+      ],
+      "transfers_to": [
+        "Third-party claims administration (TPA) and self-insured program operations",
+        "IA firm claims operations and file QA desks (vendor-side reviewers)",
+        "Supplier quality engineering at OEMs and primes (receiving side of supplier deliverables)",
+        "Aerospace supplier quality clause library administration at machine shops and Tier 2 suppliers"
+      ]
+    },
+    {
+      "pattern": "Expected-versus-received completeness diff: build the universe of what should exist from multiple independent sources - including references mined out of the documents already received - then diff against what arrived and emit the specific next request",
+      "seen_in": [
+        "Small-firm litigation support and paralegal work"
+      ],
+      "transfers_to": [
+        "Construction submittal, RFI, and closeout coordination (project engineer role)",
+        "Provider credentialing and payer enrollment services",
+        "Prime contractor supplier cyber-compliance desks (supplier attestation collection)",
+        "C3PAO assessment operations and evidence sampling",
+        "Certificate-of-insurance compliance from the holder side (GCs, property managers, municipalities)"
+      ]
+    },
+    {
+      "pattern": "Deterministic verification layer over AI or outsourced work product: mechanically check that every cited source exists, that the cited value appears there, and what in the source is missing from the output - never using AI to check AI",
+      "seen_in": [
+        "Small-firm litigation support and paralegal work"
+      ],
+      "transfers_to": [
+        "Independent property and casualty claims adjusting",
+        "Medicare Advantage risk adjustment / HCC coding at small groups",
+        "Forensic engineering firms performing cause-and-origin investigations for insurers",
+        "Third-party estimate writing services (Xactimate estimating desks)",
+        "Fiduciary and forensic accountants producing court accountings for litigation"
+      ]
+    },
+    {
+      "pattern": "Source-once, export-many: one structured dataset with source-page anchoring that emits every downstream document format, eliminating re-keying between an internal working artifact and a client-facing one",
+      "seen_in": [
+        "Small-firm litigation support and paralegal work"
+      ],
+      "transfers_to": [
+        "Geotechnical and environmental consulting / materials testing labs",
+        "Fire protection inspection, testing and maintenance (ITM) contractors under NFPA 25",
+        "Commissioning (Cx) providers for small and midsize buildings",
+        "Test, adjust and balance (TAB) contractors",
+        "Conservatorship and guardianship accountings (court-supervised GC-400 series)"
+      ]
+    },
+    {
+      "pattern": "Statutory-form conformance checklist as versioned human-readable rules: encode a jurisdiction's mandatory elements for a legally operative document (content, delivery method, timing, required citation) and check the assembled document before it goes out",
+      "seen_in": [
+        "Small-firm litigation support and paralegal work"
+      ],
+      "transfers_to": [
+        "Multi-state charitable solicitation registration compliance",
+        "Community floodplain administration at small municipalities (permit-side floodplain compliance)",
+        "Government contracts administration at small govcons (clause and mod review)",
+        "Real estate closing law firms in attorney-opinion and attorney-closing states",
+        "Certified payroll and prevailing wage compliance service providers"
+      ]
+    },
+    {
+      "pattern": "Mixed business-day / calendar-day regulatory deadline docket generated from per-obligation rule packs, including the day interest begins to accrue",
+      "seen_in": [
+        "Small-firm litigation support and paralegal work"
+      ],
+      "transfers_to": [
+        "Third-party claims administration (TPA) and self-insured program operations",
+        "Unclaimed property and escheat compliance service providers",
+        "Retirement plan third-party administrators (TPAs) for small 401(k) plans",
+        "DOT compliance consultancies and third-party safety managers serving small fleets",
+        "Court probate examiner and clerk offices (public-sector reviewer side)"
       ]
     }
   ]
