@@ -202,7 +202,14 @@
       "score": 45
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Small-firm litigation support and paralegal work",
+      "angle": "narrow-subspecialty",
+      "claimed_at": "2026-08-08T02:48:31.918922+00:00",
+      "claim_id": "e6d5d6aa"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -417,12 +424,6 @@
     {
       "market": "Small-firm litigation support and paralegal work",
       "angle": "core-practitioner-workflow",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Small-firm litigation support and paralegal work",
-      "angle": "narrow-subspecialty",
       "source": "seed",
       "note": ""
     },
