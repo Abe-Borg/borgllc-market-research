@@ -192,16 +192,17 @@
       "report": "reports/2026-08-08-dental-specialty-clinic-practice-administration-handoffs-and-qa.md",
       "top_opportunity": "Clearance Request Builder & Reply Tracker - structured medical-clearance request with named answer slots, guideline pre-check, and reply-completeness tracking",
       "score": 45
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Training organizations and continuing-education providers",
       "angle": "back-office",
-      "claimed_at": "2026-08-08T01:48:37Z",
-      "claim_id": "9460e720"
+      "date": "2026-08-08",
+      "report": "reports/2026-08-08-training-and-ce-providers-back-office.md",
+      "top_opportunity": "Webinar Attendance-to-Credit Reconciler - turns Zoom/Teams participant, poll and registration exports into a board-rule-correct credit award list plus an audit-evidence sheet",
+      "score": 45
     }
   ],
+  "claimed": [],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -2140,6 +2141,42 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "The receiving side of the claim-attachment handoff; publishes the rules corpus this cycle identified as the key asset, and runs its own documentation-sufficiency QA"
+    },
+    {
+      "market": "Third-party CE/CME accreditation consultants and joint-providership partners",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "Small consultancies shepherd providers through NASBA/ACCME/ANCC/IACET accreditation and run joint providership for unaccredited sponsors; entirely document-and-deadline driven."
+    },
+    {
+      "market": "Personnel certification bodies under ISO/IEC 17024",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Certification bodies must run exams, recertification cycles, appeals and impartiality records under an accreditation standard with tiny staffs."
+    },
+    {
+      "market": "Apprenticeship program sponsors and DOL RAPIDS reporting",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Registered apprenticeship sponsors track OJT hours, related instruction and wage progressions and file to state and federal systems on fixed cycles."
+    },
+    {
+      "market": "Association management companies (AMCs) running education for multiple client associations",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "One team carries every client's approvals, filings and retention clocks simultaneously; pain multiplies linearly with clients."
+    },
+    {
+      "market": "State licensing board education/CE audit units (regulator side)",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "The receiving side of every filing in this report: intake, format validation, provider audits and deficiency letters."
+    },
+    {
+      "market": "Safety training providers issuing OSHA and DOT credentials (OSHA 10/30, HAZWOPER, CDL entry-level driver training)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "ELDT providers must report to the FMCSA Training Provider Registry per driver; card issuance and verification are separate manual systems."
     }
   ],
   "patterns": [
@@ -4066,6 +4103,67 @@
         "Construction subcontractor project management at 15-150 employee specialty trades",
         "Warehouse and 3PL fulfillment receiving/shipping document control",
         "Machine shop / job shop quoting and production control"
+      ]
+    },
+    {
+      "pattern": "Canonical record to many regulator-specific file formats: one internal dataset emitted as N mutually incompatible, positionally-specified, deadline-bound regulator submissions",
+      "seen_in": [
+        "Training organizations and continuing-education providers"
+      ],
+      "transfers_to": [
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "Truck permitting and registration service agencies (IRP, IFTA, OS-OW, state permits)",
+        "Multi-state charitable solicitation registration compliance",
+        "Provider credentialing and payer enrollment services",
+        "Unclaimed property and escheat compliance service providers"
+      ]
+    },
+    {
+      "pattern": "Credential expiration register cross-checked against the forward work calendar: flags scheduled work whose governing approval or certification expires before the work date",
+      "seen_in": [
+        "Training organizations and continuing-education providers"
+      ],
+      "transfers_to": [
+        "Calibration and metrology service providers / in-house gage management",
+        "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)",
+        "Welding inspection (AWS CWI) and NDT service providers under ASTM E543 / SNT-TC-1A",
+        "DOT compliance consultancies and third-party safety managers serving small fleets",
+        "Radiation safety officer services and portable gauge licensee compliance"
+      ]
+    },
+    {
+      "pattern": "Session telemetry to audit-grade evidence: platform exports are operationally shaped, not evidentiarily shaped, and the transformation is manual and repeated",
+      "seen_in": [
+        "Training organizations and continuing-education providers"
+      ],
+      "transfers_to": [
+        "Remote online notarization (RON) platform operators and RON-commissioned notaries",
+        "Consortium / third-party administrators (C-TPAs) for DOT drug and alcohol programs",
+        "Test, adjust and balance (TAB) contractors"
+      ]
+    },
+    {
+      "pattern": "Multi-regime retention clock with max-across-regimes disposition list and erasure-request conflict worksheet",
+      "seen_in": [
+        "Training organizations and continuing-education providers"
+      ],
+      "transfers_to": [
+        "Government contracts administration at small govcons (clause and mod review)",
+        "ITAR and EAR export compliance administration at small manufacturers",
+        "County recorder offices - document intake, indexing and rejection handling",
+        "Title abstracting and independent title search contractors"
+      ]
+    },
+    {
+      "pattern": "Published-deficiency-list-driven evidence package builder: where the regulator publishes its own top failure modes, assemble evidence and emit a gap manifest keyed to that list",
+      "seen_in": [
+        "Training organizations and continuing-education providers"
+      ],
+      "transfers_to": [
+        "C3PAO assessment operations and evidence sampling",
+        "Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)",
+        "Federally qualified health centers - HRSA Section 330 grant compliance",
+        "Premium audit and payroll classification consulting"
       ]
     }
   ]

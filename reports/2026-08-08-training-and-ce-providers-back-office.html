@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Training Organizations and Continuing-Education Providers — Back Office</title>
+<style>
+:root{--ink:#1c1c1e;--muted:#5c5f66;--rule:#e2e2e6;--accent:#7a3b12;--bg:#fbfaf8;--tblhead:#f3f1ed;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+ font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+ font-size:18px;line-height:1.68;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:900px;margin:0 auto;padding:64px 28px 120px;}
+h1{font-size:2.15em;line-height:1.2;margin:0 0 .1em;letter-spacing:-.015em;}
+h2{font-size:1.5em;margin:2.4em 0 .5em;padding-bottom:.28em;border-bottom:2px solid var(--rule);letter-spacing:-.01em;}
+h3{font-size:1.18em;margin:1.9em 0 .35em;color:var(--accent);}
+h4{font-size:1.02em;margin:1.4em 0 .3em;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);}
+p{margin:0 0 1.05em;}
+a{color:#0f4c81;text-decoration:none;border-bottom:1px solid rgba(15,76,129,.28);}
+a:hover{border-bottom-color:#0f4c81;}
+ul,ol{margin:0 0 1.15em;padding-left:1.5em;}
+li{margin:.34em 0;}
+li>ul,li>ol{margin:.3em 0;}
+strong{font-weight:600;}
+code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.85em;
+ background:#efedea;padding:.12em .38em;border-radius:3px;}
+hr{border:0;border-top:1px solid var(--rule);margin:2.8em 0;}
+blockquote{margin:1.2em 0;padding:.2em 0 .2em 1.2em;border-left:3px solid var(--rule);color:var(--muted);}
+table{border-collapse:collapse;width:100%;margin:1.5em 0 1.9em;font-size:.86em;
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.45;}
+th,td{border:1px solid var(--rule);padding:8px 11px;text-align:left;vertical-align:top;}
+th{background:var(--tblhead);font-weight:600;}
+tbody tr:nth-child(even){background:#f7f6f3;}
+td:first-child{white-space:nowrap;}
+table td:nth-child(n+3){text-align:left;}
+.meta{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+ font-size:.9em;color:var(--muted);margin:0 0 2.2em;}
+h1+hr{display:none;}
+@media (max-width:640px){body{font-size:16.5px}.wrap{padding:36px 18px 80px}table{font-size:.78em}td:first-child{white-space:normal}}
+@media print{body{background:#fff}.wrap{padding:0}a{border:0;color:#000}}
+</style></head>
+<body><div class="wrap">
+<h1 id="training-organizations-and-continuing-education-providers-back-office">Training Organizations and Continuing-Education Providers — Back Office</h1>
+<p><strong>Market:</strong> Training organizations and continuing-education providers
+<strong>Angle:</strong> back-office
+<strong>Claim ID:</strong> 9460e720
+<strong>Date:</strong> 2026-08-08</p>
+<hr />
+<h2 id="0-cycle-header">0. Cycle header</h2>
+<h3 id="why-this-assignment">Why this assignment</h3>
+<p>The ledger held 323 open assignments across 179 markets with zero completed entries. The
+selection rule prioritizes breadth over depth, then evidence availability, then angle
+diversity. Three considerations decided it:</p>
+<ol>
+<li><strong>Breadth.</strong> The catalog to date is heavily weighted toward architecture/engineering/
+   construction (7 of 24 reports), insurance and claims (4), transportation (2), and
+   healthcare revenue cycle (2). Professional education is an entirely untouched vertical
+   that sits <em>adjacent</em> to almost every market already covered — nearly every licensed
+   profession in the completed reports (CPAs, engineers, insurance adjusters, nurses,
+   attorneys, contractors) is a <em>consumer</em> of CE. Covering the supply side opens a market
+   whose customers overlap the catalog's existing research base.</li>
+<li><strong>Angle diversity.</strong> Completed angles skew to <code>core-practitioner-workflow</code> (9 of 24).
+   <code>back-office</code> had 5. More importantly, for CE providers the back office <em>is</em> the
+   regulated function — the teaching is unregulated craft, the recordkeeping and filing is
+   where the license risk lives. This is one of the rare markets where "back-office" is the
+   high-stakes angle rather than the residual one.</li>
+<li><strong>Evidence quality.</strong> Every obligation in this market is written down in public
+   regulatory text, and the <em>file formats</em> providers must produce are published. That means
+   findings are verifiable rather than inferred — the strongest possible base for
+   recommending software. This turned out to be correct: the research below cites exact
+   deadlines, retention periods, field-level file specifications, and a published list of
+   the top five audit deficiencies.</li>
+</ol>
+<p>Assignments considered and passed over: <em>Small CPA tax preparation practices</em> (crowded
+incumbent software: Drake, Lacerte, UltraTax — most pain is inside tools we cannot displace);
+<em>Marketing and creative agency account and production management</em> (the honest answer there is
+"generic project management," which the brief explicitly tells us to avoid); <em>Structural
+engineering firms</em> (more AEC, and the catalog is already saturated there).</p>
+<p><strong>Backlog remaining after this claim: 323 assignments.</strong></p>
+<hr />
+<h2 id="1-market-examined">1. Market examined</h2>
+<h3 id="who-is-in-this-market">Who is in this market</h3>
+<p>"Continuing-education provider" is a regulatory status, not an industry. The entities holding
+it are diverse, and that diversity is itself the market structure:</p>
+<table>
+<thead>
+<tr>
+<th>Provider type</th>
+<th>Typical size</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Independent CE publishers / course shops</td>
+<td>1–15 staff</td>
+<td>ce-classes.com, NetCE, small self-study catalogs</td>
+</tr>
+<tr>
+<td>Trade and professional associations (state and specialty)</td>
+<td>3–40 staff, 1–3 on education</td>
+<td>State CPA societies, state bar sections, specialty nursing associations</td>
+</tr>
+<tr>
+<td>Training companies serving a trade</td>
+<td>5–50 staff</td>
+<td>Insurance CE schools, contractor CE schools, safety training firms</td>
+</tr>
+<tr>
+<td>Vendors/manufacturers running CE as marketing</td>
+<td>1–3 people, part-time</td>
+<td>AIA CES providers, product manufacturers, law-firm-hosted CLE</td>
+</tr>
+<tr>
+<td>Hospital/health-system education departments</td>
+<td>2–10 staff</td>
+<td>ACCME-accredited providers, ANCC provider units</td>
+</tr>
+<tr>
+<td>University and community-college continuing-ed units</td>
+<td>5–30 staff</td>
+<td>CE divisions issuing IACET CEUs</td>
+</tr>
+<tr>
+<td>Consultancies and firms offering CE to clients</td>
+<td>education is a side function</td>
+<td>Accounting firms with NASBA sponsor IDs, law firms with MCLE approval</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-professional-this-report-is-about">The professional this report is about</h3>
+<p>The <strong>CE administrator</strong> — variously titled Continuing Education Coordinator, Education
+Manager, Program Specialist, CME Coordinator, Accreditation Manager, or (at the small end)
+"the office manager who also does the CE." Characteristics observed consistently:</p>
+<ul>
+<li>Frequently <strong>one person</strong>, sometimes 0.5 FTE, rarely more than three.</li>
+<li>Not a developer; lives in Excel, Outlook, a registration platform, and a stack of
+  regulator web portals.</li>
+<li>Holds the organization's <strong>regulatory approvals</strong> — meaning a clerical mistake is a
+  license-level risk, not just an annoyance.</li>
+<li>Turnover in the role is high, and the institutional knowledge (which board wants which
+  file, by when) leaves with them.</li>
+</ul>
+<h3 id="organization-size-most-likely-to-benefit">Organization size most likely to benefit</h3>
+<p><strong>2–40 total staff, delivering 10–300 credit-bearing sessions per year, holding between 3 and
+40 separate regulatory approvals.</strong> Below that, the volume does not justify tooling. Above
+it, the organization has bought a $30k–$150k/yr accreditation LMS. The gap in the middle is
+wide and poorly served — which is exactly the catalog's target.</p>
+<hr />
+<h2 id="2-how-the-work-is-performed">2. How the work is performed</h2>
+<p>The back office of a CE provider is a <strong>repeating cycle per activity</strong>, wrapped in an
+<strong>annual approval-maintenance cycle</strong>, both underlaid by a <strong>retention obligation</strong>. All three
+run on spreadsheets at the target organization size.</p>
+<h3 id="21-before-the-activity-approval-and-setup">2.1 Before the activity — approval and setup</h3>
+<ol>
+<li><strong>Confirm the provider approval is current</strong> for every jurisdiction where credit will be
+   claimed. Approvals are per-board, per-profession, per-state, and they expire on
+   independent schedules. Texas TDLR provider registration is "valid for one year from the
+   date of issuance." IRS CE provider status carries a <strong>$650 annual fee</strong> payable each
+   calendar year. New York charges <strong>$50 per instructor</strong> application and <strong>$50 per renewal</strong>.</li>
+<li><strong>Confirm the course approval is current.</strong> Some boards approve courses permanently
+   (North Carolina insurance: course approvals "are not subject to renewal," though a
+   provider that runs no course for a full calendar year is deactivated). Others expire:
+   IRS program numbers expire "12/31 of the third year after issuance," and Annual Federal
+   Tax Refresher program numbers expire <strong>every December 31</strong>.</li>
+<li><strong>File pre-presentation notices.</strong> Washington State requires a "10-day notice of course
+   presentation" filed minimum 10 and maximum 60 days before each classroom or webinar
+   session held in the state — per session, not per course.</li>
+<li><strong>Assemble the instructor file.</strong> Resumes/CVs and qualification evidence, plus — for
+   NASBA sponsors — documented credentials for authors, developers, instructors, <em>and</em>
+   program reviewers.</li>
+<li><strong>Compute the credit award.</strong> Under the NASBA Statement on Standards, one credit is 50
+   minutes; credits after the first may be awarded in one-fifth or one-half increments; and
+   self-study totals must be <strong>rounded down</strong>, never up. Breaks, introductions, and
+   administrative time are not creditable — miscounting them is an audit finding.</li>
+</ol>
+<h3 id="22-during-the-activity-evidence-capture">2.2 During the activity — evidence capture</h3>
+<p>This is where the compliance burden actually bites, and it differs by delivery method:</p>
+<ul>
+<li><strong>Group live:</strong> sign-in <em>and</em> sign-out, arrival and departure times, handling of late
+  arrivals and early departures, monitor attestations. Washington requires attendance
+  registers with signatures and arrival/departure times.</li>
+<li><strong>Group internet based (webinar):</strong> a real-time attendance-monitoring mechanism, plus
+  "at least three instances of interactivity completed by the participant per CPE credit,"
+  distributed at irregular intervals so participants cannot anticipate them. Participants
+  must be told in advance how many polls are required and how many must be answered
+  correctly for full credit. Washington goes further and requires the webinar record to
+  contain "names, phone numbers, WAOIC numbers, log-in/log-out times, chat history, and
+  polling responses."</li>
+<li><strong>New York insurance:</strong> photo-ID inspection before admission, arrival times, sign-out
+  times, return-from-meal-break times, and <strong>100% attendance with no partial credit
+  permitted</strong>.</li>
+<li><strong>Self-study:</strong> a final exam with a passing grade (70% in New York), plus pilot-test
+  results or word-count formula calculations retained as evidence for NASBA.</li>
+</ul>
+<h3 id="23-after-the-activity-the-filing-scramble">2.3 After the activity — the filing scramble</h3>
+<p>Within a window measured in <strong>days</strong>, the administrator must:</p>
+<ol>
+<li>Reconcile registration data against actual attendance data.</li>
+<li>Compute per-attendee credit, including partial credit where allowed and zero credit where
+   not.</li>
+<li>Generate certificates containing board-specific required elements.</li>
+<li>File the roster with each board, in each board's format, through each board's portal.</li>
+<li>Pay per-roster fees where they exist.</li>
+<li>Answer the inevitable "my credit isn't showing" emails.</li>
+</ol>
+<p><strong>The deadlines are short and they are not aligned:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Regime</th>
+<th>Filing deadline after course completion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texas TDLR</td>
+<td><strong>7 days</strong>, electronically via TDLR portal</td>
+</tr>
+<tr>
+<td>Washington OIC (insurance)</td>
+<td><strong>10 days</strong> — "repeated violations of the 10-day roster rule can result in an enforcement action"</td>
+</tr>
+<tr>
+<td>Ohio CSWMFT (social work/counseling/MFT)</td>
+<td><strong>14 business days</strong>, via CE Broker</td>
+</tr>
+<tr>
+<td>North Carolina DOI (insurance)</td>
+<td><strong>15 business days</strong>, via Sircon</td>
+</tr>
+<tr>
+<td>New York DFS (insurance)</td>
+<td>roster within <strong>2 weeks</strong>; completion record filed electronically within <strong>30 days</strong></td>
+</tr>
+<tr>
+<td>Florida (CE Broker)</td>
+<td><strong>30 days</strong></td>
+</tr>
+<tr>
+<td>ACPE / CPE Monitor (pharmacy)</td>
+<td>provider has <strong>60 days</strong> from course date to submit to ACPE</td>
+</tr>
+<tr>
+<td>California MCLE (attorneys)</td>
+<td>electronic attendance records within <strong>60 days</strong></td>
+</tr>
+<tr>
+<td>District of Columbia (CE Broker)</td>
+<td><strong>90 days</strong></td>
+</tr>
+<tr>
+<td>IRS CE providers</td>
+<td>quarterly by Mar 31 / Jun 30 / Sep 30, then <strong>within 10 business days of each program</strong> from Oct 1–Dec 31</td>
+</tr>
+</tbody>
+</table>
+<p>A provider holding approvals in ten jurisdictions is running ten different clocks against a
+single roster.</p>
+<h3 id="24-the-file-formats-are-not-interchangeable">2.4 The file formats are not interchangeable</h3>
+<p>This is the single most under-appreciated fact about this market. The published CE Broker
+Excel upload specification is not a spreadsheet in any normal sense — it is a <strong>positional
+fixed-format record layout that happens to live in .xls</strong>:</p>
+<ul>
+<li>Six record types in order: Provider (1 per file), Course (≥1), Attendee (≥1 per course),
+  Partial Credit (optional), Course Control (≥1), End-of-File (1).</li>
+<li>"Each row, or record, is allowed a maximum length of <strong>100 characters</strong>."</li>
+<li>Attendee records carry a 4-character <strong>profession code</strong> plus a 9-digit license number,
+  because "the License # assigned by PRAES is a 4+9 digit alphanumeric number."</li>
+<li>State is encoded as a literal string: <code>State=FL</code>.</li>
+<li>Dates are <code>mm/dd/ccyy</code>. Course Control carries a 4-digit attendee count; EOF carries a
+  6-digit course count and a 6-digit total record count.</li>
+<li>Files are rejected pre-import for "Incorrect Record Length," "Invalid Record Type,"
+  "The File must contain only one Provider record," "License Number not found on the DOH/MQA
+  Licensing Database," "Completed hours cannot be greater than offered hours."</li>
+<li>Rows are rejected post-import for duplicate attendees within a course publication, license
+  numbers absent from the licensing database, completion dates mismatched with the
+  publication end date, subject-area codes outside the course's approved areas, and partial
+  credit not permitted by that licensee's board.</li>
+<li>A Roster Summary returns "within one minute" with rejected fields highlighted in red for
+  correction and resubmission.</li>
+</ul>
+<p>Meanwhile the IRS requires a <strong>different</strong> structure — attendee first and last name (matching
+the PTIN record exactly), attendee PTIN, program number, hours, and completion date — via an
+XLSX template with a <strong>2MB file size cap</strong>, recommended for batches of 25+, with erroneous
+records requiring deletion and a <strong>24-hour wait</strong> before resubmission. California MCLE
+requires the State Bar's own Attendance Record Upload Template with its own General
+Instructions tab, submitted through the MCLE Attendance Record Upload Form. North Carolina
+routes through Sircon and charges <strong>$2.00 per credit hour per student</strong> in roster fees.</p>
+<p><strong>One roster. Six or ten incompatible destination formats. Zero shared tooling.</strong></p>
+<h3 id="25-the-retention-obligation">2.5 The retention obligation</h3>
+<p>Records must be kept — but for wildly different periods, and nobody has one clock:</p>
+<table>
+<thead>
+<tr>
+<th>Regime</th>
+<th>Retention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texas TDLR</td>
+<td>2 years after course completion</td>
+</tr>
+<tr>
+<td>Washington OIC</td>
+<td>3 years</td>
+</tr>
+<tr>
+<td>New York DFS</td>
+<td>3 years</td>
+</tr>
+<tr>
+<td>North Carolina DOI</td>
+<td>3 years</td>
+</tr>
+<tr>
+<td>Minnesota Board of Social Work</td>
+<td>3 years</td>
+</tr>
+<tr>
+<td>California MCLE</td>
+<td><strong>4 years</strong> for attendance records; 1 year for evaluations</td>
+</tr>
+<tr>
+<td>IRS CE providers</td>
+<td><strong>4 years</strong> after last completion date (syllabi, materials, evaluations, certificates, attendance)</td>
+</tr>
+<tr>
+<td>NASBA / CPA-facing</td>
+<td>CPAs retain 5 years; sponsors retain Standard No. 24 documentation</td>
+</tr>
+</tbody>
+</table>
+<p>IACET has separately flagged the collision between GDPR "right to be forgotten" requests and
+the obligation to retain learner records — an unresolved tension for any provider with
+international learners.</p>
+<h3 id="26-software-currently-in-use">2.6 Software currently in use</h3>
+<ul>
+<li><strong>Registration/e-commerce:</strong> Eventbrite, Cvent, Wild Apricot, association AMS modules.</li>
+<li><strong>Delivery:</strong> Zoom Webinars, Teams, GoToWebinar; Moodle, Thinkific, LearnDash for self-study.</li>
+<li><strong>Accreditation LMS (the "real" tools):</strong> EthosCE, CloudCME, Highmarks CE, CE21, Blue Sky,
+  Cadmium, Arlo, CEU Events. EthosCE lists an entry point around <strong>$1,750 per installation</strong>
+  with tiers "not readily available, requiring a custom quote" — the standard pattern in this
+  segment is opaque pricing, annual contracts, and implementation projects.</li>
+<li><strong>Everything else:</strong> Excel. Arlo's own marketing describes providers where "learner details,
+  payments, and course records are scattered across spreadsheets, email threads," and cites a
+  customer spending <strong>up to 30 hours a week</strong> on administrative process.</li>
+</ul>
+<hr />
+<h2 id="3-most-important-problems-ranked">3. Most important problems (ranked)</h2>
+<h3 id="p1-one-roster-must-become-n-incompatible-regulator-filings-each-on-its-own-short-clock">P1 — One roster must become N incompatible regulator filings, each on its own short clock</h3>
+<p><strong>Who:</strong> The CE administrator at any provider holding approvals in more than two jurisdictions.
+<strong>When:</strong> After every single credit-bearing activity, 10–300 times per year.
+<strong>Currently handled by:</strong> Manually re-keying or hand-transforming an attendee list into each
+board's portal or template — CE Broker's positional .xls, the IRS XLSX template, the CalBar
+template, Sircon's web forms, TDLR's PIN-protected page.
+<strong>Why inadequate:</strong> The transformations are mechanical but unforgiving. CE Broker rejects on
+row length, record type, record counts, license-database lookup failure, and subject-code
+mismatch. The IRS returns records with invalid PTINs and imposes a 24-hour wait before
+resubmission. Every rejection is a manual correction cycle against a 7–15 day statutory clock.
+<strong>Frequency:</strong> Every activity × every jurisdiction. For a mid-sized provider this is the single
+highest-volume recurring back-office task.
+<strong>Cost:</strong> Estimated 30–90 minutes per activity per jurisdiction at the manual end. At 60
+activities/year across 6 jurisdictions, that is 180–540 hours annually. Late or failed filings
+carry enforcement exposure (Washington explicitly), and per-roster fees mean errors can also
+cost cash (NC's $2/credit-hour/student is charged on what you file).
+<strong>Evidence:</strong> Published deadlines and file specifications from CE Broker, IRS, CalBar, NCDOI,
+NY DFS, TDLR, WA OIC — all cited in §8. This is verified, not inferred.</p>
+<h3 id="p2-approvals-program-numbers-and-instructor-authorizations-expire-silently">P2 — Approvals, program numbers, and instructor authorizations expire silently</h3>
+<p><strong>Who:</strong> The person who holds the provider's regulatory approvals.
+<strong>When:</strong> Continuously; discovered at the worst possible moment.
+<strong>Currently handled by:</strong> A spreadsheet, a calendar reminder, or nothing.
+<strong>Why inadequate:</strong> The expirations are numerous, independent, and invisible until a learner's
+credit is denied. <strong>The clearest evidence in this entire report:</strong> ce-classes.com, a real CE
+provider, publicly lists its approvals — and multiple approval numbers on that page carry
+<strong>expired dates</strong>: ASWB #1142 (expired 1/5/2020), NBCC ACEP #6320 (expired 4/30/2019), Texas
+Board of Social Work Examiners #5674 (expired 4/30/2020), CCAPP (expired 02/2021), Ohio</p>
+<h1 id="rcst031201-expired-5312021-california-brn-cep-15647-expired-11302022-that-is-a">RCST031201 (expired 5/31/2021), California BRN CEP 15647 (expired 11/30/2022). That is a</h1>
+<p>provider carrying <strong>12 distinct approvals</strong> across national bodies and 8 state boards, with the
+public-facing register visibly out of date. If the public page is stale, the internal tracking
+almost certainly is too.
+<strong>Frequency:</strong> Each approval renews annually to triennially; a 12-approval provider faces
+roughly one renewal event per month, plus IRS program numbers expiring on 12/31 of their third
+year and AFTR numbers expiring every year.
+<strong>Cost:</strong> Renewal fees are small ($50 NY instructor, $650 IRS annual). The real cost is a
+<strong>lapse</strong>: credit awarded under a dead approval is credit the learner may not be able to use,
+which means refunds, reissued certificates, reputational damage with the board, and potentially
+a re-application rather than a renewal.
+<strong>Evidence:</strong> Verified — expired numbers visible on a live provider site; TDLR one-year
+registration; IRS three-year program-number expiry; NY per-instructor renewal fees.</p>
+<h3 id="p3-webinar-telemetry-does-not-equal-audit-grade-attendance-evidence-and-the-gap-is-manual">P3 — Webinar telemetry does not equal audit-grade attendance evidence, and the gap is manual</h3>
+<p><strong>Who:</strong> Any provider delivering live online credit.
+<strong>When:</strong> After every webinar.
+<strong>Currently handled by:</strong> Exporting the Zoom/Teams participant report and eyeballing it.
+<strong>Why inadequate:</strong> The raw export is the wrong shape. Attendees appear multiple times when
+they drop and rejoin; registration and participant reports must be reconciled; custom
+registration answers (license number, state, profession) must be read per row. One vendor
+describes the manual job as needing to "manually de-duplicate attendance data, reconcile
+registration and participant report and scroll through each custom answer response," then
+determine eligibility from cumulative duration plus responses. Separately, the credit rule is
+not "did they attend" — under NASBA it is minutes-based with round-down and fractional
+increments, gated on completing at least three interactivity instances per credit; under New
+York insurance it is all-or-nothing at 100% attendance; under CE Broker it may be a partial-
+credit record with subject-area codes.
+<strong>Frequency:</strong> Every live online session — for many providers, weekly.
+<strong>Cost:</strong> 1–3 hours per webinar of clerical reconciliation, plus a persistent error rate.
+Under-awarding generates complaint traffic; over-awarding is a compliance finding.
+<strong>Evidence:</strong> Verified — vendor description of the manual workflow, NASBA interactivity and
+increment rules, WA OIC's explicit requirement that webinar records include log-in/log-out
+times, chat history, and polling responses.</p>
+<h3 id="p4-attendance-documentation-fails-audits-in-a-small-known-repeating-set-of-ways">P4 — Attendance documentation fails audits in a small, known, repeating set of ways</h3>
+<p><strong>Who:</strong> Every registered sponsor subject to periodic compliance audit.
+<strong>When:</strong> On audit selection — random and unannounced (NY DFS may conduct "announced or
+unannounced audits").
+<strong>Currently handled by:</strong> Retrieving sign-in sheets and hoping.
+<strong>Why inadequate:</strong> NASBA publishes the <strong>top five group-live attendance deficiencies</strong>, and
+they are all documentation-shape problems rather than conduct problems:
+1. Supporting documentation does not match the monitoring procedure the sponsor described on
+   the audit form.
+2. Records lack duration, time-out stamps, or an explanation of how late arrivals and early
+   departures are handled — "a scanning system capturing only check-in times is insufficient."
+3. Participant self-certification alone is not sufficient.
+4. Written policies are too vague — "sign-in sheets" without sign-out, facilitator
+   verification, or break management.
+5. Where delivery is outsourced to a client, accountability stays with the registered sponsor.
+A related published list adds promotional-material omissions, missing instructor/reviewer
+credentials, and CPE calculation errors (wrong rounding, crediting breaks or introductions).
+<strong>Frequency:</strong> Low per provider, catastrophic per occurrence.
+<strong>Cost:</strong> Remediation cycles, possible suspension or revocation of sponsor status. New York's
+Superintendent may impose "fine or suspension or revocation of approvals"; California's State
+Bar may suspend or revoke provider approval for failure to maintain records.
+<strong>Evidence:</strong> Verified and unusually specific — the regulator publishes the failure modes.</p>
+<h3 id="p5-certificates-carry-different-mandatory-contents-per-board-and-must-be-reproducible-for-years">P5 — Certificates carry different mandatory contents per board, and must be reproducible for years</h3>
+<p><strong>Who:</strong> Administrator; and the learner who lost theirs.
+<strong>When:</strong> After each activity, then unpredictably for years.
+<strong>Currently handled by:</strong> Word mail-merge, or the registration platform's generic certificate.
+<strong>Why inadequate:</strong> Required elements differ materially. NASBA: sponsor name, participant name,
+course title, date, location, instructional delivery method, credits by field of study, sponsor
+ID number, state registration number. California MCLE: provider name, activity title and date,
+total hours <strong>broken out by credit category</strong> (ethics, elimination of bias, implicit bias,
+wellness, technology, civility, specialization), activity type (participatory vs. self-study),
+and the licensee's name and bar number — with different labels for participatory
+("Certificate of Attendance") versus self-study ("Certificate of Completion"). Minnesota social
+work: sponsor name, title and date, clock hours, <strong>names of presenters</strong>. The IRS adds a
+negative requirement — PTINs must appear on the submitted record but <strong>must not</strong> appear on the
+certificate. BACB ACE Providers must "provide replacement certificates to participants when
+requested, <strong>up to 3 years after the event</strong>."
+<strong>Frequency:</strong> Every activity; reissues indefinitely.
+<strong>Cost:</strong> Modest per instance, high in aggregate; a template that silently omits a required
+element produces a defect across every certificate issued under it.
+<strong>Evidence:</strong> Verified from primary sources for four independent regimes.</p>
+<h3 id="p6-retention-clocks-conflict-and-nobody-knows-what-can-be-destroyed">P6 — Retention clocks conflict and nobody knows what can be destroyed</h3>
+<p><strong>Who:</strong> Administrator, and whoever inherits the shared drive.
+<strong>When:</strong> Never, which is the problem.
+<strong>Currently handled by:</strong> Keeping everything forever in nested folders.
+<strong>Why inadequate:</strong> Retention ranges from 2 years (TX) to 4 years (CA MCLE, IRS) with 3 years
+common, and different artifact classes within one regime have different clocks (CA MCLE:
+attendance 4 years, evaluations 1 year). IACET has flagged that indefinite retention now
+collides with erasure rights.
+<strong>Frequency:</strong> Continuous, low-salience.
+<strong>Cost:</strong> Low direct cost; real risk is over-retention of licensee PII and inability to produce
+the <em>right</em> record on audit because it is buried among ten years of the wrong ones.
+<strong>Evidence:</strong> Verified retention periods; the GDPR tension is documented by IACET.</p>
+<h3 id="p7-roster-fees-and-reporting-costs-are-unbudgeted-and-unreconciled">P7 — Roster fees and reporting costs are unbudgeted and unreconciled</h3>
+<p><strong>Who:</strong> Whoever signs the checks.
+<strong>When:</strong> Per filing and annually.
+<strong>Currently handled by:</strong> Paying invoices as they arrive.
+<strong>Why inadequate:</strong> Fees are per-transaction and volume-driven — NC insurance at $2.00 per
+credit hour per student (a 4-credit course with 40 students = $320 in filing fees alone), TDLR
+at $5 per licensee for barber/cosmetology and tow providers, IRS at $650/year. These are
+rarely modeled into course pricing.
+<strong>Frequency:</strong> Per filing.
+<strong>Cost:</strong> Direct cash, small but systematically ignored in pricing decisions.
+<strong>Evidence:</strong> Verified fee schedules.</p>
+<hr />
+<h2 id="4-application-opportunities">4. Application opportunities</h2>
+<h3 id="a1-board-filing-formatter-one-roster-in-every-regulator-format-out">A1 — Board Filing Formatter ("one roster in, every regulator format out")</h3>
+<ul>
+<li><strong>User:</strong> CE administrator at a provider holding 3–15 approvals.</li>
+<li><strong>Problem solved:</strong> P1.</li>
+<li><strong>Current workflow:</strong> Export attendees → hand-build a CE Broker positional .xls → separately
+  hand-build the IRS XLSX → separately fill the CalBar template → key the rest into portals →
+  fix rejections against a 7–15 day clock.</li>
+<li><strong>Proposed workflow:</strong> Maintain one canonical roster CSV (name, license/PTIN/bar number,
+  profession, state, minutes attended, credit awarded, completion date). Select target
+  regimes. The tool emits a validated, ready-to-upload file per regime plus a pre-flight
+  exception list.</li>
+<li><strong>Inputs:</strong> Canonical roster CSV; a provider profile (provider numbers per board, course
+  tracking numbers, publication end dates, profession/subject codes).</li>
+<li><strong>Outputs:</strong> CE Broker-compliant .xls with all six record types in order, ≤100-char rows,
+  correct control and EOF counts; IRS XLSX under 2MB with batch splitting; CalBar template;
+  generic CSVs for portal-paste regimes; a rejection-risk report.</li>
+<li><strong>Essential features:</strong> Record-length enforcement; profession/subject-code lookup tables;
+  date normalization to <code>mm/dd/ccyy</code>; duplicate-attendee detection within a course
+  publication; completion-date vs. publication-end-date consistency check;
+  hours-awarded ≤ hours-offered check; automatic 2MB batch splitting for IRS.</li>
+<li><strong>Excluded from v1:</strong> Direct API/FTP submission (CE Broker offers web services and FTP, but
+  credentialed integration is a v2 paid-customization concern, not a free-base-version
+  concern); registration; payments; content delivery.</li>
+<li><strong>AI:</strong> <strong>Inappropriate.</strong> These are deterministic format transformations. AI here would
+  add nondeterminism to a task whose entire value is being exactly right.</li>
+<li><strong>Why not a spreadsheet:</strong> A spreadsheet can hold the data but cannot enforce a six-record-
+  type positional layout with per-row character caps, cross-record count reconciliation, and
+  conditional partial-credit records. People do attempt this in Excel — that is precisely why
+  rejections happen.</li>
+<li><strong>Complexity:</strong> Medium. <strong>Learning difficulty:</strong> Low — it is an import/export screen.</li>
+<li><strong>Value:</strong> Removes the 30–90 min/filing transformation and most rejection cycles. At 6
+  jurisdictions × 60 activities, plausibly 150–400 hours/year.</li>
+<li><strong>Risks:</strong> Format drift — regulators change templates. Mitigate by making format definitions
+  external, versioned, data-driven files rather than code, so a community can maintain them.
+  Handles licensee PII (names, license numbers) — must be local-first, no cloud upload by
+  default.</li>
+<li><strong>Substitutes:</strong> Accreditation LMSs (EthosCE, CloudCME, CE21) do this <em>if</em> you run your whole
+  program inside them. Nothing serves the provider who registers in Eventbrite and delivers on
+  Zoom.</li>
+<li><strong>Customization potential:</strong> High — a paid engagement per additional board format, or a
+  connector to a specific AMS export.</li>
+</ul>
+<h3 id="a2-approval-credential-expiration-register">A2 — Approval &amp; Credential Expiration Register</h3>
+<ul>
+<li><strong>User:</strong> The holder of the provider's regulatory approvals.</li>
+<li><strong>Problem solved:</strong> P2.</li>
+<li><strong>Current workflow:</strong> A spreadsheet nobody opens, or memory.</li>
+<li><strong>Proposed workflow:</strong> Register every approval — provider approvals, course approvals, program
+  numbers, instructor authorizations — with issuing body, number, effective and expiry dates,
+  renewal fee, renewal lead time, renewal URL, and the evidence file. The tool produces a
+  rolling renewal calendar, a 90/60/30-day alert digest, and a <strong>public-facing approval block</strong>
+  the provider can paste onto its website that is generated from live data rather than
+  hand-maintained.</li>
+<li><strong>Inputs:</strong> Approval records (initially typed or CSV-imported); optional renewal receipts.</li>
+<li><strong>Outputs:</strong> Renewal calendar (ICS export); alert digest; annual renewal fee forecast;
+  generated approvals list; "at-risk activities" report flagging any scheduled future activity
+  whose governing approval expires before the activity date.</li>
+<li><strong>Essential features:</strong> That last one is the differentiator — cross-referencing the <em>activity
+  calendar</em> against the <em>approval calendar</em> catches exactly the ce-classes.com failure mode.</li>
+<li><strong>Excluded from v1:</strong> Automated renewal filing; document management beyond file links.</li>
+<li><strong>AI:</strong> <strong>Optional and marginal.</strong> Could parse an approval letter PDF to pre-fill dates.
+  Nice-to-have, not the value.</li>
+<li><strong>Why not a spreadsheet:</strong> A spreadsheet <em>can</em> do this and many providers nominally have one.
+  The evidence says it fails anyway — because a spreadsheet does not notify, does not
+  cross-check against the teaching calendar, and does not regenerate the public page. The
+  differentiator is the alerting and cross-check, not the storage.</li>
+<li><strong>Complexity:</strong> Small. <strong>Learning difficulty:</strong> Very low.</li>
+<li><strong>Value:</strong> Prevents lapse events. Low time savings, high risk reduction.</li>
+<li><strong>Risks:</strong> Minimal. No sensitive learner data at all — this is provider metadata.</li>
+<li><strong>Substitutes:</strong> Generic compliance calendars; nothing purpose-built at this price point.</li>
+<li><strong>Customization potential:</strong> Moderate — seeding the register with a specific provider's real
+  approval set is a natural paid onboarding.</li>
+</ul>
+<h3 id="a3-webinar-attendance-to-credit-reconciler">A3 — Webinar Attendance-to-Credit Reconciler</h3>
+<ul>
+<li><strong>User:</strong> Administrator running live online credit.</li>
+<li><strong>Problem solved:</strong> P3.</li>
+<li><strong>Current workflow:</strong> Download Zoom participant CSV, poll report, and registration report;
+  manually dedupe rejoins, sum minutes, read custom-question answers, decide eligibility,
+  build the award list.</li>
+<li><strong>Proposed workflow:</strong> Drop in the three exports. The tool joins them on email, collapses
+  multiple join/leave rows into cumulative attended minutes, pulls license number / state /
+  profession from registration custom fields, applies a selected board's credit rule, and emits
+  an award list plus an exception list.</li>
+<li><strong>Inputs:</strong> Zoom/Teams/GoToWebinar participant export, poll report, registration export;
+  a session definition (scheduled credit minutes, break windows, required poll count).</li>
+<li><strong>Outputs:</strong> Canonical roster (feeding A1 directly); exception report (attended but no license
+  number; below threshold; missed poll threshold; duplicate registrations; name mismatches);
+  an <strong>audit-evidence sheet</strong> listing per-participant log-in/log-out times, cumulative minutes,
+  poll responses, and the credit calculation applied.</li>
+<li><strong>Essential features:</strong> Rejoin collapsing; break-window exclusion; per-board rule profiles —
+  NASBA 50-minute with round-down and 1/5 or 1/2 increments plus ≥3 interactivity instances per
+  credit; all-or-nothing 100%-attendance profiles (NY insurance); partial-credit profiles with
+  subject-area allocation (CE Broker).</li>
+<li><strong>Excluded from v1:</strong> Live in-session monitoring; running the webinar; certificate design
+  (that's A5).</li>
+<li><strong>AI:</strong> <strong>Inappropriate.</strong> Arithmetic and joins.</li>
+<li><strong>Why not a spreadsheet:</strong> The dedupe-and-sum across variable-length join/leave rows joined
+  to a second export and then run through fractional rounding rules is exactly the kind of
+  thing that gets done wrong in Excel every week. It's a 200-line script that pays for itself
+  the first Tuesday.</li>
+<li><strong>Complexity:</strong> Small-to-medium. <strong>Learning difficulty:</strong> Low.</li>
+<li><strong>Value:</strong> 1–3 hours per webinar, plus a defensible audit artifact that directly answers
+  NASBA deficiency #2 ("records lack duration, time-out stamps") and WA's webinar record
+  requirements.</li>
+<li><strong>Risks:</strong> Platform export schema changes; PII in exports (keep local).</li>
+<li><strong>Substitutes:</strong> Salepager, CertFusion, Certopus, CEU Events address slices of this, mostly
+  as SaaS tied to certificate delivery. None outputs a regulator-ready roster <em>and</em> an
+  audit-evidence sheet.</li>
+<li><strong>Customization potential:</strong> High — per-platform ingest adapters and per-board rule profiles
+  are natural paid work.</li>
+</ul>
+<h3 id="a4-audit-evidence-package-builder">A4 — Audit Evidence Package Builder</h3>
+<ul>
+<li><strong>User:</strong> Administrator facing a compliance audit or self-certification renewal.</li>
+<li><strong>Problem solved:</strong> P4.</li>
+<li><strong>Current workflow:</strong> Search the shared drive for weeks.</li>
+<li><strong>Proposed workflow:</strong> Select an activity. The tool assembles the standard evidence binder
+  and — more usefully — produces a <strong>manifest of what is missing</strong>, mapped to the published
+  deficiency list.</li>
+<li><strong>Inputs:</strong> Activity record; links to attendance evidence, agenda, instructor CVs,
+  promotional material, evaluations, certificates issued, credit-calculation worksheet.</li>
+<li><strong>Outputs:</strong> Indexed PDF binder; gap manifest keyed to the five NASBA deficiency categories;
+  a written attendance-monitoring policy statement generated from the actual procedure recorded
+  for that activity (addressing deficiency #1, "documentation does not match the described
+  procedure," and #4, "vague policies").</li>
+<li><strong>Essential features:</strong> The gap manifest. Deficiency-mapped checklists per regime.</li>
+<li><strong>Excluded from v1:</strong> Document storage — link to existing files rather than becoming a DMS.</li>
+<li><strong>AI:</strong> <strong>Optional, genuinely useful in one narrow place</strong> — checking promotional material
+  against the required-disclosure list (learning objectives, prerequisites, delivery method,
+  credit hours, refund/cancellation policy, complaint resolution). That is interpretation of
+  free text against a checklist, which conventional code does poorly. Everything else should be
+  rules.</li>
+<li><strong>Why not a spreadsheet:</strong> A checklist could be a spreadsheet. Binder assembly and free-text
+  disclosure checking could not.</li>
+<li><strong>Complexity:</strong> Medium. <strong>Learning difficulty:</strong> Moderate.</li>
+<li><strong>Value:</strong> Converts a multi-week scramble into a day; more importantly, surfaces gaps <em>before</em>
+  the audit rather than during it.</li>
+<li><strong>Risks:</strong> Must not imply a compliance guarantee. Frame output as preparation aid, not
+  assurance. Liability language matters here.</li>
+<li><strong>Substitutes:</strong> The LMS vendors pitch this as a reason to buy the whole platform.</li>
+<li><strong>Customization potential:</strong> High — per-accreditor checklist packs.</li>
+</ul>
+<h3 id="a5-board-compliant-certificate-batch-issuer">A5 — Board-Compliant Certificate Batch Issuer</h3>
+<ul>
+<li><strong>User:</strong> Administrator; secondarily the learner requesting a reissue.</li>
+<li><strong>Problem solved:</strong> P5.</li>
+<li><strong>Current workflow:</strong> Word mail-merge from a template of uncertain provenance.</li>
+<li><strong>Proposed workflow:</strong> Certificate templates are defined per regime with <strong>required-element
+  validation</strong> — the tool refuses to generate a CalBar certificate that lacks a credit-category
+  breakdown or the participatory/self-study designation, refuses a NASBA certificate missing
+  the sponsor ID or delivery method, and refuses to print a PTIN on an IRS certificate.
+  Generates a batch of PDFs, logs every issuance with a verification code, and keeps a reissue
+  log.</li>
+<li><strong>Inputs:</strong> Canonical roster; provider identity block; regime selection.</li>
+<li><strong>Outputs:</strong> Per-attendee PDFs; a manifest; an issuance/reissue log; optionally a static
+  verification lookup file.</li>
+<li><strong>Essential features:</strong> Required-element validation per regime; credit-category breakdown;
+  participatory/self-study labeling; reissue tracking against BACB's 3-year replacement
+  obligation.</li>
+<li><strong>Excluded from v1:</strong> Email delivery infrastructure; digital badging; learner portals.</li>
+<li><strong>AI:</strong> <strong>Inappropriate.</strong></li>
+<li><strong>Why not a spreadsheet:</strong> Mail-merge is the current answer and it produces the defect —
+  a spreadsheet has no concept of "this board requires these nine fields."</li>
+<li><strong>Complexity:</strong> Small. <strong>Learning difficulty:</strong> Very low.</li>
+<li><strong>Value:</strong> Moderate time savings, meaningful defect elimination — a bad template propagates
+  to every certificate issued under it.</li>
+<li><strong>Risks:</strong> PII on generated documents; local-first generation.</li>
+<li><strong>Substitutes:</strong> Certifier, Certopus, LMS certificate modules — all generic, none
+  board-rule-aware.</li>
+<li><strong>Customization potential:</strong> Moderate — branded templates, additional regimes.</li>
+</ul>
+<h3 id="a6-cpece-credit-calculation-worksheet">A6 — CPE/CE Credit Calculation Worksheet</h3>
+<ul>
+<li><strong>User:</strong> Program planner setting the credit award before marketing the course.</li>
+<li><strong>Problem solved:</strong> The credit-calculation subset of P4 (published as a top-five audit
+  failure: "incorrect rounding methods, failing to round down, or crediting breaks/
+  introductions").</li>
+<li><strong>Current workflow:</strong> Mental arithmetic on an agenda.</li>
+<li><strong>Proposed workflow:</strong> Enter the agenda as timed segments, each flagged creditable or not
+  (welcome, breaks, lunch, sponsor remarks, Q&amp;A). Select regime. The tool computes creditable
+  minutes, applies 50-minute conversion, applies round-down and permitted increments, and
+  prints a <strong>dated calculation worksheet</strong> — which is exactly the artifact auditors ask for.</li>
+<li><strong>Inputs:</strong> Agenda segments; regime.</li>
+<li><strong>Outputs:</strong> Credit figure; signed/dated calculation worksheet; a warning list (e.g. "breaks
+  included in creditable time," "total rounds down to 2.5 not 2.6").</li>
+<li><strong>Essential features:</strong> Multi-regime rules; the printable worksheet; a "what to advertise"
+  output so promo material and certificate agree.</li>
+<li><strong>Excluded:</strong> Scheduling, room booking, speaker management.</li>
+<li><strong>AI:</strong> <strong>Inappropriate.</strong></li>
+<li><strong>Why not a spreadsheet:</strong> Honestly, this one <em>could</em> be a spreadsheet — and that is a fine
+  v0. The advantage of a small app is the multi-regime rule library and the fact that the
+  worksheet output is a compliance artifact rather than a working file. This is the strongest
+  candidate in the set for a "smart spreadsheet" deliverable rather than an application.</li>
+<li><strong>Complexity:</strong> Small. <strong>Learning difficulty:</strong> Very low.</li>
+<li><strong>Value:</strong> Small per use, but it eliminates a <em>published</em> audit failure category and takes
+  about a day to build.</li>
+<li><strong>Risks:</strong> Rule accuracy; cite the source rule inline on the worksheet.</li>
+<li><strong>Substitutes:</strong> None specific.</li>
+<li><strong>Customization potential:</strong> Low-moderate.</li>
+</ul>
+<h3 id="a7-roster-pre-flight-validator-registration-data-hygiene">A7 — Roster Pre-Flight Validator (registration data hygiene)</h3>
+<ul>
+<li><strong>User:</strong> Administrator, at registration time rather than filing time.</li>
+<li><strong>Problem solved:</strong> The upstream cause of P1's rejections — bad license numbers collected at
+  registration.</li>
+<li><strong>Current workflow:</strong> Discover the bad license number when the board rejects the row, weeks
+  later, against a deadline.</li>
+<li><strong>Proposed workflow:</strong> Validate the attendee list <em>as soon as registration closes</em>, against
+  per-board license-number format rules (length, alphanumeric structure, profession-code
+  prefix, PTIN pattern, bar-number pattern), flag missing/implausible entries, and produce a
+  chase list of attendees to email before the session.</li>
+<li><strong>Inputs:</strong> Registration export.</li>
+<li><strong>Outputs:</strong> Clean list; chase list with per-attendee reason; a paste-ready reminder email.</li>
+<li><strong>Essential features:</strong> Format rule library; profession-code mapping; duplicate detection;
+  name-format normalization (the IRS requires the name exactly as it appears on the PTIN
+  record).</li>
+<li><strong>Excluded:</strong> Live lookups against board licensee databases — those are inconsistently
+  available and would create a fragile-integration dependency the brief warns against. Format
+  validation catches most of it.</li>
+<li><strong>AI:</strong> <strong>Inappropriate.</strong> Regex and lookup tables.</li>
+<li><strong>Why not a spreadsheet:</strong> Conditional formatting can approximate it; a rule library across
+  a dozen boards cannot live in conditional formatting maintainably.</li>
+<li><strong>Complexity:</strong> Small. <strong>Learning difficulty:</strong> Very low.</li>
+<li><strong>Value:</strong> Converts post-deadline rejection cycles into pre-session email chases.</li>
+<li><strong>Risks:</strong> False confidence — format-valid does not mean database-valid. Say so in the UI.</li>
+<li><strong>Substitutes:</strong> None at this granularity.</li>
+<li><strong>Customization potential:</strong> Moderate.</li>
+</ul>
+<h3 id="a8-retention-clock-disposition-scheduler">A8 — Retention Clock &amp; Disposition Scheduler</h3>
+<ul>
+<li><strong>User:</strong> Administrator; records owner.</li>
+<li><strong>Problem solved:</strong> P6.</li>
+<li><strong>Current workflow:</strong> Keep everything.</li>
+<li><strong>Proposed workflow:</strong> Register each activity with its governing regimes; the tool computes
+  the controlling retention date per artifact class (attendance vs. evaluations vs. materials)
+  as the <strong>maximum across applicable regimes</strong>, and produces an annual disposition list of what
+  is now eligible for destruction — plus a hold list for anything under audit or dispute.</li>
+<li><strong>Inputs:</strong> Activity register; regime mapping.</li>
+<li><strong>Outputs:</strong> Retention schedule; annual disposition list; legal-hold register; an erasure-
+  request response worksheet reconciling a learner's deletion request against live retention
+  obligations.</li>
+<li><strong>AI:</strong> <strong>Inappropriate.</strong></li>
+<li><strong>Why not a spreadsheet:</strong> It could be, with effort. The max-across-regimes computation and
+  the erasure-conflict worksheet are what justify code.</li>
+<li><strong>Complexity:</strong> Small. <strong>Learning difficulty:</strong> Low.</li>
+<li><strong>Value:</strong> Risk reduction and PII minimization rather than time savings.</li>
+<li><strong>Risks:</strong> Advising destruction is consequential — output must be a <em>recommendation with the
+  governing rule cited</em>, requiring human sign-off.</li>
+<li><strong>Substitutes:</strong> Enterprise records-management, wildly oversized for this market.</li>
+<li><strong>Customization potential:</strong> Moderate.</li>
+</ul>
+<h3 id="a9-regulator-rule-card-extractor">A9 — Regulator Rule-Card Extractor</h3>
+<ul>
+<li><strong>User:</strong> The provider expanding into a new state or profession; also the maintainer of the
+  A1 format library.</li>
+<li><strong>Problem solved:</strong> The research burden behind everything above — nobody has a consolidated,
+  current, machine-readable table of "board → filing deadline → format → retention → credit
+  increment rules."</li>
+<li><strong>Current workflow:</strong> Read the board's provider packet PDF and take notes.</li>
+<li><strong>Proposed workflow:</strong> Point the tool at a board's provider-requirements document. It extracts
+  a structured rule card — filing deadline, submission channel, required fields, retention
+  period, credit increment rules, partial-credit allowance, certificate elements, fees — each
+  field carrying a <strong>quoted source snippet and page reference</strong>. A human verifies and accepts.</li>
+<li><strong>Inputs:</strong> Regulator PDF or page.</li>
+<li><strong>Outputs:</strong> Draft rule card (JSON/YAML) with citations; a diff against the previously
+  accepted card when re-run, so format and deadline changes get caught.</li>
+<li><strong>AI:</strong> <strong>Necessary and appropriate.</strong> This is exactly the case the brief carves out —
+  extraction and classification from unstructured regulatory prose, where conventional parsing
+  fails. Crucially, AI produces a <em>draft with citations for human acceptance</em>, never a
+  self-applying rule.</li>
+<li><strong>Why not a spreadsheet:</strong> Reading PDFs is not a spreadsheet task.</li>
+<li><strong>Complexity:</strong> Medium. <strong>Learning difficulty:</strong> Moderate.</li>
+<li><strong>Value:</strong> Indirect but compounding — it is the maintenance engine for A1/A5/A6/A8.</li>
+<li><strong>Risks:</strong> <strong>Highest-risk concept in the set.</strong> A hallucinated deadline is worse than no
+  deadline. Mandatory mitigations: every field must carry a verbatim quote; unverified cards
+  must be visibly marked; the tool must never be the sole authority.</li>
+<li><strong>Substitutes:</strong> Compliance-content vendors sell curated regulatory databases at enterprise
+  prices.</li>
+<li><strong>Customization potential:</strong> High, but sell it as <em>research assistance</em>, never as a
+  compliance guarantee.</li>
+</ul>
+<hr />
+<h2 id="5-opportunity-ranking">5. Opportunity ranking</h2>
+<p>Scored 1–5 on ten criteria (max 50).</p>
+<p>| # | Concept | Severity | Frequency | ROI clarity | Ease of learning | Ease of build | Narrow scope | Differentiation | Customization | Test data | Evidence confidence | <strong>Total</strong> |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| A3 | Webinar Attendance-to-Credit Reconciler | 5 | 5 | 5 | 4 | 4 | 4 | 4 | 4 | 5 | 5 | <strong>45</strong> |
+| A2 | Approval &amp; Credential Expiration Register | 5 | 3 | 5 | 5 | 5 | 5 | 3 | 3 | 5 | 5 | <strong>44</strong> |
+| A1 | Board Filing Formatter | 5 | 5 | 5 | 4 | 3 | 3 | 4 | 5 | 4 | 5 | <strong>43</strong> |
+| A6 | CPE/CE Credit Calculation Worksheet | 4 | 4 | 4 | 5 | 5 | 5 | 3 | 3 | 5 | 5 | <strong>43</strong> |
+| A5 | Board-Compliant Certificate Batch Issuer | 3 | 5 | 4 | 5 | 5 | 4 | 2 | 4 | 5 | 5 | <strong>42</strong> |
+| A7 | Roster Pre-Flight Validator | 4 | 5 | 4 | 5 | 4 | 4 | 3 | 4 | 4 | 4 | <strong>41</strong> |
+| A4 | Audit Evidence Package Builder | 5 | 2 | 4 | 3 | 3 | 3 | 4 | 5 | 3 | 5 | <strong>37</strong> |
+| A8 | Retention Clock &amp; Disposition Scheduler | 3 | 2 | 3 | 5 | 5 | 5 | 3 | 3 | 4 | 4 | <strong>37</strong> |
+| A9 | Regulator Rule-Card Extractor | 4 | 2 | 3 | 3 | 2 | 3 | 5 | 4 | 4 | 3 | <strong>33</strong> |</p>
+<h3 id="the-top-three">The top three</h3>
+<p><strong>A3 — Webinar Attendance-to-Credit Reconciler (45).</strong> This wins on the combination the
+catalog cares most about: it fires <em>every week</em>, its inputs are files anyone can produce in
+thirty seconds (a Zoom participant export), its logic is deterministic, and its output is
+immediately useful in two directions — an award list for today and an audit artifact for three
+years from now. It is also the only concept whose test data requires no customer at all; a
+developer can generate realistic Zoom exports and build the whole thing before speaking to a
+single provider. It scores 4 rather than 5 on scope discipline only because "apply the board's
+credit rule" invites scope creep toward becoming a rules engine — that must be resisted in v1
+by shipping two or three hard-coded rule profiles.</p>
+<p><strong>A2 — Approval &amp; Credential Expiration Register (44).</strong> The lowest build cost in the set
+paired with the most concrete evidence of failure in the entire report. A live provider is
+publicly advertising six expired approval numbers. That is not a hypothesized pain point; it is
+a screenshot. It scores lower on frequency (renewals are monthly, not weekly) and
+differentiation (a spreadsheet is the obvious substitute), but the activity-calendar
+cross-check — "you have a class scheduled in March under an approval that dies in February" —
+is a genuinely novel and genuinely valuable feature no spreadsheet performs.</p>
+<p><strong>A1 — Board Filing Formatter (43).</strong> The highest ceiling and the flagship of the eventual
+product line, held back only by build complexity and scope-discipline risk. Its
+differentiation is real: producing a compliant CE Broker positional .xls — six ordered record
+types, 100-character row cap, 4+9 profession-code-plus-license structure, reconciled control
+and EOF counts — is a task nobody outside the enterprise LMS vendors has solved for the small
+provider. The format library should be external versioned data files, not code, so that
+regulator changes are a data update rather than a release.</p>
+<h3 id="what-to-investigate-next">What to investigate next</h3>
+<p><strong>Build A3 first.</strong> It is the wedge: it produces the canonical roster that A1 consumes and the
+evidence sheet that A4 assembles. A3 → A1 → A5 is a coherent product line where each tool's
+output is the next tool's input, and the free open-source base can be A3 alone.</p>
+<p><strong>Deprioritize A9</strong> until at least two of the others have real users. Its value is entirely
+derivative of a rule library that does not yet need maintaining, and its risk profile — an AI
+asserting a regulatory deadline — is the wrong risk to take before there is a customer
+relationship to absorb it.</p>
+<hr />
+<h2 id="6-validation-plan">6. Validation plan</h2>
+<h3 id="questions-to-ask-practitioners">Questions to ask practitioners</h3>
+<ol>
+<li>How many separate regulatory approvals do you currently hold, and can you name them from
+   memory or do you have to look them up? <em>(Tests P2 severity; the answer "I'd have to look"
+   is itself the finding.)</em></li>
+<li>Walk me through the last webinar you ran, from the moment it ended to the moment credit
+   was posted. How long did that take in wall-clock time? <em>(Quantifies P3.)</em></li>
+<li>Which board's filing do you dread most, and why? <em>(Identifies which format to build first.)</em></li>
+<li>When was the last time a roster was rejected? What was the reason and how long did the fix
+   take?</li>
+<li>Have you ever discovered an approval had lapsed after you'd already awarded credit under it?
+   What happened?</li>
+<li>Who else in your organization can do this job if you're out for two weeks? <em>(Tests the
+   single-point-of-failure hypothesis.)</em></li>
+<li>What did you evaluate before settling on your current setup, and what made you not buy it?
+   <em>(Tests the "enterprise LMS is oversized" hypothesis directly.)</em></li>
+<li>Do you know what your per-roster filing fees cost you last year?</li>
+</ol>
+<h3 id="who-to-interview">Who to interview</h3>
+<ul>
+<li><strong>State CPA society education directors</strong> — NASBA sponsors, multi-format delivery, small
+  teams, and a professional network that talks to each other.</li>
+<li><strong>Independent behavioral-health CE publishers</strong> — the ce-classes.com archetype: many boards,
+  tiny staff, publicly verifiable approval sprawl.</li>
+<li><strong>Insurance CE school operators in NC, NY, TX, WA</strong> — four genuinely different filing regimes,
+  short deadlines, per-student fees.</li>
+<li><strong>Hospital CME/CNE coordinators at community hospitals</strong> (not academic medical centers) —
+  ACCME/ANCC obligations without an academic medical center's staffing.</li>
+<li><strong>Manufacturer AIA CES providers</strong> — education-as-marketing, so the administrator is a
+  marketing person with no compliance background. Likely the highest pain-per-competence ratio.</li>
+<li><strong>Association management companies (AMCs)</strong> — they run education for many small associations
+  at once and would feel every one of these problems multiplied.</li>
+</ul>
+<h3 id="search-terms-for-further-research">Search terms for further research</h3>
+<p><code>"course completion roster" provider upload rejected</code> · <code>CE provider audit findings [state]</code> ·
+<code>"attendance monitoring" policy CPE sponsor template</code> · <code>"provider number" expired credit
+denied</code> · <code>association education "one person" CE reporting</code> · <code>[board name] "provider
+information packet" filetype:pdf</code> · <code>"CE Broker" roster rejected license number</code> ·
+<code>NASBA compliance audit findings report sponsor</code> · site-restricted searches on
+<code>nasbaregistry.org/what-sponsors-need-to-know</code></p>
+<h3 id="sample-files-needed-for-testing">Sample files needed for testing</h3>
+<ul>
+<li>A real Zoom Webinar <strong>participant</strong> export, <strong>poll</strong> report, and <strong>registration</strong> export from
+  the same session (the three-way join is the whole problem).</li>
+<li>A CE Broker roster that was <strong>rejected</strong>, plus its Roster Summary — the error text is the
+  specification.</li>
+<li>A CalBar Attendance Record Upload Template, an IRS CE bulk-upload XLSX template, and one
+  state insurance roster form.</li>
+<li>Two or three real certificates from different boards, to validate the required-element rules
+  in A5.</li>
+<li>One provider's actual approval register, however scruffy.</li>
+</ul>
+<h3 id="prototype-that-would-validate">Prototype that would validate</h3>
+<p>A <strong>single-file HTML page, no server, no upload</strong> that accepts three Zoom CSVs by drag-and-drop
+and produces (a) an award list, (b) an exception list, (c) an audit-evidence table. Everything
+runs in the browser, which also answers the PII objection before it is raised. A CE
+administrator can try it during a lunch break with real data and no procurement conversation.
+If they use it twice, the hypothesis is confirmed.</p>
+<h3 id="assumptions-most-likely-to-be-wrong">Assumptions most likely to be wrong</h3>
+<ol>
+<li><strong>That providers file to many boards.</strong> Many file to exactly one. If the median provider has
+   1–2 approvals, A1's value collapses and A3 carries the product alone. <strong>This is the single
+   assumption most worth testing first</strong>, and it is cheap to test — approval counts are usually
+   published on provider websites, so a sample of 50 provider sites answers it without a single
+   interview.</li>
+<li><strong>That the administrator can adopt a tool unilaterally.</strong> If IT procurement is involved,
+   local-first desktop tools win and anything server-based dies.</li>
+<li><strong>That the registration platform export contains license numbers.</strong> If providers collect
+   license numbers by email instead, A7 becomes more important than A1.</li>
+<li><strong>That "free open-source base" is attractive here.</strong> Compliance buyers sometimes distrust
+   free tools precisely because there is no vendor to blame. The paid-customization tier may
+   need to lead, not follow.</li>
+<li><strong>That Zoom exports are stable.</strong> If schemas shift often, the ingest adapter becomes ongoing
+   maintenance rather than a one-time build.</li>
+</ol>
+<hr />
+<h2 id="7-cross-industry-patterns">7. Cross-industry patterns</h2>
+<p><strong>Pattern 1 — Canonical record → many regulator-specific file formats.</strong> One internal dataset
+must be emitted in N mutually incompatible, positionally-specified, deadline-bound regulator
+formats. Transfers directly to: <em>Environmental laboratories producing regulator EDD deliverables
+(EQuIS and state formats)</em> — same problem, same shape, arguably worse; <em>Truck permitting and
+registration service agencies (IRP, IFTA, OS-OW)</em>; <em>Multi-state charitable solicitation
+registration compliance</em>; <em>Provider credentialing and payer enrollment services</em>; <em>Unclaimed
+property and escheat compliance service providers</em>.</p>
+<p><strong>Pattern 2 — Credential expiration register with forward calendar cross-check.</strong> The value is
+not storing expiry dates but cross-referencing them against <em>scheduled future work</em> to catch
+"you have work booked under a credential that dies first." Transfers to: <em>Calibration and
+metrology service providers / in-house gage management</em> (calibration due vs. scheduled
+inspections); <em>Special inspection agency accreditation consultants (IAS AC291, ANAB, WABO)</em>;
+<em>Welding inspection (AWS CWI) and NDT service providers</em> (technician certification vs. job
+assignments); <em>DOT compliance consultancies and third-party safety managers serving small
+fleets</em> (driver qualification file currency vs. dispatch); <em>Radiation safety officer services
+and portable gauge licensee compliance</em>.</p>
+<p><strong>Pattern 3 — Session telemetry → audit-grade compliance evidence.</strong> Platform exports
+(join/leave, polls, chat) are operationally shaped, not evidentiarily shaped; the transformation
+between them is manual and repeated. Transfers to: <em>Remote online notarization (RON) platform
+operators and RON-commissioned notaries</em> (session recordings and identity-proofing evidence);
+<em>Consortium / third-party administrators (C-TPAs) for DOT drug and alcohol programs</em> (random
+selection and testing evidence); <em>Test, adjust and balance (TAB) contractors</em> (instrument
+readings → certified report).</p>
+<p><strong>Pattern 4 — Multi-regime retention clock with max-across-regimes disposition.</strong> Transfers to:
+<em>Government contracts administration at small govcons</em>; <em>ITAR and EAR export compliance
+administration at small manufacturers</em>; <em>County recorder offices</em>; <em>Title abstracting and
+independent title search contractors</em>.</p>
+<p><strong>Pattern 5 — Published-deficiency-list-driven evidence package builder.</strong> Where a regulator
+publishes its own top failure modes, a tool that assembles evidence <em>and produces a gap
+manifest keyed to that published list</em> is high-value and low-ambiguity. Transfers to: <em>C3PAO
+assessment operations and evidence sampling</em>; <em>Special inspection agency accreditation
+consultants</em>; <em>Federally qualified health centers — HRSA Section 330 grant compliance</em>;
+<em>Premium audit and payroll classification consulting</em>.</p>
+<hr />
+<h2 id="8-sources-and-confidence">8. Sources and confidence</h2>
+<h3 id="verified-findings-primary-regulatory-and-vendor-documentation">Verified findings (primary regulatory and vendor documentation)</h3>
+<ul>
+<li><a href="https://secure.cebroker.com/help/provider/Electronic%20File%20Upload%20-%20Excel%20File.pdf">CE Broker — Electronic File Upload, Excel File specification (PDF)</a> — six record types, 100-character row limit, 4+9 license structure, <code>State=FL</code> encoding, pre-import and post-import rejection reasons, Roster Summary within one minute.</li>
+<li><a href="https://help.cebroker.com/hc/en-us/articles/15226531886868-Technical-Details-for-Reporting">CE Broker — Technical Details for Reporting</a> — reporting channels; jurisdiction deadline examples (30 days FL, 90 days DC); text-file uploads not recommended.</li>
+<li><a href="https://help.cebroker.com/hc/en-us/articles/15226533297428-Reporting-Course-Completions-Using-Excel">CE Broker — Reporting Course Completions Using Excel</a></li>
+<li><a href="https://www.irs.gov/tax-professionals/mandatory-information-reporting-for-continuing-education-providers">IRS — Mandatory information reporting for continuing education providers</a> — five required fields, quarterly deadlines, 10-business-day Q4 rule, 2MB cap, 24-hour resubmission wait.</li>
+<li><a href="https://www.irs.gov/tax-professionals/ce-faqs-continuing-education-providers">IRS — CE FAQs for continuing education providers</a> — $650 annual fee, program numbers expire 12/31 of third year, AFTR annual expiry, PTIN validation, PTIN must not appear on certificates, 4-year retention.</li>
+<li><a href="https://www.insurance.wa.gov/producers-adjusters/education/continuing-education-ce-providers/procedures-reporting-and-recordkeeping">Washington Office of the Insurance Commissioner — Procedures, reporting, and recordkeeping</a> — 10-day roster rule and enforcement language, webinar record contents, 3-year retention, 10-day notice of presentation.</li>
+<li><a href="https://www.dfs.ny.gov/system/files/documents/2026/02/Continuing-Education-Provider-Program-Criteria.pdf">New York DFS — Continuing Education Provider Program Criteria (PDF)</a> — 2-week roster / 30-day completion record, 3-year retention, 100% attendance no partial credit, photo ID, $50 instructor fees, announced and unannounced audits.</li>
+<li><a href="https://www.prometric.com/files/nc-insurance/NC-Provider-Packet.pdf">North Carolina DOI / Prometric — Insurance CE Provider Packet (PDF)</a> — 15 business days via Sircon, $2.00 per credit hour per student, 3-year retention, deactivation for a dormant calendar year.</li>
+<li><a href="https://www.tdlr.texas.gov/continuing-education-providers/faq.htm">Texas TDLR — Continuing Education Providers FAQ</a> — 7-day electronic completion report, 2-year retention, one-year provider registration, $5-per-licensee fees for certain programs.</li>
+<li><a href="https://www.calbar.ca.gov/legal-professionals/entities/mcle-providers/mcle-provider-responsibilities">California State Bar — MCLE Provider Responsibilities</a> — 4-year attendance retention, 1-year evaluation retention, 60-day electronic submission, certificate element list, participatory vs. self-study distinction.</li>
+<li><a href="https://cswmft.ohio.gov/license-renewal/CE-provider-approval-process">Ohio CSWMFT — CE Provider Approval Process</a> — 14-business-day CE Broker reporting, required documentation.</li>
+<li><a href="https://mn.gov/boards/social-work/ceprovider/ce-provider-responsibility.jsp">Minnesota Board of Social Work — CE Provider Responsibility</a> — 3-year retention, certificate contents including presenter names.</li>
+<li><a href="https://www.nasbaregistry.org/what-sponsors-need-to-know/top-five-attendance-monitoring-deficiencies-found-during-compliance-audit-group-live-delivery-method">NASBA Registry — Top five attendance monitoring deficiencies, group live</a> — the published failure-mode list underlying A4.</li>
+<li><a href="https://cdn.asp.events/CLIENT_NASBA_287596D2_5056_B733_49DFF69B632BDF66/sites/nasba-registry-composer-2/media/Documents/2024-standards-fos/2024-Statement-on-Standards-for-CPE-Programs.pdf">NASBA/AICPA — 2024 Statement on Standards for CPE Programs (PDF)</a> — Standard No. 24 documentation, three interactivity instances per credit for group internet based, certificate contents, one-fifth/one-half increments, round-down rule.</li>
+<li><a href="https://www.nasbaregistry.org/resources/best-practices/group-internet-based-measurement">NASBA Registry — Group Internet Based: Measurement</a> — irregular polling intervals, increment rules, small-group facilitator verification.</li>
+<li><a href="https://lcvista.com/how-to-avoid-failing-a-nasba-audit/">LCvista — How to avoid failing a NASBA audit</a> — five common deficiency categories including CPE calculation errors and missing engagement evidence.</li>
+<li><a href="http://ce-classes.com/approvals/">ce-classes.com — National and state approvals page</a> — 12 approvals across 4 national bodies and 8 state boards, with multiple expired approval numbers publicly displayed. Direct evidence for P2.</li>
+<li><a href="https://nabp.pharmacy/help/when-do-i-submit-cpe-claims-and-what-if-i-miss-the-submission-deadline/">NABP — CPE claim submission deadlines</a> — 60-day provider window to ACPE; no retroactive transcript modification.</li>
+<li><a href="https://www.bacb.com/wp-content/uploads/2026/05/ACE-Provider-FAQs_260504-a.pdf">BACB — ACE Provider FAQs (PDF)</a> — replacement certificates required up to 3 years after the event.</li>
+<li><a href="https://iacet.org/events/iacet-blog/blog-articles/navigating-the-gdpr-right-to-be-forgotten-while-retaining-learner-records-a-guide-for-iacet-accredited-providers/">IACET — Navigating the GDPR right to be forgotten while retaining learner records</a> — retention vs. erasure conflict.</li>
+</ul>
+<h3 id="strong-inferences-well-supported-not-directly-stated">Strong inferences (well-supported, not directly stated)</h3>
+<ul>
+<li><strong>The CE administrator is usually a single person at the target organization size.</strong> Supported
+  by role descriptions, the AMC business model, and the ce-classes.com evidence pattern, but not
+  established by a headcount survey.</li>
+<li><strong>Enterprise accreditation LMSs are priced out of reach for the 2–40 staff provider.</strong> Supported
+  by EthosCE's ~$1,750 entry point with custom-quote tiers and the segment-wide absence of
+  published pricing (<a href="https://www.itqlick.com/ethosce-lms/pricing">ITQlick EthosCE pricing</a>),
+  but actual small-provider quotes were not obtained.</li>
+<li><strong>Manual Zoom reconciliation is a 1–3 hour per-session task.</strong> The workflow is documented
+  (<a href="https://medium.com/@salepager/assigning-continuing-education-credits-and-sharing-certificates-with-zoom-webinar-attendees-ae76ecedd6ea">Salepager</a>) and the vendor
+  positioning implies the pain, but no independent time study was found. Arlo's cited "up to 30
+  hours a week" on administration (<a href="https://www.arlo.co/blog/continuing-education-registration-software-for-ce-training-providers">Arlo</a>)
+  is vendor marketing and should be treated as directional only.</li>
+<li><strong>Filing rejections are common enough to matter.</strong> Inferred from the length and specificity of
+  CE Broker's published rejection-reason list — regulators do not document failure modes that
+  never occur — but no rejection-rate statistic was located.</li>
+</ul>
+<h3 id="tentative-hypotheses-requiring-practitioner-validation">Tentative hypotheses requiring practitioner validation</h3>
+<ul>
+<li><strong>That the median provider holds enough approvals for A1 to pay off.</strong> ce-classes.com holds 12;
+  a manufacturer AIA CES provider may hold 1. The distribution is unknown and it is the pivotal
+  variable for the whole product line. Testable cheaply against published provider pages.</li>
+<li><strong>That providers would trust a local-first open-source tool for regulatory filing.</strong> Plausible
+  given the PII advantage, but compliance buyers sometimes prefer a vendor to hold accountability.</li>
+<li><strong>That certificate-element defects are actually occurring in the field.</strong> The divergent
+  requirements are verified; that real providers are getting them wrong is assumed.</li>
+<li><strong>That approval lapses cause material downstream cost.</strong> The lapses are verified; the
+  consequences (refunds, denied credit, board friction) are reasoned, not observed.</li>
+<li><strong>That AI extraction of regulator rule cards can reach acceptable accuracy.</strong> Untested, and
+  the failure mode is severe. Do not build on this assumption without a measured accuracy trial
+  against hand-coded ground truth across at least 20 boards.</li>
+</ul>
+</div></body></html>
