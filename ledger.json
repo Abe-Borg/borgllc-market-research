@@ -226,7 +226,14 @@
       "score": 48
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Marketing and creative agency account and production management",
+      "angle": "handoffs-and-qa",
+      "claimed_at": "2026-08-08T06:50:11Z",
+      "claim_id": "31eace6d"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -723,12 +730,6 @@
     {
       "market": "Marketing and creative agency account and production management",
       "angle": "back-office",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Marketing and creative agency account and production management",
-      "angle": "handoffs-and-qa",
       "source": "seed",
       "note": ""
     },
