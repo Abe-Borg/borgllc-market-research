@@ -234,7 +234,14 @@
       "score": 47
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Retirement plan third-party administrators (TPAs) for small 401(k) plans",
+      "angle": "core-practitioner-workflow",
+      "claimed_at": "2026-08-08T07:49:11.584415+00:00",
+      "claim_id": "11240bde"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1927,12 +1934,6 @@
       "angle": "core-practitioner-workflow",
       "source": "discovered",
       "note": "ICE NOI rate reportedly 10x higher in H1 2025 vs 2024 and the March 2026 substantive-error reclassification created immediate demand for privileged self-audits; distinct from immigration law practice (already covered) because the client is the employer, not the beneficiary."
-    },
-    {
-      "market": "Retirement plan third-party administrators (TPAs) for small 401(k) plans",
-      "angle": "core-practitioner-workflow",
-      "source": "discovered",
-      "note": "Six of ten documented 401(k) operational failures trace to payroll data disagreeing with recordkeeper records; census validation, compensation-definition mapping and EPCRS correction are recurring, checkable, and expensive to get wrong."
     },
     {
       "market": "Fractional and outsourced HR service providers serving 20-200 employee companies",
