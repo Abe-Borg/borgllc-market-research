@@ -186,7 +186,14 @@
       "score": 45
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Dental and specialty clinic practice administration",
+      "angle": "handoffs-and-qa",
+      "claimed_at": "2026-08-08T00:49:34Z",
+      "claim_id": "340ca135"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -605,12 +612,6 @@
     {
       "market": "Dental and specialty clinic practice administration",
       "angle": "back-office",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Dental and specialty clinic practice administration",
-      "angle": "handoffs-and-qa",
       "source": "seed",
       "note": ""
     },
