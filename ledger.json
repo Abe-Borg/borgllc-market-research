@@ -210,7 +210,14 @@
       "score": 49
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Small CPA tax preparation practices",
+      "angle": "core-practitioner-workflow",
+      "claimed_at": "2026-08-08T03:48:45Z",
+      "claim_id": "8295946c"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -509,12 +516,6 @@
     {
       "market": "Bookkeeping and outsourced accounting firms",
       "angle": "handoffs-and-qa",
-      "source": "seed",
-      "note": ""
-    },
-    {
-      "market": "Small CPA tax preparation practices",
-      "angle": "core-practitioner-workflow",
       "source": "seed",
       "note": ""
     },
