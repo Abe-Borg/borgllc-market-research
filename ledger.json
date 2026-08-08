@@ -280,15 +280,17 @@
       "report": "reports/2026-08-08-gc-preconstruction-estimating-handoffs-and-qa.md",
       "top_opportunity": "BidGate - pre-submission bid responsiveness validator: parses the Instructions to Bidders and bid form into a reusable per-agency requirement profile, then validates the assembled submission before it leaves the building - every issued addendum number actually acknowledged in the acknowledgment block, every required form present and signed, no two listed subcontractors named for the same portion of work (CA PCC s4106), bid bond amount matching the required percentage. Anchored on three documented total losses: DeSilva Gates v. Caltrans (unacknowledged Addendum 1 on a $31.7M bid), SC CPO 2022-004 (award vacated) and SC CPO 2022-001 ($379,870 award vacated because the cure letter was not sworn). Deterministic validation, free and unlimited public test data, and genuine white space - the incumbent bid platforms sell the subcontractor network and the leveling grid, nobody validates the GC's own submission.",
       "score": 47
-    }
-  ],
-  "claimed": [
+    },
     {
       "market": "Certified payroll and prevailing wage compliance service providers",
       "angle": "core-practitioner-workflow",
-      "claimed_at": "2026-08-08T15:49:14Z",
-      "claim_id": "336fa8ab"
-    },
+      "date": "2026-08-08",
+      "report": "reports/2026-08-08-certified-payroll-prevailing-wage-compliance-core-practitioner-workflow.md",
+      "top_opportunity": "CPR Preflight - pre-submission certified payroll validator: takes the week's payroll export plus the incorporated wage determination and runs, locally and before anything is uploaded, both the checks the destination portal will run and the substantive checks it never runs - fringe credit separated from cash-in-lieu (6B vs 6C), overtime half-time computed on the wage determination's basic hourly rate floor per 29 CFR 5.32, apprentice defaulting to the FULL wage determination fringe where the registered program is silent, classification present on the incorporated WD, payroll number sequence unbroken, last-4 SSN federally vs full SSN for CA DIR. Occupies a structurally unoccupied position: the portal vendor is paid by the public agency on a tier keyed to the agency's construction volume (LCPtracker bills Michigan $85,240-$186,029/yr, LA County $116,741/yr) and therefore has no commercial incentive to reduce contractor rejections, and by design validates only after upload - LCPtracker markets its 'over 80 automated validations' as a feature of the agency's system. Anchored on the Massachusetts State Auditor finding that 1,608 of 3,344 sampled employees had certified-payroll classifications that did not match the state's own wage rate sheets (90 actually underpaid), on DOL's published 55-minute-per-WH-347 burden across 10.5M annual burden hours, and on four independent practitioner accounts of 2-6 hours every week at 12-30 person firms. Every rule is deterministic and published in the CFR, the FOH or a schema; AI is confined to proposing a column mapping a human confirms once per payroll system. Local-only by necessity (CA DIR XML carries full SSNs).",
+      "score": 46
+    }
+  ],
+  "claimed": [
     {
       "market": "Unclaimed property and escheat compliance service providers",
       "angle": "back-office",
@@ -2690,6 +2692,48 @@
       "angle": "core-practitioner-workflow",
       "source": "discovered",
       "note": "Arcadis reports errors and omissions in contract documents as the top North American dispute cause; pre-bid RFI waiver clauses (Ohio OFCC 2.3.4, Virginia CO-7a) make bid-period records the decisive evidence."
+    },
+    {
+      "market": "Prevailing wage fringe benefit plan TPAs and hour-bank administrators",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "They move the fringe money but nobody computes or defends the 29 CFR 5.25(c) annualization behind it; DOL's on-record position that H&W and SUB plans are 'continuous in nature' is a live threat to the whole product category."
+    },
+    {
+      "market": "Public agency labor compliance and contract compliance officer desks (owner-side CPR review)",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "They author the rejection reasons private contractors fail against and would be the authoritative validation source for any pre-submission checker; DACM-style owner's-rep roles post at $93,600 flat."
+    },
+    {
+      "market": "IRA section 45/48 prevailing wage and apprenticeship compliance at renewable energy developers and EPCs",
+      "angle": "core-practitioner-workflow",
+      "source": "discovered",
+      "note": "26 CFR 1.45-7/1.45-8 imports the WH-347 dataset into taxpayers who are not DBRA contractors and have no contracting officer; $5,000 per underpaid worker and $50 per short apprentice labor hour, with a documented higher-paid job tier ($75K-$120K) appearing around it."
+    },
+    {
+      "market": "AASHTOWare Project civil rights and labor module operations at state DOTs and highway contractors",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "A distinct portal family named in certified-payroll job postings alongside LCPtracker and eMars, with its own file formats and a state-DOT buyer; untouched by the current roster."
+    },
+    {
+      "market": "Union fringe benefit fund remittance and multi-employer trust reporting at signatory contractors",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Monthly per-local remittance reports derive from the same payroll dataset as the certified payroll but reconcile to a different set of trust rules; PLA union reconciliation errors are a named certified-payroll rejection category."
+    },
+    {
+      "market": "OCIP/CCIP wrap-up insurance administration and payroll allocation for construction projects",
+      "angle": "back-office",
+      "source": "discovered",
+      "note": "Named as a duty in certified payroll specialist postings; payroll-derived class-code allocation and enrollment/close-out audits with real premium dollars, and no visible small-firm tooling."
+    },
+    {
+      "market": "Construction jobsite access control and daily sign-in log administration",
+      "angle": "handoffs-and-qa",
+      "source": "discovered",
+      "note": "NYC Rule 50-08 requires daily sign-in logs with original signatures showing start and end times to accompany certified payroll; the people-on-site vs people-on-payroll reconciliation is the highest-signal compliance check and nobody supports it."
     }
   ],
   "patterns": [
@@ -5539,6 +5583,72 @@
         "Staffing back-office service bureaus and payroll funders",
         "Architectural construction administration (CA) desks at small A/E firms",
         "Outsourced controller and fractional CFO service providers"
+      ]
+    },
+    {
+      "pattern": "Pre-submission validation against a gatekeeper's published rule set, run locally before the gate: the gatekeeper validates after submission and has no commercial incentive to help you pass, so encode its published rules as versioned data and run them first.",
+      "seen_in": [
+        "Certified payroll and prevailing wage compliance service providers"
+      ],
+      "transfers_to": [
+        "Building permit expediting and code consulting firms",
+        "Environmental laboratories producing regulator EDD deliverables (EQuIS and state formats)",
+        "County recorder offices - document intake, indexing and rejection handling",
+        "Fire alarm system design and programming subcontractors"
+      ]
+    },
+    {
+      "pattern": "Effective-rate allocation ledger: a cost divided by total hours across covered AND non-covered work. The universal error is dividing by the covered denominator only, which inflates the claimed rate and creates an invisible compounding shortfall (29 CFR 5.25(c) annualization is the canonical case).",
+      "seen_in": [
+        "Certified payroll and prevailing wage compliance service providers"
+      ],
+      "transfers_to": [
+        "DCAA-audit-ready incurred cost and indirect rate submissions at small government contractors",
+        "Fiscal sponsorship organizations administering awards for sponsored projects",
+        "Outsourced nonprofit CFO and accounting firms"
+      ]
+    },
+    {
+      "pattern": "Lock-in provenance tracking: an external authority publishes a standard continuously, but your obligation froze at a specific version on a specific date subject to exceptions that reset it. Nobody records which version governs or why, so nobody can prove it later.",
+      "seen_in": [
+        "Certified payroll and prevailing wage compliance service providers"
+      ],
+      "transfers_to": [
+        "Energy code compliance consultants and Title 24 documentation shops",
+        "Aerospace supplier quality clause library administration at machine shops and Tier 2 suppliers",
+        "Multi-state charitable solicitation registration compliance"
+      ]
+    },
+    {
+      "pattern": "Submission evidence ledger: where a filing releases money, a hashed as-submitted archive with an explicit 'no response received' state distinct from 'accepted' is worth more than the filing tool itself. Portals silently drop things and the fallback is screenshots.",
+      "seen_in": [
+        "Certified payroll and prevailing wage compliance service providers"
+      ],
+      "transfers_to": [
+        "Provider credentialing and payer enrollment services",
+        "Information-return filing services and B-notice remediation providers",
+        "Freight factoring companies and their client onboarding/verification desks"
+      ]
+    },
+    {
+      "pattern": "Daily ratio test against a program-defined limit where excess counts in the denominator but not the numerator: compliance is measured per day per site rather than as an average, and the arithmetic is deliberately punitive, so the human default of averaging is always wrong.",
+      "seen_in": [
+        "Certified payroll and prevailing wage compliance service providers"
+      ],
+      "transfers_to": [
+        "Apprenticeship program sponsors and DOL RAPIDS reporting",
+        "Workforce development boards and WIOA subrecipients"
+      ]
+    },
+    {
+      "pattern": "One canonical record fanned out to many mutually incompatible jurisdiction formats: the underlying facts are identical, every jurisdiction wants different fields in a different container, and a handful of fields exist in only one jurisdiction.",
+      "seen_in": [
+        "Certified payroll and prevailing wage compliance service providers"
+      ],
+      "transfers_to": [
+        "Multi-state charitable solicitation registration compliance",
+        "Sales tax compliance outsourcing for small multi-state sellers",
+        "Unclaimed property and escheat compliance service providers"
       ]
     }
   ]
