@@ -242,7 +242,14 @@
       "score": 45
     }
   ],
-  "claimed": [],
+  "claimed": [
+    {
+      "market": "Independent pharmacy third-party reconciliation and PBM claw-backs",
+      "angle": "back-office",
+      "claimed_at": "2026-08-08T08:49:40Z",
+      "claim_id": "0d33e95c"
+    }
+  ],
   "backlog": [
     {
       "market": "Fire protection / fire sprinkler design and coordination subcontractors",
@@ -1437,12 +1444,6 @@
       "angle": "handoffs-and-qa",
       "source": "discovered",
       "note": "Documentation requirements (WOPD, proof of delivery, medical necessity) are the denial driver; a checklist-as-data problem with audit exposure."
-    },
-    {
-      "market": "Independent pharmacy third-party reconciliation and PBM claw-backs",
-      "angle": "back-office",
-      "source": "discovered",
-      "note": "NCPDP transaction files plus DIR/effective-rate claw-backs; the pharmacy analogue of the 835 offset-reconciliation problem, at thousands of independent stores."
     },
     {
       "market": "Ambulance and EMS billing",
